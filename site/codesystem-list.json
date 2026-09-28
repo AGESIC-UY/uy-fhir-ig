@@ -1,0 +1,34 @@
+{
+  "codeSystems" : [{
+    "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CSBarriosLocalidadesUY",
+    "title" : "Sistema de códigos de barrios y localidades postales de Uruguay",
+    "description" : "Barrios y localidades presentes en el listado nacional de códigos postales del Correo Uruguayo."
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CSCodigosPostalesUY",
+    "title" : "Sistema de códigos postales de Uruguay",
+    "description" : "Códigos postales vigentes publicados por el Correo Uruguayo."
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CSDepartamentosUY",
+    "title" : "Sistema de códigos de departamentos de Uruguay",
+    "description" : "Los 19 departamentos de la República Oriental del Uruguay."
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CSLocalidadesUY",
+    "title" : "Localidades de Uruguay (OSE)",
+    "description" : "Localidades del catálogo de regiones, departamentos y localidades utilizado por OSE."
+  }]
+}

@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/PractitionerRole/EjemploRolProfesionalUY> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EjemploRolProfesionalUY"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>Rol del profesional <a href=\"Practitioner-EjemploProfesionalUY.html\">Profesional Ejemplo</a> en la <a href=\"Organization-EjemploOrganizacionUY.html\">Organización de ejemplo CORE UY</a>.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:practitioner [
+     fhir:l <http://fhir.hcen.gub.uy/Practitioner/EjemploProfesionalUY> ;
+     fhir:reference [ fhir:v "Practitioner/EjemploProfesionalUY" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/EjemploOrganizacionUY> ;
+     fhir:reference [ fhir:v "Organization/EjemploOrganizacionUY" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

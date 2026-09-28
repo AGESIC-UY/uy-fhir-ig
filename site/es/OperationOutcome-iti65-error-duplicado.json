@@ -1,0 +1,16 @@
+{
+  "resourceType" : "OperationOutcome",
+  "id" : "iti65-error-duplicado",
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>Ya existe un documento con el mismo identificador documental.</p></div>"
+  },
+  "issue" : [{
+    "severity" : "error",
+    "code" : "duplicate",
+    "details" : {
+      "text" : "Ya existe un documento con el mismo identificador documental."
+    }
+  }]
+}

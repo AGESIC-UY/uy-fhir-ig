@@ -1,0 +1,532 @@
+[{
+  "id" : "cs-barrios-localidades-uy",
+  "type" : "CodeSystem",
+  "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy",
+  "version" : "0.1.0",
+  "name" : "CSBarriosLocalidadesUY"
+},
+{
+  "id" : "cs-codigos-postales-uy",
+  "type" : "CodeSystem",
+  "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
+  "version" : "0.1.0",
+  "name" : "CSCodigosPostalesUY"
+},
+{
+  "id" : "cs-departamentos-uy",
+  "type" : "CodeSystem",
+  "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
+  "version" : "0.1.0",
+  "name" : "CSDepartamentosUY"
+},
+{
+  "id" : "cs-localidades-uy",
+  "type" : "CodeSystem",
+  "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy",
+  "version" : "0.1.0",
+  "name" : "CSLocalidadesUY"
+},
+{
+  "id" : "uy-fhir-ig",
+  "type" : "ImplementationGuide",
+  "url" : "http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig",
+  "version" : "0.1.0",
+  "name" : "UruguayFHIRImplementationGuide"
+},
+{
+  "id" : "ext-amount-of-studies",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-amount-of-studies",
+  "version" : "0.1.0",
+  "name" : "AmountOfStudies"
+},
+{
+  "id" : "ext-binary-resource-id",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id",
+  "version" : "0.1.0",
+  "name" : "BinaryResourceId"
+},
+{
+  "id" : "ext-by-order-of",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-by-order-of",
+  "version" : "0.1.0",
+  "name" : "ByOrderOf"
+},
+{
+  "id" : "ext-funder",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-funder",
+  "version" : "0.1.0",
+  "name" : "Funder"
+},
+{
+  "id" : "ext-home-community-id",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id",
+  "version" : "0.1.0",
+  "name" : "HomeCommunityId"
+},
+{
+  "id" : "ext-practitioner-certification",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-certification",
+  "version" : "0.1.0",
+  "name" : "PractitionerCertification"
+},
+{
+  "id" : "ext-practitioner-eno",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-eno",
+  "version" : "0.1.0",
+  "name" : "PractitionerEno"
+},
+{
+  "id" : "ext-primer-apellido",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+  "version" : "0.1.0",
+  "name" : "PrimerApellido"
+},
+{
+  "id" : "ext-repository-id",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id",
+  "version" : "0.1.0",
+  "name" : "RepositoryId"
+},
+{
+  "id" : "ext-scanned-document",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-scanned-document",
+  "version" : "0.1.0",
+  "name" : "ScannedDocument"
+},
+{
+  "id" : "ext-segundo-apellido",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+  "version" : "0.1.0",
+  "name" : "SegundoApellido"
+},
+{
+  "id" : "ext-telemedicine-modality",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-telemedicine-modality",
+  "version" : "0.1.0",
+  "name" : "TelemedicineModality"
+},
+{
+  "id" : "hcen-aa-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-aa-identifier",
+  "version" : "0.1.0",
+  "name" : "HCENAAIdentifier"
+},
+{
+  "id" : "hcen-cda-binary",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary",
+  "version" : "0.1.0",
+  "name" : "HCENCdaBinary"
+},
+{
+  "id" : "hcen-diagnostico",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico",
+  "version" : "0.1.0",
+  "name" : "HCENDiagnostico"
+},
+{
+  "id" : "hcen-document-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier",
+  "version" : "0.1.0",
+  "name" : "HCENDocumentIdentifier"
+},
+{
+  "id" : "hcen-document-reference",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference",
+  "version" : "0.1.0",
+  "name" : "HCENDocumentReference"
+},
+{
+  "id" : "hcen-document-reference-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference-identifier",
+  "version" : "0.1.0",
+  "name" : "HCENDocumentReferenceIdentifier"
+},
+{
+  "id" : "hcen-dosage",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-dosage",
+  "version" : "0.1.0",
+  "name" : "HCENDosage"
+},
+{
+  "id" : "hcen-encounter",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter",
+  "version" : "0.1.0",
+  "name" : "HCENEncounter"
+},
+{
+  "id" : "hcen-medication-administration",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration",
+  "version" : "0.1.0",
+  "name" : "HCENMedicationAdministration"
+},
+{
+  "id" : "hcen-medication-request",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request",
+  "version" : "0.1.0",
+  "name" : "HCENMedicationRequest"
+},
+{
+  "id" : "hcen-motivo-consulta",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta",
+  "version" : "0.1.0",
+  "name" : "HCENMotivoConsulta"
+},
+{
+  "id" : "hcen-mrn-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-mrn-identifier",
+  "version" : "0.1.0",
+  "name" : "HCENMRNIdentifier"
+},
+{
+  "id" : "hcen-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization",
+  "version" : "0.1.0",
+  "name" : "HCENOrganization"
+},
+{
+  "id" : "hcen-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient",
+  "version" : "0.1.0",
+  "name" : "HCENPatient"
+},
+{
+  "id" : "hcen-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner",
+  "version" : "0.1.0",
+  "name" : "HCENPractitioner"
+},
+{
+  "id" : "hcen-practitioner-role",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role",
+  "version" : "0.1.0",
+  "name" : "HCENPractitionerRole"
+},
+{
+  "id" : "hcen-procedimiento",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento",
+  "version" : "0.1.0",
+  "name" : "HCENProcedimiento"
+},
+{
+  "id" : "hcen-provide-document-bundle",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle",
+  "version" : "0.1.0",
+  "name" : "HCENProvideDocumentBundle"
+},
+{
+  "id" : "hcen-service-request",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request",
+  "version" : "0.1.0",
+  "name" : "HCENServiceRequest"
+},
+{
+  "id" : "hcen-submission-set",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set",
+  "version" : "0.1.0",
+  "name" : "HCENSubmissionSet"
+},
+{
+  "id" : "hcen-submission-set-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-identifier",
+  "version" : "0.1.0",
+  "name" : "HCENSubmissionSetIdentifier"
+},
+{
+  "id" : "uy-aa-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-aa-identifier",
+  "version" : "0.1.0",
+  "name" : "UYAAIdentifier"
+},
+{
+  "id" : "uy-address",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-address",
+  "version" : "0.1.0",
+  "name" : "UYAddress"
+},
+{
+  "id" : "uy-ci-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier",
+  "version" : "0.1.0",
+  "name" : "UYCIIdentifier"
+},
+{
+  "id" : "uy-consulta-no-urgente",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente",
+  "version" : "0.1.0",
+  "name" : "HCENConsultaNoUrgente"
+},
+{
+  "id" : "uy-email-contact-point",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-email-contact-point",
+  "version" : "0.1.0",
+  "name" : "UYEmailContactPoint"
+},
+{
+  "id" : "uy-fni-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier",
+  "version" : "0.1.0",
+  "name" : "UYFNIIdentifier"
+},
+{
+  "id" : "uy-human-name",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-human-name",
+  "version" : "0.1.0",
+  "name" : "UYHumanName"
+},
+{
+  "id" : "uy-mrn-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-mrn-identifier",
+  "version" : "0.1.0",
+  "name" : "UYMRNIdentifier"
+},
+{
+  "id" : "uy-organization",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization",
+  "version" : "0.1.0",
+  "name" : "UYOrganization"
+},
+{
+  "id" : "uy-patient",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient",
+  "version" : "0.1.0",
+  "name" : "UYPatient"
+},
+{
+  "id" : "uy-phone-contact-point",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point",
+  "version" : "0.1.0",
+  "name" : "UYPhoneContactPoint"
+},
+{
+  "id" : "uy-ppn-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-ppn-identifier",
+  "version" : "0.1.0",
+  "name" : "UYPPNIdentifier"
+},
+{
+  "id" : "uy-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner",
+  "version" : "0.1.0",
+  "name" : "UYPractitioner"
+},
+{
+  "id" : "uy-practitioner-role",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role",
+  "version" : "0.1.0",
+  "name" : "UYPractitionerRole"
+},
+{
+  "id" : "hcen-fhir-serialization",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization",
+  "version" : "0.1.0",
+  "name" : "HCENFHIRSerialization"
+},
+{
+  "id" : "vs-barrios-localidades-uy",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
+  "version" : "0.1.0",
+  "name" : "VSBarriosLocalidadesUY"
+},
+{
+  "id" : "vs-class-code",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
+  "version" : "0.1.0",
+  "name" : "VSclassCode"
+},
+{
+  "id" : "vs-codigos-postales-uy",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
+  "version" : "0.1.0",
+  "name" : "VSCodigosPostalesUY"
+},
+{
+  "id" : "vs-composition-status-cnu",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-composition-status-cnu",
+  "version" : "0.1.0",
+  "name" : "VSCompositionStatusCNU"
+},
+{
+  "id" : "vs-condition-category-cnu",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu",
+  "version" : "0.1.0",
+  "name" : "VSConditionCategoryCNU"
+},
+{
+  "id" : "vs-confidentiality-cnu",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
+  "version" : "0.1.0",
+  "name" : "VSConfidentialityCNU"
+},
+{
+  "id" : "vs-departamentos-uy",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy",
+  "version" : "0.1.0",
+  "name" : "VSDepartamentosUY"
+},
+{
+  "id" : "vs-diagnostico-consulta",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta",
+  "version" : "0.1.0",
+  "name" : "VSDiagnosticoConsulta"
+},
+{
+  "id" : "vs-especialidad-medica",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica",
+  "version" : "0.1.0",
+  "name" : "EspecialidadMedica"
+},
+{
+  "id" : "vs-format-code",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
+  "version" : "0.1.0",
+  "name" : "FormatCode"
+},
+{
+  "id" : "vs-localidades-uy",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy",
+  "version" : "0.1.0",
+  "name" : "VSLocalidadesUY"
+},
+{
+  "id" : "vs-medicamentos",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-medicamentos",
+  "version" : "0.1.0",
+  "name" : "VSMedicamentos"
+},
+{
+  "id" : "vs-motivo-consulta",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+  "version" : "0.1.0",
+  "name" : "VSMotivoConsulta"
+},
+{
+  "id" : "vs-practice-setting",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
+  "version" : "0.1.0",
+  "name" : "VSpracticeSetting"
+},
+{
+  "id" : "vs-prestador-oid-mrn",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
+  "version" : "0.1.0",
+  "name" : "PrestadorOidMrn"
+},
+{
+  "id" : "vs-procedimientos",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
+  "version" : "0.1.0",
+  "name" : "VSProcedimientos"
+},
+{
+  "id" : "vs-resultado-procedimiento",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento",
+  "version" : "0.1.0",
+  "name" : "VSResultadoProcedimiento"
+},
+{
+  "id" : "vs-rol-profesional",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional",
+  "version" : "0.1.0",
+  "name" : "RolProfesional"
+},
+{
+  "id" : "vs-sitio-administracion",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion",
+  "version" : "0.1.0",
+  "name" : "VSSitioAdministracion"
+},
+{
+  "id" : "vs-solicitud-procedimiento",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
+  "version" : "0.1.0",
+  "name" : "VSSolicitudProcedimiento"
+},
+{
+  "id" : "vs-tipo-procedimiento",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-tipo-procedimiento",
+  "version" : "0.1.0",
+  "name" : "VSTipoProcedimiento"
+},
+{
+  "id" : "vs-type-code",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-type-code",
+  "version" : "0.1.0",
+  "name" : "VStypeCode"
+},
+{
+  "id" : "vs-via-administracion",
+  "type" : "ValueSet",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
+  "version" : "0.1.0",
+  "name" : "VSViaAdministracion"
+}]

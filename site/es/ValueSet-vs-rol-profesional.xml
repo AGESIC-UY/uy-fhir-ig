@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-rol-profesional"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-rol-profesional</b></p><a name="vs-rol-profesional"> </a><a name="hcvs-rol-profesional"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/3430008">3430008</a></td><td>especialista en oncología radioterápica</td></tr><tr><td><a href="http://snomed.info/id/4162009">4162009</a></td><td>auxiliar de odontología</td></tr><tr><td><a href="http://snomed.info/id/5275007">5275007</a></td><td>auxiliar de enfermería</td></tr><tr><td><a href="http://snomed.info/id/6816002">6816002</a></td><td>enfermera especializada</td></tr><tr><td><a href="http://snomed.info/id/8724009">8724009</a></td><td>cirujano plástico</td></tr><tr><td><a href="http://snomed.info/id/11661002">11661002</a></td><td>neuropatólogo</td></tr><tr><td><a href="http://snomed.info/id/11911009">11911009</a></td><td>nefrólogo</td></tr><tr><td><a href="http://snomed.info/id/11935004">11935004</a></td><td>obstetra</td></tr><tr><td><a href="http://snomed.info/id/14698002">14698002</a></td><td>microbiólogo médico</td></tr><tr><td><a href="http://snomed.info/id/17561000">17561000</a></td><td>cardiólogo</td></tr><tr><td><a href="http://snomed.info/id/18803008">18803008</a></td><td>dermatólogo médico quirúrgico</td></tr><tr><td><a href="http://snomed.info/id/19244007">19244007</a></td><td>especialista en gerodontología</td></tr><tr><td><a href="http://snomed.info/id/22983004">22983004</a></td><td>cirujano torácico</td></tr><tr><td><a href="http://snomed.info/id/24430003">24430003</a></td><td>fisiatra</td></tr><tr><td><a href="http://snomed.info/id/24590004">24590004</a></td><td>urólogo</td></tr><tr><td><a href="http://snomed.info/id/26042002">26042002</a></td><td>higienista dental</td></tr><tr><td><a href="http://snomed.info/id/28411006">28411006</a></td><td>neonatólogo</td></tr><tr><td><a href="http://snomed.info/id/28544002">28544002</a></td><td>licenciado en bioquímica</td></tr><tr><td><a href="http://snomed.info/id/31641003">31641003</a></td><td>farmacólogo</td></tr><tr><td><a href="http://snomed.info/id/35513000">35513000</a></td><td>bioquímico</td></tr><tr><td><a href="http://snomed.info/id/36682004">36682004</a></td><td>fisioterapeuta</td></tr><tr><td><a href="http://snomed.info/id/39677007">39677007</a></td><td>especialista en medicina interna</td></tr><tr><td><a href="http://snomed.info/id/40204001">40204001</a></td><td>hematólogo</td></tr><tr><td><a href="http://snomed.info/id/41672002">41672002</a></td><td>neumonólogo</td></tr><tr><td><a href="http://snomed.info/id/41904004">41904004</a></td><td>técnico radiólogo</td></tr><tr><td><a href="http://snomed.info/id/44652006">44652006</a></td><td>auxiliar farmacéutico</td></tr><tr><td><a href="http://snomed.info/id/45440000">45440000</a></td><td>reumatólogo</td></tr><tr><td><a href="http://snomed.info/id/45544007">45544007</a></td><td>neurocirujano</td></tr><tr><td><a href="http://snomed.info/id/45956004">45956004</a></td><td>especialista en sanidad e higiene pública</td></tr><tr><td><a href="http://snomed.info/id/46255001">46255001</a></td><td>farmacéutico</td></tr><tr><td><a href="http://snomed.info/id/49993003">49993003</a></td><td>cirujano oral</td></tr><tr><td><a href="http://snomed.info/id/50149000">50149000</a></td><td>endodoncista</td></tr><tr><td><a href="http://snomed.info/id/56397003">56397003</a></td><td>neurólogo</td></tr><tr><td><a href="http://snomed.info/id/56466003">56466003</a></td><td>médico de salud pública</td></tr><tr><td><a href="http://snomed.info/id/56545009">56545009</a></td><td>cirujano cardiovascular</td></tr><tr><td><a href="http://snomed.info/id/59058001">59058001</a></td><td>médico general</td></tr><tr><td><a href="http://snomed.info/id/59169001">59169001</a></td><td>técnico en ortopedia</td></tr><tr><td><a href="http://snomed.info/id/59944000">59944000</a></td><td>licenciado en psicología</td></tr><tr><td><a href="http://snomed.info/id/61345009">61345009</a></td><td>otorrinolaringólogo</td></tr><tr><td><a href="http://snomed.info/id/61894003">61894003</a></td><td>endocrinólogo</td></tr><tr><td><a href="http://snomed.info/id/62247001">62247001</a></td><td>médico especialista en medicina familiar</td></tr><tr><td><a href="http://snomed.info/id/63098009">63098009</a></td><td>inmunólogo clínico</td></tr><tr><td><a href="http://snomed.info/id/63279000">63279000</a></td><td>licenciado en química</td></tr><tr><td><a href="http://snomed.info/id/66862007">66862007</a></td><td>especialista en imagenología</td></tr><tr><td><a href="http://snomed.info/id/68950000">68950000</a></td><td>prostodoncista</td></tr><tr><td><a href="http://snomed.info/id/71838004">71838004</a></td><td>gastroenterólogo</td></tr><tr><td><a href="http://snomed.info/id/76899008">76899008</a></td><td>infectólogo</td></tr><tr><td><a href="http://snomed.info/id/78703002">78703002</a></td><td>cirujano general</td></tr><tr><td><a href="http://snomed.info/id/80584001">80584001</a></td><td>psiquiatra</td></tr><tr><td><a href="http://snomed.info/id/80933006">80933006</a></td><td>especialista en medicina nuclear</td></tr><tr><td><a href="http://snomed.info/id/81464008">81464008</a></td><td>patólogo clínico</td></tr><tr><td><a href="http://snomed.info/id/82296001">82296001</a></td><td>pediatra</td></tr><tr><td><a href="http://snomed.info/id/83273008">83273008</a></td><td>anatomopatólogo</td></tr><tr><td><a href="http://snomed.info/id/83685006">83685006</a></td><td>ginecólogo</td></tr><tr><td><a href="http://snomed.info/id/88189002">88189002</a></td><td>anestesiólogo</td></tr><tr><td><a href="http://snomed.info/id/90201008">90201008</a></td><td>odontólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/90655003">90655003</a></td><td>especialista en geriatría</td></tr><tr><td><a href="http://snomed.info/id/106256002">106256002</a></td><td>químico</td></tr><tr><td><a href="http://snomed.info/id/106265009">106265009</a></td><td>ingeniero especialista en química</td></tr><tr><td><a href="http://snomed.info/id/106292003">106292003</a></td><td>licenciado en enfermería</td></tr><tr><td><a href="http://snomed.info/id/106328005">106328005</a></td><td>licenciado en trabajo social</td></tr><tr><td><a href="http://snomed.info/id/106437009">106437009</a></td><td>técnico operador de alimentos</td></tr><tr><td><a href="http://snomed.info/id/158973009">158973009</a></td><td>especialista en salud ocupacional</td></tr><tr><td><a href="http://snomed.info/id/158979008">158979008</a></td><td>odontólogo</td></tr><tr><td><a href="http://snomed.info/id/159010009">159010009</a></td><td>farmacéutico de hospital</td></tr><tr><td><a href="http://snomed.info/id/159026005">159026005</a></td><td>fonoaudiólogo</td></tr><tr><td><a href="http://snomed.info/id/159033005">159033005</a></td><td>licenciado en nutrición</td></tr><tr><td><a href="http://snomed.info/id/159036002">159036002</a></td><td>auxiliar de electrocardiografía</td></tr><tr><td><a href="http://snomed.info/id/159041005">159041005</a></td><td>practicante de medicina</td></tr><tr><td><a href="http://snomed.info/id/159135001">159135001</a></td><td>parasitólogo</td></tr><tr><td><a href="http://snomed.info/id/159150005">159150005</a></td><td>bachiller en química</td></tr><tr><td><a href="http://snomed.info/id/224540001">224540001</a></td><td>enfermera comunitaria</td></tr><tr><td><a href="http://snomed.info/id/224543004">224543004</a></td><td>enfermera especializada en atención de diabéticos</td></tr><tr><td><a href="http://snomed.info/id/224545006">224545006</a></td><td>enfermera geriátrica</td></tr><tr><td><a href="http://snomed.info/id/224549000">224549000</a></td><td>enfermera neonatal</td></tr><tr><td><a href="http://snomed.info/id/224550000">224550000</a></td><td>enfermera de neurología</td></tr><tr><td><a href="http://snomed.info/id/224552008">224552008</a></td><td>enfermera de oncología</td></tr><tr><td><a href="http://snomed.info/id/224562001">224562001</a></td><td>enfermera de pediatría</td></tr><tr><td><a href="http://snomed.info/id/224563006">224563006</a></td><td>enfermera a cargo del área de salud mental</td></tr><tr><td><a href="http://snomed.info/id/224588003">224588003</a></td><td>psicoterapeuta</td></tr><tr><td><a href="http://snomed.info/id/224603001">224603001</a></td><td>podólogo</td></tr><tr><td><a href="http://snomed.info/id/236300002">236300002</a></td><td>ingeniero electricista</td></tr><tr><td><a href="http://snomed.info/id/236301003">236301003</a></td><td>ingeniero en informática</td></tr><tr><td><a href="http://snomed.info/id/265939002">265939002</a></td><td>protesista dental</td></tr><tr><td><a href="http://snomed.info/id/265993004">265993004</a></td><td>manicura/podólogo</td></tr><tr><td><a href="http://snomed.info/id/309294001">309294001</a></td><td>médico emergentólogo</td></tr><tr><td><a href="http://snomed.info/id/309295000">309295000</a></td><td>oncólogo clínico</td></tr><tr><td><a href="http://snomed.info/id/309330006">309330006</a></td><td>cardiólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309331005">309331005</a></td><td>endocrinólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309332003">309332003</a></td><td>gastroenterólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309333008">309333008</a></td><td>nefrólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309334002">309334002</a></td><td>neurólogo pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309338004">309338004</a></td><td>especialista en terapia intensiva</td></tr><tr><td><a href="http://snomed.info/id/309340009">309340009</a></td><td>especialista en terapia intensiva pediátrica</td></tr><tr><td><a href="http://snomed.info/id/309343006">309343006</a></td><td>médico</td></tr><tr><td><a href="http://snomed.info/id/309348002">309348002</a></td><td>neurofisiólogo clínico</td></tr><tr><td><a href="http://snomed.info/id/309350005">309350005</a></td><td>diabetólogo</td></tr><tr><td><a href="http://snomed.info/id/309359006">309359006</a></td><td>médico de cuidados paliativos</td></tr><tr><td><a href="http://snomed.info/id/309360001">309360001</a></td><td>rehabilitador físico</td></tr><tr><td><a href="http://snomed.info/id/309361002">309361002</a></td><td>psiquiatra de adolescentes y niños</td></tr><tr><td><a href="http://snomed.info/id/309368008">309368008</a></td><td>cirujano especialista en mama</td></tr><tr><td><a href="http://snomed.info/id/309371000">309371000</a></td><td>especialista en cirugía cardíaca</td></tr><tr><td><a href="http://snomed.info/id/309383003">309383003</a></td><td>cirujano pediátrico</td></tr><tr><td><a href="http://snomed.info/id/309385005">309385005</a></td><td>cirujano especialista en trasplantes</td></tr><tr><td><a href="http://snomed.info/id/309388007">309388007</a></td><td>cirujano vascular</td></tr><tr><td><a href="http://snomed.info/id/309460000">309460000</a></td><td>odontólogo restaurador</td></tr><tr><td><a href="http://snomed.info/id/310193003">310193003</a></td><td>médico forense</td></tr><tr><td><a href="http://snomed.info/id/310512001">310512001</a></td><td>médico oncólogo</td></tr><tr><td><a href="http://snomed.info/id/386605000">386605000</a></td><td>laboratorista especializado en citología y colpocitología</td></tr><tr><td><a href="http://snomed.info/id/387619007">387619007</a></td><td>óptico</td></tr><tr><td><a href="http://snomed.info/id/404940000">404940000</a></td><td>técnico en fisioterapia</td></tr><tr><td><a href="http://snomed.info/id/405278004">405278004</a></td><td>enfermera matriculada especializada en anestesia</td></tr><tr><td><a href="http://snomed.info/id/415075003">415075003</a></td><td>enfermera de atención perioperatoria</td></tr><tr><td><a href="http://snomed.info/id/422234006">422234006</a></td><td>especialista en oftalmología</td></tr><tr><td><a href="http://snomed.info/id/721940004">721940004</a></td><td>especialista en medicina legal</td></tr><tr><td><a href="http://snomed.info/id/1172950003">1172950003</a></td><td>masoterapeuta</td></tr><tr><td><a href="http://snomed.info/id/1259943001">1259943001</a></td><td>técnico en anatomía patológica</td></tr><tr><td><a href="http://snomed.info/id/258671000179104">258671000179104</a></td><td>licenciado en biotecnología</td></tr><tr><td><a href="http://snomed.info/id/10431000179101">10431000179101</a></td><td>especialista en enfermería en nefrología</td></tr><tr><td><a href="http://snomed.info/id/5731000179102">5731000179102</a></td><td>especialista en bases inmunogenéticas de los trasplantes</td></tr><tr><td><a href="http://snomed.info/id/6951000179104">6951000179104</a></td><td>técnico en oftalmología</td></tr><tr><td><a href="http://snomed.info/id/10721000179106">10721000179106</a></td><td>tatuador y punzador</td></tr><tr><td><a href="http://snomed.info/id/5861000179103">5861000179103</a></td><td>especialista en neurodesarrollo</td></tr><tr><td><a href="http://snomed.info/id/10301000179102">10301000179102</a></td><td>especialista en enfermería en cirugía cardiaca</td></tr><tr><td><a href="http://snomed.info/id/258701000179100">258701000179100</a></td><td>maestría en políticas de infancia y adolescencia para la prevención de las fármacodependencias</td></tr><tr><td><a href="http://snomed.info/id/10531000179100">10531000179100</a></td><td>ingeniero industrial mecánico</td></tr><tr><td><a href="http://snomed.info/id/6761000179103">6761000179103</a></td><td>licenciado en terapia ocupacional</td></tr><tr><td><a href="http://snomed.info/id/10241000179105">10241000179105</a></td><td>doctor en ciencias médicas</td></tr><tr><td><a href="http://snomed.info/id/5671000179108">5671000179108</a></td><td>especialista en emergentología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/10371000179109">10371000179109</a></td><td>especialista en enfermería en emergencia</td></tr><tr><td><a href="http://snomed.info/id/7011000179104">7011000179104</a></td><td>técnico en promoción de salud y prevención de enfermedades</td></tr><tr><td><a href="http://snomed.info/id/10661000179108">10661000179108</a></td><td>magíster en nutrición</td></tr><tr><td><a href="http://snomed.info/id/10111000179102">10111000179102</a></td><td>auxiliar de enfermería adiestrado en block quirúrgico e instrumentación</td></tr><tr><td><a href="http://snomed.info/id/6891000179101">6891000179101</a></td><td>licenciado en psicopedagogía</td></tr><tr><td><a href="http://snomed.info/id/10471000179104">10471000179104</a></td><td>especialista en enfermería en quemados</td></tr><tr><td><a href="http://snomed.info/id/5831000179107">5831000179107</a></td><td>especialista en medicina rural</td></tr><tr><td><a href="http://snomed.info/id/258771000179107">258771000179107</a></td><td>especialista en derechos de la infancia y políticas publicas</td></tr><tr><td><a href="http://snomed.info/id/258801000179105">258801000179105</a></td><td>técnico en acompañamiento terapéutico</td></tr><tr><td><a href="http://snomed.info/id/5701000179107">5701000179107</a></td><td>especialista en medicina del deporte</td></tr><tr><td><a href="http://snomed.info/id/10401000179106">10401000179106</a></td><td>especialista en enfermería en infecciones intrahospitalarias</td></tr><tr><td><a href="http://snomed.info/id/258641000179109">258641000179109</a></td><td>especialista en psicoterapia en los servicios de salud</td></tr><tr><td><a href="http://snomed.info/id/10181000179108">10181000179108</a></td><td>auxiliar de higiene ambiental</td></tr><tr><td><a href="http://snomed.info/id/10341000179104">10341000179104</a></td><td>especialista en enfermería en cuidados intensivos del adulto</td></tr><tr><td><a href="http://snomed.info/id/5771000179100">5771000179100</a></td><td>especialista en epidemiología</td></tr><tr><td><a href="http://snomed.info/id/10211000179109">10211000179109</a></td><td>auxiliar de servicio, ayudante de cocina y tisanería</td></tr><tr><td><a href="http://snomed.info/id/6731000179107">6731000179107</a></td><td>licenciado en neumocardiología</td></tr><tr><td><a href="http://snomed.info/id/258741000179102">258741000179102</a></td><td>práctico laboratorista odontológico</td></tr><tr><td><a href="http://snomed.info/id/10761000179104">10761000179104</a></td><td>especialista en enfermería en hematooncología</td></tr><tr><td><a href="http://snomed.info/id/6861000179106">6861000179106</a></td><td>técnico en radioisótopos</td></tr><tr><td><a href="http://snomed.info/id/5931000179104">5931000179104</a></td><td>especialista en trasplante de progenitores hematopoyéticos</td></tr><tr><td><a href="http://snomed.info/id/10631000179104">10631000179104</a></td><td>magíster en epidemiología</td></tr><tr><td><a href="http://snomed.info/id/10281000179103">10281000179103</a></td><td>doctorado en farmacia</td></tr><tr><td><a href="http://snomed.info/id/10151000179103">10151000179103</a></td><td>auxiliar de enfermería con extensión materno infantil</td></tr><tr><td><a href="http://snomed.info/id/10571000179103">10571000179103</a></td><td>magíster en atención de salud en primer nivel</td></tr><tr><td><a href="http://snomed.info/id/7051000179100">7051000179100</a></td><td>técnico en neurofisiología clínica</td></tr><tr><td><a href="http://snomed.info/id/5801000179102">5801000179102</a></td><td>especialista en gerontopsicomotricidad</td></tr><tr><td><a href="http://snomed.info/id/10441000179109">10441000179109</a></td><td>especialista en enfermería en neumología</td></tr><tr><td><a href="http://snomed.info/id/258611000179108">258611000179108</a></td><td>auxiliar de enfermería rural</td></tr><tr><td><a href="http://snomed.info/id/10091000179106">10091000179106</a></td><td>auxiliar de anatomía patológica y autopsista</td></tr><tr><td><a href="http://snomed.info/id/258711000179103">258711000179103</a></td><td>magister en genética y biología molecular</td></tr><tr><td><a href="http://snomed.info/id/5871000179109">5871000179109</a></td><td>especialista en nutrición en enfermedades crónicas no transmisibles</td></tr><tr><td><a href="http://snomed.info/id/10311000179100">10311000179100</a></td><td>especialista en enfermería en cirugía cardíaca pediátrica</td></tr><tr><td><a href="http://snomed.info/id/10601000179109">10601000179109</a></td><td>magíster en ciencias médicas</td></tr><tr><td><a href="http://snomed.info/id/10731000179108">10731000179108</a></td><td>odontólogo especialista en odontología legal</td></tr><tr><td><a href="http://snomed.info/id/6961000179101">6961000179101</a></td><td>tecnólogo en radioterapia</td></tr><tr><td><a href="http://snomed.info/id/5901000179109">5901000179109</a></td><td>especialista en toxicología</td></tr><tr><td><a href="http://snomed.info/id/6831000179102">6831000179102</a></td><td>técnico en fonoaudiología</td></tr><tr><td><a href="http://snomed.info/id/5741000179105">5741000179105</a></td><td>especialista en ecografía gineco obstétrica</td></tr><tr><td><a href="http://snomed.info/id/6931000179105">6931000179105</a></td><td>histotecnólogo</td></tr><tr><td><a href="http://snomed.info/id/258681000179102">258681000179102</a></td><td>licenciado en ciencias biológicas</td></tr><tr><td><a href="http://snomed.info/id/6771000179109">6771000179109</a></td><td>técnico en salud ocupacional</td></tr><tr><td><a href="http://snomed.info/id/10121000179107">10121000179107</a></td><td>auxiliar de enfermería adiestrado en cuidados intensivos en adultos</td></tr><tr><td><a href="http://snomed.info/id/5841000179104">5841000179104</a></td><td>especialista en multitejidos para trasplantes</td></tr><tr><td><a href="http://snomed.info/id/10381000179106">10381000179106</a></td><td>especialista en enfermería en emergencia pediátrica</td></tr><tr><td><a href="http://snomed.info/id/7021000179109">7021000179109</a></td><td>técnico en psicología infantil</td></tr><tr><td><a href="http://snomed.info/id/10411000179108">10411000179108</a></td><td>especialista en enfermería en hematooncología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/10541000179108">10541000179108</a></td><td>ingeniero industrial con opción electrónica</td></tr><tr><td><a href="http://snomed.info/id/10671000179102">10671000179102</a></td><td>magíster en políticas y gestión de la salud</td></tr><tr><td><a href="http://snomed.info/id/5681000179105">5681000179105</a></td><td>especialista en dermatología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/258781000179109">258781000179109</a></td><td>laboratorista en odontologia</td></tr><tr><td><a href="http://snomed.info/id/258651000179107">258651000179107</a></td><td>especialista en psicoterapia psicoanalítica</td></tr><tr><td><a href="http://snomed.info/id/10251000179108">10251000179108</a></td><td>doctor en ciencias veterinarias</td></tr><tr><td><a href="http://snomed.info/id/10351000179101">10351000179101</a></td><td>especialista en enfermería en diálisis</td></tr><tr><td><a href="http://snomed.info/id/258811000179107">258811000179107</a></td><td>auxiliar de terapia ocupacional psiquiátrica</td></tr><tr><td><a href="http://snomed.info/id/224891000179105">224891000179105</a></td><td>especialista en parasitología y micología médica</td></tr><tr><td><a href="http://snomed.info/id/10191000179105">10191000179105</a></td><td>auxiliar de laboratorio clínico</td></tr><tr><td><a href="http://snomed.info/id/10481000179102">10481000179102</a></td><td>especialista en enfermería estomatoterapéutica</td></tr><tr><td><a href="http://snomed.info/id/10701000179103">10701000179103</a></td><td>magíster en salud mental</td></tr><tr><td><a href="http://snomed.info/id/10641000179107">10641000179107</a></td><td>magíster en farmacología clínica</td></tr><tr><td><a href="http://snomed.info/id/5811000179100">5811000179100</a></td><td>especialista en hemoterapia</td></tr><tr><td><a href="http://snomed.info/id/10511000179107">10511000179107</a></td><td>ingeniero en electrónica</td></tr><tr><td><a href="http://snomed.info/id/6871000179100">6871000179100</a></td><td>licenciado en imagenología</td></tr><tr><td><a href="http://snomed.info/id/258591000179101">258591000179101</a></td><td>auxiliar de enfermería con extensión en enfermería sanitaria</td></tr><tr><td><a href="http://snomed.info/id/258621000179103">258621000179103</a></td><td>médico especialista en coordinación de trasplantes</td></tr><tr><td><a href="http://snomed.info/id/5781000179103">5781000179103</a></td><td>especialista en genética médica de adultos</td></tr><tr><td><a href="http://snomed.info/id/258751000179104">258751000179104</a></td><td>profundización en aparatos de yeso</td></tr><tr><td><a href="http://snomed.info/id/6901000179100">6901000179100</a></td><td>tecnólogo en cosmetología médica</td></tr><tr><td><a href="http://snomed.info/id/6741000179104">6741000179104</a></td><td>licenciado en neurofisiología clínica</td></tr><tr><td><a href="http://snomed.info/id/10221000179104">10221000179104</a></td><td>auxiliar dental</td></tr><tr><td><a href="http://snomed.info/id/10321000179105">10321000179105</a></td><td>especialista en enfermería en cirugía pediátrica</td></tr><tr><td><a href="http://snomed.info/id/10451000179107">10451000179107</a></td><td>especialista en enfermería en neurocirugía</td></tr><tr><td><a href="http://snomed.info/id/10581000179101">10581000179101</a></td><td>magíster en biotecnología</td></tr><tr><td><a href="http://snomed.info/id/5881000179106">5881000179106</a></td><td>especialista en ortopedia y ortodoncia maxilo-facial</td></tr><tr><td><a href="http://snomed.info/id/258691000179100">258691000179100</a></td><td>licenciado en ingeniería técnica química industrial</td></tr><tr><td><a href="http://snomed.info/id/10161000179100">10161000179100</a></td><td>auxiliar de enfermería en centro quirúrgico e instrumentación</td></tr><tr><td><a href="http://snomed.info/id/6971000179107">6971000179107</a></td><td>técnico en reeducación psicomotríz</td></tr><tr><td><a href="http://snomed.info/id/219341000179103">219341000179103</a></td><td>licenciado en oftalmología</td></tr><tr><td><a href="http://snomed.info/id/10741000179100">10741000179100</a></td><td>especialista en implantología oral</td></tr><tr><td><a href="http://snomed.info/id/10291000179101">10291000179101</a></td><td>especialista en enfermería en cardiología</td></tr><tr><td><a href="http://snomed.info/id/258721000179108">258721000179108</a></td><td>master en medicina familiar y comunitaria</td></tr><tr><td><a href="http://snomed.info/id/5751000179108">5751000179108</a></td><td>especialista en economía de la salud</td></tr><tr><td><a href="http://snomed.info/id/10611000179106">10611000179106</a></td><td>magíster en derechos de la infancia y políticas públicas</td></tr><tr><td><a href="http://snomed.info/id/10391000179108">10391000179108</a></td><td>especialista en enfermería en gineco-obstetricia</td></tr><tr><td><a href="http://snomed.info/id/5911000179106">5911000179106</a></td><td>especialista en urología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/6711000179100">6711000179100</a></td><td>licenciado en instrumentación quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/10681000179100">10681000179100</a></td><td>magíster en psicología clínica</td></tr><tr><td><a href="http://snomed.info/id/6841000179105">6841000179105</a></td><td>técnico en hemoterapia</td></tr><tr><td><a href="http://snomed.info/id/10261000179106">10261000179106</a></td><td>doctor en química</td></tr><tr><td><a href="http://snomed.info/id/243881000179109">243881000179109</a></td><td>químico farmacéutico</td></tr><tr><td><a href="http://snomed.info/id/6941000179102">6941000179102</a></td><td>técnico en laboratorio clínico</td></tr><tr><td><a href="http://snomed.info/id/258661000179105">258661000179105</a></td><td>licenciado en biología humana</td></tr><tr><td><a href="http://snomed.info/id/10131000179109">10131000179109</a></td><td>auxiliar de enfermería adiestrado en cuidados intensivos pediátricos</td></tr><tr><td><a href="http://snomed.info/id/5691000179107">5691000179107</a></td><td>especialista en infectología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/10421000179103">10421000179103</a></td><td>especialista en enfermería maternoinfantil</td></tr><tr><td><a href="http://snomed.info/id/5851000179101">5851000179101</a></td><td>especialista en neumología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/5721000179104">5721000179104</a></td><td>especialista en alergología</td></tr><tr><td><a href="http://snomed.info/id/10711000179101">10711000179101</a></td><td>magíster en trabajo social</td></tr><tr><td><a href="http://snomed.info/id/258791000179106">258791000179106</a></td><td>especialista en políticas de infancia y adolescencia para la prevención de las farmacodependencias</td></tr><tr><td><a href="http://snomed.info/id/6881000179103">6881000179103</a></td><td>licenciado en psicomotricidad</td></tr><tr><td><a href="http://snomed.info/id/10651000179105">10651000179105</a></td><td>magíster en genética humana</td></tr><tr><td><a href="http://snomed.info/id/6041000179101">6041000179101</a></td><td>auditor en salud</td></tr><tr><td><a href="http://snomed.info/id/5791000179101">5791000179101</a></td><td>especialista en genética médica de niños</td></tr><tr><td><a href="http://snomed.info/id/10491000179100">10491000179100</a></td><td>ingeniero alimentario</td></tr><tr><td><a href="http://snomed.info/id/10231000179102">10231000179102</a></td><td>doctor en ciencias biológicas</td></tr><tr><td><a href="http://snomed.info/id/10361000179103">10361000179103</a></td><td>especialista en enfermería en diálisis pediátrica</td></tr><tr><td><a href="http://snomed.info/id/6751000179101">6751000179101</a></td><td>licenciado en registros médicos</td></tr><tr><td><a href="http://snomed.info/id/10101000179104">10101000179104</a></td><td>auxiliar de educación para la salud</td></tr><tr><td><a href="http://snomed.info/id/258631000179101">258631000179101</a></td><td>especialista en enfermería en cuidados intermedios</td></tr><tr><td><a href="http://snomed.info/id/258761000179101">258761000179101</a></td><td>especialiista en psicología sistémica y familias</td></tr><tr><td><a href="http://snomed.info/id/7001000179101">7001000179101</a></td><td>técnico instrumentista quirúrgico</td></tr><tr><td><a href="http://snomed.info/id/5761000179106">5761000179106</a></td><td>especialista en endoscopia digestiva</td></tr><tr><td><a href="http://snomed.info/id/10751000179102">10751000179102</a></td><td>especialista de primer grado en cirugía maxilofacial</td></tr><tr><td><a href="http://snomed.info/id/10621000179101">10621000179101</a></td><td>magíster en educación y psicología</td></tr><tr><td><a href="http://snomed.info/id/6691000179102">6691000179102</a></td><td>licenciado en física médica</td></tr><tr><td><a href="http://snomed.info/id/10201000179107">10201000179107</a></td><td>auxiliar de radiología</td></tr><tr><td><a href="http://snomed.info/id/10461000179105">10461000179105</a></td><td>especialista en enfermería en ortopedia y traumatología</td></tr><tr><td><a href="http://snomed.info/id/6981000179109">6981000179109</a></td><td>tecnólogo en registros médicos</td></tr><tr><td><a href="http://snomed.info/id/6721000179105">6721000179105</a></td><td>licenciado en laboratorio clínico</td></tr><tr><td><a href="http://snomed.info/id/6851000179108">6851000179108</a></td><td>técnico en neumocardiología</td></tr><tr><td><a href="http://snomed.info/id/10171000179106">10171000179106</a></td><td>auxiliar de estadísticas de salud y registros médicos</td></tr><tr><td><a href="http://snomed.info/id/5891000179108">5891000179108</a></td><td>especialista en ortopedia y traumatología</td></tr><tr><td><a href="http://snomed.info/id/10331000179107">10331000179107</a></td><td>especialista en enfermería en cuidados intensivos pediátricos</td></tr><tr><td><a href="http://snomed.info/id/10591000179104">10591000179104</a></td><td>magíster en ciencias biológicas</td></tr><tr><td><a href="http://snomed.info/id/10271000179100">10271000179100</a></td><td>doctor en química farmacéutica</td></tr><tr><td><a href="http://snomed.info/id/258601000179106">258601000179106</a></td><td>auxiliar de enfermería en hemoterapia</td></tr><tr><td><a href="http://snomed.info/id/258731000179105">258731000179105</a></td><td>master en psicoanálisis</td></tr><tr><td><a href="http://snomed.info/id/10141000179101">10141000179101</a></td><td>auxiliar de enfermería adiestrado en vacunaciones</td></tr><tr><td><a href="http://snomed.info/id/5921000179101">5921000179101</a></td><td>especialista en administración de servicios de salud</td></tr><tr><td><a href="http://snomed.info/id/10691000179103">10691000179103</a></td><td>magíster en química</td></tr><tr><td><a href="http://snomed.info/id/156411000179107">156411000179107</a></td><td>auxiliar de anatomía patológica</td></tr><tr><td><a href="http://snomed.info/id/10561000179109">10561000179109</a></td><td>magíster en administración de servicios de salud</td></tr><tr><td><a href="http://snomed.info/id/7041000179103">7041000179103</a></td><td>técnico en encefalografía</td></tr><tr><td><a href="http://snomed.info/id/263271000179103">263271000179103</a></td><td>especialista en medicina sexual</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional"/>
+  <version value="0.1.0"/>
+  <name value="RolProfesional"/>
+  <title value="Conjunto de Valores Rol del Profesional"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Referencias simples de roles y especialidades en salud (metadato fundacional) para PractitionerRole.code."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="3430008"/>
+        <display value="especialista en oncología radioterápica"/>
+      </concept>
+      <concept>
+        <code value="4162009"/>
+        <display value="auxiliar de odontología"/>
+      </concept>
+      <concept>
+        <code value="5275007"/>
+        <display value="auxiliar de enfermería"/>
+      </concept>
+      <concept>
+        <code value="6816002"/>
+        <display value="enfermera especializada"/>
+      </concept>
+      <concept>
+        <code value="8724009"/>
+        <display value="cirujano plástico"/>
+      </concept>
+      <concept>
+        <code value="11661002"/>
+        <display value="neuropatólogo"/>
+      </concept>
+      <concept>
+        <code value="11911009"/>
+        <display value="nefrólogo"/>
+      </concept>
+      <concept>
+        <code value="11935004"/>
+        <display value="obstetra"/>
+      </concept>
+      <concept>
+        <code value="14698002"/>
+        <display value="microbiólogo médico"/>
+      </concept>
+      <concept>
+        <code value="17561000"/>
+        <display value="cardiólogo"/>
+      </concept>
+      <concept>
+        <code value="18803008"/>
+        <display value="dermatólogo médico quirúrgico"/>
+      </concept>
+      <concept>
+        <code value="19244007"/>
+        <display value="especialista en gerodontología"/>
+      </concept>
+      <concept>
+        <code value="22983004"/>
+        <display value="cirujano torácico"/>
+      </concept>
+      <concept>
+        <code value="24430003"/>
+        <display value="fisiatra"/>
+      </concept>
+      <concept>
+        <code value="24590004"/>
+        <display value="urólogo"/>
+      </concept>
+      <concept>
+        <code value="26042002"/>
+        <display value="higienista dental"/>
+      </concept>
+      <concept>
+        <code value="28411006"/>
+        <display value="neonatólogo"/>
+      </concept>
+      <concept>
+        <code value="28544002"/>
+        <display value="licenciado en bioquímica"/>
+      </concept>
+      <concept>
+        <code value="31641003"/>
+        <display value="farmacólogo"/>
+      </concept>
+      <concept>
+        <code value="35513000"/>
+        <display value="bioquímico"/>
+      </concept>
+      <concept>
+        <code value="36682004"/>
+        <display value="fisioterapeuta"/>
+      </concept>
+      <concept>
+        <code value="39677007"/>
+        <display value="especialista en medicina interna"/>
+      </concept>
+      <concept>
+        <code value="40204001"/>
+        <display value="hematólogo"/>
+      </concept>
+      <concept>
+        <code value="41672002"/>
+        <display value="neumonólogo"/>
+      </concept>
+      <concept>
+        <code value="41904004"/>
+        <display value="técnico radiólogo"/>
+      </concept>
+      <concept>
+        <code value="44652006"/>
+        <display value="auxiliar farmacéutico"/>
+      </concept>
+      <concept>
+        <code value="45440000"/>
+        <display value="reumatólogo"/>
+      </concept>
+      <concept>
+        <code value="45544007"/>
+        <display value="neurocirujano"/>
+      </concept>
+      <concept>
+        <code value="45956004"/>
+        <display value="especialista en sanidad e higiene pública"/>
+      </concept>
+      <concept>
+        <code value="46255001"/>
+        <display value="farmacéutico"/>
+      </concept>
+      <concept>
+        <code value="49993003"/>
+        <display value="cirujano oral"/>
+      </concept>
+      <concept>
+        <code value="50149000"/>
+        <display value="endodoncista"/>
+      </concept>
+      <concept>
+        <code value="56397003"/>
+        <display value="neurólogo"/>
+      </concept>
+      <concept>
+        <code value="56466003"/>
+        <display value="médico de salud pública"/>
+      </concept>
+      <concept>
+        <code value="56545009"/>
+        <display value="cirujano cardiovascular"/>
+      </concept>
+      <concept>
+        <code value="59058001"/>
+        <display value="médico general"/>
+      </concept>
+      <concept>
+        <code value="59169001"/>
+        <display value="técnico en ortopedia"/>
+      </concept>
+      <concept>
+        <code value="59944000"/>
+        <display value="licenciado en psicología"/>
+      </concept>
+      <concept>
+        <code value="61345009"/>
+        <display value="otorrinolaringólogo"/>
+      </concept>
+      <concept>
+        <code value="61894003"/>
+        <display value="endocrinólogo"/>
+      </concept>
+      <concept>
+        <code value="62247001"/>
+        <display value="médico especialista en medicina familiar"/>
+      </concept>
+      <concept>
+        <code value="63098009"/>
+        <display value="inmunólogo clínico"/>
+      </concept>
+      <concept>
+        <code value="63279000"/>
+        <display value="licenciado en química"/>
+      </concept>
+      <concept>
+        <code value="66862007"/>
+        <display value="especialista en imagenología"/>
+      </concept>
+      <concept>
+        <code value="68950000"/>
+        <display value="prostodoncista"/>
+      </concept>
+      <concept>
+        <code value="71838004"/>
+        <display value="gastroenterólogo"/>
+      </concept>
+      <concept>
+        <code value="76899008"/>
+        <display value="infectólogo"/>
+      </concept>
+      <concept>
+        <code value="78703002"/>
+        <display value="cirujano general"/>
+      </concept>
+      <concept>
+        <code value="80584001"/>
+        <display value="psiquiatra"/>
+      </concept>
+      <concept>
+        <code value="80933006"/>
+        <display value="especialista en medicina nuclear"/>
+      </concept>
+      <concept>
+        <code value="81464008"/>
+        <display value="patólogo clínico"/>
+      </concept>
+      <concept>
+        <code value="82296001"/>
+        <display value="pediatra"/>
+      </concept>
+      <concept>
+        <code value="83273008"/>
+        <display value="anatomopatólogo"/>
+      </concept>
+      <concept>
+        <code value="83685006"/>
+        <display value="ginecólogo"/>
+      </concept>
+      <concept>
+        <code value="88189002"/>
+        <display value="anestesiólogo"/>
+      </concept>
+      <concept>
+        <code value="90201008"/>
+        <display value="odontólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="90655003"/>
+        <display value="especialista en geriatría"/>
+      </concept>
+      <concept>
+        <code value="106256002"/>
+        <display value="químico"/>
+      </concept>
+      <concept>
+        <code value="106265009"/>
+        <display value="ingeniero especialista en química"/>
+      </concept>
+      <concept>
+        <code value="106292003"/>
+        <display value="licenciado en enfermería"/>
+      </concept>
+      <concept>
+        <code value="106328005"/>
+        <display value="licenciado en trabajo social"/>
+      </concept>
+      <concept>
+        <code value="106437009"/>
+        <display value="técnico operador de alimentos"/>
+      </concept>
+      <concept>
+        <code value="158973009"/>
+        <display value="especialista en salud ocupacional"/>
+      </concept>
+      <concept>
+        <code value="158979008"/>
+        <display value="odontólogo"/>
+      </concept>
+      <concept>
+        <code value="159010009"/>
+        <display value="farmacéutico de hospital"/>
+      </concept>
+      <concept>
+        <code value="159026005"/>
+        <display value="fonoaudiólogo"/>
+      </concept>
+      <concept>
+        <code value="159033005"/>
+        <display value="licenciado en nutrición"/>
+      </concept>
+      <concept>
+        <code value="159036002"/>
+        <display value="auxiliar de electrocardiografía"/>
+      </concept>
+      <concept>
+        <code value="159041005"/>
+        <display value="practicante de medicina"/>
+      </concept>
+      <concept>
+        <code value="159135001"/>
+        <display value="parasitólogo"/>
+      </concept>
+      <concept>
+        <code value="159150005"/>
+        <display value="bachiller en química"/>
+      </concept>
+      <concept>
+        <code value="224540001"/>
+        <display value="enfermera comunitaria"/>
+      </concept>
+      <concept>
+        <code value="224543004"/>
+        <display value="enfermera especializada en atención de diabéticos"/>
+      </concept>
+      <concept>
+        <code value="224545006"/>
+        <display value="enfermera geriátrica"/>
+      </concept>
+      <concept>
+        <code value="224549000"/>
+        <display value="enfermera neonatal"/>
+      </concept>
+      <concept>
+        <code value="224550000"/>
+        <display value="enfermera de neurología"/>
+      </concept>
+      <concept>
+        <code value="224552008"/>
+        <display value="enfermera de oncología"/>
+      </concept>
+      <concept>
+        <code value="224562001"/>
+        <display value="enfermera de pediatría"/>
+      </concept>
+      <concept>
+        <code value="224563006"/>
+        <display value="enfermera a cargo del área de salud mental"/>
+      </concept>
+      <concept>
+        <code value="224588003"/>
+        <display value="psicoterapeuta"/>
+      </concept>
+      <concept>
+        <code value="224603001"/>
+        <display value="podólogo"/>
+      </concept>
+      <concept>
+        <code value="236300002"/>
+        <display value="ingeniero electricista"/>
+      </concept>
+      <concept>
+        <code value="236301003"/>
+        <display value="ingeniero en informática"/>
+      </concept>
+      <concept>
+        <code value="265939002"/>
+        <display value="protesista dental"/>
+      </concept>
+      <concept>
+        <code value="265993004"/>
+        <display value="manicura/podólogo"/>
+      </concept>
+      <concept>
+        <code value="309294001"/>
+        <display value="médico emergentólogo"/>
+      </concept>
+      <concept>
+        <code value="309295000"/>
+        <display value="oncólogo clínico"/>
+      </concept>
+      <concept>
+        <code value="309330006"/>
+        <display value="cardiólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309331005"/>
+        <display value="endocrinólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309332003"/>
+        <display value="gastroenterólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309333008"/>
+        <display value="nefrólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309334002"/>
+        <display value="neurólogo pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309338004"/>
+        <display value="especialista en terapia intensiva"/>
+      </concept>
+      <concept>
+        <code value="309340009"/>
+        <display value="especialista en terapia intensiva pediátrica"/>
+      </concept>
+      <concept>
+        <code value="309343006"/>
+        <display value="médico"/>
+      </concept>
+      <concept>
+        <code value="309348002"/>
+        <display value="neurofisiólogo clínico"/>
+      </concept>
+      <concept>
+        <code value="309350005"/>
+        <display value="diabetólogo"/>
+      </concept>
+      <concept>
+        <code value="309359006"/>
+        <display value="médico de cuidados paliativos"/>
+      </concept>
+      <concept>
+        <code value="309360001"/>
+        <display value="rehabilitador físico"/>
+      </concept>
+      <concept>
+        <code value="309361002"/>
+        <display value="psiquiatra de adolescentes y niños"/>
+      </concept>
+      <concept>
+        <code value="309368008"/>
+        <display value="cirujano especialista en mama"/>
+      </concept>
+      <concept>
+        <code value="309371000"/>
+        <display value="especialista en cirugía cardíaca"/>
+      </concept>
+      <concept>
+        <code value="309383003"/>
+        <display value="cirujano pediátrico"/>
+      </concept>
+      <concept>
+        <code value="309385005"/>
+        <display value="cirujano especialista en trasplantes"/>
+      </concept>
+      <concept>
+        <code value="309388007"/>
+        <display value="cirujano vascular"/>
+      </concept>
+      <concept>
+        <code value="309460000"/>
+        <display value="odontólogo restaurador"/>
+      </concept>
+      <concept>
+        <code value="310193003"/>
+        <display value="médico forense"/>
+      </concept>
+      <concept>
+        <code value="310512001"/>
+        <display value="médico oncólogo"/>
+      </concept>
+      <concept>
+        <code value="386605000"/>
+        <display value="laboratorista especializado en citología y colpocitología"/>
+      </concept>
+      <concept>
+        <code value="387619007"/>
+        <display value="óptico"/>
+      </concept>
+      <concept>
+        <code value="404940000"/>
+        <display value="técnico en fisioterapia"/>
+      </concept>
+      <concept>
+        <code value="405278004"/>
+        <display value="enfermera matriculada especializada en anestesia"/>
+      </concept>
+      <concept>
+        <code value="415075003"/>
+        <display value="enfermera de atención perioperatoria"/>
+      </concept>
+      <concept>
+        <code value="422234006"/>
+        <display value="especialista en oftalmología"/>
+      </concept>
+      <concept>
+        <code value="721940004"/>
+        <display value="especialista en medicina legal"/>
+      </concept>
+      <concept>
+        <code value="1172950003"/>
+        <display value="masoterapeuta"/>
+      </concept>
+      <concept>
+        <code value="1259943001"/>
+        <display value="técnico en anatomía patológica"/>
+      </concept>
+      <concept>
+        <code value="258671000179104"/>
+        <display value="licenciado en biotecnología"/>
+      </concept>
+      <concept>
+        <code value="10431000179101"/>
+        <display value="especialista en enfermería en nefrología"/>
+      </concept>
+      <concept>
+        <code value="5731000179102"/>
+        <display value="especialista en bases inmunogenéticas de los trasplantes"/>
+      </concept>
+      <concept>
+        <code value="6951000179104"/>
+        <display value="técnico en oftalmología"/>
+      </concept>
+      <concept>
+        <code value="10721000179106"/>
+        <display value="tatuador y punzador"/>
+      </concept>
+      <concept>
+        <code value="5861000179103"/>
+        <display value="especialista en neurodesarrollo"/>
+      </concept>
+      <concept>
+        <code value="10301000179102"/>
+        <display value="especialista en enfermería en cirugía cardiaca"/>
+      </concept>
+      <concept>
+        <code value="258701000179100"/>
+        <display value="maestría en políticas de infancia y adolescencia para la prevención de las fármacodependencias"/>
+      </concept>
+      <concept>
+        <code value="10531000179100"/>
+        <display value="ingeniero industrial mecánico"/>
+      </concept>
+      <concept>
+        <code value="6761000179103"/>
+        <display value="licenciado en terapia ocupacional"/>
+      </concept>
+      <concept>
+        <code value="10241000179105"/>
+        <display value="doctor en ciencias médicas"/>
+      </concept>
+      <concept>
+        <code value="5671000179108"/>
+        <display value="especialista en emergentología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="10371000179109"/>
+        <display value="especialista en enfermería en emergencia"/>
+      </concept>
+      <concept>
+        <code value="7011000179104"/>
+        <display value="técnico en promoción de salud y prevención de enfermedades"/>
+      </concept>
+      <concept>
+        <code value="10661000179108"/>
+        <display value="magíster en nutrición"/>
+      </concept>
+      <concept>
+        <code value="10111000179102"/>
+        <display value="auxiliar de enfermería adiestrado en block quirúrgico e instrumentación"/>
+      </concept>
+      <concept>
+        <code value="6891000179101"/>
+        <display value="licenciado en psicopedagogía"/>
+      </concept>
+      <concept>
+        <code value="10471000179104"/>
+        <display value="especialista en enfermería en quemados"/>
+      </concept>
+      <concept>
+        <code value="5831000179107"/>
+        <display value="especialista en medicina rural"/>
+      </concept>
+      <concept>
+        <code value="258771000179107"/>
+        <display value="especialista en derechos de la infancia y políticas publicas"/>
+      </concept>
+      <concept>
+        <code value="258801000179105"/>
+        <display value="técnico en acompañamiento terapéutico"/>
+      </concept>
+      <concept>
+        <code value="5701000179107"/>
+        <display value="especialista en medicina del deporte"/>
+      </concept>
+      <concept>
+        <code value="10401000179106"/>
+        <display value="especialista en enfermería en infecciones intrahospitalarias"/>
+      </concept>
+      <concept>
+        <code value="258641000179109"/>
+        <display value="especialista en psicoterapia en los servicios de salud"/>
+      </concept>
+      <concept>
+        <code value="10181000179108"/>
+        <display value="auxiliar de higiene ambiental"/>
+      </concept>
+      <concept>
+        <code value="10341000179104"/>
+        <display value="especialista en enfermería en cuidados intensivos del adulto"/>
+      </concept>
+      <concept>
+        <code value="5771000179100"/>
+        <display value="especialista en epidemiología"/>
+      </concept>
+      <concept>
+        <code value="10211000179109"/>
+        <display value="auxiliar de servicio, ayudante de cocina y tisanería"/>
+      </concept>
+      <concept>
+        <code value="6731000179107"/>
+        <display value="licenciado en neumocardiología"/>
+      </concept>
+      <concept>
+        <code value="258741000179102"/>
+        <display value="práctico laboratorista odontológico"/>
+      </concept>
+      <concept>
+        <code value="10761000179104"/>
+        <display value="especialista en enfermería en hematooncología"/>
+      </concept>
+      <concept>
+        <code value="6861000179106"/>
+        <display value="técnico en radioisótopos"/>
+      </concept>
+      <concept>
+        <code value="5931000179104"/>
+        <display value="especialista en trasplante de progenitores hematopoyéticos"/>
+      </concept>
+      <concept>
+        <code value="10631000179104"/>
+        <display value="magíster en epidemiología"/>
+      </concept>
+      <concept>
+        <code value="10281000179103"/>
+        <display value="doctorado en farmacia"/>
+      </concept>
+      <concept>
+        <code value="10151000179103"/>
+        <display value="auxiliar de enfermería con extensión materno infantil"/>
+      </concept>
+      <concept>
+        <code value="10571000179103"/>
+        <display value="magíster en atención de salud en primer nivel"/>
+      </concept>
+      <concept>
+        <code value="7051000179100"/>
+        <display value="técnico en neurofisiología clínica"/>
+      </concept>
+      <concept>
+        <code value="5801000179102"/>
+        <display value="especialista en gerontopsicomotricidad"/>
+      </concept>
+      <concept>
+        <code value="10441000179109"/>
+        <display value="especialista en enfermería en neumología"/>
+      </concept>
+      <concept>
+        <code value="258611000179108"/>
+        <display value="auxiliar de enfermería rural"/>
+      </concept>
+      <concept>
+        <code value="10091000179106"/>
+        <display value="auxiliar de anatomía patológica y autopsista"/>
+      </concept>
+      <concept>
+        <code value="258711000179103"/>
+        <display value="magister en genética y biología molecular"/>
+      </concept>
+      <concept>
+        <code value="5871000179109"/>
+        <display value="especialista en nutrición en enfermedades crónicas no transmisibles"/>
+      </concept>
+      <concept>
+        <code value="10311000179100"/>
+        <display value="especialista en enfermería en cirugía cardíaca pediátrica"/>
+      </concept>
+      <concept>
+        <code value="10601000179109"/>
+        <display value="magíster en ciencias médicas"/>
+      </concept>
+      <concept>
+        <code value="10731000179108"/>
+        <display value="odontólogo especialista en odontología legal"/>
+      </concept>
+      <concept>
+        <code value="6961000179101"/>
+        <display value="tecnólogo en radioterapia"/>
+      </concept>
+      <concept>
+        <code value="5901000179109"/>
+        <display value="especialista en toxicología"/>
+      </concept>
+      <concept>
+        <code value="6831000179102"/>
+        <display value="técnico en fonoaudiología"/>
+      </concept>
+      <concept>
+        <code value="5741000179105"/>
+        <display value="especialista en ecografía gineco obstétrica"/>
+      </concept>
+      <concept>
+        <code value="6931000179105"/>
+        <display value="histotecnólogo"/>
+      </concept>
+      <concept>
+        <code value="258681000179102"/>
+        <display value="licenciado en ciencias biológicas"/>
+      </concept>
+      <concept>
+        <code value="6771000179109"/>
+        <display value="técnico en salud ocupacional"/>
+      </concept>
+      <concept>
+        <code value="10121000179107"/>
+        <display value="auxiliar de enfermería adiestrado en cuidados intensivos en adultos"/>
+      </concept>
+      <concept>
+        <code value="5841000179104"/>
+        <display value="especialista en multitejidos para trasplantes"/>
+      </concept>
+      <concept>
+        <code value="10381000179106"/>
+        <display value="especialista en enfermería en emergencia pediátrica"/>
+      </concept>
+      <concept>
+        <code value="7021000179109"/>
+        <display value="técnico en psicología infantil"/>
+      </concept>
+      <concept>
+        <code value="10411000179108"/>
+        <display value="especialista en enfermería en hematooncología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="10541000179108"/>
+        <display value="ingeniero industrial con opción electrónica"/>
+      </concept>
+      <concept>
+        <code value="10671000179102"/>
+        <display value="magíster en políticas y gestión de la salud"/>
+      </concept>
+      <concept>
+        <code value="5681000179105"/>
+        <display value="especialista en dermatología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="258781000179109"/>
+        <display value="laboratorista en odontologia"/>
+      </concept>
+      <concept>
+        <code value="258651000179107"/>
+        <display value="especialista en psicoterapia psicoanalítica"/>
+      </concept>
+      <concept>
+        <code value="10251000179108"/>
+        <display value="doctor en ciencias veterinarias"/>
+      </concept>
+      <concept>
+        <code value="10351000179101"/>
+        <display value="especialista en enfermería en diálisis"/>
+      </concept>
+      <concept>
+        <code value="258811000179107"/>
+        <display value="auxiliar de terapia ocupacional psiquiátrica"/>
+      </concept>
+      <concept>
+        <code value="224891000179105"/>
+        <display value="especialista en parasitología y micología médica"/>
+      </concept>
+      <concept>
+        <code value="10191000179105"/>
+        <display value="auxiliar de laboratorio clínico"/>
+      </concept>
+      <concept>
+        <code value="10481000179102"/>
+        <display value="especialista en enfermería estomatoterapéutica"/>
+      </concept>
+      <concept>
+        <code value="10701000179103"/>
+        <display value="magíster en salud mental"/>
+      </concept>
+      <concept>
+        <code value="10641000179107"/>
+        <display value="magíster en farmacología clínica"/>
+      </concept>
+      <concept>
+        <code value="5811000179100"/>
+        <display value="especialista en hemoterapia"/>
+      </concept>
+      <concept>
+        <code value="10511000179107"/>
+        <display value="ingeniero en electrónica"/>
+      </concept>
+      <concept>
+        <code value="6871000179100"/>
+        <display value="licenciado en imagenología"/>
+      </concept>
+      <concept>
+        <code value="258591000179101"/>
+        <display value="auxiliar de enfermería con extensión en enfermería sanitaria"/>
+      </concept>
+      <concept>
+        <code value="258621000179103"/>
+        <display value="médico especialista en coordinación de trasplantes"/>
+      </concept>
+      <concept>
+        <code value="5781000179103"/>
+        <display value="especialista en genética médica de adultos"/>
+      </concept>
+      <concept>
+        <code value="258751000179104"/>
+        <display value="profundización en aparatos de yeso"/>
+      </concept>
+      <concept>
+        <code value="6901000179100"/>
+        <display value="tecnólogo en cosmetología médica"/>
+      </concept>
+      <concept>
+        <code value="6741000179104"/>
+        <display value="licenciado en neurofisiología clínica"/>
+      </concept>
+      <concept>
+        <code value="10221000179104"/>
+        <display value="auxiliar dental"/>
+      </concept>
+      <concept>
+        <code value="10321000179105"/>
+        <display value="especialista en enfermería en cirugía pediátrica"/>
+      </concept>
+      <concept>
+        <code value="10451000179107"/>
+        <display value="especialista en enfermería en neurocirugía"/>
+      </concept>
+      <concept>
+        <code value="10581000179101"/>
+        <display value="magíster en biotecnología"/>
+      </concept>
+      <concept>
+        <code value="5881000179106"/>
+        <display value="especialista en ortopedia y ortodoncia maxilo-facial"/>
+      </concept>
+      <concept>
+        <code value="258691000179100"/>
+        <display value="licenciado en ingeniería técnica química industrial"/>
+      </concept>
+      <concept>
+        <code value="10161000179100"/>
+        <display value="auxiliar de enfermería en centro quirúrgico e instrumentación"/>
+      </concept>
+      <concept>
+        <code value="6971000179107"/>
+        <display value="técnico en reeducación psicomotríz"/>
+      </concept>
+      <concept>
+        <code value="219341000179103"/>
+        <display value="licenciado en oftalmología"/>
+      </concept>
+      <concept>
+        <code value="10741000179100"/>
+        <display value="especialista en implantología oral"/>
+      </concept>
+      <concept>
+        <code value="10291000179101"/>
+        <display value="especialista en enfermería en cardiología"/>
+      </concept>
+      <concept>
+        <code value="258721000179108"/>
+        <display value="master en medicina familiar y comunitaria"/>
+      </concept>
+      <concept>
+        <code value="5751000179108"/>
+        <display value="especialista en economía de la salud"/>
+      </concept>
+      <concept>
+        <code value="10611000179106"/>
+        <display value="magíster en derechos de la infancia y políticas públicas"/>
+      </concept>
+      <concept>
+        <code value="10391000179108"/>
+        <display value="especialista en enfermería en gineco-obstetricia"/>
+      </concept>
+      <concept>
+        <code value="5911000179106"/>
+        <display value="especialista en urología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="6711000179100"/>
+        <display value="licenciado en instrumentación quirúrgica"/>
+      </concept>
+      <concept>
+        <code value="10681000179100"/>
+        <display value="magíster en psicología clínica"/>
+      </concept>
+      <concept>
+        <code value="6841000179105"/>
+        <display value="técnico en hemoterapia"/>
+      </concept>
+      <concept>
+        <code value="10261000179106"/>
+        <display value="doctor en química"/>
+      </concept>
+      <concept>
+        <code value="243881000179109"/>
+        <display value="químico farmacéutico"/>
+      </concept>
+      <concept>
+        <code value="6941000179102"/>
+        <display value="técnico en laboratorio clínico"/>
+      </concept>
+      <concept>
+        <code value="258661000179105"/>
+        <display value="licenciado en biología humana"/>
+      </concept>
+      <concept>
+        <code value="10131000179109"/>
+        <display value="auxiliar de enfermería adiestrado en cuidados intensivos pediátricos"/>
+      </concept>
+      <concept>
+        <code value="5691000179107"/>
+        <display value="especialista en infectología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="10421000179103"/>
+        <display value="especialista en enfermería maternoinfantil"/>
+      </concept>
+      <concept>
+        <code value="5851000179101"/>
+        <display value="especialista en neumología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="5721000179104"/>
+        <display value="especialista en alergología"/>
+      </concept>
+      <concept>
+        <code value="10711000179101"/>
+        <display value="magíster en trabajo social"/>
+      </concept>
+      <concept>
+        <code value="258791000179106"/>
+        <display value="especialista en políticas de infancia y adolescencia para la prevención de las farmacodependencias"/>
+      </concept>
+      <concept>
+        <code value="6881000179103"/>
+        <display value="licenciado en psicomotricidad"/>
+      </concept>
+      <concept>
+        <code value="10651000179105"/>
+        <display value="magíster en genética humana"/>
+      </concept>
+      <concept>
+        <code value="6041000179101"/>
+        <display value="auditor en salud"/>
+      </concept>
+      <concept>
+        <code value="5791000179101"/>
+        <display value="especialista en genética médica de niños"/>
+      </concept>
+      <concept>
+        <code value="10491000179100"/>
+        <display value="ingeniero alimentario"/>
+      </concept>
+      <concept>
+        <code value="10231000179102"/>
+        <display value="doctor en ciencias biológicas"/>
+      </concept>
+      <concept>
+        <code value="10361000179103"/>
+        <display value="especialista en enfermería en diálisis pediátrica"/>
+      </concept>
+      <concept>
+        <code value="6751000179101"/>
+        <display value="licenciado en registros médicos"/>
+      </concept>
+      <concept>
+        <code value="10101000179104"/>
+        <display value="auxiliar de educación para la salud"/>
+      </concept>
+      <concept>
+        <code value="258631000179101"/>
+        <display value="especialista en enfermería en cuidados intermedios"/>
+      </concept>
+      <concept>
+        <code value="258761000179101"/>
+        <display value="especialiista en psicología sistémica y familias"/>
+      </concept>
+      <concept>
+        <code value="7001000179101"/>
+        <display value="técnico instrumentista quirúrgico"/>
+      </concept>
+      <concept>
+        <code value="5761000179106"/>
+        <display value="especialista en endoscopia digestiva"/>
+      </concept>
+      <concept>
+        <code value="10751000179102"/>
+        <display value="especialista de primer grado en cirugía maxilofacial"/>
+      </concept>
+      <concept>
+        <code value="10621000179101"/>
+        <display value="magíster en educación y psicología"/>
+      </concept>
+      <concept>
+        <code value="6691000179102"/>
+        <display value="licenciado en física médica"/>
+      </concept>
+      <concept>
+        <code value="10201000179107"/>
+        <display value="auxiliar de radiología"/>
+      </concept>
+      <concept>
+        <code value="10461000179105"/>
+        <display value="especialista en enfermería en ortopedia y traumatología"/>
+      </concept>
+      <concept>
+        <code value="6981000179109"/>
+        <display value="tecnólogo en registros médicos"/>
+      </concept>
+      <concept>
+        <code value="6721000179105"/>
+        <display value="licenciado en laboratorio clínico"/>
+      </concept>
+      <concept>
+        <code value="6851000179108"/>
+        <display value="técnico en neumocardiología"/>
+      </concept>
+      <concept>
+        <code value="10171000179106"/>
+        <display value="auxiliar de estadísticas de salud y registros médicos"/>
+      </concept>
+      <concept>
+        <code value="5891000179108"/>
+        <display value="especialista en ortopedia y traumatología"/>
+      </concept>
+      <concept>
+        <code value="10331000179107"/>
+        <display value="especialista en enfermería en cuidados intensivos pediátricos"/>
+      </concept>
+      <concept>
+        <code value="10591000179104"/>
+        <display value="magíster en ciencias biológicas"/>
+      </concept>
+      <concept>
+        <code value="10271000179100"/>
+        <display value="doctor en química farmacéutica"/>
+      </concept>
+      <concept>
+        <code value="258601000179106"/>
+        <display value="auxiliar de enfermería en hemoterapia"/>
+      </concept>
+      <concept>
+        <code value="258731000179105"/>
+        <display value="master en psicoanálisis"/>
+      </concept>
+      <concept>
+        <code value="10141000179101"/>
+        <display value="auxiliar de enfermería adiestrado en vacunaciones"/>
+      </concept>
+      <concept>
+        <code value="5921000179101"/>
+        <display value="especialista en administración de servicios de salud"/>
+      </concept>
+      <concept>
+        <code value="10691000179103"/>
+        <display value="magíster en química"/>
+      </concept>
+      <concept>
+        <code value="156411000179107"/>
+        <display value="auxiliar de anatomía patológica"/>
+      </concept>
+      <concept>
+        <code value="10561000179109"/>
+        <display value="magíster en administración de servicios de salud"/>
+      </concept>
+      <concept>
+        <code value="7041000179103"/>
+        <display value="técnico en encefalografía"/>
+      </concept>
+      <concept>
+        <code value="263271000179103"/>
+        <display value="especialista en medicina sexual"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

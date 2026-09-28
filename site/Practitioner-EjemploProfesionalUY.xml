@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="EjemploProfesionalUY"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Profesional Ejemplo</b></p><p>Nombre de pila: Profesional. Apellido: Ejemplo.</p></div>
+  </text>
+  <name>
+    <family value="Ejemplo"/>
+    <given value="Profesional"/>
+  </name>
+</Practitioner>

@@ -1,0 +1,23 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Bundle/hcen-consulta-vacia> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-consulta-vacia"] ; # 
+  fhir:type [ fhir:v "searchset"] ; # 
+  fhir:total [ fhir:v "0"^^xsd:nonNegativeInteger] ; # 
+  fhir:link ( [
+     fhir:relation [ fhir:v "self" ] ;
+     fhir:url [
+       fhir:v "https://example.org/plataforma/DocumentReference?patient.identifier=urn%3Aoid%3A2.16.858.2.99999999.72768.1%7CSIN-COINCIDENCIAS"^^xsd:anyURI ;
+       fhir:l <https://example.org/plataforma/DocumentReference?patient.identifier=urn%3Aoid%3A2.16.858.2.99999999.72768.1%7CSIN-COINCIDENCIAS>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

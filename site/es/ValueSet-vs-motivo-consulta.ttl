@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-motivo-consulta"] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Motivos de consulta: incluye todos los conceptos SNOMED CT que son miembros del refset SNOMED CT-UY <code>261341000179103</code> (SNOMED CT edición Uruguay). El listado completo de conceptos puede consultarse en el <a href=\"https://snomedbrowser.org/?perspective=full&amp;conceptId1=261341000179103&amp;edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&amp;release=&amp;languages=es,en\">navegador SNOMED CT-UY</a>.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSMotivoConsulta"] ; # 
+  fhir:title [ fhir:v "Conjunto de Valores Motivos de Consulta"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en)."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "in" ] ;
+         fhir:value [ fhir:v "261341000179103" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

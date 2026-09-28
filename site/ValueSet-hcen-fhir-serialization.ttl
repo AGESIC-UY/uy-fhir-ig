@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-fhir-serialization"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores hcen-fhir-serialization</b></p><a name=\"hcen-fhir-serialization\"> </a><a name=\"hchcen-fhir-serialization\"> </a><ul><li>Include these codes as defined in <code>urn:ietf:bcp:13</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>application/fhir+json</td><td/></tr><tr><td>application/fhir+xml</td><td/></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "HCENFHIRSerialization"] ; # 
+  fhir:title [ fhir:v "Tipos MIME de documentos FHIR HCEN"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Serializaciones FHIR JSON y XML para la representación Bundle documental. No identifica el formato del CDA encapsulado."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "urn:ietf:bcp:13"^^xsd:anyURI ;
+         fhir:l <urn:ietf:bcp:13>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "application/fhir+json" ]
+       ] [
+         fhir:code [ fhir:v "application/fhir+xml" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

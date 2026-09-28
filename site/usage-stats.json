@@ -1,0 +1,312 @@
+{
+  "package": "fhir.uy",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "extensions": [
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-amount-of-studies",
+      "title": "Cantidad de Estudios",
+      "types": [
+        "positiveInt"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id",
+      "title": "ID del Recurso Binario",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-by-order-of",
+      "title": "Por Orden De",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-funder",
+      "title": "Organización Financiadora",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id",
+      "title": "ID de Comunidad de Origen",
+      "types": [
+        "oid"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-certification",
+      "title": "Certificación del Profesional",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-eno",
+      "title": "Enfermedad de Notificación Obligatoria (ENO)",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+      "title": "Primer Apellido",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id",
+      "title": "ID Único del Repositorio",
+      "types": [
+        "Identifier",
+        "string",
+        "Extension",
+        "code",
+        "CodeableConcept",
+        "uri",
+        "string",
+        "Period",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-scanned-document",
+      "title": "Documento Escaneado",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+      "title": "Segundo Apellido",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://fhir.hcen.gub.uy/StructureDefinition/ext-telemedicine-modality",
+      "title": "Modalidad de Telemedicina",
+      "types": [
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean"
+      ]
+    }
+  ],
+  "profiles": {
+    "Binary": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary",
+        "title": "Representación CDA de un documento HCEN"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta",
+        "title": "HCEN Motivo de Consulta"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference",
+        "title": "Perfil Document Reference HCEN"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter",
+        "title": "HCEN Evento Clínico"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration",
+        "title": "HCEN Administración de Medicación"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request",
+        "title": "HCEN Prescripción de Medicación"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization",
+        "title": "Perfil Organización para Uruguay"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient",
+        "title": "Perfil Paciente para Uruguay"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner",
+        "title": "Perfil Profesional de Salud para Uruguay"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role",
+        "title": "Perfil Rol del Profesional de Salud para Uruguay"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento",
+        "title": "HCEN Procedimiento"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle",
+        "title": "Envío para publicación documental HCEN"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request",
+        "title": "HCEN Solicitud de Servicio"
+      }
+    ],
+    "List": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set",
+        "title": "Conjunto de envío HCEN"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente",
+        "title": "HCEN Consulta No Urgente"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-amount-of-studies": [
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id": [
+      "Bundle.entry.resource.content.attachment",
+      "DocumentReference.content.attachment"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-by-order-of": [
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-funder": [
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id": [
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido": [
+      "Bundle.entry.resource.contained.name.family",
+      "Bundle.entry.resource.entry.resource.name.family",
+      "Bundle.entry.resource.name.family",
+      "HumanName.family",
+      "Patient.name.family"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id": [
+      "Bundle.entry.resource",
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-scanned-document": [
+      "DocumentReference"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido": [
+      "Bundle.entry.resource.contained.name.family",
+      "Bundle.entry.resource.entry.resource.name.family",
+      "Bundle.entry.resource.name.family",
+      "HumanName.family",
+      "Patient.name.family"
+    ],
+    "http://fhir.hcen.gub.uy/StructureDefinition/ext-telemedicine-modality": [
+      "DocumentReference"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-pronouns": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page",
+      "ImplementationGuide.definition.page.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType": [
+      "Bundle.entry.resource",
+      "List"
+    ],
+    "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient": [
+      "List"
+    ],
+    "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId": [
+      "Bundle.entry.resource",
+      "List"
+    ]
+  }
+}

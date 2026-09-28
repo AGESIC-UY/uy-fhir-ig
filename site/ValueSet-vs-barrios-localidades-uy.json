@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-barrios-localidades-uy",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-barrios-localidades-uy</b></p><a name=\"vs-barrios-localidades-uy\"> </a><a name=\"hcvs-barrios-localidades-uy\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-barrios-localidades-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
+  "version" : "0.1.0",
+  "name" : "VSBarriosLocalidadesUY",
+  "title" : "Barrios y localidades postales de Uruguay",
+  "status" : "draft",
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "Barrios y localidades del listado del Correo Uruguayo, para vincular Address.district.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy"
+    }]
+  }
+}

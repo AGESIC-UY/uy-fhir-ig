@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-codigos-postales-uy"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy</b></p><a name=\"vs-codigos-postales-uy\"> </a><a name=\"hcvs-codigos-postales-uy\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-codigos-postales-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSCodigosPostalesUY"] ; # 
+  fhir:title [ fhir:v "Códigos postales de Uruguay"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Códigos postales admitidos en Address.postalCode."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

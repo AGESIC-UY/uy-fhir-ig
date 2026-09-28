@@ -1,0 +1,606 @@
+{
+  "codeSystems" : [{
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "HCENFHIRSerialization",
+    "title" : "Tipos MIME de documentos FHIR HCEN",
+    "description" : "Serializaciones FHIR JSON y XML para la representación Bundle documental. No identifica el formato del CDA encapsulado.",
+    "systems" : ["urn:ietf:bcp:13"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSBarriosLocalidadesUY",
+    "title" : "Barrios y localidades postales de Uruguay",
+    "description" : "Barrios y localidades del listado del Correo Uruguayo, para vincular Address.district.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSclassCode",
+    "title" : "EJE 1 — Tipo genérico de documento",
+    "description" : "Tipo genérico de documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://loinc.org"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSCodigosPostalesUY",
+    "title" : "Códigos postales de Uruguay",
+    "description" : "Códigos postales admitidos en Address.postalCode.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-composition-status-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSCompositionStatusCNU",
+    "title" : "Conjunto de Valores Estado de la Consulta No Urgente",
+    "description" : "Subconjunto de Composition.status permitido para HCENConsultaNoUrgente: final, amended y entered-in-error (excluye preliminary, que no tiene mapeo CDA aplicable).",
+    "systems" : ["http://hl7.org/fhir/composition-status"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSConditionCategoryCNU",
+    "title" : "Conjunto de Valores Categoría de Condition (CNU)",
+    "description" : "Extiende el conjunto de valores base de Condition.category (problem-list-item, encounter-diagnosis) con los códigos SNOMED CT locales usados para motivo de consulta y diagnóstico en la Hoja de Consulta No Urgente.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category",
+    "http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSConfidentialityCNU",
+    "title" : "Conjunto de Valores Confidencialidad de la Consulta No Urgente",
+    "description" : "Subconjunto de Composition.confidentiality permitido para HCENConsultaNoUrgente: N (normal), R (restricted) y V (very restricted).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSDepartamentosUY",
+    "title" : "Departamentos de Uruguay",
+    "description" : "Los 19 departamentos admitidos en Address.state.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSDiagnosticoConsulta",
+    "title" : "Conjunto de Valores Diagnósticos",
+    "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EspecialidadMedica",
+    "title" : "Conjunto de Valores Especialidad Médica",
+    "description" : "Especialidades médicas válidas para PractitionerRole.specialty.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "FormatCode",
+    "title" : "Formato del documento FHIR HCEN",
+    "description" : "Formato técnico de la representación FHIR referenciada por DocumentReference.content.attachment.url. La selección inicial utiliza el código IHE para indicar que el tipo MIME es suficiente; no declara perfiles clínicos CDA ni C-CDA.",
+    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSLocalidadesUY",
+    "title" : "Localidades de Uruguay",
+    "description" : "Localidades de Uruguay publicadas en el catálogo de OSE, para vincular Address.city.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-medicamentos",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSMedicamentos",
+    "title" : "Conjunto de Valores Medicamentos (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para medicamentos, utilizado en la validación del CDA. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-medication-request.html" : "HCEN Prescripción de Medicación",
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSMotivoConsulta",
+    "title" : "Conjunto de Valores Motivos de Consulta",
+    "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSpracticeSetting",
+    "title" : "EJE 3 — Servicio médico del documento",
+    "description" : "Servicio médico del documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PrestadorOidMrn",
+    "title" : "OIDs de instituciones HCEN",
+    "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
+    "systems" : ["urn:ietf:rfc:3986"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSProcedimientos",
+    "title" : "Conjunto de Valores Procedimientos",
+    "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSResultadoProcedimiento",
+    "title" : "Conjunto de Valores Resultado de Procedimiento",
+    "description" : "Resultados posibles de un procedimiento (procedure.outcome).",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "RolProfesional",
+    "title" : "Conjunto de Valores Rol del Profesional",
+    "description" : "Referencias simples de roles y especialidades en salud (metadato fundacional) para PractitionerRole.code.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSSitioAdministracion",
+    "title" : "Conjunto de Valores Sitio de Administración (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para sitios anatómicos de administración de medicación. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSSolicitudProcedimiento",
+    "title" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para solicitudes de servicio/procedimiento (refset uruguayo de solicitudes de procedimientos), utilizado en la validación del CDA. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-tipo-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSTipoProcedimiento",
+    "title" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
+    "description" : "PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico, terapéutico). Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-type-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VStypeCode",
+    "title" : "EJE 2 — Tipo detallado de documento",
+    "description" : "Tipo detallado de documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico",
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSViaAdministracion",
+    "title" : "Conjunto de Valores Vía de Administración (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/address-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressType",
+    "title" : "AddressType",
+    "description" : "The type of an address (physical / postal).",
+    "systems" : ["http://hl7.org/fhir/address-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.69"],
+    "sources" : ["2.16.840.1.113883.4.642.3.69"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/address-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressUse",
+    "title" : "AddressUse",
+    "description" : "The use of an address.",
+    "systems" : ["http://hl7.org/fhir/address-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.67"],
+    "sources" : ["2.16.840.1.113883.4.642.3.67"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-address.html" : "Dirección (Uruguay)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "FacilityTypeCodeValueSet",
+    "title" : "Facility Type Code Value Set",
+    "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.162"],
+    "sources" : ["2.16.840.1.113883.4.642.3.162"],
+    "uses" : {
+    },
+    "ValueSet-vs-condition-category-cnu.html" : "Conjunto de Valores Categoría de Condition (CNU)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.164"],
+    "sources" : ["2.16.840.1.113883.4.642.3.164"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointSystem",
+    "title" : "ContactPointSystem",
+    "description" : "Telecommunications form for contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-system"],
+    "oids" : ["2.16.840.1.113883.4.642.3.71"],
+    "sources" : ["2.16.840.1.113883.4.642.3.71"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-phone-contact-point.html" : "Contacto Telefónico (Uruguay)",
+    "StructureDefinition-uy-email-contact-point.html" : "Contacto por Correo Electrónico (Uruguay)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointUse",
+    "title" : "ContactPointUse",
+    "description" : "Use of contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.73"],
+    "sources" : ["2.16.840.1.113883.4.642.3.73"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-phone-contact-point.html" : "Contacto Telefónico (Uruguay)",
+    "StructureDefinition-uy-email-contact-point.html" : "Contacto por Correo Electrónico (Uruguay)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ContactEntityType",
+    "title" : "Contact entity type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.416"],
+    "sources" : ["2.16.840.1.113883.4.642.3.416"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DaysOfWeek",
+    "title" : "DaysOfWeek",
+    "description" : "The days of the week.",
+    "systems" : ["http://hl7.org/fhir/days-of-week"],
+    "oids" : ["2.16.840.1.113883.4.642.3.512"],
+    "sources" : ["2.16.840.1.113883.4.642.3.512"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Identifier Type Codes",
+    "title" : "IdentifierType",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.4.642.3.45"],
+    "sources" : ["2.16.840.1.113883.4.642.3.45"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
+    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
+    "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
+    "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
+    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "systems" : ["http://hl7.org/fhir/identifier-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.57"],
+    "sources" : ["2.16.840.1.113883.4.642.3.57"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
+    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
+    "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
+    "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
+    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
+    "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay",
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.423"],
+    "sources" : ["2.16.840.1.113883.4.642.3.423"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Marital Status Codes",
+    "title" : "MaritalStatus",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-human-name.html" : "Nombre de Persona (Uruguay)"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/organization-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "OrganizationType",
+    "title" : "Organization type",
+    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/organization-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.414"],
+    "sources" : ["2.16.840.1.113883.4.642.3.414"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PatientContactRelationship",
+    "title" : "Patient Contact Relationship ",
+    "description" : "The nature of the relationship between the patient and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "All Security Labels",
+    "title" : "SecurityLabels",
+    "description" : "A single value set for all security labels defined by FHIR.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+    "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.47"],
+    "sources" : ["2.16.840.1.113883.4.642.3.47"],
+    "uses" : {
+    },
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v2-2.7-0360",
+    "version" : "0360",
+    "status" : "active",
+    "name" : "v2.0360.2.7",
+    "title" : "v2 table 0360, Version 2.7",
+    "description" : "FHIR Value set/code system definition for HL7 v2 table 0360 ver 2.9 ( Degree/License/Certificate)",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360|2.7"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+  }]
+}

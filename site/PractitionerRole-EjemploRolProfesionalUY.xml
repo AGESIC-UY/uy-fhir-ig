@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="EjemploRolProfesionalUY"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p>Rol del profesional <a href="Practitioner-EjemploProfesionalUY.html">Profesional Ejemplo</a> en la <a href="Organization-EjemploOrganizacionUY.html">Organización de ejemplo CORE UY</a>.</p></div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/EjemploProfesionalUY"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/EjemploOrganizacionUY"/>
+  </organization>
+</PractitionerRole>

@@ -1,0 +1,450 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-practice-setting"] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-practice-setting</b></p><a name=\"vs-practice-setting\"> </a><a name=\"hcvs-practice-setting\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/272341000179102\">272341000179102</a></td><td>comité de tumores</td></tr><tr><td><a href=\"http://snomed.info/id/272611000179109\">272611000179109</a></td><td>heart team</td></tr><tr><td><a href=\"http://snomed.info/id/711332004\">711332004</a></td><td>servicio de alergología</td></tr><tr><td><a href=\"http://snomed.info/id/310001007\">310001007</a></td><td>servicio de anestesia</td></tr><tr><td><a href=\"http://snomed.info/id/247971000179108\">247971000179108</a></td><td>servicio de atención al adolescente</td></tr><tr><td><a href=\"http://snomed.info/id/789718008\">789718008</a></td><td>servicio de cardiología</td></tr><tr><td><a href=\"http://snomed.info/id/789717003\">789717003</a></td><td>servicio de cardiología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310142007\">310142007</a></td><td>servicio de cirugía cardíaca</td></tr><tr><td><a href=\"http://snomed.info/id/310156009\">310156009</a></td><td>servicio de cirugía general</td></tr><tr><td><a href=\"http://snomed.info/id/788008002\">788008002</a></td><td>servicio de cirugía oral y maxilofacial</td></tr><tr><td><a href=\"http://snomed.info/id/310163009\">310163009</a></td><td>servicio de cirugía pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310164003\">310164003</a></td><td>servicio de cirugía plástica</td></tr><tr><td><a href=\"http://snomed.info/id/310141000\">310141000</a></td><td>servicio de cirugía torácica</td></tr><tr><td><a href=\"http://snomed.info/id/310168000\">310168000</a></td><td>servicio de cirugía vascular</td></tr><tr><td><a href=\"http://snomed.info/id/4111000179109\">4111000179109</a></td><td>servicio de cosmetologia médica</td></tr><tr><td><a href=\"http://snomed.info/id/310073009\">310073009</a></td><td>servicio de cuidados paliativos</td></tr><tr><td><a href=\"http://snomed.info/id/272191000179108\">272191000179108</a></td><td>servicio de cuidados paliativos pediátricos</td></tr><tr><td><a href=\"http://snomed.info/id/700241009\">700241009</a></td><td>servicio de dermatología</td></tr><tr><td><a href=\"http://snomed.info/id/1280011000\">1280011000</a></td><td>servicio de dermatología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/243721000179102\">243721000179102</a></td><td>servicio de diabetología</td></tr><tr><td><a href=\"http://snomed.info/id/4471000179107\">4471000179107</a></td><td>servicio de diabetología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/700434000\">700434000</a></td><td>servicio de endocrinología</td></tr><tr><td><a href=\"http://snomed.info/id/3761000175103\">3761000175103</a></td><td>servicio de endocrinología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/708170008\">708170008</a></td><td>servicio de enfermería</td></tr><tr><td><a href=\"http://snomed.info/id/700436003\">700436003</a></td><td>servicio de farmacología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/722140001\">722140001</a></td><td>servicio de fisioterapia</td></tr><tr><td><a href=\"http://snomed.info/id/310101009\">310101009</a></td><td>servicio de fonoaudiología</td></tr><tr><td><a href=\"http://snomed.info/id/310104001\">310104001</a></td><td>servicio de fonoaudiología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/700433006\">700433006</a></td><td>servicio de gastroenterología</td></tr><tr><td><a href=\"http://snomed.info/id/3771000175106\">3771000175106</a></td><td>servicio de gastroenterología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/1304105009\">1304105009</a></td><td>servicio de genética</td></tr><tr><td><a href=\"http://snomed.info/id/3531000175102\">3531000175102</a></td><td>servicio de geriatría</td></tr><tr><td><a href=\"http://snomed.info/id/310060005\">310060005</a></td><td>servicio de ginecotocología</td></tr><tr><td><a href=\"http://snomed.info/id/708196005\">708196005</a></td><td>servicio de hematología</td></tr><tr><td><a href=\"http://snomed.info/id/897188002\">897188002</a></td><td>servicio de hematología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/3831000179106\">3831000179106</a></td><td>servicio de hemato-oncología</td></tr><tr><td><a href=\"http://snomed.info/id/1343445000\">1343445000</a></td><td>servicio de hemato-oncología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/4531000179106\">4531000179106</a></td><td>servicio de hemoterapia y medicina transfusional</td></tr><tr><td><a href=\"http://snomed.info/id/23901000087101\">23901000087101</a></td><td>servicio de hepatología</td></tr><tr><td><a href=\"http://snomed.info/id/3861000179102\">3861000179102</a></td><td>servicio de infectología</td></tr><tr><td><a href=\"http://snomed.info/id/3781000175109\">3781000175109</a></td><td>servicio de infectología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/708190004\">708190004</a></td><td>servicio de inmunología</td></tr><tr><td><a href=\"http://snomed.info/id/4291000179105\">4291000179105</a></td><td>servicio de internación domiciliaria</td></tr><tr><td><a href=\"http://snomed.info/id/259861000179102\">259861000179102</a></td><td>servicio de mastología</td></tr><tr><td><a href=\"http://snomed.info/id/2351000175106\">2351000175106</a></td><td>servicio de medicina del deporte</td></tr><tr><td><a href=\"http://snomed.info/id/225491000179106\">225491000179106</a></td><td>servicio de medicina familiar y comunitaria</td></tr><tr><td><a href=\"http://snomed.info/id/700232004\">700232004</a></td><td>servicio de medicina general</td></tr><tr><td><a href=\"http://snomed.info/id/310032008\">310032008</a></td><td>servicio de medicina intensiva</td></tr><tr><td><a href=\"http://snomed.info/id/741073001\">741073001</a></td><td>servicio de medicina intensiva neonatal</td></tr><tr><td><a href=\"http://snomed.info/id/3901000179108\">3901000179108</a></td><td>servicio de medicina intensiva neonatal y pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310034009\">310034009</a></td><td>servicio de medicina intensiva pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/792848000\">792848000</a></td><td>servicio de medicina interna</td></tr><tr><td><a href=\"http://snomed.info/id/3921000179100\">3921000179100</a></td><td>servicio de medicina interna pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/722393008\">722393008</a></td><td>servicio de medicina legal</td></tr><tr><td><a href=\"http://snomed.info/id/278032008\">278032008</a></td><td>servicio de medicina preventiva</td></tr><tr><td><a href=\"http://snomed.info/id/788003006\">788003006</a></td><td>servicio de nefrología</td></tr><tr><td><a href=\"http://snomed.info/id/3791000175107\">3791000175107</a></td><td>servicio de nefrología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/3961000179107\">3961000179107</a></td><td>servicio de neonatología</td></tr><tr><td><a href=\"http://snomed.info/id/225421000179108\">225421000179108</a></td><td>servicio de neumología</td></tr><tr><td><a href=\"http://snomed.info/id/3981000179104\">3981000179104</a></td><td>servicio de neumología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310159002\">310159002</a></td><td>servicio de neurocirugía</td></tr><tr><td><a href=\"http://snomed.info/id/830149003\">830149003</a></td><td>servicio de neurofisiología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/788005004\">788005004</a></td><td>servicio de neurología</td></tr><tr><td><a href=\"http://snomed.info/id/310068003\">310068003</a></td><td>servicio de neuropediatría</td></tr><tr><td><a href=\"http://snomed.info/id/1240781000168100\">1240781000168100</a></td><td>servicio de nutrición</td></tr><tr><td><a href=\"http://snomed.info/id/722176000\">722176000</a></td><td>servicio de odontología</td></tr><tr><td><a href=\"http://snomed.info/id/4031000179101\">4031000179101</a></td><td>servicio de odontología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310160007\">310160007</a></td><td>servicio de oftalmología</td></tr><tr><td><a href=\"http://snomed.info/id/4451000179104\">4451000179104</a></td><td>servicio de oftalmología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/262741000179109\">262741000179109</a></td><td>servicio de oncofertilidad</td></tr><tr><td><a href=\"http://snomed.info/id/310022001\">310022001</a></td><td>servicio de oncología médica</td></tr><tr><td><a href=\"http://snomed.info/id/788123009\">788123009</a></td><td>servicio de oncología radioterápica</td></tr><tr><td><a href=\"http://snomed.info/id/310149003\">310149003</a></td><td>servicio de otorrinolaringología</td></tr><tr><td><a href=\"http://snomed.info/id/789716007\">789716007</a></td><td>servicio de otorrinolaringología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/231981000179101\">231981000179101</a></td><td>servicio de parasitología y micología</td></tr><tr><td><a href=\"http://snomed.info/id/310066004\">310066004</a></td><td>servicio de pediatría</td></tr><tr><td><a href=\"http://snomed.info/id/310087009\">310087009</a></td><td>servicio de podología</td></tr><tr><td><a href=\"http://snomed.info/id/4051000179107\">4051000179107</a></td><td>servicio de podología para diabéticos</td></tr><tr><td><a href=\"http://snomed.info/id/310123008\">310123008</a></td><td>servicio de psicología</td></tr><tr><td><a href=\"http://snomed.info/id/227591000179101\">227591000179101</a></td><td>servicio de psicología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/4061000179105\">4061000179105</a></td><td>servicio de psicomotricidad</td></tr><tr><td><a href=\"http://snomed.info/id/260931000179104\">260931000179104</a></td><td>servicio de psicopedagogía</td></tr><tr><td><a href=\"http://snomed.info/id/310116007\">310116007</a></td><td>servicio de psiquiatría</td></tr><tr><td><a href=\"http://snomed.info/id/221000179108\">221000179108</a></td><td>servicio de psiquiatría adolescente</td></tr><tr><td><a href=\"http://snomed.info/id/241000179102\">241000179102</a></td><td>servicio de psiquiatría pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/773558007\">773558007</a></td><td>servicio de rehabilitación y medicina física</td></tr><tr><td><a href=\"http://snomed.info/id/3621000175101\">3621000175101</a></td><td>servicio de reumatología</td></tr><tr><td><a href=\"http://snomed.info/id/789714005\">789714005</a></td><td>servicio de reumatología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/270271000179102\">270271000179102</a></td><td>servicio de salud ocupacional</td></tr><tr><td><a href=\"http://snomed.info/id/270401000179108\">270401000179108</a></td><td>servicio de salud sexual y reproductiva</td></tr><tr><td><a href=\"http://snomed.info/id/708191000\">708191000</a></td><td>servicio de toxicología</td></tr><tr><td><a href=\"http://snomed.info/id/310071006\">310071006</a></td><td>servicio de tratamiento del dolor</td></tr><tr><td><a href=\"http://snomed.info/id/4101000179107\">4101000179107</a></td><td>servicio de traumatología y ortopedia</td></tr><tr><td><a href=\"http://snomed.info/id/249221000179107\">249221000179107</a></td><td>servicio de traumatología y ortopedia pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/310167005\">310167005</a></td><td>servicio de urología</td></tr><tr><td><a href=\"http://snomed.info/id/1231394008\">1231394008</a></td><td>servicio de urología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/259771000179104\">259771000179104</a></td><td>servicio de violencia de género</td></tr><tr><td><a href=\"http://snomed.info/id/261781000179106\">261781000179106</a></td><td>unidad de accidentes cerebrovasculares</td></tr><tr><td><a href=\"http://snomed.info/id/261771000179109\">261771000179109</a></td><td>unidad de cuidados cardiológicos</td></tr><tr><td><a href=\"http://snomed.info/id/261801000179107\">261801000179107</a></td><td>unidad de cuidados neuroquirúrgicos</td></tr><tr><td><a href=\"http://snomed.info/id/261791000179108\">261791000179108</a></td><td>unidad de quemados</td></tr><tr><td><a href=\"http://snomed.info/id/262431000179108\">262431000179108</a></td><td>unidad de quemados y rehabilitación pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/261811000179109\">261811000179109</a></td><td>unidad de trasplante de médula ósea</td></tr><tr><td><a href=\"http://snomed.info/id/261821000179104\">261821000179104</a></td><td>unidad de trasplante de órgano sólido</td></tr><tr><td><a href=\"http://snomed.info/id/227541000179105\">227541000179105</a></td><td>servicio de administración sanitaria</td></tr><tr><td><a href=\"http://snomed.info/id/4151000179108\">4151000179108</a></td><td>servicio de vacunaciones</td></tr><tr><td><a href=\"http://snomed.info/id/278331000179107\">278331000179107</a></td><td>comité de recepción en salud mental</td></tr><tr><td><a href=\"http://snomed.info/id/408458006\">408458006</a></td><td>equipo multidisciplinario de especialistas</td></tr><tr><td><a href=\"http://snomed.info/id/254561000179104\">254561000179104</a></td><td>servicio de acupuntura</td></tr><tr><td><a href=\"http://snomed.info/id/371000179103\">371000179103</a></td><td>servicio de andrología</td></tr><tr><td><a href=\"http://snomed.info/id/246571000179101\">246571000179101</a></td><td>servicio de cesación de tabaquismo</td></tr><tr><td><a href=\"http://snomed.info/id/733459009\">733459009</a></td><td>servicio de rehabilitación cardíaca</td></tr><tr><td><a href=\"http://snomed.info/id/225501000179101\">225501000179101</a></td><td>servicio social</td></tr><tr><td><a href=\"http://snomed.info/id/310029005\">310029005</a></td><td>servicio de atención domiciliaria</td></tr><tr><td><a href=\"http://snomed.info/id/4871000179105\">4871000179105</a></td><td>servicio de emergencia centralizada</td></tr><tr><td><a href=\"http://snomed.info/id/222671000179101\">222671000179101</a></td><td>servicio de emergencia centralizada pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/4881000179107\">4881000179107</a></td><td>servicio de emergencia no centralizada</td></tr><tr><td><a href=\"http://snomed.info/id/227561000179106\">227561000179106</a></td><td>servicio de emergencia no centralizada pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/708183009\">708183009</a></td><td>servicio de anatomía patológica</td></tr><tr><td><a href=\"http://snomed.info/id/3851000179100\">3851000179100</a></td><td>servicio de imagenología</td></tr><tr><td><a href=\"http://snomed.info/id/310169008\">310169008</a></td><td>servicio de ecografía</td></tr><tr><td><a href=\"http://snomed.info/id/310125001\">310125001</a></td><td>servicio de radiología</td></tr><tr><td><a href=\"http://snomed.info/id/788009005\">788009005</a></td><td>servicio de medicina nuclear</td></tr><tr><td><a href=\"http://snomed.info/id/310127009\">310127009</a></td><td>servicio de resonancia magnética nuclear</td></tr><tr><td><a href=\"http://snomed.info/id/310128004\">310128004</a></td><td>servicio de tomografía computarizada</td></tr><tr><td><a href=\"http://snomed.info/id/708179009\">708179009</a></td><td>servicio de biología molecular</td></tr><tr><td><a href=\"http://snomed.info/id/310076001\">310076001</a></td><td>servicio de bioquímica clínica</td></tr><tr><td><a href=\"http://snomed.info/id/310200001\">310200001</a></td><td>servicio de citología</td></tr><tr><td><a href=\"http://snomed.info/id/3881000179105\">3881000179105</a></td><td>servicio de laboratorio</td></tr><tr><td><a href=\"http://snomed.info/id/788006003\">788006003</a></td><td>servicio de laboratorio de genética</td></tr><tr><td><a href=\"http://snomed.info/id/310078000\">310078000</a></td><td>servicio de microbiología médica</td></tr><tr><td><a href=\"http://snomed.info/id/278891000179102\">278891000179102</a></td><td>servicio de hospital de día</td></tr><tr><td><a href=\"http://snomed.info/id/310030000\">310030000</a></td><td>servicio de endoscopía</td></tr><tr><td><a href=\"http://snomed.info/id/310023006\">310023006</a></td><td>servicio de radioterapia</td></tr><tr><td><a href=\"http://snomed.info/id/310024000\">310024000</a></td><td>servicio de colposcopía</td></tr><tr><td><a href=\"http://snomed.info/id/259901000179108\">259901000179108</a></td><td>servicio de neumocardiología</td></tr><tr><td><a href=\"http://snomed.info/id/261761000179103\">261761000179103</a></td><td>servicio de cuidados básicos</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSpracticeSetting"] ; # 
+  fhir:title [ fhir:v "EJE 3 — Servicio médico del documento"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Servicio médico del documento según la hoja ValueSets de la especificación nacional."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "272341000179102" ] ;
+         fhir:display [ fhir:v "comité de tumores" ]
+       ] [
+         fhir:code [ fhir:v "272611000179109" ] ;
+         fhir:display [ fhir:v "heart team" ]
+       ] [
+         fhir:code [ fhir:v "711332004" ] ;
+         fhir:display [ fhir:v "servicio de alergología" ]
+       ] [
+         fhir:code [ fhir:v "310001007" ] ;
+         fhir:display [ fhir:v "servicio de anestesia" ]
+       ] [
+         fhir:code [ fhir:v "247971000179108" ] ;
+         fhir:display [ fhir:v "servicio de atención al adolescente" ]
+       ] [
+         fhir:code [ fhir:v "789718008" ] ;
+         fhir:display [ fhir:v "servicio de cardiología" ]
+       ] [
+         fhir:code [ fhir:v "789717003" ] ;
+         fhir:display [ fhir:v "servicio de cardiología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310142007" ] ;
+         fhir:display [ fhir:v "servicio de cirugía cardíaca" ]
+       ] [
+         fhir:code [ fhir:v "310156009" ] ;
+         fhir:display [ fhir:v "servicio de cirugía general" ]
+       ] [
+         fhir:code [ fhir:v "788008002" ] ;
+         fhir:display [ fhir:v "servicio de cirugía oral y maxilofacial" ]
+       ] [
+         fhir:code [ fhir:v "310163009" ] ;
+         fhir:display [ fhir:v "servicio de cirugía pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310164003" ] ;
+         fhir:display [ fhir:v "servicio de cirugía plástica" ]
+       ] [
+         fhir:code [ fhir:v "310141000" ] ;
+         fhir:display [ fhir:v "servicio de cirugía torácica" ]
+       ] [
+         fhir:code [ fhir:v "310168000" ] ;
+         fhir:display [ fhir:v "servicio de cirugía vascular" ]
+       ] [
+         fhir:code [ fhir:v "4111000179109" ] ;
+         fhir:display [ fhir:v "servicio de cosmetologia médica" ]
+       ] [
+         fhir:code [ fhir:v "310073009" ] ;
+         fhir:display [ fhir:v "servicio de cuidados paliativos" ]
+       ] [
+         fhir:code [ fhir:v "272191000179108" ] ;
+         fhir:display [ fhir:v "servicio de cuidados paliativos pediátricos" ]
+       ] [
+         fhir:code [ fhir:v "700241009" ] ;
+         fhir:display [ fhir:v "servicio de dermatología" ]
+       ] [
+         fhir:code [ fhir:v "1280011000" ] ;
+         fhir:display [ fhir:v "servicio de dermatología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "243721000179102" ] ;
+         fhir:display [ fhir:v "servicio de diabetología" ]
+       ] [
+         fhir:code [ fhir:v "4471000179107" ] ;
+         fhir:display [ fhir:v "servicio de diabetología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "700434000" ] ;
+         fhir:display [ fhir:v "servicio de endocrinología" ]
+       ] [
+         fhir:code [ fhir:v "3761000175103" ] ;
+         fhir:display [ fhir:v "servicio de endocrinología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "708170008" ] ;
+         fhir:display [ fhir:v "servicio de enfermería" ]
+       ] [
+         fhir:code [ fhir:v "700436003" ] ;
+         fhir:display [ fhir:v "servicio de farmacología clínica" ]
+       ] [
+         fhir:code [ fhir:v "722140001" ] ;
+         fhir:display [ fhir:v "servicio de fisioterapia" ]
+       ] [
+         fhir:code [ fhir:v "310101009" ] ;
+         fhir:display [ fhir:v "servicio de fonoaudiología" ]
+       ] [
+         fhir:code [ fhir:v "310104001" ] ;
+         fhir:display [ fhir:v "servicio de fonoaudiología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "700433006" ] ;
+         fhir:display [ fhir:v "servicio de gastroenterología" ]
+       ] [
+         fhir:code [ fhir:v "3771000175106" ] ;
+         fhir:display [ fhir:v "servicio de gastroenterología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "1304105009" ] ;
+         fhir:display [ fhir:v "servicio de genética" ]
+       ] [
+         fhir:code [ fhir:v "3531000175102" ] ;
+         fhir:display [ fhir:v "servicio de geriatría" ]
+       ] [
+         fhir:code [ fhir:v "310060005" ] ;
+         fhir:display [ fhir:v "servicio de ginecotocología" ]
+       ] [
+         fhir:code [ fhir:v "708196005" ] ;
+         fhir:display [ fhir:v "servicio de hematología" ]
+       ] [
+         fhir:code [ fhir:v "897188002" ] ;
+         fhir:display [ fhir:v "servicio de hematología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "3831000179106" ] ;
+         fhir:display [ fhir:v "servicio de hemato-oncología" ]
+       ] [
+         fhir:code [ fhir:v "1343445000" ] ;
+         fhir:display [ fhir:v "servicio de hemato-oncología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "4531000179106" ] ;
+         fhir:display [ fhir:v "servicio de hemoterapia y medicina transfusional" ]
+       ] [
+         fhir:code [ fhir:v "23901000087101" ] ;
+         fhir:display [ fhir:v "servicio de hepatología" ]
+       ] [
+         fhir:code [ fhir:v "3861000179102" ] ;
+         fhir:display [ fhir:v "servicio de infectología" ]
+       ] [
+         fhir:code [ fhir:v "3781000175109" ] ;
+         fhir:display [ fhir:v "servicio de infectología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "708190004" ] ;
+         fhir:display [ fhir:v "servicio de inmunología" ]
+       ] [
+         fhir:code [ fhir:v "4291000179105" ] ;
+         fhir:display [ fhir:v "servicio de internación domiciliaria" ]
+       ] [
+         fhir:code [ fhir:v "259861000179102" ] ;
+         fhir:display [ fhir:v "servicio de mastología" ]
+       ] [
+         fhir:code [ fhir:v "2351000175106" ] ;
+         fhir:display [ fhir:v "servicio de medicina del deporte" ]
+       ] [
+         fhir:code [ fhir:v "225491000179106" ] ;
+         fhir:display [ fhir:v "servicio de medicina familiar y comunitaria" ]
+       ] [
+         fhir:code [ fhir:v "700232004" ] ;
+         fhir:display [ fhir:v "servicio de medicina general" ]
+       ] [
+         fhir:code [ fhir:v "310032008" ] ;
+         fhir:display [ fhir:v "servicio de medicina intensiva" ]
+       ] [
+         fhir:code [ fhir:v "741073001" ] ;
+         fhir:display [ fhir:v "servicio de medicina intensiva neonatal" ]
+       ] [
+         fhir:code [ fhir:v "3901000179108" ] ;
+         fhir:display [ fhir:v "servicio de medicina intensiva neonatal y pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310034009" ] ;
+         fhir:display [ fhir:v "servicio de medicina intensiva pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "792848000" ] ;
+         fhir:display [ fhir:v "servicio de medicina interna" ]
+       ] [
+         fhir:code [ fhir:v "3921000179100" ] ;
+         fhir:display [ fhir:v "servicio de medicina interna pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "722393008" ] ;
+         fhir:display [ fhir:v "servicio de medicina legal" ]
+       ] [
+         fhir:code [ fhir:v "278032008" ] ;
+         fhir:display [ fhir:v "servicio de medicina preventiva" ]
+       ] [
+         fhir:code [ fhir:v "788003006" ] ;
+         fhir:display [ fhir:v "servicio de nefrología" ]
+       ] [
+         fhir:code [ fhir:v "3791000175107" ] ;
+         fhir:display [ fhir:v "servicio de nefrología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "3961000179107" ] ;
+         fhir:display [ fhir:v "servicio de neonatología" ]
+       ] [
+         fhir:code [ fhir:v "225421000179108" ] ;
+         fhir:display [ fhir:v "servicio de neumología" ]
+       ] [
+         fhir:code [ fhir:v "3981000179104" ] ;
+         fhir:display [ fhir:v "servicio de neumología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310159002" ] ;
+         fhir:display [ fhir:v "servicio de neurocirugía" ]
+       ] [
+         fhir:code [ fhir:v "830149003" ] ;
+         fhir:display [ fhir:v "servicio de neurofisiología clínica" ]
+       ] [
+         fhir:code [ fhir:v "788005004" ] ;
+         fhir:display [ fhir:v "servicio de neurología" ]
+       ] [
+         fhir:code [ fhir:v "310068003" ] ;
+         fhir:display [ fhir:v "servicio de neuropediatría" ]
+       ] [
+         fhir:code [ fhir:v "1240781000168100" ] ;
+         fhir:display [ fhir:v "servicio de nutrición" ]
+       ] [
+         fhir:code [ fhir:v "722176000" ] ;
+         fhir:display [ fhir:v "servicio de odontología" ]
+       ] [
+         fhir:code [ fhir:v "4031000179101" ] ;
+         fhir:display [ fhir:v "servicio de odontología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310160007" ] ;
+         fhir:display [ fhir:v "servicio de oftalmología" ]
+       ] [
+         fhir:code [ fhir:v "4451000179104" ] ;
+         fhir:display [ fhir:v "servicio de oftalmología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "262741000179109" ] ;
+         fhir:display [ fhir:v "servicio de oncofertilidad" ]
+       ] [
+         fhir:code [ fhir:v "310022001" ] ;
+         fhir:display [ fhir:v "servicio de oncología médica" ]
+       ] [
+         fhir:code [ fhir:v "788123009" ] ;
+         fhir:display [ fhir:v "servicio de oncología radioterápica" ]
+       ] [
+         fhir:code [ fhir:v "310149003" ] ;
+         fhir:display [ fhir:v "servicio de otorrinolaringología" ]
+       ] [
+         fhir:code [ fhir:v "789716007" ] ;
+         fhir:display [ fhir:v "servicio de otorrinolaringología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "231981000179101" ] ;
+         fhir:display [ fhir:v "servicio de parasitología y micología" ]
+       ] [
+         fhir:code [ fhir:v "310066004" ] ;
+         fhir:display [ fhir:v "servicio de pediatría" ]
+       ] [
+         fhir:code [ fhir:v "310087009" ] ;
+         fhir:display [ fhir:v "servicio de podología" ]
+       ] [
+         fhir:code [ fhir:v "4051000179107" ] ;
+         fhir:display [ fhir:v "servicio de podología para diabéticos" ]
+       ] [
+         fhir:code [ fhir:v "310123008" ] ;
+         fhir:display [ fhir:v "servicio de psicología" ]
+       ] [
+         fhir:code [ fhir:v "227591000179101" ] ;
+         fhir:display [ fhir:v "servicio de psicología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "4061000179105" ] ;
+         fhir:display [ fhir:v "servicio de psicomotricidad" ]
+       ] [
+         fhir:code [ fhir:v "260931000179104" ] ;
+         fhir:display [ fhir:v "servicio de psicopedagogía" ]
+       ] [
+         fhir:code [ fhir:v "310116007" ] ;
+         fhir:display [ fhir:v "servicio de psiquiatría" ]
+       ] [
+         fhir:code [ fhir:v "221000179108" ] ;
+         fhir:display [ fhir:v "servicio de psiquiatría adolescente" ]
+       ] [
+         fhir:code [ fhir:v "241000179102" ] ;
+         fhir:display [ fhir:v "servicio de psiquiatría pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "773558007" ] ;
+         fhir:display [ fhir:v "servicio de rehabilitación y medicina física" ]
+       ] [
+         fhir:code [ fhir:v "3621000175101" ] ;
+         fhir:display [ fhir:v "servicio de reumatología" ]
+       ] [
+         fhir:code [ fhir:v "789714005" ] ;
+         fhir:display [ fhir:v "servicio de reumatología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "270271000179102" ] ;
+         fhir:display [ fhir:v "servicio de salud ocupacional" ]
+       ] [
+         fhir:code [ fhir:v "270401000179108" ] ;
+         fhir:display [ fhir:v "servicio de salud sexual y reproductiva" ]
+       ] [
+         fhir:code [ fhir:v "708191000" ] ;
+         fhir:display [ fhir:v "servicio de toxicología" ]
+       ] [
+         fhir:code [ fhir:v "310071006" ] ;
+         fhir:display [ fhir:v "servicio de tratamiento del dolor" ]
+       ] [
+         fhir:code [ fhir:v "4101000179107" ] ;
+         fhir:display [ fhir:v "servicio de traumatología y ortopedia" ]
+       ] [
+         fhir:code [ fhir:v "249221000179107" ] ;
+         fhir:display [ fhir:v "servicio de traumatología y ortopedia pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "310167005" ] ;
+         fhir:display [ fhir:v "servicio de urología" ]
+       ] [
+         fhir:code [ fhir:v "1231394008" ] ;
+         fhir:display [ fhir:v "servicio de urología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "259771000179104" ] ;
+         fhir:display [ fhir:v "servicio de violencia de género" ]
+       ] [
+         fhir:code [ fhir:v "261781000179106" ] ;
+         fhir:display [ fhir:v "unidad de accidentes cerebrovasculares" ]
+       ] [
+         fhir:code [ fhir:v "261771000179109" ] ;
+         fhir:display [ fhir:v "unidad de cuidados cardiológicos" ]
+       ] [
+         fhir:code [ fhir:v "261801000179107" ] ;
+         fhir:display [ fhir:v "unidad de cuidados neuroquirúrgicos" ]
+       ] [
+         fhir:code [ fhir:v "261791000179108" ] ;
+         fhir:display [ fhir:v "unidad de quemados" ]
+       ] [
+         fhir:code [ fhir:v "262431000179108" ] ;
+         fhir:display [ fhir:v "unidad de quemados y rehabilitación pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "261811000179109" ] ;
+         fhir:display [ fhir:v "unidad de trasplante de médula ósea" ]
+       ] [
+         fhir:code [ fhir:v "261821000179104" ] ;
+         fhir:display [ fhir:v "unidad de trasplante de órgano sólido" ]
+       ] [
+         fhir:code [ fhir:v "227541000179105" ] ;
+         fhir:display [ fhir:v "servicio de administración sanitaria" ]
+       ] [
+         fhir:code [ fhir:v "4151000179108" ] ;
+         fhir:display [ fhir:v "servicio de vacunaciones" ]
+       ] [
+         fhir:code [ fhir:v "278331000179107" ] ;
+         fhir:display [ fhir:v "comité de recepción en salud mental" ]
+       ] [
+         fhir:code [ fhir:v "408458006" ] ;
+         fhir:display [ fhir:v "equipo multidisciplinario de especialistas" ]
+       ] [
+         fhir:code [ fhir:v "254561000179104" ] ;
+         fhir:display [ fhir:v "servicio de acupuntura" ]
+       ] [
+         fhir:code [ fhir:v "371000179103" ] ;
+         fhir:display [ fhir:v "servicio de andrología" ]
+       ] [
+         fhir:code [ fhir:v "246571000179101" ] ;
+         fhir:display [ fhir:v "servicio de cesación de tabaquismo" ]
+       ] [
+         fhir:code [ fhir:v "733459009" ] ;
+         fhir:display [ fhir:v "servicio de rehabilitación cardíaca" ]
+       ] [
+         fhir:code [ fhir:v "225501000179101" ] ;
+         fhir:display [ fhir:v "servicio social" ]
+       ] [
+         fhir:code [ fhir:v "310029005" ] ;
+         fhir:display [ fhir:v "servicio de atención domiciliaria" ]
+       ] [
+         fhir:code [ fhir:v "4871000179105" ] ;
+         fhir:display [ fhir:v "servicio de emergencia centralizada" ]
+       ] [
+         fhir:code [ fhir:v "222671000179101" ] ;
+         fhir:display [ fhir:v "servicio de emergencia centralizada pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "4881000179107" ] ;
+         fhir:display [ fhir:v "servicio de emergencia no centralizada" ]
+       ] [
+         fhir:code [ fhir:v "227561000179106" ] ;
+         fhir:display [ fhir:v "servicio de emergencia no centralizada pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "708183009" ] ;
+         fhir:display [ fhir:v "servicio de anatomía patológica" ]
+       ] [
+         fhir:code [ fhir:v "3851000179100" ] ;
+         fhir:display [ fhir:v "servicio de imagenología" ]
+       ] [
+         fhir:code [ fhir:v "310169008" ] ;
+         fhir:display [ fhir:v "servicio de ecografía" ]
+       ] [
+         fhir:code [ fhir:v "310125001" ] ;
+         fhir:display [ fhir:v "servicio de radiología" ]
+       ] [
+         fhir:code [ fhir:v "788009005" ] ;
+         fhir:display [ fhir:v "servicio de medicina nuclear" ]
+       ] [
+         fhir:code [ fhir:v "310127009" ] ;
+         fhir:display [ fhir:v "servicio de resonancia magnética nuclear" ]
+       ] [
+         fhir:code [ fhir:v "310128004" ] ;
+         fhir:display [ fhir:v "servicio de tomografía computarizada" ]
+       ] [
+         fhir:code [ fhir:v "708179009" ] ;
+         fhir:display [ fhir:v "servicio de biología molecular" ]
+       ] [
+         fhir:code [ fhir:v "310076001" ] ;
+         fhir:display [ fhir:v "servicio de bioquímica clínica" ]
+       ] [
+         fhir:code [ fhir:v "310200001" ] ;
+         fhir:display [ fhir:v "servicio de citología" ]
+       ] [
+         fhir:code [ fhir:v "3881000179105" ] ;
+         fhir:display [ fhir:v "servicio de laboratorio" ]
+       ] [
+         fhir:code [ fhir:v "788006003" ] ;
+         fhir:display [ fhir:v "servicio de laboratorio de genética" ]
+       ] [
+         fhir:code [ fhir:v "310078000" ] ;
+         fhir:display [ fhir:v "servicio de microbiología médica" ]
+       ] [
+         fhir:code [ fhir:v "278891000179102" ] ;
+         fhir:display [ fhir:v "servicio de hospital de día" ]
+       ] [
+         fhir:code [ fhir:v "310030000" ] ;
+         fhir:display [ fhir:v "servicio de endoscopía" ]
+       ] [
+         fhir:code [ fhir:v "310023006" ] ;
+         fhir:display [ fhir:v "servicio de radioterapia" ]
+       ] [
+         fhir:code [ fhir:v "310024000" ] ;
+         fhir:display [ fhir:v "servicio de colposcopía" ]
+       ] [
+         fhir:code [ fhir:v "259901000179108" ] ;
+         fhir:display [ fhir:v "servicio de neumocardiología" ]
+       ] [
+         fhir:code [ fhir:v "261761000179103" ] ;
+         fhir:display [ fhir:v "servicio de cuidados básicos" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

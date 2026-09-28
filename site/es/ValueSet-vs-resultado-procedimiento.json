@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-resultado-procedimiento",
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-resultado-procedimiento</b></p><a name=\"vs-resultado-procedimiento\"> </a><a name=\"hcvs-resultado-procedimiento\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/10828004\">10828004</a></td><td>positivo</td></tr><tr><td><a href=\"http://snomed.info/id/125154007\">125154007</a></td><td>espécimen insatisfactorio para evaluación</td></tr><tr><td><a href=\"http://snomed.info/id/260415000\">260415000</a></td><td>no detectado</td></tr><tr><td><a href=\"http://snomed.info/id/280413001\">280413001</a></td><td>resultado normal</td></tr><tr><td><a href=\"http://snomed.info/id/280415008\">280415008</a></td><td>resultado anormal</td></tr><tr><td><a href=\"http://snomed.info/id/41998400\">41998400</a></td><td>no concluyente</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento",
+  "version" : "0.1.0",
+  "name" : "VSResultadoProcedimiento",
+  "title" : "Conjunto de Valores Resultado de Procedimiento",
+  "status" : "draft",
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "Resultados posibles de un procedimiento (procedure.outcome).",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "10828004",
+        "display" : "positivo"
+      },
+      {
+        "code" : "125154007",
+        "display" : "espécimen insatisfactorio para evaluación"
+      },
+      {
+        "code" : "260415000",
+        "display" : "no detectado"
+      },
+      {
+        "code" : "280413001",
+        "display" : "resultado normal"
+      },
+      {
+        "code" : "280415008",
+        "display" : "resultado anormal"
+      },
+      {
+        "code" : "41998400",
+        "display" : "no concluyente"
+      }]
+    }]
+  }
+}

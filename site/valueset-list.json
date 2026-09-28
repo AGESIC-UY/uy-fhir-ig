@@ -1,0 +1,220 @@
+{
+  "codeSystems" : [{
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "HCENFHIRSerialization",
+    "title" : "Tipos MIME de documentos FHIR HCEN",
+    "description" : "Serializaciones FHIR JSON y XML para la representación Bundle documental. No identifica el formato del CDA encapsulado.",
+    "systems" : ["urn:ietf:bcp:13"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSBarriosLocalidadesUY",
+    "title" : "Barrios y localidades postales de Uruguay",
+    "description" : "Barrios y localidades del listado del Correo Uruguayo, para vincular Address.district.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSclassCode",
+    "title" : "EJE 1 — Tipo genérico de documento",
+    "description" : "Tipo genérico de documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSCodigosPostalesUY",
+    "title" : "Códigos postales de Uruguay",
+    "description" : "Códigos postales admitidos en Address.postalCode.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-composition-status-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSCompositionStatusCNU",
+    "title" : "Conjunto de Valores Estado de la Consulta No Urgente",
+    "description" : "Subconjunto de Composition.status permitido para HCENConsultaNoUrgente: final, amended y entered-in-error (excluye preliminary, que no tiene mapeo CDA aplicable).",
+    "systems" : ["http://hl7.org/fhir/composition-status"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSConditionCategoryCNU",
+    "title" : "Conjunto de Valores Categoría de Condition (CNU)",
+    "description" : "Extiende el conjunto de valores base de Condition.category (problem-list-item, encounter-diagnosis) con los códigos SNOMED CT locales usados para motivo de consulta y diagnóstico en la Hoja de Consulta No Urgente.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category",
+    "http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSConfidentialityCNU",
+    "title" : "Conjunto de Valores Confidencialidad de la Consulta No Urgente",
+    "description" : "Subconjunto de Composition.confidentiality permitido para HCENConsultaNoUrgente: N (normal), R (restricted) y V (very restricted).",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSDepartamentosUY",
+    "title" : "Departamentos de Uruguay",
+    "description" : "Los 19 departamentos admitidos en Address.state.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSDiagnosticoConsulta",
+    "title" : "Conjunto de Valores Diagnósticos",
+    "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EspecialidadMedica",
+    "title" : "Conjunto de Valores Especialidad Médica",
+    "description" : "Especialidades médicas válidas para PractitionerRole.specialty.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "FormatCode",
+    "title" : "Formato del documento FHIR HCEN",
+    "description" : "Formato técnico de la representación FHIR referenciada por DocumentReference.content.attachment.url. La selección inicial utiliza el código IHE para indicar que el tipo MIME es suficiente; no declara perfiles clínicos CDA ni C-CDA.",
+    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSLocalidadesUY",
+    "title" : "Localidades de Uruguay",
+    "description" : "Localidades de Uruguay publicadas en el catálogo de OSE, para vincular Address.city.",
+    "systems" : ["http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-medicamentos",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSMedicamentos",
+    "title" : "Conjunto de Valores Medicamentos (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para medicamentos, utilizado en la validación del CDA. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSMotivoConsulta",
+    "title" : "Conjunto de Valores Motivos de Consulta",
+    "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSpracticeSetting",
+    "title" : "EJE 3 — Servicio médico del documento",
+    "description" : "Servicio médico del documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PrestadorOidMrn",
+    "title" : "OIDs de instituciones HCEN",
+    "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
+    "systems" : ["urn:ietf:rfc:3986"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSProcedimientos",
+    "title" : "Conjunto de Valores Procedimientos",
+    "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSResultadoProcedimiento",
+    "title" : "Conjunto de Valores Resultado de Procedimiento",
+    "description" : "Resultados posibles de un procedimiento (procedure.outcome).",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "RolProfesional",
+    "title" : "Conjunto de Valores Rol del Profesional",
+    "description" : "Referencias simples de roles y especialidades en salud (metadato fundacional) para PractitionerRole.code.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSSitioAdministracion",
+    "title" : "Conjunto de Valores Sitio de Administración (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para sitios anatómicos de administración de medicación. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSSolicitudProcedimiento",
+    "title" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para solicitudes de servicio/procedimiento (refset uruguayo de solicitudes de procedimientos), utilizado en la validación del CDA. Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-tipo-procedimiento",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSTipoProcedimiento",
+    "title" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
+    "description" : "PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico, terapéutico). Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-type-code",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VStypeCode",
+    "title" : "EJE 2 — Tipo detallado de documento",
+    "description" : "Tipo detallado de documento según la hoja ValueSets de la especificación nacional.",
+    "systems" : ["http://snomed.info/sct"]
+  },
+  {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "VSViaAdministracion",
+    "title" : "Conjunto de Valores Vía de Administración (borrador)",
+    "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
+    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"]
+  }]
+}

@@ -1,0 +1,156 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/DocumentReference/hcen-referencia-ejemplo> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-referencia-ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>Metadatos de un documento ficticio de Ana Pérez Gómez. Incluye referencias a FHIR y CDA, autoría de Lucía Silva y custodia de ANDA a efectos del ejemplo técnico.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id>
+     ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [
+         fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+         fhir:l <urn:ietf:rfc:3986>
+       ] ;
+       fhir:value [ fhir:v "urn:oid:2.16.858.2.99999999.1" ]
+     ]
+  ] ) ; # 
+  fhir:masterIdentifier [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.858.2.99999999.67430.20260917100000.1" ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:1.2.16.858.2.99999999.67430.20260917100000.1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:6821000179104 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "6821000179104" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:34108-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "34108-1" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <urn:uuid:00000000-0000-4000-8000-000000000001> ;
+     fhir:reference [ fhir:v "urn:uuid:00000000-0000-4000-8000-000000000001" ]
+  ] ; # 
+  fhir:date [ fhir:v "2026-09-17T10:00:00-03:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <urn:uuid:00000000-0000-4000-8000-000000000004> ;
+     fhir:reference [ fhir:v "urn:uuid:00000000-0000-4000-8000-000000000004" ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:l <urn:uuid:00000000-0000-4000-8000-000000000003> ;
+     fhir:reference [ fhir:v "urn:uuid:00000000-0000-4000-8000-000000000003" ]
+  ] ; # 
+  fhir:securityLabel ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-Confidentiality>
+       ] ;
+       fhir:code [ fhir:v "N" ]
+     ] )
+  ] ) ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id"^^xsd:anyURI ;
+           fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id>
+         ] ;
+         fhir:value [
+           a fhir:Reference ;
+           fhir:l <urn:uuid:00000000-0000-4000-8000-000000000007> ;
+           fhir:reference [ fhir:v "urn:uuid:00000000-0000-4000-8000-000000000007" ]
+         ]
+       ] ) ;
+       fhir:contentType [ fhir:v "application/fhir+json" ] ;
+       fhir:language [ fhir:v "es-UY" ] ;
+       fhir:url [
+         fhir:v "urn:uuid:00000000-0000-4000-8000-000000000006"^^xsd:anyURI ;
+         fhir:l <urn:uuid:00000000-0000-4000-8000-000000000006>
+       ] ;
+       fhir:title [ fhir:v "Documento de prueba de interoperabilidad" ] ;
+       fhir:creation [ fhir:v "2026-09-17T10:00:00-03:00"^^xsd:dateTime ]
+     ] ;
+     fhir:format [
+       fhir:system [
+         fhir:v "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"^^xsd:anyURI ;
+         fhir:l <http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode>
+       ] ;
+       fhir:code [ fhir:v "urn:ihe:iti:xds:2017:mimeTypeSufficient" ]
+     ]
+  ] ) ; # 
+  fhir:context [
+     fhir:facilityType [
+       fhir:coding ( [
+         a sct:22232009 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "22232009" ]
+       ] )
+     ] ;
+     fhir:practiceSetting [
+       fhir:coding ( [
+         a sct:700232004 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "700232004" ]
+       ] )
+     ] ;
+     fhir:sourcePatientInfo [
+       fhir:l <urn:uuid:00000000-0000-4000-8000-000000000001> ;
+       fhir:reference [ fhir:v "urn:uuid:00000000-0000-4000-8000-000000000001" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

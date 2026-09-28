@@ -1,0 +1,50 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD"
+"HumanName","HumanName","","","",0,*,"","","","null {[]} {[]}
+","Nombre de Persona (Uruguay)","Nombre de una persona optimizado para su visualización y almacenamiento estructurado, con los apellidos discriminados mediante extensiones.","Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.","","","","","","","","",,,,,"",,,,"HumanName",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN","n/a","EN (actually, PN)","ProviderName"
+"HumanName.id","HumanName.id","","","",0,1,"","","","string {[]} {[]}
+","ID único del elemento dentro del recurso.","ID único del elemento dentro del recurso.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"HumanName.extension","HumanName.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Contenido adicional definido por implementaciones.","Contenido adicional definido por implementaciones.","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"HumanName.use","HumanName.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","El propósito de uso de este nombre.","El propósito de uso de este nombre.","Las aplicaciones pueden considerar vigente un nombre salvo que se indique explícitamente que es temporal o anterior.","Allows the appropriate name for a particular context of use to be selected from among a set of names.","","","","","","","",,"required","Propósito de uso del nombre.","http://hl7.org/fhir/ValueSet/name-use|4.0.1","",,,,"HumanName.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN.7, but often indicated by which field contains the name","unique(./use)","./NamePurpose"
+"HumanName.text","HumanName.text","","","",0,1,"","","Y","string {[]} {[]}
+","Especifica el nombre completo tal como debe ser mostrado.","Especifica el nombre completo tal como debe ser mostrado.","Pueden incluirse tanto el nombre completo como sus partes. Al actualizar el nombre, las aplicaciones deben asegurar que el texto no contenga información que no esté representada en las partes.","A renderable, unencoded form.","","","","","","","",,,,,"",,,,"HumanName.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","implied by XPN.11","./formatted"
+"HumanName.family","HumanName.family","","surname
+","",0,1,"","","Y","string {[]} {[]}
+","Apellidos de la persona.","Apellidos de la persona.","Los apellidos pueden descomponerse en partes mediante extensiones, según las convenciones culturales aplicables.","","","","","","","","",,,,,"",,,,"HumanName.family",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN.1/FN.1","./part[partType = FAM]","./FamilyName"
+"HumanName.family.id","HumanName.family.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"HumanName.family.extension","HumanName.family.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Contenido adicional para el campo family.","Contenido adicional para el campo family.","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"HumanName.family.extension:primerApellido","HumanName.family.extension","primerApellido","","",0,1,"","","","Extension {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido]]} {[]}
+","Primer apellido de la persona.","Primer apellido de la persona.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"HumanName.family.extension:segundoApellido","HumanName.family.extension","segundoApellido","","",0,1,"","","","Extension {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido]]} {[]}
+","Segundo apellido de la persona.","Segundo apellido de la persona.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"HumanName.family.value","HumanName.family.value","","","",0,1,"","","","string {[]} {[]}
+","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
+"HumanName.given","HumanName.given","","first name
+middle name","",0,*,"","","Y","string {[]} {[]}
+","Nombres de pila en su orden real.","Lista ordenada de nombres de pila. given[0] representa el primer nombre, given[1] el segundo nombre y así sucesivamente.","El orden de los valores es significativo y debe conservarse: el primer elemento corresponde al primer nombre de la persona, el segundo al segundo nombre y así sucesivamente.","","","","","","","","",,,,,"",,,,"HumanName.given",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN.2 + XPN.3","./part[partType = GIV]","./GivenNames"
+"HumanName.prefix","HumanName.prefix","","","",0,*,"","","Y","string {[]} {[]}
+","Partes del nombre que van antes del mismo.","Partes del nombre que van antes del mismo.","","","","","","","","","",,,,,"",,,,"HumanName.prefix",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN.5","./part[partType = PFX]","./TitleCode"
+"HumanName.suffix","HumanName.suffix","","","",0,*,"","","Y","string {[]} {[]}
+","Partes del nombre que van después del mismo.","Partes del nombre que van después del mismo.","","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN/4","./part[partType = SFX]"
+"HumanName.period","HumanName.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Periodo de validez del nombre.","Periodo de validez del nombre.","","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XPN.13 + XPN.14","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"

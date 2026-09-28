@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-practice-setting"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-practice-setting</b></p><a name="vs-practice-setting"> </a><a name="hcvs-practice-setting"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/272341000179102">272341000179102</a></td><td>comité de tumores</td></tr><tr><td><a href="http://snomed.info/id/272611000179109">272611000179109</a></td><td>heart team</td></tr><tr><td><a href="http://snomed.info/id/711332004">711332004</a></td><td>servicio de alergología</td></tr><tr><td><a href="http://snomed.info/id/310001007">310001007</a></td><td>servicio de anestesia</td></tr><tr><td><a href="http://snomed.info/id/247971000179108">247971000179108</a></td><td>servicio de atención al adolescente</td></tr><tr><td><a href="http://snomed.info/id/789718008">789718008</a></td><td>servicio de cardiología</td></tr><tr><td><a href="http://snomed.info/id/789717003">789717003</a></td><td>servicio de cardiología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310142007">310142007</a></td><td>servicio de cirugía cardíaca</td></tr><tr><td><a href="http://snomed.info/id/310156009">310156009</a></td><td>servicio de cirugía general</td></tr><tr><td><a href="http://snomed.info/id/788008002">788008002</a></td><td>servicio de cirugía oral y maxilofacial</td></tr><tr><td><a href="http://snomed.info/id/310163009">310163009</a></td><td>servicio de cirugía pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310164003">310164003</a></td><td>servicio de cirugía plástica</td></tr><tr><td><a href="http://snomed.info/id/310141000">310141000</a></td><td>servicio de cirugía torácica</td></tr><tr><td><a href="http://snomed.info/id/310168000">310168000</a></td><td>servicio de cirugía vascular</td></tr><tr><td><a href="http://snomed.info/id/4111000179109">4111000179109</a></td><td>servicio de cosmetologia médica</td></tr><tr><td><a href="http://snomed.info/id/310073009">310073009</a></td><td>servicio de cuidados paliativos</td></tr><tr><td><a href="http://snomed.info/id/272191000179108">272191000179108</a></td><td>servicio de cuidados paliativos pediátricos</td></tr><tr><td><a href="http://snomed.info/id/700241009">700241009</a></td><td>servicio de dermatología</td></tr><tr><td><a href="http://snomed.info/id/1280011000">1280011000</a></td><td>servicio de dermatología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/243721000179102">243721000179102</a></td><td>servicio de diabetología</td></tr><tr><td><a href="http://snomed.info/id/4471000179107">4471000179107</a></td><td>servicio de diabetología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/700434000">700434000</a></td><td>servicio de endocrinología</td></tr><tr><td><a href="http://snomed.info/id/3761000175103">3761000175103</a></td><td>servicio de endocrinología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/708170008">708170008</a></td><td>servicio de enfermería</td></tr><tr><td><a href="http://snomed.info/id/700436003">700436003</a></td><td>servicio de farmacología clínica</td></tr><tr><td><a href="http://snomed.info/id/722140001">722140001</a></td><td>servicio de fisioterapia</td></tr><tr><td><a href="http://snomed.info/id/310101009">310101009</a></td><td>servicio de fonoaudiología</td></tr><tr><td><a href="http://snomed.info/id/310104001">310104001</a></td><td>servicio de fonoaudiología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/700433006">700433006</a></td><td>servicio de gastroenterología</td></tr><tr><td><a href="http://snomed.info/id/3771000175106">3771000175106</a></td><td>servicio de gastroenterología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/1304105009">1304105009</a></td><td>servicio de genética</td></tr><tr><td><a href="http://snomed.info/id/3531000175102">3531000175102</a></td><td>servicio de geriatría</td></tr><tr><td><a href="http://snomed.info/id/310060005">310060005</a></td><td>servicio de ginecotocología</td></tr><tr><td><a href="http://snomed.info/id/708196005">708196005</a></td><td>servicio de hematología</td></tr><tr><td><a href="http://snomed.info/id/897188002">897188002</a></td><td>servicio de hematología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/3831000179106">3831000179106</a></td><td>servicio de hemato-oncología</td></tr><tr><td><a href="http://snomed.info/id/1343445000">1343445000</a></td><td>servicio de hemato-oncología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/4531000179106">4531000179106</a></td><td>servicio de hemoterapia y medicina transfusional</td></tr><tr><td><a href="http://snomed.info/id/23901000087101">23901000087101</a></td><td>servicio de hepatología</td></tr><tr><td><a href="http://snomed.info/id/3861000179102">3861000179102</a></td><td>servicio de infectología</td></tr><tr><td><a href="http://snomed.info/id/3781000175109">3781000175109</a></td><td>servicio de infectología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/708190004">708190004</a></td><td>servicio de inmunología</td></tr><tr><td><a href="http://snomed.info/id/4291000179105">4291000179105</a></td><td>servicio de internación domiciliaria</td></tr><tr><td><a href="http://snomed.info/id/259861000179102">259861000179102</a></td><td>servicio de mastología</td></tr><tr><td><a href="http://snomed.info/id/2351000175106">2351000175106</a></td><td>servicio de medicina del deporte</td></tr><tr><td><a href="http://snomed.info/id/225491000179106">225491000179106</a></td><td>servicio de medicina familiar y comunitaria</td></tr><tr><td><a href="http://snomed.info/id/700232004">700232004</a></td><td>servicio de medicina general</td></tr><tr><td><a href="http://snomed.info/id/310032008">310032008</a></td><td>servicio de medicina intensiva</td></tr><tr><td><a href="http://snomed.info/id/741073001">741073001</a></td><td>servicio de medicina intensiva neonatal</td></tr><tr><td><a href="http://snomed.info/id/3901000179108">3901000179108</a></td><td>servicio de medicina intensiva neonatal y pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310034009">310034009</a></td><td>servicio de medicina intensiva pediátrica</td></tr><tr><td><a href="http://snomed.info/id/792848000">792848000</a></td><td>servicio de medicina interna</td></tr><tr><td><a href="http://snomed.info/id/3921000179100">3921000179100</a></td><td>servicio de medicina interna pediátrica</td></tr><tr><td><a href="http://snomed.info/id/722393008">722393008</a></td><td>servicio de medicina legal</td></tr><tr><td><a href="http://snomed.info/id/278032008">278032008</a></td><td>servicio de medicina preventiva</td></tr><tr><td><a href="http://snomed.info/id/788003006">788003006</a></td><td>servicio de nefrología</td></tr><tr><td><a href="http://snomed.info/id/3791000175107">3791000175107</a></td><td>servicio de nefrología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/3961000179107">3961000179107</a></td><td>servicio de neonatología</td></tr><tr><td><a href="http://snomed.info/id/225421000179108">225421000179108</a></td><td>servicio de neumología</td></tr><tr><td><a href="http://snomed.info/id/3981000179104">3981000179104</a></td><td>servicio de neumología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310159002">310159002</a></td><td>servicio de neurocirugía</td></tr><tr><td><a href="http://snomed.info/id/830149003">830149003</a></td><td>servicio de neurofisiología clínica</td></tr><tr><td><a href="http://snomed.info/id/788005004">788005004</a></td><td>servicio de neurología</td></tr><tr><td><a href="http://snomed.info/id/310068003">310068003</a></td><td>servicio de neuropediatría</td></tr><tr><td><a href="http://snomed.info/id/1240781000168100">1240781000168100</a></td><td>servicio de nutrición</td></tr><tr><td><a href="http://snomed.info/id/722176000">722176000</a></td><td>servicio de odontología</td></tr><tr><td><a href="http://snomed.info/id/4031000179101">4031000179101</a></td><td>servicio de odontología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310160007">310160007</a></td><td>servicio de oftalmología</td></tr><tr><td><a href="http://snomed.info/id/4451000179104">4451000179104</a></td><td>servicio de oftalmología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/262741000179109">262741000179109</a></td><td>servicio de oncofertilidad</td></tr><tr><td><a href="http://snomed.info/id/310022001">310022001</a></td><td>servicio de oncología médica</td></tr><tr><td><a href="http://snomed.info/id/788123009">788123009</a></td><td>servicio de oncología radioterápica</td></tr><tr><td><a href="http://snomed.info/id/310149003">310149003</a></td><td>servicio de otorrinolaringología</td></tr><tr><td><a href="http://snomed.info/id/789716007">789716007</a></td><td>servicio de otorrinolaringología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/231981000179101">231981000179101</a></td><td>servicio de parasitología y micología</td></tr><tr><td><a href="http://snomed.info/id/310066004">310066004</a></td><td>servicio de pediatría</td></tr><tr><td><a href="http://snomed.info/id/310087009">310087009</a></td><td>servicio de podología</td></tr><tr><td><a href="http://snomed.info/id/4051000179107">4051000179107</a></td><td>servicio de podología para diabéticos</td></tr><tr><td><a href="http://snomed.info/id/310123008">310123008</a></td><td>servicio de psicología</td></tr><tr><td><a href="http://snomed.info/id/227591000179101">227591000179101</a></td><td>servicio de psicología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/4061000179105">4061000179105</a></td><td>servicio de psicomotricidad</td></tr><tr><td><a href="http://snomed.info/id/260931000179104">260931000179104</a></td><td>servicio de psicopedagogía</td></tr><tr><td><a href="http://snomed.info/id/310116007">310116007</a></td><td>servicio de psiquiatría</td></tr><tr><td><a href="http://snomed.info/id/221000179108">221000179108</a></td><td>servicio de psiquiatría adolescente</td></tr><tr><td><a href="http://snomed.info/id/241000179102">241000179102</a></td><td>servicio de psiquiatría pediátrica</td></tr><tr><td><a href="http://snomed.info/id/773558007">773558007</a></td><td>servicio de rehabilitación y medicina física</td></tr><tr><td><a href="http://snomed.info/id/3621000175101">3621000175101</a></td><td>servicio de reumatología</td></tr><tr><td><a href="http://snomed.info/id/789714005">789714005</a></td><td>servicio de reumatología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/270271000179102">270271000179102</a></td><td>servicio de salud ocupacional</td></tr><tr><td><a href="http://snomed.info/id/270401000179108">270401000179108</a></td><td>servicio de salud sexual y reproductiva</td></tr><tr><td><a href="http://snomed.info/id/708191000">708191000</a></td><td>servicio de toxicología</td></tr><tr><td><a href="http://snomed.info/id/310071006">310071006</a></td><td>servicio de tratamiento del dolor</td></tr><tr><td><a href="http://snomed.info/id/4101000179107">4101000179107</a></td><td>servicio de traumatología y ortopedia</td></tr><tr><td><a href="http://snomed.info/id/249221000179107">249221000179107</a></td><td>servicio de traumatología y ortopedia pediátrica</td></tr><tr><td><a href="http://snomed.info/id/310167005">310167005</a></td><td>servicio de urología</td></tr><tr><td><a href="http://snomed.info/id/1231394008">1231394008</a></td><td>servicio de urología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/259771000179104">259771000179104</a></td><td>servicio de violencia de género</td></tr><tr><td><a href="http://snomed.info/id/261781000179106">261781000179106</a></td><td>unidad de accidentes cerebrovasculares</td></tr><tr><td><a href="http://snomed.info/id/261771000179109">261771000179109</a></td><td>unidad de cuidados cardiológicos</td></tr><tr><td><a href="http://snomed.info/id/261801000179107">261801000179107</a></td><td>unidad de cuidados neuroquirúrgicos</td></tr><tr><td><a href="http://snomed.info/id/261791000179108">261791000179108</a></td><td>unidad de quemados</td></tr><tr><td><a href="http://snomed.info/id/262431000179108">262431000179108</a></td><td>unidad de quemados y rehabilitación pediátrica</td></tr><tr><td><a href="http://snomed.info/id/261811000179109">261811000179109</a></td><td>unidad de trasplante de médula ósea</td></tr><tr><td><a href="http://snomed.info/id/261821000179104">261821000179104</a></td><td>unidad de trasplante de órgano sólido</td></tr><tr><td><a href="http://snomed.info/id/227541000179105">227541000179105</a></td><td>servicio de administración sanitaria</td></tr><tr><td><a href="http://snomed.info/id/4151000179108">4151000179108</a></td><td>servicio de vacunaciones</td></tr><tr><td><a href="http://snomed.info/id/278331000179107">278331000179107</a></td><td>comité de recepción en salud mental</td></tr><tr><td><a href="http://snomed.info/id/408458006">408458006</a></td><td>equipo multidisciplinario de especialistas</td></tr><tr><td><a href="http://snomed.info/id/254561000179104">254561000179104</a></td><td>servicio de acupuntura</td></tr><tr><td><a href="http://snomed.info/id/371000179103">371000179103</a></td><td>servicio de andrología</td></tr><tr><td><a href="http://snomed.info/id/246571000179101">246571000179101</a></td><td>servicio de cesación de tabaquismo</td></tr><tr><td><a href="http://snomed.info/id/733459009">733459009</a></td><td>servicio de rehabilitación cardíaca</td></tr><tr><td><a href="http://snomed.info/id/225501000179101">225501000179101</a></td><td>servicio social</td></tr><tr><td><a href="http://snomed.info/id/310029005">310029005</a></td><td>servicio de atención domiciliaria</td></tr><tr><td><a href="http://snomed.info/id/4871000179105">4871000179105</a></td><td>servicio de emergencia centralizada</td></tr><tr><td><a href="http://snomed.info/id/222671000179101">222671000179101</a></td><td>servicio de emergencia centralizada pediátrica</td></tr><tr><td><a href="http://snomed.info/id/4881000179107">4881000179107</a></td><td>servicio de emergencia no centralizada</td></tr><tr><td><a href="http://snomed.info/id/227561000179106">227561000179106</a></td><td>servicio de emergencia no centralizada pediátrica</td></tr><tr><td><a href="http://snomed.info/id/708183009">708183009</a></td><td>servicio de anatomía patológica</td></tr><tr><td><a href="http://snomed.info/id/3851000179100">3851000179100</a></td><td>servicio de imagenología</td></tr><tr><td><a href="http://snomed.info/id/310169008">310169008</a></td><td>servicio de ecografía</td></tr><tr><td><a href="http://snomed.info/id/310125001">310125001</a></td><td>servicio de radiología</td></tr><tr><td><a href="http://snomed.info/id/788009005">788009005</a></td><td>servicio de medicina nuclear</td></tr><tr><td><a href="http://snomed.info/id/310127009">310127009</a></td><td>servicio de resonancia magnética nuclear</td></tr><tr><td><a href="http://snomed.info/id/310128004">310128004</a></td><td>servicio de tomografía computarizada</td></tr><tr><td><a href="http://snomed.info/id/708179009">708179009</a></td><td>servicio de biología molecular</td></tr><tr><td><a href="http://snomed.info/id/310076001">310076001</a></td><td>servicio de bioquímica clínica</td></tr><tr><td><a href="http://snomed.info/id/310200001">310200001</a></td><td>servicio de citología</td></tr><tr><td><a href="http://snomed.info/id/3881000179105">3881000179105</a></td><td>servicio de laboratorio</td></tr><tr><td><a href="http://snomed.info/id/788006003">788006003</a></td><td>servicio de laboratorio de genética</td></tr><tr><td><a href="http://snomed.info/id/310078000">310078000</a></td><td>servicio de microbiología médica</td></tr><tr><td><a href="http://snomed.info/id/278891000179102">278891000179102</a></td><td>servicio de hospital de día</td></tr><tr><td><a href="http://snomed.info/id/310030000">310030000</a></td><td>servicio de endoscopía</td></tr><tr><td><a href="http://snomed.info/id/310023006">310023006</a></td><td>servicio de radioterapia</td></tr><tr><td><a href="http://snomed.info/id/310024000">310024000</a></td><td>servicio de colposcopía</td></tr><tr><td><a href="http://snomed.info/id/259901000179108">259901000179108</a></td><td>servicio de neumocardiología</td></tr><tr><td><a href="http://snomed.info/id/261761000179103">261761000179103</a></td><td>servicio de cuidados básicos</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting"/>
+  <version value="0.1.0"/>
+  <name value="VSpracticeSetting"/>
+  <title value="EJE 3 — Servicio médico del documento"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Servicio médico del documento según la hoja ValueSets de la especificación nacional."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="272341000179102"/>
+        <display value="comité de tumores"/>
+      </concept>
+      <concept>
+        <code value="272611000179109"/>
+        <display value="heart team"/>
+      </concept>
+      <concept>
+        <code value="711332004"/>
+        <display value="servicio de alergología"/>
+      </concept>
+      <concept>
+        <code value="310001007"/>
+        <display value="servicio de anestesia"/>
+      </concept>
+      <concept>
+        <code value="247971000179108"/>
+        <display value="servicio de atención al adolescente"/>
+      </concept>
+      <concept>
+        <code value="789718008"/>
+        <display value="servicio de cardiología"/>
+      </concept>
+      <concept>
+        <code value="789717003"/>
+        <display value="servicio de cardiología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310142007"/>
+        <display value="servicio de cirugía cardíaca"/>
+      </concept>
+      <concept>
+        <code value="310156009"/>
+        <display value="servicio de cirugía general"/>
+      </concept>
+      <concept>
+        <code value="788008002"/>
+        <display value="servicio de cirugía oral y maxilofacial"/>
+      </concept>
+      <concept>
+        <code value="310163009"/>
+        <display value="servicio de cirugía pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310164003"/>
+        <display value="servicio de cirugía plástica"/>
+      </concept>
+      <concept>
+        <code value="310141000"/>
+        <display value="servicio de cirugía torácica"/>
+      </concept>
+      <concept>
+        <code value="310168000"/>
+        <display value="servicio de cirugía vascular"/>
+      </concept>
+      <concept>
+        <code value="4111000179109"/>
+        <display value="servicio de cosmetologia médica"/>
+      </concept>
+      <concept>
+        <code value="310073009"/>
+        <display value="servicio de cuidados paliativos"/>
+      </concept>
+      <concept>
+        <code value="272191000179108"/>
+        <display value="servicio de cuidados paliativos pediátricos"/>
+      </concept>
+      <concept>
+        <code value="700241009"/>
+        <display value="servicio de dermatología"/>
+      </concept>
+      <concept>
+        <code value="1280011000"/>
+        <display value="servicio de dermatología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="243721000179102"/>
+        <display value="servicio de diabetología"/>
+      </concept>
+      <concept>
+        <code value="4471000179107"/>
+        <display value="servicio de diabetología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="700434000"/>
+        <display value="servicio de endocrinología"/>
+      </concept>
+      <concept>
+        <code value="3761000175103"/>
+        <display value="servicio de endocrinología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="708170008"/>
+        <display value="servicio de enfermería"/>
+      </concept>
+      <concept>
+        <code value="700436003"/>
+        <display value="servicio de farmacología clínica"/>
+      </concept>
+      <concept>
+        <code value="722140001"/>
+        <display value="servicio de fisioterapia"/>
+      </concept>
+      <concept>
+        <code value="310101009"/>
+        <display value="servicio de fonoaudiología"/>
+      </concept>
+      <concept>
+        <code value="310104001"/>
+        <display value="servicio de fonoaudiología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="700433006"/>
+        <display value="servicio de gastroenterología"/>
+      </concept>
+      <concept>
+        <code value="3771000175106"/>
+        <display value="servicio de gastroenterología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="1304105009"/>
+        <display value="servicio de genética"/>
+      </concept>
+      <concept>
+        <code value="3531000175102"/>
+        <display value="servicio de geriatría"/>
+      </concept>
+      <concept>
+        <code value="310060005"/>
+        <display value="servicio de ginecotocología"/>
+      </concept>
+      <concept>
+        <code value="708196005"/>
+        <display value="servicio de hematología"/>
+      </concept>
+      <concept>
+        <code value="897188002"/>
+        <display value="servicio de hematología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="3831000179106"/>
+        <display value="servicio de hemato-oncología"/>
+      </concept>
+      <concept>
+        <code value="1343445000"/>
+        <display value="servicio de hemato-oncología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="4531000179106"/>
+        <display value="servicio de hemoterapia y medicina transfusional"/>
+      </concept>
+      <concept>
+        <code value="23901000087101"/>
+        <display value="servicio de hepatología"/>
+      </concept>
+      <concept>
+        <code value="3861000179102"/>
+        <display value="servicio de infectología"/>
+      </concept>
+      <concept>
+        <code value="3781000175109"/>
+        <display value="servicio de infectología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="708190004"/>
+        <display value="servicio de inmunología"/>
+      </concept>
+      <concept>
+        <code value="4291000179105"/>
+        <display value="servicio de internación domiciliaria"/>
+      </concept>
+      <concept>
+        <code value="259861000179102"/>
+        <display value="servicio de mastología"/>
+      </concept>
+      <concept>
+        <code value="2351000175106"/>
+        <display value="servicio de medicina del deporte"/>
+      </concept>
+      <concept>
+        <code value="225491000179106"/>
+        <display value="servicio de medicina familiar y comunitaria"/>
+      </concept>
+      <concept>
+        <code value="700232004"/>
+        <display value="servicio de medicina general"/>
+      </concept>
+      <concept>
+        <code value="310032008"/>
+        <display value="servicio de medicina intensiva"/>
+      </concept>
+      <concept>
+        <code value="741073001"/>
+        <display value="servicio de medicina intensiva neonatal"/>
+      </concept>
+      <concept>
+        <code value="3901000179108"/>
+        <display value="servicio de medicina intensiva neonatal y pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310034009"/>
+        <display value="servicio de medicina intensiva pediátrica"/>
+      </concept>
+      <concept>
+        <code value="792848000"/>
+        <display value="servicio de medicina interna"/>
+      </concept>
+      <concept>
+        <code value="3921000179100"/>
+        <display value="servicio de medicina interna pediátrica"/>
+      </concept>
+      <concept>
+        <code value="722393008"/>
+        <display value="servicio de medicina legal"/>
+      </concept>
+      <concept>
+        <code value="278032008"/>
+        <display value="servicio de medicina preventiva"/>
+      </concept>
+      <concept>
+        <code value="788003006"/>
+        <display value="servicio de nefrología"/>
+      </concept>
+      <concept>
+        <code value="3791000175107"/>
+        <display value="servicio de nefrología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="3961000179107"/>
+        <display value="servicio de neonatología"/>
+      </concept>
+      <concept>
+        <code value="225421000179108"/>
+        <display value="servicio de neumología"/>
+      </concept>
+      <concept>
+        <code value="3981000179104"/>
+        <display value="servicio de neumología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310159002"/>
+        <display value="servicio de neurocirugía"/>
+      </concept>
+      <concept>
+        <code value="830149003"/>
+        <display value="servicio de neurofisiología clínica"/>
+      </concept>
+      <concept>
+        <code value="788005004"/>
+        <display value="servicio de neurología"/>
+      </concept>
+      <concept>
+        <code value="310068003"/>
+        <display value="servicio de neuropediatría"/>
+      </concept>
+      <concept>
+        <code value="1240781000168100"/>
+        <display value="servicio de nutrición"/>
+      </concept>
+      <concept>
+        <code value="722176000"/>
+        <display value="servicio de odontología"/>
+      </concept>
+      <concept>
+        <code value="4031000179101"/>
+        <display value="servicio de odontología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310160007"/>
+        <display value="servicio de oftalmología"/>
+      </concept>
+      <concept>
+        <code value="4451000179104"/>
+        <display value="servicio de oftalmología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="262741000179109"/>
+        <display value="servicio de oncofertilidad"/>
+      </concept>
+      <concept>
+        <code value="310022001"/>
+        <display value="servicio de oncología médica"/>
+      </concept>
+      <concept>
+        <code value="788123009"/>
+        <display value="servicio de oncología radioterápica"/>
+      </concept>
+      <concept>
+        <code value="310149003"/>
+        <display value="servicio de otorrinolaringología"/>
+      </concept>
+      <concept>
+        <code value="789716007"/>
+        <display value="servicio de otorrinolaringología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="231981000179101"/>
+        <display value="servicio de parasitología y micología"/>
+      </concept>
+      <concept>
+        <code value="310066004"/>
+        <display value="servicio de pediatría"/>
+      </concept>
+      <concept>
+        <code value="310087009"/>
+        <display value="servicio de podología"/>
+      </concept>
+      <concept>
+        <code value="4051000179107"/>
+        <display value="servicio de podología para diabéticos"/>
+      </concept>
+      <concept>
+        <code value="310123008"/>
+        <display value="servicio de psicología"/>
+      </concept>
+      <concept>
+        <code value="227591000179101"/>
+        <display value="servicio de psicología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="4061000179105"/>
+        <display value="servicio de psicomotricidad"/>
+      </concept>
+      <concept>
+        <code value="260931000179104"/>
+        <display value="servicio de psicopedagogía"/>
+      </concept>
+      <concept>
+        <code value="310116007"/>
+        <display value="servicio de psiquiatría"/>
+      </concept>
+      <concept>
+        <code value="221000179108"/>
+        <display value="servicio de psiquiatría adolescente"/>
+      </concept>
+      <concept>
+        <code value="241000179102"/>
+        <display value="servicio de psiquiatría pediátrica"/>
+      </concept>
+      <concept>
+        <code value="773558007"/>
+        <display value="servicio de rehabilitación y medicina física"/>
+      </concept>
+      <concept>
+        <code value="3621000175101"/>
+        <display value="servicio de reumatología"/>
+      </concept>
+      <concept>
+        <code value="789714005"/>
+        <display value="servicio de reumatología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="270271000179102"/>
+        <display value="servicio de salud ocupacional"/>
+      </concept>
+      <concept>
+        <code value="270401000179108"/>
+        <display value="servicio de salud sexual y reproductiva"/>
+      </concept>
+      <concept>
+        <code value="708191000"/>
+        <display value="servicio de toxicología"/>
+      </concept>
+      <concept>
+        <code value="310071006"/>
+        <display value="servicio de tratamiento del dolor"/>
+      </concept>
+      <concept>
+        <code value="4101000179107"/>
+        <display value="servicio de traumatología y ortopedia"/>
+      </concept>
+      <concept>
+        <code value="249221000179107"/>
+        <display value="servicio de traumatología y ortopedia pediátrica"/>
+      </concept>
+      <concept>
+        <code value="310167005"/>
+        <display value="servicio de urología"/>
+      </concept>
+      <concept>
+        <code value="1231394008"/>
+        <display value="servicio de urología pediátrica"/>
+      </concept>
+      <concept>
+        <code value="259771000179104"/>
+        <display value="servicio de violencia de género"/>
+      </concept>
+      <concept>
+        <code value="261781000179106"/>
+        <display value="unidad de accidentes cerebrovasculares"/>
+      </concept>
+      <concept>
+        <code value="261771000179109"/>
+        <display value="unidad de cuidados cardiológicos"/>
+      </concept>
+      <concept>
+        <code value="261801000179107"/>
+        <display value="unidad de cuidados neuroquirúrgicos"/>
+      </concept>
+      <concept>
+        <code value="261791000179108"/>
+        <display value="unidad de quemados"/>
+      </concept>
+      <concept>
+        <code value="262431000179108"/>
+        <display value="unidad de quemados y rehabilitación pediátrica"/>
+      </concept>
+      <concept>
+        <code value="261811000179109"/>
+        <display value="unidad de trasplante de médula ósea"/>
+      </concept>
+      <concept>
+        <code value="261821000179104"/>
+        <display value="unidad de trasplante de órgano sólido"/>
+      </concept>
+      <concept>
+        <code value="227541000179105"/>
+        <display value="servicio de administración sanitaria"/>
+      </concept>
+      <concept>
+        <code value="4151000179108"/>
+        <display value="servicio de vacunaciones"/>
+      </concept>
+      <concept>
+        <code value="278331000179107"/>
+        <display value="comité de recepción en salud mental"/>
+      </concept>
+      <concept>
+        <code value="408458006"/>
+        <display value="equipo multidisciplinario de especialistas"/>
+      </concept>
+      <concept>
+        <code value="254561000179104"/>
+        <display value="servicio de acupuntura"/>
+      </concept>
+      <concept>
+        <code value="371000179103"/>
+        <display value="servicio de andrología"/>
+      </concept>
+      <concept>
+        <code value="246571000179101"/>
+        <display value="servicio de cesación de tabaquismo"/>
+      </concept>
+      <concept>
+        <code value="733459009"/>
+        <display value="servicio de rehabilitación cardíaca"/>
+      </concept>
+      <concept>
+        <code value="225501000179101"/>
+        <display value="servicio social"/>
+      </concept>
+      <concept>
+        <code value="310029005"/>
+        <display value="servicio de atención domiciliaria"/>
+      </concept>
+      <concept>
+        <code value="4871000179105"/>
+        <display value="servicio de emergencia centralizada"/>
+      </concept>
+      <concept>
+        <code value="222671000179101"/>
+        <display value="servicio de emergencia centralizada pediátrica"/>
+      </concept>
+      <concept>
+        <code value="4881000179107"/>
+        <display value="servicio de emergencia no centralizada"/>
+      </concept>
+      <concept>
+        <code value="227561000179106"/>
+        <display value="servicio de emergencia no centralizada pediátrica"/>
+      </concept>
+      <concept>
+        <code value="708183009"/>
+        <display value="servicio de anatomía patológica"/>
+      </concept>
+      <concept>
+        <code value="3851000179100"/>
+        <display value="servicio de imagenología"/>
+      </concept>
+      <concept>
+        <code value="310169008"/>
+        <display value="servicio de ecografía"/>
+      </concept>
+      <concept>
+        <code value="310125001"/>
+        <display value="servicio de radiología"/>
+      </concept>
+      <concept>
+        <code value="788009005"/>
+        <display value="servicio de medicina nuclear"/>
+      </concept>
+      <concept>
+        <code value="310127009"/>
+        <display value="servicio de resonancia magnética nuclear"/>
+      </concept>
+      <concept>
+        <code value="310128004"/>
+        <display value="servicio de tomografía computarizada"/>
+      </concept>
+      <concept>
+        <code value="708179009"/>
+        <display value="servicio de biología molecular"/>
+      </concept>
+      <concept>
+        <code value="310076001"/>
+        <display value="servicio de bioquímica clínica"/>
+      </concept>
+      <concept>
+        <code value="310200001"/>
+        <display value="servicio de citología"/>
+      </concept>
+      <concept>
+        <code value="3881000179105"/>
+        <display value="servicio de laboratorio"/>
+      </concept>
+      <concept>
+        <code value="788006003"/>
+        <display value="servicio de laboratorio de genética"/>
+      </concept>
+      <concept>
+        <code value="310078000"/>
+        <display value="servicio de microbiología médica"/>
+      </concept>
+      <concept>
+        <code value="278891000179102"/>
+        <display value="servicio de hospital de día"/>
+      </concept>
+      <concept>
+        <code value="310030000"/>
+        <display value="servicio de endoscopía"/>
+      </concept>
+      <concept>
+        <code value="310023006"/>
+        <display value="servicio de radioterapia"/>
+      </concept>
+      <concept>
+        <code value="310024000"/>
+        <display value="servicio de colposcopía"/>
+      </concept>
+      <concept>
+        <code value="259901000179108"/>
+        <display value="servicio de neumocardiología"/>
+      </concept>
+      <concept>
+        <code value="261761000179103"/>
+        <display value="servicio de cuidados básicos"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

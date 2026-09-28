@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-diagnostico-consulta"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-diagnostico-consulta</b></p><a name="vs-diagnostico-consulta"> </a><a name="hcvs-diagnostico-consulta"> </a><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  in 261341000179103</li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta"/>
+  <version value="0.1.0"/>
+  <name value="VSDiagnosticoConsulta"/>
+  <title value="Conjunto de Valores Diagnósticos"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).&#xA;El listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&amp;conceptId1=261341000179103&amp;edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&amp;release=&amp;languages=es,en)."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="in"/>
+        <value value="261341000179103"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

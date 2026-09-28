@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-motivo-consulta"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Motivos de consulta: incluye todos los conceptos SNOMED CT que son miembros del refset SNOMED CT-UY <code>261341000179103</code> (SNOMED CT edición Uruguay). El listado completo de conceptos puede consultarse en el <a href="https://snomedbrowser.org/?perspective=full&amp;conceptId1=261341000179103&amp;edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&amp;release=&amp;languages=es,en">navegador SNOMED CT-UY</a>.</p></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta"/>
+  <version value="0.1.0"/>
+  <name value="VSMotivoConsulta"/>
+  <title value="Conjunto de Valores Motivos de Consulta"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).&#xA;El listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&amp;conceptId1=261341000179103&amp;edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&amp;release=&amp;languages=es,en)."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="in"/>
+        <value value="261341000179103"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

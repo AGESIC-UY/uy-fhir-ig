@@ -1,0 +1,570 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conjunto de Valores Especialidad Médica - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+<style type="text/css">
+:root {
+  --ig-status-text-color:#003580;
+  --navbar-bg-color:#0057b8;
+  --footer-bg-color:#163959;
+  --footer-container-bg-color:#163959;
+  --stripe-bg-color:#c89d49;
+  --btn-hover-color:#0057b8;
+  --btn-active-color:#002b6e;
+  --btn-text-color:#fff;
+  --btn-gradient-start-color:#0057b8;
+  --btn-gradient-end-color:#003580;
+  --btn-gradient-start-color-alpha:#0057b8;
+  --btn-gradient-end-color-alpha:#003580;
+  --link-color:#175c91;
+  --link-hover-color:#103957;
+  --publish-box-bg-color:#fff4cf;
+  --publish-box-border:1px solid #e2bd61;
+  --toc-box-bg-color:#f5f8fc;
+  --toc-box-border:1px solid #d9e3ee;
+  --footer-text-color:#fff;
+  --footer-hyperlink-text-color:#fff;
+  --footer-highlight-text-color:#f8c94f;
+}
+body { font-family:'Segoe UI',Arial,sans-serif; font-size:15px; line-height:1.65; background:#f4f7fb; color:#24374a; }
+h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1.25; }
+
+/* Cabecera: imágenes junto al HTML, también en output/es/. */
+.uy-core-header {
+  box-sizing:border-box; display:flex; align-items:center; justify-content:space-between;
+  width:100%; gap:16px; padding:10px 22px; line-height:1.35; text-decoration:none;
+  position:relative; isolation:isolate; overflow:hidden; color:#fff;
+  background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce);
+  border-bottom:3px solid #f5a623; font-family:'Segoe UI',Arial,sans-serif;
+}
+.uy-core-header::before { content:''; position:absolute; z-index:-1; inset:0 0 0 50%; pointer-events:none; background:url('header-network.svg') right center / auto 100% no-repeat; }
+.uy-brand { display:flex; align-items:center; gap:14px; min-width:0; color:#fff; text-decoration:none; }
+.uy-brand:hover,.uy-brand:focus { color:#fff; text-decoration:none; }
+.uy-brand:focus-visible { outline:3px solid #f5a623; outline-offset:3px; }
+.uy-logos { display:flex; justify-content:center; align-items:center; flex-shrink:0; width:112px; height:52px; gap:10px; }
+.uy-core-header img { display:block; object-fit:contain; }
+.uy-fhir-logo { width:40px; height:48px; }
+.uy-health-logo { width:52px; height:52px; border-radius:8px; }
+.uy-title { display:block; font-size:22px; font-weight:650; line-height:1.2; letter-spacing:.2px; }
+.uy-subtitle { display:block; font-size:12px; margin-top:3px; color:#e3efff; }
+.uy-identity { display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.uy-site-search { display:flex; align-items:stretch; margin-left:auto; min-width:230px; max-width:380px; flex:1 1 300px; overflow:hidden; border:1px solid #d9e3ee; border-radius:6px; background:#fff; }
+.uy-site-search input { min-width:0; width:100%; height:36px; padding:7px 12px; color:#24374a; background:transparent; border:0; border-radius:0; box-shadow:none; }
+.uy-site-search input::placeholder { color:#607489; }
+.uy-site-search button { display:grid; place-items:center; width:40px; height:36px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-site-search button:hover { color:#002b6e; background:#f8c94f; }
+.uy-site-search button svg { width:19px; height:19px; fill:currentColor; }
+.uy-site-search:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-flag { width:37px; height:32px; }
+.uy-badges { display:flex; flex-direction:column; gap:4px; text-align:center; font-weight:600; border-left:1px solid #ffffff50; padding-left:14px; }
+.uy-badges span { padding:2px 8px; font-size:10px; border:1px solid #ffffff60; border-radius:20px; color:#fff; background:#ffffff18; }
+.uy-badges span:last-child { color:#163959; background:#fff5dc; border-color:#e5c780; }
+
+/* Menú inspirado en guias-implementacion. */
+.navbar .nav > li > a { font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; padding:10px 12px; color:#fff; text-shadow:none; box-shadow:none; }
+.navbar-inverse,#segment-navbar > .container { background:#0057b8; }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .open > a { background:#002b6e; color:#fff; }
+.navbar .dropdown-menu { background:#fff; border:1px solid #d2dce8; border-radius:0; padding:5px 0; box-shadow:0 6px 12px rgba(0,0,0,.175); }
+.navbar .dropdown-menu > li > a { padding:6px 20px; color:#333; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; }
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-menu > .active > a { background:#357ebd linear-gradient(to bottom,#428bca,#357ebd); color:#fff; }
+.navbar a:focus-visible { outline:2px solid #f5a623; outline-offset:-2px; }
+.navbar-inverse .navbar-toggle { border-color:#fff; }
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus { background:#002b6e; }
+.navbar-inverse .navbar-nav > .dropdown > a .caret { border-top-color:#fff; border-bottom-color:#fff; }
+
+/* Contenido: 8px laterales en todos los tamaños; solo se ajusta la fila exterior. */
+#segment-content > .container { background:#fff; box-sizing:border-box; padding:28px 8px 40px; }
+#segment-content > .container > .row { margin-left:0; margin-right:0; }
+#segment-content > .container > .row > .inner-wrapper { margin-top:0; margin-bottom:0; }
+#segment-content > .container > .row > .inner-wrapper > .col-12 { padding-left:0; padding-right:0; }
+.uy-core-banner { max-width:100%; margin:16px auto 32px; }
+.uy-core-banner img { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 8px 24px #16395920; }
+.uy-scope-figure { max-width:640px; margin:24px auto 28px; }
+.uy-scope-figure img { display:block; width:100%; height:auto; }
+.uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+/* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) thead th { color:#163959; font-weight:650; border-bottom:1px solid #8ca4bd; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) tbody tr + tr > :is(th,td) { border-top:1px solid #e4ebf2; }
+/* La misma separación horizontal en tablas técnicas grid, sin alterar los árboles de perfiles del Publisher. */
+#segment-content table.grid:not([data-fhir]):not([fhir]) { border:0; border-collapse:collapse; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) :is(th,td) { padding:8px 10px; border:0; border-bottom:1px solid #e4ebf2; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) tr:first-child > :is(th,td) { border-bottom-color:#8ca4bd; }
+.uy-search-page { max-width:920px; margin-top:8px; padding:26px; background:linear-gradient(145deg,#f8fbff,#fff); border:1px solid #d9e3ee; border-radius:12px; box-shadow:0 5px 16px #16395912; }
+.uy-search-intro { max-width:660px; margin:0; color:#40566b; }
+.uy-search-controls { display:flex; align-items:stretch; margin:22px 0 12px; max-width:720px; overflow:hidden; border:1px solid #8ca4bd; border-radius:6px; background:#fff; }
+.uy-search-controls input { min-width:0; flex:1; padding:11px 14px; border:0; border-radius:0; font-size:16px; box-shadow:none; }
+.uy-search-controls button { display:grid; place-items:center; width:48px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-search-controls button:hover { color:#002b6e; background:#f8c94f; }
+.uy-search-controls button svg { width:21px; height:21px; fill:currentColor; }
+.uy-search-controls:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-search-status { min-height:1.5em; margin:0; color:#4d6073; font-size:14px; }
+.uy-search-results { margin:20px 0 0; padding:0; list-style:none; }
+.uy-search-result { margin:0 0 12px; padding:16px 18px; border:1px solid #d9e3ee; border-radius:8px; background:#fff; box-shadow:0 1px 3px #1639590d; }
+.uy-search-result:hover { border-color:#9bb8d4; box-shadow:0 3px 10px #16395916; }
+.uy-search-result a { font-size:17px; font-weight:700; }
+.uy-search-result p { margin:7px 0 0; color:#3f5265; line-height:1.55; }
+#publish-box,.alert-warning { background-color:#fff4cf; border:1px solid #e2bd61; border-left:4px solid #d9a52b; border-radius:6px; padding:12px 16px; }
+@media(max-width:991px) {
+  #segment-content > .container { padding-top:24px; padding-bottom:32px; }
+}
+@media(max-width:640px) {
+  .uy-core-header { flex-wrap:wrap; padding:10px 14px; gap:10px; }
+  .uy-title { font-size:20px; }
+  .uy-subtitle { font-size:11px; }
+  .uy-logos { width:92px; gap:6px; }
+  .uy-fhir-logo { width:34px; height:42px; }
+  .uy-health-logo { width:46px; height:46px; }
+  .uy-identity { margin-left:auto; }
+  .uy-site-search { order:3; min-width:100%; max-width:none; }
+  .uy-badges { flex-direction:row; padding-left:0; border-left:0; }
+  #segment-content > .container { padding-top:20px; padding-bottom:28px; }
+  .uy-search-page { padding:20px 16px; }
+  .uy-search-controls button { width:46px; }
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8.52"}
+    h3,h4,h5,h6{--heading-prefix:"8.52"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div class="uy-core-header">
+  <a class="uy-brand" href="index.html" aria-label="FHIR Uruguay — Inicio">
+    <span class="uy-logos">
+      <img class="uy-fhir-logo" src="fhir-logo.png" alt="FHIR" width="40" height="48"/>
+      <img class="uy-health-logo" src="salud-digital-claro.svg" alt="Salud Digital" width="52" height="52"/>
+    </span>
+    <span>
+      <span class="uy-title">FHIR Uruguay</span>
+      <span class="uy-subtitle">Base nacional Core e interoperabilidad con HCEN</span>
+    </span>
+  </a>
+  <form class="uy-site-search" action="buscar.html" method="get" role="search" aria-label="Buscar en la guía">
+    <input id="uy-site-search-input" name="q" type="search" placeholder="Buscar en la guía" autocomplete="off"/>
+    <button type="submit" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 19-4.35-4.35a8 8 0 1 0-2 2L19 21l2-2ZM5 10a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/></svg>
+    </button>
+  </form>
+  <span class="uy-identity">
+    <img class="uy-flag" src="uruguay.svg" alt="Uruguay" width="37" height="32"/>
+    <span class="uy-badges"><span>FHIR R4</span><span>Borrador</span></span>
+  </span>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Cómo usar esta guía
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="alcance.html">Propósito y alcance</a>
+      </li>
+      <li>
+        <a href="conceptos-fhir.html">Conceptos básicos de FHIR</a>
+      </li>
+      <li>
+        <a href="como-leer.html">Cómo leer los perfiles</a>
+      </li>
+      <li>
+        <a href="conformidad.html">Convenciones y conformidad</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="introduccion.html">Introducción al Core</a>
+      </li>
+      <li>
+        <a href="identificadores.html">Identificadores y datos comunes</a>
+      </li>
+      <li>
+        <a href="perfiles.html">Perfiles nacionales</a>
+      </li>
+      <li>
+        <a href="extensiones.html">Extensiones</a>
+      </li>
+      <li>
+        <a href="terminologia.html">Terminología</a>
+      </li>
+      <li>
+        <a href="ejemplos.html">Ejemplos</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guía HCEN
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="hcen.html">Introducción a HCEN</a>
+      </li>
+      <li>
+        <a href="hcen-actores.html">Actores y responsabilidades</a>
+      </li>
+      <li>
+        <a href="hcen-casos-de-uso.html">Casos de uso</a>
+      </li>
+      <li>
+        <a href="hcen-transacciones.html">Transacciones</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+      </li>
+      <li>
+        <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
+      </li>
+      <li>
+        <a href="hcen-extensiones.html">Extensiones</a>
+      </li>
+      <li>
+        <a href="hcen-terminologia.html">Terminología</a>
+      </li>
+      <li>
+        <a href="hcen-conformidad.html">Conformidad y capacidades</a>
+      </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Recursos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="descargas.html">Descargas</a>
+      </li>
+      <li>
+        <a href="cambios.html">Historial de cambios</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Resumen de artefactos</b></a></li><li><b>Conjunto de Valores Especialidad Médica</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-valueset -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Contenido narrativo</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-vs-especialidad-medica.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-especialidad-medica.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-especialidad-medica.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Conjunto de Valores Especialidad Médica
+
+  </h2>
+  <table class="colsd" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>URL oficial</i>: <span class="copy-text">http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica<button title="Haga clic para copiar la URL" class="btn-copy" data-clipboard-text="http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica"/></span>
+      </td>
+      <td><i>Versión</i>:
+      <span class="copy-text">0.1.0<button title="Haga clic para copiar la URL versionada" class="btn-copy" data-clipboard-text="http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica|0.1.0"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Habilite esto para ver los cambios desde la última versión oficial">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">¿Resaltar los cambios en el texto?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Draft
+          
+
+            a partir de 
+2026-09-28
+.
+          
+        
+      </td>
+
+
+
+      <td><i>Nombre computable</i>: <span style="font-family: monospace;">EspecialidadMedica</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Especialidades médicas válidas para PractitionerRole.specialty.</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-uy-practitioner-role.html">Perfil Rol del Profesional de Salud para Uruguay</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="vs-especialidad-medica"> </a><a name="hcvs-especialidad-medica"> </a>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1186677001">1186677001</a></td><td>especialidad en discapacidad intelectual</td></tr><tr><td><a href="http://snomed.info/id/1236877003">1236877003</a></td><td>patología genética</td></tr><tr><td><a href="http://snomed.info/id/1236878008">1236878008</a></td><td>histocompatibilidad e inmunogenética</td></tr><tr><td><a href="http://snomed.info/id/1251536003">1251536003</a></td><td>medicina deportiva</td></tr><tr><td><a href="http://snomed.info/id/1251538002">1251538002</a></td><td>ortopedia pediátrica</td></tr><tr><td><a href="http://snomed.info/id/1251539005">1251539005</a></td><td>neurocirugía pediátrica</td></tr><tr><td><a href="http://snomed.info/id/1251543009">1251543009</a></td><td>hidrología médica</td></tr><tr><td><a href="http://snomed.info/id/1251544003">1251544003</a></td><td>medicina farmacéutica</td></tr><tr><td><a href="http://snomed.info/id/1251545002">1251545002</a></td><td>medicina de viaje</td></tr><tr><td><a href="http://snomed.info/id/1251546001">1251546001</a></td><td>medicina sexual</td></tr><tr><td><a href="http://snomed.info/id/1251547005">1251547005</a></td><td>neurorradiología</td></tr><tr><td><a href="http://snomed.info/id/1251549008">1251549008</a></td><td>cardiología intervencionista</td></tr><tr><td><a href="http://snomed.info/id/1251550008">1251550008</a></td><td>dermatopatología</td></tr><tr><td><a href="http://snomed.info/id/1251551007">1251551007</a></td><td>electrofisiología cardíaca</td></tr><tr><td><a href="http://snomed.info/id/1251552000">1251552000</a></td><td>medicina reproductiva</td></tr><tr><td><a href="http://snomed.info/id/1251553005">1251553005</a></td><td>acupuntura médica</td></tr><tr><td><a href="http://snomed.info/id/1251554004">1251554004</a></td><td>codificación médica</td></tr><tr><td><a href="http://snomed.info/id/1255678007">1255678007</a></td><td>enfermería pediátrica</td></tr><tr><td><a href="http://snomed.info/id/1255679004">1255679004</a></td><td>enfermería de planificación familiar</td></tr><tr><td><a href="http://snomed.info/id/1255680001">1255680001</a></td><td>enfermería de terapia intensiva</td></tr><tr><td><a href="http://snomed.info/id/1255681002">1255681002</a></td><td>enfermería en cuidados paliativos</td></tr><tr><td><a href="http://snomed.info/id/1255682009">1255682009</a></td><td>enfermería perioperatoria</td></tr><tr><td><a href="http://snomed.info/id/1255683004">1255683004</a></td><td>enfermería de rehabilitación</td></tr><tr><td><a href="http://snomed.info/id/1255684005">1255684005</a></td><td>enfermería de cuidados crónicos</td></tr><tr><td><a href="http://snomed.info/id/1255685006">1255685006</a></td><td>enfermería comunitaria</td></tr><tr><td><a href="http://snomed.info/id/1255686007">1255686007</a></td><td>enfermería médica quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/1255731004">1255731004</a></td><td>física médica</td></tr><tr><td><a href="http://snomed.info/id/1255732006">1255732006</a></td><td>anatomía patológica</td></tr><tr><td><a href="http://snomed.info/id/1255733001">1255733001</a></td><td>física médica en radiología</td></tr><tr><td><a href="http://snomed.info/id/1255734007">1255734007</a></td><td>física médica en radioterapia</td></tr><tr><td><a href="http://snomed.info/id/1255735008">1255735008</a></td><td>física médica nuclear</td></tr><tr><td><a href="http://snomed.info/id/1255736009">1255736009</a></td><td>patología clínica</td></tr><tr><td><a href="http://snomed.info/id/1255881004">1255881004</a></td><td>enfermería en salud mental</td></tr><tr><td><a href="http://snomed.info/id/1255913008">1255913008</a></td><td>farmacia industrial</td></tr><tr><td><a href="http://snomed.info/id/1255916000">1255916000</a></td><td>psicología educacional</td></tr><tr><td><a href="http://snomed.info/id/1255918004">1255918004</a></td><td>psicología clínica</td></tr><tr><td><a href="http://snomed.info/id/1255984008">1255984008</a></td><td>farmacogenómica</td></tr><tr><td><a href="http://snomed.info/id/1256115008">1256115008</a></td><td>nutrición clínica</td></tr><tr><td><a href="http://snomed.info/id/1258859005">1258859005</a></td><td>nutrición en salud pública</td></tr><tr><td><a href="http://snomed.info/id/1258957008">1258957008</a></td><td>especialización en farmacia hospitalaria</td></tr><tr><td><a href="http://snomed.info/id/1259218001">1259218001</a></td><td>medicina Unani</td></tr><tr><td><a href="http://snomed.info/id/1259219009">1259219009</a></td><td>medicina Siddha</td></tr><tr><td><a href="http://snomed.info/id/1259224007">1259224007</a></td><td>farmacología regulatoria</td></tr><tr><td><a href="http://snomed.info/id/1259938008">1259938008</a></td><td>medicina homeopática</td></tr><tr><td><a href="http://snomed.info/id/1259939000">1259939000</a></td><td>medicina ayurvédica</td></tr><tr><td><a href="http://snomed.info/id/1259940003">1259940003</a></td><td>yoga terapéutico</td></tr><tr><td><a href="http://snomed.info/id/1259944007">1259944007</a></td><td>inmunohemoterapia</td></tr><tr><td><a href="http://snomed.info/id/1259957004">1259957004</a></td><td>estomatología</td></tr><tr><td><a href="http://snomed.info/id/1268907002">1268907002</a></td><td>farmacia comunitaria</td></tr><tr><td><a href="http://snomed.info/id/1284928005">1284928005</a></td><td>cirugía gastrointestinal</td></tr><tr><td><a href="http://snomed.info/id/1284930007">1284930007</a></td><td>cirugía de mano</td></tr><tr><td><a href="http://snomed.info/id/1287784006">1287784006</a></td><td>enfermería obstétrica</td></tr><tr><td><a href="http://snomed.info/id/1290444002">1290444002</a></td><td>especialidad en trastornos del movimiento</td></tr><tr><td><a href="http://snomed.info/id/1297184004">1297184004</a></td><td>neurorradiología intervencionista</td></tr><tr><td><a href="http://snomed.info/id/1303753009">1303753009</a></td><td>osteología</td></tr><tr><td><a href="http://snomed.info/id/1303754003">1303754003</a></td><td>pelviperineología</td></tr><tr><td><a href="http://snomed.info/id/1303755002">1303755002</a></td><td>linfología</td></tr><tr><td><a href="http://snomed.info/id/1303756001">1303756001</a></td><td>flebología</td></tr><tr><td><a href="http://snomed.info/id/1303757005">1303757005</a></td><td>implantología oral</td></tr><tr><td><a href="http://snomed.info/id/1303758000">1303758000</a></td><td>cirugía de base de cráneo</td></tr><tr><td><a href="http://snomed.info/id/1303759008">1303759008</a></td><td>ecografía pediátrica</td></tr><tr><td><a href="http://snomed.info/id/1303764007">1303764007</a></td><td>foniatría</td></tr><tr><td><a href="http://snomed.info/id/1303859002">1303859002</a></td><td>neuropelveología</td></tr><tr><td><a href="http://snomed.info/id/1303860007">1303860007</a></td><td>especialización en fisioterapia cardiorrespiratoria</td></tr><tr><td><a href="http://snomed.info/id/1303926004">1303926004</a></td><td>especialidad de fisioterapia neurológica</td></tr><tr><td><a href="http://snomed.info/id/1303930001">1303930001</a></td><td>especialidad de fisioterapia musculoesquelética</td></tr><tr><td><a href="http://snomed.info/id/1304212007">1304212007</a></td><td>radiología torácica</td></tr><tr><td><a href="http://snomed.info/id/1304214008">1304214008</a></td><td>radiología musculoesquelética</td></tr><tr><td><a href="http://snomed.info/id/1306488000">1306488000</a></td><td>radiología cardiovascular</td></tr><tr><td><a href="http://snomed.info/id/1306761006">1306761006</a></td><td>medicina estética</td></tr><tr><td><a href="http://snomed.info/id/1332234006">1332234006</a></td><td>mastología</td></tr><tr><td><a href="http://snomed.info/id/1335904004">1335904004</a></td><td>neurourología</td></tr><tr><td><a href="http://snomed.info/id/1336020004">1336020004</a></td><td>enfermería de atención crítica</td></tr><tr><td><a href="http://snomed.info/id/1340249005">1340249005</a></td><td>especialización en farmacia militar</td></tr><tr><td><a href="http://snomed.info/id/1345026002">1345026002</a></td><td>especialidad de ortopedia</td></tr><tr><td><a href="http://snomed.info/id/1345027006">1345027006</a></td><td>especialidad de ortopedia quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/1351234002">1351234002</a></td><td>neuropsicología clínica</td></tr><tr><td><a href="http://snomed.info/id/1365982005">1365982005</a></td><td>especialidad en manejo de dolor agudo</td></tr><tr><td><a href="http://snomed.info/id/23861000087105">23861000087105</a></td><td>dermatología de adultos</td></tr><tr><td><a href="http://snomed.info/id/23881000087104">23881000087104</a></td><td>hematología de adultos</td></tr><tr><td><a href="http://snomed.info/id/23921000087107">23921000087107</a></td><td>especialidad de revisión de medicación</td></tr><tr><td><a href="http://snomed.info/id/23931000087109">23931000087109</a></td><td>especialidad médica de adicción a narcóticos</td></tr><tr><td><a href="http://snomed.info/id/23961000087102">23961000087102</a></td><td>especialidad de manejo de la dependencia de opioides</td></tr><tr><td><a href="http://snomed.info/id/23971000087106">23971000087106</a></td><td>dermatología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/23981000087108">23981000087108</a></td><td>especialidad de hematooncología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/23991000087105">23991000087105</a></td><td>cirugía plástica pediátrica</td></tr><tr><td><a href="http://snomed.info/id/24021000087109">24021000087109</a></td><td>especialidad en diagnóstico por imágenes vasculares</td></tr><tr><td><a href="http://snomed.info/id/24061000087104">24061000087104</a></td><td>especialidad de oncología quirúrgica mamaria</td></tr><tr><td><a href="http://snomed.info/id/24091000087107">24091000087107</a></td><td>especialidad de enfermería dirigida a la atención del virus de la inmunodeficiencia humana</td></tr><tr><td><a href="http://snomed.info/id/24111000087100">24111000087100</a></td><td>especialidad de trabajo social relacionado con el virus de la inmunodeficiencia humana</td></tr><tr><td><a href="http://snomed.info/id/24151000087101">24151000087101</a></td><td>especialidad de cirugía ortopédica de columna vertebral</td></tr><tr><td><a href="http://snomed.info/id/24241000087106">24241000087106</a></td><td>especialidad de ortopedia general</td></tr><tr><td><a href="http://snomed.info/id/24251000087109">24251000087109</a></td><td>especialidad de pediatría general</td></tr><tr><td><a href="http://snomed.info/id/24281000087101">24281000087101</a></td><td>especialidad en manejo del dolor crónico en adultos</td></tr><tr><td><a href="http://snomed.info/id/24301000087100">24301000087100</a></td><td>especialidad en manejo del dolor crónico en geriatría</td></tr><tr><td><a href="http://snomed.info/id/24311000087103">24311000087103</a></td><td>especialidad en medicina de adicción a narcóticos con manejo del dolor crónico</td></tr><tr><td><a href="http://snomed.info/id/24361000087101">24361000087101</a></td><td>especialidad en manejo del dolor crónico en pediatría</td></tr><tr><td><a href="http://snomed.info/id/25931000087108">25931000087108</a></td><td>medicina del adolescente</td></tr><tr><td><a href="http://snomed.info/id/25991000087109">25991000087109</a></td><td>farmacología y toxicología clínica</td></tr><tr><td><a href="http://snomed.info/id/26001000087108">26001000087108</a></td><td>especialidad pediátrica del desarrollo</td></tr><tr><td><a href="http://snomed.info/id/26011000087105">26011000087105</a></td><td>patología forense</td></tr><tr><td><a href="http://snomed.info/id/26041000087106">26041000087106</a></td><td>radiología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/26051000087109">26051000087109</a></td><td>perinatología</td></tr><tr><td><a href="http://snomed.info/id/26081000087101">26081000087101</a></td><td>salud pública y medicina preventiva</td></tr><tr><td><a href="http://snomed.info/id/28351000087106">28351000087106</a></td><td>especialidad en adicciones</td></tr><tr><td><a href="http://snomed.info/id/28551000087103">28551000087103</a></td><td>especialidad en medicina musculoesquelética</td></tr><tr><td><a href="http://snomed.info/id/357541000267105">357541000267105</a></td><td>radiología oral y maxilofacial</td></tr><tr><td><a href="http://snomed.info/id/357571000267100">357571000267100</a></td><td>patología oral y maxilofacial</td></tr><tr><td><a href="http://snomed.info/id/394537008">394537008</a></td><td>especialidad pediátrica</td></tr><tr><td><a href="http://snomed.info/id/394538003">394538003</a></td><td>neurología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/394539006">394539006</a></td><td>cirugía pediátrica</td></tr><tr><td><a href="http://snomed.info/id/394577000">394577000</a></td><td>anestesiología</td></tr><tr><td><a href="http://snomed.info/id/394578005">394578005</a></td><td>audiología</td></tr><tr><td><a href="http://snomed.info/id/394579002">394579002</a></td><td>cardiología</td></tr><tr><td><a href="http://snomed.info/id/394580004">394580004</a></td><td>genética clínica</td></tr><tr><td><a href="http://snomed.info/id/394581000">394581000</a></td><td>medicina comunitaria</td></tr><tr><td><a href="http://snomed.info/id/394582007">394582007</a></td><td>dermatología</td></tr><tr><td><a href="http://snomed.info/id/394583002">394583002</a></td><td>endocrinología</td></tr><tr><td><a href="http://snomed.info/id/394584008">394584008</a></td><td>gastroenterología</td></tr><tr><td><a href="http://snomed.info/id/394585009">394585009</a></td><td>obstetricia y ginecología</td></tr><tr><td><a href="http://snomed.info/id/394586005">394586005</a></td><td>ginecología</td></tr><tr><td><a href="http://snomed.info/id/394587001">394587001</a></td><td>psiquiatría</td></tr><tr><td><a href="http://snomed.info/id/394588006">394588006</a></td><td>psiquiatría infantojuvenil</td></tr><tr><td><a href="http://snomed.info/id/394589003">394589003</a></td><td>nefrología</td></tr><tr><td><a href="http://snomed.info/id/394591006">394591006</a></td><td>neurología</td></tr><tr><td><a href="http://snomed.info/id/394592004">394592004</a></td><td>oncología clínica</td></tr><tr><td><a href="http://snomed.info/id/394593009">394593009</a></td><td>oncología médica</td></tr><tr><td><a href="http://snomed.info/id/394594003">394594003</a></td><td>oftalmología</td></tr><tr><td><a href="http://snomed.info/id/394595002">394595002</a></td><td>patología</td></tr><tr><td><a href="http://snomed.info/id/394596001">394596001</a></td><td>bioquímica clínica</td></tr><tr><td><a href="http://snomed.info/id/394597005">394597005</a></td><td>histopatología</td></tr><tr><td><a href="http://snomed.info/id/394598000">394598000</a></td><td>inmunopatología</td></tr><tr><td><a href="http://snomed.info/id/394599008">394599008</a></td><td>neuropatología</td></tr><tr><td><a href="http://snomed.info/id/394600006">394600006</a></td><td>farmacología clínica</td></tr><tr><td><a href="http://snomed.info/id/394601005">394601005</a></td><td>fisiología clínica</td></tr><tr><td><a href="http://snomed.info/id/394602003">394602003</a></td><td>rehabilitación - especialidad</td></tr><tr><td><a href="http://snomed.info/id/394603008">394603008</a></td><td>cirugía cardiotorácica</td></tr><tr><td><a href="http://snomed.info/id/394604002">394604002</a></td><td>cirugía otorrinolaringológica</td></tr><tr><td><a href="http://snomed.info/id/394605001">394605001</a></td><td>cirugía oral</td></tr><tr><td><a href="http://snomed.info/id/394606000">394606000</a></td><td>odontología restauradora</td></tr><tr><td><a href="http://snomed.info/id/394607009">394607009</a></td><td>odontología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/394608004">394608004</a></td><td>ortodoncia</td></tr><tr><td><a href="http://snomed.info/id/394609007">394609007</a></td><td>cirugía general</td></tr><tr><td><a href="http://snomed.info/id/394610002">394610002</a></td><td>neurocirugía</td></tr><tr><td><a href="http://snomed.info/id/394611003">394611003</a></td><td>cirugía plástica - especialidad</td></tr><tr><td><a href="http://snomed.info/id/394612005">394612005</a></td><td>urología</td></tr><tr><td><a href="http://snomed.info/id/394649004">394649004</a></td><td>medicina nuclear - especialidad</td></tr><tr><td><a href="http://snomed.info/id/394658006">394658006</a></td><td>especialidad clínica</td></tr><tr><td><a href="http://snomed.info/id/394732004">394732004</a></td><td>especialidad quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/394733009">394733009</a></td><td>especialidad médica</td></tr><tr><td><a href="http://snomed.info/id/394734003">394734003</a></td><td>especialidades radiológicas</td></tr><tr><td><a href="http://snomed.info/id/394801008">394801008</a></td><td>traumatología y ortopedia</td></tr><tr><td><a href="http://snomed.info/id/394802001">394802001</a></td><td>medicina general</td></tr><tr><td><a href="http://snomed.info/id/394803006">394803006</a></td><td>hematología clínica</td></tr><tr><td><a href="http://snomed.info/id/394804000">394804000</a></td><td>citogenética clínica y genética molecular</td></tr><tr><td><a href="http://snomed.info/id/394805004">394805004</a></td><td>inmunología clínica/alergia</td></tr><tr><td><a href="http://snomed.info/id/394806003">394806003</a></td><td>medicina paliativa</td></tr><tr><td><a href="http://snomed.info/id/394807007">394807007</a></td><td>infectología</td></tr><tr><td><a href="http://snomed.info/id/394808002">394808002</a></td><td>medicina genitourinaria</td></tr><tr><td><a href="http://snomed.info/id/394809005">394809005</a></td><td>neurofisiología clínica</td></tr><tr><td><a href="http://snomed.info/id/394810000">394810000</a></td><td>reumatología</td></tr><tr><td><a href="http://snomed.info/id/394811001">394811001</a></td><td>geriatría</td></tr><tr><td><a href="http://snomed.info/id/394813003">394813003</a></td><td>oftalmología clínica</td></tr><tr><td><a href="http://snomed.info/id/394814009">394814009</a></td><td>medicina familiar/general (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394816006">394816006</a></td><td>enfermedades mentales (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394817002">394817002</a></td><td>psiquiatría forense</td></tr><tr><td><a href="http://snomed.info/id/394818007">394818007</a></td><td>gerontopsiquiatría</td></tr><tr><td><a href="http://snomed.info/id/394819004">394819004</a></td><td>hemoterapia (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394820005">394820005</a></td><td>microbiología médica</td></tr><tr><td><a href="http://snomed.info/id/394821009">394821009</a></td><td>medicina laboral</td></tr><tr><td><a href="http://snomed.info/id/394882004">394882004</a></td><td>manejo del dolor (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394913002">394913002</a></td><td>psicoterapia (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394914008">394914008</a></td><td>radiología - especialidad</td></tr><tr><td><a href="http://snomed.info/id/394915009">394915009</a></td><td>patología general (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/394916005">394916005</a></td><td>hematopatología (especialidad)</td></tr><tr><td><a href="http://snomed.info/id/408439002">408439002</a></td><td>especialidad en alergia</td></tr><tr><td><a href="http://snomed.info/id/408440000">408440000</a></td><td>medicina sanitaria</td></tr><tr><td><a href="http://snomed.info/id/408441001">408441001</a></td><td>endodoncia - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408442008">408442008</a></td><td>hemofilia - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408443003">408443003</a></td><td>consultorio de medicina general</td></tr><tr><td><a href="http://snomed.info/id/408444009">408444009</a></td><td>práctica odontológica general</td></tr><tr><td><a href="http://snomed.info/id/408445005">408445005</a></td><td>neonatología</td></tr><tr><td><a href="http://snomed.info/id/408446006">408446006</a></td><td>oncología ginecológica</td></tr><tr><td><a href="http://snomed.info/id/408447002">408447002</a></td><td>cuidado de relevo - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408448007">408448007</a></td><td>medicina tropical</td></tr><tr><td><a href="http://snomed.info/id/408449004">408449004</a></td><td>odontología quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/408450004">408450004</a></td><td>estudios de sueño - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408454008">408454008</a></td><td>microbiología clínica</td></tr><tr><td><a href="http://snomed.info/id/408455009">408455009</a></td><td>radiología intervencionista - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408456005">408456005</a></td><td>cirugía torácica</td></tr><tr><td><a href="http://snomed.info/id/408457001">408457001</a></td><td>cirugía maxilofacial</td></tr><tr><td><a href="http://snomed.info/id/408459003">408459003</a></td><td>cardiología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/408460008">408460008</a></td><td>prostodoncia</td></tr><tr><td><a href="http://snomed.info/id/408461007">408461007</a></td><td>periodoncia</td></tr><tr><td><a href="http://snomed.info/id/408462000">408462000</a></td><td>atención de quemaduras</td></tr><tr><td><a href="http://snomed.info/id/408463005">408463005</a></td><td>cirugía vascular</td></tr><tr><td><a href="http://snomed.info/id/408464004">408464004</a></td><td>cirugía colorrectal</td></tr><tr><td><a href="http://snomed.info/id/408465003">408465003</a></td><td>cirugía bucomaxilofacial</td></tr><tr><td><a href="http://snomed.info/id/408466002">408466002</a></td><td>cirugía cardíaca</td></tr><tr><td><a href="http://snomed.info/id/408467006">408467006</a></td><td>psiquiatría del adulto - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408468001">408468001</a></td><td>dificultades de aprendizaje - especialidad</td></tr><tr><td><a href="http://snomed.info/id/408469009">408469009</a></td><td>cirugía de mama</td></tr><tr><td><a href="http://snomed.info/id/408470005">408470005</a></td><td>obstetricia</td></tr><tr><td><a href="http://snomed.info/id/408471009">408471009</a></td><td>trasplante cardiotorácico</td></tr><tr><td><a href="http://snomed.info/id/408472002">408472002</a></td><td>hepatología</td></tr><tr><td><a href="http://snomed.info/id/408473007">408473007</a></td><td>odontología sanitaria</td></tr><tr><td><a href="http://snomed.info/id/408474001">408474001</a></td><td>cirugía hepatobiliar y pancreática</td></tr><tr><td><a href="http://snomed.info/id/408475000">408475000</a></td><td>diabetología</td></tr><tr><td><a href="http://snomed.info/id/408477008">408477008</a></td><td>cirugía de trasplante</td></tr><tr><td><a href="http://snomed.info/id/408478003">408478003</a></td><td>medicina crítica</td></tr><tr><td><a href="http://snomed.info/id/408479006">408479006</a></td><td>cirugía de porción superior de tracto gastrointestinal</td></tr><tr><td><a href="http://snomed.info/id/408480009">408480009</a></td><td>inmunología clínica</td></tr><tr><td><a href="http://snomed.info/id/409967009">409967009</a></td><td>toxicología</td></tr><tr><td><a href="http://snomed.info/id/409968004">409968004</a></td><td>medicina preventiva</td></tr><tr><td><a href="http://snomed.info/id/410001006">410001006</a></td><td>medicina militar</td></tr><tr><td><a href="http://snomed.info/id/410005002">410005002</a></td><td>medicina hiperbárica</td></tr><tr><td><a href="http://snomed.info/id/416304004">416304004</a></td><td>medicina osteopática manipulativa</td></tr><tr><td><a href="http://snomed.info/id/417887005">417887005</a></td><td>otolaringología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/418002000">418002000</a></td><td>oncología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/418018006">418018006</a></td><td>cirugía dermatológica</td></tr><tr><td><a href="http://snomed.info/id/418058008">418058008</a></td><td>gastroenterología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/418112009">418112009</a></td><td>neumonología</td></tr><tr><td><a href="http://snomed.info/id/418535003">418535003</a></td><td>inmunología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/418652005">418652005</a></td><td>hematología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/418862001">418862001</a></td><td>enfermedades infecciosas pediátricas</td></tr><tr><td><a href="http://snomed.info/id/418960008">418960008</a></td><td>otolaringología</td></tr><tr><td><a href="http://snomed.info/id/419043006">419043006</a></td><td>oncología urológica</td></tr><tr><td><a href="http://snomed.info/id/419170002">419170002</a></td><td>neumonología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419192003">419192003</a></td><td>medicina interna</td></tr><tr><td><a href="http://snomed.info/id/419215006">419215006</a></td><td>cuidados intensivos pediátricos</td></tr><tr><td><a href="http://snomed.info/id/419321007">419321007</a></td><td>oncología quirúrgica</td></tr><tr><td><a href="http://snomed.info/id/419365004">419365004</a></td><td>nefrología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419472004">419472004</a></td><td>reumatología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419610006">419610006</a></td><td>endocrinología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419677000">419677000</a></td><td>oncología neurológica pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419772000">419772000</a></td><td>medicina familiar</td></tr><tr><td><a href="http://snomed.info/id/419815003">419815003</a></td><td>radioncología</td></tr><tr><td><a href="http://snomed.info/id/419917007">419917007</a></td><td>emergentología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/419983000">419983000</a></td><td>oftalmología pediátrica</td></tr><tr><td><a href="http://snomed.info/id/420112009">420112009</a></td><td>trasplante de médula ósea pediátrico</td></tr><tr><td><a href="http://snomed.info/id/420208008">420208008</a></td><td>genética pediátrica</td></tr><tr><td><a href="http://snomed.info/id/420419008">420419008</a></td><td>especialidad en cirugía de estrabismo</td></tr><tr><td><a href="http://snomed.info/id/420708009">420708009</a></td><td>especialidad en cirugía refractiva</td></tr><tr><td><a href="http://snomed.info/id/420985004">420985004</a></td><td>cirugía vitreorretiniana - especialidad</td></tr><tr><td><a href="http://snomed.info/id/421582004">421582004</a></td><td>cirugía de córnea - especialidad</td></tr><tr><td><a href="http://snomed.info/id/421661004">421661004</a></td><td>banco de sangre y medicina transfusional - especialidad</td></tr><tr><td><a href="http://snomed.info/id/421885009">421885009</a></td><td>especialidad de oftalmología, cirugía de glaucoma</td></tr><tr><td><a href="http://snomed.info/id/422171003">422171003</a></td><td>cirugía plástica oftálmica</td></tr><tr><td><a href="http://snomed.info/id/422191005">422191005</a></td><td>cirugía oftálmica</td></tr><tr><td><a href="http://snomed.info/id/422349000">422349000</a></td><td>especialidad en cirugía de cataratas</td></tr><tr><td><a href="http://snomed.info/id/445715009">445715009</a></td><td>trasplante de sangre y médula ósea</td></tr><tr><td><a href="http://snomed.info/id/715184008">715184008</a></td><td>medicina aeroespacial</td></tr><tr><td><a href="http://snomed.info/id/718359001">718359001</a></td><td>medicina regenerativa</td></tr><tr><td><a href="http://snomed.info/id/721961006">721961006</a></td><td>medicina psicosomática</td></tr><tr><td><a href="http://snomed.info/id/722138006">722138006</a></td><td>fisioterapia</td></tr><tr><td><a href="http://snomed.info/id/722162001">722162001</a></td><td>psicología</td></tr><tr><td><a href="http://snomed.info/id/722163006">722163006</a></td><td>odontología</td></tr><tr><td><a href="http://snomed.info/id/722164000">722164000</a></td><td>dietética y nutrición</td></tr><tr><td><a href="http://snomed.info/id/722165004">722165004</a></td><td>enfermería</td></tr><tr><td><a href="http://snomed.info/id/722166003">722166003</a></td><td>podología</td></tr><tr><td><a href="http://snomed.info/id/722204007">722204007</a></td><td>medicina legal</td></tr><tr><td><a href="http://snomed.info/id/722414000">722414000</a></td><td>medicina vascular</td></tr><tr><td><a href="http://snomed.info/id/773568002">773568002</a></td><td>medicina de emergencias</td></tr><tr><td><a href="http://snomed.info/id/786454007">786454007</a></td><td>medicina perioperatoria</td></tr><tr><td><a href="http://snomed.info/id/788415003">788415003</a></td><td>medicina de trasplantes</td></tr><tr><td><a href="http://snomed.info/id/92041000087100">92041000087100</a></td><td>gastroenterología de adultos</td></tr><tr><td><a href="http://snomed.info/id/92231000087100">92231000087100</a></td><td>especialidad en manejo de dolor crónico</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansión</h3>
+
+  <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px" title="No Expansion for this valueset (not supported by Publication Tooling&lt;!-- [No server available] --&gt;)">No Expansion for this valueset (not supported by Publication Tooling<!-- [No server available] -->)</p>
+
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Descripción de los cuadros anteriores</a>.
+  </p>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generado 
+  <span title="2026-09-28 15:20:00 -0300">
+    2026-09-28
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Enlaces: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Índice</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">Informe de control de calidad</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

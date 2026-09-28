@@ -1,0 +1,18 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "EjemploRolProfesionalUY",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>Rol del profesional <a href=\"Practitioner-EjemploProfesionalUY.html\">Profesional Ejemplo</a> en la <a href=\"Organization-EjemploOrganizacionUY.html\">Organización de ejemplo CORE UY</a>.</p></div>"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/EjemploProfesionalUY"
+  },
+  "organization" : {
+    "reference" : "Organization/EjemploOrganizacionUY"
+  }
+}

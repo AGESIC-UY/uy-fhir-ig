@@ -1,0 +1,522 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title> - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+<style type="text/css">
+:root {
+  --ig-status-text-color:#003580;
+  --navbar-bg-color:#0057b8;
+  --footer-bg-color:#163959;
+  --footer-container-bg-color:#163959;
+  --stripe-bg-color:#c89d49;
+  --btn-hover-color:#0057b8;
+  --btn-active-color:#002b6e;
+  --btn-text-color:#fff;
+  --btn-gradient-start-color:#0057b8;
+  --btn-gradient-end-color:#003580;
+  --btn-gradient-start-color-alpha:#0057b8;
+  --btn-gradient-end-color-alpha:#003580;
+  --link-color:#175c91;
+  --link-hover-color:#103957;
+  --publish-box-bg-color:#fff4cf;
+  --publish-box-border:1px solid #e2bd61;
+  --toc-box-bg-color:#f5f8fc;
+  --toc-box-border:1px solid #d9e3ee;
+  --footer-text-color:#fff;
+  --footer-hyperlink-text-color:#fff;
+  --footer-highlight-text-color:#f8c94f;
+}
+body { font-family:'Segoe UI',Arial,sans-serif; font-size:15px; line-height:1.65; background:#f4f7fb; color:#24374a; }
+h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1.25; }
+
+/* Cabecera: imágenes junto al HTML, también en output/es/. */
+.uy-core-header {
+  box-sizing:border-box; display:flex; align-items:center; justify-content:space-between;
+  width:100%; gap:16px; padding:10px 22px; line-height:1.35; text-decoration:none;
+  position:relative; isolation:isolate; overflow:hidden; color:#fff;
+  background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce);
+  border-bottom:3px solid #f5a623; font-family:'Segoe UI',Arial,sans-serif;
+}
+.uy-core-header::before { content:''; position:absolute; z-index:-1; inset:0 0 0 50%; pointer-events:none; background:url('header-network.svg') right center / auto 100% no-repeat; }
+.uy-brand { display:flex; align-items:center; gap:14px; min-width:0; color:#fff; text-decoration:none; }
+.uy-brand:hover,.uy-brand:focus { color:#fff; text-decoration:none; }
+.uy-brand:focus-visible { outline:3px solid #f5a623; outline-offset:3px; }
+.uy-logos { display:flex; justify-content:center; align-items:center; flex-shrink:0; width:112px; height:52px; gap:10px; }
+.uy-core-header img { display:block; object-fit:contain; }
+.uy-fhir-logo { width:40px; height:48px; }
+.uy-health-logo { width:52px; height:52px; border-radius:8px; }
+.uy-title { display:block; font-size:22px; font-weight:650; line-height:1.2; letter-spacing:.2px; }
+.uy-subtitle { display:block; font-size:12px; margin-top:3px; color:#e3efff; }
+.uy-identity { display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.uy-site-search { display:flex; align-items:stretch; margin-left:auto; min-width:230px; max-width:380px; flex:1 1 300px; overflow:hidden; border:1px solid #d9e3ee; border-radius:6px; background:#fff; }
+.uy-site-search input { min-width:0; width:100%; height:36px; padding:7px 12px; color:#24374a; background:transparent; border:0; border-radius:0; box-shadow:none; }
+.uy-site-search input::placeholder { color:#607489; }
+.uy-site-search button { display:grid; place-items:center; width:40px; height:36px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-site-search button:hover { color:#002b6e; background:#f8c94f; }
+.uy-site-search button svg { width:19px; height:19px; fill:currentColor; }
+.uy-site-search:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-flag { width:37px; height:32px; }
+.uy-badges { display:flex; flex-direction:column; gap:4px; text-align:center; font-weight:600; border-left:1px solid #ffffff50; padding-left:14px; }
+.uy-badges span { padding:2px 8px; font-size:10px; border:1px solid #ffffff60; border-radius:20px; color:#fff; background:#ffffff18; }
+.uy-badges span:last-child { color:#163959; background:#fff5dc; border-color:#e5c780; }
+
+/* Menú inspirado en guias-implementacion. */
+.navbar .nav > li > a { font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; padding:10px 12px; color:#fff; text-shadow:none; box-shadow:none; }
+.navbar-inverse,#segment-navbar > .container { background:#0057b8; }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .open > a { background:#002b6e; color:#fff; }
+.navbar .dropdown-menu { background:#fff; border:1px solid #d2dce8; border-radius:0; padding:5px 0; box-shadow:0 6px 12px rgba(0,0,0,.175); }
+.navbar .dropdown-menu > li > a { padding:6px 20px; color:#333; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; }
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-menu > .active > a { background:#357ebd linear-gradient(to bottom,#428bca,#357ebd); color:#fff; }
+.navbar a:focus-visible { outline:2px solid #f5a623; outline-offset:-2px; }
+.navbar-inverse .navbar-toggle { border-color:#fff; }
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus { background:#002b6e; }
+.navbar-inverse .navbar-nav > .dropdown > a .caret { border-top-color:#fff; border-bottom-color:#fff; }
+
+/* Contenido: 8px laterales en todos los tamaños; solo se ajusta la fila exterior. */
+#segment-content > .container { background:#fff; box-sizing:border-box; padding:28px 8px 40px; }
+#segment-content > .container > .row { margin-left:0; margin-right:0; }
+#segment-content > .container > .row > .inner-wrapper { margin-top:0; margin-bottom:0; }
+#segment-content > .container > .row > .inner-wrapper > .col-12 { padding-left:0; padding-right:0; }
+.uy-core-banner { max-width:100%; margin:16px auto 32px; }
+.uy-core-banner img { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 8px 24px #16395920; }
+.uy-scope-figure { max-width:640px; margin:24px auto 28px; }
+.uy-scope-figure img { display:block; width:100%; height:auto; }
+.uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+/* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) thead th { color:#163959; font-weight:650; border-bottom:1px solid #8ca4bd; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) tbody tr + tr > :is(th,td) { border-top:1px solid #e4ebf2; }
+/* La misma separación horizontal en tablas técnicas grid, sin alterar los árboles de perfiles del Publisher. */
+#segment-content table.grid:not([data-fhir]):not([fhir]) { border:0; border-collapse:collapse; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) :is(th,td) { padding:8px 10px; border:0; border-bottom:1px solid #e4ebf2; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) tr:first-child > :is(th,td) { border-bottom-color:#8ca4bd; }
+.uy-search-page { max-width:920px; margin-top:8px; padding:26px; background:linear-gradient(145deg,#f8fbff,#fff); border:1px solid #d9e3ee; border-radius:12px; box-shadow:0 5px 16px #16395912; }
+.uy-search-intro { max-width:660px; margin:0; color:#40566b; }
+.uy-search-controls { display:flex; align-items:stretch; margin:22px 0 12px; max-width:720px; overflow:hidden; border:1px solid #8ca4bd; border-radius:6px; background:#fff; }
+.uy-search-controls input { min-width:0; flex:1; padding:11px 14px; border:0; border-radius:0; font-size:16px; box-shadow:none; }
+.uy-search-controls button { display:grid; place-items:center; width:48px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-search-controls button:hover { color:#002b6e; background:#f8c94f; }
+.uy-search-controls button svg { width:21px; height:21px; fill:currentColor; }
+.uy-search-controls:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-search-status { min-height:1.5em; margin:0; color:#4d6073; font-size:14px; }
+.uy-search-results { margin:20px 0 0; padding:0; list-style:none; }
+.uy-search-result { margin:0 0 12px; padding:16px 18px; border:1px solid #d9e3ee; border-radius:8px; background:#fff; box-shadow:0 1px 3px #1639590d; }
+.uy-search-result:hover { border-color:#9bb8d4; box-shadow:0 3px 10px #16395916; }
+.uy-search-result a { font-size:17px; font-weight:700; }
+.uy-search-result p { margin:7px 0 0; color:#3f5265; line-height:1.55; }
+#publish-box,.alert-warning { background-color:#fff4cf; border:1px solid #e2bd61; border-left:4px solid #d9a52b; border-radius:6px; padding:12px 16px; }
+@media(max-width:991px) {
+  #segment-content > .container { padding-top:24px; padding-bottom:32px; }
+}
+@media(max-width:640px) {
+  .uy-core-header { flex-wrap:wrap; padding:10px 14px; gap:10px; }
+  .uy-title { font-size:20px; }
+  .uy-subtitle { font-size:11px; }
+  .uy-logos { width:92px; gap:6px; }
+  .uy-fhir-logo { width:34px; height:42px; }
+  .uy-health-logo { width:46px; height:46px; }
+  .uy-identity { margin-left:auto; }
+  .uy-site-search { order:3; min-width:100%; max-width:none; }
+  .uy-badges { flex-direction:row; padding-left:0; border-left:0; }
+  #segment-content > .container { padding-top:20px; padding-bottom:28px; }
+  .uy-search-page { padding:20px 16px; }
+  .uy-search-controls button { width:46px; }
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div class="uy-core-header">
+  <a class="uy-brand" href="index.html" aria-label="FHIR Uruguay — Inicio">
+    <span class="uy-logos">
+      <img class="uy-fhir-logo" src="fhir-logo.png" alt="FHIR" width="40" height="48"/>
+      <img class="uy-health-logo" src="salud-digital-claro.svg" alt="Salud Digital" width="52" height="52"/>
+    </span>
+    <span>
+      <span class="uy-title">FHIR Uruguay</span>
+      <span class="uy-subtitle">Base nacional Core e interoperabilidad con HCEN</span>
+    </span>
+  </a>
+  <form class="uy-site-search" action="buscar.html" method="get" role="search" aria-label="Buscar en la guía">
+    <input id="uy-site-search-input" name="q" type="search" placeholder="Buscar en la guía" autocomplete="off"/>
+    <button type="submit" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 19-4.35-4.35a8 8 0 1 0-2 2L19 21l2-2ZM5 10a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/></svg>
+    </button>
+  </form>
+  <span class="uy-identity">
+    <img class="uy-flag" src="uruguay.svg" alt="Uruguay" width="37" height="32"/>
+    <span class="uy-badges"><span>FHIR R4</span><span>Borrador</span></span>
+  </span>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Cómo usar esta guía
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="alcance.html">Propósito y alcance</a>
+      </li>
+      <li>
+        <a href="conceptos-fhir.html">Conceptos básicos de FHIR</a>
+      </li>
+      <li>
+        <a href="como-leer.html">Cómo leer los perfiles</a>
+      </li>
+      <li>
+        <a href="conformidad.html">Convenciones y conformidad</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="introduccion.html">Introducción al Core</a>
+      </li>
+      <li>
+        <a href="identificadores.html">Identificadores y datos comunes</a>
+      </li>
+      <li>
+        <a href="perfiles.html">Perfiles nacionales</a>
+      </li>
+      <li>
+        <a href="extensiones.html">Extensiones</a>
+      </li>
+      <li>
+        <a href="terminologia.html">Terminología</a>
+      </li>
+      <li>
+        <a href="ejemplos.html">Ejemplos</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guía HCEN
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="hcen.html">Introducción a HCEN</a>
+      </li>
+      <li>
+        <a href="hcen-actores.html">Actores y responsabilidades</a>
+      </li>
+      <li>
+        <a href="hcen-casos-de-uso.html">Casos de uso</a>
+      </li>
+      <li>
+        <a href="hcen-transacciones.html">Transacciones</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+      </li>
+      <li>
+        <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
+      </li>
+      <li>
+        <a href="hcen-extensiones.html">Extensiones</a>
+      </li>
+      <li>
+        <a href="hcen-terminologia.html">Terminología</a>
+      </li>
+      <li>
+        <a href="hcen-conformidad.html">Conformidad y capacidades</a>
+      </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Recursos
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="descargas.html">Descargas</a>
+      </li>
+      <li>
+        <a href="cambios.html">Historial de cambios</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-profile-history -->
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-hcen-dosage.html">Contenido</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-hcen-dosage-definitions.html">Descripciones detalladas</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-hcen-dosage-mappings.html">Mapeos</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-hcen-dosage.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-hcen-dosage.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-hcen-dosage.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+  <h2 id="root">Perfil del tipo de datos: HCEN Dosificación - Historial de cambios</h2>
+
+  <table class="colsd" data-fhir="generated">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            a partir de 
+2026-09-28
+.
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+  <p>Cambios en el hcen-dosage perfil del tipo de datos.</p>
+
+  
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generado 
+  <span title="2026-09-28 15:20:00 -0300">
+    2026-09-28
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Enlaces: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Índice</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">Informe de control de calidad</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

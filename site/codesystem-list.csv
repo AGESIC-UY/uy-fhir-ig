@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy,0.1.0,draft,,CSBarriosLocalidadesUY,Sistema de códigos de barrios y localidades postales de Uruguay,"Barrios y localidades presentes en el listado nacional de códigos postales del Correo Uruguayo.",
+http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy,0.1.0,draft,,CSCodigosPostalesUY,Sistema de códigos postales de Uruguay,"Códigos postales vigentes publicados por el Correo Uruguayo.",
+http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy,0.1.0,draft,,CSDepartamentosUY,Sistema de códigos de departamentos de Uruguay,"Los 19 departamentos de la República Oriental del Uruguay.",
+http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy,0.1.0,draft,,CSLocalidadesUY,Localidades de Uruguay (OSE),"Localidades del catálogo de regiones, departamentos y localidades utilizado por OSE.",

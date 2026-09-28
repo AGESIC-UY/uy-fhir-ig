@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-prestador-oid-mrn"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-prestador-oid-mrn</b></p><a name="vs-prestador-oid-mrn"> </a><a name="hcvs-prestador-oid-mrn"> </a><ul><li>Include these codes as defined in <code>urn:ietf:rfc:3986</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>urn:oid:2.16.858.2.10014456.72768.1</td><td>ANDA</td></tr><tr><td>urn:oid:2.16.858.2.10002825.72768.1</td><td>ASESP</td></tr><tr><td>urn:oid:2.16.858.2.10001442.72768.9</td><td>ASSE</td></tr><tr><td>urn:oid:2.16.858.2.10001442.72768.234</td><td>ASSE_2</td></tr><tr><td>urn:oid:2.16.858.2.10014131.72768.1</td><td>BCBS</td></tr><tr><td>urn:oid:2.16.858.2.10001367.72768.1</td><td>BPS</td></tr><tr><td>urn:oid:2.16.858.2.10001376.72768.1</td><td>BSE</td></tr><tr><td>urn:oid:2.16.858.2.10002886.72768.1</td><td>CASMU</td></tr><tr><td>urn:oid:2.16.858.2.10002895.72768.1</td><td>CCOU</td></tr><tr><td>urn:oid:2.16.858.2.10002895.72768.2</td><td>CCOU_2</td></tr><tr><td>urn:oid:2.16.858.2.10002877.72768.1</td><td>CG</td></tr><tr><td>urn:oid:2.16.858.2.10001985.72768.1</td><td>CHLCC</td></tr><tr><td>urn:oid:2.16.858.2.10002986.72768.1</td><td>COMERI</td></tr><tr><td>urn:oid:2.16.858.2.10003187.72768.1</td><td>COMETT</td></tr><tr><td>urn:oid:2.16.858.2.10003117.72768.1</td><td>CUDAM</td></tr><tr><td>urn:oid:2.16.858.2.10004672.72768.1</td><td>DNAS</td></tr><tr><td>urn:oid:2.16.858.2.10001033.72768.1</td><td>DNSFFAA</td></tr><tr><td>urn:oid:2.16.858.2.10003571.72768.1</td><td>EMEUNO</td></tr><tr><td>urn:oid:2.16.858.2.10003962.72768.1</td><td>FEPREMI</td></tr><tr><td>urn:oid:2.16.858.2.10002007.72768.1</td><td>FNR</td></tr><tr><td>urn:oid:2.16.858.2.10003144.72768.1</td><td>HB</td></tr><tr><td>urn:oid:2.16.858.2.10004427.72768.1</td><td>HC</td></tr><tr><td>urn:oid:2.16.858.2.10000000.72768.1</td><td>HCD</td></tr><tr><td>urn:oid:2.16.858.2.10001985.72768.2</td><td>HCEO</td></tr><tr><td>urn:oid:2.16.858.2.10003062.72768.1</td><td>HE</td></tr><tr><td>urn:oid:2.16.858.2.10003126.72768.1</td><td>MEDICARE</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.100</td><td>MSP_1</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.6</td><td>MSP_APP</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.1</td><td>MSP_CD</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.2</td><td>MSP_CNV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.4</td><td>MSP_LAB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.5</td><td>MSP_LAB_EXT</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.11</td><td>MSP_PSB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.10</td><td>MSP_PSV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.3</td><td>MSP_SIV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.7</td><td>MSP_TUB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.8</td><td>MSP_VIH</td></tr><tr><td>urn:oid:2.16.858.2.10002752.72768.1</td><td>MUCAM</td></tr><tr><td>urn:oid:2.16.858.2.10003671.72768.1</td><td>SAPP</td></tr><tr><td>urn:oid:2.16.858.2.10000000.72768.2</td><td>SGP</td></tr><tr><td>urn:oid:2.16.858.2.10003135.72768.1</td><td>SMI</td></tr><tr><td>urn:oid:2.16.858.2.10003853.72768.1</td><td>SUAT</td></tr><tr><td>urn:oid:2.16.858.2.10002761.72768.1</td><td>SUMMUM</td></tr><tr><td>urn:oid:2.16.858.2.10003953.72768.1</td><td>UCM</td></tr><tr><td>urn:oid:2.16.858.2.10003001.72768.1</td><td>USPS</td></tr><tr><td>urn:oid:2.16.858.2.10014165.72768.1</td><td>USTSA</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn"/>
+  <version value="0.1.0"/>
+  <name value="PrestadorOidMrn"/>
+  <title value="OIDs de instituciones HCEN"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986."/>
+  <compose>
+    <include>
+      <system value="urn:ietf:rfc:3986"/>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10014456.72768.1"/>
+        <display value="ANDA"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002825.72768.1"/>
+        <display value="ASESP"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001442.72768.9"/>
+        <display value="ASSE"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001442.72768.234"/>
+        <display value="ASSE_2"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10014131.72768.1"/>
+        <display value="BCBS"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001367.72768.1"/>
+        <display value="BPS"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001376.72768.1"/>
+        <display value="BSE"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002886.72768.1"/>
+        <display value="CASMU"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002895.72768.1"/>
+        <display value="CCOU"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002895.72768.2"/>
+        <display value="CCOU_2"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002877.72768.1"/>
+        <display value="CG"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001985.72768.1"/>
+        <display value="CHLCC"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002986.72768.1"/>
+        <display value="COMERI"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003187.72768.1"/>
+        <display value="COMETT"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003117.72768.1"/>
+        <display value="CUDAM"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10004672.72768.1"/>
+        <display value="DNAS"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001033.72768.1"/>
+        <display value="DNSFFAA"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003571.72768.1"/>
+        <display value="EMEUNO"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003962.72768.1"/>
+        <display value="FEPREMI"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002007.72768.1"/>
+        <display value="FNR"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003144.72768.1"/>
+        <display value="HB"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10004427.72768.1"/>
+        <display value="HC"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10000000.72768.1"/>
+        <display value="HCD"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10001985.72768.2"/>
+        <display value="HCEO"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003062.72768.1"/>
+        <display value="HE"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003126.72768.1"/>
+        <display value="MEDICARE"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.100"/>
+        <display value="MSP_1"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.6"/>
+        <display value="MSP_APP"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.1"/>
+        <display value="MSP_CD"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.2"/>
+        <display value="MSP_CNV"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.4"/>
+        <display value="MSP_LAB"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.5"/>
+        <display value="MSP_LAB_EXT"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.11"/>
+        <display value="MSP_PSB"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.10"/>
+        <display value="MSP_PSV"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.3"/>
+        <display value="MSP_SIV"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.7"/>
+        <display value="MSP_TUB"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002661.72768.8"/>
+        <display value="MSP_VIH"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002752.72768.1"/>
+        <display value="MUCAM"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003671.72768.1"/>
+        <display value="SAPP"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10000000.72768.2"/>
+        <display value="SGP"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003135.72768.1"/>
+        <display value="SMI"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003853.72768.1"/>
+        <display value="SUAT"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10002761.72768.1"/>
+        <display value="SUMMUM"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003953.72768.1"/>
+        <display value="UCM"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10003001.72768.1"/>
+        <display value="USPS"/>
+      </concept>
+      <concept>
+        <code value="urn:oid:2.16.858.2.10014165.72768.1"/>
+        <display value="USTSA"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

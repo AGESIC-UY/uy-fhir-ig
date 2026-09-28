@@ -1,0 +1,48 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: vCard Mapping"
+"Address","Address","","","",0,*,"","","","null {[]} {[]}
+","Dirección (Uruguay)","Dirección física o postal de una persona u organización en Uruguay.","Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","","","","",,,,,"",,,,"Address",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD","n/a","AD","Address"
+"Address.id","Address.id","","","",0,1,"","","","string {[]} {[]}
+","ID único del elemento dentro del recurso.","ID único del elemento dentro del recurso.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Address.extension","Address.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Contenido adicional definido por implementaciones.","Contenido adicional definido por implementaciones.","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Address.use","Address.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","Propósito de la dirección: home | work | temp | old | billing.","Propósito de la dirección: hogar, trabajo, temporal, anterior o facturación.","Las aplicaciones pueden considerar vigente una dirección salvo que se indique explícitamente que es temporal o anterior.","Allows an appropriate address to be chosen from a list of many.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""home""/>","","",,"required","Propósito de uso de la dirección.","http://hl7.org/fhir/ValueSet/address-use|4.0.1","",,,,"Address.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.7","unique(./use)","./AddressPurpose"
+"Address.type","Address.type","","","",0,1,"","","Y","code {[]} {[]}
+","Dirección física (para visitas), postal (para correo), ambas.","Dirección física (para visitas), postal (para correo), ambas.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","Tipo de dirección: física, postal o ambas.","http://hl7.org/fhir/ValueSet/address-type|4.0.1","",,,,"Address.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.18","unique(./use)","address type parameter"
+"Address.text","Address.text","","","",0,1,"","","Y","string {[]} {[]}
+","Especifica la dirección completa tal como debe ser mostrada.","Especifica la dirección completa tal como debe ser mostrada.","Pueden incluirse tanto la dirección completa como sus partes. Al actualizarla, las aplicaciones deben asegurar que el texto no contenga información que no esté representada en las partes.","A renderable, unencoded form.","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street, Erewhon 9132""/>","","",,,,,"",,,,"Address.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6","./formatted","address label parameter"
+"Address.line","Address.line","","","",0,*,"","","Y","string {[]} {[]}
+","El nombre de la calle junto a número de puerta, apartamento, o piso.","El nombre de la calle junto a número de puerta, apartamento, o piso.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street""/>","","",,,,,"",,,,"Address.line",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)","AD.part[parttype = AL]","./StreetAddress (newline delimitted)","street"
+"Address.city","Address.city","","Municpality
+","",0,1,"","","Y","string {[]} {[]}
+","Nombre de la ciudad, pueblo, localidad.","Nombre de la ciudad, pueblo, localidad.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,"extensible","Localidades de Uruguay según el catálogo público de OSE.","http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy","",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.3","AD.part[parttype = CTY]","./Jurisdiction","locality"
+"Address.district","Address.district","","County
+","",0,1,"","","Y","string {[]} {[]}
+","Nombre del barrio o comuna.","Nombre del barrio o comuna.","District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Madison""/>","","",,"extensible","Barrios y localidades de Uruguay según el listado de códigos postales del Correo Uruguayo.","http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy","",,,,"Address.district",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.9","AD.part[parttype = CNT | CPA]"
+"Address.state","Address.state","","Province
+Territory","",0,1,"","","Y","string {[]} {[]}
+","Nombre del departamento.","Nombre del departamento.","","","","","","","","","",,"required","Los 19 departamentos de Uruguay.","http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy","",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.4","AD.part[parttype = STA]","./Region","region"
+"Address.postalCode","Address.postalCode","","Zip
+","",0,1,"","","Y","string {[]} {[]}
+","Código postal que define el área o zona de entrega postal.","Código postal que define el área o zona de entrega postal.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,"required","Códigos postales publicados por el Correo Uruguayo.","http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy","",,,,"Address.postalCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.5","AD.part[parttype = ZIP]","./PostalIdentificationCode","code"
+"Address.country","Address.country","","","",1,1,"","","Y","string {[]} {[]}
+","País de la dirección.","País de la dirección.","Pueden utilizarse códigos ISO 3166 de tres letras en lugar del nombre del país.","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""URY""/>","","","","",,,,,"",,,,"Address.country",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.6","AD.part[parttype = CNT]","./Country","country"
+"Address.period","Address.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Periodo de validez de la dirección.","Periodo de validez de la dirección.","","Allows addresses to be placed in historical context.","","","","","<valuePeriod xmlns=""http://hl7.org/fhir"">
+  <start value=""2010-03-23""/>
+  <end value=""2010-07-01""/>
+</valuePeriod>","","",,,,,"",,,,"Address.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","XAD.12 / XAD.13 + XAD.14","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"

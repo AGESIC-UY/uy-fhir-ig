@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-sitio-administracion"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-sitio-administracion</b></p><a name="vs-sitio-administracion"> </a><a name="hcvs-sitio-administracion"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/91723000">91723000</a></td><td>Anatomical structure (body structure)</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion"/>
+  <version value="0.1.0"/>
+  <name value="VSSitioAdministracion"/>
+  <title value="Conjunto de Valores Sitio de Administración (borrador)"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="PENDIENTE: subconjunto de códigos SNOMED CT para sitios anatómicos de administración de medicación. Contiene un código de ejemplo mientras se define el listado oficial."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="91723000"/>
+        <display value="Anatomical structure (body structure)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

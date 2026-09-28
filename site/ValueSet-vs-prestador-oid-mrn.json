@@ -1,0 +1,206 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-prestador-oid-mrn",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-prestador-oid-mrn</b></p><a name=\"vs-prestador-oid-mrn\"> </a><a name=\"hcvs-prestador-oid-mrn\"> </a><ul><li>Include these codes as defined in <code>urn:ietf:rfc:3986</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>urn:oid:2.16.858.2.10014456.72768.1</td><td>ANDA</td></tr><tr><td>urn:oid:2.16.858.2.10002825.72768.1</td><td>ASESP</td></tr><tr><td>urn:oid:2.16.858.2.10001442.72768.9</td><td>ASSE</td></tr><tr><td>urn:oid:2.16.858.2.10001442.72768.234</td><td>ASSE_2</td></tr><tr><td>urn:oid:2.16.858.2.10014131.72768.1</td><td>BCBS</td></tr><tr><td>urn:oid:2.16.858.2.10001367.72768.1</td><td>BPS</td></tr><tr><td>urn:oid:2.16.858.2.10001376.72768.1</td><td>BSE</td></tr><tr><td>urn:oid:2.16.858.2.10002886.72768.1</td><td>CASMU</td></tr><tr><td>urn:oid:2.16.858.2.10002895.72768.1</td><td>CCOU</td></tr><tr><td>urn:oid:2.16.858.2.10002895.72768.2</td><td>CCOU_2</td></tr><tr><td>urn:oid:2.16.858.2.10002877.72768.1</td><td>CG</td></tr><tr><td>urn:oid:2.16.858.2.10001985.72768.1</td><td>CHLCC</td></tr><tr><td>urn:oid:2.16.858.2.10002986.72768.1</td><td>COMERI</td></tr><tr><td>urn:oid:2.16.858.2.10003187.72768.1</td><td>COMETT</td></tr><tr><td>urn:oid:2.16.858.2.10003117.72768.1</td><td>CUDAM</td></tr><tr><td>urn:oid:2.16.858.2.10004672.72768.1</td><td>DNAS</td></tr><tr><td>urn:oid:2.16.858.2.10001033.72768.1</td><td>DNSFFAA</td></tr><tr><td>urn:oid:2.16.858.2.10003571.72768.1</td><td>EMEUNO</td></tr><tr><td>urn:oid:2.16.858.2.10003962.72768.1</td><td>FEPREMI</td></tr><tr><td>urn:oid:2.16.858.2.10002007.72768.1</td><td>FNR</td></tr><tr><td>urn:oid:2.16.858.2.10003144.72768.1</td><td>HB</td></tr><tr><td>urn:oid:2.16.858.2.10004427.72768.1</td><td>HC</td></tr><tr><td>urn:oid:2.16.858.2.10000000.72768.1</td><td>HCD</td></tr><tr><td>urn:oid:2.16.858.2.10001985.72768.2</td><td>HCEO</td></tr><tr><td>urn:oid:2.16.858.2.10003062.72768.1</td><td>HE</td></tr><tr><td>urn:oid:2.16.858.2.10003126.72768.1</td><td>MEDICARE</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.100</td><td>MSP_1</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.6</td><td>MSP_APP</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.1</td><td>MSP_CD</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.2</td><td>MSP_CNV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.4</td><td>MSP_LAB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.5</td><td>MSP_LAB_EXT</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.11</td><td>MSP_PSB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.10</td><td>MSP_PSV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.3</td><td>MSP_SIV</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.7</td><td>MSP_TUB</td></tr><tr><td>urn:oid:2.16.858.2.10002661.72768.8</td><td>MSP_VIH</td></tr><tr><td>urn:oid:2.16.858.2.10002752.72768.1</td><td>MUCAM</td></tr><tr><td>urn:oid:2.16.858.2.10003671.72768.1</td><td>SAPP</td></tr><tr><td>urn:oid:2.16.858.2.10000000.72768.2</td><td>SGP</td></tr><tr><td>urn:oid:2.16.858.2.10003135.72768.1</td><td>SMI</td></tr><tr><td>urn:oid:2.16.858.2.10003853.72768.1</td><td>SUAT</td></tr><tr><td>urn:oid:2.16.858.2.10002761.72768.1</td><td>SUMMUM</td></tr><tr><td>urn:oid:2.16.858.2.10003953.72768.1</td><td>UCM</td></tr><tr><td>urn:oid:2.16.858.2.10003001.72768.1</td><td>USPS</td></tr><tr><td>urn:oid:2.16.858.2.10014165.72768.1</td><td>USTSA</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
+  "version" : "0.1.0",
+  "name" : "PrestadorOidMrn",
+  "title" : "OIDs de instituciones HCEN",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "concept" : [{
+        "code" : "urn:oid:2.16.858.2.10014456.72768.1",
+        "display" : "ANDA"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002825.72768.1",
+        "display" : "ASESP"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001442.72768.9",
+        "display" : "ASSE"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001442.72768.234",
+        "display" : "ASSE_2"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10014131.72768.1",
+        "display" : "BCBS"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001367.72768.1",
+        "display" : "BPS"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001376.72768.1",
+        "display" : "BSE"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002886.72768.1",
+        "display" : "CASMU"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002895.72768.1",
+        "display" : "CCOU"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002895.72768.2",
+        "display" : "CCOU_2"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002877.72768.1",
+        "display" : "CG"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001985.72768.1",
+        "display" : "CHLCC"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002986.72768.1",
+        "display" : "COMERI"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003187.72768.1",
+        "display" : "COMETT"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003117.72768.1",
+        "display" : "CUDAM"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10004672.72768.1",
+        "display" : "DNAS"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001033.72768.1",
+        "display" : "DNSFFAA"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003571.72768.1",
+        "display" : "EMEUNO"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003962.72768.1",
+        "display" : "FEPREMI"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002007.72768.1",
+        "display" : "FNR"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003144.72768.1",
+        "display" : "HB"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10004427.72768.1",
+        "display" : "HC"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10000000.72768.1",
+        "display" : "HCD"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10001985.72768.2",
+        "display" : "HCEO"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003062.72768.1",
+        "display" : "HE"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003126.72768.1",
+        "display" : "MEDICARE"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.100",
+        "display" : "MSP_1"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.6",
+        "display" : "MSP_APP"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.1",
+        "display" : "MSP_CD"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.2",
+        "display" : "MSP_CNV"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.4",
+        "display" : "MSP_LAB"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.5",
+        "display" : "MSP_LAB_EXT"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.11",
+        "display" : "MSP_PSB"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.10",
+        "display" : "MSP_PSV"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.3",
+        "display" : "MSP_SIV"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.7",
+        "display" : "MSP_TUB"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002661.72768.8",
+        "display" : "MSP_VIH"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002752.72768.1",
+        "display" : "MUCAM"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003671.72768.1",
+        "display" : "SAPP"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10000000.72768.2",
+        "display" : "SGP"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003135.72768.1",
+        "display" : "SMI"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003853.72768.1",
+        "display" : "SUAT"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10002761.72768.1",
+        "display" : "SUMMUM"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003953.72768.1",
+        "display" : "UCM"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10003001.72768.1",
+        "display" : "USPS"
+      },
+      {
+        "code" : "urn:oid:2.16.858.2.10014165.72768.1",
+        "display" : "USTSA"
+      }]
+    }]
+  }
+}

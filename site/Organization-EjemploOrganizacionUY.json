@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Organization",
+  "id" : "EjemploOrganizacionUY",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Organización de ejemplo CORE UY</b></p></div>"
+  },
+  "name" : "Organización de ejemplo CORE UY"
+}

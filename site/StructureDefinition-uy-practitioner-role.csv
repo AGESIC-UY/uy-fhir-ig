@@ -1,0 +1,111 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: FiveWs Pattern Mapping"
+"PractitionerRole","PractitionerRole","","","",0,*,"","","","null {[]} {[]}
+","Perfil Rol del Profesional de Salud para Uruguay","Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios.","","","","","","","","","",,,,,"",,,,"PractitionerRole",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}","PRD (as one example)","Entity. Role, or Act","Role","ServiceSiteProvider"
+"PractitionerRole.id","PractitionerRole.id","","","",0,1,"","","Y","id {[]} {[]}
+","ID lógico de este artefacto.","ID lógico de este artefacto.","El recurso puede no tener identificador lógico cuando se envía al servidor mediante una operación de creación.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
+"PractitionerRole.meta","PractitionerRole.meta","","","",0,1,"","","Y","Meta {[]} {[]}
+","Metadatos sobre el recurso.","Metadatos sobre el recurso.","","","","","","","","","",,,,,"",,,,"Resource.meta",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PractitionerRole.implicitRules","PractitionerRole.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
+","Conjunto de reglas bajo las cuales se creó este contenido.","Conjunto de reglas bajo las cuales se creó este contenido.","Este elemento limita la interpretación del contenido a los sistemas que conocen las reglas indicadas y puede reducir la interoperabilidad. Debe evitarse cuando sea posible. Habitualmente referencia una guía que explica las reglas adicionales.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PractitionerRole.language","PractitionerRole.language","","","",0,1,"","","","code {[]} {[]}
+","Idioma del contenido del recurso.","Idioma del contenido del recurso.","El idioma facilita la indexación y la accesibilidad. No todo el contenido debe estar en el idioma principal. El idioma de la narrativa se indica también en el atributo lang de su elemento div; no se deduce automáticamente de Resource.language.","","","","","","","","",,"preferred","Idioma humano del contenido.","http://hl7.org/fhir/ValueSet/languages","",,,,"Resource.language",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PractitionerRole.text","PractitionerRole.text","","narrative
+htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
+","Resumen del recurso en texto para interpretación humana.","Resumen del recurso en texto para interpretación humana.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded information is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text?"
+"PractitionerRole.contained","PractitionerRole.contained","","inline resources
+anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
+","Recursos inline.","Recursos inline.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+"PractitionerRole.extension","PractitionerRole.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extensiones.","Extensiones.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.modifierExtension","PractitionerRole.modifierExtension","","","",0,*,"","Y","","Extension {[]} {[]}
+","Extensiones que no pueden ser ignoradas.","Extensiones que no pueden ser ignoradas.","","","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.identifier","PractitionerRole.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
+","Identificadores específicos para este rol/lugar.","Identificadores específicos para este rol/lugar.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"",,,,"PractitionerRole.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRD-7 (or XCN.1)",".id","./Identifiers","FiveWs.identifier"
+"PractitionerRole.active","PractitionerRole.active","","","",0,1,"","","Y","boolean {[]} {[]}
+","Si el registro de este rol está activo.","Si el registro de este rol está activo.","Si el valor es false, period puede indicar cuándo estuvo activo el rol. Si no se informa period, no puede inferirse ese intervalo.","Need to be able to mark a practitioner role record as not to be used because it was created in error, or otherwise no longer in active use.","","This resource is generally assumed to be active if no value is provided for the active element","","","","","",,,,,"",,,,"PractitionerRole.active",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","STF-7",".statusCode","FiveWs.status"
+"PractitionerRole.period","PractitionerRole.period","","","",0,1,"","","Y","Period {[]} {[]}
+","El periodo de tiempo durante el cual el profesional está autorizado a actuar en este rol.","El periodo de tiempo durante el cual el profesional está autorizado a actuar en este rol.","","Even after the agencies is revoked, the fact that it existed must still be recorded.","","","","","","","",,,,,"",,,,"PractitionerRole.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRD-8/9 / PRA-5.4",".performance[@typeCode <= 'PPRF'].ActDefinitionOrEvent.effectiveTime","(ServD maps Practitioners and Organizations via another entity, so this concept is not available)","FiveWs.done[x]"
+"PractitionerRole.practitioner","PractitionerRole.practitioner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner]]}
+","Profesional que provee los servicios para la organización.","Profesional que provee los servicios para la organización.","","","","","","","","","",,,,,"",,,,"PractitionerRole.practitioner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".player"
+"PractitionerRole.organization","PractitionerRole.organization","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-organization]]}
+","La organización donde se proveen los servicios.","La organización donde se proveen los servicios.","","","","","","","","","",,,,,"",,,,"PractitionerRole.organization",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".scoper"
+"PractitionerRole.code","PractitionerRole.code","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
+","Roles que este profesional está autorizado a desempeñar.","Roles que este profesional está autorizado a desempeñar.","Una persona puede desempeñar más de un rol.","Need to know what authority the practitioner has - what can they do?","","","","","","","",,"example","","http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional","",,,,"PractitionerRole.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRD-1 / STF-18  / PRA-3  / PRT-4  / ROL-3 / ORC-12 / OBR-16 / PV1-7 / PV1-8 / PV1-9 / PV1-17",".code","(ServD maps Practitioners and Organizations via another entity, so this concept is not available)"
+"PractitionerRole.specialty","PractitionerRole.specialty","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
+","Especialidades específicas que el profesional ejerce en este rol.","Especialidades específicas que el profesional ejerce en este rol.","","","","","","","","","",,"preferred","","http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica","",,,,"PractitionerRole.specialty",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","PRA-5",".player.HealthCareProvider[@classCode = 'PROV'].code","./Specialty"
+"PractitionerRole.location","PractitionerRole.location","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location|4.0.1]]}
+","Lugares físicos donde este profesional provee servicios.","Lugares físicos donde este profesional provee servicios.","","","","","","","","","",,,,,"",,,,"PractitionerRole.location",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".performance.ActDefinitionOrEvent.ServiceDeliveryLocation[@classCode = 'SDLOC']","(ServD maps Practitioners and Organizations via another entity, so this concept is not available)<br/> However these are accessed via the Site.ServiceSite.ServiceSiteProvider record. (The Site has the location)","FiveWs.where[x]"
+"PractitionerRole.healthcareService","PractitionerRole.healthcareService","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1]]}
+","Servicios de salud que este rol provee de forma específica.","Servicios de salud que este rol provee de forma específica.","","","","","","","","","",,,,,"",,,,"PractitionerRole.healthcareService",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","EDU-2 / AFF-3",".player.QualifiedEntity[@classCode = 'QUAL'].code"
+"PractitionerRole.telecom","PractitionerRole.telecom","","","",0,*,"","","Y","ContactPoint {[]} {[]}
+","Detalles de contacto de la persona.","Detalles de contacto de la persona.","","Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.","","","","","","","",,,,,"","value:system}
+","",,"open","PractitionerRole.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".telecom"
+"PractitionerRole.telecom:phone","PractitionerRole.telecom","phone","","",0,*,"","","Y","ContactPoint {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point]]} {[]}
+","Detalles de teléfono de contacto.","Detalles de teléfono de contacto.","","Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.","","","","","","","",,,,,"",,,,"PractitionerRole.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".telecom"
+"PractitionerRole.telecom:email","PractitionerRole.telecom","email","","",0,*,"","","Y","ContactPoint {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-email-contact-point]]} {[]}
+","Detalles de correo electrónico de contacto.","Detalles de correo electrónico de contacto.","","Often practitioners have a dedicated line for each location (or service) that they work at, and need to be able to define separate contact details for each of these.","","","","","","","",,,,,"",,,,"PractitionerRole.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".telecom"
+"PractitionerRole.availableTime","PractitionerRole.availableTime","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Tiempos en los que el lugar/servicio está disponible.","Tiempos en los que el lugar/servicio está disponible.","Los recursos Schedule y Slot asociados pueden proporcionar información más detallada sobre la disponibilidad.","","","","","","","","",,,,,"",,,,"PractitionerRole.availableTime",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.availableTime.id","PractitionerRole.availableTime.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador del elemento dentro del recurso.","Identificador del elemento dentro del recurso.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PractitionerRole.availableTime.extension","PractitionerRole.availableTime.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Contenido adicional definido mediante extensiones.","Contenido adicional definido mediante extensiones.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.availableTime.modifierExtension","PractitionerRole.availableTime.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensiones que modifican el significado del elemento y no pueden ignorarse.","Extensiones que modifican el significado del elemento y no pueden ignorarse.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.availableTime.daysOfWeek","PractitionerRole.availableTime.daysOfWeek","","","",0,*,"","","","code {[]} {[]}
+","Días de la semana que aplica.","Días de la semana que aplica.","","","","","","","","","",,"required","Días de la semana en que se encuentra disponible.","http://hl7.org/fhir/ValueSet/days-of-week|4.0.1","",,,,"PractitionerRole.availableTime.daysOfWeek",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.availableTime.allDay","PractitionerRole.availableTime.allDay","","","",0,1,"","","","boolean {[]} {[]}
+","Si está disponible las 24 horas.","Si está disponible las 24 horas.","","","","","","","","","",,,,,"",,,,"PractitionerRole.availableTime.allDay",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.availableTime.availableStartTime","PractitionerRole.availableTime.availableStartTime","","","",0,1,"","","","time {[]} {[]}
+","Hora de apertura.","Hora de apertura.","La zona horaria corresponde al lugar donde se presta el servicio.","","","","","","","","",,,,,"",,,,"PractitionerRole.availableTime.availableStartTime",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.availableTime.availableEndTime","PractitionerRole.availableTime.availableEndTime","","","",0,1,"","","","time {[]} {[]}
+","Hora de cierre.","Hora de cierre.","The timezone is expected to be for where this HealthcareService is provided at.","","","","","","","","",,,,,"",,,,"PractitionerRole.availableTime.availableEndTime",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.notAvailable","PractitionerRole.notAvailable","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Periodos en los que no está disponible por razones específicas.","Periodos en los que no está disponible por razones específicas.","","","","","","","","","",,,,,"",,,,"PractitionerRole.notAvailable",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.notAvailable.id","PractitionerRole.notAvailable.id","","","",0,1,"","","","string {[]} {[]}
+","Identificador del elemento dentro del recurso.","Identificador del elemento dentro del recurso.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"PractitionerRole.notAvailable.extension","PractitionerRole.notAvailable.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Contenido adicional definido mediante extensiones.","Contenido adicional definido mediante extensiones.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.notAvailable.modifierExtension","PractitionerRole.notAvailable.modifierExtension","","","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensiones que modifican el significado del elemento y no pueden ignorarse.","Extensiones que modifican el significado del elemento y no pueden ignorarse.","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PractitionerRole.notAvailable.description","PractitionerRole.notAvailable.description","","","",1,1,"","","","string {[]} {[]}
+","Razón por la que no está disponible.","Razón por la que no está disponible.","","","","","","","","","",,,,,"",,,,"PractitionerRole.notAvailable.description",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","n/a"
+"PractitionerRole.notAvailable.during","PractitionerRole.notAvailable.during","","","",0,1,"","","","Period {[]} {[]}
+","Periodo de tiempo de no disponibilidad.","Periodo de tiempo de no disponibilidad.","","","","","","","","","",,,,,"",,,,"PractitionerRole.notAvailable.during",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.availabilityExceptions","PractitionerRole.availabilityExceptions","","","",0,1,"","","","string {[]} {[]}
+","Descripción textual de anomalías en la disponibilidad.","Descripción textual de anomalías en la disponibilidad.","","","","","","","","","",,,,,"",,,,"PractitionerRole.availabilityExceptions",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".effectiveTime"
+"PractitionerRole.endpoint","PractitionerRole.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1]]}
+","Endpoints técnicos que proveen acceso a servicios para este rol.","Endpoints técnicos que proveen acceso a servicios para este rol.","","Organizations have multiple systems that provide various services and ,ay also be different for practitioners too.So the endpoint satisfies the need to be able to define the technical connection details for how to connect to them, and for what purpose.","","","","","","","",,,,,"",,,,"PractitionerRole.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","n/a"

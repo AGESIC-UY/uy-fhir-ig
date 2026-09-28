@@ -1,0 +1,840 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-especialidad-medica"] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-especialidad-medica</b></p><a name=\"vs-especialidad-medica\"> </a><a name=\"hcvs-especialidad-medica\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1186677001\">1186677001</a></td><td>especialidad en discapacidad intelectual</td></tr><tr><td><a href=\"http://snomed.info/id/1236877003\">1236877003</a></td><td>patología genética</td></tr><tr><td><a href=\"http://snomed.info/id/1236878008\">1236878008</a></td><td>histocompatibilidad e inmunogenética</td></tr><tr><td><a href=\"http://snomed.info/id/1251536003\">1251536003</a></td><td>medicina deportiva</td></tr><tr><td><a href=\"http://snomed.info/id/1251538002\">1251538002</a></td><td>ortopedia pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/1251539005\">1251539005</a></td><td>neurocirugía pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/1251543009\">1251543009</a></td><td>hidrología médica</td></tr><tr><td><a href=\"http://snomed.info/id/1251544003\">1251544003</a></td><td>medicina farmacéutica</td></tr><tr><td><a href=\"http://snomed.info/id/1251545002\">1251545002</a></td><td>medicina de viaje</td></tr><tr><td><a href=\"http://snomed.info/id/1251546001\">1251546001</a></td><td>medicina sexual</td></tr><tr><td><a href=\"http://snomed.info/id/1251547005\">1251547005</a></td><td>neurorradiología</td></tr><tr><td><a href=\"http://snomed.info/id/1251549008\">1251549008</a></td><td>cardiología intervencionista</td></tr><tr><td><a href=\"http://snomed.info/id/1251550008\">1251550008</a></td><td>dermatopatología</td></tr><tr><td><a href=\"http://snomed.info/id/1251551007\">1251551007</a></td><td>electrofisiología cardíaca</td></tr><tr><td><a href=\"http://snomed.info/id/1251552000\">1251552000</a></td><td>medicina reproductiva</td></tr><tr><td><a href=\"http://snomed.info/id/1251553005\">1251553005</a></td><td>acupuntura médica</td></tr><tr><td><a href=\"http://snomed.info/id/1251554004\">1251554004</a></td><td>codificación médica</td></tr><tr><td><a href=\"http://snomed.info/id/1255678007\">1255678007</a></td><td>enfermería pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/1255679004\">1255679004</a></td><td>enfermería de planificación familiar</td></tr><tr><td><a href=\"http://snomed.info/id/1255680001\">1255680001</a></td><td>enfermería de terapia intensiva</td></tr><tr><td><a href=\"http://snomed.info/id/1255681002\">1255681002</a></td><td>enfermería en cuidados paliativos</td></tr><tr><td><a href=\"http://snomed.info/id/1255682009\">1255682009</a></td><td>enfermería perioperatoria</td></tr><tr><td><a href=\"http://snomed.info/id/1255683004\">1255683004</a></td><td>enfermería de rehabilitación</td></tr><tr><td><a href=\"http://snomed.info/id/1255684005\">1255684005</a></td><td>enfermería de cuidados crónicos</td></tr><tr><td><a href=\"http://snomed.info/id/1255685006\">1255685006</a></td><td>enfermería comunitaria</td></tr><tr><td><a href=\"http://snomed.info/id/1255686007\">1255686007</a></td><td>enfermería médica quirúrgica</td></tr><tr><td><a href=\"http://snomed.info/id/1255731004\">1255731004</a></td><td>física médica</td></tr><tr><td><a href=\"http://snomed.info/id/1255732006\">1255732006</a></td><td>anatomía patológica</td></tr><tr><td><a href=\"http://snomed.info/id/1255733001\">1255733001</a></td><td>física médica en radiología</td></tr><tr><td><a href=\"http://snomed.info/id/1255734007\">1255734007</a></td><td>física médica en radioterapia</td></tr><tr><td><a href=\"http://snomed.info/id/1255735008\">1255735008</a></td><td>física médica nuclear</td></tr><tr><td><a href=\"http://snomed.info/id/1255736009\">1255736009</a></td><td>patología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/1255881004\">1255881004</a></td><td>enfermería en salud mental</td></tr><tr><td><a href=\"http://snomed.info/id/1255913008\">1255913008</a></td><td>farmacia industrial</td></tr><tr><td><a href=\"http://snomed.info/id/1255916000\">1255916000</a></td><td>psicología educacional</td></tr><tr><td><a href=\"http://snomed.info/id/1255918004\">1255918004</a></td><td>psicología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/1255984008\">1255984008</a></td><td>farmacogenómica</td></tr><tr><td><a href=\"http://snomed.info/id/1256115008\">1256115008</a></td><td>nutrición clínica</td></tr><tr><td><a href=\"http://snomed.info/id/1258859005\">1258859005</a></td><td>nutrición en salud pública</td></tr><tr><td><a href=\"http://snomed.info/id/1258957008\">1258957008</a></td><td>especialización en farmacia hospitalaria</td></tr><tr><td><a href=\"http://snomed.info/id/1259218001\">1259218001</a></td><td>medicina Unani</td></tr><tr><td><a href=\"http://snomed.info/id/1259219009\">1259219009</a></td><td>medicina Siddha</td></tr><tr><td><a href=\"http://snomed.info/id/1259224007\">1259224007</a></td><td>farmacología regulatoria</td></tr><tr><td><a href=\"http://snomed.info/id/1259938008\">1259938008</a></td><td>medicina homeopática</td></tr><tr><td><a href=\"http://snomed.info/id/1259939000\">1259939000</a></td><td>medicina ayurvédica</td></tr><tr><td><a href=\"http://snomed.info/id/1259940003\">1259940003</a></td><td>yoga terapéutico</td></tr><tr><td><a href=\"http://snomed.info/id/1259944007\">1259944007</a></td><td>inmunohemoterapia</td></tr><tr><td><a href=\"http://snomed.info/id/1259957004\">1259957004</a></td><td>estomatología</td></tr><tr><td><a href=\"http://snomed.info/id/1268907002\">1268907002</a></td><td>farmacia comunitaria</td></tr><tr><td><a href=\"http://snomed.info/id/1284928005\">1284928005</a></td><td>cirugía gastrointestinal</td></tr><tr><td><a href=\"http://snomed.info/id/1284930007\">1284930007</a></td><td>cirugía de mano</td></tr><tr><td><a href=\"http://snomed.info/id/1287784006\">1287784006</a></td><td>enfermería obstétrica</td></tr><tr><td><a href=\"http://snomed.info/id/1290444002\">1290444002</a></td><td>especialidad en trastornos del movimiento</td></tr><tr><td><a href=\"http://snomed.info/id/1297184004\">1297184004</a></td><td>neurorradiología intervencionista</td></tr><tr><td><a href=\"http://snomed.info/id/1303753009\">1303753009</a></td><td>osteología</td></tr><tr><td><a href=\"http://snomed.info/id/1303754003\">1303754003</a></td><td>pelviperineología</td></tr><tr><td><a href=\"http://snomed.info/id/1303755002\">1303755002</a></td><td>linfología</td></tr><tr><td><a href=\"http://snomed.info/id/1303756001\">1303756001</a></td><td>flebología</td></tr><tr><td><a href=\"http://snomed.info/id/1303757005\">1303757005</a></td><td>implantología oral</td></tr><tr><td><a href=\"http://snomed.info/id/1303758000\">1303758000</a></td><td>cirugía de base de cráneo</td></tr><tr><td><a href=\"http://snomed.info/id/1303759008\">1303759008</a></td><td>ecografía pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/1303764007\">1303764007</a></td><td>foniatría</td></tr><tr><td><a href=\"http://snomed.info/id/1303859002\">1303859002</a></td><td>neuropelveología</td></tr><tr><td><a href=\"http://snomed.info/id/1303860007\">1303860007</a></td><td>especialización en fisioterapia cardiorrespiratoria</td></tr><tr><td><a href=\"http://snomed.info/id/1303926004\">1303926004</a></td><td>especialidad de fisioterapia neurológica</td></tr><tr><td><a href=\"http://snomed.info/id/1303930001\">1303930001</a></td><td>especialidad de fisioterapia musculoesquelética</td></tr><tr><td><a href=\"http://snomed.info/id/1304212007\">1304212007</a></td><td>radiología torácica</td></tr><tr><td><a href=\"http://snomed.info/id/1304214008\">1304214008</a></td><td>radiología musculoesquelética</td></tr><tr><td><a href=\"http://snomed.info/id/1306488000\">1306488000</a></td><td>radiología cardiovascular</td></tr><tr><td><a href=\"http://snomed.info/id/1306761006\">1306761006</a></td><td>medicina estética</td></tr><tr><td><a href=\"http://snomed.info/id/1332234006\">1332234006</a></td><td>mastología</td></tr><tr><td><a href=\"http://snomed.info/id/1335904004\">1335904004</a></td><td>neurourología</td></tr><tr><td><a href=\"http://snomed.info/id/1336020004\">1336020004</a></td><td>enfermería de atención crítica</td></tr><tr><td><a href=\"http://snomed.info/id/1340249005\">1340249005</a></td><td>especialización en farmacia militar</td></tr><tr><td><a href=\"http://snomed.info/id/1345026002\">1345026002</a></td><td>especialidad de ortopedia</td></tr><tr><td><a href=\"http://snomed.info/id/1345027006\">1345027006</a></td><td>especialidad de ortopedia quirúrgica</td></tr><tr><td><a href=\"http://snomed.info/id/1351234002\">1351234002</a></td><td>neuropsicología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/1365982005\">1365982005</a></td><td>especialidad en manejo de dolor agudo</td></tr><tr><td><a href=\"http://snomed.info/id/23861000087105\">23861000087105</a></td><td>dermatología de adultos</td></tr><tr><td><a href=\"http://snomed.info/id/23881000087104\">23881000087104</a></td><td>hematología de adultos</td></tr><tr><td><a href=\"http://snomed.info/id/23921000087107\">23921000087107</a></td><td>especialidad de revisión de medicación</td></tr><tr><td><a href=\"http://snomed.info/id/23931000087109\">23931000087109</a></td><td>especialidad médica de adicción a narcóticos</td></tr><tr><td><a href=\"http://snomed.info/id/23961000087102\">23961000087102</a></td><td>especialidad de manejo de la dependencia de opioides</td></tr><tr><td><a href=\"http://snomed.info/id/23971000087106\">23971000087106</a></td><td>dermatología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/23981000087108\">23981000087108</a></td><td>especialidad de hematooncología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/23991000087105\">23991000087105</a></td><td>cirugía plástica pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/24021000087109\">24021000087109</a></td><td>especialidad en diagnóstico por imágenes vasculares</td></tr><tr><td><a href=\"http://snomed.info/id/24061000087104\">24061000087104</a></td><td>especialidad de oncología quirúrgica mamaria</td></tr><tr><td><a href=\"http://snomed.info/id/24091000087107\">24091000087107</a></td><td>especialidad de enfermería dirigida a la atención del virus de la inmunodeficiencia humana</td></tr><tr><td><a href=\"http://snomed.info/id/24111000087100\">24111000087100</a></td><td>especialidad de trabajo social relacionado con el virus de la inmunodeficiencia humana</td></tr><tr><td><a href=\"http://snomed.info/id/24151000087101\">24151000087101</a></td><td>especialidad de cirugía ortopédica de columna vertebral</td></tr><tr><td><a href=\"http://snomed.info/id/24241000087106\">24241000087106</a></td><td>especialidad de ortopedia general</td></tr><tr><td><a href=\"http://snomed.info/id/24251000087109\">24251000087109</a></td><td>especialidad de pediatría general</td></tr><tr><td><a href=\"http://snomed.info/id/24281000087101\">24281000087101</a></td><td>especialidad en manejo del dolor crónico en adultos</td></tr><tr><td><a href=\"http://snomed.info/id/24301000087100\">24301000087100</a></td><td>especialidad en manejo del dolor crónico en geriatría</td></tr><tr><td><a href=\"http://snomed.info/id/24311000087103\">24311000087103</a></td><td>especialidad en medicina de adicción a narcóticos con manejo del dolor crónico</td></tr><tr><td><a href=\"http://snomed.info/id/24361000087101\">24361000087101</a></td><td>especialidad en manejo del dolor crónico en pediatría</td></tr><tr><td><a href=\"http://snomed.info/id/25931000087108\">25931000087108</a></td><td>medicina del adolescente</td></tr><tr><td><a href=\"http://snomed.info/id/25991000087109\">25991000087109</a></td><td>farmacología y toxicología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/26001000087108\">26001000087108</a></td><td>especialidad pediátrica del desarrollo</td></tr><tr><td><a href=\"http://snomed.info/id/26011000087105\">26011000087105</a></td><td>patología forense</td></tr><tr><td><a href=\"http://snomed.info/id/26041000087106\">26041000087106</a></td><td>radiología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/26051000087109\">26051000087109</a></td><td>perinatología</td></tr><tr><td><a href=\"http://snomed.info/id/26081000087101\">26081000087101</a></td><td>salud pública y medicina preventiva</td></tr><tr><td><a href=\"http://snomed.info/id/28351000087106\">28351000087106</a></td><td>especialidad en adicciones</td></tr><tr><td><a href=\"http://snomed.info/id/28551000087103\">28551000087103</a></td><td>especialidad en medicina musculoesquelética</td></tr><tr><td><a href=\"http://snomed.info/id/357541000267105\">357541000267105</a></td><td>radiología oral y maxilofacial</td></tr><tr><td><a href=\"http://snomed.info/id/357571000267100\">357571000267100</a></td><td>patología oral y maxilofacial</td></tr><tr><td><a href=\"http://snomed.info/id/394537008\">394537008</a></td><td>especialidad pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/394538003\">394538003</a></td><td>neurología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/394539006\">394539006</a></td><td>cirugía pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/394577000\">394577000</a></td><td>anestesiología</td></tr><tr><td><a href=\"http://snomed.info/id/394578005\">394578005</a></td><td>audiología</td></tr><tr><td><a href=\"http://snomed.info/id/394579002\">394579002</a></td><td>cardiología</td></tr><tr><td><a href=\"http://snomed.info/id/394580004\">394580004</a></td><td>genética clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394581000\">394581000</a></td><td>medicina comunitaria</td></tr><tr><td><a href=\"http://snomed.info/id/394582007\">394582007</a></td><td>dermatología</td></tr><tr><td><a href=\"http://snomed.info/id/394583002\">394583002</a></td><td>endocrinología</td></tr><tr><td><a href=\"http://snomed.info/id/394584008\">394584008</a></td><td>gastroenterología</td></tr><tr><td><a href=\"http://snomed.info/id/394585009\">394585009</a></td><td>obstetricia y ginecología</td></tr><tr><td><a href=\"http://snomed.info/id/394586005\">394586005</a></td><td>ginecología</td></tr><tr><td><a href=\"http://snomed.info/id/394587001\">394587001</a></td><td>psiquiatría</td></tr><tr><td><a href=\"http://snomed.info/id/394588006\">394588006</a></td><td>psiquiatría infantojuvenil</td></tr><tr><td><a href=\"http://snomed.info/id/394589003\">394589003</a></td><td>nefrología</td></tr><tr><td><a href=\"http://snomed.info/id/394591006\">394591006</a></td><td>neurología</td></tr><tr><td><a href=\"http://snomed.info/id/394592004\">394592004</a></td><td>oncología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394593009\">394593009</a></td><td>oncología médica</td></tr><tr><td><a href=\"http://snomed.info/id/394594003\">394594003</a></td><td>oftalmología</td></tr><tr><td><a href=\"http://snomed.info/id/394595002\">394595002</a></td><td>patología</td></tr><tr><td><a href=\"http://snomed.info/id/394596001\">394596001</a></td><td>bioquímica clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394597005\">394597005</a></td><td>histopatología</td></tr><tr><td><a href=\"http://snomed.info/id/394598000\">394598000</a></td><td>inmunopatología</td></tr><tr><td><a href=\"http://snomed.info/id/394599008\">394599008</a></td><td>neuropatología</td></tr><tr><td><a href=\"http://snomed.info/id/394600006\">394600006</a></td><td>farmacología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394601005\">394601005</a></td><td>fisiología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394602003\">394602003</a></td><td>rehabilitación - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/394603008\">394603008</a></td><td>cirugía cardiotorácica</td></tr><tr><td><a href=\"http://snomed.info/id/394604002\">394604002</a></td><td>cirugía otorrinolaringológica</td></tr><tr><td><a href=\"http://snomed.info/id/394605001\">394605001</a></td><td>cirugía oral</td></tr><tr><td><a href=\"http://snomed.info/id/394606000\">394606000</a></td><td>odontología restauradora</td></tr><tr><td><a href=\"http://snomed.info/id/394607009\">394607009</a></td><td>odontología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/394608004\">394608004</a></td><td>ortodoncia</td></tr><tr><td><a href=\"http://snomed.info/id/394609007\">394609007</a></td><td>cirugía general</td></tr><tr><td><a href=\"http://snomed.info/id/394610002\">394610002</a></td><td>neurocirugía</td></tr><tr><td><a href=\"http://snomed.info/id/394611003\">394611003</a></td><td>cirugía plástica - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/394612005\">394612005</a></td><td>urología</td></tr><tr><td><a href=\"http://snomed.info/id/394649004\">394649004</a></td><td>medicina nuclear - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/394658006\">394658006</a></td><td>especialidad clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394732004\">394732004</a></td><td>especialidad quirúrgica</td></tr><tr><td><a href=\"http://snomed.info/id/394733009\">394733009</a></td><td>especialidad médica</td></tr><tr><td><a href=\"http://snomed.info/id/394734003\">394734003</a></td><td>especialidades radiológicas</td></tr><tr><td><a href=\"http://snomed.info/id/394801008\">394801008</a></td><td>traumatología y ortopedia</td></tr><tr><td><a href=\"http://snomed.info/id/394802001\">394802001</a></td><td>medicina general</td></tr><tr><td><a href=\"http://snomed.info/id/394803006\">394803006</a></td><td>hematología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394804000\">394804000</a></td><td>citogenética clínica y genética molecular</td></tr><tr><td><a href=\"http://snomed.info/id/394805004\">394805004</a></td><td>inmunología clínica/alergia</td></tr><tr><td><a href=\"http://snomed.info/id/394806003\">394806003</a></td><td>medicina paliativa</td></tr><tr><td><a href=\"http://snomed.info/id/394807007\">394807007</a></td><td>infectología</td></tr><tr><td><a href=\"http://snomed.info/id/394808002\">394808002</a></td><td>medicina genitourinaria</td></tr><tr><td><a href=\"http://snomed.info/id/394809005\">394809005</a></td><td>neurofisiología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394810000\">394810000</a></td><td>reumatología</td></tr><tr><td><a href=\"http://snomed.info/id/394811001\">394811001</a></td><td>geriatría</td></tr><tr><td><a href=\"http://snomed.info/id/394813003\">394813003</a></td><td>oftalmología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/394814009\">394814009</a></td><td>medicina familiar/general (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394816006\">394816006</a></td><td>enfermedades mentales (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394817002\">394817002</a></td><td>psiquiatría forense</td></tr><tr><td><a href=\"http://snomed.info/id/394818007\">394818007</a></td><td>gerontopsiquiatría</td></tr><tr><td><a href=\"http://snomed.info/id/394819004\">394819004</a></td><td>hemoterapia (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394820005\">394820005</a></td><td>microbiología médica</td></tr><tr><td><a href=\"http://snomed.info/id/394821009\">394821009</a></td><td>medicina laboral</td></tr><tr><td><a href=\"http://snomed.info/id/394882004\">394882004</a></td><td>manejo del dolor (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394913002\">394913002</a></td><td>psicoterapia (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394914008\">394914008</a></td><td>radiología - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/394915009\">394915009</a></td><td>patología general (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/394916005\">394916005</a></td><td>hematopatología (especialidad)</td></tr><tr><td><a href=\"http://snomed.info/id/408439002\">408439002</a></td><td>especialidad en alergia</td></tr><tr><td><a href=\"http://snomed.info/id/408440000\">408440000</a></td><td>medicina sanitaria</td></tr><tr><td><a href=\"http://snomed.info/id/408441001\">408441001</a></td><td>endodoncia - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408442008\">408442008</a></td><td>hemofilia - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408443003\">408443003</a></td><td>consultorio de medicina general</td></tr><tr><td><a href=\"http://snomed.info/id/408444009\">408444009</a></td><td>práctica odontológica general</td></tr><tr><td><a href=\"http://snomed.info/id/408445005\">408445005</a></td><td>neonatología</td></tr><tr><td><a href=\"http://snomed.info/id/408446006\">408446006</a></td><td>oncología ginecológica</td></tr><tr><td><a href=\"http://snomed.info/id/408447002\">408447002</a></td><td>cuidado de relevo - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408448007\">408448007</a></td><td>medicina tropical</td></tr><tr><td><a href=\"http://snomed.info/id/408449004\">408449004</a></td><td>odontología quirúrgica</td></tr><tr><td><a href=\"http://snomed.info/id/408450004\">408450004</a></td><td>estudios de sueño - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408454008\">408454008</a></td><td>microbiología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/408455009\">408455009</a></td><td>radiología intervencionista - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408456005\">408456005</a></td><td>cirugía torácica</td></tr><tr><td><a href=\"http://snomed.info/id/408457001\">408457001</a></td><td>cirugía maxilofacial</td></tr><tr><td><a href=\"http://snomed.info/id/408459003\">408459003</a></td><td>cardiología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/408460008\">408460008</a></td><td>prostodoncia</td></tr><tr><td><a href=\"http://snomed.info/id/408461007\">408461007</a></td><td>periodoncia</td></tr><tr><td><a href=\"http://snomed.info/id/408462000\">408462000</a></td><td>atención de quemaduras</td></tr><tr><td><a href=\"http://snomed.info/id/408463005\">408463005</a></td><td>cirugía vascular</td></tr><tr><td><a href=\"http://snomed.info/id/408464004\">408464004</a></td><td>cirugía colorrectal</td></tr><tr><td><a href=\"http://snomed.info/id/408465003\">408465003</a></td><td>cirugía bucomaxilofacial</td></tr><tr><td><a href=\"http://snomed.info/id/408466002\">408466002</a></td><td>cirugía cardíaca</td></tr><tr><td><a href=\"http://snomed.info/id/408467006\">408467006</a></td><td>psiquiatría del adulto - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408468001\">408468001</a></td><td>dificultades de aprendizaje - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/408469009\">408469009</a></td><td>cirugía de mama</td></tr><tr><td><a href=\"http://snomed.info/id/408470005\">408470005</a></td><td>obstetricia</td></tr><tr><td><a href=\"http://snomed.info/id/408471009\">408471009</a></td><td>trasplante cardiotorácico</td></tr><tr><td><a href=\"http://snomed.info/id/408472002\">408472002</a></td><td>hepatología</td></tr><tr><td><a href=\"http://snomed.info/id/408473007\">408473007</a></td><td>odontología sanitaria</td></tr><tr><td><a href=\"http://snomed.info/id/408474001\">408474001</a></td><td>cirugía hepatobiliar y pancreática</td></tr><tr><td><a href=\"http://snomed.info/id/408475000\">408475000</a></td><td>diabetología</td></tr><tr><td><a href=\"http://snomed.info/id/408477008\">408477008</a></td><td>cirugía de trasplante</td></tr><tr><td><a href=\"http://snomed.info/id/408478003\">408478003</a></td><td>medicina crítica</td></tr><tr><td><a href=\"http://snomed.info/id/408479006\">408479006</a></td><td>cirugía de porción superior de tracto gastrointestinal</td></tr><tr><td><a href=\"http://snomed.info/id/408480009\">408480009</a></td><td>inmunología clínica</td></tr><tr><td><a href=\"http://snomed.info/id/409967009\">409967009</a></td><td>toxicología</td></tr><tr><td><a href=\"http://snomed.info/id/409968004\">409968004</a></td><td>medicina preventiva</td></tr><tr><td><a href=\"http://snomed.info/id/410001006\">410001006</a></td><td>medicina militar</td></tr><tr><td><a href=\"http://snomed.info/id/410005002\">410005002</a></td><td>medicina hiperbárica</td></tr><tr><td><a href=\"http://snomed.info/id/416304004\">416304004</a></td><td>medicina osteopática manipulativa</td></tr><tr><td><a href=\"http://snomed.info/id/417887005\">417887005</a></td><td>otolaringología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/418002000\">418002000</a></td><td>oncología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/418018006\">418018006</a></td><td>cirugía dermatológica</td></tr><tr><td><a href=\"http://snomed.info/id/418058008\">418058008</a></td><td>gastroenterología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/418112009\">418112009</a></td><td>neumonología</td></tr><tr><td><a href=\"http://snomed.info/id/418535003\">418535003</a></td><td>inmunología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/418652005\">418652005</a></td><td>hematología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/418862001\">418862001</a></td><td>enfermedades infecciosas pediátricas</td></tr><tr><td><a href=\"http://snomed.info/id/418960008\">418960008</a></td><td>otolaringología</td></tr><tr><td><a href=\"http://snomed.info/id/419043006\">419043006</a></td><td>oncología urológica</td></tr><tr><td><a href=\"http://snomed.info/id/419170002\">419170002</a></td><td>neumonología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419192003\">419192003</a></td><td>medicina interna</td></tr><tr><td><a href=\"http://snomed.info/id/419215006\">419215006</a></td><td>cuidados intensivos pediátricos</td></tr><tr><td><a href=\"http://snomed.info/id/419321007\">419321007</a></td><td>oncología quirúrgica</td></tr><tr><td><a href=\"http://snomed.info/id/419365004\">419365004</a></td><td>nefrología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419472004\">419472004</a></td><td>reumatología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419610006\">419610006</a></td><td>endocrinología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419677000\">419677000</a></td><td>oncología neurológica pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419772000\">419772000</a></td><td>medicina familiar</td></tr><tr><td><a href=\"http://snomed.info/id/419815003\">419815003</a></td><td>radioncología</td></tr><tr><td><a href=\"http://snomed.info/id/419917007\">419917007</a></td><td>emergentología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/419983000\">419983000</a></td><td>oftalmología pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/420112009\">420112009</a></td><td>trasplante de médula ósea pediátrico</td></tr><tr><td><a href=\"http://snomed.info/id/420208008\">420208008</a></td><td>genética pediátrica</td></tr><tr><td><a href=\"http://snomed.info/id/420419008\">420419008</a></td><td>especialidad en cirugía de estrabismo</td></tr><tr><td><a href=\"http://snomed.info/id/420708009\">420708009</a></td><td>especialidad en cirugía refractiva</td></tr><tr><td><a href=\"http://snomed.info/id/420985004\">420985004</a></td><td>cirugía vitreorretiniana - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/421582004\">421582004</a></td><td>cirugía de córnea - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/421661004\">421661004</a></td><td>banco de sangre y medicina transfusional - especialidad</td></tr><tr><td><a href=\"http://snomed.info/id/421885009\">421885009</a></td><td>especialidad de oftalmología, cirugía de glaucoma</td></tr><tr><td><a href=\"http://snomed.info/id/422171003\">422171003</a></td><td>cirugía plástica oftálmica</td></tr><tr><td><a href=\"http://snomed.info/id/422191005\">422191005</a></td><td>cirugía oftálmica</td></tr><tr><td><a href=\"http://snomed.info/id/422349000\">422349000</a></td><td>especialidad en cirugía de cataratas</td></tr><tr><td><a href=\"http://snomed.info/id/445715009\">445715009</a></td><td>trasplante de sangre y médula ósea</td></tr><tr><td><a href=\"http://snomed.info/id/715184008\">715184008</a></td><td>medicina aeroespacial</td></tr><tr><td><a href=\"http://snomed.info/id/718359001\">718359001</a></td><td>medicina regenerativa</td></tr><tr><td><a href=\"http://snomed.info/id/721961006\">721961006</a></td><td>medicina psicosomática</td></tr><tr><td><a href=\"http://snomed.info/id/722138006\">722138006</a></td><td>fisioterapia</td></tr><tr><td><a href=\"http://snomed.info/id/722162001\">722162001</a></td><td>psicología</td></tr><tr><td><a href=\"http://snomed.info/id/722163006\">722163006</a></td><td>odontología</td></tr><tr><td><a href=\"http://snomed.info/id/722164000\">722164000</a></td><td>dietética y nutrición</td></tr><tr><td><a href=\"http://snomed.info/id/722165004\">722165004</a></td><td>enfermería</td></tr><tr><td><a href=\"http://snomed.info/id/722166003\">722166003</a></td><td>podología</td></tr><tr><td><a href=\"http://snomed.info/id/722204007\">722204007</a></td><td>medicina legal</td></tr><tr><td><a href=\"http://snomed.info/id/722414000\">722414000</a></td><td>medicina vascular</td></tr><tr><td><a href=\"http://snomed.info/id/773568002\">773568002</a></td><td>medicina de emergencias</td></tr><tr><td><a href=\"http://snomed.info/id/786454007\">786454007</a></td><td>medicina perioperatoria</td></tr><tr><td><a href=\"http://snomed.info/id/788415003\">788415003</a></td><td>medicina de trasplantes</td></tr><tr><td><a href=\"http://snomed.info/id/92041000087100\">92041000087100</a></td><td>gastroenterología de adultos</td></tr><tr><td><a href=\"http://snomed.info/id/92231000087100\">92231000087100</a></td><td>especialidad en manejo de dolor crónico</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EspecialidadMedica"] ; # 
+  fhir:title [ fhir:v "Conjunto de Valores Especialidad Médica"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Especialidades médicas válidas para PractitionerRole.specialty."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1186677001" ] ;
+         fhir:display [ fhir:v "especialidad en discapacidad intelectual" ]
+       ] [
+         fhir:code [ fhir:v "1236877003" ] ;
+         fhir:display [ fhir:v "patología genética" ]
+       ] [
+         fhir:code [ fhir:v "1236878008" ] ;
+         fhir:display [ fhir:v "histocompatibilidad e inmunogenética" ]
+       ] [
+         fhir:code [ fhir:v "1251536003" ] ;
+         fhir:display [ fhir:v "medicina deportiva" ]
+       ] [
+         fhir:code [ fhir:v "1251538002" ] ;
+         fhir:display [ fhir:v "ortopedia pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "1251539005" ] ;
+         fhir:display [ fhir:v "neurocirugía pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "1251543009" ] ;
+         fhir:display [ fhir:v "hidrología médica" ]
+       ] [
+         fhir:code [ fhir:v "1251544003" ] ;
+         fhir:display [ fhir:v "medicina farmacéutica" ]
+       ] [
+         fhir:code [ fhir:v "1251545002" ] ;
+         fhir:display [ fhir:v "medicina de viaje" ]
+       ] [
+         fhir:code [ fhir:v "1251546001" ] ;
+         fhir:display [ fhir:v "medicina sexual" ]
+       ] [
+         fhir:code [ fhir:v "1251547005" ] ;
+         fhir:display [ fhir:v "neurorradiología" ]
+       ] [
+         fhir:code [ fhir:v "1251549008" ] ;
+         fhir:display [ fhir:v "cardiología intervencionista" ]
+       ] [
+         fhir:code [ fhir:v "1251550008" ] ;
+         fhir:display [ fhir:v "dermatopatología" ]
+       ] [
+         fhir:code [ fhir:v "1251551007" ] ;
+         fhir:display [ fhir:v "electrofisiología cardíaca" ]
+       ] [
+         fhir:code [ fhir:v "1251552000" ] ;
+         fhir:display [ fhir:v "medicina reproductiva" ]
+       ] [
+         fhir:code [ fhir:v "1251553005" ] ;
+         fhir:display [ fhir:v "acupuntura médica" ]
+       ] [
+         fhir:code [ fhir:v "1251554004" ] ;
+         fhir:display [ fhir:v "codificación médica" ]
+       ] [
+         fhir:code [ fhir:v "1255678007" ] ;
+         fhir:display [ fhir:v "enfermería pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "1255679004" ] ;
+         fhir:display [ fhir:v "enfermería de planificación familiar" ]
+       ] [
+         fhir:code [ fhir:v "1255680001" ] ;
+         fhir:display [ fhir:v "enfermería de terapia intensiva" ]
+       ] [
+         fhir:code [ fhir:v "1255681002" ] ;
+         fhir:display [ fhir:v "enfermería en cuidados paliativos" ]
+       ] [
+         fhir:code [ fhir:v "1255682009" ] ;
+         fhir:display [ fhir:v "enfermería perioperatoria" ]
+       ] [
+         fhir:code [ fhir:v "1255683004" ] ;
+         fhir:display [ fhir:v "enfermería de rehabilitación" ]
+       ] [
+         fhir:code [ fhir:v "1255684005" ] ;
+         fhir:display [ fhir:v "enfermería de cuidados crónicos" ]
+       ] [
+         fhir:code [ fhir:v "1255685006" ] ;
+         fhir:display [ fhir:v "enfermería comunitaria" ]
+       ] [
+         fhir:code [ fhir:v "1255686007" ] ;
+         fhir:display [ fhir:v "enfermería médica quirúrgica" ]
+       ] [
+         fhir:code [ fhir:v "1255731004" ] ;
+         fhir:display [ fhir:v "física médica" ]
+       ] [
+         fhir:code [ fhir:v "1255732006" ] ;
+         fhir:display [ fhir:v "anatomía patológica" ]
+       ] [
+         fhir:code [ fhir:v "1255733001" ] ;
+         fhir:display [ fhir:v "física médica en radiología" ]
+       ] [
+         fhir:code [ fhir:v "1255734007" ] ;
+         fhir:display [ fhir:v "física médica en radioterapia" ]
+       ] [
+         fhir:code [ fhir:v "1255735008" ] ;
+         fhir:display [ fhir:v "física médica nuclear" ]
+       ] [
+         fhir:code [ fhir:v "1255736009" ] ;
+         fhir:display [ fhir:v "patología clínica" ]
+       ] [
+         fhir:code [ fhir:v "1255881004" ] ;
+         fhir:display [ fhir:v "enfermería en salud mental" ]
+       ] [
+         fhir:code [ fhir:v "1255913008" ] ;
+         fhir:display [ fhir:v "farmacia industrial" ]
+       ] [
+         fhir:code [ fhir:v "1255916000" ] ;
+         fhir:display [ fhir:v "psicología educacional" ]
+       ] [
+         fhir:code [ fhir:v "1255918004" ] ;
+         fhir:display [ fhir:v "psicología clínica" ]
+       ] [
+         fhir:code [ fhir:v "1255984008" ] ;
+         fhir:display [ fhir:v "farmacogenómica" ]
+       ] [
+         fhir:code [ fhir:v "1256115008" ] ;
+         fhir:display [ fhir:v "nutrición clínica" ]
+       ] [
+         fhir:code [ fhir:v "1258859005" ] ;
+         fhir:display [ fhir:v "nutrición en salud pública" ]
+       ] [
+         fhir:code [ fhir:v "1258957008" ] ;
+         fhir:display [ fhir:v "especialización en farmacia hospitalaria" ]
+       ] [
+         fhir:code [ fhir:v "1259218001" ] ;
+         fhir:display [ fhir:v "medicina Unani" ]
+       ] [
+         fhir:code [ fhir:v "1259219009" ] ;
+         fhir:display [ fhir:v "medicina Siddha" ]
+       ] [
+         fhir:code [ fhir:v "1259224007" ] ;
+         fhir:display [ fhir:v "farmacología regulatoria" ]
+       ] [
+         fhir:code [ fhir:v "1259938008" ] ;
+         fhir:display [ fhir:v "medicina homeopática" ]
+       ] [
+         fhir:code [ fhir:v "1259939000" ] ;
+         fhir:display [ fhir:v "medicina ayurvédica" ]
+       ] [
+         fhir:code [ fhir:v "1259940003" ] ;
+         fhir:display [ fhir:v "yoga terapéutico" ]
+       ] [
+         fhir:code [ fhir:v "1259944007" ] ;
+         fhir:display [ fhir:v "inmunohemoterapia" ]
+       ] [
+         fhir:code [ fhir:v "1259957004" ] ;
+         fhir:display [ fhir:v "estomatología" ]
+       ] [
+         fhir:code [ fhir:v "1268907002" ] ;
+         fhir:display [ fhir:v "farmacia comunitaria" ]
+       ] [
+         fhir:code [ fhir:v "1284928005" ] ;
+         fhir:display [ fhir:v "cirugía gastrointestinal" ]
+       ] [
+         fhir:code [ fhir:v "1284930007" ] ;
+         fhir:display [ fhir:v "cirugía de mano" ]
+       ] [
+         fhir:code [ fhir:v "1287784006" ] ;
+         fhir:display [ fhir:v "enfermería obstétrica" ]
+       ] [
+         fhir:code [ fhir:v "1290444002" ] ;
+         fhir:display [ fhir:v "especialidad en trastornos del movimiento" ]
+       ] [
+         fhir:code [ fhir:v "1297184004" ] ;
+         fhir:display [ fhir:v "neurorradiología intervencionista" ]
+       ] [
+         fhir:code [ fhir:v "1303753009" ] ;
+         fhir:display [ fhir:v "osteología" ]
+       ] [
+         fhir:code [ fhir:v "1303754003" ] ;
+         fhir:display [ fhir:v "pelviperineología" ]
+       ] [
+         fhir:code [ fhir:v "1303755002" ] ;
+         fhir:display [ fhir:v "linfología" ]
+       ] [
+         fhir:code [ fhir:v "1303756001" ] ;
+         fhir:display [ fhir:v "flebología" ]
+       ] [
+         fhir:code [ fhir:v "1303757005" ] ;
+         fhir:display [ fhir:v "implantología oral" ]
+       ] [
+         fhir:code [ fhir:v "1303758000" ] ;
+         fhir:display [ fhir:v "cirugía de base de cráneo" ]
+       ] [
+         fhir:code [ fhir:v "1303759008" ] ;
+         fhir:display [ fhir:v "ecografía pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "1303764007" ] ;
+         fhir:display [ fhir:v "foniatría" ]
+       ] [
+         fhir:code [ fhir:v "1303859002" ] ;
+         fhir:display [ fhir:v "neuropelveología" ]
+       ] [
+         fhir:code [ fhir:v "1303860007" ] ;
+         fhir:display [ fhir:v "especialización en fisioterapia cardiorrespiratoria" ]
+       ] [
+         fhir:code [ fhir:v "1303926004" ] ;
+         fhir:display [ fhir:v "especialidad de fisioterapia neurológica" ]
+       ] [
+         fhir:code [ fhir:v "1303930001" ] ;
+         fhir:display [ fhir:v "especialidad de fisioterapia musculoesquelética" ]
+       ] [
+         fhir:code [ fhir:v "1304212007" ] ;
+         fhir:display [ fhir:v "radiología torácica" ]
+       ] [
+         fhir:code [ fhir:v "1304214008" ] ;
+         fhir:display [ fhir:v "radiología musculoesquelética" ]
+       ] [
+         fhir:code [ fhir:v "1306488000" ] ;
+         fhir:display [ fhir:v "radiología cardiovascular" ]
+       ] [
+         fhir:code [ fhir:v "1306761006" ] ;
+         fhir:display [ fhir:v "medicina estética" ]
+       ] [
+         fhir:code [ fhir:v "1332234006" ] ;
+         fhir:display [ fhir:v "mastología" ]
+       ] [
+         fhir:code [ fhir:v "1335904004" ] ;
+         fhir:display [ fhir:v "neurourología" ]
+       ] [
+         fhir:code [ fhir:v "1336020004" ] ;
+         fhir:display [ fhir:v "enfermería de atención crítica" ]
+       ] [
+         fhir:code [ fhir:v "1340249005" ] ;
+         fhir:display [ fhir:v "especialización en farmacia militar" ]
+       ] [
+         fhir:code [ fhir:v "1345026002" ] ;
+         fhir:display [ fhir:v "especialidad de ortopedia" ]
+       ] [
+         fhir:code [ fhir:v "1345027006" ] ;
+         fhir:display [ fhir:v "especialidad de ortopedia quirúrgica" ]
+       ] [
+         fhir:code [ fhir:v "1351234002" ] ;
+         fhir:display [ fhir:v "neuropsicología clínica" ]
+       ] [
+         fhir:code [ fhir:v "1365982005" ] ;
+         fhir:display [ fhir:v "especialidad en manejo de dolor agudo" ]
+       ] [
+         fhir:code [ fhir:v "23861000087105" ] ;
+         fhir:display [ fhir:v "dermatología de adultos" ]
+       ] [
+         fhir:code [ fhir:v "23881000087104" ] ;
+         fhir:display [ fhir:v "hematología de adultos" ]
+       ] [
+         fhir:code [ fhir:v "23921000087107" ] ;
+         fhir:display [ fhir:v "especialidad de revisión de medicación" ]
+       ] [
+         fhir:code [ fhir:v "23931000087109" ] ;
+         fhir:display [ fhir:v "especialidad médica de adicción a narcóticos" ]
+       ] [
+         fhir:code [ fhir:v "23961000087102" ] ;
+         fhir:display [ fhir:v "especialidad de manejo de la dependencia de opioides" ]
+       ] [
+         fhir:code [ fhir:v "23971000087106" ] ;
+         fhir:display [ fhir:v "dermatología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "23981000087108" ] ;
+         fhir:display [ fhir:v "especialidad de hematooncología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "23991000087105" ] ;
+         fhir:display [ fhir:v "cirugía plástica pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "24021000087109" ] ;
+         fhir:display [ fhir:v "especialidad en diagnóstico por imágenes vasculares" ]
+       ] [
+         fhir:code [ fhir:v "24061000087104" ] ;
+         fhir:display [ fhir:v "especialidad de oncología quirúrgica mamaria" ]
+       ] [
+         fhir:code [ fhir:v "24091000087107" ] ;
+         fhir:display [ fhir:v "especialidad de enfermería dirigida a la atención del virus de la inmunodeficiencia humana" ]
+       ] [
+         fhir:code [ fhir:v "24111000087100" ] ;
+         fhir:display [ fhir:v "especialidad de trabajo social relacionado con el virus de la inmunodeficiencia humana" ]
+       ] [
+         fhir:code [ fhir:v "24151000087101" ] ;
+         fhir:display [ fhir:v "especialidad de cirugía ortopédica de columna vertebral" ]
+       ] [
+         fhir:code [ fhir:v "24241000087106" ] ;
+         fhir:display [ fhir:v "especialidad de ortopedia general" ]
+       ] [
+         fhir:code [ fhir:v "24251000087109" ] ;
+         fhir:display [ fhir:v "especialidad de pediatría general" ]
+       ] [
+         fhir:code [ fhir:v "24281000087101" ] ;
+         fhir:display [ fhir:v "especialidad en manejo del dolor crónico en adultos" ]
+       ] [
+         fhir:code [ fhir:v "24301000087100" ] ;
+         fhir:display [ fhir:v "especialidad en manejo del dolor crónico en geriatría" ]
+       ] [
+         fhir:code [ fhir:v "24311000087103" ] ;
+         fhir:display [ fhir:v "especialidad en medicina de adicción a narcóticos con manejo del dolor crónico" ]
+       ] [
+         fhir:code [ fhir:v "24361000087101" ] ;
+         fhir:display [ fhir:v "especialidad en manejo del dolor crónico en pediatría" ]
+       ] [
+         fhir:code [ fhir:v "25931000087108" ] ;
+         fhir:display [ fhir:v "medicina del adolescente" ]
+       ] [
+         fhir:code [ fhir:v "25991000087109" ] ;
+         fhir:display [ fhir:v "farmacología y toxicología clínica" ]
+       ] [
+         fhir:code [ fhir:v "26001000087108" ] ;
+         fhir:display [ fhir:v "especialidad pediátrica del desarrollo" ]
+       ] [
+         fhir:code [ fhir:v "26011000087105" ] ;
+         fhir:display [ fhir:v "patología forense" ]
+       ] [
+         fhir:code [ fhir:v "26041000087106" ] ;
+         fhir:display [ fhir:v "radiología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "26051000087109" ] ;
+         fhir:display [ fhir:v "perinatología" ]
+       ] [
+         fhir:code [ fhir:v "26081000087101" ] ;
+         fhir:display [ fhir:v "salud pública y medicina preventiva" ]
+       ] [
+         fhir:code [ fhir:v "28351000087106" ] ;
+         fhir:display [ fhir:v "especialidad en adicciones" ]
+       ] [
+         fhir:code [ fhir:v "28551000087103" ] ;
+         fhir:display [ fhir:v "especialidad en medicina musculoesquelética" ]
+       ] [
+         fhir:code [ fhir:v "357541000267105" ] ;
+         fhir:display [ fhir:v "radiología oral y maxilofacial" ]
+       ] [
+         fhir:code [ fhir:v "357571000267100" ] ;
+         fhir:display [ fhir:v "patología oral y maxilofacial" ]
+       ] [
+         fhir:code [ fhir:v "394537008" ] ;
+         fhir:display [ fhir:v "especialidad pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "394538003" ] ;
+         fhir:display [ fhir:v "neurología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "394539006" ] ;
+         fhir:display [ fhir:v "cirugía pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "394577000" ] ;
+         fhir:display [ fhir:v "anestesiología" ]
+       ] [
+         fhir:code [ fhir:v "394578005" ] ;
+         fhir:display [ fhir:v "audiología" ]
+       ] [
+         fhir:code [ fhir:v "394579002" ] ;
+         fhir:display [ fhir:v "cardiología" ]
+       ] [
+         fhir:code [ fhir:v "394580004" ] ;
+         fhir:display [ fhir:v "genética clínica" ]
+       ] [
+         fhir:code [ fhir:v "394581000" ] ;
+         fhir:display [ fhir:v "medicina comunitaria" ]
+       ] [
+         fhir:code [ fhir:v "394582007" ] ;
+         fhir:display [ fhir:v "dermatología" ]
+       ] [
+         fhir:code [ fhir:v "394583002" ] ;
+         fhir:display [ fhir:v "endocrinología" ]
+       ] [
+         fhir:code [ fhir:v "394584008" ] ;
+         fhir:display [ fhir:v "gastroenterología" ]
+       ] [
+         fhir:code [ fhir:v "394585009" ] ;
+         fhir:display [ fhir:v "obstetricia y ginecología" ]
+       ] [
+         fhir:code [ fhir:v "394586005" ] ;
+         fhir:display [ fhir:v "ginecología" ]
+       ] [
+         fhir:code [ fhir:v "394587001" ] ;
+         fhir:display [ fhir:v "psiquiatría" ]
+       ] [
+         fhir:code [ fhir:v "394588006" ] ;
+         fhir:display [ fhir:v "psiquiatría infantojuvenil" ]
+       ] [
+         fhir:code [ fhir:v "394589003" ] ;
+         fhir:display [ fhir:v "nefrología" ]
+       ] [
+         fhir:code [ fhir:v "394591006" ] ;
+         fhir:display [ fhir:v "neurología" ]
+       ] [
+         fhir:code [ fhir:v "394592004" ] ;
+         fhir:display [ fhir:v "oncología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394593009" ] ;
+         fhir:display [ fhir:v "oncología médica" ]
+       ] [
+         fhir:code [ fhir:v "394594003" ] ;
+         fhir:display [ fhir:v "oftalmología" ]
+       ] [
+         fhir:code [ fhir:v "394595002" ] ;
+         fhir:display [ fhir:v "patología" ]
+       ] [
+         fhir:code [ fhir:v "394596001" ] ;
+         fhir:display [ fhir:v "bioquímica clínica" ]
+       ] [
+         fhir:code [ fhir:v "394597005" ] ;
+         fhir:display [ fhir:v "histopatología" ]
+       ] [
+         fhir:code [ fhir:v "394598000" ] ;
+         fhir:display [ fhir:v "inmunopatología" ]
+       ] [
+         fhir:code [ fhir:v "394599008" ] ;
+         fhir:display [ fhir:v "neuropatología" ]
+       ] [
+         fhir:code [ fhir:v "394600006" ] ;
+         fhir:display [ fhir:v "farmacología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394601005" ] ;
+         fhir:display [ fhir:v "fisiología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394602003" ] ;
+         fhir:display [ fhir:v "rehabilitación - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "394603008" ] ;
+         fhir:display [ fhir:v "cirugía cardiotorácica" ]
+       ] [
+         fhir:code [ fhir:v "394604002" ] ;
+         fhir:display [ fhir:v "cirugía otorrinolaringológica" ]
+       ] [
+         fhir:code [ fhir:v "394605001" ] ;
+         fhir:display [ fhir:v "cirugía oral" ]
+       ] [
+         fhir:code [ fhir:v "394606000" ] ;
+         fhir:display [ fhir:v "odontología restauradora" ]
+       ] [
+         fhir:code [ fhir:v "394607009" ] ;
+         fhir:display [ fhir:v "odontología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "394608004" ] ;
+         fhir:display [ fhir:v "ortodoncia" ]
+       ] [
+         fhir:code [ fhir:v "394609007" ] ;
+         fhir:display [ fhir:v "cirugía general" ]
+       ] [
+         fhir:code [ fhir:v "394610002" ] ;
+         fhir:display [ fhir:v "neurocirugía" ]
+       ] [
+         fhir:code [ fhir:v "394611003" ] ;
+         fhir:display [ fhir:v "cirugía plástica - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "394612005" ] ;
+         fhir:display [ fhir:v "urología" ]
+       ] [
+         fhir:code [ fhir:v "394649004" ] ;
+         fhir:display [ fhir:v "medicina nuclear - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "394658006" ] ;
+         fhir:display [ fhir:v "especialidad clínica" ]
+       ] [
+         fhir:code [ fhir:v "394732004" ] ;
+         fhir:display [ fhir:v "especialidad quirúrgica" ]
+       ] [
+         fhir:code [ fhir:v "394733009" ] ;
+         fhir:display [ fhir:v "especialidad médica" ]
+       ] [
+         fhir:code [ fhir:v "394734003" ] ;
+         fhir:display [ fhir:v "especialidades radiológicas" ]
+       ] [
+         fhir:code [ fhir:v "394801008" ] ;
+         fhir:display [ fhir:v "traumatología y ortopedia" ]
+       ] [
+         fhir:code [ fhir:v "394802001" ] ;
+         fhir:display [ fhir:v "medicina general" ]
+       ] [
+         fhir:code [ fhir:v "394803006" ] ;
+         fhir:display [ fhir:v "hematología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394804000" ] ;
+         fhir:display [ fhir:v "citogenética clínica y genética molecular" ]
+       ] [
+         fhir:code [ fhir:v "394805004" ] ;
+         fhir:display [ fhir:v "inmunología clínica/alergia" ]
+       ] [
+         fhir:code [ fhir:v "394806003" ] ;
+         fhir:display [ fhir:v "medicina paliativa" ]
+       ] [
+         fhir:code [ fhir:v "394807007" ] ;
+         fhir:display [ fhir:v "infectología" ]
+       ] [
+         fhir:code [ fhir:v "394808002" ] ;
+         fhir:display [ fhir:v "medicina genitourinaria" ]
+       ] [
+         fhir:code [ fhir:v "394809005" ] ;
+         fhir:display [ fhir:v "neurofisiología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394810000" ] ;
+         fhir:display [ fhir:v "reumatología" ]
+       ] [
+         fhir:code [ fhir:v "394811001" ] ;
+         fhir:display [ fhir:v "geriatría" ]
+       ] [
+         fhir:code [ fhir:v "394813003" ] ;
+         fhir:display [ fhir:v "oftalmología clínica" ]
+       ] [
+         fhir:code [ fhir:v "394814009" ] ;
+         fhir:display [ fhir:v "medicina familiar/general (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394816006" ] ;
+         fhir:display [ fhir:v "enfermedades mentales (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394817002" ] ;
+         fhir:display [ fhir:v "psiquiatría forense" ]
+       ] [
+         fhir:code [ fhir:v "394818007" ] ;
+         fhir:display [ fhir:v "gerontopsiquiatría" ]
+       ] [
+         fhir:code [ fhir:v "394819004" ] ;
+         fhir:display [ fhir:v "hemoterapia (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394820005" ] ;
+         fhir:display [ fhir:v "microbiología médica" ]
+       ] [
+         fhir:code [ fhir:v "394821009" ] ;
+         fhir:display [ fhir:v "medicina laboral" ]
+       ] [
+         fhir:code [ fhir:v "394882004" ] ;
+         fhir:display [ fhir:v "manejo del dolor (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394913002" ] ;
+         fhir:display [ fhir:v "psicoterapia (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394914008" ] ;
+         fhir:display [ fhir:v "radiología - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "394915009" ] ;
+         fhir:display [ fhir:v "patología general (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "394916005" ] ;
+         fhir:display [ fhir:v "hematopatología (especialidad)" ]
+       ] [
+         fhir:code [ fhir:v "408439002" ] ;
+         fhir:display [ fhir:v "especialidad en alergia" ]
+       ] [
+         fhir:code [ fhir:v "408440000" ] ;
+         fhir:display [ fhir:v "medicina sanitaria" ]
+       ] [
+         fhir:code [ fhir:v "408441001" ] ;
+         fhir:display [ fhir:v "endodoncia - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408442008" ] ;
+         fhir:display [ fhir:v "hemofilia - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408443003" ] ;
+         fhir:display [ fhir:v "consultorio de medicina general" ]
+       ] [
+         fhir:code [ fhir:v "408444009" ] ;
+         fhir:display [ fhir:v "práctica odontológica general" ]
+       ] [
+         fhir:code [ fhir:v "408445005" ] ;
+         fhir:display [ fhir:v "neonatología" ]
+       ] [
+         fhir:code [ fhir:v "408446006" ] ;
+         fhir:display [ fhir:v "oncología ginecológica" ]
+       ] [
+         fhir:code [ fhir:v "408447002" ] ;
+         fhir:display [ fhir:v "cuidado de relevo - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408448007" ] ;
+         fhir:display [ fhir:v "medicina tropical" ]
+       ] [
+         fhir:code [ fhir:v "408449004" ] ;
+         fhir:display [ fhir:v "odontología quirúrgica" ]
+       ] [
+         fhir:code [ fhir:v "408450004" ] ;
+         fhir:display [ fhir:v "estudios de sueño - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408454008" ] ;
+         fhir:display [ fhir:v "microbiología clínica" ]
+       ] [
+         fhir:code [ fhir:v "408455009" ] ;
+         fhir:display [ fhir:v "radiología intervencionista - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408456005" ] ;
+         fhir:display [ fhir:v "cirugía torácica" ]
+       ] [
+         fhir:code [ fhir:v "408457001" ] ;
+         fhir:display [ fhir:v "cirugía maxilofacial" ]
+       ] [
+         fhir:code [ fhir:v "408459003" ] ;
+         fhir:display [ fhir:v "cardiología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "408460008" ] ;
+         fhir:display [ fhir:v "prostodoncia" ]
+       ] [
+         fhir:code [ fhir:v "408461007" ] ;
+         fhir:display [ fhir:v "periodoncia" ]
+       ] [
+         fhir:code [ fhir:v "408462000" ] ;
+         fhir:display [ fhir:v "atención de quemaduras" ]
+       ] [
+         fhir:code [ fhir:v "408463005" ] ;
+         fhir:display [ fhir:v "cirugía vascular" ]
+       ] [
+         fhir:code [ fhir:v "408464004" ] ;
+         fhir:display [ fhir:v "cirugía colorrectal" ]
+       ] [
+         fhir:code [ fhir:v "408465003" ] ;
+         fhir:display [ fhir:v "cirugía bucomaxilofacial" ]
+       ] [
+         fhir:code [ fhir:v "408466002" ] ;
+         fhir:display [ fhir:v "cirugía cardíaca" ]
+       ] [
+         fhir:code [ fhir:v "408467006" ] ;
+         fhir:display [ fhir:v "psiquiatría del adulto - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408468001" ] ;
+         fhir:display [ fhir:v "dificultades de aprendizaje - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "408469009" ] ;
+         fhir:display [ fhir:v "cirugía de mama" ]
+       ] [
+         fhir:code [ fhir:v "408470005" ] ;
+         fhir:display [ fhir:v "obstetricia" ]
+       ] [
+         fhir:code [ fhir:v "408471009" ] ;
+         fhir:display [ fhir:v "trasplante cardiotorácico" ]
+       ] [
+         fhir:code [ fhir:v "408472002" ] ;
+         fhir:display [ fhir:v "hepatología" ]
+       ] [
+         fhir:code [ fhir:v "408473007" ] ;
+         fhir:display [ fhir:v "odontología sanitaria" ]
+       ] [
+         fhir:code [ fhir:v "408474001" ] ;
+         fhir:display [ fhir:v "cirugía hepatobiliar y pancreática" ]
+       ] [
+         fhir:code [ fhir:v "408475000" ] ;
+         fhir:display [ fhir:v "diabetología" ]
+       ] [
+         fhir:code [ fhir:v "408477008" ] ;
+         fhir:display [ fhir:v "cirugía de trasplante" ]
+       ] [
+         fhir:code [ fhir:v "408478003" ] ;
+         fhir:display [ fhir:v "medicina crítica" ]
+       ] [
+         fhir:code [ fhir:v "408479006" ] ;
+         fhir:display [ fhir:v "cirugía de porción superior de tracto gastrointestinal" ]
+       ] [
+         fhir:code [ fhir:v "408480009" ] ;
+         fhir:display [ fhir:v "inmunología clínica" ]
+       ] [
+         fhir:code [ fhir:v "409967009" ] ;
+         fhir:display [ fhir:v "toxicología" ]
+       ] [
+         fhir:code [ fhir:v "409968004" ] ;
+         fhir:display [ fhir:v "medicina preventiva" ]
+       ] [
+         fhir:code [ fhir:v "410001006" ] ;
+         fhir:display [ fhir:v "medicina militar" ]
+       ] [
+         fhir:code [ fhir:v "410005002" ] ;
+         fhir:display [ fhir:v "medicina hiperbárica" ]
+       ] [
+         fhir:code [ fhir:v "416304004" ] ;
+         fhir:display [ fhir:v "medicina osteopática manipulativa" ]
+       ] [
+         fhir:code [ fhir:v "417887005" ] ;
+         fhir:display [ fhir:v "otolaringología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "418002000" ] ;
+         fhir:display [ fhir:v "oncología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "418018006" ] ;
+         fhir:display [ fhir:v "cirugía dermatológica" ]
+       ] [
+         fhir:code [ fhir:v "418058008" ] ;
+         fhir:display [ fhir:v "gastroenterología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "418112009" ] ;
+         fhir:display [ fhir:v "neumonología" ]
+       ] [
+         fhir:code [ fhir:v "418535003" ] ;
+         fhir:display [ fhir:v "inmunología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "418652005" ] ;
+         fhir:display [ fhir:v "hematología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "418862001" ] ;
+         fhir:display [ fhir:v "enfermedades infecciosas pediátricas" ]
+       ] [
+         fhir:code [ fhir:v "418960008" ] ;
+         fhir:display [ fhir:v "otolaringología" ]
+       ] [
+         fhir:code [ fhir:v "419043006" ] ;
+         fhir:display [ fhir:v "oncología urológica" ]
+       ] [
+         fhir:code [ fhir:v "419170002" ] ;
+         fhir:display [ fhir:v "neumonología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419192003" ] ;
+         fhir:display [ fhir:v "medicina interna" ]
+       ] [
+         fhir:code [ fhir:v "419215006" ] ;
+         fhir:display [ fhir:v "cuidados intensivos pediátricos" ]
+       ] [
+         fhir:code [ fhir:v "419321007" ] ;
+         fhir:display [ fhir:v "oncología quirúrgica" ]
+       ] [
+         fhir:code [ fhir:v "419365004" ] ;
+         fhir:display [ fhir:v "nefrología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419472004" ] ;
+         fhir:display [ fhir:v "reumatología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419610006" ] ;
+         fhir:display [ fhir:v "endocrinología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419677000" ] ;
+         fhir:display [ fhir:v "oncología neurológica pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419772000" ] ;
+         fhir:display [ fhir:v "medicina familiar" ]
+       ] [
+         fhir:code [ fhir:v "419815003" ] ;
+         fhir:display [ fhir:v "radioncología" ]
+       ] [
+         fhir:code [ fhir:v "419917007" ] ;
+         fhir:display [ fhir:v "emergentología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "419983000" ] ;
+         fhir:display [ fhir:v "oftalmología pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "420112009" ] ;
+         fhir:display [ fhir:v "trasplante de médula ósea pediátrico" ]
+       ] [
+         fhir:code [ fhir:v "420208008" ] ;
+         fhir:display [ fhir:v "genética pediátrica" ]
+       ] [
+         fhir:code [ fhir:v "420419008" ] ;
+         fhir:display [ fhir:v "especialidad en cirugía de estrabismo" ]
+       ] [
+         fhir:code [ fhir:v "420708009" ] ;
+         fhir:display [ fhir:v "especialidad en cirugía refractiva" ]
+       ] [
+         fhir:code [ fhir:v "420985004" ] ;
+         fhir:display [ fhir:v "cirugía vitreorretiniana - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "421582004" ] ;
+         fhir:display [ fhir:v "cirugía de córnea - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "421661004" ] ;
+         fhir:display [ fhir:v "banco de sangre y medicina transfusional - especialidad" ]
+       ] [
+         fhir:code [ fhir:v "421885009" ] ;
+         fhir:display [ fhir:v "especialidad de oftalmología, cirugía de glaucoma" ]
+       ] [
+         fhir:code [ fhir:v "422171003" ] ;
+         fhir:display [ fhir:v "cirugía plástica oftálmica" ]
+       ] [
+         fhir:code [ fhir:v "422191005" ] ;
+         fhir:display [ fhir:v "cirugía oftálmica" ]
+       ] [
+         fhir:code [ fhir:v "422349000" ] ;
+         fhir:display [ fhir:v "especialidad en cirugía de cataratas" ]
+       ] [
+         fhir:code [ fhir:v "445715009" ] ;
+         fhir:display [ fhir:v "trasplante de sangre y médula ósea" ]
+       ] [
+         fhir:code [ fhir:v "715184008" ] ;
+         fhir:display [ fhir:v "medicina aeroespacial" ]
+       ] [
+         fhir:code [ fhir:v "718359001" ] ;
+         fhir:display [ fhir:v "medicina regenerativa" ]
+       ] [
+         fhir:code [ fhir:v "721961006" ] ;
+         fhir:display [ fhir:v "medicina psicosomática" ]
+       ] [
+         fhir:code [ fhir:v "722138006" ] ;
+         fhir:display [ fhir:v "fisioterapia" ]
+       ] [
+         fhir:code [ fhir:v "722162001" ] ;
+         fhir:display [ fhir:v "psicología" ]
+       ] [
+         fhir:code [ fhir:v "722163006" ] ;
+         fhir:display [ fhir:v "odontología" ]
+       ] [
+         fhir:code [ fhir:v "722164000" ] ;
+         fhir:display [ fhir:v "dietética y nutrición" ]
+       ] [
+         fhir:code [ fhir:v "722165004" ] ;
+         fhir:display [ fhir:v "enfermería" ]
+       ] [
+         fhir:code [ fhir:v "722166003" ] ;
+         fhir:display [ fhir:v "podología" ]
+       ] [
+         fhir:code [ fhir:v "722204007" ] ;
+         fhir:display [ fhir:v "medicina legal" ]
+       ] [
+         fhir:code [ fhir:v "722414000" ] ;
+         fhir:display [ fhir:v "medicina vascular" ]
+       ] [
+         fhir:code [ fhir:v "773568002" ] ;
+         fhir:display [ fhir:v "medicina de emergencias" ]
+       ] [
+         fhir:code [ fhir:v "786454007" ] ;
+         fhir:display [ fhir:v "medicina perioperatoria" ]
+       ] [
+         fhir:code [ fhir:v "788415003" ] ;
+         fhir:display [ fhir:v "medicina de trasplantes" ]
+       ] [
+         fhir:code [ fhir:v "92041000087100" ] ;
+         fhir:display [ fhir:v "gastroenterología de adultos" ]
+       ] [
+         fhir:code [ fhir:v "92231000087100" ] ;
+         fhir:display [ fhir:v "especialidad en manejo de dolor crónico" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

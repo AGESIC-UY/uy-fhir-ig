@@ -1,0 +1,397 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-codigos-postales-uy"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SistemaDeCodigos cs-codigos-postales-uy</b></p><a name=\"cs-codigos-postales-uy\"> </a><a name=\"hccs-codigos-postales-uy\"> </a><p>This case-sensitive code system <code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">11000<a name=\"cs-codigos-postales-uy-11000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11100<a name=\"cs-codigos-postales-uy-11100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11200<a name=\"cs-codigos-postales-uy-11200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11300<a name=\"cs-codigos-postales-uy-11300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11400<a name=\"cs-codigos-postales-uy-11400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11500<a name=\"cs-codigos-postales-uy-11500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11600<a name=\"cs-codigos-postales-uy-11600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11700<a name=\"cs-codigos-postales-uy-11700\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11800<a name=\"cs-codigos-postales-uy-11800\"> </a></td></tr><tr><td style=\"white-space:nowrap\">11900<a name=\"cs-codigos-postales-uy-11900\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12000<a name=\"cs-codigos-postales-uy-12000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12100<a name=\"cs-codigos-postales-uy-12100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12300<a name=\"cs-codigos-postales-uy-12300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12400<a name=\"cs-codigos-postales-uy-12400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12500<a name=\"cs-codigos-postales-uy-12500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12600<a name=\"cs-codigos-postales-uy-12600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12800<a name=\"cs-codigos-postales-uy-12800\"> </a></td></tr><tr><td style=\"white-space:nowrap\">12900<a name=\"cs-codigos-postales-uy-12900\"> </a></td></tr><tr><td style=\"white-space:nowrap\">13000<a name=\"cs-codigos-postales-uy-13000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15000<a name=\"cs-codigos-postales-uy-15000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15100<a name=\"cs-codigos-postales-uy-15100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15200<a name=\"cs-codigos-postales-uy-15200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15300<a name=\"cs-codigos-postales-uy-15300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15400<a name=\"cs-codigos-postales-uy-15400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15500<a name=\"cs-codigos-postales-uy-15500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15600<a name=\"cs-codigos-postales-uy-15600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15700<a name=\"cs-codigos-postales-uy-15700\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15800<a name=\"cs-codigos-postales-uy-15800\"> </a></td></tr><tr><td style=\"white-space:nowrap\">15900<a name=\"cs-codigos-postales-uy-15900\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20000<a name=\"cs-codigos-postales-uy-20000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20100<a name=\"cs-codigos-postales-uy-20100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20200<a name=\"cs-codigos-postales-uy-20200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20300<a name=\"cs-codigos-postales-uy-20300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20400<a name=\"cs-codigos-postales-uy-20400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">20500<a name=\"cs-codigos-postales-uy-20500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">27000<a name=\"cs-codigos-postales-uy-27000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">27100<a name=\"cs-codigos-postales-uy-27100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">27200<a name=\"cs-codigos-postales-uy-27200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">27300<a name=\"cs-codigos-postales-uy-27300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">27400<a name=\"cs-codigos-postales-uy-27400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">30000<a name=\"cs-codigos-postales-uy-30000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">30100<a name=\"cs-codigos-postales-uy-30100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">30300<a name=\"cs-codigos-postales-uy-30300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">31100<a name=\"cs-codigos-postales-uy-31100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">33000<a name=\"cs-codigos-postales-uy-33000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">34100<a name=\"cs-codigos-postales-uy-34100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">34200<a name=\"cs-codigos-postales-uy-34200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">35100<a name=\"cs-codigos-postales-uy-35100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">35200<a name=\"cs-codigos-postales-uy-35200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">35300<a name=\"cs-codigos-postales-uy-35300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">36100<a name=\"cs-codigos-postales-uy-36100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">36200<a name=\"cs-codigos-postales-uy-36200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">37000<a name=\"cs-codigos-postales-uy-37000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">37100<a name=\"cs-codigos-postales-uy-37100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">40000<a name=\"cs-codigos-postales-uy-40000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">40100<a name=\"cs-codigos-postales-uy-40100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">40200<a name=\"cs-codigos-postales-uy-40200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">41100<a name=\"cs-codigos-postales-uy-41100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">41200<a name=\"cs-codigos-postales-uy-41200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">45000<a name=\"cs-codigos-postales-uy-45000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">45100<a name=\"cs-codigos-postales-uy-45100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">45200<a name=\"cs-codigos-postales-uy-45200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">50000<a name=\"cs-codigos-postales-uy-50000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">50100<a name=\"cs-codigos-postales-uy-50100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">50200<a name=\"cs-codigos-postales-uy-50200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">55000<a name=\"cs-codigos-postales-uy-55000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">55100<a name=\"cs-codigos-postales-uy-55100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">60000<a name=\"cs-codigos-postales-uy-60000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">60100<a name=\"cs-codigos-postales-uy-60100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">60200<a name=\"cs-codigos-postales-uy-60200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">60300<a name=\"cs-codigos-postales-uy-60300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">65000<a name=\"cs-codigos-postales-uy-65000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">65100<a name=\"cs-codigos-postales-uy-65100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70000<a name=\"cs-codigos-postales-uy-70000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70100<a name=\"cs-codigos-postales-uy-70100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70200<a name=\"cs-codigos-postales-uy-70200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70300<a name=\"cs-codigos-postales-uy-70300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70400<a name=\"cs-codigos-postales-uy-70400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70500<a name=\"cs-codigos-postales-uy-70500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70600<a name=\"cs-codigos-postales-uy-70600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70700<a name=\"cs-codigos-postales-uy-70700\"> </a></td></tr><tr><td style=\"white-space:nowrap\">70800<a name=\"cs-codigos-postales-uy-70800\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75000<a name=\"cs-codigos-postales-uy-75000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75100<a name=\"cs-codigos-postales-uy-75100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75200<a name=\"cs-codigos-postales-uy-75200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75300<a name=\"cs-codigos-postales-uy-75300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75400<a name=\"cs-codigos-postales-uy-75400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">75500<a name=\"cs-codigos-postales-uy-75500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80000<a name=\"cs-codigos-postales-uy-80000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80100<a name=\"cs-codigos-postales-uy-80100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80200<a name=\"cs-codigos-postales-uy-80200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80300<a name=\"cs-codigos-postales-uy-80300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80400<a name=\"cs-codigos-postales-uy-80400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">80500<a name=\"cs-codigos-postales-uy-80500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">85000<a name=\"cs-codigos-postales-uy-85000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">90000<a name=\"cs-codigos-postales-uy-90000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">90100<a name=\"cs-codigos-postales-uy-90100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">90200<a name=\"cs-codigos-postales-uy-90200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91100<a name=\"cs-codigos-postales-uy-91100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91200<a name=\"cs-codigos-postales-uy-91200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91300<a name=\"cs-codigos-postales-uy-91300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91400<a name=\"cs-codigos-postales-uy-91400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91500<a name=\"cs-codigos-postales-uy-91500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91600<a name=\"cs-codigos-postales-uy-91600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91700<a name=\"cs-codigos-postales-uy-91700\"> </a></td></tr><tr><td style=\"white-space:nowrap\">91800<a name=\"cs-codigos-postales-uy-91800\"> </a></td></tr><tr><td style=\"white-space:nowrap\">94000<a name=\"cs-codigos-postales-uy-94000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">94100<a name=\"cs-codigos-postales-uy-94100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95100<a name=\"cs-codigos-postales-uy-95100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95200<a name=\"cs-codigos-postales-uy-95200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95300<a name=\"cs-codigos-postales-uy-95300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95400<a name=\"cs-codigos-postales-uy-95400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95500<a name=\"cs-codigos-postales-uy-95500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">95600<a name=\"cs-codigos-postales-uy-95600\"> </a></td></tr><tr><td style=\"white-space:nowrap\">96100<a name=\"cs-codigos-postales-uy-96100\"> </a></td></tr><tr><td style=\"white-space:nowrap\">96200<a name=\"cs-codigos-postales-uy-96200\"> </a></td></tr><tr><td style=\"white-space:nowrap\">96300<a name=\"cs-codigos-postales-uy-96300\"> </a></td></tr><tr><td style=\"white-space:nowrap\">96400<a name=\"cs-codigos-postales-uy-96400\"> </a></td></tr><tr><td style=\"white-space:nowrap\">96500<a name=\"cs-codigos-postales-uy-96500\"> </a></td></tr><tr><td style=\"white-space:nowrap\">97000<a name=\"cs-codigos-postales-uy-97000\"> </a></td></tr><tr><td style=\"white-space:nowrap\">98000<a name=\"cs-codigos-postales-uy-98000\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSCodigosPostalesUY"] ; # 
+  fhir:title [ fhir:v "Sistema de códigos postales de Uruguay"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Códigos postales vigentes publicados por el Correo Uruguayo."] ; # 
+  fhir:copyright [ fhir:v "Fuente: Correo Uruguayo, listado de códigos postales consultado el 2026-09-21."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "121"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "11000" ] ;
+     fhir:display [ fhir:v "11000" ]
+  ] [
+     fhir:code [ fhir:v "11100" ] ;
+     fhir:display [ fhir:v "11100" ]
+  ] [
+     fhir:code [ fhir:v "11200" ] ;
+     fhir:display [ fhir:v "11200" ]
+  ] [
+     fhir:code [ fhir:v "11300" ] ;
+     fhir:display [ fhir:v "11300" ]
+  ] [
+     fhir:code [ fhir:v "11400" ] ;
+     fhir:display [ fhir:v "11400" ]
+  ] [
+     fhir:code [ fhir:v "11500" ] ;
+     fhir:display [ fhir:v "11500" ]
+  ] [
+     fhir:code [ fhir:v "11600" ] ;
+     fhir:display [ fhir:v "11600" ]
+  ] [
+     fhir:code [ fhir:v "11700" ] ;
+     fhir:display [ fhir:v "11700" ]
+  ] [
+     fhir:code [ fhir:v "11800" ] ;
+     fhir:display [ fhir:v "11800" ]
+  ] [
+     fhir:code [ fhir:v "11900" ] ;
+     fhir:display [ fhir:v "11900" ]
+  ] [
+     fhir:code [ fhir:v "12000" ] ;
+     fhir:display [ fhir:v "12000" ]
+  ] [
+     fhir:code [ fhir:v "12100" ] ;
+     fhir:display [ fhir:v "12100" ]
+  ] [
+     fhir:code [ fhir:v "12300" ] ;
+     fhir:display [ fhir:v "12300" ]
+  ] [
+     fhir:code [ fhir:v "12400" ] ;
+     fhir:display [ fhir:v "12400" ]
+  ] [
+     fhir:code [ fhir:v "12500" ] ;
+     fhir:display [ fhir:v "12500" ]
+  ] [
+     fhir:code [ fhir:v "12600" ] ;
+     fhir:display [ fhir:v "12600" ]
+  ] [
+     fhir:code [ fhir:v "12800" ] ;
+     fhir:display [ fhir:v "12800" ]
+  ] [
+     fhir:code [ fhir:v "12900" ] ;
+     fhir:display [ fhir:v "12900" ]
+  ] [
+     fhir:code [ fhir:v "13000" ] ;
+     fhir:display [ fhir:v "13000" ]
+  ] [
+     fhir:code [ fhir:v "15000" ] ;
+     fhir:display [ fhir:v "15000" ]
+  ] [
+     fhir:code [ fhir:v "15100" ] ;
+     fhir:display [ fhir:v "15100" ]
+  ] [
+     fhir:code [ fhir:v "15200" ] ;
+     fhir:display [ fhir:v "15200" ]
+  ] [
+     fhir:code [ fhir:v "15300" ] ;
+     fhir:display [ fhir:v "15300" ]
+  ] [
+     fhir:code [ fhir:v "15400" ] ;
+     fhir:display [ fhir:v "15400" ]
+  ] [
+     fhir:code [ fhir:v "15500" ] ;
+     fhir:display [ fhir:v "15500" ]
+  ] [
+     fhir:code [ fhir:v "15600" ] ;
+     fhir:display [ fhir:v "15600" ]
+  ] [
+     fhir:code [ fhir:v "15700" ] ;
+     fhir:display [ fhir:v "15700" ]
+  ] [
+     fhir:code [ fhir:v "15800" ] ;
+     fhir:display [ fhir:v "15800" ]
+  ] [
+     fhir:code [ fhir:v "15900" ] ;
+     fhir:display [ fhir:v "15900" ]
+  ] [
+     fhir:code [ fhir:v "20000" ] ;
+     fhir:display [ fhir:v "20000" ]
+  ] [
+     fhir:code [ fhir:v "20100" ] ;
+     fhir:display [ fhir:v "20100" ]
+  ] [
+     fhir:code [ fhir:v "20200" ] ;
+     fhir:display [ fhir:v "20200" ]
+  ] [
+     fhir:code [ fhir:v "20300" ] ;
+     fhir:display [ fhir:v "20300" ]
+  ] [
+     fhir:code [ fhir:v "20400" ] ;
+     fhir:display [ fhir:v "20400" ]
+  ] [
+     fhir:code [ fhir:v "20500" ] ;
+     fhir:display [ fhir:v "20500" ]
+  ] [
+     fhir:code [ fhir:v "27000" ] ;
+     fhir:display [ fhir:v "27000" ]
+  ] [
+     fhir:code [ fhir:v "27100" ] ;
+     fhir:display [ fhir:v "27100" ]
+  ] [
+     fhir:code [ fhir:v "27200" ] ;
+     fhir:display [ fhir:v "27200" ]
+  ] [
+     fhir:code [ fhir:v "27300" ] ;
+     fhir:display [ fhir:v "27300" ]
+  ] [
+     fhir:code [ fhir:v "27400" ] ;
+     fhir:display [ fhir:v "27400" ]
+  ] [
+     fhir:code [ fhir:v "30000" ] ;
+     fhir:display [ fhir:v "30000" ]
+  ] [
+     fhir:code [ fhir:v "30100" ] ;
+     fhir:display [ fhir:v "30100" ]
+  ] [
+     fhir:code [ fhir:v "30300" ] ;
+     fhir:display [ fhir:v "30300" ]
+  ] [
+     fhir:code [ fhir:v "31100" ] ;
+     fhir:display [ fhir:v "31100" ]
+  ] [
+     fhir:code [ fhir:v "33000" ] ;
+     fhir:display [ fhir:v "33000" ]
+  ] [
+     fhir:code [ fhir:v "34100" ] ;
+     fhir:display [ fhir:v "34100" ]
+  ] [
+     fhir:code [ fhir:v "34200" ] ;
+     fhir:display [ fhir:v "34200" ]
+  ] [
+     fhir:code [ fhir:v "35100" ] ;
+     fhir:display [ fhir:v "35100" ]
+  ] [
+     fhir:code [ fhir:v "35200" ] ;
+     fhir:display [ fhir:v "35200" ]
+  ] [
+     fhir:code [ fhir:v "35300" ] ;
+     fhir:display [ fhir:v "35300" ]
+  ] [
+     fhir:code [ fhir:v "36100" ] ;
+     fhir:display [ fhir:v "36100" ]
+  ] [
+     fhir:code [ fhir:v "36200" ] ;
+     fhir:display [ fhir:v "36200" ]
+  ] [
+     fhir:code [ fhir:v "37000" ] ;
+     fhir:display [ fhir:v "37000" ]
+  ] [
+     fhir:code [ fhir:v "37100" ] ;
+     fhir:display [ fhir:v "37100" ]
+  ] [
+     fhir:code [ fhir:v "40000" ] ;
+     fhir:display [ fhir:v "40000" ]
+  ] [
+     fhir:code [ fhir:v "40100" ] ;
+     fhir:display [ fhir:v "40100" ]
+  ] [
+     fhir:code [ fhir:v "40200" ] ;
+     fhir:display [ fhir:v "40200" ]
+  ] [
+     fhir:code [ fhir:v "41100" ] ;
+     fhir:display [ fhir:v "41100" ]
+  ] [
+     fhir:code [ fhir:v "41200" ] ;
+     fhir:display [ fhir:v "41200" ]
+  ] [
+     fhir:code [ fhir:v "45000" ] ;
+     fhir:display [ fhir:v "45000" ]
+  ] [
+     fhir:code [ fhir:v "45100" ] ;
+     fhir:display [ fhir:v "45100" ]
+  ] [
+     fhir:code [ fhir:v "45200" ] ;
+     fhir:display [ fhir:v "45200" ]
+  ] [
+     fhir:code [ fhir:v "50000" ] ;
+     fhir:display [ fhir:v "50000" ]
+  ] [
+     fhir:code [ fhir:v "50100" ] ;
+     fhir:display [ fhir:v "50100" ]
+  ] [
+     fhir:code [ fhir:v "50200" ] ;
+     fhir:display [ fhir:v "50200" ]
+  ] [
+     fhir:code [ fhir:v "55000" ] ;
+     fhir:display [ fhir:v "55000" ]
+  ] [
+     fhir:code [ fhir:v "55100" ] ;
+     fhir:display [ fhir:v "55100" ]
+  ] [
+     fhir:code [ fhir:v "60000" ] ;
+     fhir:display [ fhir:v "60000" ]
+  ] [
+     fhir:code [ fhir:v "60100" ] ;
+     fhir:display [ fhir:v "60100" ]
+  ] [
+     fhir:code [ fhir:v "60200" ] ;
+     fhir:display [ fhir:v "60200" ]
+  ] [
+     fhir:code [ fhir:v "60300" ] ;
+     fhir:display [ fhir:v "60300" ]
+  ] [
+     fhir:code [ fhir:v "65000" ] ;
+     fhir:display [ fhir:v "65000" ]
+  ] [
+     fhir:code [ fhir:v "65100" ] ;
+     fhir:display [ fhir:v "65100" ]
+  ] [
+     fhir:code [ fhir:v "70000" ] ;
+     fhir:display [ fhir:v "70000" ]
+  ] [
+     fhir:code [ fhir:v "70100" ] ;
+     fhir:display [ fhir:v "70100" ]
+  ] [
+     fhir:code [ fhir:v "70200" ] ;
+     fhir:display [ fhir:v "70200" ]
+  ] [
+     fhir:code [ fhir:v "70300" ] ;
+     fhir:display [ fhir:v "70300" ]
+  ] [
+     fhir:code [ fhir:v "70400" ] ;
+     fhir:display [ fhir:v "70400" ]
+  ] [
+     fhir:code [ fhir:v "70500" ] ;
+     fhir:display [ fhir:v "70500" ]
+  ] [
+     fhir:code [ fhir:v "70600" ] ;
+     fhir:display [ fhir:v "70600" ]
+  ] [
+     fhir:code [ fhir:v "70700" ] ;
+     fhir:display [ fhir:v "70700" ]
+  ] [
+     fhir:code [ fhir:v "70800" ] ;
+     fhir:display [ fhir:v "70800" ]
+  ] [
+     fhir:code [ fhir:v "75000" ] ;
+     fhir:display [ fhir:v "75000" ]
+  ] [
+     fhir:code [ fhir:v "75100" ] ;
+     fhir:display [ fhir:v "75100" ]
+  ] [
+     fhir:code [ fhir:v "75200" ] ;
+     fhir:display [ fhir:v "75200" ]
+  ] [
+     fhir:code [ fhir:v "75300" ] ;
+     fhir:display [ fhir:v "75300" ]
+  ] [
+     fhir:code [ fhir:v "75400" ] ;
+     fhir:display [ fhir:v "75400" ]
+  ] [
+     fhir:code [ fhir:v "75500" ] ;
+     fhir:display [ fhir:v "75500" ]
+  ] [
+     fhir:code [ fhir:v "80000" ] ;
+     fhir:display [ fhir:v "80000" ]
+  ] [
+     fhir:code [ fhir:v "80100" ] ;
+     fhir:display [ fhir:v "80100" ]
+  ] [
+     fhir:code [ fhir:v "80200" ] ;
+     fhir:display [ fhir:v "80200" ]
+  ] [
+     fhir:code [ fhir:v "80300" ] ;
+     fhir:display [ fhir:v "80300" ]
+  ] [
+     fhir:code [ fhir:v "80400" ] ;
+     fhir:display [ fhir:v "80400" ]
+  ] [
+     fhir:code [ fhir:v "80500" ] ;
+     fhir:display [ fhir:v "80500" ]
+  ] [
+     fhir:code [ fhir:v "85000" ] ;
+     fhir:display [ fhir:v "85000" ]
+  ] [
+     fhir:code [ fhir:v "90000" ] ;
+     fhir:display [ fhir:v "90000" ]
+  ] [
+     fhir:code [ fhir:v "90100" ] ;
+     fhir:display [ fhir:v "90100" ]
+  ] [
+     fhir:code [ fhir:v "90200" ] ;
+     fhir:display [ fhir:v "90200" ]
+  ] [
+     fhir:code [ fhir:v "91100" ] ;
+     fhir:display [ fhir:v "91100" ]
+  ] [
+     fhir:code [ fhir:v "91200" ] ;
+     fhir:display [ fhir:v "91200" ]
+  ] [
+     fhir:code [ fhir:v "91300" ] ;
+     fhir:display [ fhir:v "91300" ]
+  ] [
+     fhir:code [ fhir:v "91400" ] ;
+     fhir:display [ fhir:v "91400" ]
+  ] [
+     fhir:code [ fhir:v "91500" ] ;
+     fhir:display [ fhir:v "91500" ]
+  ] [
+     fhir:code [ fhir:v "91600" ] ;
+     fhir:display [ fhir:v "91600" ]
+  ] [
+     fhir:code [ fhir:v "91700" ] ;
+     fhir:display [ fhir:v "91700" ]
+  ] [
+     fhir:code [ fhir:v "91800" ] ;
+     fhir:display [ fhir:v "91800" ]
+  ] [
+     fhir:code [ fhir:v "94000" ] ;
+     fhir:display [ fhir:v "94000" ]
+  ] [
+     fhir:code [ fhir:v "94100" ] ;
+     fhir:display [ fhir:v "94100" ]
+  ] [
+     fhir:code [ fhir:v "95100" ] ;
+     fhir:display [ fhir:v "95100" ]
+  ] [
+     fhir:code [ fhir:v "95200" ] ;
+     fhir:display [ fhir:v "95200" ]
+  ] [
+     fhir:code [ fhir:v "95300" ] ;
+     fhir:display [ fhir:v "95300" ]
+  ] [
+     fhir:code [ fhir:v "95400" ] ;
+     fhir:display [ fhir:v "95400" ]
+  ] [
+     fhir:code [ fhir:v "95500" ] ;
+     fhir:display [ fhir:v "95500" ]
+  ] [
+     fhir:code [ fhir:v "95600" ] ;
+     fhir:display [ fhir:v "95600" ]
+  ] [
+     fhir:code [ fhir:v "96100" ] ;
+     fhir:display [ fhir:v "96100" ]
+  ] [
+     fhir:code [ fhir:v "96200" ] ;
+     fhir:display [ fhir:v "96200" ]
+  ] [
+     fhir:code [ fhir:v "96300" ] ;
+     fhir:display [ fhir:v "96300" ]
+  ] [
+     fhir:code [ fhir:v "96400" ] ;
+     fhir:display [ fhir:v "96400" ]
+  ] [
+     fhir:code [ fhir:v "96500" ] ;
+     fhir:display [ fhir:v "96500" ]
+  ] [
+     fhir:code [ fhir:v "97000" ] ;
+     fhir:display [ fhir:v "97000" ]
+  ] [
+     fhir:code [ fhir:v "98000" ] ;
+     fhir:display [ fhir:v "98000" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

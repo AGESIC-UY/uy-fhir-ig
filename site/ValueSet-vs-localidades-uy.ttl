@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-localidades-uy"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-localidades-uy</b></p><a name=\"vs-localidades-uy\"> </a><a name=\"hcvs-localidades-uy\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-localidades-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSLocalidadesUY"] ; # 
+  fhir:title [ fhir:v "Localidades de Uruguay"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Localidades de Uruguay publicadas en el catálogo de OSE, para vincular Address.city."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

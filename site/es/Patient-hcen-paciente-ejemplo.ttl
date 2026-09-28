@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Patient/hcen-paciente-ejemplo> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-paciente-ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>Ana Pérez Gómez. MRN-EJEMPLO-001. Registro activo; sexo administrativo femenino; nacimiento 20/05/1985.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "MR" ] ;
+         fhir:display [ fhir:v "Medical record number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.858.2.99999999.72768.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.2.99999999.72768.1>
+     ] ;
+     fhir:value [ fhir:v "MRN-EJEMPLO-001" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [
+       fhir:v "Pérez Gómez" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido"^^xsd:anyURI ;
+           fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Pérez"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido"^^xsd:anyURI ;
+           fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Gómez"
+         ]
+       ] )
+     ] ;
+     fhir:given ( [ fhir:v "Ana" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1985-05-20"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-barrios-localidades-uy"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-barrios-localidades-uy</b></p><a name="vs-barrios-localidades-uy"> </a><a name="hcvs-barrios-localidades-uy"> </a><ul><li>Include all codes defined in <a href="CodeSystem-cs-barrios-localidades-uy.html"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy"/>
+  <version value="0.1.0"/>
+  <name value="VSBarriosLocalidadesUY"/>
+  <title value="Barrios y localidades postales de Uruguay"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Barrios y localidades del listado del Correo Uruguayo, para vincular Address.district."/>
+  <compose>
+    <include>
+      <system value="http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy"/>
+    </include>
+  </compose>
+</ValueSet>

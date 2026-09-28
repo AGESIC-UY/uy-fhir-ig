@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-condition-category-cnu"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-condition-category-cnu</b></p><a name="vs-condition-category-cnu"> </a><a name="hcvs-condition-category-cnu"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/valueset-condition-category.html">Condition Category Codes</a></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/7611000179107">7611000179107</a></td><td>motivo-consulta</td></tr><tr><td><a href="http://snomed.info/id/439401001">439401001</a></td><td>diagnostico</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu"/>
+  <version value="0.1.0"/>
+  <name value="VSConditionCategoryCNU"/>
+  <title value="Conjunto de Valores Categoría de Condition (CNU)"/>
+  <status value="draft"/>
+  <date value="2026-09-28T15:20:04-03:00"/>
+  <publisher value="AGESIC"/>
+  <description value="Extiende el conjunto de valores base de Condition.category (problem-list-item, encounter-diagnosis) con los códigos SNOMED CT locales usados para motivo de consulta y diagnóstico en la Hoja de Consulta No Urgente."/>
+  <compose>
+    <include>
+      <valueSet value="http://hl7.org/fhir/ValueSet/condition-category"/>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="7611000179107"/>
+        <display value="motivo-consulta"/>
+      </concept>
+      <concept>
+        <code value="439401001"/>
+        <display value="diagnostico"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-tipo-procedimiento",
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-tipo-procedimiento</b></p><a name=\"vs-tipo-procedimiento\"> </a><a name=\"hcvs-tipo-procedimiento\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/71388002\">71388002</a></td><td>Procedure (procedure)</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-tipo-procedimiento",
+  "version" : "0.1.0",
+  "name" : "VSTipoProcedimiento",
+  "title" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
+  "status" : "draft",
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico, terapéutico). Contiene un código de ejemplo mientras se define el listado oficial.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "71388002",
+        "display" : "Procedure (procedure)"
+      }]
+    }]
+  }
+}

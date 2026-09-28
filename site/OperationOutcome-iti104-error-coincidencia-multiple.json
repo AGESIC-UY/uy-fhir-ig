@@ -1,0 +1,16 @@
+{
+  "resourceType" : "OperationOutcome",
+  "id" : "iti104-error-coincidencia-multiple",
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p>El MRN coincide con más de un paciente.</p></div>"
+  },
+  "issue" : [{
+    "severity" : "error",
+    "code" : "multiple-matches",
+    "details" : {
+      "text" : "El MRN coincide con más de un paciente."
+    }
+  }]
+}

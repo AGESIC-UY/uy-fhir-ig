@@ -1,0 +1,1403 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-localidades-uy"] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SistemaDeCodigos cs-localidades-uy</b></p><a name=\"cs-localidades-uy\"> </a><a name=\"hccs-localidades-uy\"> </a><p>This case-sensitive code system <code>http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">18 DE JULIO<a name=\"cs-localidades-uy-18DEJULIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">19 DE ABRIL<a name=\"cs-localidades-uy-19DEABRIL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">25 DE AGOSTO<a name=\"cs-localidades-uy-25DEAGOSTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">25 DE MAYO<a name=\"cs-localidades-uy-25DEMAYO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ABROJAL<a name=\"cs-localidades-uy-ABROJAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ACEGUA<a name=\"cs-localidades-uy-ACEGUA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ACHAR<a name=\"cs-localidades-uy-ACHAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AEROPARQUE<a name=\"cs-localidades-uy-AEROPARQUE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AGRACIADA<a name=\"cs-localidades-uy-AGRACIADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AGUAS BLANCAS<a name=\"cs-localidades-uy-AGUASBLANCAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AGUAS BUENAS<a name=\"cs-localidades-uy-AGUASBUENAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AGUAS CTES.<a name=\"cs-localidades-uy-AGUASCTES.46\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AGUAS DULCES<a name=\"cs-localidades-uy-AGUASDULCES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AIGUA<a name=\"cs-localidades-uy-AIGUA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ALGORTA<a name=\"cs-localidades-uy-ALGORTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AMARILLO<a name=\"cs-localidades-uy-AMARILLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ANDRESITO<a name=\"cs-localidades-uy-ANDRESITO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ANTONIOPOLIS<a name=\"cs-localidades-uy-ANTONIOPOLIS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARAMENDIA<a name=\"cs-localidades-uy-ARAMENDIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARAMINDA<a name=\"cs-localidades-uy-ARAMINDA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARBOLITO1<a name=\"cs-localidades-uy-ARBOLITO1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARBOLITO2<a name=\"cs-localidades-uy-ARBOLITO2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARENITAS BLANCA<a name=\"cs-localidades-uy-ARENITASBLANCA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARROYO BLANCO<a name=\"cs-localidades-uy-ARROYOBLANCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARTIGAS<a name=\"cs-localidades-uy-ARTIGAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ARTILLEROS<a name=\"cs-localidades-uy-ARTILLEROS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ATLANTIDA<a name=\"cs-localidades-uy-ATLANTIDA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AUTODROMO<a name=\"cs-localidades-uy-AUTODROMO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">AYUI<a name=\"cs-localidades-uy-AYUI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">B. BRUM<a name=\"cs-localidades-uy-B.46BRUM\"> </a></td></tr><tr><td style=\"white-space:nowrap\">B. RIVERA<a name=\"cs-localidades-uy-B.46RIVERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">B.BLANCOS<a name=\"cs-localidades-uy-B.46BLANCOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BALNEARIO BUENOS AIRES (ADCL)<a name=\"cs-localidades-uy-BALNEARIOBUENOSAIRES.40ADCL.41\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BAÑADO DE MEDIN<a name=\"cs-localidades-uy-BA.209ADODEMEDIN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BARRA CARRASCO<a name=\"cs-localidades-uy-BARRACARRASCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BARRA CHUY<a name=\"cs-localidades-uy-BARRACHUY\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BARRA D VALIZAS<a name=\"cs-localidades-uy-BARRADVALIZAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BARRA URUGUAYA<a name=\"cs-localidades-uy-BARRAURUGUAYA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BARRIO ARTIGAS<a name=\"cs-localidades-uy-BARRIOARTIGAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BATLLE Y ORDOÑEZ<a name=\"cs-localidades-uy-BATLLEYORDO.209EZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BELEN<a name=\"cs-localidades-uy-BELEN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BELLA UNION<a name=\"cs-localidades-uy-BELLAUNION\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BELLO HORIZONTE<a name=\"cs-localidades-uy-BELLOHORIZONTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BERRONDO<a name=\"cs-localidades-uy-BERRONDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BIARRITZ<a name=\"cs-localidades-uy-BIARRITZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BIASSINI<a name=\"cs-localidades-uy-BIASSINI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BLANCA ARENA<a name=\"cs-localidades-uy-BLANCAARENA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BLANQUILLO<a name=\"cs-localidades-uy-BLANQUILLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BOCA DEL CUFRE<a name=\"cs-localidades-uy-BOCADELCUFRE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BOLIVAR<a name=\"cs-localidades-uy-BOLIVAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BONILLA<a name=\"cs-localidades-uy-BONILLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRIO. ARGENTINO<a name=\"cs-localidades-uy-BRIO.46ARGENTINO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRIO. BUENOS AIRES<a name=\"cs-localidades-uy-BRIO.46BUENOSAIRES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRIO.ESPAÑOL<a name=\"cs-localidades-uy-BRIO.46ESPA.209OL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRISAS DE PLATA<a name=\"cs-localidades-uy-BRISASDEPLATA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRITOPOLIS<a name=\"cs-localidades-uy-BRITOPOLIS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRRA DE LOS CHANCHOS<a name=\"cs-localidades-uy-BRRADELOSCHANCHOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRRIO PINTADITO<a name=\"cs-localidades-uy-BRRIOPINTADITO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BRRIO.ALBISU<a name=\"cs-localidades-uy-BRRIO.46ALBISU\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BURICAYUPI<a name=\"cs-localidades-uy-BURICAYUPI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C. DEL PERDIDO<a name=\"cs-localidades-uy-C.46DELPERDIDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C.COLORADO<a name=\"cs-localidades-uy-C.46COLORADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C.MIGUELETE<a name=\"cs-localidades-uy-C.46MIGUELETE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C.REYLES<a name=\"cs-localidades-uy-C.46REYLES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C.ROSSEL<a name=\"cs-localidades-uy-C.46ROSSEL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">C.VALDENSE<a name=\"cs-localidades-uy-C.46VALDENSE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAMPAMENTO<a name=\"cs-localidades-uy-CAMPAMENTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CANELONES<a name=\"cs-localidades-uy-CANELONES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAÑADA DEL ESTADO<a name=\"cs-localidades-uy-CA.209ADADELESTADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAÑADA MILAN<a name=\"cs-localidades-uy-CA.209ADAMILAN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAÑADA NIETO<a name=\"cs-localidades-uy-CA.209ADANIETO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAP. FARRUCO<a name=\"cs-localidades-uy-CAP.46FARRUCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAPILLA D CELLA<a name=\"cs-localidades-uy-CAPILLADCELLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CAPURRO<a name=\"cs-localidades-uy-CAPURRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARAGUATA NORTE<a name=\"cs-localidades-uy-CARAGUATANORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARDAL<a name=\"cs-localidades-uy-CARDAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARDONA<a name=\"cs-localidades-uy-CARDONA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARDOZO CHICO<a name=\"cs-localidades-uy-CARDOZOCHICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARDOZO GRANDE<a name=\"cs-localidades-uy-CARDOZOGRANDE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARMELO<a name=\"cs-localidades-uy-CARMELO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CARRETA QUEMADA<a name=\"cs-localidades-uy-CARRETAQUEMADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CASTILLOS<a name=\"cs-localidades-uy-CASTILLOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CASUPA<a name=\"cs-localidades-uy-CASUPA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CDAD.DEL PLATA<a name=\"cs-localidades-uy-CDAD.46DELPLATA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CEBOLLATI<a name=\"cs-localidades-uy-CEBOLLATI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRILLADA<a name=\"cs-localidades-uy-CERRILLADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRILLOS<a name=\"cs-localidades-uy-CERRILLOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO CHATO1<a name=\"cs-localidades-uy-CERROCHATO1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO CHATO2<a name=\"cs-localidades-uy-CERROCHATO2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO COLORADO<a name=\"cs-localidades-uy-CERROCOLORADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO CUENTAS<a name=\"cs-localidades-uy-CERROCUENTAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO DEL ARBOLITO<a name=\"cs-localidades-uy-CERRODELARBOLITO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO EJIDO<a name=\"cs-localidades-uy-CERROEJIDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO PELADO<a name=\"cs-localidades-uy-CERROPELADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERRO PEREYRA<a name=\"cs-localidades-uy-CERROPEREYRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERROS AZULES<a name=\"cs-localidades-uy-CERROSAZULES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CERROS BLANCOS<a name=\"cs-localidades-uy-CERROSBLANCOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CHAMBERLAIN<a name=\"cs-localidades-uy-CHAMBERLAIN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CHAMIZO<a name=\"cs-localidades-uy-CHAMIZO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CHAPICUY<a name=\"cs-localidades-uy-CHAPICUY\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CHINGOLAS<a name=\"cs-localidades-uy-CHINGOLAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CHUY<a name=\"cs-localidades-uy-CHUY\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CLARA<a name=\"cs-localidades-uy-CLARA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLINAS<a name=\"cs-localidades-uy-COLINAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA<a name=\"cs-localidades-uy-COLONIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA 18 JUL.<a name=\"cs-localidades-uy-COLONIA18JUL.46\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA GARIBALDI<a name=\"cs-localidades-uy-COLONIAGARIBALDI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA ITAPEBI<a name=\"cs-localidades-uy-COLONIAITAPEBI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA LAVALLE<a name=\"cs-localidades-uy-COLONIALAVALLE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COLONIA NICOLIC<a name=\"cs-localidades-uy-COLONIANICOLIC\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CONCHILLAS<a name=\"cs-localidades-uy-CONCHILLAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CONSTANCIA<a name=\"cs-localidades-uy-CONSTANCIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CONSTITUCION<a name=\"cs-localidades-uy-CONSTITUCION\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COSMOPOLITA<a name=\"cs-localidades-uy-COSMOPOLITA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COSTA AZUL1<a name=\"cs-localidades-uy-COSTAAZUL1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COSTA AZUL2<a name=\"cs-localidades-uy-COSTAAZUL2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CRUZ DE CAMINOS<a name=\"cs-localidades-uy-CRUZDECAMINOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUARO<a name=\"cs-localidades-uy-CUARO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUARÓ<a name=\"cs-localidades-uy-CUAR.211\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUARO CHICO<a name=\"cs-localidades-uy-CUAROCHICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUCHILLA ALTA<a name=\"cs-localidades-uy-CUCHILLAALTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUCHILLA DEL OMBU<a name=\"cs-localidades-uy-CUCHILLADELOMBU\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CUFRE<a name=\"cs-localidades-uy-CUFRE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CURTINA<a name=\"cs-localidades-uy-CURTINA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">DAYMAN<a name=\"cs-localidades-uy-DAYMAN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">DOLORES<a name=\"cs-localidades-uy-DOLORES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">DURAZNO<a name=\"cs-localidades-uy-DURAZNO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">E.MARTINEZ<a name=\"cs-localidades-uy-E.46MARTINEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ECILDA PAULIER<a name=\"cs-localidades-uy-ECILDAPAULIER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EGAÑA<a name=\"cs-localidades-uy-EGA.209A\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL BELLACO<a name=\"cs-localidades-uy-ELBELLACO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL CHORRO<a name=\"cs-localidades-uy-ELCHORRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL EUCALIPTO<a name=\"cs-localidades-uy-ELEUCALIPTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL PINAR - SUR<a name=\"cs-localidades-uy-ELPINAR-SUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL TALA<a name=\"cs-localidades-uy-ELTALA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EL TESORO<a name=\"cs-localidades-uy-ELTESORO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ESPERANZA<a name=\"cs-localidades-uy-ESPERANZA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EST.ATLANTIDA<a name=\"cs-localidades-uy-EST.46ATLANTIDA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">EST.LA FLORESTA<a name=\"cs-localidades-uy-EST.46LAFLORESTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ESTANZUELA<a name=\"cs-localidades-uy-ESTANZUELA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">F.MARCOS<a name=\"cs-localidades-uy-F.46MARCOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">F.STA.ROSA<a name=\"cs-localidades-uy-F.46STA.46ROSA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FCIO. SANCHEZ<a name=\"cs-localidades-uy-FCIO.46SANCHEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FEDERACION<a name=\"cs-localidades-uy-FEDERACION\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FELICIANO<a name=\"cs-localidades-uy-FELICIANO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FERRER<a name=\"cs-localidades-uy-FERRER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FLORIDA<a name=\"cs-localidades-uy-FLORIDA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FOMENTO<a name=\"cs-localidades-uy-FOMENTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FRAILE MUERTO<a name=\"cs-localidades-uy-FRAILEMUERTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FRAY BENTOS<a name=\"cs-localidades-uy-FRAYBENTOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">FUNDACION POLANCO<a name=\"cs-localidades-uy-FUNDACIONPOLANCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">G.AZNARES<a name=\"cs-localidades-uy-G.46AZNARES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GALLINAL<a name=\"cs-localidades-uy-GALLINAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GARZON<a name=\"cs-localidades-uy-GARZON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GOMENSORO<a name=\"cs-localidades-uy-GOMENSORO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GONZALEZ<a name=\"cs-localidades-uy-GONZALEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GOÑI<a name=\"cs-localidades-uy-GO.209I\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GUAYUVIRA<a name=\"cs-localidades-uy-GUAYUVIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GUAZUBIRA<a name=\"cs-localidades-uy-GUAZUBIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GUAZUBIRA VIEJO<a name=\"cs-localidades-uy-GUAZUBIRAVIEJO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">GUICHON<a name=\"cs-localidades-uy-GUICHON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">I. CORTINAS<a name=\"cs-localidades-uy-I.46CORTINAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ILLESCAS<a name=\"cs-localidades-uy-ILLESCAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">INDEPENDENCIA<a name=\"cs-localidades-uy-INDEPENDENCIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ISIDORO NOBLIA<a name=\"cs-localidades-uy-ISIDORONOBLIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ISLA PATRULLA<a name=\"cs-localidades-uy-ISLAPATRULLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ITUZAINGO<a name=\"cs-localidades-uy-ITUZAINGO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">J.J. CASTRO<a name=\"cs-localidades-uy-J.46J.46CASTRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">J.LACAZE<a name=\"cs-localidades-uy-J.46LACAZE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">J.P.VARELA<a name=\"cs-localidades-uy-J.46P.46VARELA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">JACKSON<a name=\"cs-localidades-uy-JACKSON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">JOANICO<a name=\"cs-localidades-uy-JOANICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">JOSE IGNACIO<a name=\"cs-localidades-uy-JOSEIGNACIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">JOSE IGNACIO (ADCL)<a name=\"cs-localidades-uy-JOSEIGNACIO.40ADCL.41\"> </a></td></tr><tr><td style=\"white-space:nowrap\">JUAN SOLER<a name=\"cs-localidades-uy-JUANSOLER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">KILOMETRO 110<a name=\"cs-localidades-uy-KILOMETRO110\"> </a></td></tr><tr><td style=\"white-space:nowrap\">KIYU<a name=\"cs-localidades-uy-KIYU\"> </a></td></tr><tr><td style=\"white-space:nowrap\">L.GEIRES<a name=\"cs-localidades-uy-L.46GEIRES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA AGUADA<a name=\"cs-localidades-uy-LAAGUADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA ALDEA<a name=\"cs-localidades-uy-LAALDEA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA BARRA<a name=\"cs-localidades-uy-LABARRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA BOLSA<a name=\"cs-localidades-uy-LABOLSA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA BOTA<a name=\"cs-localidades-uy-LABOTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA BOTA ZB<a name=\"cs-localidades-uy-LABOTAZB\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA BOYADA<a name=\"cs-localidades-uy-LABOYADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CALERA<a name=\"cs-localidades-uy-LACALERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CALZADA<a name=\"cs-localidades-uy-LACALZADA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CAPUERA<a name=\"cs-localidades-uy-LACAPUERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CAPUERA (ZB)<a name=\"cs-localidades-uy-LACAPUERA.40ZB.41\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CASILLA<a name=\"cs-localidades-uy-LACASILLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CONCORDIA<a name=\"cs-localidades-uy-LACONCORDIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CORONILLA<a name=\"cs-localidades-uy-LACORONILLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CRUZ<a name=\"cs-localidades-uy-LACRUZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA CUCHILLA<a name=\"cs-localidades-uy-LACUCHILLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA FLORESTA<a name=\"cs-localidades-uy-LAFLORESTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA HILERA<a name=\"cs-localidades-uy-LAHILERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA JUANITA<a name=\"cs-localidades-uy-LAJUANITA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA MACANA<a name=\"cs-localidades-uy-LAMACANA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA MICAELA<a name=\"cs-localidades-uy-LAMICAELA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PALMA<a name=\"cs-localidades-uy-LAPALMA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PALOMA1<a name=\"cs-localidades-uy-LAPALOMA1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PALOMA2<a name=\"cs-localidades-uy-LAPALOMA2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PAZ1<a name=\"cs-localidades-uy-LAPAZ1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PAZ2<a name=\"cs-localidades-uy-LAPAZ2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PEDRERA<a name=\"cs-localidades-uy-LAPEDRERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA PUENTE<a name=\"cs-localidades-uy-LAPUENTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA TENTACION<a name=\"cs-localidades-uy-LATENTACION\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LA TUNA<a name=\"cs-localidades-uy-LATUNA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAGO MERIN<a name=\"cs-localidades-uy-LAGOMERIN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAGOMAR NORTE<a name=\"cs-localidades-uy-LAGOMARNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAGOMAR SUR<a name=\"cs-localidades-uy-LAGOMARSUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAGUNA DE ROCHA<a name=\"cs-localidades-uy-LAGUNADEROCHA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAMAS<a name=\"cs-localidades-uy-LAMAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS CHILCAS<a name=\"cs-localidades-uy-LASCHILCAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS FLORES<a name=\"cs-localidades-uy-LASFLORES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS PAJAS<a name=\"cs-localidades-uy-LASPAJAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS PALMAS<a name=\"cs-localidades-uy-LASPALMAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS PIEDRAS<a name=\"cs-localidades-uy-LASPIEDRAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS TOSCAS NORT<a name=\"cs-localidades-uy-LASTOSCASNORT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS TOSCAS1<a name=\"cs-localidades-uy-LASTOSCAS1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS TOSCAS2<a name=\"cs-localidades-uy-LASTOSCAS2\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS VEGAS NORTE<a name=\"cs-localidades-uy-LASVEGASNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAS VEGAS SUR<a name=\"cs-localidades-uy-LASVEGASSUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LASCANO<a name=\"cs-localidades-uy-LASCANO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LAURELES<a name=\"cs-localidades-uy-LAURELES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LIBERTAD<a name=\"cs-localidades-uy-LIBERTAD\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOMAS D SOLYMAR<a name=\"cs-localidades-uy-LOMASDSOLYMAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOMAS NORTE<a name=\"cs-localidades-uy-LOMASNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOMAS SOLYMAR 3<a name=\"cs-localidades-uy-LOMASSOLYMAR3\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS CERROS<a name=\"cs-localidades-uy-LOSCERROS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS CUADRADOS<a name=\"cs-localidades-uy-LOSCUADRADOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS FEOS<a name=\"cs-localidades-uy-LOSFEOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS FURTADOS<a name=\"cs-localidades-uy-LOSFURTADOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS HIGUERONES<a name=\"cs-localidades-uy-LOSHIGUERONES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS PINOS<a name=\"cs-localidades-uy-LOSPINOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS SEMPER<a name=\"cs-localidades-uy-LOSSEMPER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS TALAS<a name=\"cs-localidades-uy-LOSTALAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LOS TITANES<a name=\"cs-localidades-uy-LOSTITANES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">M ALBINA<a name=\"cs-localidades-uy-MALBINA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">M.CHICO<a name=\"cs-localidades-uy-M.46CHICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">M.CORAL<a name=\"cs-localidades-uy-M.46CORAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">M.DE CORRALES<a name=\"cs-localidades-uy-M.46DECORRALES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">M.GRANDE<a name=\"cs-localidades-uy-M.46GRANDE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MACIEL<a name=\"cs-localidades-uy-MACIEL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MAL ABRIGO<a name=\"cs-localidades-uy-MALABRIGO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MALDONADO<a name=\"cs-localidades-uy-MALDONADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MALDONADO (ZB)<a name=\"cs-localidades-uy-MALDONADO.40ZB.41\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MALVAREZ<a name=\"cs-localidades-uy-MALVAREZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MANANTIALES<a name=\"cs-localidades-uy-MANANTIALES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MANGRULLO<a name=\"cs-localidades-uy-MANGRULLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MARGAT<a name=\"cs-localidades-uy-MARGAT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MARINDIA<a name=\"cs-localidades-uy-MARINDIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MARISCALA<a name=\"cs-localidades-uy-MARISCALA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MASOLLER<a name=\"cs-localidades-uy-MASOLLER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MEDANOS NORTE<a name=\"cs-localidades-uy-MEDANOSNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MEDANOS SOLYMAR<a name=\"cs-localidades-uy-MEDANOSSOLYMAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MELLIZOS<a name=\"cs-localidades-uy-MELLIZOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MELO<a name=\"cs-localidades-uy-MELO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MERCEDES<a name=\"cs-localidades-uy-MERCEDES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MERINOS<a name=\"cs-localidades-uy-MERINOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MIGUEZ<a name=\"cs-localidades-uy-MIGUEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MINAS<a name=\"cs-localidades-uy-MINAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MOIRONES<a name=\"cs-localidades-uy-MOIRONES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MONTES<a name=\"cs-localidades-uy-MONTES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MONTES SOLYMAR<a name=\"cs-localidades-uy-MONTESSOLYMAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MONTEVIDEO<a name=\"cs-localidades-uy-MONTEVIDEO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MONTVIDEO CHICO<a name=\"cs-localidades-uy-MONTVIDEOCHICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">MORATO<a name=\"cs-localidades-uy-MORATO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">N.HELVECIA<a name=\"cs-localidades-uy-N.46HELVECIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">N.PALMIRA<a name=\"cs-localidades-uy-N.46PALMIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">NEPTUNIA NORTE<a name=\"cs-localidades-uy-NEPTUNIANORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">NEPTUNIA SUR<a name=\"cs-localidades-uy-NEPTUNIASUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">NUEVA CARRARA<a name=\"cs-localidades-uy-NUEVACARRARA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">NUEVO BERLIN<a name=\"cs-localidades-uy-NUEVOBERLIN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">O.DE LAVALLE<a name=\"cs-localidades-uy-O.46DELAVALLE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">O.DE ORIBE<a name=\"cs-localidades-uy-O.46DEORIBE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">OCEAN PARK<a name=\"cs-localidades-uy-OCEANPARK\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ORGOROZO<a name=\"cs-localidades-uy-ORGOROZO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P. CASTELLANOS<a name=\"cs-localidades-uy-P.46CASTELLANOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.AZUCAR<a name=\"cs-localidades-uy-P.46AZUCAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.CERRO<a name=\"cs-localidades-uy-P.46CERRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.D.PLATA NORTE<a name=\"cs-localidades-uy-P.46D.46PLATANORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.DE PACHE<a name=\"cs-localidades-uy-P.46DEPACHE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.DEL PLATA<a name=\"cs-localidades-uy-P.46DELPLATA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.DEL.ESTE<a name=\"cs-localidades-uy-P.46DEL.46ESTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.SEVERINO<a name=\"cs-localidades-uy-P.46SEVERINO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.SOLA<a name=\"cs-localidades-uy-P.46SOLA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">P.TOROS<a name=\"cs-localidades-uy-P.46TOROS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PALMITAS<a name=\"cs-localidades-uy-PALMITAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PALO SOLO<a name=\"cs-localidades-uy-PALOSOLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PANDO<a name=\"cs-localidades-uy-PANDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PANDULE<a name=\"cs-localidades-uy-PANDULE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PARAJE PENSE<a name=\"cs-localidades-uy-PARAJEPENSE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PARALLÉ<a name=\"cs-localidades-uy-PARALL.201\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PARQUE MIRAMAR<a name=\"cs-localidades-uy-PARQUEMIRAMAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PARQUE SOLYMAR<a name=\"cs-localidades-uy-PARQUESOLYMAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASANO<a name=\"cs-localidades-uy-PASANO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO ARRIERA<a name=\"cs-localidades-uy-PASOARRIERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO ATAQUES<a name=\"cs-localidades-uy-PASOATAQUES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO CARRASCO<a name=\"cs-localidades-uy-PASOCARRASCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO D PARQUE<a name=\"cs-localidades-uy-PASODPARQUE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO DE LA CRUZ<a name=\"cs-localidades-uy-PASODELACRUZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO DE LAS CARRETAS<a name=\"cs-localidades-uy-PASODELASCARRETAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO DE LOS NOVILLOS<a name=\"cs-localidades-uy-PASODELOSNOVILLOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO DEL MEDIO<a name=\"cs-localidades-uy-PASODELMEDIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO DEL TAPADO<a name=\"cs-localidades-uy-PASODELTAPADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO FARIAS<a name=\"cs-localidades-uy-PASOFARIAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO HOSPITAL<a name=\"cs-localidades-uy-PASOHOSPITAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PASO PEREIRA<a name=\"cs-localidades-uy-PASOPEREIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PAYSANDU<a name=\"cs-localidades-uy-PAYSANDU\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PBLO. FERNANDEZ<a name=\"cs-localidades-uy-PBLO.46FERNANDEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PERALTA<a name=\"cs-localidades-uy-PERALTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIEDRA DEL TORO<a name=\"cs-localidades-uy-PIEDRADELTORO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIEDRAS.COLORA.<a name=\"cs-localidades-uy-PIEDRAS.46COLORA.46\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINAMAR NORTE<a name=\"cs-localidades-uy-PINAMARNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINAMAR SUR<a name=\"cs-localidades-uy-PINAMARSUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINAR - NORTE<a name=\"cs-localidades-uy-PINAR-NORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINARES<a name=\"cs-localidades-uy-PINARES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINARES - ATL<a name=\"cs-localidades-uy-PINARES-ATL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINTADO<a name=\"cs-localidades-uy-PINTADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PINTADO GRANDE<a name=\"cs-localidades-uy-PINTADOGRANDE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIÑERA<a name=\"cs-localidades-uy-PI.209ERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIRARAJA<a name=\"cs-localidades-uy-PIRARAJA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIRIAPOLIS<a name=\"cs-localidades-uy-PIRIAPOLIS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PIRIAPOLIS INT<a name=\"cs-localidades-uy-PIRIAPOLISINT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PLACIDO ROSAS<a name=\"cs-localidades-uy-PLACIDOROSAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">POBLADO ALONSO<a name=\"cs-localidades-uy-POBLADOALONSO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">POBLADO EL ORO<a name=\"cs-localidades-uy-POBLADOELORO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">POBLADO URUGUAY<a name=\"cs-localidades-uy-POBLADOURUGUAY\"> </a></td></tr><tr><td style=\"white-space:nowrap\">POLANCO DEL YI<a name=\"cs-localidades-uy-POLANCODELYI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">POLANCO LAVALLEJA<a name=\"cs-localidades-uy-POLANCOLAVALLEJA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PORVENIR<a name=\"cs-localidades-uy-PORVENIR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PROGRESO<a name=\"cs-localidades-uy-PROGRESO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PTA. DE VALDEZ<a name=\"cs-localidades-uy-PTA.46DEVALDEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PTA. DEL DIABLO<a name=\"cs-localidades-uy-PTA.46DELDIABLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO AREVALO<a name=\"cs-localidades-uy-PUEBLOAREVALO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO CASTILLO<a name=\"cs-localidades-uy-PUEBLOCASTILLO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO CELESTE<a name=\"cs-localidades-uy-PUEBLOCELESTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO COLON<a name=\"cs-localidades-uy-PUEBLOCOLON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO DE LOS SANTOS<a name=\"cs-localidades-uy-PUEBLODELOSSANTOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO DEL BARRO<a name=\"cs-localidades-uy-PUEBLODELBARRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO EDEN<a name=\"cs-localidades-uy-PUEBLOEDEN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO GRECO<a name=\"cs-localidades-uy-PUEBLOGRECO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO HERIBERTO<a name=\"cs-localidades-uy-PUEBLOHERIBERTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO LA BOLSA<a name=\"cs-localidades-uy-PUEBLOLABOLSA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO NUEVO<a name=\"cs-localidades-uy-PUEBLONUEVO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO SOTO<a name=\"cs-localidades-uy-PUEBLOSOTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUEBLO ZEBALLOS<a name=\"cs-localidades-uy-PUEBLOZEBALLOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUENTE DE VALIZAS<a name=\"cs-localidades-uy-PUENTEDEVALIZAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUIMAYEN<a name=\"cs-localidades-uy-PUIMAYEN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUNTA 5 SAUCES<a name=\"cs-localidades-uy-PUNTA5SAUCES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUNTA BALLENA<a name=\"cs-localidades-uy-PUNTABALLENA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUNTA RUBIA<a name=\"cs-localidades-uy-PUNTARUBIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">PUNTAS DEL PARAO<a name=\"cs-localidades-uy-PUNTASDELPARAO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">QUEBRACHO<a name=\"cs-localidades-uy-QUEBRACHO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">QUEGUAY CHICO<a name=\"cs-localidades-uy-QUEGUAYCHICO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">QUEGUAYAR<a name=\"cs-localidades-uy-QUEGUAYAR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RADIAL<a name=\"cs-localidades-uy-RADIAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RAFAEL PERAZZA<a name=\"cs-localidades-uy-RAFAELPERAZZA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RAIGON<a name=\"cs-localidades-uy-RAIGON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">REBOLEDO<a name=\"cs-localidades-uy-REBOLEDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RIACHUELO<a name=\"cs-localidades-uy-RIACHUELO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RINCON<a name=\"cs-localidades-uy-RINCON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RINCON DE PACHECO<a name=\"cs-localidades-uy-RINCONDEPACHECO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RINCON DE PINTADO<a name=\"cs-localidades-uy-RINCONDEPINTADO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RINCON DEL PINO<a name=\"cs-localidades-uy-RINCONDELPINO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RINCON PEREIRA<a name=\"cs-localidades-uy-RINCONPEREIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RIO BRANCO<a name=\"cs-localidades-uy-RIOBRANCO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RISSO<a name=\"cs-localidades-uy-RISSO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RIVERA<a name=\"cs-localidades-uy-RIVERA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ROCHA<a name=\"cs-localidades-uy-ROCHA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RODO<a name=\"cs-localidades-uy-RODO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">RODRIGUEZ<a name=\"cs-localidades-uy-RODRIGUEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ROSARIO<a name=\"cs-localidades-uy-ROSARIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.ANTONIO<a name=\"cs-localidades-uy-S.46ANTONIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.BAUTISTA<a name=\"cs-localidades-uy-S.46BAUTISTA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.DEL YI<a name=\"cs-localidades-uy-S.46DELYI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.GRANDE<a name=\"cs-localidades-uy-S.46GRANDE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.GREGORIO<a name=\"cs-localidades-uy-S.46GREGORIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.JACINTO<a name=\"cs-localidades-uy-S.46JACINTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.JORGE<a name=\"cs-localidades-uy-S.46JORGE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">S.RAMON<a name=\"cs-localidades-uy-S.46RAMON\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SACACHISPAS<a name=\"cs-localidades-uy-SACACHISPAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SALINAS<a name=\"cs-localidades-uy-SALINAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SALTO<a name=\"cs-localidades-uy-SALTO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN ANTONIO<a name=\"cs-localidades-uy-SANANTONIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN BENITO<a name=\"cs-localidades-uy-SANBENITO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN CARLOS<a name=\"cs-localidades-uy-SANCARLOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN CRISTOBAL<a name=\"cs-localidades-uy-SANCRISTOBAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN GABRIEL<a name=\"cs-localidades-uy-SANGABRIEL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN GREGORIO<a name=\"cs-localidades-uy-SANGREGORIO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN JAVIER<a name=\"cs-localidades-uy-SANJAVIER\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN JOSE<a name=\"cs-localidades-uy-SANJOSE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN LUIS<a name=\"cs-localidades-uy-SANLUIS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN LUIS(CNLNES)<a name=\"cs-localidades-uy-SANLUIS.40CNLNES.41\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAN PEDRO<a name=\"cs-localidades-uy-SANPEDRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANCHEZ<a name=\"cs-localidades-uy-SANCHEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANTA ANA<a name=\"cs-localidades-uy-SANTAANA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANTA ANA C<a name=\"cs-localidades-uy-SANTAANAC\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANTA CLARA<a name=\"cs-localidades-uy-SANTACLARA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANTA MONICA<a name=\"cs-localidades-uy-SANTAMONICA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SANTA TERESITA<a name=\"cs-localidades-uy-SANTATERESITA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAU.DEL YI<a name=\"cs-localidades-uy-SAU.46DELYI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAUCE<a name=\"cs-localidades-uy-SAUCE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAUCE DE BATOVI<a name=\"cs-localidades-uy-SAUCEDEBATOVI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAUCE DE PORTEZUELO<a name=\"cs-localidades-uy-SAUCEDEPORTEZUELO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SAUCE.<a name=\"cs-localidades-uy-SAUCE.46\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SDI. DE NAVARRO<a name=\"cs-localidades-uy-SDI.46DENAVARRO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SEQUEIRA<a name=\"cs-localidades-uy-SEQUEIRA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHANGRILA<a name=\"cs-localidades-uy-SHANGRILA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SJ.CARRASCO NOR<a name=\"cs-localidades-uy-SJ.46CARRASCONOR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SJ.CARRASCO SUR<a name=\"cs-localidades-uy-SJ.46CARRASCOSUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOCA<a name=\"cs-localidades-uy-SOCA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOLIS<a name=\"cs-localidades-uy-SOLIS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOLIS DE MATAOJ<a name=\"cs-localidades-uy-SOLISDEMATAOJ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOLYMAR NORTE<a name=\"cs-localidades-uy-SOLYMARNORTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOLYMAR SUR<a name=\"cs-localidades-uy-SOLYMARSUR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SOUDRIERS<a name=\"cs-localidades-uy-SOUDRIERS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">STA. CATALINA<a name=\"cs-localidades-uy-STA.46CATALINA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">STA. LUCIA DEL ESTE<a name=\"cs-localidades-uy-STA.46LUCIADELESTE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">STA. ROSA<a name=\"cs-localidades-uy-STA.46ROSA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">STA.LUCIA<a name=\"cs-localidades-uy-STA.46LUCIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SUAREZ<a name=\"cs-localidades-uy-SUAREZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">T.TRES<a name=\"cs-localidades-uy-T.46TRES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TACUAREMBO<a name=\"cs-localidades-uy-TACUAREMBO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TALA<a name=\"cs-localidades-uy-TALA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TAMBORES<a name=\"cs-localidades-uy-TAMBORES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TAPIA<a name=\"cs-localidades-uy-TAPIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TARARIRAS<a name=\"cs-localidades-uy-TARARIRAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TARUMAN<a name=\"cs-localidades-uy-TARUMAN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TIATUCURA<a name=\"cs-localidades-uy-TIATUCURA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TIERR COLORADAS<a name=\"cs-localidades-uy-TIERRCOLORADAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TOLEDO<a name=\"cs-localidades-uy-TOLEDO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TOPADOR<a name=\"cs-localidades-uy-TOPADOR\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TOTORAL D SAUCE<a name=\"cs-localidades-uy-TOTORALDSAUCE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TRANQUERAS<a name=\"cs-localidades-uy-TRANQUERAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TRES ISLAS<a name=\"cs-localidades-uy-TRESISLAS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TRINIDAD<a name=\"cs-localidades-uy-TRINIDAD\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TUPAMBAE<a name=\"cs-localidades-uy-TUPAMBAE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V.ANSINA<a name=\"cs-localidades-uy-V.46ANSINA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V.ARGENTINA<a name=\"cs-localidades-uy-V.46ARGENTINA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">V.CARMEN<a name=\"cs-localidades-uy-V.46CARMEN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VALENTIN<a name=\"cs-localidades-uy-VALENTIN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VALENTINES<a name=\"cs-localidades-uy-VALENTINES\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VALLE SOBA<a name=\"cs-localidades-uy-VALLESOBA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VELAZQUEZ<a name=\"cs-localidades-uy-VELAZQUEZ\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VERGARA<a name=\"cs-localidades-uy-VERGARA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VIANA<a name=\"cs-localidades-uy-VIANA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VICHADERO<a name=\"cs-localidades-uy-VICHADERO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VILLA MARIA<a name=\"cs-localidades-uy-VILLAMARIA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VILLA MONTAÑESA<a name=\"cs-localidades-uy-VILLAMONTA.209ESA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VILLA OLMOS<a name=\"cs-localidades-uy-VILLAOLMOS\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VILLA SARA<a name=\"cs-localidades-uy-VILLASARA\"> </a></td></tr><tr><td style=\"white-space:nowrap\">VILLA SORIANO<a name=\"cs-localidades-uy-VILLASORIANO\"> </a></td></tr><tr><td style=\"white-space:nowrap\">YOUNG<a name=\"cs-localidades-uy-YOUNG\"> </a></td></tr><tr><td style=\"white-space:nowrap\">ZAPICAN<a name=\"cs-localidades-uy-ZAPICAN\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSLocalidadesUY"] ; # 
+  fhir:title [ fhir:v "Localidades de Uruguay (OSE)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Localidades del catálogo de regiones, departamentos y localidades utilizado por OSE."] ; # 
+  fhir:copyright [ fhir:v "Fuente: OSE, Catálogo de Datos Abiertos de Uruguay, recurso Regiones, departamentos y localidades (actualización 2025-12-16), Licencia de Datos Abiertos de Uruguay."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "456"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "18 DE JULIO" ] ;
+     fhir:display [ fhir:v "18 DE JULIO" ]
+  ] [
+     fhir:code [ fhir:v "19 DE ABRIL" ] ;
+     fhir:display [ fhir:v "19 DE ABRIL" ]
+  ] [
+     fhir:code [ fhir:v "25 DE AGOSTO" ] ;
+     fhir:display [ fhir:v "25 DE AGOSTO" ]
+  ] [
+     fhir:code [ fhir:v "25 DE MAYO" ] ;
+     fhir:display [ fhir:v "25 DE MAYO" ]
+  ] [
+     fhir:code [ fhir:v "ABROJAL" ] ;
+     fhir:display [ fhir:v "ABROJAL" ]
+  ] [
+     fhir:code [ fhir:v "ACEGUA" ] ;
+     fhir:display [ fhir:v "ACEGUA" ]
+  ] [
+     fhir:code [ fhir:v "ACHAR" ] ;
+     fhir:display [ fhir:v "ACHAR" ]
+  ] [
+     fhir:code [ fhir:v "AEROPARQUE" ] ;
+     fhir:display [ fhir:v "AEROPARQUE" ]
+  ] [
+     fhir:code [ fhir:v "AGRACIADA" ] ;
+     fhir:display [ fhir:v "AGRACIADA" ]
+  ] [
+     fhir:code [ fhir:v "AGUAS BLANCAS" ] ;
+     fhir:display [ fhir:v "AGUAS BLANCAS" ]
+  ] [
+     fhir:code [ fhir:v "AGUAS BUENAS" ] ;
+     fhir:display [ fhir:v "AGUAS BUENAS" ]
+  ] [
+     fhir:code [ fhir:v "AGUAS CTES." ] ;
+     fhir:display [ fhir:v "AGUAS CTES." ]
+  ] [
+     fhir:code [ fhir:v "AGUAS DULCES" ] ;
+     fhir:display [ fhir:v "AGUAS DULCES" ]
+  ] [
+     fhir:code [ fhir:v "AIGUA" ] ;
+     fhir:display [ fhir:v "AIGUA" ]
+  ] [
+     fhir:code [ fhir:v "ALGORTA" ] ;
+     fhir:display [ fhir:v "ALGORTA" ]
+  ] [
+     fhir:code [ fhir:v "AMARILLO" ] ;
+     fhir:display [ fhir:v "AMARILLO" ]
+  ] [
+     fhir:code [ fhir:v "ANDRESITO" ] ;
+     fhir:display [ fhir:v "ANDRESITO" ]
+  ] [
+     fhir:code [ fhir:v "ANTONIOPOLIS" ] ;
+     fhir:display [ fhir:v "ANTONIOPOLIS" ]
+  ] [
+     fhir:code [ fhir:v "ARAMENDIA" ] ;
+     fhir:display [ fhir:v "ARAMENDIA" ]
+  ] [
+     fhir:code [ fhir:v "ARAMINDA" ] ;
+     fhir:display [ fhir:v "ARAMINDA" ]
+  ] [
+     fhir:code [ fhir:v "ARBOLITO1" ] ;
+     fhir:display [ fhir:v "ARBOLITO1" ]
+  ] [
+     fhir:code [ fhir:v "ARBOLITO2" ] ;
+     fhir:display [ fhir:v "ARBOLITO2" ]
+  ] [
+     fhir:code [ fhir:v "ARENITAS BLANCA" ] ;
+     fhir:display [ fhir:v "ARENITAS BLANCA" ]
+  ] [
+     fhir:code [ fhir:v "ARROYO BLANCO" ] ;
+     fhir:display [ fhir:v "ARROYO BLANCO" ]
+  ] [
+     fhir:code [ fhir:v "ARTIGAS" ] ;
+     fhir:display [ fhir:v "ARTIGAS" ]
+  ] [
+     fhir:code [ fhir:v "ARTILLEROS" ] ;
+     fhir:display [ fhir:v "ARTILLEROS" ]
+  ] [
+     fhir:code [ fhir:v "ATLANTIDA" ] ;
+     fhir:display [ fhir:v "ATLANTIDA" ]
+  ] [
+     fhir:code [ fhir:v "AUTODROMO" ] ;
+     fhir:display [ fhir:v "AUTODROMO" ]
+  ] [
+     fhir:code [ fhir:v "AYUI" ] ;
+     fhir:display [ fhir:v "AYUI" ]
+  ] [
+     fhir:code [ fhir:v "B. BRUM" ] ;
+     fhir:display [ fhir:v "B. BRUM" ]
+  ] [
+     fhir:code [ fhir:v "B. RIVERA" ] ;
+     fhir:display [ fhir:v "B. RIVERA" ]
+  ] [
+     fhir:code [ fhir:v "B.BLANCOS" ] ;
+     fhir:display [ fhir:v "B.BLANCOS" ]
+  ] [
+     fhir:code [ fhir:v "BALNEARIO BUENOS AIRES (ADCL)" ] ;
+     fhir:display [ fhir:v "BALNEARIO BUENOS AIRES (ADCL)" ]
+  ] [
+     fhir:code [ fhir:v "BAÑADO DE MEDIN" ] ;
+     fhir:display [ fhir:v "BAÑADO DE MEDIN" ]
+  ] [
+     fhir:code [ fhir:v "BARRA CARRASCO" ] ;
+     fhir:display [ fhir:v "BARRA CARRASCO" ]
+  ] [
+     fhir:code [ fhir:v "BARRA CHUY" ] ;
+     fhir:display [ fhir:v "BARRA CHUY" ]
+  ] [
+     fhir:code [ fhir:v "BARRA D VALIZAS" ] ;
+     fhir:display [ fhir:v "BARRA D VALIZAS" ]
+  ] [
+     fhir:code [ fhir:v "BARRA URUGUAYA" ] ;
+     fhir:display [ fhir:v "BARRA URUGUAYA" ]
+  ] [
+     fhir:code [ fhir:v "BARRIO ARTIGAS" ] ;
+     fhir:display [ fhir:v "BARRIO ARTIGAS" ]
+  ] [
+     fhir:code [ fhir:v "BATLLE Y ORDOÑEZ" ] ;
+     fhir:display [ fhir:v "BATLLE Y ORDOÑEZ" ]
+  ] [
+     fhir:code [ fhir:v "BELEN" ] ;
+     fhir:display [ fhir:v "BELEN" ]
+  ] [
+     fhir:code [ fhir:v "BELLA UNION" ] ;
+     fhir:display [ fhir:v "BELLA UNION" ]
+  ] [
+     fhir:code [ fhir:v "BELLO HORIZONTE" ] ;
+     fhir:display [ fhir:v "BELLO HORIZONTE" ]
+  ] [
+     fhir:code [ fhir:v "BERRONDO" ] ;
+     fhir:display [ fhir:v "BERRONDO" ]
+  ] [
+     fhir:code [ fhir:v "BIARRITZ" ] ;
+     fhir:display [ fhir:v "BIARRITZ" ]
+  ] [
+     fhir:code [ fhir:v "BIASSINI" ] ;
+     fhir:display [ fhir:v "BIASSINI" ]
+  ] [
+     fhir:code [ fhir:v "BLANCA ARENA" ] ;
+     fhir:display [ fhir:v "BLANCA ARENA" ]
+  ] [
+     fhir:code [ fhir:v "BLANQUILLO" ] ;
+     fhir:display [ fhir:v "BLANQUILLO" ]
+  ] [
+     fhir:code [ fhir:v "BOCA DEL CUFRE" ] ;
+     fhir:display [ fhir:v "BOCA DEL CUFRE" ]
+  ] [
+     fhir:code [ fhir:v "BOLIVAR" ] ;
+     fhir:display [ fhir:v "BOLIVAR" ]
+  ] [
+     fhir:code [ fhir:v "BONILLA" ] ;
+     fhir:display [ fhir:v "BONILLA" ]
+  ] [
+     fhir:code [ fhir:v "BRIO. ARGENTINO" ] ;
+     fhir:display [ fhir:v "BRIO. ARGENTINO" ]
+  ] [
+     fhir:code [ fhir:v "BRIO. BUENOS AIRES" ] ;
+     fhir:display [ fhir:v "BRIO. BUENOS AIRES" ]
+  ] [
+     fhir:code [ fhir:v "BRIO.ESPAÑOL" ] ;
+     fhir:display [ fhir:v "BRIO.ESPAÑOL" ]
+  ] [
+     fhir:code [ fhir:v "BRISAS DE PLATA" ] ;
+     fhir:display [ fhir:v "BRISAS DE PLATA" ]
+  ] [
+     fhir:code [ fhir:v "BRITOPOLIS" ] ;
+     fhir:display [ fhir:v "BRITOPOLIS" ]
+  ] [
+     fhir:code [ fhir:v "BRRA DE LOS CHANCHOS" ] ;
+     fhir:display [ fhir:v "BRRA DE LOS CHANCHOS" ]
+  ] [
+     fhir:code [ fhir:v "BRRIO PINTADITO" ] ;
+     fhir:display [ fhir:v "BRRIO PINTADITO" ]
+  ] [
+     fhir:code [ fhir:v "BRRIO.ALBISU" ] ;
+     fhir:display [ fhir:v "BRRIO.ALBISU" ]
+  ] [
+     fhir:code [ fhir:v "BURICAYUPI" ] ;
+     fhir:display [ fhir:v "BURICAYUPI" ]
+  ] [
+     fhir:code [ fhir:v "C. DEL PERDIDO" ] ;
+     fhir:display [ fhir:v "C. DEL PERDIDO" ]
+  ] [
+     fhir:code [ fhir:v "C.COLORADO" ] ;
+     fhir:display [ fhir:v "C.COLORADO" ]
+  ] [
+     fhir:code [ fhir:v "C.MIGUELETE" ] ;
+     fhir:display [ fhir:v "C.MIGUELETE" ]
+  ] [
+     fhir:code [ fhir:v "C.REYLES" ] ;
+     fhir:display [ fhir:v "C.REYLES" ]
+  ] [
+     fhir:code [ fhir:v "C.ROSSEL" ] ;
+     fhir:display [ fhir:v "C.ROSSEL" ]
+  ] [
+     fhir:code [ fhir:v "C.VALDENSE" ] ;
+     fhir:display [ fhir:v "C.VALDENSE" ]
+  ] [
+     fhir:code [ fhir:v "CAMPAMENTO" ] ;
+     fhir:display [ fhir:v "CAMPAMENTO" ]
+  ] [
+     fhir:code [ fhir:v "CANELONES" ] ;
+     fhir:display [ fhir:v "CANELONES" ]
+  ] [
+     fhir:code [ fhir:v "CAÑADA DEL ESTADO" ] ;
+     fhir:display [ fhir:v "CAÑADA DEL ESTADO" ]
+  ] [
+     fhir:code [ fhir:v "CAÑADA MILAN" ] ;
+     fhir:display [ fhir:v "CAÑADA MILAN" ]
+  ] [
+     fhir:code [ fhir:v "CAÑADA NIETO" ] ;
+     fhir:display [ fhir:v "CAÑADA NIETO" ]
+  ] [
+     fhir:code [ fhir:v "CAP. FARRUCO" ] ;
+     fhir:display [ fhir:v "CAP. FARRUCO" ]
+  ] [
+     fhir:code [ fhir:v "CAPILLA D CELLA" ] ;
+     fhir:display [ fhir:v "CAPILLA D CELLA" ]
+  ] [
+     fhir:code [ fhir:v "CAPURRO" ] ;
+     fhir:display [ fhir:v "CAPURRO" ]
+  ] [
+     fhir:code [ fhir:v "CARAGUATA NORTE" ] ;
+     fhir:display [ fhir:v "CARAGUATA NORTE" ]
+  ] [
+     fhir:code [ fhir:v "CARDAL" ] ;
+     fhir:display [ fhir:v "CARDAL" ]
+  ] [
+     fhir:code [ fhir:v "CARDONA" ] ;
+     fhir:display [ fhir:v "CARDONA" ]
+  ] [
+     fhir:code [ fhir:v "CARDOZO CHICO" ] ;
+     fhir:display [ fhir:v "CARDOZO CHICO" ]
+  ] [
+     fhir:code [ fhir:v "CARDOZO GRANDE" ] ;
+     fhir:display [ fhir:v "CARDOZO GRANDE" ]
+  ] [
+     fhir:code [ fhir:v "CARMELO" ] ;
+     fhir:display [ fhir:v "CARMELO" ]
+  ] [
+     fhir:code [ fhir:v "CARRETA QUEMADA" ] ;
+     fhir:display [ fhir:v "CARRETA QUEMADA" ]
+  ] [
+     fhir:code [ fhir:v "CASTILLOS" ] ;
+     fhir:display [ fhir:v "CASTILLOS" ]
+  ] [
+     fhir:code [ fhir:v "CASUPA" ] ;
+     fhir:display [ fhir:v "CASUPA" ]
+  ] [
+     fhir:code [ fhir:v "CDAD.DEL PLATA" ] ;
+     fhir:display [ fhir:v "CDAD.DEL PLATA" ]
+  ] [
+     fhir:code [ fhir:v "CEBOLLATI" ] ;
+     fhir:display [ fhir:v "CEBOLLATI" ]
+  ] [
+     fhir:code [ fhir:v "CERRILLADA" ] ;
+     fhir:display [ fhir:v "CERRILLADA" ]
+  ] [
+     fhir:code [ fhir:v "CERRILLOS" ] ;
+     fhir:display [ fhir:v "CERRILLOS" ]
+  ] [
+     fhir:code [ fhir:v "CERRO CHATO1" ] ;
+     fhir:display [ fhir:v "CERRO CHATO1" ]
+  ] [
+     fhir:code [ fhir:v "CERRO CHATO2" ] ;
+     fhir:display [ fhir:v "CERRO CHATO2" ]
+  ] [
+     fhir:code [ fhir:v "CERRO COLORADO" ] ;
+     fhir:display [ fhir:v "CERRO COLORADO" ]
+  ] [
+     fhir:code [ fhir:v "CERRO CUENTAS" ] ;
+     fhir:display [ fhir:v "CERRO CUENTAS" ]
+  ] [
+     fhir:code [ fhir:v "CERRO DEL ARBOLITO" ] ;
+     fhir:display [ fhir:v "CERRO DEL ARBOLITO" ]
+  ] [
+     fhir:code [ fhir:v "CERRO EJIDO" ] ;
+     fhir:display [ fhir:v "CERRO EJIDO" ]
+  ] [
+     fhir:code [ fhir:v "CERRO PELADO" ] ;
+     fhir:display [ fhir:v "CERRO PELADO" ]
+  ] [
+     fhir:code [ fhir:v "CERRO PEREYRA" ] ;
+     fhir:display [ fhir:v "CERRO PEREYRA" ]
+  ] [
+     fhir:code [ fhir:v "CERROS AZULES" ] ;
+     fhir:display [ fhir:v "CERROS AZULES" ]
+  ] [
+     fhir:code [ fhir:v "CERROS BLANCOS" ] ;
+     fhir:display [ fhir:v "CERROS BLANCOS" ]
+  ] [
+     fhir:code [ fhir:v "CHAMBERLAIN" ] ;
+     fhir:display [ fhir:v "CHAMBERLAIN" ]
+  ] [
+     fhir:code [ fhir:v "CHAMIZO" ] ;
+     fhir:display [ fhir:v "CHAMIZO" ]
+  ] [
+     fhir:code [ fhir:v "CHAPICUY" ] ;
+     fhir:display [ fhir:v "CHAPICUY" ]
+  ] [
+     fhir:code [ fhir:v "CHINGOLAS" ] ;
+     fhir:display [ fhir:v "CHINGOLAS" ]
+  ] [
+     fhir:code [ fhir:v "CHUY" ] ;
+     fhir:display [ fhir:v "CHUY" ]
+  ] [
+     fhir:code [ fhir:v "CLARA" ] ;
+     fhir:display [ fhir:v "CLARA" ]
+  ] [
+     fhir:code [ fhir:v "COLINAS" ] ;
+     fhir:display [ fhir:v "COLINAS" ]
+  ] [
+     fhir:code [ fhir:v "COLONIA" ] ;
+     fhir:display [ fhir:v "COLONIA" ]
+  ] [
+     fhir:code [ fhir:v "COLONIA 18 JUL." ] ;
+     fhir:display [ fhir:v "COLONIA 18 JUL." ]
+  ] [
+     fhir:code [ fhir:v "COLONIA GARIBALDI" ] ;
+     fhir:display [ fhir:v "COLONIA GARIBALDI" ]
+  ] [
+     fhir:code [ fhir:v "COLONIA ITAPEBI" ] ;
+     fhir:display [ fhir:v "COLONIA ITAPEBI" ]
+  ] [
+     fhir:code [ fhir:v "COLONIA LAVALLE" ] ;
+     fhir:display [ fhir:v "COLONIA LAVALLE" ]
+  ] [
+     fhir:code [ fhir:v "COLONIA NICOLIC" ] ;
+     fhir:display [ fhir:v "COLONIA NICOLIC" ]
+  ] [
+     fhir:code [ fhir:v "CONCHILLAS" ] ;
+     fhir:display [ fhir:v "CONCHILLAS" ]
+  ] [
+     fhir:code [ fhir:v "CONSTANCIA" ] ;
+     fhir:display [ fhir:v "CONSTANCIA" ]
+  ] [
+     fhir:code [ fhir:v "CONSTITUCION" ] ;
+     fhir:display [ fhir:v "CONSTITUCION" ]
+  ] [
+     fhir:code [ fhir:v "COSMOPOLITA" ] ;
+     fhir:display [ fhir:v "COSMOPOLITA" ]
+  ] [
+     fhir:code [ fhir:v "COSTA AZUL1" ] ;
+     fhir:display [ fhir:v "COSTA AZUL1" ]
+  ] [
+     fhir:code [ fhir:v "COSTA AZUL2" ] ;
+     fhir:display [ fhir:v "COSTA AZUL2" ]
+  ] [
+     fhir:code [ fhir:v "CRUZ DE CAMINOS" ] ;
+     fhir:display [ fhir:v "CRUZ DE CAMINOS" ]
+  ] [
+     fhir:code [ fhir:v "CUARO" ] ;
+     fhir:display [ fhir:v "CUARO" ]
+  ] [
+     fhir:code [ fhir:v "CUARÓ" ] ;
+     fhir:display [ fhir:v "CUARÓ" ]
+  ] [
+     fhir:code [ fhir:v "CUARO CHICO" ] ;
+     fhir:display [ fhir:v "CUARO CHICO" ]
+  ] [
+     fhir:code [ fhir:v "CUCHILLA ALTA" ] ;
+     fhir:display [ fhir:v "CUCHILLA ALTA" ]
+  ] [
+     fhir:code [ fhir:v "CUCHILLA DEL OMBU" ] ;
+     fhir:display [ fhir:v "CUCHILLA DEL OMBU" ]
+  ] [
+     fhir:code [ fhir:v "CUFRE" ] ;
+     fhir:display [ fhir:v "CUFRE" ]
+  ] [
+     fhir:code [ fhir:v "CURTINA" ] ;
+     fhir:display [ fhir:v "CURTINA" ]
+  ] [
+     fhir:code [ fhir:v "DAYMAN" ] ;
+     fhir:display [ fhir:v "DAYMAN" ]
+  ] [
+     fhir:code [ fhir:v "DOLORES" ] ;
+     fhir:display [ fhir:v "DOLORES" ]
+  ] [
+     fhir:code [ fhir:v "DURAZNO" ] ;
+     fhir:display [ fhir:v "DURAZNO" ]
+  ] [
+     fhir:code [ fhir:v "E.MARTINEZ" ] ;
+     fhir:display [ fhir:v "E.MARTINEZ" ]
+  ] [
+     fhir:code [ fhir:v "ECILDA PAULIER" ] ;
+     fhir:display [ fhir:v "ECILDA PAULIER" ]
+  ] [
+     fhir:code [ fhir:v "EGAÑA" ] ;
+     fhir:display [ fhir:v "EGAÑA" ]
+  ] [
+     fhir:code [ fhir:v "EL BELLACO" ] ;
+     fhir:display [ fhir:v "EL BELLACO" ]
+  ] [
+     fhir:code [ fhir:v "EL CHORRO" ] ;
+     fhir:display [ fhir:v "EL CHORRO" ]
+  ] [
+     fhir:code [ fhir:v "EL EUCALIPTO" ] ;
+     fhir:display [ fhir:v "EL EUCALIPTO" ]
+  ] [
+     fhir:code [ fhir:v "EL PINAR - SUR" ] ;
+     fhir:display [ fhir:v "EL PINAR - SUR" ]
+  ] [
+     fhir:code [ fhir:v "EL TALA" ] ;
+     fhir:display [ fhir:v "EL TALA" ]
+  ] [
+     fhir:code [ fhir:v "EL TESORO" ] ;
+     fhir:display [ fhir:v "EL TESORO" ]
+  ] [
+     fhir:code [ fhir:v "ESPERANZA" ] ;
+     fhir:display [ fhir:v "ESPERANZA" ]
+  ] [
+     fhir:code [ fhir:v "EST.ATLANTIDA" ] ;
+     fhir:display [ fhir:v "EST.ATLANTIDA" ]
+  ] [
+     fhir:code [ fhir:v "EST.LA FLORESTA" ] ;
+     fhir:display [ fhir:v "EST.LA FLORESTA" ]
+  ] [
+     fhir:code [ fhir:v "ESTANZUELA" ] ;
+     fhir:display [ fhir:v "ESTANZUELA" ]
+  ] [
+     fhir:code [ fhir:v "F.MARCOS" ] ;
+     fhir:display [ fhir:v "F.MARCOS" ]
+  ] [
+     fhir:code [ fhir:v "F.STA.ROSA" ] ;
+     fhir:display [ fhir:v "F.STA.ROSA" ]
+  ] [
+     fhir:code [ fhir:v "FCIO. SANCHEZ" ] ;
+     fhir:display [ fhir:v "FCIO. SANCHEZ" ]
+  ] [
+     fhir:code [ fhir:v "FEDERACION" ] ;
+     fhir:display [ fhir:v "FEDERACION" ]
+  ] [
+     fhir:code [ fhir:v "FELICIANO" ] ;
+     fhir:display [ fhir:v "FELICIANO" ]
+  ] [
+     fhir:code [ fhir:v "FERRER" ] ;
+     fhir:display [ fhir:v "FERRER" ]
+  ] [
+     fhir:code [ fhir:v "FLORIDA" ] ;
+     fhir:display [ fhir:v "FLORIDA" ]
+  ] [
+     fhir:code [ fhir:v "FOMENTO" ] ;
+     fhir:display [ fhir:v "FOMENTO" ]
+  ] [
+     fhir:code [ fhir:v "FRAILE MUERTO" ] ;
+     fhir:display [ fhir:v "FRAILE MUERTO" ]
+  ] [
+     fhir:code [ fhir:v "FRAY BENTOS" ] ;
+     fhir:display [ fhir:v "FRAY BENTOS" ]
+  ] [
+     fhir:code [ fhir:v "FUNDACION POLANCO" ] ;
+     fhir:display [ fhir:v "FUNDACION POLANCO" ]
+  ] [
+     fhir:code [ fhir:v "G.AZNARES" ] ;
+     fhir:display [ fhir:v "G.AZNARES" ]
+  ] [
+     fhir:code [ fhir:v "GALLINAL" ] ;
+     fhir:display [ fhir:v "GALLINAL" ]
+  ] [
+     fhir:code [ fhir:v "GARZON" ] ;
+     fhir:display [ fhir:v "GARZON" ]
+  ] [
+     fhir:code [ fhir:v "GOMENSORO" ] ;
+     fhir:display [ fhir:v "GOMENSORO" ]
+  ] [
+     fhir:code [ fhir:v "GONZALEZ" ] ;
+     fhir:display [ fhir:v "GONZALEZ" ]
+  ] [
+     fhir:code [ fhir:v "GOÑI" ] ;
+     fhir:display [ fhir:v "GOÑI" ]
+  ] [
+     fhir:code [ fhir:v "GUAYUVIRA" ] ;
+     fhir:display [ fhir:v "GUAYUVIRA" ]
+  ] [
+     fhir:code [ fhir:v "GUAZUBIRA" ] ;
+     fhir:display [ fhir:v "GUAZUBIRA" ]
+  ] [
+     fhir:code [ fhir:v "GUAZUBIRA VIEJO" ] ;
+     fhir:display [ fhir:v "GUAZUBIRA VIEJO" ]
+  ] [
+     fhir:code [ fhir:v "GUICHON" ] ;
+     fhir:display [ fhir:v "GUICHON" ]
+  ] [
+     fhir:code [ fhir:v "I. CORTINAS" ] ;
+     fhir:display [ fhir:v "I. CORTINAS" ]
+  ] [
+     fhir:code [ fhir:v "ILLESCAS" ] ;
+     fhir:display [ fhir:v "ILLESCAS" ]
+  ] [
+     fhir:code [ fhir:v "INDEPENDENCIA" ] ;
+     fhir:display [ fhir:v "INDEPENDENCIA" ]
+  ] [
+     fhir:code [ fhir:v "ISIDORO NOBLIA" ] ;
+     fhir:display [ fhir:v "ISIDORO NOBLIA" ]
+  ] [
+     fhir:code [ fhir:v "ISLA PATRULLA" ] ;
+     fhir:display [ fhir:v "ISLA PATRULLA" ]
+  ] [
+     fhir:code [ fhir:v "ITUZAINGO" ] ;
+     fhir:display [ fhir:v "ITUZAINGO" ]
+  ] [
+     fhir:code [ fhir:v "J.J. CASTRO" ] ;
+     fhir:display [ fhir:v "J.J. CASTRO" ]
+  ] [
+     fhir:code [ fhir:v "J.LACAZE" ] ;
+     fhir:display [ fhir:v "J.LACAZE" ]
+  ] [
+     fhir:code [ fhir:v "J.P.VARELA" ] ;
+     fhir:display [ fhir:v "J.P.VARELA" ]
+  ] [
+     fhir:code [ fhir:v "JACKSON" ] ;
+     fhir:display [ fhir:v "JACKSON" ]
+  ] [
+     fhir:code [ fhir:v "JOANICO" ] ;
+     fhir:display [ fhir:v "JOANICO" ]
+  ] [
+     fhir:code [ fhir:v "JOSE IGNACIO" ] ;
+     fhir:display [ fhir:v "JOSE IGNACIO" ]
+  ] [
+     fhir:code [ fhir:v "JOSE IGNACIO (ADCL)" ] ;
+     fhir:display [ fhir:v "JOSE IGNACIO (ADCL)" ]
+  ] [
+     fhir:code [ fhir:v "JUAN SOLER" ] ;
+     fhir:display [ fhir:v "JUAN SOLER" ]
+  ] [
+     fhir:code [ fhir:v "KILOMETRO 110" ] ;
+     fhir:display [ fhir:v "KILOMETRO 110" ]
+  ] [
+     fhir:code [ fhir:v "KIYU" ] ;
+     fhir:display [ fhir:v "KIYU" ]
+  ] [
+     fhir:code [ fhir:v "L.GEIRES" ] ;
+     fhir:display [ fhir:v "L.GEIRES" ]
+  ] [
+     fhir:code [ fhir:v "LA AGUADA" ] ;
+     fhir:display [ fhir:v "LA AGUADA" ]
+  ] [
+     fhir:code [ fhir:v "LA ALDEA" ] ;
+     fhir:display [ fhir:v "LA ALDEA" ]
+  ] [
+     fhir:code [ fhir:v "LA BARRA" ] ;
+     fhir:display [ fhir:v "LA BARRA" ]
+  ] [
+     fhir:code [ fhir:v "LA BOLSA" ] ;
+     fhir:display [ fhir:v "LA BOLSA" ]
+  ] [
+     fhir:code [ fhir:v "LA BOTA" ] ;
+     fhir:display [ fhir:v "LA BOTA" ]
+  ] [
+     fhir:code [ fhir:v "LA BOTA ZB" ] ;
+     fhir:display [ fhir:v "LA BOTA ZB" ]
+  ] [
+     fhir:code [ fhir:v "LA BOYADA" ] ;
+     fhir:display [ fhir:v "LA BOYADA" ]
+  ] [
+     fhir:code [ fhir:v "LA CALERA" ] ;
+     fhir:display [ fhir:v "LA CALERA" ]
+  ] [
+     fhir:code [ fhir:v "LA CALZADA" ] ;
+     fhir:display [ fhir:v "LA CALZADA" ]
+  ] [
+     fhir:code [ fhir:v "LA CAPUERA" ] ;
+     fhir:display [ fhir:v "LA CAPUERA" ]
+  ] [
+     fhir:code [ fhir:v "LA CAPUERA (ZB)" ] ;
+     fhir:display [ fhir:v "LA CAPUERA (ZB)" ]
+  ] [
+     fhir:code [ fhir:v "LA CASILLA" ] ;
+     fhir:display [ fhir:v "LA CASILLA" ]
+  ] [
+     fhir:code [ fhir:v "LA CONCORDIA" ] ;
+     fhir:display [ fhir:v "LA CONCORDIA" ]
+  ] [
+     fhir:code [ fhir:v "LA CORONILLA" ] ;
+     fhir:display [ fhir:v "LA CORONILLA" ]
+  ] [
+     fhir:code [ fhir:v "LA CRUZ" ] ;
+     fhir:display [ fhir:v "LA CRUZ" ]
+  ] [
+     fhir:code [ fhir:v "LA CUCHILLA" ] ;
+     fhir:display [ fhir:v "LA CUCHILLA" ]
+  ] [
+     fhir:code [ fhir:v "LA FLORESTA" ] ;
+     fhir:display [ fhir:v "LA FLORESTA" ]
+  ] [
+     fhir:code [ fhir:v "LA HILERA" ] ;
+     fhir:display [ fhir:v "LA HILERA" ]
+  ] [
+     fhir:code [ fhir:v "LA JUANITA" ] ;
+     fhir:display [ fhir:v "LA JUANITA" ]
+  ] [
+     fhir:code [ fhir:v "LA MACANA" ] ;
+     fhir:display [ fhir:v "LA MACANA" ]
+  ] [
+     fhir:code [ fhir:v "LA MICAELA" ] ;
+     fhir:display [ fhir:v "LA MICAELA" ]
+  ] [
+     fhir:code [ fhir:v "LA PALMA" ] ;
+     fhir:display [ fhir:v "LA PALMA" ]
+  ] [
+     fhir:code [ fhir:v "LA PALOMA1" ] ;
+     fhir:display [ fhir:v "LA PALOMA1" ]
+  ] [
+     fhir:code [ fhir:v "LA PALOMA2" ] ;
+     fhir:display [ fhir:v "LA PALOMA2" ]
+  ] [
+     fhir:code [ fhir:v "LA PAZ1" ] ;
+     fhir:display [ fhir:v "LA PAZ1" ]
+  ] [
+     fhir:code [ fhir:v "LA PAZ2" ] ;
+     fhir:display [ fhir:v "LA PAZ2" ]
+  ] [
+     fhir:code [ fhir:v "LA PEDRERA" ] ;
+     fhir:display [ fhir:v "LA PEDRERA" ]
+  ] [
+     fhir:code [ fhir:v "LA PUENTE" ] ;
+     fhir:display [ fhir:v "LA PUENTE" ]
+  ] [
+     fhir:code [ fhir:v "LA TENTACION" ] ;
+     fhir:display [ fhir:v "LA TENTACION" ]
+  ] [
+     fhir:code [ fhir:v "LA TUNA" ] ;
+     fhir:display [ fhir:v "LA TUNA" ]
+  ] [
+     fhir:code [ fhir:v "LAGO MERIN" ] ;
+     fhir:display [ fhir:v "LAGO MERIN" ]
+  ] [
+     fhir:code [ fhir:v "LAGOMAR NORTE" ] ;
+     fhir:display [ fhir:v "LAGOMAR NORTE" ]
+  ] [
+     fhir:code [ fhir:v "LAGOMAR SUR" ] ;
+     fhir:display [ fhir:v "LAGOMAR SUR" ]
+  ] [
+     fhir:code [ fhir:v "LAGUNA DE ROCHA" ] ;
+     fhir:display [ fhir:v "LAGUNA DE ROCHA" ]
+  ] [
+     fhir:code [ fhir:v "LAMAS" ] ;
+     fhir:display [ fhir:v "LAMAS" ]
+  ] [
+     fhir:code [ fhir:v "LAS CHILCAS" ] ;
+     fhir:display [ fhir:v "LAS CHILCAS" ]
+  ] [
+     fhir:code [ fhir:v "LAS FLORES" ] ;
+     fhir:display [ fhir:v "LAS FLORES" ]
+  ] [
+     fhir:code [ fhir:v "LAS PAJAS" ] ;
+     fhir:display [ fhir:v "LAS PAJAS" ]
+  ] [
+     fhir:code [ fhir:v "LAS PALMAS" ] ;
+     fhir:display [ fhir:v "LAS PALMAS" ]
+  ] [
+     fhir:code [ fhir:v "LAS PIEDRAS" ] ;
+     fhir:display [ fhir:v "LAS PIEDRAS" ]
+  ] [
+     fhir:code [ fhir:v "LAS TOSCAS NORT" ] ;
+     fhir:display [ fhir:v "LAS TOSCAS NORT" ]
+  ] [
+     fhir:code [ fhir:v "LAS TOSCAS1" ] ;
+     fhir:display [ fhir:v "LAS TOSCAS1" ]
+  ] [
+     fhir:code [ fhir:v "LAS TOSCAS2" ] ;
+     fhir:display [ fhir:v "LAS TOSCAS2" ]
+  ] [
+     fhir:code [ fhir:v "LAS VEGAS NORTE" ] ;
+     fhir:display [ fhir:v "LAS VEGAS NORTE" ]
+  ] [
+     fhir:code [ fhir:v "LAS VEGAS SUR" ] ;
+     fhir:display [ fhir:v "LAS VEGAS SUR" ]
+  ] [
+     fhir:code [ fhir:v "LASCANO" ] ;
+     fhir:display [ fhir:v "LASCANO" ]
+  ] [
+     fhir:code [ fhir:v "LAURELES" ] ;
+     fhir:display [ fhir:v "LAURELES" ]
+  ] [
+     fhir:code [ fhir:v "LIBERTAD" ] ;
+     fhir:display [ fhir:v "LIBERTAD" ]
+  ] [
+     fhir:code [ fhir:v "LOMAS D SOLYMAR" ] ;
+     fhir:display [ fhir:v "LOMAS D SOLYMAR" ]
+  ] [
+     fhir:code [ fhir:v "LOMAS NORTE" ] ;
+     fhir:display [ fhir:v "LOMAS NORTE" ]
+  ] [
+     fhir:code [ fhir:v "LOMAS SOLYMAR 3" ] ;
+     fhir:display [ fhir:v "LOMAS SOLYMAR 3" ]
+  ] [
+     fhir:code [ fhir:v "LOS CERROS" ] ;
+     fhir:display [ fhir:v "LOS CERROS" ]
+  ] [
+     fhir:code [ fhir:v "LOS CUADRADOS" ] ;
+     fhir:display [ fhir:v "LOS CUADRADOS" ]
+  ] [
+     fhir:code [ fhir:v "LOS FEOS" ] ;
+     fhir:display [ fhir:v "LOS FEOS" ]
+  ] [
+     fhir:code [ fhir:v "LOS FURTADOS" ] ;
+     fhir:display [ fhir:v "LOS FURTADOS" ]
+  ] [
+     fhir:code [ fhir:v "LOS HIGUERONES" ] ;
+     fhir:display [ fhir:v "LOS HIGUERONES" ]
+  ] [
+     fhir:code [ fhir:v "LOS PINOS" ] ;
+     fhir:display [ fhir:v "LOS PINOS" ]
+  ] [
+     fhir:code [ fhir:v "LOS SEMPER" ] ;
+     fhir:display [ fhir:v "LOS SEMPER" ]
+  ] [
+     fhir:code [ fhir:v "LOS TALAS" ] ;
+     fhir:display [ fhir:v "LOS TALAS" ]
+  ] [
+     fhir:code [ fhir:v "LOS TITANES" ] ;
+     fhir:display [ fhir:v "LOS TITANES" ]
+  ] [
+     fhir:code [ fhir:v "M ALBINA" ] ;
+     fhir:display [ fhir:v "M ALBINA" ]
+  ] [
+     fhir:code [ fhir:v "M.CHICO" ] ;
+     fhir:display [ fhir:v "M.CHICO" ]
+  ] [
+     fhir:code [ fhir:v "M.CORAL" ] ;
+     fhir:display [ fhir:v "M.CORAL" ]
+  ] [
+     fhir:code [ fhir:v "M.DE CORRALES" ] ;
+     fhir:display [ fhir:v "M.DE CORRALES" ]
+  ] [
+     fhir:code [ fhir:v "M.GRANDE" ] ;
+     fhir:display [ fhir:v "M.GRANDE" ]
+  ] [
+     fhir:code [ fhir:v "MACIEL" ] ;
+     fhir:display [ fhir:v "MACIEL" ]
+  ] [
+     fhir:code [ fhir:v "MAL ABRIGO" ] ;
+     fhir:display [ fhir:v "MAL ABRIGO" ]
+  ] [
+     fhir:code [ fhir:v "MALDONADO" ] ;
+     fhir:display [ fhir:v "MALDONADO" ]
+  ] [
+     fhir:code [ fhir:v "MALDONADO (ZB)" ] ;
+     fhir:display [ fhir:v "MALDONADO (ZB)" ]
+  ] [
+     fhir:code [ fhir:v "MALVAREZ" ] ;
+     fhir:display [ fhir:v "MALVAREZ" ]
+  ] [
+     fhir:code [ fhir:v "MANANTIALES" ] ;
+     fhir:display [ fhir:v "MANANTIALES" ]
+  ] [
+     fhir:code [ fhir:v "MANGRULLO" ] ;
+     fhir:display [ fhir:v "MANGRULLO" ]
+  ] [
+     fhir:code [ fhir:v "MARGAT" ] ;
+     fhir:display [ fhir:v "MARGAT" ]
+  ] [
+     fhir:code [ fhir:v "MARINDIA" ] ;
+     fhir:display [ fhir:v "MARINDIA" ]
+  ] [
+     fhir:code [ fhir:v "MARISCALA" ] ;
+     fhir:display [ fhir:v "MARISCALA" ]
+  ] [
+     fhir:code [ fhir:v "MASOLLER" ] ;
+     fhir:display [ fhir:v "MASOLLER" ]
+  ] [
+     fhir:code [ fhir:v "MEDANOS NORTE" ] ;
+     fhir:display [ fhir:v "MEDANOS NORTE" ]
+  ] [
+     fhir:code [ fhir:v "MEDANOS SOLYMAR" ] ;
+     fhir:display [ fhir:v "MEDANOS SOLYMAR" ]
+  ] [
+     fhir:code [ fhir:v "MELLIZOS" ] ;
+     fhir:display [ fhir:v "MELLIZOS" ]
+  ] [
+     fhir:code [ fhir:v "MELO" ] ;
+     fhir:display [ fhir:v "MELO" ]
+  ] [
+     fhir:code [ fhir:v "MERCEDES" ] ;
+     fhir:display [ fhir:v "MERCEDES" ]
+  ] [
+     fhir:code [ fhir:v "MERINOS" ] ;
+     fhir:display [ fhir:v "MERINOS" ]
+  ] [
+     fhir:code [ fhir:v "MIGUEZ" ] ;
+     fhir:display [ fhir:v "MIGUEZ" ]
+  ] [
+     fhir:code [ fhir:v "MINAS" ] ;
+     fhir:display [ fhir:v "MINAS" ]
+  ] [
+     fhir:code [ fhir:v "MOIRONES" ] ;
+     fhir:display [ fhir:v "MOIRONES" ]
+  ] [
+     fhir:code [ fhir:v "MONTES" ] ;
+     fhir:display [ fhir:v "MONTES" ]
+  ] [
+     fhir:code [ fhir:v "MONTES SOLYMAR" ] ;
+     fhir:display [ fhir:v "MONTES SOLYMAR" ]
+  ] [
+     fhir:code [ fhir:v "MONTEVIDEO" ] ;
+     fhir:display [ fhir:v "MONTEVIDEO" ]
+  ] [
+     fhir:code [ fhir:v "MONTVIDEO CHICO" ] ;
+     fhir:display [ fhir:v "MONTVIDEO CHICO" ]
+  ] [
+     fhir:code [ fhir:v "MORATO" ] ;
+     fhir:display [ fhir:v "MORATO" ]
+  ] [
+     fhir:code [ fhir:v "N.HELVECIA" ] ;
+     fhir:display [ fhir:v "N.HELVECIA" ]
+  ] [
+     fhir:code [ fhir:v "N.PALMIRA" ] ;
+     fhir:display [ fhir:v "N.PALMIRA" ]
+  ] [
+     fhir:code [ fhir:v "NEPTUNIA NORTE" ] ;
+     fhir:display [ fhir:v "NEPTUNIA NORTE" ]
+  ] [
+     fhir:code [ fhir:v "NEPTUNIA SUR" ] ;
+     fhir:display [ fhir:v "NEPTUNIA SUR" ]
+  ] [
+     fhir:code [ fhir:v "NUEVA CARRARA" ] ;
+     fhir:display [ fhir:v "NUEVA CARRARA" ]
+  ] [
+     fhir:code [ fhir:v "NUEVO BERLIN" ] ;
+     fhir:display [ fhir:v "NUEVO BERLIN" ]
+  ] [
+     fhir:code [ fhir:v "O.DE LAVALLE" ] ;
+     fhir:display [ fhir:v "O.DE LAVALLE" ]
+  ] [
+     fhir:code [ fhir:v "O.DE ORIBE" ] ;
+     fhir:display [ fhir:v "O.DE ORIBE" ]
+  ] [
+     fhir:code [ fhir:v "OCEAN PARK" ] ;
+     fhir:display [ fhir:v "OCEAN PARK" ]
+  ] [
+     fhir:code [ fhir:v "ORGOROZO" ] ;
+     fhir:display [ fhir:v "ORGOROZO" ]
+  ] [
+     fhir:code [ fhir:v "P. CASTELLANOS" ] ;
+     fhir:display [ fhir:v "P. CASTELLANOS" ]
+  ] [
+     fhir:code [ fhir:v "P.AZUCAR" ] ;
+     fhir:display [ fhir:v "P.AZUCAR" ]
+  ] [
+     fhir:code [ fhir:v "P.CERRO" ] ;
+     fhir:display [ fhir:v "P.CERRO" ]
+  ] [
+     fhir:code [ fhir:v "P.D.PLATA NORTE" ] ;
+     fhir:display [ fhir:v "P.D.PLATA NORTE" ]
+  ] [
+     fhir:code [ fhir:v "P.DE PACHE" ] ;
+     fhir:display [ fhir:v "P.DE PACHE" ]
+  ] [
+     fhir:code [ fhir:v "P.DEL PLATA" ] ;
+     fhir:display [ fhir:v "P.DEL PLATA" ]
+  ] [
+     fhir:code [ fhir:v "P.DEL.ESTE" ] ;
+     fhir:display [ fhir:v "P.DEL.ESTE" ]
+  ] [
+     fhir:code [ fhir:v "P.SEVERINO" ] ;
+     fhir:display [ fhir:v "P.SEVERINO" ]
+  ] [
+     fhir:code [ fhir:v "P.SOLA" ] ;
+     fhir:display [ fhir:v "P.SOLA" ]
+  ] [
+     fhir:code [ fhir:v "P.TOROS" ] ;
+     fhir:display [ fhir:v "P.TOROS" ]
+  ] [
+     fhir:code [ fhir:v "PALMITAS" ] ;
+     fhir:display [ fhir:v "PALMITAS" ]
+  ] [
+     fhir:code [ fhir:v "PALO SOLO" ] ;
+     fhir:display [ fhir:v "PALO SOLO" ]
+  ] [
+     fhir:code [ fhir:v "PANDO" ] ;
+     fhir:display [ fhir:v "PANDO" ]
+  ] [
+     fhir:code [ fhir:v "PANDULE" ] ;
+     fhir:display [ fhir:v "PANDULE" ]
+  ] [
+     fhir:code [ fhir:v "PARAJE PENSE" ] ;
+     fhir:display [ fhir:v "PARAJE PENSE" ]
+  ] [
+     fhir:code [ fhir:v "PARALLÉ" ] ;
+     fhir:display [ fhir:v "PARALLÉ" ]
+  ] [
+     fhir:code [ fhir:v "PARQUE MIRAMAR" ] ;
+     fhir:display [ fhir:v "PARQUE MIRAMAR" ]
+  ] [
+     fhir:code [ fhir:v "PARQUE SOLYMAR" ] ;
+     fhir:display [ fhir:v "PARQUE SOLYMAR" ]
+  ] [
+     fhir:code [ fhir:v "PASANO" ] ;
+     fhir:display [ fhir:v "PASANO" ]
+  ] [
+     fhir:code [ fhir:v "PASO ARRIERA" ] ;
+     fhir:display [ fhir:v "PASO ARRIERA" ]
+  ] [
+     fhir:code [ fhir:v "PASO ATAQUES" ] ;
+     fhir:display [ fhir:v "PASO ATAQUES" ]
+  ] [
+     fhir:code [ fhir:v "PASO CARRASCO" ] ;
+     fhir:display [ fhir:v "PASO CARRASCO" ]
+  ] [
+     fhir:code [ fhir:v "PASO D PARQUE" ] ;
+     fhir:display [ fhir:v "PASO D PARQUE" ]
+  ] [
+     fhir:code [ fhir:v "PASO DE LA CRUZ" ] ;
+     fhir:display [ fhir:v "PASO DE LA CRUZ" ]
+  ] [
+     fhir:code [ fhir:v "PASO DE LAS CARRETAS" ] ;
+     fhir:display [ fhir:v "PASO DE LAS CARRETAS" ]
+  ] [
+     fhir:code [ fhir:v "PASO DE LOS NOVILLOS" ] ;
+     fhir:display [ fhir:v "PASO DE LOS NOVILLOS" ]
+  ] [
+     fhir:code [ fhir:v "PASO DEL MEDIO" ] ;
+     fhir:display [ fhir:v "PASO DEL MEDIO" ]
+  ] [
+     fhir:code [ fhir:v "PASO DEL TAPADO" ] ;
+     fhir:display [ fhir:v "PASO DEL TAPADO" ]
+  ] [
+     fhir:code [ fhir:v "PASO FARIAS" ] ;
+     fhir:display [ fhir:v "PASO FARIAS" ]
+  ] [
+     fhir:code [ fhir:v "PASO HOSPITAL" ] ;
+     fhir:display [ fhir:v "PASO HOSPITAL" ]
+  ] [
+     fhir:code [ fhir:v "PASO PEREIRA" ] ;
+     fhir:display [ fhir:v "PASO PEREIRA" ]
+  ] [
+     fhir:code [ fhir:v "PAYSANDU" ] ;
+     fhir:display [ fhir:v "PAYSANDU" ]
+  ] [
+     fhir:code [ fhir:v "PBLO. FERNANDEZ" ] ;
+     fhir:display [ fhir:v "PBLO. FERNANDEZ" ]
+  ] [
+     fhir:code [ fhir:v "PERALTA" ] ;
+     fhir:display [ fhir:v "PERALTA" ]
+  ] [
+     fhir:code [ fhir:v "PIEDRA DEL TORO" ] ;
+     fhir:display [ fhir:v "PIEDRA DEL TORO" ]
+  ] [
+     fhir:code [ fhir:v "PIEDRAS.COLORA." ] ;
+     fhir:display [ fhir:v "PIEDRAS.COLORA." ]
+  ] [
+     fhir:code [ fhir:v "PINAMAR NORTE" ] ;
+     fhir:display [ fhir:v "PINAMAR NORTE" ]
+  ] [
+     fhir:code [ fhir:v "PINAMAR SUR" ] ;
+     fhir:display [ fhir:v "PINAMAR SUR" ]
+  ] [
+     fhir:code [ fhir:v "PINAR - NORTE" ] ;
+     fhir:display [ fhir:v "PINAR - NORTE" ]
+  ] [
+     fhir:code [ fhir:v "PINARES" ] ;
+     fhir:display [ fhir:v "PINARES" ]
+  ] [
+     fhir:code [ fhir:v "PINARES - ATL" ] ;
+     fhir:display [ fhir:v "PINARES - ATL" ]
+  ] [
+     fhir:code [ fhir:v "PINTADO" ] ;
+     fhir:display [ fhir:v "PINTADO" ]
+  ] [
+     fhir:code [ fhir:v "PINTADO GRANDE" ] ;
+     fhir:display [ fhir:v "PINTADO GRANDE" ]
+  ] [
+     fhir:code [ fhir:v "PIÑERA" ] ;
+     fhir:display [ fhir:v "PIÑERA" ]
+  ] [
+     fhir:code [ fhir:v "PIRARAJA" ] ;
+     fhir:display [ fhir:v "PIRARAJA" ]
+  ] [
+     fhir:code [ fhir:v "PIRIAPOLIS" ] ;
+     fhir:display [ fhir:v "PIRIAPOLIS" ]
+  ] [
+     fhir:code [ fhir:v "PIRIAPOLIS INT" ] ;
+     fhir:display [ fhir:v "PIRIAPOLIS INT" ]
+  ] [
+     fhir:code [ fhir:v "PLACIDO ROSAS" ] ;
+     fhir:display [ fhir:v "PLACIDO ROSAS" ]
+  ] [
+     fhir:code [ fhir:v "POBLADO ALONSO" ] ;
+     fhir:display [ fhir:v "POBLADO ALONSO" ]
+  ] [
+     fhir:code [ fhir:v "POBLADO EL ORO" ] ;
+     fhir:display [ fhir:v "POBLADO EL ORO" ]
+  ] [
+     fhir:code [ fhir:v "POBLADO URUGUAY" ] ;
+     fhir:display [ fhir:v "POBLADO URUGUAY" ]
+  ] [
+     fhir:code [ fhir:v "POLANCO DEL YI" ] ;
+     fhir:display [ fhir:v "POLANCO DEL YI" ]
+  ] [
+     fhir:code [ fhir:v "POLANCO LAVALLEJA" ] ;
+     fhir:display [ fhir:v "POLANCO LAVALLEJA" ]
+  ] [
+     fhir:code [ fhir:v "PORVENIR" ] ;
+     fhir:display [ fhir:v "PORVENIR" ]
+  ] [
+     fhir:code [ fhir:v "PROGRESO" ] ;
+     fhir:display [ fhir:v "PROGRESO" ]
+  ] [
+     fhir:code [ fhir:v "PTA. DE VALDEZ" ] ;
+     fhir:display [ fhir:v "PTA. DE VALDEZ" ]
+  ] [
+     fhir:code [ fhir:v "PTA. DEL DIABLO" ] ;
+     fhir:display [ fhir:v "PTA. DEL DIABLO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO AREVALO" ] ;
+     fhir:display [ fhir:v "PUEBLO AREVALO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO CASTILLO" ] ;
+     fhir:display [ fhir:v "PUEBLO CASTILLO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO CELESTE" ] ;
+     fhir:display [ fhir:v "PUEBLO CELESTE" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO COLON" ] ;
+     fhir:display [ fhir:v "PUEBLO COLON" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO DE LOS SANTOS" ] ;
+     fhir:display [ fhir:v "PUEBLO DE LOS SANTOS" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO DEL BARRO" ] ;
+     fhir:display [ fhir:v "PUEBLO DEL BARRO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO EDEN" ] ;
+     fhir:display [ fhir:v "PUEBLO EDEN" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO GRECO" ] ;
+     fhir:display [ fhir:v "PUEBLO GRECO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO HERIBERTO" ] ;
+     fhir:display [ fhir:v "PUEBLO HERIBERTO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO LA BOLSA" ] ;
+     fhir:display [ fhir:v "PUEBLO LA BOLSA" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO NUEVO" ] ;
+     fhir:display [ fhir:v "PUEBLO NUEVO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO SOTO" ] ;
+     fhir:display [ fhir:v "PUEBLO SOTO" ]
+  ] [
+     fhir:code [ fhir:v "PUEBLO ZEBALLOS" ] ;
+     fhir:display [ fhir:v "PUEBLO ZEBALLOS" ]
+  ] [
+     fhir:code [ fhir:v "PUENTE DE VALIZAS" ] ;
+     fhir:display [ fhir:v "PUENTE DE VALIZAS" ]
+  ] [
+     fhir:code [ fhir:v "PUIMAYEN" ] ;
+     fhir:display [ fhir:v "PUIMAYEN" ]
+  ] [
+     fhir:code [ fhir:v "PUNTA 5 SAUCES" ] ;
+     fhir:display [ fhir:v "PUNTA 5 SAUCES" ]
+  ] [
+     fhir:code [ fhir:v "PUNTA BALLENA" ] ;
+     fhir:display [ fhir:v "PUNTA BALLENA" ]
+  ] [
+     fhir:code [ fhir:v "PUNTA RUBIA" ] ;
+     fhir:display [ fhir:v "PUNTA RUBIA" ]
+  ] [
+     fhir:code [ fhir:v "PUNTAS DEL PARAO" ] ;
+     fhir:display [ fhir:v "PUNTAS DEL PARAO" ]
+  ] [
+     fhir:code [ fhir:v "QUEBRACHO" ] ;
+     fhir:display [ fhir:v "QUEBRACHO" ]
+  ] [
+     fhir:code [ fhir:v "QUEGUAY CHICO" ] ;
+     fhir:display [ fhir:v "QUEGUAY CHICO" ]
+  ] [
+     fhir:code [ fhir:v "QUEGUAYAR" ] ;
+     fhir:display [ fhir:v "QUEGUAYAR" ]
+  ] [
+     fhir:code [ fhir:v "RADIAL" ] ;
+     fhir:display [ fhir:v "RADIAL" ]
+  ] [
+     fhir:code [ fhir:v "RAFAEL PERAZZA" ] ;
+     fhir:display [ fhir:v "RAFAEL PERAZZA" ]
+  ] [
+     fhir:code [ fhir:v "RAIGON" ] ;
+     fhir:display [ fhir:v "RAIGON" ]
+  ] [
+     fhir:code [ fhir:v "REBOLEDO" ] ;
+     fhir:display [ fhir:v "REBOLEDO" ]
+  ] [
+     fhir:code [ fhir:v "RIACHUELO" ] ;
+     fhir:display [ fhir:v "RIACHUELO" ]
+  ] [
+     fhir:code [ fhir:v "RINCON" ] ;
+     fhir:display [ fhir:v "RINCON" ]
+  ] [
+     fhir:code [ fhir:v "RINCON DE PACHECO" ] ;
+     fhir:display [ fhir:v "RINCON DE PACHECO" ]
+  ] [
+     fhir:code [ fhir:v "RINCON DE PINTADO" ] ;
+     fhir:display [ fhir:v "RINCON DE PINTADO" ]
+  ] [
+     fhir:code [ fhir:v "RINCON DEL PINO" ] ;
+     fhir:display [ fhir:v "RINCON DEL PINO" ]
+  ] [
+     fhir:code [ fhir:v "RINCON PEREIRA" ] ;
+     fhir:display [ fhir:v "RINCON PEREIRA" ]
+  ] [
+     fhir:code [ fhir:v "RIO BRANCO" ] ;
+     fhir:display [ fhir:v "RIO BRANCO" ]
+  ] [
+     fhir:code [ fhir:v "RISSO" ] ;
+     fhir:display [ fhir:v "RISSO" ]
+  ] [
+     fhir:code [ fhir:v "RIVERA" ] ;
+     fhir:display [ fhir:v "RIVERA" ]
+  ] [
+     fhir:code [ fhir:v "ROCHA" ] ;
+     fhir:display [ fhir:v "ROCHA" ]
+  ] [
+     fhir:code [ fhir:v "RODO" ] ;
+     fhir:display [ fhir:v "RODO" ]
+  ] [
+     fhir:code [ fhir:v "RODRIGUEZ" ] ;
+     fhir:display [ fhir:v "RODRIGUEZ" ]
+  ] [
+     fhir:code [ fhir:v "ROSARIO" ] ;
+     fhir:display [ fhir:v "ROSARIO" ]
+  ] [
+     fhir:code [ fhir:v "S.ANTONIO" ] ;
+     fhir:display [ fhir:v "S.ANTONIO" ]
+  ] [
+     fhir:code [ fhir:v "S.BAUTISTA" ] ;
+     fhir:display [ fhir:v "S.BAUTISTA" ]
+  ] [
+     fhir:code [ fhir:v "S.DEL YI" ] ;
+     fhir:display [ fhir:v "S.DEL YI" ]
+  ] [
+     fhir:code [ fhir:v "S.GRANDE" ] ;
+     fhir:display [ fhir:v "S.GRANDE" ]
+  ] [
+     fhir:code [ fhir:v "S.GREGORIO" ] ;
+     fhir:display [ fhir:v "S.GREGORIO" ]
+  ] [
+     fhir:code [ fhir:v "S.JACINTO" ] ;
+     fhir:display [ fhir:v "S.JACINTO" ]
+  ] [
+     fhir:code [ fhir:v "S.JORGE" ] ;
+     fhir:display [ fhir:v "S.JORGE" ]
+  ] [
+     fhir:code [ fhir:v "S.RAMON" ] ;
+     fhir:display [ fhir:v "S.RAMON" ]
+  ] [
+     fhir:code [ fhir:v "SACACHISPAS" ] ;
+     fhir:display [ fhir:v "SACACHISPAS" ]
+  ] [
+     fhir:code [ fhir:v "SALINAS" ] ;
+     fhir:display [ fhir:v "SALINAS" ]
+  ] [
+     fhir:code [ fhir:v "SALTO" ] ;
+     fhir:display [ fhir:v "SALTO" ]
+  ] [
+     fhir:code [ fhir:v "SAN ANTONIO" ] ;
+     fhir:display [ fhir:v "SAN ANTONIO" ]
+  ] [
+     fhir:code [ fhir:v "SAN BENITO" ] ;
+     fhir:display [ fhir:v "SAN BENITO" ]
+  ] [
+     fhir:code [ fhir:v "SAN CARLOS" ] ;
+     fhir:display [ fhir:v "SAN CARLOS" ]
+  ] [
+     fhir:code [ fhir:v "SAN CRISTOBAL" ] ;
+     fhir:display [ fhir:v "SAN CRISTOBAL" ]
+  ] [
+     fhir:code [ fhir:v "SAN GABRIEL" ] ;
+     fhir:display [ fhir:v "SAN GABRIEL" ]
+  ] [
+     fhir:code [ fhir:v "SAN GREGORIO" ] ;
+     fhir:display [ fhir:v "SAN GREGORIO" ]
+  ] [
+     fhir:code [ fhir:v "SAN JAVIER" ] ;
+     fhir:display [ fhir:v "SAN JAVIER" ]
+  ] [
+     fhir:code [ fhir:v "SAN JOSE" ] ;
+     fhir:display [ fhir:v "SAN JOSE" ]
+  ] [
+     fhir:code [ fhir:v "SAN LUIS" ] ;
+     fhir:display [ fhir:v "SAN LUIS" ]
+  ] [
+     fhir:code [ fhir:v "SAN LUIS(CNLNES)" ] ;
+     fhir:display [ fhir:v "SAN LUIS(CNLNES)" ]
+  ] [
+     fhir:code [ fhir:v "SAN PEDRO" ] ;
+     fhir:display [ fhir:v "SAN PEDRO" ]
+  ] [
+     fhir:code [ fhir:v "SANCHEZ" ] ;
+     fhir:display [ fhir:v "SANCHEZ" ]
+  ] [
+     fhir:code [ fhir:v "SANTA ANA" ] ;
+     fhir:display [ fhir:v "SANTA ANA" ]
+  ] [
+     fhir:code [ fhir:v "SANTA ANA C" ] ;
+     fhir:display [ fhir:v "SANTA ANA C" ]
+  ] [
+     fhir:code [ fhir:v "SANTA CLARA" ] ;
+     fhir:display [ fhir:v "SANTA CLARA" ]
+  ] [
+     fhir:code [ fhir:v "SANTA MONICA" ] ;
+     fhir:display [ fhir:v "SANTA MONICA" ]
+  ] [
+     fhir:code [ fhir:v "SANTA TERESITA" ] ;
+     fhir:display [ fhir:v "SANTA TERESITA" ]
+  ] [
+     fhir:code [ fhir:v "SAU.DEL YI" ] ;
+     fhir:display [ fhir:v "SAU.DEL YI" ]
+  ] [
+     fhir:code [ fhir:v "SAUCE" ] ;
+     fhir:display [ fhir:v "SAUCE" ]
+  ] [
+     fhir:code [ fhir:v "SAUCE DE BATOVI" ] ;
+     fhir:display [ fhir:v "SAUCE DE BATOVI" ]
+  ] [
+     fhir:code [ fhir:v "SAUCE DE PORTEZUELO" ] ;
+     fhir:display [ fhir:v "SAUCE DE PORTEZUELO" ]
+  ] [
+     fhir:code [ fhir:v "SAUCE." ] ;
+     fhir:display [ fhir:v "SAUCE." ]
+  ] [
+     fhir:code [ fhir:v "SDI. DE NAVARRO" ] ;
+     fhir:display [ fhir:v "SDI. DE NAVARRO" ]
+  ] [
+     fhir:code [ fhir:v "SEQUEIRA" ] ;
+     fhir:display [ fhir:v "SEQUEIRA" ]
+  ] [
+     fhir:code [ fhir:v "SHANGRILA" ] ;
+     fhir:display [ fhir:v "SHANGRILA" ]
+  ] [
+     fhir:code [ fhir:v "SJ.CARRASCO NOR" ] ;
+     fhir:display [ fhir:v "SJ.CARRASCO NOR" ]
+  ] [
+     fhir:code [ fhir:v "SJ.CARRASCO SUR" ] ;
+     fhir:display [ fhir:v "SJ.CARRASCO SUR" ]
+  ] [
+     fhir:code [ fhir:v "SOCA" ] ;
+     fhir:display [ fhir:v "SOCA" ]
+  ] [
+     fhir:code [ fhir:v "SOLIS" ] ;
+     fhir:display [ fhir:v "SOLIS" ]
+  ] [
+     fhir:code [ fhir:v "SOLIS DE MATAOJ" ] ;
+     fhir:display [ fhir:v "SOLIS DE MATAOJ" ]
+  ] [
+     fhir:code [ fhir:v "SOLYMAR NORTE" ] ;
+     fhir:display [ fhir:v "SOLYMAR NORTE" ]
+  ] [
+     fhir:code [ fhir:v "SOLYMAR SUR" ] ;
+     fhir:display [ fhir:v "SOLYMAR SUR" ]
+  ] [
+     fhir:code [ fhir:v "SOUDRIERS" ] ;
+     fhir:display [ fhir:v "SOUDRIERS" ]
+  ] [
+     fhir:code [ fhir:v "STA. CATALINA" ] ;
+     fhir:display [ fhir:v "STA. CATALINA" ]
+  ] [
+     fhir:code [ fhir:v "STA. LUCIA DEL ESTE" ] ;
+     fhir:display [ fhir:v "STA. LUCIA DEL ESTE" ]
+  ] [
+     fhir:code [ fhir:v "STA. ROSA" ] ;
+     fhir:display [ fhir:v "STA. ROSA" ]
+  ] [
+     fhir:code [ fhir:v "STA.LUCIA" ] ;
+     fhir:display [ fhir:v "STA.LUCIA" ]
+  ] [
+     fhir:code [ fhir:v "SUAREZ" ] ;
+     fhir:display [ fhir:v "SUAREZ" ]
+  ] [
+     fhir:code [ fhir:v "T.TRES" ] ;
+     fhir:display [ fhir:v "T.TRES" ]
+  ] [
+     fhir:code [ fhir:v "TACUAREMBO" ] ;
+     fhir:display [ fhir:v "TACUAREMBO" ]
+  ] [
+     fhir:code [ fhir:v "TALA" ] ;
+     fhir:display [ fhir:v "TALA" ]
+  ] [
+     fhir:code [ fhir:v "TAMBORES" ] ;
+     fhir:display [ fhir:v "TAMBORES" ]
+  ] [
+     fhir:code [ fhir:v "TAPIA" ] ;
+     fhir:display [ fhir:v "TAPIA" ]
+  ] [
+     fhir:code [ fhir:v "TARARIRAS" ] ;
+     fhir:display [ fhir:v "TARARIRAS" ]
+  ] [
+     fhir:code [ fhir:v "TARUMAN" ] ;
+     fhir:display [ fhir:v "TARUMAN" ]
+  ] [
+     fhir:code [ fhir:v "TIATUCURA" ] ;
+     fhir:display [ fhir:v "TIATUCURA" ]
+  ] [
+     fhir:code [ fhir:v "TIERR COLORADAS" ] ;
+     fhir:display [ fhir:v "TIERR COLORADAS" ]
+  ] [
+     fhir:code [ fhir:v "TOLEDO" ] ;
+     fhir:display [ fhir:v "TOLEDO" ]
+  ] [
+     fhir:code [ fhir:v "TOPADOR" ] ;
+     fhir:display [ fhir:v "TOPADOR" ]
+  ] [
+     fhir:code [ fhir:v "TOTORAL D SAUCE" ] ;
+     fhir:display [ fhir:v "TOTORAL D SAUCE" ]
+  ] [
+     fhir:code [ fhir:v "TRANQUERAS" ] ;
+     fhir:display [ fhir:v "TRANQUERAS" ]
+  ] [
+     fhir:code [ fhir:v "TRES ISLAS" ] ;
+     fhir:display [ fhir:v "TRES ISLAS" ]
+  ] [
+     fhir:code [ fhir:v "TRINIDAD" ] ;
+     fhir:display [ fhir:v "TRINIDAD" ]
+  ] [
+     fhir:code [ fhir:v "TUPAMBAE" ] ;
+     fhir:display [ fhir:v "TUPAMBAE" ]
+  ] [
+     fhir:code [ fhir:v "V.ANSINA" ] ;
+     fhir:display [ fhir:v "V.ANSINA" ]
+  ] [
+     fhir:code [ fhir:v "V.ARGENTINA" ] ;
+     fhir:display [ fhir:v "V.ARGENTINA" ]
+  ] [
+     fhir:code [ fhir:v "V.CARMEN" ] ;
+     fhir:display [ fhir:v "V.CARMEN" ]
+  ] [
+     fhir:code [ fhir:v "VALENTIN" ] ;
+     fhir:display [ fhir:v "VALENTIN" ]
+  ] [
+     fhir:code [ fhir:v "VALENTINES" ] ;
+     fhir:display [ fhir:v "VALENTINES" ]
+  ] [
+     fhir:code [ fhir:v "VALLE SOBA" ] ;
+     fhir:display [ fhir:v "VALLE SOBA" ]
+  ] [
+     fhir:code [ fhir:v "VELAZQUEZ" ] ;
+     fhir:display [ fhir:v "VELAZQUEZ" ]
+  ] [
+     fhir:code [ fhir:v "VERGARA" ] ;
+     fhir:display [ fhir:v "VERGARA" ]
+  ] [
+     fhir:code [ fhir:v "VIANA" ] ;
+     fhir:display [ fhir:v "VIANA" ]
+  ] [
+     fhir:code [ fhir:v "VICHADERO" ] ;
+     fhir:display [ fhir:v "VICHADERO" ]
+  ] [
+     fhir:code [ fhir:v "VILLA MARIA" ] ;
+     fhir:display [ fhir:v "VILLA MARIA" ]
+  ] [
+     fhir:code [ fhir:v "VILLA MONTAÑESA" ] ;
+     fhir:display [ fhir:v "VILLA MONTAÑESA" ]
+  ] [
+     fhir:code [ fhir:v "VILLA OLMOS" ] ;
+     fhir:display [ fhir:v "VILLA OLMOS" ]
+  ] [
+     fhir:code [ fhir:v "VILLA SARA" ] ;
+     fhir:display [ fhir:v "VILLA SARA" ]
+  ] [
+     fhir:code [ fhir:v "VILLA SORIANO" ] ;
+     fhir:display [ fhir:v "VILLA SORIANO" ]
+  ] [
+     fhir:code [ fhir:v "YOUNG" ] ;
+     fhir:display [ fhir:v "YOUNG" ]
+  ] [
+     fhir:code [ fhir:v "ZAPICAN" ] ;
+     fhir:display [ fhir:v "ZAPICAN" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

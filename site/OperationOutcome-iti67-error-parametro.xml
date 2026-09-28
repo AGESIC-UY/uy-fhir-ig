@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationOutcome xmlns="http://hl7.org/fhir">
+  <id value="iti67-error-parametro"/>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es"><p>Parámetro de búsqueda no admitido.</p></div>
+  </text>
+  <issue>
+    <severity value="error"/>
+    <code value="not-supported"/>
+    <details>
+      <text value="Parámetro de búsqueda no admitido."/>
+    </details>
+  </issue>
+</OperationOutcome>

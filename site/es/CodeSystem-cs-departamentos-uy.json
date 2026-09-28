@@ -1,0 +1,96 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-departamentos-uy",
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SistemaDeCodigos cs-departamentos-uy</b></p><a name=\"cs-departamentos-uy\"> </a><a name=\"hccs-departamentos-uy\"> </a><p>This case-sensitive code system <code>http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Artigas<a name=\"cs-departamentos-uy-Artigas\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Canelones<a name=\"cs-departamentos-uy-Canelones\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Cerro Largo<a name=\"cs-departamentos-uy-CerroLargo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Colonia<a name=\"cs-departamentos-uy-Colonia\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Durazno<a name=\"cs-departamentos-uy-Durazno\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Flores<a name=\"cs-departamentos-uy-Flores\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Florida<a name=\"cs-departamentos-uy-Florida\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Lavalleja<a name=\"cs-departamentos-uy-Lavalleja\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Maldonado<a name=\"cs-departamentos-uy-Maldonado\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Montevideo<a name=\"cs-departamentos-uy-Montevideo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Paysandú<a name=\"cs-departamentos-uy-Paysand.250\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Río Negro<a name=\"cs-departamentos-uy-R.237oNegro\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Rivera<a name=\"cs-departamentos-uy-Rivera\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Rocha<a name=\"cs-departamentos-uy-Rocha\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Salto<a name=\"cs-departamentos-uy-Salto\"> </a></td></tr><tr><td style=\"white-space:nowrap\">San José<a name=\"cs-departamentos-uy-SanJos.233\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Soriano<a name=\"cs-departamentos-uy-Soriano\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tacuarembó<a name=\"cs-departamentos-uy-Tacuaremb.243\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Treinta y Tres<a name=\"cs-departamentos-uy-TreintayTres\"> </a></td></tr></table></div>"
+  },
+  "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
+  "version" : "0.1.0",
+  "name" : "CSDepartamentosUY",
+  "title" : "Sistema de códigos de departamentos de Uruguay",
+  "status" : "draft",
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "Los 19 departamentos de la República Oriental del Uruguay.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 19,
+  "concept" : [{
+    "code" : "Artigas",
+    "display" : "Artigas"
+  },
+  {
+    "code" : "Canelones",
+    "display" : "Canelones"
+  },
+  {
+    "code" : "Cerro Largo",
+    "display" : "Cerro Largo"
+  },
+  {
+    "code" : "Colonia",
+    "display" : "Colonia"
+  },
+  {
+    "code" : "Durazno",
+    "display" : "Durazno"
+  },
+  {
+    "code" : "Flores",
+    "display" : "Flores"
+  },
+  {
+    "code" : "Florida",
+    "display" : "Florida"
+  },
+  {
+    "code" : "Lavalleja",
+    "display" : "Lavalleja"
+  },
+  {
+    "code" : "Maldonado",
+    "display" : "Maldonado"
+  },
+  {
+    "code" : "Montevideo",
+    "display" : "Montevideo"
+  },
+  {
+    "code" : "Paysandú",
+    "display" : "Paysandú"
+  },
+  {
+    "code" : "Río Negro",
+    "display" : "Río Negro"
+  },
+  {
+    "code" : "Rivera",
+    "display" : "Rivera"
+  },
+  {
+    "code" : "Rocha",
+    "display" : "Rocha"
+  },
+  {
+    "code" : "Salto",
+    "display" : "Salto"
+  },
+  {
+    "code" : "San José",
+    "display" : "San José"
+  },
+  {
+    "code" : "Soriano",
+    "display" : "Soriano"
+  },
+  {
+    "code" : "Tacuarembó",
+    "display" : "Tacuarembó"
+  },
+  {
+    "code" : "Treinta y Tres",
+    "display" : "Treinta y Tres"
+  }]
+}

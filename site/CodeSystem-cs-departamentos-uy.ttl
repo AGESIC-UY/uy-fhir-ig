@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-departamentos-uy"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SistemaDeCodigos cs-departamentos-uy</b></p><a name=\"cs-departamentos-uy\"> </a><a name=\"hccs-departamentos-uy\"> </a><p>This case-sensitive code system <code>http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Artigas<a name=\"cs-departamentos-uy-Artigas\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Canelones<a name=\"cs-departamentos-uy-Canelones\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Cerro Largo<a name=\"cs-departamentos-uy-CerroLargo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Colonia<a name=\"cs-departamentos-uy-Colonia\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Durazno<a name=\"cs-departamentos-uy-Durazno\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Flores<a name=\"cs-departamentos-uy-Flores\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Florida<a name=\"cs-departamentos-uy-Florida\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Lavalleja<a name=\"cs-departamentos-uy-Lavalleja\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Maldonado<a name=\"cs-departamentos-uy-Maldonado\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Montevideo<a name=\"cs-departamentos-uy-Montevideo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Paysandú<a name=\"cs-departamentos-uy-Paysand.250\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Río Negro<a name=\"cs-departamentos-uy-R.237oNegro\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Rivera<a name=\"cs-departamentos-uy-Rivera\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Rocha<a name=\"cs-departamentos-uy-Rocha\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Salto<a name=\"cs-departamentos-uy-Salto\"> </a></td></tr><tr><td style=\"white-space:nowrap\">San José<a name=\"cs-departamentos-uy-SanJos.233\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Soriano<a name=\"cs-departamentos-uy-Soriano\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tacuarembó<a name=\"cs-departamentos-uy-Tacuaremb.243\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Treinta y Tres<a name=\"cs-departamentos-uy-TreintayTres\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSDepartamentosUY"] ; # 
+  fhir:title [ fhir:v "Sistema de códigos de departamentos de Uruguay"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:description [ fhir:v "Los 19 departamentos de la República Oriental del Uruguay."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "19"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Artigas" ] ;
+     fhir:display [ fhir:v "Artigas" ]
+  ] [
+     fhir:code [ fhir:v "Canelones" ] ;
+     fhir:display [ fhir:v "Canelones" ]
+  ] [
+     fhir:code [ fhir:v "Cerro Largo" ] ;
+     fhir:display [ fhir:v "Cerro Largo" ]
+  ] [
+     fhir:code [ fhir:v "Colonia" ] ;
+     fhir:display [ fhir:v "Colonia" ]
+  ] [
+     fhir:code [ fhir:v "Durazno" ] ;
+     fhir:display [ fhir:v "Durazno" ]
+  ] [
+     fhir:code [ fhir:v "Flores" ] ;
+     fhir:display [ fhir:v "Flores" ]
+  ] [
+     fhir:code [ fhir:v "Florida" ] ;
+     fhir:display [ fhir:v "Florida" ]
+  ] [
+     fhir:code [ fhir:v "Lavalleja" ] ;
+     fhir:display [ fhir:v "Lavalleja" ]
+  ] [
+     fhir:code [ fhir:v "Maldonado" ] ;
+     fhir:display [ fhir:v "Maldonado" ]
+  ] [
+     fhir:code [ fhir:v "Montevideo" ] ;
+     fhir:display [ fhir:v "Montevideo" ]
+  ] [
+     fhir:code [ fhir:v "Paysandú" ] ;
+     fhir:display [ fhir:v "Paysandú" ]
+  ] [
+     fhir:code [ fhir:v "Río Negro" ] ;
+     fhir:display [ fhir:v "Río Negro" ]
+  ] [
+     fhir:code [ fhir:v "Rivera" ] ;
+     fhir:display [ fhir:v "Rivera" ]
+  ] [
+     fhir:code [ fhir:v "Rocha" ] ;
+     fhir:display [ fhir:v "Rocha" ]
+  ] [
+     fhir:code [ fhir:v "Salto" ] ;
+     fhir:display [ fhir:v "Salto" ]
+  ] [
+     fhir:code [ fhir:v "San José" ] ;
+     fhir:display [ fhir:v "San José" ]
+  ] [
+     fhir:code [ fhir:v "Soriano" ] ;
+     fhir:display [ fhir:v "Soriano" ]
+  ] [
+     fhir:code [ fhir:v "Tacuarembó" ] ;
+     fhir:display [ fhir:v "Tacuarembó" ]
+  ] [
+     fhir:code [ fhir:v "Treinta y Tres" ] ;
+     fhir:display [ fhir:v "Treinta y Tres" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

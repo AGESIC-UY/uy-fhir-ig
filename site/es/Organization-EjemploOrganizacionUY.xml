@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="EjemploOrganizacionUY"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Organización de ejemplo CORE UY</b></p></div>
+  </text>
+  <name value="Organización de ejemplo CORE UY"/>
+</Organization>

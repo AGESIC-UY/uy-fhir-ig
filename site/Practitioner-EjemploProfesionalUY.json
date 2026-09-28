@@ -1,0 +1,16 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "EjemploProfesionalUY",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Profesional Ejemplo</b></p><p>Nombre de pila: Profesional. Apellido: Ejemplo.</p></div>"
+  },
+  "name" : [{
+    "family" : "Ejemplo",
+    "given" : ["Profesional"]
+  }]
+}

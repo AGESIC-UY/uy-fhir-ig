@@ -1,0 +1,421 @@
+# HCEN Diagnóstico - Guía de Implementación FHIR de Uruguay v0.1.0
+
+## Perfil de los recursos: HCEN Diagnóstico 
+
+ 
+Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'diagnostico'. 
+
+**Usages:**
+
+* Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-diagnostico)
+
+### Vistas formales del contenido del perfil
+
+ [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Tabla de elementos clave](#tabs-key) 
+*  [Tabla diferencial](#tabs-diff) 
+*  [Tabla de instantáneas](#tabs-snap) 
+*  [Estadísticas/Referencias](#tabs-summ) 
+*  [Todos](#tabs-all) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
+
+#### Terminology Bindings (Differential)
+
+#### Constraints
+
+#### Terminology Bindings
+
+#### Constraints
+
+Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
+
+** Summary **
+
+Mandatory: 5 elements(6 nested mandatory elements)
+ Must-Support: 1 element
+ Fixed: 4 elements
+ Prohibited: 12 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Condition.code.coding
+* The element 1 is sliced based on the value of Condition.onset[x]
+
+ **Vista de elementos clave** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+ **Vista diferencial** 
+
+Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
+
+#### Terminology Bindings (Differential)
+
+#### Constraints
+
+ **Vista instantáneaView** 
+
+#### Terminology Bindings
+
+#### Constraints
+
+Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
+
+** Summary **
+
+Mandatory: 5 elements(6 nested mandatory elements)
+ Must-Support: 1 element
+ Fixed: 4 elements
+ Prohibited: 12 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Condition.code.coding
+* The element 1 is sliced based on the value of Condition.onset[x]
+
+ 
+
+Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.csv), [Excel](../StructureDefinition-hcen-diagnostico.xlsx), [Schematron](../StructureDefinition-hcen-diagnostico.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "hcen-diagnostico",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico",
+  "version" : "0.1.0",
+  "name" : "HCENDiagnostico",
+  "title" : "HCEN Diagnóstico",
+  "status" : "draft",
+  "date" : "2026-09-28T15:20:04-03:00",
+  "publisher" : "AGESIC",
+  "description" : "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'diagnostico'.",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Condition",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Condition",
+      "path" : "Condition",
+      "short" : "Diagnóstico de una Consulta No Urgente",
+      "definition" : "Condition que representa un diagnóstico registrado en una Hoja de Consulta No Urgente de HCEN."
+    },
+    {
+      "id" : "Condition.implicitRules",
+      "path" : "Condition.implicitRules",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.language",
+      "path" : "Condition.language",
+      "short" : "Idioma del recurso — fijo a es-UY",
+      "definition" : "Idioma del recurso — fijo a es-UY",
+      "min" : 1,
+      "fixedCode" : "es-UY"
+    },
+    {
+      "id" : "Condition.modifierExtension",
+      "path" : "Condition.modifierExtension",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.identifier",
+      "path" : "Condition.identifier",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.clinicalStatus",
+      "path" : "Condition.clinicalStatus",
+      "short" : "Estado del diagnóstico al cierre de la consulta. Mapeo CDA: problema resuelto → resolved; problema no resuelto → active (default)",
+      "definition" : "Estado del diagnóstico al cierre de la consulta. Mapeo CDA: problema resuelto → resolved; problema no resuelto → active (default)",
+      "min" : 1,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/condition-clinical"
+      }
+    },
+    {
+      "id" : "Condition.verificationStatus",
+      "path" : "Condition.verificationStatus",
+      "short" : "Grado de certeza del diagnóstico (p.ej. provisional, confirmed)",
+      "definition" : "Grado de certeza del diagnóstico (p.ej. provisional, confirmed)",
+      "min" : 1,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/condition-ver-status"
+      }
+    },
+    {
+      "id" : "Condition.category",
+      "path" : "Condition.category",
+      "short" : "Identifica este Condition como un diagnóstico",
+      "definition" : "Identifica este Condition como un diagnóstico",
+      "min" : 1,
+      "max" : "1",
+      "fixedCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "439401001",
+          "display" : "Diagnostico"
+        }]
+      },
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu"
+      }
+    },
+    {
+      "id" : "Condition.severity",
+      "path" : "Condition.severity",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.code",
+      "path" : "Condition.code",
+      "short" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología)",
+      "definition" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología)",
+      "min" : 1,
+      "constraint" : [{
+        "key" : "hcen-coding-required-1",
+        "severity" : "error",
+        "human" : "code.coding debe tener al menos una entrada (al menos una codificación).",
+        "expression" : "coding.exists()",
+        "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico"
+      }]
+    },
+    {
+      "id" : "Condition.code.coding",
+      "path" : "Condition.code.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "system"
+        }],
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Condition.code.coding:snomed",
+      "path" : "Condition.code.coding",
+      "sliceName" : "snomed",
+      "short" : "Código SNOMED CT del diagnóstico",
+      "definition" : "Código SNOMED CT del diagnóstico",
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:snomed.system",
+      "path" : "Condition.code.coding.system",
+      "min" : 1,
+      "fixedUri" : "http://snomed.info/sct"
+    },
+    {
+      "id" : "Condition.code.coding:snomed.code",
+      "path" : "Condition.code.coding.code",
+      "min" : 1,
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta"
+      }
+    },
+    {
+      "id" : "Condition.code.coding:snomed.display",
+      "path" : "Condition.code.coding.display",
+      "short" : "Texto descriptivo del código SNOMED CT del diagnóstico",
+      "definition" : "Texto descriptivo del código SNOMED CT del diagnóstico",
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:tesauro",
+      "path" : "Condition.code.coding",
+      "sliceName" : "tesauro",
+      "short" : "Código del diagnóstico en el tesauro local (URI pendiente de confirmación institucional)",
+      "definition" : "Código del diagnóstico en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:tesauro.system",
+      "path" : "Condition.code.coding.system",
+      "min" : 1,
+      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
+    },
+    {
+      "id" : "Condition.code.coding:tesauro.code",
+      "path" : "Condition.code.coding.code",
+      "short" : "Código del diagnóstico en el tesauro local",
+      "definition" : "Código del diagnóstico en el tesauro local",
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:tesauro.display",
+      "path" : "Condition.code.coding.display",
+      "short" : "Texto descriptivo del código del diagnóstico en el tesauro local",
+      "definition" : "Texto descriptivo del código del diagnóstico en el tesauro local",
+      "min" : 1
+    },
+    {
+      "id" : "Condition.bodySite",
+      "path" : "Condition.bodySite",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.subject",
+      "path" : "Condition.subject",
+      "short" : "Paciente al que se le asocia el diagnóstico",
+      "definition" : "Paciente al que se le asocia el diagnóstico",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]",
+      "path" : "Condition.onset[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "short" : "Inicio del problema de salud (fecha exacta, edad aproximada, período o rango)",
+      "definition" : "Inicio del problema de salud (fecha exacta, edad aproximada, período o rango)",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Condition.onset[x]:onsetAge",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetAge",
+      "short" : "Edad aproximada del paciente cuando comenzó con el problema de salud",
+      "definition" : "Edad aproximada del paciente cuando comenzó con el problema de salud.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Age"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod",
+      "path" : "Condition.onset[x]",
+      "sliceName" : "onsetPeriod",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }]
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod.start",
+      "path" : "Condition.onset[x].start",
+      "short" : "Fecha de inicio del problema de salud",
+      "definition" : "Indica la fecha de inicio del problema de salud."
+    },
+    {
+      "id" : "Condition.onset[x]:onsetPeriod.end",
+      "path" : "Condition.onset[x].end",
+      "short" : "Fecha de fin del problema de salud",
+      "definition" : "Indica la fecha de fin del problema de salud."
+    },
+    {
+      "id" : "Condition.abatement[x]",
+      "path" : "Condition.abatement[x]",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.recordedDate",
+      "path" : "Condition.recordedDate",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.recorder",
+      "path" : "Condition.recorder",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.asserter",
+      "path" : "Condition.asserter",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.stage",
+      "path" : "Condition.stage",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.evidence",
+      "path" : "Condition.evidence",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.note",
+      "path" : "Condition.note",
+      "max" : "0"
+    }]
+  }
+}
+
+```
