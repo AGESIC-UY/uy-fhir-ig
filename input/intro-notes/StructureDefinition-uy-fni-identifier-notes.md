@@ -1,0 +1,1 @@
+Para un documento nacional argentino, `system` puede declarar `urn:oid:2.16.858.1.032.68909` y `value` contiene el número del documento. El ejemplo es ilustrativo: el sistema emisor se determina según el organismo que expidió el identificador.

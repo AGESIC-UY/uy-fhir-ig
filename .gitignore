@@ -1,0 +1,17 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos generados por SUSHI
+fsh-generated/
+
+# Archivos de salida del IG Publisher
+/input-cache
+/output
+!/output/full-ig.zip
+/temp
+/template
+
+# Indices internos generados al cargar la plantilla local
+/custom-template/**/.index.db
+/custom-template/**/.index.json

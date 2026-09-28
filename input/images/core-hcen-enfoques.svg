@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="590" viewBox="0 0 640 590" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Core Uruguay y Guía HCEN</title>
+  <desc id="diagram-desc">La guía parte de FHIR R4 y de Core Uruguay como base nacional reutilizable. Su recorrido principal continúa hacia la Guía HCEN, que define la interoperabilidad con la Plataforma HCEN. El Core también puede reutilizarse en otros contextos de Uruguay.</desc>
+  <defs>
+    <linearGradient id="diagram-core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef5fc"/>
+    </linearGradient>
+    <linearGradient id="diagram-hcen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163959"/>
+      <stop offset="1" stop-color="#0057b8"/>
+    </linearGradient>
+    <marker id="diagram-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 8 5 1 9" fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <filter id="diagram-shadow" x="-10%" y="-15%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#163959" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="638" height="588" rx="20" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+
+  <rect x="210" y="24" width="220" height="62" rx="14" fill="#ffffff" stroke="#8ca4bd" stroke-width="2"/>
+  <text x="320" y="63" text-anchor="middle" fill="#163959" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700">FHIR R4</text>
+  <path d="M320 87 V119" fill="none" stroke="#0057b8" stroke-width="3" marker-end="url(#diagram-arrow)"/>
+
+  <rect x="40" y="130" width="560" height="162" rx="17" fill="url(#diagram-core)" stroke="#0057b8" stroke-width="2.5" filter="url(#diagram-shadow)"/>
+  <path d="M58 131 H582" stroke="#f5a623" stroke-width="5" stroke-linecap="round"/>
+  <text x="320" y="172" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="29" font-weight="700">Core Uruguay</text>
+  <text x="320" y="202" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="21">Base nacional reutilizable</text>
+  <path d="M92 221 H548" stroke="#d9e3ee" stroke-width="2"/>
+  <text x="320" y="252" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="20">Perfiles · identificadores · tipos de datos</text>
+  <text x="320" y="278" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="20">Extensiones · terminología</text>
+
+  <path d="M320 293 V361" fill="none" stroke="#0057b8" stroke-width="4" marker-end="url(#diagram-arrow)"/>
+
+  <path d="M500 293 V312" fill="none" stroke="#8ca4bd" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="382" y="313" width="236" height="48" rx="12" fill="#ffffff" stroke="#9bb8d4" stroke-width="1.5"/>
+  <text x="500" y="343" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="18">Otros usos en Uruguay</text>
+
+  <rect x="40" y="377" width="560" height="186" rx="18" fill="url(#diagram-hcen)" stroke="#003580" stroke-width="2.5" filter="url(#diagram-shadow)"/>
+  <path d="M62 378 H578" stroke="#f5a623" stroke-width="6" stroke-linecap="round"/>
+  <text x="320" y="424" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="34" font-weight="700">Guía HCEN</text>
+  <text x="320" y="457" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="22">Interoperabilidad con la Plataforma HCEN</text>
+  <path d="M90 477 H550" stroke="#e3efff" stroke-opacity=".45" stroke-width="2"/>
+  <text x="320" y="510" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="21">Perfiles, extensiones y terminología propios</text>
+  <text x="320" y="540" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="21">Actores, obligaciones y transacciones</text>
+</svg>

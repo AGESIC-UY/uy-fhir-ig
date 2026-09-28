@@ -1,0 +1,118 @@
+id: uy-fhir-ig
+canonical: http://fhir.hcen.gub.uy
+name: UruguayFHIRImplementationGuide
+title: Guía de Implementación FHIR de Uruguay
+description: Base nacional Core y especificaciones de interoperabilidad con HCEN.
+# Identificador de trabajo; pendiente de confirmación institucional.
+packageId: fhir.uy
+language: es
+# Idioma de publicacion de la plantilla; language identifica el contenido.
+parameters:
+  i18n-default-lang: es
+  toggle-changes: false
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: Borrador de desarrollo
+publisher:
+  name: AGESIC
+
+# Dependencias utilizadas por los perfiles Core.
+dependencies:
+  ihe.iti.mhd: 4.2.3
+  hl7.fhir.uv.extensions.r4: 5.3.0
+  hl7.terminology.r4: 7.3.0
+
+menu:
+  Inicio: index.html
+  Cómo usar esta guía:
+    Propósito y alcance: alcance.html
+    Conceptos básicos de FHIR: conceptos-fhir.html
+    Cómo leer los perfiles: como-leer.html
+    Convenciones y conformidad: conformidad.html
+  Core UY:
+    Introducción al Core: introduccion.html
+    Identificadores y datos comunes: identificadores.html
+    Perfiles nacionales: perfiles.html
+    Extensiones: extensiones.html
+    Terminología: terminologia.html
+    Ejemplos: ejemplos.html
+  Guía HCEN:
+    Introducción a HCEN: hcen.html
+    Actores y responsabilidades: hcen-actores.html
+    Casos de uso: hcen-casos-de-uso.html
+    Transacciones: hcen-transacciones.html
+    Perfiles HCEN: hcen-perfiles.html
+    Documentos clínicos: hcen-documentos-clinicos.html
+    Extensiones: hcen-extensiones.html
+    Terminología: hcen-terminologia.html
+    Conformidad y capacidades: hcen-conformidad.html
+    Ejemplos de intercambio: hcen-ejemplos.html
+  Recursos:
+    Índice de artefactos: artifacts.html
+    Descargas: descargas.html
+    Historial de cambios: cambios.html
+
+pages:
+  index.md:
+    title: Inicio
+  alcance.md:
+    title: Propósito y alcance
+    conceptos-fhir.md:
+      title: Conceptos básicos de FHIR
+    como-leer.md:
+      title: Cómo leer los perfiles
+    conformidad.md:
+      title: Convenciones y conformidad
+  introduccion.md:
+    title: Introducción al Core
+    identificadores.md:
+      title: Identificadores y datos comunes
+    perfiles.md:
+      title: Perfiles nacionales
+    extensiones.md:
+      title: Extensiones del Core
+    terminologia.md:
+      title: Terminología del Core
+    ejemplos.md:
+      title: Ejemplos del Core
+  hcen.md:
+    title: Introducción a HCEN
+    hcen-actores.md:
+      title: Actores y responsabilidades
+    hcen-casos-de-uso.md:
+      title: Casos de uso
+    hcen-transacciones.md:
+      title: Transacciones
+      hcen-iti-104.md:
+        title: Registrar o actualizar pacientes
+      hcen-iti-65.md:
+        title: Publicar documentos
+      hcen-iti-67.md:
+        title: Consultar metadatos documentales
+      hcen-iti-68.md:
+        title: Recuperar documentos
+    hcen-perfiles.md:
+      title: Perfiles HCEN
+      hcen-identificadores.md:
+        title: Identificadores HCEN
+    hcen-documentos-clinicos.md:
+      title: Documentos clínicos HCEN
+    hcen-extensiones.md:
+      title: Extensiones HCEN
+    hcen-terminologia.md:
+      title: Terminología HCEN
+    hcen-conformidad.md:
+      title: Conformidad y capacidades HCEN
+    hcen-ejemplos.md:
+      title: Ejemplos de intercambio
+  descargas.md:
+    title: Descargas
+  cambios.md:
+    title: Historial de cambios
+  buscar.md:
+    title: Buscar en la guía
+
+instanceOptions:
+  manualSliceOrdering: true

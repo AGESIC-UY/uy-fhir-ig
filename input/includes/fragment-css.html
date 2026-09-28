@@ -1,0 +1,127 @@
+<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+<style type="text/css">
+:root {
+  --ig-status-text-color:#003580;
+  --navbar-bg-color:#0057b8;
+  --footer-bg-color:#163959;
+  --footer-container-bg-color:#163959;
+  --stripe-bg-color:#c89d49;
+  --btn-hover-color:#0057b8;
+  --btn-active-color:#002b6e;
+  --btn-text-color:#fff;
+  --btn-gradient-start-color:#0057b8;
+  --btn-gradient-end-color:#003580;
+  --btn-gradient-start-color-alpha:#0057b8;
+  --btn-gradient-end-color-alpha:#003580;
+  --link-color:#175c91;
+  --link-hover-color:#103957;
+  --publish-box-bg-color:#fff4cf;
+  --publish-box-border:1px solid #e2bd61;
+  --toc-box-bg-color:#f5f8fc;
+  --toc-box-border:1px solid #d9e3ee;
+  --footer-text-color:#fff;
+  --footer-hyperlink-text-color:#fff;
+  --footer-highlight-text-color:#f8c94f;
+}
+body { font-family:'Segoe UI',Arial,sans-serif; font-size:15px; line-height:1.65; background:#f4f7fb; color:#24374a; }
+h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1.25; }
+
+/* Cabecera: imágenes junto al HTML, también en output/es/. */
+.uy-core-header {
+  box-sizing:border-box; display:flex; align-items:center; justify-content:space-between;
+  width:100%; gap:16px; padding:10px 22px; line-height:1.35; text-decoration:none;
+  position:relative; isolation:isolate; overflow:hidden; color:#fff;
+  background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce);
+  border-bottom:3px solid #f5a623; font-family:'Segoe UI',Arial,sans-serif;
+}
+.uy-core-header::before { content:''; position:absolute; z-index:-1; inset:0 0 0 50%; pointer-events:none; background:url('header-network.svg') right center / auto 100% no-repeat; }
+.uy-brand { display:flex; align-items:center; gap:14px; min-width:0; color:#fff; text-decoration:none; }
+.uy-brand:hover,.uy-brand:focus { color:#fff; text-decoration:none; }
+.uy-brand:focus-visible { outline:3px solid #f5a623; outline-offset:3px; }
+.uy-logos { display:flex; justify-content:center; align-items:center; flex-shrink:0; width:112px; height:52px; gap:10px; }
+.uy-core-header img { display:block; object-fit:contain; }
+.uy-fhir-logo { width:40px; height:48px; }
+.uy-health-logo { width:52px; height:52px; border-radius:8px; }
+.uy-title { display:block; font-size:22px; font-weight:650; line-height:1.2; letter-spacing:.2px; }
+.uy-subtitle { display:block; font-size:12px; margin-top:3px; color:#e3efff; }
+.uy-identity { display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.uy-site-search { display:flex; align-items:stretch; margin-left:auto; min-width:230px; max-width:380px; flex:1 1 300px; overflow:hidden; border:1px solid #d9e3ee; border-radius:6px; background:#fff; }
+.uy-site-search input { min-width:0; width:100%; height:36px; padding:7px 12px; color:#24374a; background:transparent; border:0; border-radius:0; box-shadow:none; }
+.uy-site-search input::placeholder { color:#607489; }
+.uy-site-search button { display:grid; place-items:center; width:40px; height:36px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-site-search button:hover { color:#002b6e; background:#f8c94f; }
+.uy-site-search button svg { width:19px; height:19px; fill:currentColor; }
+.uy-site-search:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-flag { width:37px; height:32px; }
+.uy-badges { display:flex; flex-direction:column; gap:4px; text-align:center; font-weight:600; border-left:1px solid #ffffff50; padding-left:14px; }
+.uy-badges span { padding:2px 8px; font-size:10px; border:1px solid #ffffff60; border-radius:20px; color:#fff; background:#ffffff18; }
+.uy-badges span:last-child { color:#163959; background:#fff5dc; border-color:#e5c780; }
+
+/* Menú inspirado en guias-implementacion. */
+.navbar .nav > li > a { font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; padding:10px 12px; color:#fff; text-shadow:none; box-shadow:none; }
+.navbar-inverse,#segment-navbar > .container { background:#0057b8; }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .open > a { background:#002b6e; color:#fff; }
+.navbar .dropdown-menu { background:#fff; border:1px solid #d2dce8; border-radius:0; padding:5px 0; box-shadow:0 6px 12px rgba(0,0,0,.175); }
+.navbar .dropdown-menu > li > a { padding:6px 20px; color:#333; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; }
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > li > a:focus,
+.navbar .dropdown-menu > .active > a { background:#357ebd linear-gradient(to bottom,#428bca,#357ebd); color:#fff; }
+.navbar a:focus-visible { outline:2px solid #f5a623; outline-offset:-2px; }
+.navbar-inverse .navbar-toggle { border-color:#fff; }
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus { background:#002b6e; }
+.navbar-inverse .navbar-nav > .dropdown > a .caret { border-top-color:#fff; border-bottom-color:#fff; }
+
+/* Contenido: 8px laterales en todos los tamaños; solo se ajusta la fila exterior. */
+#segment-content > .container { background:#fff; box-sizing:border-box; padding:28px 8px 40px; }
+#segment-content > .container > .row { margin-left:0; margin-right:0; }
+#segment-content > .container > .row > .inner-wrapper { margin-top:0; margin-bottom:0; }
+#segment-content > .container > .row > .inner-wrapper > .col-12 { padding-left:0; padding-right:0; }
+.uy-core-banner { max-width:100%; margin:16px auto 32px; }
+.uy-core-banner img { display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 8px 24px #16395920; }
+.uy-scope-figure { max-width:640px; margin:24px auto 28px; }
+.uy-scope-figure img { display:block; width:100%; height:auto; }
+.uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+/* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) thead th { color:#163959; font-weight:650; border-bottom:1px solid #8ca4bd; }
+#segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) tbody tr + tr > :is(th,td) { border-top:1px solid #e4ebf2; }
+/* La misma separación horizontal en tablas técnicas grid, sin alterar los árboles de perfiles del Publisher. */
+#segment-content table.grid:not([data-fhir]):not([fhir]) { border:0; border-collapse:collapse; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) :is(th,td) { padding:8px 10px; border:0; border-bottom:1px solid #e4ebf2; }
+#segment-content table.grid:not([data-fhir]):not([fhir]) tr:first-child > :is(th,td) { border-bottom-color:#8ca4bd; }
+.uy-search-page { max-width:920px; margin-top:8px; padding:26px; background:linear-gradient(145deg,#f8fbff,#fff); border:1px solid #d9e3ee; border-radius:12px; box-shadow:0 5px 16px #16395912; }
+.uy-search-intro { max-width:660px; margin:0; color:#40566b; }
+.uy-search-controls { display:flex; align-items:stretch; margin:22px 0 12px; max-width:720px; overflow:hidden; border:1px solid #8ca4bd; border-radius:6px; background:#fff; }
+.uy-search-controls input { min-width:0; flex:1; padding:11px 14px; border:0; border-radius:0; font-size:16px; box-shadow:none; }
+.uy-search-controls button { display:grid; place-items:center; width:48px; padding:0; color:#163959; background:#f5a623; border:0; border-left:1px solid #d89216; border-radius:0; }
+.uy-search-controls button:hover { color:#002b6e; background:#f8c94f; }
+.uy-search-controls button svg { width:21px; height:21px; fill:currentColor; }
+.uy-search-controls:focus-within { outline:3px solid #f5a623; outline-offset:2px; }
+.uy-search-status { min-height:1.5em; margin:0; color:#4d6073; font-size:14px; }
+.uy-search-results { margin:20px 0 0; padding:0; list-style:none; }
+.uy-search-result { margin:0 0 12px; padding:16px 18px; border:1px solid #d9e3ee; border-radius:8px; background:#fff; box-shadow:0 1px 3px #1639590d; }
+.uy-search-result:hover { border-color:#9bb8d4; box-shadow:0 3px 10px #16395916; }
+.uy-search-result a { font-size:17px; font-weight:700; }
+.uy-search-result p { margin:7px 0 0; color:#3f5265; line-height:1.55; }
+#publish-box,.alert-warning { background-color:#fff4cf; border:1px solid #e2bd61; border-left:4px solid #d9a52b; border-radius:6px; padding:12px 16px; }
+@media(max-width:991px) {
+  #segment-content > .container { padding-top:24px; padding-bottom:32px; }
+}
+@media(max-width:640px) {
+  .uy-core-header { flex-wrap:wrap; padding:10px 14px; gap:10px; }
+  .uy-title { font-size:20px; }
+  .uy-subtitle { font-size:11px; }
+  .uy-logos { width:92px; gap:6px; }
+  .uy-fhir-logo { width:34px; height:42px; }
+  .uy-health-logo { width:46px; height:46px; }
+  .uy-identity { margin-left:auto; }
+  .uy-site-search { order:3; min-width:100%; max-width:none; }
+  .uy-badges { flex-direction:row; padding-left:0; border-left:0; }
+  #segment-content > .container { padding-top:20px; padding-bottom:28px; }
+  .uy-search-page { padding:20px 16px; }
+  .uy-search-controls button { width:46px; }
+}
+</style>
