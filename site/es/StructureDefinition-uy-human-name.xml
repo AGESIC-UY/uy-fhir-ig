@@ -24,8 +24,15 @@
   <name value="UYHumanName"/>
   <title value="Nombre de Persona (Uruguay)"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Nombre de una persona optimizado para su visualización y almacenamiento estructurado, con los apellidos discriminados mediante extensiones."/>
   <fhirVersion value="4.0.1"/>
   <mapping>

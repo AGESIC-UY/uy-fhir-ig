@@ -2,14 +2,10 @@
 
 ## Perfil de los recursos: Perfil Rol del Profesional de Salud para HCEN 
 
- 
-Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios. 
-
 **Usages:**
 
 * Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
 * Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md), [HCEN Administración de Medicación](StructureDefinition-hcen-medication-administration.md), [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md), [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
-* Examples for this Profile: [PractitionerRole/hcen-rol-ejemplo](PractitionerRole-hcen-rol-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-practitioner-role)
 
@@ -94,8 +90,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
   "name" : "HCENPractitionerRole",
   "title" : "Perfil Rol del Profesional de Salud para HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

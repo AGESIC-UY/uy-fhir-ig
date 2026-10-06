@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Vía de Administración (borrador) 
 
- 
-PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial. 
-
  **References** 
 
 * [HCEN Dosificación](StructureDefinition-hcen-dosage.md)
@@ -33,8 +30,15 @@ PENDIENTE: subconjunto de códigos para vías de administración farmacológica 
   "name" : "VSViaAdministracion",
   "title" : "Conjunto de Valores Vía de Administración (borrador)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
   "compose" : {
     "include" : [{
@@ -43,13 +47,6 @@ PENDIENTE: subconjunto de códigos para vías de administración farmacológica 
       "concept" : [{
         "code" : "PO",
         "display" : "Oral"
-      }]
-    },
-    {
-      "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-      "concept" : [{
-        "code" : "urn:hl7-org:sdwg:ccda-nonXMLBody:2.1",
-        "display" : "C-CDA 2.1 con cuerpo no estructurado"
       }]
     }]
   }

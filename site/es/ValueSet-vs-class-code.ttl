@@ -12,7 +12,7 @@
   fhir:language [ fhir:v "es"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-class-code</b></p><a name=\"vs-class-code\"> </a><a name=\"hcvs-class-code\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/34098-4/\">34098-4</a></td><td>ateneo clínico</td></tr><tr><td><a href=\"https://loinc.org/51851-4/\">51851-4</a></td><td>documentación administrativa</td></tr><tr><td><a href=\"https://loinc.org/34133-9/\">34133-9</a></td><td>historia clínica previa escaneada</td></tr><tr><td><a href=\"https://loinc.org/82593-5/\">82593-5</a></td><td>historial de inmunizaciones</td></tr><tr><td><a href=\"https://loinc.org/34750-0/\">34750-0</a></td><td>hoja de anestesia</td></tr><tr><td><a href=\"https://loinc.org/34108-1/\">34108-1</a></td><td>hoja de consulta no urgente</td></tr><tr><td><a href=\"https://loinc.org/34111-5/\">34111-5</a></td><td>hoja de consulta urgente</td></tr><tr><td><a href=\"https://loinc.org/34848-2/\">34848-2</a></td><td>hoja de descripción operatoria</td></tr><tr><td><a href=\"https://loinc.org/18761-7/\">18761-7</a></td><td>hoja de traslado especializado</td></tr><tr><td><a href=\"https://loinc.org/11526-1/\">11526-1</a></td><td>informe de anatomía patológica</td></tr><tr><td><a href=\"https://loinc.org/18748-4/\">18748-4</a></td><td>informe de imagenología</td></tr><tr><td><a href=\"https://loinc.org/11502-2/\">11502-2</a></td><td>informe de laboratorio</td></tr><tr><td><a href=\"https://loinc.org/28570-0/\">28570-0</a></td><td>informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>resumen de egreso de paciente internado</td></tr><tr><td><a href=\"https://loinc.org/18842-6/\">18842-6</a></td><td>resumen de egreso de paciente internado</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-class-code</b></p><a name=\"vs-class-code\"> </a><a name=\"hcvs-class-code\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/34098-4/\">34098-4</a></td><td>ateneo clínico</td></tr><tr><td><a href=\"https://loinc.org/51851-4/\">51851-4</a></td><td>documentación administrativa</td></tr><tr><td><a href=\"https://loinc.org/82593-5/\">82593-5</a></td><td>historial de inmunizaciones</td></tr><tr><td><a href=\"https://loinc.org/34750-0/\">34750-0</a></td><td>hoja de anestesia</td></tr><tr><td><a href=\"https://loinc.org/34108-1/\">34108-1</a></td><td>hoja de consulta no urgente</td></tr><tr><td><a href=\"https://loinc.org/34111-5/\">34111-5</a></td><td>hoja de consulta urgente</td></tr><tr><td><a href=\"https://loinc.org/34848-2/\">34848-2</a></td><td>hoja de descripción operatoria</td></tr><tr><td><a href=\"https://loinc.org/18761-7/\">18761-7</a></td><td>hoja de traslado especializado</td></tr><tr><td><a href=\"https://loinc.org/11526-1/\">11526-1</a></td><td>informe de anatomía patológica</td></tr><tr><td><a href=\"https://loinc.org/18748-4/\">18748-4</a></td><td>informe de imagenología</td></tr><tr><td><a href=\"https://loinc.org/11502-2/\">11502-2</a></td><td>informe de laboratorio</td></tr><tr><td><a href=\"https://loinc.org/28570-0/\">28570-0</a></td><td>informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>resumen de egreso de paciente internado</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-class-code"^^xsd:anyURI ;
@@ -22,8 +22,15 @@
   fhir:name [ fhir:v "VSclassCode"] ; # 
   fhir:title [ fhir:v "EJE 1 — Tipo genérico de documento"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
   fhir:description [ fhir:v "Tipo genérico de documento según la hoja ValueSets de la especificación nacional."] ; # 
   fhir:copyright [ fhir:v "Includes LOINC® content, copyright Regenstrief Institute, Inc. and the LOINC Committee. Available under the license at https://loinc.org/terms-of-use/."] ; # 
   fhir:compose [
@@ -38,9 +45,6 @@
        ] [
          fhir:code [ fhir:v "51851-4" ] ;
          fhir:display [ fhir:v "documentación administrativa" ]
-       ] [
-         fhir:code [ fhir:v "34133-9" ] ;
-         fhir:display [ fhir:v "historia clínica previa escaneada" ]
        ] [
          fhir:code [ fhir:v "82593-5" ] ;
          fhir:display [ fhir:v "historial de inmunizaciones" ]
@@ -73,9 +77,6 @@
          fhir:display [ fhir:v "informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)" ]
        ] [
          fhir:code [ fhir:v "18842-5" ] ;
-         fhir:display [ fhir:v "resumen de egreso de paciente internado" ]
-       ] [
-         fhir:code [ fhir:v "18842-6" ] ;
          fhir:display [ fhir:v "resumen de egreso de paciente internado" ]
        ] )
      ] )

@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Diagnóstico 
 
- 
-Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'diagnostico'. 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -39,9 +36,9 @@ Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) 
 
 ** Summary **
 
-Mandatory: 5 elements(6 nested mandatory elements)
+Mandatory: 5 elements(3 nested mandatory elements)
  Must-Support: 1 element
- Fixed: 4 elements
+ Fixed: 3 elements
  Prohibited: 12 elements
 
 **Structures**
@@ -81,9 +78,9 @@ Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) 
 
 ** Summary **
 
-Mandatory: 5 elements(6 nested mandatory elements)
+Mandatory: 5 elements(3 nested mandatory elements)
  Must-Support: 1 element
- Fixed: 4 elements
+ Fixed: 3 elements
  Prohibited: 12 elements
 
 **Structures**
@@ -116,11 +113,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
   "name" : "HCENDiagnostico",
   "title" : "HCEN Diagnóstico",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'diagnostico'.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENDiagnosticoToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYDiagnostico."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -224,7 +234,35 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu"
-      }
+      },
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/code"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.system",
+      "path" : "Condition.category.coding.system",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/code/@codeSystem"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.code",
+      "path" : "Condition.category.coding.code",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/code/@code"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.display",
+      "path" : "Condition.category.coding.display",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/code/@displayName"
+      }]
     },
     {
       "id" : "Condition.severity",
@@ -263,13 +301,21 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "short" : "Código SNOMED CT del diagnóstico",
       "definition" : "Código SNOMED CT del diagnóstico",
       "min" : 0,
-      "max" : "1"
+      "max" : "1",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation[code/@code='439401001']/value"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.system",
       "path" : "Condition.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://snomed.info/sct"
+      "fixedUri" : "http://snomed.info/sct",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/value/@codeSystem"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.code",
@@ -278,43 +324,22 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta"
-      }
+      },
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/value/@code"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.display",
       "path" : "Condition.code.coding.display",
       "short" : "Texto descriptivo del código SNOMED CT del diagnóstico",
       "definition" : "Texto descriptivo del código SNOMED CT del diagnóstico",
-      "min" : 1
-    },
-    {
-      "id" : "Condition.code.coding:tesauro",
-      "path" : "Condition.code.coding",
-      "sliceName" : "tesauro",
-      "short" : "Código del diagnóstico en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Código del diagnóstico en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.system",
-      "path" : "Condition.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.code",
-      "path" : "Condition.code.coding.code",
-      "short" : "Código del diagnóstico en el tesauro local",
-      "definition" : "Código del diagnóstico en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.display",
-      "path" : "Condition.code.coding.display",
-      "short" : "Texto descriptivo del código del diagnóstico en el tesauro local",
-      "definition" : "Texto descriptivo del código del diagnóstico en el tesauro local",
-      "min" : 1
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/value/@displayName"
+      }]
     },
     {
       "id" : "Condition.bodySite",
@@ -329,6 +354,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {
@@ -344,7 +373,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       },
       "short" : "Inicio del problema de salud (fecha exacta, edad aproximada, período o rango)",
       "definition" : "Inicio del problema de salud (fecha exacta, edad aproximada, período o rango)",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/effectiveTime"
+      }]
     },
     {
       "id" : "Condition.onset[x]:onsetAge",
@@ -372,13 +405,21 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "id" : "Condition.onset[x]:onsetPeriod.start",
       "path" : "Condition.onset[x].start",
       "short" : "Fecha de inicio del problema de salud",
-      "definition" : "Indica la fecha de inicio del problema de salud."
+      "definition" : "Indica la fecha de inicio del problema de salud.",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/effectiveTime/low/@value"
+      }]
     },
     {
       "id" : "Condition.onset[x]:onsetPeriod.end",
       "path" : "Condition.onset[x].end",
       "short" : "Fecha de fin del problema de salud",
-      "definition" : "Indica la fecha de fin del problema de salud."
+      "definition" : "Indica la fecha de fin del problema de salud.",
+      "mapping" : [{
+        "identity" : "HCENDiagnosticoToCDA",
+        "map" : "section/entry/observation/effectiveTime/high/@value"
+      }]
     },
     {
       "id" : "Condition.abatement[x]",

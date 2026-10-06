@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: Perfil Profesional de Salud para Uruguay 
 
- 
-Una persona que está directa o indirectamente involucrada en la provisión de atención médica. 
-
 **Usages:**
 
 * Derived from this Profile: [Perfil Profesional de Salud para HCEN](StructureDefinition-hcen-practitioner.md)
@@ -116,8 +113,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-practitioner.c
   "name" : "UYPractitioner",
   "title" : "Perfil Profesional de Salud para Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Una persona que está directa o indirectamente involucrada en la provisión de atención médica.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

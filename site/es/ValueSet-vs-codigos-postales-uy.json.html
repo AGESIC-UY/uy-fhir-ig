@@ -111,6 +111,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -178,8 +209,8 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.63"}
-    h3,h4,h5,h6{--heading-prefix:"8.63"}</style>
+    <style type="text/css">h2{--heading-prefix:"9.63"}
+    h3,h4,h5,h6{--heading-prefix:"9.63"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -210,7 +241,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -261,7 +292,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -291,7 +322,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -303,7 +334,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -317,9 +363,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -329,6 +372,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -427,7 +473,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
           
 
             a partir de 
-2026-09-28
+2026-10-06
 .
           
         
@@ -444,26 +490,523 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
 
-  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
   "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">id</a>" : "vs-codigos-postales-uy",
   "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.language">language</a>" : "es",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;vs-codigos-postales-uy\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcvs-codigos-postales-uy\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html\&quot;&gt;&lt;code&gt;http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to the version provided in this specification\&quot;&gt; version &amp;#x1F4E6;0.1.0&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;vs-codigos-postales-uy\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcvs-codigos-postales-uy\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html\&quot;&gt;&lt;code&gt;http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to the version provided in this specification\&quot;&gt; version &amp;#x1F4E6;0.1.0&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11000\&quot;&gt;11000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11100\&quot;&gt;11100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11200\&quot;&gt;11200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11300\&quot;&gt;11300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11400\&quot;&gt;11400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11500\&quot;&gt;11500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11600\&quot;&gt;11600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11700\&quot;&gt;11700&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11700&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11800\&quot;&gt;11800&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11800&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11900\&quot;&gt;11900&lt;/a&gt;&lt;/td&gt;&lt;td&gt;11900&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12000\&quot;&gt;12000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12100\&quot;&gt;12100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12300\&quot;&gt;12300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12400\&quot;&gt;12400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12500\&quot;&gt;12500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12600\&quot;&gt;12600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12800\&quot;&gt;12800&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12800&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12900\&quot;&gt;12900&lt;/a&gt;&lt;/td&gt;&lt;td&gt;12900&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-13000\&quot;&gt;13000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;13000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15000\&quot;&gt;15000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15100\&quot;&gt;15100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15200\&quot;&gt;15200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15300\&quot;&gt;15300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15400\&quot;&gt;15400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15500\&quot;&gt;15500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15600\&quot;&gt;15600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15700\&quot;&gt;15700&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15700&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15800\&quot;&gt;15800&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15800&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15900\&quot;&gt;15900&lt;/a&gt;&lt;/td&gt;&lt;td&gt;15900&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20000\&quot;&gt;20000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20100\&quot;&gt;20100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20200\&quot;&gt;20200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20300\&quot;&gt;20300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20400\&quot;&gt;20400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20500\&quot;&gt;20500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27000\&quot;&gt;27000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;27000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27100\&quot;&gt;27100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;27100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27200\&quot;&gt;27200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;27200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27300\&quot;&gt;27300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;27300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27400\&quot;&gt;27400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;27400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30000\&quot;&gt;30000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;30000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30100\&quot;&gt;30100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;30100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30300\&quot;&gt;30300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;30300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-31100\&quot;&gt;31100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;31100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-33000\&quot;&gt;33000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;33000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34100\&quot;&gt;34100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;34100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34200\&quot;&gt;34200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;34200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35100\&quot;&gt;35100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;35100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35200\&quot;&gt;35200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;35200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35300\&quot;&gt;35300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;35300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36100\&quot;&gt;36100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;36100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36200\&quot;&gt;36200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;36200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37000\&quot;&gt;37000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;37000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37100\&quot;&gt;37100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;37100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40000\&quot;&gt;40000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;40000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40100\&quot;&gt;40100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;40100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40200\&quot;&gt;40200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;40200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41100\&quot;&gt;41100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;41100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41200\&quot;&gt;41200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;41200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45000\&quot;&gt;45000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;45000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45100\&quot;&gt;45100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;45100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45200\&quot;&gt;45200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;45200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50000\&quot;&gt;50000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;50000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50100\&quot;&gt;50100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;50100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50200\&quot;&gt;50200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;50200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55000\&quot;&gt;55000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;55000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55100\&quot;&gt;55100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;55100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60000\&quot;&gt;60000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60100\&quot;&gt;60100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60200\&quot;&gt;60200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60300\&quot;&gt;60300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65000\&quot;&gt;65000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;65000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65100\&quot;&gt;65100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;65100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70000\&quot;&gt;70000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70100\&quot;&gt;70100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70200\&quot;&gt;70200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70300\&quot;&gt;70300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70400\&quot;&gt;70400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70500\&quot;&gt;70500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70600\&quot;&gt;70600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70700\&quot;&gt;70700&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70700&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70800\&quot;&gt;70800&lt;/a&gt;&lt;/td&gt;&lt;td&gt;70800&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75000\&quot;&gt;75000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75100\&quot;&gt;75100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75200\&quot;&gt;75200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75300\&quot;&gt;75300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75400\&quot;&gt;75400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75500\&quot;&gt;75500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;75500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80000\&quot;&gt;80000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80100\&quot;&gt;80100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80200\&quot;&gt;80200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80300\&quot;&gt;80300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80400\&quot;&gt;80400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80500\&quot;&gt;80500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;80500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-85000\&quot;&gt;85000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;85000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90000\&quot;&gt;90000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;90000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90100\&quot;&gt;90100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;90100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90200\&quot;&gt;90200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;90200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91100\&quot;&gt;91100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91200\&quot;&gt;91200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91300\&quot;&gt;91300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91400\&quot;&gt;91400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91500\&quot;&gt;91500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91600\&quot;&gt;91600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91700\&quot;&gt;91700&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91700&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91800\&quot;&gt;91800&lt;/a&gt;&lt;/td&gt;&lt;td&gt;91800&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94000\&quot;&gt;94000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;94000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94100\&quot;&gt;94100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;94100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95100\&quot;&gt;95100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95200\&quot;&gt;95200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95300\&quot;&gt;95300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95400\&quot;&gt;95400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95500\&quot;&gt;95500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95600\&quot;&gt;95600&lt;/a&gt;&lt;/td&gt;&lt;td&gt;95600&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96100\&quot;&gt;96100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;96100&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96200\&quot;&gt;96200&lt;/a&gt;&lt;/td&gt;&lt;td&gt;96200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96300\&quot;&gt;96300&lt;/a&gt;&lt;/td&gt;&lt;td&gt;96300&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96400\&quot;&gt;96400&lt;/a&gt;&lt;/td&gt;&lt;td&gt;96400&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96500\&quot;&gt;96500&lt;/a&gt;&lt;/td&gt;&lt;td&gt;96500&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-97000\&quot;&gt;97000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;97000&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-98000\&quot;&gt;98000&lt;/a&gt;&lt;/td&gt;&lt;td&gt;98000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "VSCodigosPostalesUY",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Códigos postales de Uruguay",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-09-28T15:20:04-03:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-10-06T01:23:13-03:00",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "AGESIC",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "AGESIC",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+        }
+      ]
+    }
+  ],
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Códigos postales admitidos en Address.postalCode.",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11700",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11700"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11800",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11800"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "11900",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "11900"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12800",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12800"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "12900",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "12900"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "13000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "13000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15700",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15700"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15800",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15800"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "15900",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "15900"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "20500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "20500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "27000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "27100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "27200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "27300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "27400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "27400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "30000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "30100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "30300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "30300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "31100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "31100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "33000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "33000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "34100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "34200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "34200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "35100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "35200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "35300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "35300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "36100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "36100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "36200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "36200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "37000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "37000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "37100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "37100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "40000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "40100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "40200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "40200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "41100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "41200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "41200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "45000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "45000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "45100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "45100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "45200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "45200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "50000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "50100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "50200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "50200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "55000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "55000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "55100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "55100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "60000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "60000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "60100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "60100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "60200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "60200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "60300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "60300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "65000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "65000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "65100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "65100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70700",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70700"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "70800",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "70800"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "75500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "75500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "80500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "80500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "85000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "85000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "90000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "90000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "90100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "90100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "90200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "90200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91700",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91700"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "91800",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "91800"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "94000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "94000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "94100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "94100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "95600",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "95600"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "96100",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "96100"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "96200",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "96200"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "96300",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "96300"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "96400",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "96400"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "96500",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "96500"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "97000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "97000"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "98000",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "98000"
+          }
+        ]
       }
     ]
   }
@@ -497,11 +1040,11 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

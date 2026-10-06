@@ -3,19 +3,102 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-departamentos-uy"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-departamentos-uy</b></p><a name="vs-departamentos-uy"> </a><a name="hcvs-departamentos-uy"> </a><ul><li>Include all codes defined in <a href="CodeSystem-cs-departamentos-uy.html"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-departamentos-uy</b></p><a name="vs-departamentos-uy"> </a><a name="hcvs-departamentos-uy"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-cs-departamentos-uy.html"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Artigas">Artigas</a></td><td>Artigas</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Canelones">Canelones</a></td><td>Canelones</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-CerroLargo">Cerro Largo</a></td><td>Cerro Largo</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Colonia">Colonia</a></td><td>Colonia</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Durazno">Durazno</a></td><td>Durazno</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Flores">Flores</a></td><td>Flores</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Florida">Florida</a></td><td>Florida</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Lavalleja">Lavalleja</a></td><td>Lavalleja</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Maldonado">Maldonado</a></td><td>Maldonado</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Montevideo">Montevideo</a></td><td>Montevideo</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Paysand.250">Paysandú</a></td><td>Paysandú</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-R.237oNegro">Río Negro</a></td><td>Río Negro</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Rivera">Rivera</a></td><td>Rivera</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Rocha">Rocha</a></td><td>Rocha</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Salto">Salto</a></td><td>Salto</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-SanJos.233">San José</a></td><td>San José</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Soriano">Soriano</a></td><td>Soriano</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-Tacuaremb.243">Tacuarembó</a></td><td>Tacuarembó</td></tr><tr><td><a href="CodeSystem-cs-departamentos-uy.html#cs-departamentos-uy-TreintayTres">Treinta y Tres</a></td><td>Treinta y Tres</td></tr></table></li></ul></div>
   </text>
   <url value="http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy"/>
   <version value="0.1.0"/>
   <name value="VSDepartamentosUY"/>
   <title value="Departamentos de Uruguay"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Los 19 departamentos admitidos en Address.state."/>
   <compose>
     <include>
       <system value="http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy"/>
+      <concept>
+        <code value="Artigas"/>
+        <display value="Artigas"/>
+      </concept>
+      <concept>
+        <code value="Canelones"/>
+        <display value="Canelones"/>
+      </concept>
+      <concept>
+        <code value="Cerro Largo"/>
+        <display value="Cerro Largo"/>
+      </concept>
+      <concept>
+        <code value="Colonia"/>
+        <display value="Colonia"/>
+      </concept>
+      <concept>
+        <code value="Durazno"/>
+        <display value="Durazno"/>
+      </concept>
+      <concept>
+        <code value="Flores"/>
+        <display value="Flores"/>
+      </concept>
+      <concept>
+        <code value="Florida"/>
+        <display value="Florida"/>
+      </concept>
+      <concept>
+        <code value="Lavalleja"/>
+        <display value="Lavalleja"/>
+      </concept>
+      <concept>
+        <code value="Maldonado"/>
+        <display value="Maldonado"/>
+      </concept>
+      <concept>
+        <code value="Montevideo"/>
+        <display value="Montevideo"/>
+      </concept>
+      <concept>
+        <code value="Paysandú"/>
+        <display value="Paysandú"/>
+      </concept>
+      <concept>
+        <code value="Río Negro"/>
+        <display value="Río Negro"/>
+      </concept>
+      <concept>
+        <code value="Rivera"/>
+        <display value="Rivera"/>
+      </concept>
+      <concept>
+        <code value="Rocha"/>
+        <display value="Rocha"/>
+      </concept>
+      <concept>
+        <code value="Salto"/>
+        <display value="Salto"/>
+      </concept>
+      <concept>
+        <code value="San José"/>
+        <display value="San José"/>
+      </concept>
+      <concept>
+        <code value="Soriano"/>
+        <display value="Soriano"/>
+      </concept>
+      <concept>
+        <code value="Tacuarembó"/>
+        <display value="Tacuarembó"/>
+      </concept>
+      <concept>
+        <code value="Treinta y Tres"/>
+        <display value="Treinta y Tres"/>
+      </concept>
     </include>
   </compose>
 </ValueSet>

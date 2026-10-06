@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Procedimientos 
 
- 
-Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay). 
-
  **References** 
 
 * [HCEN Procedimiento](StructureDefinition-hcen-procedimiento.md)
@@ -15,7 +12,7 @@ Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -34,24 +31,31 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSProcedimientos",
   "title" : "Conjunto de Valores Procedimientos",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "268951000179107"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "231971000179103"
+      "version" : "http://snomed.info/sct/5631000179106/version/20260615",
+      "concept" : [{
+        "code" : "29303009",
+        "display" : "procedimiento electrocardiográfico (procedimiento)"
+      },
+      {
+        "code" : "46973005",
+        "display" : "medir la presión arterial (procedimiento)"
+      },
+      {
+        "code" : "166900001",
+        "display" : "determinación de glicemia por medidor de glucosa (procedimiento)"
       }]
     }]
   }

@@ -12,7 +12,7 @@
   fhir:language [ fhir:v "es"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy</b></p><a name=\"vs-codigos-postales-uy\"> </a><a name=\"hcvs-codigos-postales-uy\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-codigos-postales-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy</b></p><a name=\"vs-codigos-postales-uy\"> </a><a name=\"hcvs-codigos-postales-uy\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-cs-codigos-postales-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11000\">11000</a></td><td>11000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11100\">11100</a></td><td>11100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11200\">11200</a></td><td>11200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11300\">11300</a></td><td>11300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11400\">11400</a></td><td>11400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11500\">11500</a></td><td>11500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11600\">11600</a></td><td>11600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11700\">11700</a></td><td>11700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11800\">11800</a></td><td>11800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11900\">11900</a></td><td>11900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12000\">12000</a></td><td>12000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12100\">12100</a></td><td>12100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12300\">12300</a></td><td>12300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12400\">12400</a></td><td>12400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12500\">12500</a></td><td>12500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12600\">12600</a></td><td>12600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12800\">12800</a></td><td>12800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12900\">12900</a></td><td>12900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-13000\">13000</a></td><td>13000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15000\">15000</a></td><td>15000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15100\">15100</a></td><td>15100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15200\">15200</a></td><td>15200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15300\">15300</a></td><td>15300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15400\">15400</a></td><td>15400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15500\">15500</a></td><td>15500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15600\">15600</a></td><td>15600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15700\">15700</a></td><td>15700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15800\">15800</a></td><td>15800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15900\">15900</a></td><td>15900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20000\">20000</a></td><td>20000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20100\">20100</a></td><td>20100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20200\">20200</a></td><td>20200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20300\">20300</a></td><td>20300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20400\">20400</a></td><td>20400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20500\">20500</a></td><td>20500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27000\">27000</a></td><td>27000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27100\">27100</a></td><td>27100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27200\">27200</a></td><td>27200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27300\">27300</a></td><td>27300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27400\">27400</a></td><td>27400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30000\">30000</a></td><td>30000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30100\">30100</a></td><td>30100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30300\">30300</a></td><td>30300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-31100\">31100</a></td><td>31100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-33000\">33000</a></td><td>33000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34100\">34100</a></td><td>34100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34200\">34200</a></td><td>34200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35100\">35100</a></td><td>35100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35200\">35200</a></td><td>35200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35300\">35300</a></td><td>35300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36100\">36100</a></td><td>36100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36200\">36200</a></td><td>36200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37000\">37000</a></td><td>37000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37100\">37100</a></td><td>37100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40000\">40000</a></td><td>40000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40100\">40100</a></td><td>40100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40200\">40200</a></td><td>40200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41100\">41100</a></td><td>41100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41200\">41200</a></td><td>41200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45000\">45000</a></td><td>45000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45100\">45100</a></td><td>45100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45200\">45200</a></td><td>45200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50000\">50000</a></td><td>50000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50100\">50100</a></td><td>50100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50200\">50200</a></td><td>50200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55000\">55000</a></td><td>55000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55100\">55100</a></td><td>55100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60000\">60000</a></td><td>60000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60100\">60100</a></td><td>60100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60200\">60200</a></td><td>60200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60300\">60300</a></td><td>60300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65000\">65000</a></td><td>65000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65100\">65100</a></td><td>65100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70000\">70000</a></td><td>70000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70100\">70100</a></td><td>70100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70200\">70200</a></td><td>70200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70300\">70300</a></td><td>70300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70400\">70400</a></td><td>70400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70500\">70500</a></td><td>70500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70600\">70600</a></td><td>70600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70700\">70700</a></td><td>70700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70800\">70800</a></td><td>70800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75000\">75000</a></td><td>75000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75100\">75100</a></td><td>75100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75200\">75200</a></td><td>75200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75300\">75300</a></td><td>75300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75400\">75400</a></td><td>75400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75500\">75500</a></td><td>75500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80000\">80000</a></td><td>80000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80100\">80100</a></td><td>80100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80200\">80200</a></td><td>80200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80300\">80300</a></td><td>80300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80400\">80400</a></td><td>80400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80500\">80500</a></td><td>80500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-85000\">85000</a></td><td>85000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90000\">90000</a></td><td>90000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90100\">90100</a></td><td>90100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90200\">90200</a></td><td>90200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91100\">91100</a></td><td>91100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91200\">91200</a></td><td>91200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91300\">91300</a></td><td>91300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91400\">91400</a></td><td>91400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91500\">91500</a></td><td>91500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91600\">91600</a></td><td>91600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91700\">91700</a></td><td>91700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91800\">91800</a></td><td>91800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94000\">94000</a></td><td>94000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94100\">94100</a></td><td>94100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95100\">95100</a></td><td>95100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95200\">95200</a></td><td>95200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95300\">95300</a></td><td>95300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95400\">95400</a></td><td>95400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95500\">95500</a></td><td>95500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95600\">95600</a></td><td>95600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96100\">96100</a></td><td>96100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96200\">96200</a></td><td>96200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96300\">96300</a></td><td>96300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96400\">96400</a></td><td>96400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96500\">96500</a></td><td>96500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-97000\">97000</a></td><td>97000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-98000\">98000</a></td><td>98000</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy"^^xsd:anyURI ;
@@ -22,15 +22,386 @@
   fhir:name [ fhir:v "VSCodigosPostalesUY"] ; # 
   fhir:title [ fhir:v "Códigos postales de Uruguay"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
   fhir:description [ fhir:v "Códigos postales admitidos en Address.postalCode."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [
          fhir:v "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"^^xsd:anyURI ;
          fhir:l <http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy>
-       ]
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "11000" ] ;
+         fhir:display [ fhir:v "11000" ]
+       ] [
+         fhir:code [ fhir:v "11100" ] ;
+         fhir:display [ fhir:v "11100" ]
+       ] [
+         fhir:code [ fhir:v "11200" ] ;
+         fhir:display [ fhir:v "11200" ]
+       ] [
+         fhir:code [ fhir:v "11300" ] ;
+         fhir:display [ fhir:v "11300" ]
+       ] [
+         fhir:code [ fhir:v "11400" ] ;
+         fhir:display [ fhir:v "11400" ]
+       ] [
+         fhir:code [ fhir:v "11500" ] ;
+         fhir:display [ fhir:v "11500" ]
+       ] [
+         fhir:code [ fhir:v "11600" ] ;
+         fhir:display [ fhir:v "11600" ]
+       ] [
+         fhir:code [ fhir:v "11700" ] ;
+         fhir:display [ fhir:v "11700" ]
+       ] [
+         fhir:code [ fhir:v "11800" ] ;
+         fhir:display [ fhir:v "11800" ]
+       ] [
+         fhir:code [ fhir:v "11900" ] ;
+         fhir:display [ fhir:v "11900" ]
+       ] [
+         fhir:code [ fhir:v "12000" ] ;
+         fhir:display [ fhir:v "12000" ]
+       ] [
+         fhir:code [ fhir:v "12100" ] ;
+         fhir:display [ fhir:v "12100" ]
+       ] [
+         fhir:code [ fhir:v "12300" ] ;
+         fhir:display [ fhir:v "12300" ]
+       ] [
+         fhir:code [ fhir:v "12400" ] ;
+         fhir:display [ fhir:v "12400" ]
+       ] [
+         fhir:code [ fhir:v "12500" ] ;
+         fhir:display [ fhir:v "12500" ]
+       ] [
+         fhir:code [ fhir:v "12600" ] ;
+         fhir:display [ fhir:v "12600" ]
+       ] [
+         fhir:code [ fhir:v "12800" ] ;
+         fhir:display [ fhir:v "12800" ]
+       ] [
+         fhir:code [ fhir:v "12900" ] ;
+         fhir:display [ fhir:v "12900" ]
+       ] [
+         fhir:code [ fhir:v "13000" ] ;
+         fhir:display [ fhir:v "13000" ]
+       ] [
+         fhir:code [ fhir:v "15000" ] ;
+         fhir:display [ fhir:v "15000" ]
+       ] [
+         fhir:code [ fhir:v "15100" ] ;
+         fhir:display [ fhir:v "15100" ]
+       ] [
+         fhir:code [ fhir:v "15200" ] ;
+         fhir:display [ fhir:v "15200" ]
+       ] [
+         fhir:code [ fhir:v "15300" ] ;
+         fhir:display [ fhir:v "15300" ]
+       ] [
+         fhir:code [ fhir:v "15400" ] ;
+         fhir:display [ fhir:v "15400" ]
+       ] [
+         fhir:code [ fhir:v "15500" ] ;
+         fhir:display [ fhir:v "15500" ]
+       ] [
+         fhir:code [ fhir:v "15600" ] ;
+         fhir:display [ fhir:v "15600" ]
+       ] [
+         fhir:code [ fhir:v "15700" ] ;
+         fhir:display [ fhir:v "15700" ]
+       ] [
+         fhir:code [ fhir:v "15800" ] ;
+         fhir:display [ fhir:v "15800" ]
+       ] [
+         fhir:code [ fhir:v "15900" ] ;
+         fhir:display [ fhir:v "15900" ]
+       ] [
+         fhir:code [ fhir:v "20000" ] ;
+         fhir:display [ fhir:v "20000" ]
+       ] [
+         fhir:code [ fhir:v "20100" ] ;
+         fhir:display [ fhir:v "20100" ]
+       ] [
+         fhir:code [ fhir:v "20200" ] ;
+         fhir:display [ fhir:v "20200" ]
+       ] [
+         fhir:code [ fhir:v "20300" ] ;
+         fhir:display [ fhir:v "20300" ]
+       ] [
+         fhir:code [ fhir:v "20400" ] ;
+         fhir:display [ fhir:v "20400" ]
+       ] [
+         fhir:code [ fhir:v "20500" ] ;
+         fhir:display [ fhir:v "20500" ]
+       ] [
+         fhir:code [ fhir:v "27000" ] ;
+         fhir:display [ fhir:v "27000" ]
+       ] [
+         fhir:code [ fhir:v "27100" ] ;
+         fhir:display [ fhir:v "27100" ]
+       ] [
+         fhir:code [ fhir:v "27200" ] ;
+         fhir:display [ fhir:v "27200" ]
+       ] [
+         fhir:code [ fhir:v "27300" ] ;
+         fhir:display [ fhir:v "27300" ]
+       ] [
+         fhir:code [ fhir:v "27400" ] ;
+         fhir:display [ fhir:v "27400" ]
+       ] [
+         fhir:code [ fhir:v "30000" ] ;
+         fhir:display [ fhir:v "30000" ]
+       ] [
+         fhir:code [ fhir:v "30100" ] ;
+         fhir:display [ fhir:v "30100" ]
+       ] [
+         fhir:code [ fhir:v "30300" ] ;
+         fhir:display [ fhir:v "30300" ]
+       ] [
+         fhir:code [ fhir:v "31100" ] ;
+         fhir:display [ fhir:v "31100" ]
+       ] [
+         fhir:code [ fhir:v "33000" ] ;
+         fhir:display [ fhir:v "33000" ]
+       ] [
+         fhir:code [ fhir:v "34100" ] ;
+         fhir:display [ fhir:v "34100" ]
+       ] [
+         fhir:code [ fhir:v "34200" ] ;
+         fhir:display [ fhir:v "34200" ]
+       ] [
+         fhir:code [ fhir:v "35100" ] ;
+         fhir:display [ fhir:v "35100" ]
+       ] [
+         fhir:code [ fhir:v "35200" ] ;
+         fhir:display [ fhir:v "35200" ]
+       ] [
+         fhir:code [ fhir:v "35300" ] ;
+         fhir:display [ fhir:v "35300" ]
+       ] [
+         fhir:code [ fhir:v "36100" ] ;
+         fhir:display [ fhir:v "36100" ]
+       ] [
+         fhir:code [ fhir:v "36200" ] ;
+         fhir:display [ fhir:v "36200" ]
+       ] [
+         fhir:code [ fhir:v "37000" ] ;
+         fhir:display [ fhir:v "37000" ]
+       ] [
+         fhir:code [ fhir:v "37100" ] ;
+         fhir:display [ fhir:v "37100" ]
+       ] [
+         fhir:code [ fhir:v "40000" ] ;
+         fhir:display [ fhir:v "40000" ]
+       ] [
+         fhir:code [ fhir:v "40100" ] ;
+         fhir:display [ fhir:v "40100" ]
+       ] [
+         fhir:code [ fhir:v "40200" ] ;
+         fhir:display [ fhir:v "40200" ]
+       ] [
+         fhir:code [ fhir:v "41100" ] ;
+         fhir:display [ fhir:v "41100" ]
+       ] [
+         fhir:code [ fhir:v "41200" ] ;
+         fhir:display [ fhir:v "41200" ]
+       ] [
+         fhir:code [ fhir:v "45000" ] ;
+         fhir:display [ fhir:v "45000" ]
+       ] [
+         fhir:code [ fhir:v "45100" ] ;
+         fhir:display [ fhir:v "45100" ]
+       ] [
+         fhir:code [ fhir:v "45200" ] ;
+         fhir:display [ fhir:v "45200" ]
+       ] [
+         fhir:code [ fhir:v "50000" ] ;
+         fhir:display [ fhir:v "50000" ]
+       ] [
+         fhir:code [ fhir:v "50100" ] ;
+         fhir:display [ fhir:v "50100" ]
+       ] [
+         fhir:code [ fhir:v "50200" ] ;
+         fhir:display [ fhir:v "50200" ]
+       ] [
+         fhir:code [ fhir:v "55000" ] ;
+         fhir:display [ fhir:v "55000" ]
+       ] [
+         fhir:code [ fhir:v "55100" ] ;
+         fhir:display [ fhir:v "55100" ]
+       ] [
+         fhir:code [ fhir:v "60000" ] ;
+         fhir:display [ fhir:v "60000" ]
+       ] [
+         fhir:code [ fhir:v "60100" ] ;
+         fhir:display [ fhir:v "60100" ]
+       ] [
+         fhir:code [ fhir:v "60200" ] ;
+         fhir:display [ fhir:v "60200" ]
+       ] [
+         fhir:code [ fhir:v "60300" ] ;
+         fhir:display [ fhir:v "60300" ]
+       ] [
+         fhir:code [ fhir:v "65000" ] ;
+         fhir:display [ fhir:v "65000" ]
+       ] [
+         fhir:code [ fhir:v "65100" ] ;
+         fhir:display [ fhir:v "65100" ]
+       ] [
+         fhir:code [ fhir:v "70000" ] ;
+         fhir:display [ fhir:v "70000" ]
+       ] [
+         fhir:code [ fhir:v "70100" ] ;
+         fhir:display [ fhir:v "70100" ]
+       ] [
+         fhir:code [ fhir:v "70200" ] ;
+         fhir:display [ fhir:v "70200" ]
+       ] [
+         fhir:code [ fhir:v "70300" ] ;
+         fhir:display [ fhir:v "70300" ]
+       ] [
+         fhir:code [ fhir:v "70400" ] ;
+         fhir:display [ fhir:v "70400" ]
+       ] [
+         fhir:code [ fhir:v "70500" ] ;
+         fhir:display [ fhir:v "70500" ]
+       ] [
+         fhir:code [ fhir:v "70600" ] ;
+         fhir:display [ fhir:v "70600" ]
+       ] [
+         fhir:code [ fhir:v "70700" ] ;
+         fhir:display [ fhir:v "70700" ]
+       ] [
+         fhir:code [ fhir:v "70800" ] ;
+         fhir:display [ fhir:v "70800" ]
+       ] [
+         fhir:code [ fhir:v "75000" ] ;
+         fhir:display [ fhir:v "75000" ]
+       ] [
+         fhir:code [ fhir:v "75100" ] ;
+         fhir:display [ fhir:v "75100" ]
+       ] [
+         fhir:code [ fhir:v "75200" ] ;
+         fhir:display [ fhir:v "75200" ]
+       ] [
+         fhir:code [ fhir:v "75300" ] ;
+         fhir:display [ fhir:v "75300" ]
+       ] [
+         fhir:code [ fhir:v "75400" ] ;
+         fhir:display [ fhir:v "75400" ]
+       ] [
+         fhir:code [ fhir:v "75500" ] ;
+         fhir:display [ fhir:v "75500" ]
+       ] [
+         fhir:code [ fhir:v "80000" ] ;
+         fhir:display [ fhir:v "80000" ]
+       ] [
+         fhir:code [ fhir:v "80100" ] ;
+         fhir:display [ fhir:v "80100" ]
+       ] [
+         fhir:code [ fhir:v "80200" ] ;
+         fhir:display [ fhir:v "80200" ]
+       ] [
+         fhir:code [ fhir:v "80300" ] ;
+         fhir:display [ fhir:v "80300" ]
+       ] [
+         fhir:code [ fhir:v "80400" ] ;
+         fhir:display [ fhir:v "80400" ]
+       ] [
+         fhir:code [ fhir:v "80500" ] ;
+         fhir:display [ fhir:v "80500" ]
+       ] [
+         fhir:code [ fhir:v "85000" ] ;
+         fhir:display [ fhir:v "85000" ]
+       ] [
+         fhir:code [ fhir:v "90000" ] ;
+         fhir:display [ fhir:v "90000" ]
+       ] [
+         fhir:code [ fhir:v "90100" ] ;
+         fhir:display [ fhir:v "90100" ]
+       ] [
+         fhir:code [ fhir:v "90200" ] ;
+         fhir:display [ fhir:v "90200" ]
+       ] [
+         fhir:code [ fhir:v "91100" ] ;
+         fhir:display [ fhir:v "91100" ]
+       ] [
+         fhir:code [ fhir:v "91200" ] ;
+         fhir:display [ fhir:v "91200" ]
+       ] [
+         fhir:code [ fhir:v "91300" ] ;
+         fhir:display [ fhir:v "91300" ]
+       ] [
+         fhir:code [ fhir:v "91400" ] ;
+         fhir:display [ fhir:v "91400" ]
+       ] [
+         fhir:code [ fhir:v "91500" ] ;
+         fhir:display [ fhir:v "91500" ]
+       ] [
+         fhir:code [ fhir:v "91600" ] ;
+         fhir:display [ fhir:v "91600" ]
+       ] [
+         fhir:code [ fhir:v "91700" ] ;
+         fhir:display [ fhir:v "91700" ]
+       ] [
+         fhir:code [ fhir:v "91800" ] ;
+         fhir:display [ fhir:v "91800" ]
+       ] [
+         fhir:code [ fhir:v "94000" ] ;
+         fhir:display [ fhir:v "94000" ]
+       ] [
+         fhir:code [ fhir:v "94100" ] ;
+         fhir:display [ fhir:v "94100" ]
+       ] [
+         fhir:code [ fhir:v "95100" ] ;
+         fhir:display [ fhir:v "95100" ]
+       ] [
+         fhir:code [ fhir:v "95200" ] ;
+         fhir:display [ fhir:v "95200" ]
+       ] [
+         fhir:code [ fhir:v "95300" ] ;
+         fhir:display [ fhir:v "95300" ]
+       ] [
+         fhir:code [ fhir:v "95400" ] ;
+         fhir:display [ fhir:v "95400" ]
+       ] [
+         fhir:code [ fhir:v "95500" ] ;
+         fhir:display [ fhir:v "95500" ]
+       ] [
+         fhir:code [ fhir:v "95600" ] ;
+         fhir:display [ fhir:v "95600" ]
+       ] [
+         fhir:code [ fhir:v "96100" ] ;
+         fhir:display [ fhir:v "96100" ]
+       ] [
+         fhir:code [ fhir:v "96200" ] ;
+         fhir:display [ fhir:v "96200" ]
+       ] [
+         fhir:code [ fhir:v "96300" ] ;
+         fhir:display [ fhir:v "96300" ]
+       ] [
+         fhir:code [ fhir:v "96400" ] ;
+         fhir:display [ fhir:v "96400" ]
+       ] [
+         fhir:code [ fhir:v "96500" ] ;
+         fhir:display [ fhir:v "96500" ]
+       ] [
+         fhir:code [ fhir:v "97000" ] ;
+         fhir:display [ fhir:v "97000" ]
+       ] [
+         fhir:code [ fhir:v "98000" ] ;
+         fhir:display [ fhir:v "98000" ]
+       ] )
      ] )
   ] . # 
 

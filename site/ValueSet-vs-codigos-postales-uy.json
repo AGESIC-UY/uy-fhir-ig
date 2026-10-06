@@ -3,19 +3,510 @@
   "id" : "vs-codigos-postales-uy",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy</b></p><a name=\"vs-codigos-postales-uy\"> </a><a name=\"hcvs-codigos-postales-uy\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-codigos-postales-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-codigos-postales-uy</b></p><a name=\"vs-codigos-postales-uy\"> </a><a name=\"hcvs-codigos-postales-uy\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-cs-codigos-postales-uy.html\"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11000\">11000</a></td><td>11000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11100\">11100</a></td><td>11100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11200\">11200</a></td><td>11200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11300\">11300</a></td><td>11300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11400\">11400</a></td><td>11400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11500\">11500</a></td><td>11500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11600\">11600</a></td><td>11600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11700\">11700</a></td><td>11700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11800\">11800</a></td><td>11800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-11900\">11900</a></td><td>11900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12000\">12000</a></td><td>12000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12100\">12100</a></td><td>12100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12300\">12300</a></td><td>12300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12400\">12400</a></td><td>12400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12500\">12500</a></td><td>12500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12600\">12600</a></td><td>12600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12800\">12800</a></td><td>12800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-12900\">12900</a></td><td>12900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-13000\">13000</a></td><td>13000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15000\">15000</a></td><td>15000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15100\">15100</a></td><td>15100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15200\">15200</a></td><td>15200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15300\">15300</a></td><td>15300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15400\">15400</a></td><td>15400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15500\">15500</a></td><td>15500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15600\">15600</a></td><td>15600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15700\">15700</a></td><td>15700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15800\">15800</a></td><td>15800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-15900\">15900</a></td><td>15900</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20000\">20000</a></td><td>20000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20100\">20100</a></td><td>20100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20200\">20200</a></td><td>20200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20300\">20300</a></td><td>20300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20400\">20400</a></td><td>20400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-20500\">20500</a></td><td>20500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27000\">27000</a></td><td>27000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27100\">27100</a></td><td>27100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27200\">27200</a></td><td>27200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27300\">27300</a></td><td>27300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-27400\">27400</a></td><td>27400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30000\">30000</a></td><td>30000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30100\">30100</a></td><td>30100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-30300\">30300</a></td><td>30300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-31100\">31100</a></td><td>31100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-33000\">33000</a></td><td>33000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34100\">34100</a></td><td>34100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-34200\">34200</a></td><td>34200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35100\">35100</a></td><td>35100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35200\">35200</a></td><td>35200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-35300\">35300</a></td><td>35300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36100\">36100</a></td><td>36100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-36200\">36200</a></td><td>36200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37000\">37000</a></td><td>37000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-37100\">37100</a></td><td>37100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40000\">40000</a></td><td>40000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40100\">40100</a></td><td>40100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-40200\">40200</a></td><td>40200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41100\">41100</a></td><td>41100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-41200\">41200</a></td><td>41200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45000\">45000</a></td><td>45000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45100\">45100</a></td><td>45100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-45200\">45200</a></td><td>45200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50000\">50000</a></td><td>50000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50100\">50100</a></td><td>50100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-50200\">50200</a></td><td>50200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55000\">55000</a></td><td>55000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-55100\">55100</a></td><td>55100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60000\">60000</a></td><td>60000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60100\">60100</a></td><td>60100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60200\">60200</a></td><td>60200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-60300\">60300</a></td><td>60300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65000\">65000</a></td><td>65000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-65100\">65100</a></td><td>65100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70000\">70000</a></td><td>70000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70100\">70100</a></td><td>70100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70200\">70200</a></td><td>70200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70300\">70300</a></td><td>70300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70400\">70400</a></td><td>70400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70500\">70500</a></td><td>70500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70600\">70600</a></td><td>70600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70700\">70700</a></td><td>70700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-70800\">70800</a></td><td>70800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75000\">75000</a></td><td>75000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75100\">75100</a></td><td>75100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75200\">75200</a></td><td>75200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75300\">75300</a></td><td>75300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75400\">75400</a></td><td>75400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-75500\">75500</a></td><td>75500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80000\">80000</a></td><td>80000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80100\">80100</a></td><td>80100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80200\">80200</a></td><td>80200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80300\">80300</a></td><td>80300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80400\">80400</a></td><td>80400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-80500\">80500</a></td><td>80500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-85000\">85000</a></td><td>85000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90000\">90000</a></td><td>90000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90100\">90100</a></td><td>90100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-90200\">90200</a></td><td>90200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91100\">91100</a></td><td>91100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91200\">91200</a></td><td>91200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91300\">91300</a></td><td>91300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91400\">91400</a></td><td>91400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91500\">91500</a></td><td>91500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91600\">91600</a></td><td>91600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91700\">91700</a></td><td>91700</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-91800\">91800</a></td><td>91800</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94000\">94000</a></td><td>94000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-94100\">94100</a></td><td>94100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95100\">95100</a></td><td>95100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95200\">95200</a></td><td>95200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95300\">95300</a></td><td>95300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95400\">95400</a></td><td>95400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95500\">95500</a></td><td>95500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-95600\">95600</a></td><td>95600</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96100\">96100</a></td><td>96100</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96200\">96200</a></td><td>96200</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96300\">96300</a></td><td>96300</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96400\">96400</a></td><td>96400</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-96500\">96500</a></td><td>96500</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-97000\">97000</a></td><td>97000</td></tr><tr><td><a href=\"CodeSystem-cs-codigos-postales-uy.html#cs-codigos-postales-uy-98000\">98000</a></td><td>98000</td></tr></table></li></ul></div>"
   },
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
   "version" : "0.1.0",
   "name" : "VSCodigosPostalesUY",
   "title" : "Códigos postales de Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Códigos postales admitidos en Address.postalCode.",
   "compose" : {
     "include" : [{
-      "system" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy"
+      "system" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
+      "concept" : [{
+        "code" : "11000",
+        "display" : "11000"
+      },
+      {
+        "code" : "11100",
+        "display" : "11100"
+      },
+      {
+        "code" : "11200",
+        "display" : "11200"
+      },
+      {
+        "code" : "11300",
+        "display" : "11300"
+      },
+      {
+        "code" : "11400",
+        "display" : "11400"
+      },
+      {
+        "code" : "11500",
+        "display" : "11500"
+      },
+      {
+        "code" : "11600",
+        "display" : "11600"
+      },
+      {
+        "code" : "11700",
+        "display" : "11700"
+      },
+      {
+        "code" : "11800",
+        "display" : "11800"
+      },
+      {
+        "code" : "11900",
+        "display" : "11900"
+      },
+      {
+        "code" : "12000",
+        "display" : "12000"
+      },
+      {
+        "code" : "12100",
+        "display" : "12100"
+      },
+      {
+        "code" : "12300",
+        "display" : "12300"
+      },
+      {
+        "code" : "12400",
+        "display" : "12400"
+      },
+      {
+        "code" : "12500",
+        "display" : "12500"
+      },
+      {
+        "code" : "12600",
+        "display" : "12600"
+      },
+      {
+        "code" : "12800",
+        "display" : "12800"
+      },
+      {
+        "code" : "12900",
+        "display" : "12900"
+      },
+      {
+        "code" : "13000",
+        "display" : "13000"
+      },
+      {
+        "code" : "15000",
+        "display" : "15000"
+      },
+      {
+        "code" : "15100",
+        "display" : "15100"
+      },
+      {
+        "code" : "15200",
+        "display" : "15200"
+      },
+      {
+        "code" : "15300",
+        "display" : "15300"
+      },
+      {
+        "code" : "15400",
+        "display" : "15400"
+      },
+      {
+        "code" : "15500",
+        "display" : "15500"
+      },
+      {
+        "code" : "15600",
+        "display" : "15600"
+      },
+      {
+        "code" : "15700",
+        "display" : "15700"
+      },
+      {
+        "code" : "15800",
+        "display" : "15800"
+      },
+      {
+        "code" : "15900",
+        "display" : "15900"
+      },
+      {
+        "code" : "20000",
+        "display" : "20000"
+      },
+      {
+        "code" : "20100",
+        "display" : "20100"
+      },
+      {
+        "code" : "20200",
+        "display" : "20200"
+      },
+      {
+        "code" : "20300",
+        "display" : "20300"
+      },
+      {
+        "code" : "20400",
+        "display" : "20400"
+      },
+      {
+        "code" : "20500",
+        "display" : "20500"
+      },
+      {
+        "code" : "27000",
+        "display" : "27000"
+      },
+      {
+        "code" : "27100",
+        "display" : "27100"
+      },
+      {
+        "code" : "27200",
+        "display" : "27200"
+      },
+      {
+        "code" : "27300",
+        "display" : "27300"
+      },
+      {
+        "code" : "27400",
+        "display" : "27400"
+      },
+      {
+        "code" : "30000",
+        "display" : "30000"
+      },
+      {
+        "code" : "30100",
+        "display" : "30100"
+      },
+      {
+        "code" : "30300",
+        "display" : "30300"
+      },
+      {
+        "code" : "31100",
+        "display" : "31100"
+      },
+      {
+        "code" : "33000",
+        "display" : "33000"
+      },
+      {
+        "code" : "34100",
+        "display" : "34100"
+      },
+      {
+        "code" : "34200",
+        "display" : "34200"
+      },
+      {
+        "code" : "35100",
+        "display" : "35100"
+      },
+      {
+        "code" : "35200",
+        "display" : "35200"
+      },
+      {
+        "code" : "35300",
+        "display" : "35300"
+      },
+      {
+        "code" : "36100",
+        "display" : "36100"
+      },
+      {
+        "code" : "36200",
+        "display" : "36200"
+      },
+      {
+        "code" : "37000",
+        "display" : "37000"
+      },
+      {
+        "code" : "37100",
+        "display" : "37100"
+      },
+      {
+        "code" : "40000",
+        "display" : "40000"
+      },
+      {
+        "code" : "40100",
+        "display" : "40100"
+      },
+      {
+        "code" : "40200",
+        "display" : "40200"
+      },
+      {
+        "code" : "41100",
+        "display" : "41100"
+      },
+      {
+        "code" : "41200",
+        "display" : "41200"
+      },
+      {
+        "code" : "45000",
+        "display" : "45000"
+      },
+      {
+        "code" : "45100",
+        "display" : "45100"
+      },
+      {
+        "code" : "45200",
+        "display" : "45200"
+      },
+      {
+        "code" : "50000",
+        "display" : "50000"
+      },
+      {
+        "code" : "50100",
+        "display" : "50100"
+      },
+      {
+        "code" : "50200",
+        "display" : "50200"
+      },
+      {
+        "code" : "55000",
+        "display" : "55000"
+      },
+      {
+        "code" : "55100",
+        "display" : "55100"
+      },
+      {
+        "code" : "60000",
+        "display" : "60000"
+      },
+      {
+        "code" : "60100",
+        "display" : "60100"
+      },
+      {
+        "code" : "60200",
+        "display" : "60200"
+      },
+      {
+        "code" : "60300",
+        "display" : "60300"
+      },
+      {
+        "code" : "65000",
+        "display" : "65000"
+      },
+      {
+        "code" : "65100",
+        "display" : "65100"
+      },
+      {
+        "code" : "70000",
+        "display" : "70000"
+      },
+      {
+        "code" : "70100",
+        "display" : "70100"
+      },
+      {
+        "code" : "70200",
+        "display" : "70200"
+      },
+      {
+        "code" : "70300",
+        "display" : "70300"
+      },
+      {
+        "code" : "70400",
+        "display" : "70400"
+      },
+      {
+        "code" : "70500",
+        "display" : "70500"
+      },
+      {
+        "code" : "70600",
+        "display" : "70600"
+      },
+      {
+        "code" : "70700",
+        "display" : "70700"
+      },
+      {
+        "code" : "70800",
+        "display" : "70800"
+      },
+      {
+        "code" : "75000",
+        "display" : "75000"
+      },
+      {
+        "code" : "75100",
+        "display" : "75100"
+      },
+      {
+        "code" : "75200",
+        "display" : "75200"
+      },
+      {
+        "code" : "75300",
+        "display" : "75300"
+      },
+      {
+        "code" : "75400",
+        "display" : "75400"
+      },
+      {
+        "code" : "75500",
+        "display" : "75500"
+      },
+      {
+        "code" : "80000",
+        "display" : "80000"
+      },
+      {
+        "code" : "80100",
+        "display" : "80100"
+      },
+      {
+        "code" : "80200",
+        "display" : "80200"
+      },
+      {
+        "code" : "80300",
+        "display" : "80300"
+      },
+      {
+        "code" : "80400",
+        "display" : "80400"
+      },
+      {
+        "code" : "80500",
+        "display" : "80500"
+      },
+      {
+        "code" : "85000",
+        "display" : "85000"
+      },
+      {
+        "code" : "90000",
+        "display" : "90000"
+      },
+      {
+        "code" : "90100",
+        "display" : "90100"
+      },
+      {
+        "code" : "90200",
+        "display" : "90200"
+      },
+      {
+        "code" : "91100",
+        "display" : "91100"
+      },
+      {
+        "code" : "91200",
+        "display" : "91200"
+      },
+      {
+        "code" : "91300",
+        "display" : "91300"
+      },
+      {
+        "code" : "91400",
+        "display" : "91400"
+      },
+      {
+        "code" : "91500",
+        "display" : "91500"
+      },
+      {
+        "code" : "91600",
+        "display" : "91600"
+      },
+      {
+        "code" : "91700",
+        "display" : "91700"
+      },
+      {
+        "code" : "91800",
+        "display" : "91800"
+      },
+      {
+        "code" : "94000",
+        "display" : "94000"
+      },
+      {
+        "code" : "94100",
+        "display" : "94100"
+      },
+      {
+        "code" : "95100",
+        "display" : "95100"
+      },
+      {
+        "code" : "95200",
+        "display" : "95200"
+      },
+      {
+        "code" : "95300",
+        "display" : "95300"
+      },
+      {
+        "code" : "95400",
+        "display" : "95400"
+      },
+      {
+        "code" : "95500",
+        "display" : "95500"
+      },
+      {
+        "code" : "95600",
+        "display" : "95600"
+      },
+      {
+        "code" : "96100",
+        "display" : "96100"
+      },
+      {
+        "code" : "96200",
+        "display" : "96200"
+      },
+      {
+        "code" : "96300",
+        "display" : "96300"
+      },
+      {
+        "code" : "96400",
+        "display" : "96400"
+      },
+      {
+        "code" : "96500",
+        "display" : "96500"
+      },
+      {
+        "code" : "97000",
+        "display" : "97000"
+      },
+      {
+        "code" : "98000",
+        "display" : "98000"
+      }]
     }]
   }
 }

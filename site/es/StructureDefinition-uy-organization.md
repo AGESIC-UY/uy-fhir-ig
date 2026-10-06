@@ -2,13 +2,10 @@
 
 ## Perfil de los recursos: Perfil Organización para Uruguay 
 
- 
-Una agrupación de personas u organizaciones con un propósito común. 
-
 **Usages:**
 
 * Derived from this Profile: [Perfil Organización para HCEN](StructureDefinition-hcen-organization.md)
-* Refer to this Profile: [Identificador de Organización](StructureDefinition-uy-aa-identifier.md), [Identificador Cédula de Identidad](StructureDefinition-uy-ci-identifier.md), [Identificador Nacional Extranjero](StructureDefinition-uy-fni-identifier.md), [Identificador MRN](StructureDefinition-uy-mrn-identifier.md)... Show 5 more, [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md), [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md), [Identificador Pasaporte](StructureDefinition-uy-ppn-identifier.md), [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
+* Refer to this Profile: [Identificador Cédula de Identidad](StructureDefinition-uy-ci-identifier.md), [Identificador MRN](StructureDefinition-uy-mrn-identifier.md), [Identificador de Organización](StructureDefinition-uy-org-identifier.md), [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md)... Show 4 more, [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md), [Identificador Pasaporte](StructureDefinition-uy-ppn-identifier.md), [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
 * Examples for this Profile: [Organización de ejemplo CORE UY](Organization-EjemploOrganizacionUY.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/uy-organization)
@@ -43,7 +40,7 @@ Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.
 
 This structure refers to these other structures:
 
-* [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-aa-identifier)](StructureDefinition-uy-aa-identifier.md)
+* [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier)](StructureDefinition-uy-org-identifier.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
 * [Contacto por Correo Electrónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-email-contact-point)](StructureDefinition-uy-email-contact-point.md)
 * [Dirección (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-address)](StructureDefinition-uy-address.md)
@@ -85,7 +82,7 @@ Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.
 
 This structure refers to these other structures:
 
-* [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-aa-identifier)](StructureDefinition-uy-aa-identifier.md)
+* [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier)](StructureDefinition-uy-org-identifier.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
 * [Contacto por Correo Electrónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-email-contact-point)](StructureDefinition-uy-email-contact-point.md)
 * [Dirección (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-address)](StructureDefinition-uy-address.md)
@@ -118,8 +115,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
   "name" : "UYOrganization",
   "title" : "Perfil Organización para Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Una agrupación de personas u organizaciones con un propósito común.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -245,7 +249,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
       "max" : "1",
       "type" : [{
         "code" : "Identifier",
-        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-aa-identifier"]
+        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier"]
       }]
     },
     {

@@ -173,8 +173,7 @@
     "oids" : ["1.3.6.1.4.1.19376.1.2.3"],
     "uses" : {
     },
-    "ValueSet-vs-format-code.html" : "Formato del documento FHIR HCEN",
-    "ValueSet-vs-via-administracion.html" : "Conjunto de Valores Vía de Administración (borrador)"
+    "ValueSet-vs-format-code.html" : "Formato del documento FHIR HCEN"
   },
   {
     "url" : "http://loinc.org",
@@ -198,20 +197,20 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-vs-rol-profesional.html" : "Conjunto de Valores Rol del Profesional",
-    "ValueSet-vs-condition-category-cnu.html" : "Conjunto de Valores Categoría de Condition (CNU)",
-    "ValueSet-vs-type-code.html" : "EJE 2 — Tipo detallado de documento",
-    "ValueSet-vs-sitio-administracion.html" : "Conjunto de Valores Sitio de Administración (borrador)",
-    "ValueSet-vs-tipo-procedimiento.html" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
     "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
+    "ValueSet-vs-solicitud-procedimiento.html" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
+    "ValueSet-vs-sitio-administracion.html" : "Conjunto de Valores Sitio de Administración (borrador)",
+    "ValueSet-vs-rol-profesional.html" : "Conjunto de Valores Rol del Profesional",
+    "ValueSet-vs-type-code.html" : "EJE 2 — Tipo detallado de documento",
+    "ValueSet-vs-diagnostico-consulta.html" : "Conjunto de Valores Diagnósticos",
+    "ValueSet-vs-procedimientos.html" : "Conjunto de Valores Procedimientos",
+    "ValueSet-vs-motivos-consulta.html" : "Conjunto de Valores Motivos de Consulta",
     "ValueSet-vs-practice-setting.html" : "EJE 3 — Servicio médico del documento",
     "ValueSet-vs-medicamentos.html" : "Conjunto de Valores Medicamentos (borrador)",
-    "ValueSet-vs-motivo-consulta.html" : "Conjunto de Valores Motivos de Consulta",
-    "ValueSet-vs-procedimientos.html" : "Conjunto de Valores Procedimientos",
-    "ValueSet-vs-diagnostico-consulta.html" : "Conjunto de Valores Diagnósticos",
+    "ValueSet-vs-especialidad-medica.html" : "Conjunto de Valores Especialidad Médica",
+    "ValueSet-vs-condition-category-cnu.html" : "Conjunto de Valores Categoría de Condition (CNU)",
     "ValueSet-vs-resultado-procedimiento.html" : "Conjunto de Valores Resultado de Procedimiento",
-    "ValueSet-vs-solicitud-procedimiento.html" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
-    "ValueSet-vs-especialidad-medica.html" : "Conjunto de Valores Especialidad Médica"
+    "ValueSet-vs-tipo-procedimiento.html" : "Conjunto de Valores Tipo de Procedimiento (borrador)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",

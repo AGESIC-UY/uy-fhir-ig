@@ -2,15 +2,13 @@
 
 ## Extensión: ID de Comunidad de Origen 
 
-El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.
-
 **Context of Use**
 
 **Usage info**
 
 **Usages:**
 
-* Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+* Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-home-community-id)
 
@@ -31,9 +29,9 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 ** Summary **
 
-Simple Extension with the type oid: El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.
+Simple Extension with the type oid: Identificador de la comunidad de origen del documento o conjunto de envío. Mapea a DocumentEntry.homeCommunityId y SubmissionSet.homeCommunityId.
 
- **Vista diferencialDifferential View** 
+ **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
@@ -45,7 +43,7 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 ** Summary **
 
-Simple Extension with the type oid: El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.
+Simple Extension with the type oid: Identificador de la comunidad de origen del documento o conjunto de envío. Mapea a DocumentEntry.homeCommunityId y SubmissionSet.homeCommunityId.
 
  
 
@@ -64,9 +62,16 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-home-communit
   "name" : "HomeCommunityId",
   "title" : "ID de Comunidad de Origen",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Identificador de la comunidad de origen del documento o conjunto de envío. Mapea a DocumentEntry.homeCommunityId y SubmissionSet.homeCommunityId.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "rim",
@@ -78,6 +83,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-home-communit
   "context" : [{
     "type" : "element",
     "expression" : "DocumentReference"
+  },
+  {
+    "type" : "element",
+    "expression" : "List"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
@@ -87,7 +96,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-home-communit
       "id" : "Extension",
       "path" : "Extension",
       "short" : "ID de Comunidad de Origen",
-      "definition" : "El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId."
+      "definition" : "Identificador de la comunidad de origen del documento o conjunto de envío."
     },
     {
       "id" : "Extension.extension",
@@ -103,7 +112,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-home-communit
       "id" : "Extension.value[x]",
       "path" : "Extension.value[x]",
       "short" : "ID de Comunidad de Origen",
-      "definition" : "El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.",
+      "definition" : "OID de la comunidad desde la cual se accede a los documentos.",
       "min" : 1,
       "type" : [{
         "code" : "oid"

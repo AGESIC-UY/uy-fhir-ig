@@ -20,7 +20,7 @@ La precondición es disponer de documentos identificados y coherentes entre sí.
 
 El prestador solicitante identifica al paciente mediante el dominio y valor MRN y consulta los metadatos. Plataforma devuelve un conjunto de coincidencias que puede estar vacío. El solicitante examina clasificación, fechas y referencias para elegir qué documento recuperar. Este flujo intercambia metadatos; el contenido se solicita por separado.
 
-Ver [Consultar documentos](hcen-iti-67.md), donde se distingue la búsqueda propuesta del catálogo de filtros aún por confirmar.
+Ver [Consultar metadatos](hcen-iti-67.md), donde se distingue la búsqueda propuesta del catálogo de filtros aún por confirmar.
 
 ### Recuperar y entregar un documento
 
@@ -28,5 +28,5 @@ El solicitante elige una representación a partir de los metadatos. Plataforma s
 
 El resultado esperado es un Bundle documental o un Binary con CDA, o una respuesta de error identificable. Ver [Recuperar documentos](hcen-iti-68.md) para los formatos, las obligaciones de interpretación y los pendientes de rutas.
 
-Los [ejemplos de intercambio](hcen-ejemplos.md) conectan estos casos mediante un paciente y un documento ficticios.
+La versión 0.1.0 publica únicamente los cuatro [ejemplos básicos del Core](ejemplos.md). Los ejemplos completos de intercambio HCEN se reservan para una versión futura, como se explica en [Ejemplos de intercambio](hcen-ejemplos.md).
 

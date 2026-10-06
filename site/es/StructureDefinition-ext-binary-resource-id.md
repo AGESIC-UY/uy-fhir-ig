@@ -2,8 +2,6 @@
 
 ## Extensión: ID del Recurso Binario 
 
-Referencia al recurso Binary que contiene la representación CDA del documento clínico.
-
 **Context of Use**
 
 **Usage info**
@@ -11,7 +9,6 @@ Referencia al recurso Binary que contiene la representación CDA del documento c
 **Usages:**
 
 * Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
-* Examples for this Extension: [Bundle/hcen-consulta-ejemplo](Bundle-hcen-consulta-ejemplo.md), [Bundle/hcen-publicacion-ejemplo](Bundle-hcen-publicacion-ejemplo.md) and [DocumentReference/hcen-referencia-ejemplo](DocumentReference-hcen-referencia-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-binary-resource-id)
 
@@ -34,7 +31,7 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 Simple Extension with the type Reference: Referencia al recurso Binary que contiene la representación CDA del documento clínico.
 
- **Vista diferencialDifferential View** 
+ **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
@@ -65,8 +62,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-binary-resour
   "name" : "BinaryResourceId",
   "title" : "ID del Recurso Binario",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Referencia al recurso Binary que contiene la representación CDA del documento clínico.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

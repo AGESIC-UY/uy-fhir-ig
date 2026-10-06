@@ -11,8 +11,8 @@ El prestador es responsable de la integración completa de su despliegue. Puede 
 | | | |
 | :--- | :--- | :--- |
 | Fuente de identidad | Registrar y actualizar sus pacientes utilizando el MRN local. | [Registrar o actualizar pacientes](hcen-iti-104.md) |
-| Publicador documental | Conservar FHIR y CDA en su repositorio y enviar metadatos y representaciones a Plataforma. | [Publicar documentos](hcen-iti-65.md) |
-| Consultante | Buscar metadatos y procesar las coincidencias. | [Consultar documentos](hcen-iti-67.md) |
+| Publicador de documentos | Conservar FHIR y CDA en su repositorio y enviar metadatos y el documento FHIR a Plataforma (el CDA se referencia mediante Binary, pero Binary no debería (SHOULD NOT) enviarse). | [Publicar documentos](hcen-iti-65.md) |
+| Consultante | Buscar metadatos y procesar las coincidencias. | [Consultar metadatos](hcen-iti-67.md) |
 | Solicitante de documentos | Solicitar a Plataforma cualquiera de las dos representaciones. | [Recuperar documentos](hcen-iti-68.md) |
 | Proveedor de documentos | Entregar documentos propios cuando Plataforma los solicite. | [Recuperar documentos](hcen-iti-68.md) |
 

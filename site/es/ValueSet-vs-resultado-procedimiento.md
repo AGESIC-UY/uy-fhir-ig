@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Resultado de Procedimiento 
 
- 
-Resultados posibles de un procedimiento (procedure.outcome). 
-
  **References** 
 
 * [HCEN Procedimiento](StructureDefinition-hcen-procedimiento.md)
@@ -34,8 +31,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSResultadoProcedimiento",
   "title" : "Conjunto de Valores Resultado de Procedimiento",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Resultados posibles de un procedimiento (procedure.outcome).",
   "compose" : {
     "include" : [{
@@ -61,7 +65,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
         "display" : "resultado anormal"
       },
       {
-        "code" : "41998400",
+        "code" : "419984006",
         "display" : "no concluyente"
       }]
     }]

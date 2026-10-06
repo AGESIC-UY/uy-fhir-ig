@@ -15,8 +15,15 @@
   <name value="ScannedDocument"/>
   <title value="Documento Escaneado"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument."/>
   <fhirVersion value="4.0.1"/>
   <mapping>

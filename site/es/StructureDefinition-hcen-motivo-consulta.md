@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Motivo de Consulta 
 
- 
-Motivo de consulta registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'motivo de consulta'. 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -39,8 +36,8 @@ Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) 
 
 ** Summary **
 
-Mandatory: 3 elements(6 nested mandatory elements)
- Fixed: 4 elements
+Mandatory: 3 elements(3 nested mandatory elements)
+ Fixed: 3 elements
  Prohibited: 15 elements
 
 **Structures**
@@ -79,8 +76,8 @@ Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) 
 
 ** Summary **
 
-Mandatory: 3 elements(6 nested mandatory elements)
- Fixed: 4 elements
+Mandatory: 3 elements(3 nested mandatory elements)
+ Fixed: 3 elements
  Prohibited: 15 elements
 
 **Structures**
@@ -112,11 +109,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-motivo-consu
   "name" : "HCENMotivoConsulta",
   "title" : "HCEN Motivo de Consulta",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Motivo de consulta registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'motivo de consulta'.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENMotivoConsultaToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYMotivoConsulta."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -208,7 +218,35 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-motivo-consu
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu"
-      }
+      },
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/code"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.system",
+      "path" : "Condition.category.coding.system",
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/code/@codeSystem"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.code",
+      "path" : "Condition.category.coding.code",
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/code/@code"
+      }]
+    },
+    {
+      "id" : "Condition.category.coding.display",
+      "path" : "Condition.category.coding.display",
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/code/@displayName"
+      }]
     },
     {
       "id" : "Condition.severity",
@@ -247,13 +285,21 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-motivo-consu
       "short" : "Código SNOMED CT del motivo de consulta",
       "definition" : "Código SNOMED CT del motivo de consulta",
       "min" : 0,
-      "max" : "1"
+      "max" : "1",
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation[code/@code='7611000179107']/value"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.system",
       "path" : "Condition.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://snomed.info/sct"
+      "fixedUri" : "http://snomed.info/sct",
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/value/@codeSystem"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.code",
@@ -261,44 +307,23 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-motivo-consu
       "min" : 1,
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta"
-      }
+        "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta"
+      },
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/value/@code"
+      }]
     },
     {
       "id" : "Condition.code.coding:snomed.display",
       "path" : "Condition.code.coding.display",
       "short" : "Texto descriptivo del código SNOMED CT del motivo de consulta",
       "definition" : "Texto descriptivo del código SNOMED CT del motivo de consulta",
-      "min" : 1
-    },
-    {
-      "id" : "Condition.code.coding:tesauro",
-      "path" : "Condition.code.coding",
-      "sliceName" : "tesauro",
-      "short" : "Código del motivo de consulta en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Código del motivo de consulta en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.system",
-      "path" : "Condition.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.code",
-      "path" : "Condition.code.coding.code",
-      "short" : "Código del motivo de consulta en el tesauro local",
-      "definition" : "Código del motivo de consulta en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "Condition.code.coding:tesauro.display",
-      "path" : "Condition.code.coding.display",
-      "short" : "Texto descriptivo del código del motivo de consulta en el tesauro local",
-      "definition" : "Texto descriptivo del código del motivo de consulta en el tesauro local",
-      "min" : 1
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "section/entry/observation/value/@displayName"
+      }]
     },
     {
       "id" : "Condition.bodySite",
@@ -313,6 +338,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-motivo-consu
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENMotivoConsultaToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {

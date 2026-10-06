@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: Identificador MRN 
 
- 
-Identificador interno del paciente en la institución (Medical Record Number). 
-
 **Usages:**
 
 * Derived from this DataType Profile: [Identificador MRN para HCEN](StructureDefinition-hcen-mrn-identifier.md)
@@ -93,8 +90,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-mrn-identifier
   "name" : "UYMRNIdentifier",
   "title" : "Identificador MRN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Identificador interno del paciente en la institución (Medical Record Number).",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

@@ -2,14 +2,24 @@
 
 ## Perfil de los recursos: Perfil Document Reference HCEN 
 
- 
-Referencia documental HCEN con las representaciones CDA y FHIR. Toma IHE MHD como referencia de diseño, sin declarar conformidad con sus perfiles oficiales. 
+### Identificadores y representaciones
+
+`masterIdentifier` conserva el identificador del documento, igual que Composition.identifier y Bundle.identifier. `identifier[entryUUID]` contiene el identificador técnico obligatorio con formato `urn:uuid:1.[oid_documento_clinico]` y utiliza HCENDocumentReferenceIdentifier, derivado de IHE MHD EntryUUID Identifier. La forma 1.[oid_documento_clinico] es una convención histórica HCEN/XDS, no un UUID RFC estándar.
+
+`identifier[uniqueId]` permite repetir el identificador de `masterIdentifier` en la colección de identificadores. Ambas ubicaciones representan el mismo documento: la primera corresponde al identificador documental principal del modelo MHD y la segunda permite expresarlo también en la colección `identifier`. La repetición es opcional; cuando se informa, `system` y `value` deben coincidir.
+
+`attachment.url` refiere al documento FHIR y la extensión `binary` a su CDA. Los campos `contentType`, `size`, `hash` y `format` describen la representación FHIR. En FHIR R4, `Attachment.hash` contiene un hash SHA-1 codificado en base64; no se utiliza para informar el SHA-512 del CDA descrito por la guía XDS. Ver [Identificadores HCEN](hcen-identificadores.md) y [Publicación](hcen-iti-65.md).
+
+### Autoría y relaciones
+
+La autoría incluye al menos un HCENPractitionerRole, que vincula al profesional con su organización. En publicación, los tres recursos deben estar incluidos como entradas del envío. Las referencias directas adicionales a Practitioner u Organization se admiten y se ignoran al determinar la autoría.
+
+Las relaciones históricas pueden apuntar fuera del envío mediante `DocumentReference/{id}` o una URL HTTP(S) absoluta equivalente. El identificador es el `id` lógico del recurso; no se sustituye por el OID documental ni por `Reference.identifier`. Plataforma debe comprobar que el documento referenciado existe en HCEN. El procesamiento de reemplazos no está soportado actualmente: una relación `replaces` se ignora y no modifica el documento anterior.
 
 **Usages:**
 
 * Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
 * Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
-* Examples for this Profile: [DocumentReference/hcen-referencia-ejemplo](DocumentReference-hcen-referencia-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-reference)
 
@@ -41,8 +51,8 @@ Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/document
 
 ** Summary **
 
-Mandatory: 20 elements
- Must-Support: 6 elements
+Mandatory: 27 elements(1 nested mandatory element)
+ Must-Support: 5 elements
  Prohibited: 1 element
 
 **Structures**
@@ -75,6 +85,7 @@ This structure refers to these extensions:
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
 * The element 1 is sliced based on the value of DocumentReference.identifier
+* The element 1 is sliced based on the value of DocumentReference.author
 
  **Vista de elementos clave** 
 
@@ -100,8 +111,8 @@ Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/document
 
 ** Summary **
 
-Mandatory: 20 elements
- Must-Support: 6 elements
+Mandatory: 27 elements(1 nested mandatory element)
+ Must-Support: 5 elements
  Prohibited: 1 element
 
 **Structures**
@@ -134,20 +145,11 @@ This structure refers to these extensions:
 This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
 * The element 1 is sliced based on the value of DocumentReference.identifier
+* The element 1 is sliced based on the value of DocumentReference.author
 
  
 
 Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-reference.csv), [Excel](../StructureDefinition-hcen-document-reference.xlsx), [Schematron](../StructureDefinition-hcen-document-reference.sch) 
-
-### Notas:
-
-### Identificadores y representaciones
-
-masterIdentifier conserva el OID de la versión documental. identifier[entryUUID] contiene el identificador técnico opcional con formato `urn:uuid:1.[oid_documento_clinico]` y utiliza HCENDocumentReferenceIdentifier, derivado de IHE MHD EntryUUID Identifier.
-
-attachment.url refiere al documento FHIR y la extensión binary a su CDA. Los campos de formato, tamaño y hash describen la representación FHIR. Ver [Identificadores HCEN](hcen-identificadores.md) y [Publicación](hcen-iti-65.md).
-
-El perfil de metadatos admite relaciones históricas; el sobre de alta excluye replaces. La pertenencia de referencias históricas al envío no se valida mediante expansión recursiva de todos los documentos.
 
 
 
@@ -162,8 +164,15 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
   "name" : "HCENDocumentReference",
   "title" : "Perfil Document Reference HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Referencia documental HCEN con las representaciones CDA y FHIR. Toma IHE MHD como referencia de diseño, sin declarar conformidad con sus perfiles oficiales.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -218,6 +227,13 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
         "human" : "Si se repite el identificador documental como identificador usual, debe coincidir con masterIdentifier.",
         "expression" : "identifier.where(use = 'usual').all(system = %resource.masterIdentifier.system and value = %resource.masterIdentifier.value)",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"
+      },
+      {
+        "key" : "hcen-document-reference-entryuuid-d",
+        "severity" : "error",
+        "human" : "El entryUUID de DocumentReference representa 1.[oid_documento_clinico] del masterIdentifier del mismo documento; la forma se valida por separado.",
+        "expression" : "('urn:uuid:1.' & masterIdentifier.value.toString().substring(8)).subsetOf(%context.identifier.where(use = 'official' and system = 'urn:ietf:rfc:3986').value.select(toString()))",
+        "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"
       }]
     },
     {
@@ -269,7 +285,7 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
       },
       "short" : "Contenido adicional definido por implementaciones.",
       "definition" : "Contenido adicional definido por implementaciones.",
-      "min" : 1
+      "min" : 2
     },
     {
       "id" : "DocumentReference.extension:homeCommunityId",
@@ -277,7 +293,7 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
       "sliceName" : "homeCommunityId",
       "short" : "Comunidad de origen del documento.",
       "definition" : "Comunidad de origen del documento.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "Extension",
@@ -397,22 +413,21 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
       "id" : "DocumentReference.identifier:entryUUID",
       "path" : "DocumentReference.identifier",
       "sliceName" : "entryUUID",
-      "short" : "EntryUUID opcional con formato urn:uuid:1.[oid_documento_clinico].",
-      "definition" : "Identificador técnico opcional de la referencia documental, derivado del OID clínico con el formato urn:uuid:1.[oid_documento_clinico].",
-      "min" : 0,
+      "short" : "EntryUUID con formato urn:uuid:1.[oid_documento_clinico].",
+      "definition" : "Identificador técnico obligatorio de la referencia documental, derivado del OID clínico con el formato urn:uuid:1.[oid_documento_clinico].",
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "Identifier",
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference-identifier"]
-      }],
-      "mustSupport" : true
+      }]
     },
     {
       "id" : "DocumentReference.identifier:uniqueId",
       "path" : "DocumentReference.identifier",
       "sliceName" : "uniqueId",
       "short" : "Repetición opcional del OID documental.",
-      "definition" : "Repetición opcional del OID documental.",
+      "definition" : "Repetición opcional de masterIdentifier en la colección identifier. Conserva el mismo system y value; no identifica otro documento.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -471,8 +486,16 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
     {
       "id" : "DocumentReference.author",
       "path" : "DocumentReference.author",
-      "short" : "Profesionales, roles u organizaciones autores del documento.",
-      "definition" : "Profesionales, roles u organizaciones autores del documento.",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "resolve()"
+        }],
+        "rules" : "open"
+      },
+      "short" : "Autoría mediante rol profesional e institución.",
+      "definition" : "Debe incluir al menos una referencia a HCENPractitionerRole, que vincula al profesional con su institución. Las referencias directas adicionales a Practitioner u Organization se admiten y se ignoran al determinar la autoría.",
+      "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner",
@@ -480,6 +503,23 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
         "http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "DocumentReference.author:practitionerRole",
+      "path" : "DocumentReference.author",
+      "sliceName" : "practitionerRole",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "DocumentReference.author:practitionerRole.reference",
+      "path" : "DocumentReference.author.reference",
+      "min" : 1
     },
     {
       "id" : "DocumentReference.authenticator",
@@ -523,6 +563,18 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"]
+      }]
+    },
+    {
+      "id" : "DocumentReference.relatesTo.target.reference",
+      "path" : "DocumentReference.relatesTo.target.reference",
+      "min" : 1,
+      "constraint" : [{
+        "key" : "hcen-historical-reference",
+        "severity" : "error",
+        "human" : "La referencia histórica utiliza DocumentReference/{id} o una URL HTTP(S) absoluta equivalente. La existencia del recurso en HCEN se verifica al procesar el envío.",
+        "expression" : "matches('^(DocumentReference/|https?://[^/?#]+(/[^/?#]+)*/DocumentReference/)[A-Za-z0-9.-]{1,64}$')",
+        "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"
       }]
     },
     {
@@ -672,7 +724,17 @@ El perfil de metadatos admite relaciones históricas; el sobre de alta excluye r
       "path" : "DocumentReference.context.period",
       "short" : "Tiempo de servicio que está siendo documentado",
       "definition" : "Tiempo de servicio que está siendo documentado",
-      "mustSupport" : true
+      "min" : 1
+    },
+    {
+      "id" : "DocumentReference.context.period.start",
+      "path" : "DocumentReference.context.period.start",
+      "min" : 1
+    },
+    {
+      "id" : "DocumentReference.context.period.end",
+      "path" : "DocumentReference.context.period.end",
+      "min" : 1
     },
     {
       "id" : "DocumentReference.context.facilityType",

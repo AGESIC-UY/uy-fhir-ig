@@ -16,7 +16,7 @@ Al adaptar un recurso FHIR al contexto uruguayo surgen preguntas comunes a cualq
 
 El bloque **Core Uruguay** reúne las pautas para responder a cada una de estas preguntas independientemente del intercambio en el que se pretendan utilizar los datos. Define perfiles, identificadores, tipos de datos, extensiones y terminología que pueden reutilizarse en diferentes implementaciones. Sus definiciones abordan necesidades comunes del contexto uruguayo y no dependen de un caso de uso específico.
 
-El bloque **Guía HCEN** parte de esas definiciones y se concentra en un caso de uso concreto: la interoperabilidad con la Plataforma HCEN. Incorpora perfiles, extensiones y terminología dentro de este contexto; define obligaciones para los actores y presenta las transacciones principales para hacer uso de la Plataforma HCEN "a través de FHIR".
+El bloque **Guía HCEN** parte de esas definiciones y se concentra en un caso de uso concreto: la interoperabilidad con la Plataforma HCEN. Incorpora perfiles, extensiones y terminología dentro de este contexto, además de definir obligaciones para los actores y presentar las transacciones principales para hacer uso de la Plataforma HCEN sobre FHIR.
 
 La Guía HCEN desarrolla el intercambio con la plataforma sobre la base común de Core Uruguay.
 ### ¿Por dónde empezar?

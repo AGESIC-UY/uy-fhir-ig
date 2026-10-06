@@ -107,6 +107,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -206,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -257,7 +288,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -287,7 +318,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -299,7 +330,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -313,9 +359,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -325,6 +368,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -388,70 +434,151 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#requisitos-explicaciones-y-ejemplos" id="markdown-toc-requisitos-explicaciones-y-ejemplos">Requisitos, explicaciones y ejemplos</a></li>
   <li><a href="#lenguaje-de-los-requisitos" id="markdown-toc-lenguaje-de-los-requisitos">Lenguaje de los requisitos</a></li>
-  <li><a href="#qué-se-comprueba" id="markdown-toc-qué-se-comprueba">Qué se comprueba</a></li>
-  <li><a href="#must-support-aplicación-exclusiva-en-hcen" id="markdown-toc-must-support-aplicación-exclusiva-en-hcen">Must Support: aplicación exclusiva en HCEN</a></li>
-  <li><a href="#validación" id="markdown-toc-validación">Validación</a></li>
+  <li><a href="#alcance-de-la-conformidad" id="markdown-toc-alcance-de-la-conformidad">Alcance de la conformidad</a></li>
+  <li><a href="#must-support-en-esta-guía" id="markdown-toc-must-support-en-esta-guía">Must Support en esta guía</a></li>
+  <li><a href="#validación-y-evidencia-de-cumplimiento" id="markdown-toc-validación-y-evidencia-de-cumplimiento">Validación y evidencia de cumplimiento</a></li>
 </ul>
 
 </div>
-<p>Esta página explica cómo reconocer las obligaciones de la guía y qué debe revisarse para evaluar una implementación. Los requisitos concretos se documentan en el perfil, la transacción o el actor al que corresponden.</p>
+<p>Esta sección reúne los criterios comunes para interpretar los requisitos de la guía y comprender qué significa cumplirlos. Se aplica tanto a las definiciones del Core Uruguay como a los intercambios HCEN.</p>
 
-<p><strong>Acceso directo:</strong> <a href="perfiles.html">perfiles del Core</a> · <a href="hcen-transacciones.html">transacciones HCEN</a> · <a href="hcen-conformidad.html">conformidad y capacidades HCEN</a>.</p>
+<p>Las obligaciones específicas se describen en los perfiles, las transacciones y las responsabilidades de cada actor.</p>
+
+<h3 id="requisitos-explicaciones-y-ejemplos">Requisitos, explicaciones y ejemplos</h3>
+
+<p>La guía combina distintos tipos de contenido. Reconocer su función permite distinguir una regla de implementación de una explicación que ayuda a entenderla.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contenido</th>
+      <th>Cómo se interpreta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requisitos</td>
+      <td>Establecen las condiciones que se deben cumplir o las opciones y recomendaciones que se aplican en un contexto. Pueden expresarse en el texto o en las definiciones técnicas.</td>
+    </tr>
+    <tr>
+      <td>Explicaciones</td>
+      <td>Aportan contexto, describen el propósito de una decisión y orientan la lectura. No agregan por sí solas obligaciones a las definidas para la implementación.</td>
+    </tr>
+    <tr>
+      <td>Ejemplos y figuras</td>
+      <td>Ilustran una representación o un comportamiento posible. No enumeran todas las opciones ni sustituyen las reglas del perfil o de la transacción.</td>
+    </tr>
+    <tr>
+      <td>Puntos pendientes</td>
+      <td>Identifican decisiones o definiciones todavía abiertas. Su publicación no implica que exista un acuerdo definitivo sobre ellas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Los requisitos se leen junto con su ámbito de aplicación. Una regla de una transacción HCEN, por ejemplo, corresponde a ese intercambio y a los actores indicados.</p>
 
 <h3 id="lenguaje-de-los-requisitos">Lenguaje de los requisitos</h3>
+
+<p>Para distinguir el grado de exigencia, la guía utiliza los términos de conformidad habituales en FHIR, acompañados por su equivalente en español.</p>
 
 <table>
   <thead>
     <tr>
       <th>Término</th>
       <th>Lectura en español</th>
-      <th>Interpretación</th>
+      <th>Alcance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>SHALL</strong></td>
       <td>Debe</td>
-      <td>Requisito obligatorio.</td>
+      <td>Expresa un requisito obligatorio dentro del ámbito indicado.</td>
+    </tr>
+    <tr>
+      <td><strong>SHALL NOT</strong></td>
+      <td>No debe</td>
+      <td>Expresa una prohibición.</td>
     </tr>
     <tr>
       <td><strong>SHOULD</strong></td>
       <td>Debería</td>
-      <td>Recomendación; apartarse de ella requiere evaluar y justificar las consecuencias.</td>
+      <td>Expresa una recomendación. Puede haber motivos válidos para adoptar otra opción, considerando sus consecuencias.</td>
+    </tr>
+    <tr>
+      <td><strong>SHOULD NOT</strong></td>
+      <td>No debería</td>
+      <td>Desaconseja una opción, aunque puede haber razones justificadas para utilizarla.</td>
     </tr>
     <tr>
       <td><strong>MAY</strong></td>
       <td>Puede</td>
-      <td>Opción permitida.</td>
-    </tr>
-    <tr>
-      <td><strong>MUST</strong></td>
-      <td>Debe</td>
-      <td>Equivale a SHALL; esta guía prefiere SHALL en requisitos nuevos.</td>
+      <td>Identifica una opción permitida, cuya implementación no es obligatoria.</td>
     </tr>
   </tbody>
 </table>
 
-<p>El texto introductorio ayuda a entender el propósito de una definición. Un ejemplo muestra una representación posible. Las secciones señaladas como pendientes identifican trabajo por resolver. Estos contenidos no establecen por sí mismos requisitos adicionales a los definidos en los artefactos y las transacciones.</p>
+<p><strong>MUST</strong> equivale a SHALL y <strong>MUST NOT</strong>, a SHALL NOT. Esta guía prefiere SHALL para expresar nuevos requisitos. Estos términos se interpretan conforme al <a href="https://hl7.org/fhir/R4/conformance-rules.html">lenguaje de conformidad de FHIR R4</a>.</p>
 
-<h3 id="qué-se-comprueba">Qué se comprueba</h3>
+<p>Las reglas de las definiciones técnicas también se aplican aunque no estén acompañadas por estas palabras. Por ejemplo, un elemento con cardinalidad <code class="language-plaintext highlighter-rouge">1..1</code> es obligatorio sin necesidad de repetir «debe» en su descripción. La interpretación de tablas, marcas y restricciones se desarrolla en <a href="como-leer.html">Cómo leer los perfiles</a>.</p>
 
-<ol>
-  <li><strong>Estructura de los datos:</strong> recurso o perfil base, cardinalidades, tipos, slices, referencias, valores fijos e invariantes del perfil aplicable.</li>
-  <li><strong>Terminología:</strong> códigos y fuerza de la vinculación con cada <code class="language-plaintext highlighter-rouge">ValueSet</code>. Por ejemplo, un vínculo <code class="language-plaintext highlighter-rouge">required</code> restringe los valores admitidos; las fuerzas <code class="language-plaintext highlighter-rouge">extensible</code>, <code class="language-plaintext highlighter-rouge">preferred</code> y <code class="language-plaintext highlighter-rouge">example</code> tienen efectos distintos que deben leerse en la definición correspondiente.</li>
-  <li><strong>Comportamiento del sistema:</strong> para HCEN, actor, caso de uso, transacción, respuesta y capacidades declaradas. Una instancia que cumple un perfil no demuestra por sí sola que el sistema complete el intercambio.</li>
-</ol>
+<h3 id="alcance-de-la-conformidad">Alcance de la conformidad</h3>
 
-<h3 id="must-support-aplicación-exclusiva-en-hcen">Must Support: aplicación exclusiva en HCEN</h3>
+<p>La <strong>conformidad</strong> expresa el cumplimiento de las reglas aplicables a un recurso o a una implementación. Para que esa afirmación sea útil, importa precisar qué se evaluó y contra qué versión de las definiciones.</p>
 
-<p>Los perfiles nacionales del Core no utilizan marcas <strong>Must Support (MS)</strong>. En esta guía, MS se reserva para los perfiles HCEN. Las obligaciones de soporte se definen según el actor y el caso de uso en <a href="hcen-conformidad.html">Conformidad y capacidades HCEN</a>.</p>
+<p>Esta guía distingue dos ámbitos complementarios:</p>
 
-<p>MS no implica automáticamente presencia obligatoria ni sustituye la cardinalidad. Tampoco debe confundirse con la palabra normativa MUST, que expresa un requisito obligatorio. Para interpretar un elemento MS es necesario leer la obligación asignada al actor que lo produce o consume.</p>
+<ul>
+  <li><strong>Representación de los datos.</strong> Los perfiles del Core Uruguay establecen cómo estructurar información reutilizable en el contexto nacional. Cumplir un perfil incluye sus reglas y las que hereda de FHIR base o de otros perfiles.</li>
+  <li><strong>Intercambio con HCEN.</strong> Además de representar los datos, los sistemas tienen responsabilidades sobre su envío, recepción y procesamiento. Estas se describen en los actores, las transacciones y la conformidad específica de HCEN.</li>
+</ul>
 
-<h3 id="validación">Validación</h3>
+<p>Por ejemplo, comprobar que un paciente cumple <code class="language-plaintext highlighter-rouge">HCENPatient</code> aporta evidencia sobre ese recurso. Para evaluar el registro o la actualización de pacientes también hay que comprobar el comportamiento definido para esa transacción.</p>
 
-<p>El <a href="hcen-conformidad.html">plan de verificación HCEN</a> organiza las pruebas de recursos y comportamiento. Los contratos pendientes impiden considerar cerrados los criterios de conformidad y acreditación de esta versión en borrador.</p>
+<p>La integración HCEN se evalúa sobre el despliegue del prestador, que puede reunir varios productos. El alcance de esa evaluación y la distribución de responsabilidades se detallan en <a href="hcen-conformidad.html">Conformidad y capacidades HCEN</a>.</p>
+
+<h3 id="must-support-en-esta-guía">Must Support en esta guía</h3>
+
+<p>La marca <strong>Must Support (MS)</strong>, representada con la letra S en las tablas, señala obligaciones de soporte cuyo significado se define en el contexto de la guía. En esta publicación se utiliza exclusivamente en los perfiles HCEN, donde esas obligaciones se establecen según los actores y los intercambios previstos. El Core Uruguay, por su parte, define una base de representación de datos reutilizable en distintos contextos y por ende no usa ni define ningún MS.</p>
+
+<p>MS no equivale a la palabra normativa MUST ni determina por sí sola que un dato deba aparecer en todas las instancias. La presencia se rige por la cardinalidad y por las obligaciones del intercambio. Tampoco permite deducir, de forma general, que todo receptor deba almacenar o mostrar todos los elementos marcados.</p>
+
+<p>Las obligaciones concretas de emisores y receptores, incluido el tratamiento de datos conocidos o ausentes, se establecen en <a href="hcen-conformidad.html#must-support">Must Support y ausencia de datos en HCEN</a>.</p>
+
+<h3 id="validación-y-evidencia-de-cumplimiento">Validación y evidencia de cumplimiento</h3>
+
+<p>La validación automática permite comprobar parte de los requisitos, pero la evaluación de una implementación también incluye pruebas del intercambio.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Qué se comprueba</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Estructura y contenido</td>
+      <td>Que el recurso respete los perfiles aplicables: datos requeridos, tipos, referencias y demás restricciones.</td>
+    </tr>
+    <tr>
+      <td>Terminología</td>
+      <td>Que los códigos correspondan a los sistemas y conjuntos de valores definidos, según las reglas de cada elemento.</td>
+    </tr>
+    <tr>
+      <td>Comportamiento</td>
+      <td>Que los participantes procesen las solicitudes, respuestas y situaciones de error según la transacción.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para validar las reglas locales, la herramienta necesita las definiciones de esta guía y sus dependencias. Validar únicamente contra FHIR base no comprueba las restricciones nacionales o HCEN. Del mismo modo, declarar un perfil en <code class="language-plaintext highlighter-rouge">meta.profile</code> identifica el cumplimiento que se pretende, pero no lo demuestra.</p>
+
+<p>Los resultados deben interpretarse según el alcance real de la comprobación. Si no se pudo consultar una terminología o resolver una definición, esa parte de la validación queda sin verificar. Por ello, conviene conservar la versión de la guía, los recursos evaluados y los resultados de las pruebas junto con las limitaciones encontradas.</p>
+
+<p>El <a href="hcen-conformidad.html">plan de verificación HCEN</a> desarrolla la evidencia específica de los intercambios. La especificación base amplía los <a href="https://hl7.org/fhir/R4/validation.html">alcances de la validación FHIR</a>.</p>
 
 
 
@@ -478,11 +605,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

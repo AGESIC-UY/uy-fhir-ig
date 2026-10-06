@@ -7,8 +7,28 @@
   </meta>
   <language value="es"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Persona Ejemplo Prueba</b></p><p>Identificador institucional: PACIENTE-SINTETICO-001. Sistema emisor: https://example.org/institucion/identificadores/pacientes.</p><p>Identificador nacional extranjero de ejemplo: ARG-EJEMPLO-001. Sistema emisor: urn:oid:2.16.858.1.032.68909.</p><p>Nombre de pila: Persona. Primer apellido: Ejemplo. Segundo apellido: Prueba.</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Paciente Ejemplo</b></p><p>Nombre de pila: Juan Carlos. Apellido: Pérez Rodríguez.</p><p>Sexo asignado al nacer: Masculino.</p><p>Sexo administrativo: Masculino.</p><p>Fecha de nacimiento: 1980-01-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.perez@example.com</p></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/administrative-gender"/>
+          <code value="male"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex Assigned At Birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
   <identifier>
     <type>
       <coding>
@@ -18,7 +38,7 @@
       </coding>
     </type>
     <system value="https://example.org/institucion/identificadores/pacientes"/>
-    <value value="PACIENTE-SINTETICO-001"/>
+    <value value="MRN1234"/>
   </identifier>
   <identifier>
     <type>
@@ -28,18 +48,37 @@
         <display value="National unique individual identifier"/>
       </coding>
     </type>
-    <system value="urn:oid:2.16.858.1.032.68909"/>
-    <value value="ARG-EJEMPLO-001"/>
+    <system value="urn:oid:2.16.858.2.10000675.68909"/>
+    <value value="1234567-8"/>
   </identifier>
   <name>
-    <family value="Ejemplo Prueba">
+    <family value="Pérez Rodríguez">
       <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
-        <valueString value="Ejemplo"/>
+        <valueString value="Pérez"/>
       </extension>
       <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
-        <valueString value="Prueba"/>
+        <valueString value="Rodríguez"/>
       </extension>
     </family>
-    <given value="Persona"/>
+    <given value="Juan"/>
+    <given value="Carlos"/>
   </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 123 456"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.perez@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1980-01-01"/>
+  <address>
+    <line value="Calle Falsa 1234"/>
+    <city value="MONTEVIDEO"/>
+    <state value="Montevideo"/>
+    <country value="URY"/>
+  </address>
 </Patient>

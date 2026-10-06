@@ -2,14 +2,9 @@
 
 ## Perfil de los recursos: Representación CDA de un documento HCEN 
 
- 
-Recurso Binary con el CDA de nivel 1 o 3 codificado en base64. El perfil exige el contenido; no valida la estructura interna del XML ni su equivalencia con el documento FHIR. 
-
 **Usages:**
 
-* Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
 * Refer to this Profile: [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.md)
-* Examples for this Profile: [Binary/hcen-cda-ejemplo](Binary-hcen-cda-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-cda-binary)
 
@@ -78,8 +73,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-cda-binary.c
   "name" : "HCENCdaBinary",
   "title" : "Representación CDA de un documento HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Recurso Binary con el CDA de nivel 1 o 3 codificado en base64. El perfil exige el contenido; no valida la estructura interna del XML ni su equivalencia con el documento FHIR.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

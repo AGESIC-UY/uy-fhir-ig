@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Prescripción de Medicación 
 
- 
-Prescripción de medicación registrada en la Hoja de Consulta No Urgente (CNU). 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -39,8 +36,8 @@ Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicati
 
 ** Summary **
 
-Mandatory: 1 element(6 nested mandatory elements)
- Fixed: 4 elements
+Mandatory: 1 element(3 nested mandatory elements)
+ Fixed: 3 elements
  Prohibited: 22 elements
 
 **Structures**
@@ -81,8 +78,8 @@ Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicati
 
 ** Summary **
 
-Mandatory: 1 element(6 nested mandatory elements)
- Fixed: 4 elements
+Mandatory: 1 element(3 nested mandatory elements)
+ Fixed: 3 elements
  Prohibited: 22 elements
 
 **Structures**
@@ -116,11 +113,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
   "name" : "HCENMedicationRequest",
   "title" : "HCEN Prescripción de Medicación",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Prescripción de medicación registrada en la Hoja de Consulta No Urgente (CNU).",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENMedicationRequestToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYMedicationRequest."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -273,35 +283,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
       "min" : 1
     },
     {
-      "id" : "MedicationRequest.medication[x].coding:tesauro",
-      "path" : "MedicationRequest.medication[x].coding",
-      "sliceName" : "tesauro",
-      "short" : "Código del medicamento prescripto en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Código del medicamento prescripto en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "MedicationRequest.medication[x].coding:tesauro.system",
-      "path" : "MedicationRequest.medication[x].coding.system",
-      "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "MedicationRequest.medication[x].coding:tesauro.code",
-      "path" : "MedicationRequest.medication[x].coding.code",
-      "short" : "Código del medicamento prescripto en el tesauro local",
-      "definition" : "Código del medicamento prescripto en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "MedicationRequest.medication[x].coding:tesauro.display",
-      "path" : "MedicationRequest.medication[x].coding.display",
-      "short" : "Texto descriptivo del código del medicamento prescripto en el tesauro local",
-      "definition" : "Texto descriptivo del código del medicamento prescripto en el tesauro local",
-      "min" : 1
-    },
-    {
       "id" : "MedicationRequest.subject",
       "path" : "MedicationRequest.subject",
       "short" : "Paciente para quien se prescribe la medicación",
@@ -309,6 +290,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENMedicationRequestToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {
@@ -398,7 +383,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
       "id" : "MedicationRequest.note",
       "path" : "MedicationRequest.note",
       "short" : "Observaciones relacionadas",
-      "definition" : "Observaciones relacionadas."
+      "definition" : "Observaciones relacionadas.",
+      "mapping" : [{
+        "identity" : "HCENMedicationRequestToCDA",
+        "map" : "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='703852005']/value"
+      }]
     },
     {
       "id" : "MedicationRequest.dosageInstruction",

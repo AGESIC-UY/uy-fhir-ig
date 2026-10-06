@@ -12,6 +12,7 @@
   <sch:pattern>
     <sch:title>f:DocumentReference</sch:title>
     <sch:rule context="f:DocumentReference">
+      <sch:assert test="count(f:extension[@url = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id']) &gt;= 1">extension with URL = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id']) &lt;= 1">extension with URL = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id']) &gt;= 1">extension with URL = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id']) &lt;= 1">extension with URL = 'http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id': maximum cardinality of 'extension' is 1</sch:assert>
@@ -26,6 +27,28 @@
       <sch:assert test="count(f:securityLabel) &gt;= 1">securityLabel: minimum cardinality of 'securityLabel' is 1</sch:assert>
       <sch:assert test="count(f:content) &lt;= 1">content: maximum cardinality of 'content' is 1</sch:assert>
       <sch:assert test="count(f:context) &gt;= 1">context: minimum cardinality of 'context' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:DocumentReference/f:author</sch:title>
+    <sch:rule context="f:DocumentReference/f:author">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &gt;= 1">reference: minimum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
+      <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:DocumentReference/f:relatesTo/f:target</sch:title>
+    <sch:rule context="f:DocumentReference/f:relatesTo/f:target">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &gt;= 1">reference: minimum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
+      <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
+      <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -78,9 +101,20 @@
   <sch:pattern>
     <sch:title>f:DocumentReference/f:context</sch:title>
     <sch:rule context="f:DocumentReference/f:context">
+      <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
       <sch:assert test="count(f:facilityType) &gt;= 1">facilityType: minimum cardinality of 'facilityType' is 1</sch:assert>
       <sch:assert test="count(f:practiceSetting) &gt;= 1">practiceSetting: minimum cardinality of 'practiceSetting' is 1</sch:assert>
       <sch:assert test="count(f:sourcePatientInfo) &gt;= 1">sourcePatientInfo: minimum cardinality of 'sourcePatientInfo' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:DocumentReference/f:context/f:period</sch:title>
+    <sch:rule context="f:DocumentReference/f:context/f:period">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:start) &gt;= 1">start: minimum cardinality of 'start' is 1</sch:assert>
+      <sch:assert test="count(f:start) &lt;= 1">start: maximum cardinality of 'start' is 1</sch:assert>
+      <sch:assert test="count(f:end) &gt;= 1">end: minimum cardinality of 'end' is 1</sch:assert>
+      <sch:assert test="count(f:end) &lt;= 1">end: maximum cardinality of 'end' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

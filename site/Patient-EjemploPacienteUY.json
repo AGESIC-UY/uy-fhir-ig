@@ -7,8 +7,31 @@
   "language" : "es",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Persona Ejemplo Prueba</b></p><p>Identificador institucional: PACIENTE-SINTETICO-001. Sistema emisor: https://example.org/institucion/identificadores/pacientes.</p><p>Identificador nacional extranjero de ejemplo: ARG-EJEMPLO-001. Sistema emisor: urn:oid:2.16.858.1.032.68909.</p><p>Nombre de pila: Persona. Primer apellido: Ejemplo. Segundo apellido: Prueba.</p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Paciente Ejemplo</b></p><p>Nombre de pila: Juan Carlos. Apellido: Pérez Rodríguez.</p><p>Sexo asignado al nacer: Masculino.</p><p>Sexo administrativo: Masculino.</p><p>Fecha de nacimiento: 1980-01-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.perez@example.com</p></div>"
   },
+  "extension" : [{
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "code" : "male",
+          "display" : "Male"
+        }]
+      }
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "76689-9",
+          "display" : "Sex Assigned At Birth"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+  }],
   "identifier" : [{
     "type" : {
       "coding" : [{
@@ -18,7 +41,7 @@
       }]
     },
     "system" : "https://example.org/institucion/identificadores/pacientes",
-    "value" : "PACIENTE-SINTETICO-001"
+    "value" : "MRN1234"
   },
   {
     "type" : {
@@ -28,21 +51,40 @@
         "display" : "National unique individual identifier"
       }]
     },
-    "system" : "urn:oid:2.16.858.1.032.68909",
-    "value" : "ARG-EJEMPLO-001"
+    "system" : "urn:oid:2.16.858.2.10000675.68909",
+    "value" : "1234567-8"
   }],
   "name" : [{
-    "family" : "Ejemplo Prueba",
+    "family" : "Pérez Rodríguez",
     "_family" : {
       "extension" : [{
         "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
-        "valueString" : "Ejemplo"
+        "valueString" : "Pérez"
       },
       {
         "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
-        "valueString" : "Prueba"
+        "valueString" : "Rodríguez"
       }]
     },
-    "given" : ["Persona"]
+    "given" : ["Juan",
+    "Carlos"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 99 123 456",
+    "use" : "mobile"
+  },
+  {
+    "system" : "email",
+    "value" : "juan.perez@example.com",
+    "use" : "home"
+  }],
+  "gender" : "male",
+  "birthDate" : "1980-01-01",
+  "address" : [{
+    "line" : ["Calle Falsa 1234"],
+    "city" : "MONTEVIDEO",
+    "state" : "Montevideo",
+    "country" : "URY"
   }]
 }

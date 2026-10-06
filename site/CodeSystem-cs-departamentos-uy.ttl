@@ -21,9 +21,17 @@
   fhir:name [ fhir:v "CSDepartamentosUY"] ; # 
   fhir:title [ fhir:v "Sistema de códigos de departamentos de Uruguay"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
   fhir:description [ fhir:v "Los 19 departamentos de la República Oriental del Uruguay."] ; # 
+  fhir:copyright [ fhir:v "Fuente: Correo Uruguayo, departamentos del listado nacional de códigos postales consultado el 2026-09-21."] ; # 
   fhir:caseSensitive [ fhir:v true] ; # 
   fhir:content [ fhir:v "complete"] ; # 
   fhir:count [ fhir:v "19"^^xsd:nonNegativeInteger] ; # 

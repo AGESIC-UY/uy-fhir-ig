@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Estado de la Consulta No Urgente 
 
- 
-Subconjunto de Composition.status permitido para HCENConsultaNoUrgente: final, amended y entered-in-error (excluye preliminary, que no tiene mapeo CDA aplicable). 
-
  **References** 
 
 * [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -32,8 +29,15 @@ Subconjunto de Composition.status permitido para HCENConsultaNoUrgente: final, a
   "name" : "VSCompositionStatusCNU",
   "title" : "Conjunto de Valores Estado de la Consulta No Urgente",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Subconjunto de Composition.status permitido para HCENConsultaNoUrgente: final, amended y entered-in-error (excluye preliminary, que no tiene mapeo CDA aplicable).",
   "compose" : {
     "include" : [{

@@ -2,13 +2,9 @@
 
 ## ValueSet: EJE 1 — Tipo genérico de documento 
 
- 
-Tipo genérico de documento según la hoja ValueSets de la especificación nacional. 
-
  **References** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
-* [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
 
 ### Logical Definition (CLD)
 
@@ -35,8 +31,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSclassCode",
   "title" : "EJE 1 — Tipo genérico de documento",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Tipo genérico de documento según la hoja ValueSets de la especificación nacional.",
   "copyright" : "Includes LOINC® content, copyright Regenstrief Institute, Inc. and the LOINC Committee. Available under the license at https://loinc.org/terms-of-use/.",
   "compose" : {
@@ -49,10 +52,6 @@ No Expansion for this valueset (not supported by Publication Tooling)
       {
         "code" : "51851-4",
         "display" : "documentación administrativa"
-      },
-      {
-        "code" : "34133-9",
-        "display" : "historia clínica previa escaneada"
       },
       {
         "code" : "82593-5",
@@ -96,10 +95,6 @@ No Expansion for this valueset (not supported by Publication Tooling)
       },
       {
         "code" : "18842-5",
-        "display" : "resumen de egreso de paciente internado"
-      },
-      {
-        "code" : "18842-6",
         "display" : "resumen de egreso de paciente internado"
       }]
     }]

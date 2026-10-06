@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Tipo de Procedimiento (borrador) 
 
- 
-PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico, terapéutico). Contiene un código de ejemplo mientras se define el listado oficial. 
-
  **References** 
 
 * [HCEN Procedimiento](StructureDefinition-hcen-procedimiento.md)
@@ -34,8 +31,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSTipoProcedimiento",
   "title" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico, terapéutico). Contiene un código de ejemplo mientras se define el listado oficial.",
   "compose" : {
     "include" : [{

@@ -110,6 +110,12 @@
         "title": "Representación CDA de un documento HCEN"
       }
     ],
+    "Bundle": [
+      {
+        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle",
+        "title": "Envío para publicación documental HCEN"
+      }
+    ],
     "Condition": [
       {
         "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta",
@@ -170,12 +176,6 @@
         "title": "HCEN Procedimiento"
       }
     ],
-    "Bundle": [
-      {
-        "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle",
-        "title": "Envío para publicación documental HCEN"
-      }
-    ],
     "ServiceRequest": [
       {
         "url": "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request",
@@ -200,7 +200,6 @@
       "DocumentReference"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-binary-resource-id": [
-      "Bundle.entry.resource.content.attachment",
       "DocumentReference.content.attachment"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-by-order-of": [
@@ -210,26 +209,20 @@
       "DocumentReference"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id": [
-      "DocumentReference"
+      "DocumentReference",
+      "List"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido": [
-      "Bundle.entry.resource.contained.name.family",
-      "Bundle.entry.resource.entry.resource.name.family",
-      "Bundle.entry.resource.name.family",
       "HumanName.family",
       "Patient.name.family"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id": [
-      "Bundle.entry.resource",
       "DocumentReference"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-scanned-document": [
       "DocumentReference"
     ],
     "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido": [
-      "Bundle.entry.resource.contained.name.family",
-      "Bundle.entry.resource.entry.resource.name.family",
-      "Bundle.entry.resource.name.family",
       "HumanName.family",
       "Patient.name.family"
     ],
@@ -298,14 +291,12 @@
       "StructureDefinition.snapshot"
     ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType": [
-      "Bundle.entry.resource",
       "List"
     ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient": [
       "List"
     ],
     "https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId": [
-      "Bundle.entry.resource",
       "List"
     ]
   }

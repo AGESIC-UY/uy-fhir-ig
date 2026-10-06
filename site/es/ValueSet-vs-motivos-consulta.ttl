@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-motivos-consulta"] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-motivos-consulta</b></p><a name=\"vs-motivos-consulta\"> </a><a name=\"hcvs-motivos-consulta\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/5631000179106/version/20260615\"> version ?http://snomed.info/sct/5631000179106/version/20260615</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/80313002\">80313002</a></td><td>palpitaciones (hallazgo)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/185349003\">185349003</a></td><td>control de salud (procedimiento)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/248228001\">248228001</a></td><td>lipotimia (hallazgo)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/68154008\">68154008</a></td><td>tos crónica</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/60845006\">60845006</a></td><td>disnea de esfuerzo</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/25064002\">25064002</a></td><td>cefalea (hallazgo)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/21522001\">21522001</a></td><td>dolor abdominal (hallazgo)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/300995000\">300995000</a></td><td>angina de esfuerzo (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/371807002\">371807002</a></td><td>angina de pecho atípica (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/67882000\">67882000</a></td><td>prurito de la vulva (trastorno)</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta"^^xsd:anyURI ;
+     fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSMotivosConsulta"] ; # 
+  fhir:title [ fhir:v "Conjunto de Valores Motivos de Consulta"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC)."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/5631000179106/version/20260615" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "80313002" ] ;
+         fhir:display [ fhir:v "palpitaciones (hallazgo)" ]
+       ] [
+         fhir:code [ fhir:v "185349003" ] ;
+         fhir:display [ fhir:v "control de salud (procedimiento)" ]
+       ] [
+         fhir:code [ fhir:v "248228001" ] ;
+         fhir:display [ fhir:v "lipotimia (hallazgo)" ]
+       ] [
+         fhir:code [ fhir:v "68154008" ] ;
+         fhir:display [ fhir:v "tos crónica" ]
+       ] [
+         fhir:code [ fhir:v "60845006" ] ;
+         fhir:display [ fhir:v "disnea de esfuerzo" ]
+       ] [
+         fhir:code [ fhir:v "25064002" ] ;
+         fhir:display [ fhir:v "cefalea (hallazgo)" ]
+       ] [
+         fhir:code [ fhir:v "21522001" ] ;
+         fhir:display [ fhir:v "dolor abdominal (hallazgo)" ]
+       ] [
+         fhir:code [ fhir:v "300995000" ] ;
+         fhir:display [ fhir:v "angina de esfuerzo (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "371807002" ] ;
+         fhir:display [ fhir:v "angina de pecho atípica (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "67882000" ] ;
+         fhir:display [ fhir:v "prurito de la vulva (trastorno)" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

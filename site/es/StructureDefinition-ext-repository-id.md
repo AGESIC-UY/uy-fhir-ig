@@ -2,8 +2,6 @@
 
 ## Extensión: ID Único del Repositorio 
 
-Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
-
 **Context of Use**
 
 **Usage info**
@@ -11,7 +9,6 @@ Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId d
 **Usages:**
 
 * Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
-* Examples for this Extension: [Bundle/hcen-consulta-ejemplo](Bundle-hcen-consulta-ejemplo.md), [Bundle/hcen-publicacion-ejemplo](Bundle-hcen-publicacion-ejemplo.md) and [DocumentReference/hcen-referencia-ejemplo](DocumentReference-hcen-referencia-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-repository-id)
 
@@ -38,7 +35,7 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 Simple Extension with the type Identifier: Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
 
- **Vista diferencialDifferential View** 
+ **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
@@ -73,8 +70,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-repository-id
   "name" : "RepositoryId",
   "title" : "ID Único del Repositorio",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -132,7 +136,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-repository-id
       "constraint" : [{
         "key" : "hcen-oid-uri",
         "severity" : "error",
-        "human" : "El dominio debe ser una URI urn:oid: con arcos numéricos válidos. La autorización del OID se verifica por separado.",
+        "human" : "El identificador debe ser una URI urn:oid: con arcos numéricos válidos. La autorización del OID se verifica por separado.",
         "expression" : "matches('^urn:oid:([01][.]([0-9]|[1-3][0-9])|2[.](0|[1-9][0-9]*))([.](0|[1-9][0-9]*))*$')",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id"
       }]

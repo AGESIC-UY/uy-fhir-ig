@@ -3,15 +3,22 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-resultado-procedimiento"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-resultado-procedimiento</b></p><a name="vs-resultado-procedimiento"> </a><a name="hcvs-resultado-procedimiento"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/10828004">10828004</a></td><td>positivo</td></tr><tr><td><a href="http://snomed.info/id/125154007">125154007</a></td><td>espécimen insatisfactorio para evaluación</td></tr><tr><td><a href="http://snomed.info/id/260415000">260415000</a></td><td>no detectado</td></tr><tr><td><a href="http://snomed.info/id/280413001">280413001</a></td><td>resultado normal</td></tr><tr><td><a href="http://snomed.info/id/280415008">280415008</a></td><td>resultado anormal</td></tr><tr><td><a href="http://snomed.info/id/41998400">41998400</a></td><td>no concluyente</td></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-resultado-procedimiento</b></p><a name="vs-resultado-procedimiento"> </a><a name="hcvs-resultado-procedimiento"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/10828004">10828004</a></td><td>positivo</td></tr><tr><td><a href="http://snomed.info/id/125154007">125154007</a></td><td>espécimen insatisfactorio para evaluación</td></tr><tr><td><a href="http://snomed.info/id/260415000">260415000</a></td><td>no detectado</td></tr><tr><td><a href="http://snomed.info/id/280413001">280413001</a></td><td>resultado normal</td></tr><tr><td><a href="http://snomed.info/id/280415008">280415008</a></td><td>resultado anormal</td></tr><tr><td><a href="http://snomed.info/id/419984006">419984006</a></td><td>no concluyente</td></tr></table></li></ul></div>
   </text>
   <url value="http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento"/>
   <version value="0.1.0"/>
   <name value="VSResultadoProcedimiento"/>
   <title value="Conjunto de Valores Resultado de Procedimiento"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Resultados posibles de un procedimiento (procedure.outcome)."/>
   <compose>
     <include>
@@ -37,7 +44,7 @@
         <display value="resultado anormal"/>
       </concept>
       <concept>
-        <code value="41998400"/>
+        <code value="419984006"/>
         <display value="no concluyente"/>
       </concept>
     </include>

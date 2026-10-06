@@ -33,7 +33,6 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
     "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
   },
   {
@@ -71,8 +70,8 @@
     "http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
@@ -104,7 +103,7 @@
     "status" : "draft",
     "name" : "VSDiagnosticoConsulta",
     "title" : "Conjunto de Valores Diagnósticos",
-    "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -160,12 +159,12 @@
     "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta",
     "version" : "0.1.0",
     "status" : "draft",
-    "name" : "VSMotivoConsulta",
+    "name" : "VSMotivosConsulta",
     "title" : "Conjunto de Valores Motivos de Consulta",
-    "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -184,21 +183,12 @@
     "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "PrestadorOidMrn",
-    "title" : "OIDs de instituciones HCEN",
-    "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
-    "systems" : ["urn:ietf:rfc:3986"]
-  },
-  {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
     "version" : "0.1.0",
     "status" : "draft",
     "name" : "VSProcedimientos",
     "title" : "Conjunto de Valores Procedimientos",
-    "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+    "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -238,8 +228,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
@@ -275,8 +265,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
@@ -285,12 +275,11 @@
     "name" : "VSViaAdministracion",
     "title" : "Conjunto de Valores Vía de Administración (borrador)",
     "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
-    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-    "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"],
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/address-type",
@@ -461,11 +450,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
-    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
     "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
+    "StructureDefinition-uy-org-identifier.html" : "Identificador de Organización",
     "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
-    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -479,11 +467,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
-    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
     "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
+    "StructureDefinition-uy-org-identifier.html" : "Identificador de Organización",
     "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
-    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -497,10 +484,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
     "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
-    "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay",
-    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay",
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
+    "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",

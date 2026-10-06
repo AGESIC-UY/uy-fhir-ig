@@ -2,8 +2,6 @@
 
 ## Extensión: Primer Apellido 
 
-Primer apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
-
 **Context of Use**
 
 **Usage info**
@@ -11,7 +9,7 @@ Primer apellido de la persona. Se representa como extensión de HumanName.family
 **Usages:**
 
 * Use this Extension: [Nombre de Persona (Uruguay)](StructureDefinition-uy-human-name.md)
-* Examples for this Extension: [Bundle/hcen-consulta-ejemplo](Bundle-hcen-consulta-ejemplo.md), [Bundle/hcen-documento-ejemplo](Bundle-hcen-documento-ejemplo.md), [Bundle/hcen-publicacion-ejemplo](Bundle-hcen-publicacion-ejemplo.md), [Patient/EjemploPacienteUY](Patient-EjemploPacienteUY.md) and [Patient/hcen-paciente-ejemplo](Patient-hcen-paciente-ejemplo.md)
+* Examples for this Extension: [Patient/EjemploPacienteUY](Patient-EjemploPacienteUY.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-primer-apellido)
 
@@ -34,7 +32,7 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 Simple Extension with the type string: Primer apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
 
- **Vista diferencialDifferential View** 
+ **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
@@ -65,8 +63,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-primer-apelli
   "name" : "PrimerApellido",
   "title" : "Primer Apellido",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Primer apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

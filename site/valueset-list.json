@@ -78,7 +78,7 @@
     "status" : "draft",
     "name" : "VSDiagnosticoConsulta",
     "title" : "Conjunto de Valores Diagnósticos",
-    "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
     "systems" : ["http://snomed.info/sct"]
   },
   {
@@ -118,12 +118,12 @@
     "systems" : ["http://snomed.info/sct"]
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta",
     "version" : "0.1.0",
     "status" : "draft",
-    "name" : "VSMotivoConsulta",
+    "name" : "VSMotivosConsulta",
     "title" : "Conjunto de Valores Motivos de Consulta",
-    "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC).",
     "systems" : ["http://snomed.info/sct"]
   },
   {
@@ -136,21 +136,12 @@
     "systems" : ["http://snomed.info/sct"]
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "PrestadorOidMrn",
-    "title" : "OIDs de instituciones HCEN",
-    "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
-    "systems" : ["urn:ietf:rfc:3986"]
-  },
-  {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
     "version" : "0.1.0",
     "status" : "draft",
     "name" : "VSProcedimientos",
     "title" : "Conjunto de Valores Procedimientos",
-    "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+    "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
     "systems" : ["http://snomed.info/sct"]
   },
   {
@@ -214,7 +205,6 @@
     "name" : "VSViaAdministracion",
     "title" : "Conjunto de Valores Vía de Administración (borrador)",
     "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
-    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-    "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"]
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"]
   }]
 }

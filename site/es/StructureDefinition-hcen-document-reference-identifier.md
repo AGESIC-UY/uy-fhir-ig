@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: EntryUUID de DocumentReference HCEN 
 
- 
-Identificador técnico entryUUID de un DocumentReference HCEN, basado en el perfil IHE MHD EntryUUID Identifier. 
-
 **Usages:**
 
 * Use this DataType Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
@@ -76,8 +73,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
   "name" : "HCENDocumentReferenceIdentifier",
   "title" : "EntryUUID de DocumentReference HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Identificador técnico entryUUID de un DocumentReference HCEN, basado en el perfil IHE MHD EntryUUID Identifier.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

@@ -4,23 +4,66 @@
   "language" : "es",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-diagnostico-consulta</b></p><a name=\"vs-diagnostico-consulta\"> </a><a name=\"hcvs-diagnostico-consulta\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  in 261341000179103</li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-diagnostico-consulta</b></p><a name=\"vs-diagnostico-consulta\"> </a><a name=\"hcvs-diagnostico-consulta\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/5631000179106/version/20260615\"> version &#x1F4CD;http://snomed.info/sct/5631000179106/version/20260615</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/27337007\">27337007</a></td><td>extrasístoles ventriculares unifocales</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/38341003\">38341003</a></td><td>hipertensión arterial (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/302866003\">302866003</a></td><td>hipoglicemia (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/235595009\">235595009</a></td><td>enfermedad por reflujo gastroesofágico (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/446221000\">446221000</a></td><td>insuficiencia cardíaca con fracción de eyección conservada (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/398057008\">398057008</a></td><td>cefalea de tipo tensional (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/4556007\">4556007</a></td><td>gastritis (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/413838009\">413838009</a></td><td>cardiopatía isquémica crónica (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/1381430004\">1381430004</a></td><td>angina de pecho sin obstrucción de arterias coronarias (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/1085006\">1085006</a></td><td>candidiasis de la vulva (trastorno)</td></tr></table></li></ul></div>"
   },
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta",
   "version" : "0.1.0",
   "name" : "VSDiagnosticoConsulta",
   "title" : "Conjunto de Valores Diagnósticos",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "261341000179103"
+      "version" : "http://snomed.info/sct/5631000179106/version/20260615",
+      "concept" : [{
+        "code" : "27337007",
+        "display" : "extrasístoles ventriculares unifocales"
+      },
+      {
+        "code" : "38341003",
+        "display" : "hipertensión arterial (trastorno)"
+      },
+      {
+        "code" : "302866003",
+        "display" : "hipoglicemia (trastorno)"
+      },
+      {
+        "code" : "235595009",
+        "display" : "enfermedad por reflujo gastroesofágico (trastorno)"
+      },
+      {
+        "code" : "446221000",
+        "display" : "insuficiencia cardíaca con fracción de eyección conservada (trastorno)"
+      },
+      {
+        "code" : "398057008",
+        "display" : "cefalea de tipo tensional (trastorno)"
+      },
+      {
+        "code" : "4556007",
+        "display" : "gastritis (trastorno)"
+      },
+      {
+        "code" : "413838009",
+        "display" : "cardiopatía isquémica crónica (trastorno)"
+      },
+      {
+        "code" : "1381430004",
+        "display" : "angina de pecho sin obstrucción de arterias coronarias (trastorno)"
+      },
+      {
+        "code" : "1085006",
+        "display" : "candidiasis de la vulva (trastorno)"
       }]
     }]
   }

@@ -21,8 +21,15 @@
   fhir:name [ fhir:v "VSConfidentialityCNU"] ; # 
   fhir:title [ fhir:v "Conjunto de Valores Confidencialidad de la Consulta No Urgente"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
   fhir:description [ fhir:v "Subconjunto de Composition.confidentiality permitido para HCENConsultaNoUrgente: N (normal), R (restricted) y V (very restricted)."] ; # 
   fhir:compose [
      fhir:include ( [

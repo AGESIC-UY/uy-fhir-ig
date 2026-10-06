@@ -10,9 +10,17 @@
   <name value="CSDepartamentosUY"/>
   <title value="Sistema de códigos de departamentos de Uruguay"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Los 19 departamentos de la República Oriental del Uruguay."/>
+  <copyright value="Fuente: Correo Uruguayo, departamentos del listado nacional de códigos postales consultado el 2026-09-21."/>
   <caseSensitive value="true"/>
   <content value="complete"/>
   <count value="19"/>

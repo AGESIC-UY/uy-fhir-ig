@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Solicitud de Servicio 
 
- 
-Solicitud de servicio (procedimiento, interconsulta, estudio, etc.) registrada en la Hoja de Consulta No Urgente (CNU). 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -39,9 +36,9 @@ Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequ
 
 ** Summary **
 
-Mandatory: 2 elements(7 nested mandatory elements)
+Mandatory: 2 elements(4 nested mandatory elements)
  Must-Support: 5 elements
- Fixed: 3 elements
+ Fixed: 2 elements
  Prohibited: 23 elements
 
 **Structures**
@@ -81,9 +78,9 @@ Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequ
 
 ** Summary **
 
-Mandatory: 2 elements(7 nested mandatory elements)
+Mandatory: 2 elements(4 nested mandatory elements)
  Must-Support: 5 elements
- Fixed: 3 elements
+ Fixed: 2 elements
  Prohibited: 23 elements
 
 **Structures**
@@ -116,11 +113,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
   "name" : "HCENServiceRequest",
   "title" : "HCEN Solicitud de Servicio",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Solicitud de servicio (procedimiento, interconsulta, estudio, etc.) registrada en la Hoja de Consulta No Urgente (CNU).",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENServiceRequestToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYServiceRequest."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -293,35 +303,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
       "min" : 1
     },
     {
-      "id" : "ServiceRequest.code.coding:tesauro",
-      "path" : "ServiceRequest.code.coding",
-      "sliceName" : "tesauro",
-      "short" : "Código del servicio o procedimiento solicitado en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Código del servicio o procedimiento solicitado en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "ServiceRequest.code.coding:tesauro.system",
-      "path" : "ServiceRequest.code.coding.system",
-      "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "ServiceRequest.code.coding:tesauro.code",
-      "path" : "ServiceRequest.code.coding.code",
-      "short" : "Código del servicio o procedimiento solicitado en el tesauro local",
-      "definition" : "Código del servicio o procedimiento solicitado en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "ServiceRequest.code.coding:tesauro.display",
-      "path" : "ServiceRequest.code.coding.display",
-      "short" : "Texto descriptivo del código del servicio o procedimiento solicitado en el tesauro local",
-      "definition" : "Texto descriptivo del código del servicio o procedimiento solicitado en el tesauro local",
-      "min" : 1
-    },
-    {
       "id" : "ServiceRequest.orderDetail",
       "path" : "ServiceRequest.orderDetail",
       "max" : "0"
@@ -341,6 +322,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENServiceRequestToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {
@@ -367,7 +352,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
       {
         "code" : "Period"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "HCENServiceRequestToCDA",
+        "map" : "section/entry/observation[code/@code='7571000179104']/value"
+      }]
     },
     {
       "id" : "ServiceRequest.occurrence[x]:occurrenceDateTime",
@@ -463,6 +452,14 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
       "id" : "ServiceRequest.bodySite",
       "path" : "ServiceRequest.bodySite",
       "max" : "0"
+    },
+    {
+      "id" : "ServiceRequest.note",
+      "path" : "ServiceRequest.note",
+      "mapping" : [{
+        "identity" : "HCENServiceRequestToCDA",
+        "map" : "section/entry/observation[code/@code='7581000179102']/value"
+      }]
     },
     {
       "id" : "ServiceRequest.patientInstruction",

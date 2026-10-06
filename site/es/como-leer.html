@@ -107,6 +107,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -206,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -257,7 +288,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -287,7 +318,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -299,7 +330,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -313,9 +359,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -325,6 +368,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -388,34 +434,165 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#recorrido-de-lectura" id="markdown-toc-recorrido-de-lectura">Recorrido de lectura</a></li>
-  <li><a href="#cardinalidad-y-must-support-dos-preguntas-distintas" id="markdown-toc-cardinalidad-y-must-support-dos-preguntas-distintas">Cardinalidad y Must Support: dos preguntas distintas</a></li>
+  <li><a href="#ubicar-el-perfil-y-elegir-una-vista" id="markdown-toc-ubicar-el-perfil-y-elegir-una-vista">Ubicar el perfil y elegir una vista</a></li>
+  <li><a href="#leer-una-fila-de-izquierda-a-derecha" id="markdown-toc-leer-una-fila-de-izquierda-a-derecha">Leer una fila de izquierda a derecha</a></li>
+  <li><a href="#cardinalidad-cuándo-aparece-un-dato-y-cuántas-veces" id="markdown-toc-cardinalidad-cuándo-aparece-un-dato-y-cuántas-veces">Cardinalidad: cuándo aparece un dato y cuántas veces</a></li>
+  <li><a href="#marcas-qué-significa-la-s-y-qué-otras-señales-aparecen" id="markdown-toc-marcas-qué-significa-la-s-y-qué-otras-señales-aparecen">Marcas: qué significa la S y qué otras señales aparecen</a></li>
+  <li><a href="#seguir-los-tipos-las-referencias-y-las-slices" id="markdown-toc-seguir-los-tipos-las-referencias-y-las-slices">Seguir los tipos, las referencias y las slices</a></li>
+  <li><a href="#revisar-los-valores-permitidos-y-las-condiciones-adicionales" id="markdown-toc-revisar-los-valores-permitidos-y-las-condiciones-adicionales">Revisar los valores permitidos y las condiciones adicionales</a></li>
+  <li><a href="#pasar-del-perfil-a-un-ejemplo" id="markdown-toc-pasar-del-perfil-a-un-ejemplo">Pasar del perfil a un ejemplo</a></li>
 </ul>
 
 </div>
-<p>Un perfil describe cómo representar un recurso o tipo de dato en un contexto determinado. Esta página propone un orden de lectura para pasar de una tabla técnica a decisiones de implementación. Se utiliza <a href="StructureDefinition-uy-patient.html">UYPatient</a> como referencia.</p>
+<p>Esta página explica cómo pasar de la tabla de un perfil a decisiones concretas: qué datos incluir, cómo representarlos y qué definiciones consultar. El recorrido utiliza <a href="StructureDefinition-uy-patient.html">UYPatient</a> y <a href="StructureDefinition-hcen-patient.html">HCENPatient</a> como ejemplos.</p>
 
-<p><strong>Acceso directo:</strong> <a href="StructureDefinition-uy-patient.html">perfil UYPatient</a> · <a href="Patient-EjemploPacienteUY.html">ejemplo de paciente</a> · <a href="hcen-perfiles.html">perfiles HCEN</a>.</p>
+<p>Si términos como recurso, perfil o extensión todavía no resultan familiares, conviene comenzar por <a href="conceptos-fhir.html">Conceptos básicos de FHIR</a>.</p>
 
-<h3 id="recorrido-de-lectura">Recorrido de lectura</h3>
+<h3 id="ubicar-el-perfil-y-elegir-una-vista">Ubicar el perfil y elegir una vista</h3>
 
-<ol>
-  <li><strong>Identificar el propósito y la base.</strong> <code class="language-plaintext highlighter-rouge">UYPatient</code> representa datos administrativos de un paciente y deriva del recurso <code class="language-plaintext highlighter-rouge">Patient</code>. Un perfil HCEN puede añadir restricciones al perfil nacional.</li>
-  <li><strong>Leer cada elemento y su cardinalidad.</strong> <code class="language-plaintext highlighter-rouge">0..1</code> permite omitir el elemento o informarlo una vez; <code class="language-plaintext highlighter-rouge">1..1</code> exige una aparición; <code class="language-plaintext highlighter-rouge">0..*</code> permite varias. La cardinalidad se interpreta en la fila concreta del perfil.</li>
-  <li><strong>Revisar tipos y referencias.</strong> <code class="language-plaintext highlighter-rouge">UYPatient.name</code> utiliza <a href="StructureDefinition-uy-human-name.html">UYHumanName</a>. Seguir ese enlace permite conocer las reglas del nombre.</li>
-  <li><strong>Reconocer las divisiones de elementos repetibles.</strong> Una <em>slice</em> distingue variantes de un mismo elemento. En <code class="language-plaintext highlighter-rouge">UYPatient.identifier</code>, <code class="language-plaintext highlighter-rouge">mrn</code> identifica la variante destinada al número interno de paciente (<em>Medical Record Number</em>); su definición está en <a href="StructureDefinition-uy-mrn-identifier.html">UYMRNIdentifier</a>. Conviene revisar también los valores fijos y las demás restricciones de esa variante.</li>
-  <li><strong>Seguir las reglas relacionadas.</strong> Consultar las extensiones, los conjuntos de valores y las invariantes que afecten a los elementos utilizados.</li>
-  <li><strong>Si hay un intercambio HCEN, sumar sus reglas.</strong> Revisar el perfil HCEN derivado, la transacción y las obligaciones definidas para cada actor.</li>
-</ol>
+<p>Antes de entrar en una tabla, conviene leer el título, la descripción y el perfil base. Por ejemplo, <code class="language-plaintext highlighter-rouge">HCENPatient</code> deriva de <code class="language-plaintext highlighter-rouge">UYPatient</code>: sus reglas incluyen las del perfil nacional y agregan las necesarias para HCEN.</p>
 
-<h3 id="cardinalidad-y-must-support-dos-preguntas-distintas">Cardinalidad y Must Support: dos preguntas distintas</h3>
+<p>La página ofrece distintas vistas de una misma definición. La vista de <strong>Tabla diferencial</strong> muestra los cambios respecto al recurso base. La vista de <strong>Tabla snapshot</strong> ofrece la vista completa, que reúne las reglas propias y las heredadas. Para saber cómo completar un recurso, la Tabla snapshot suele ser el mejor punto de partida.</p>
 
-<p>La <strong>cardinalidad</strong> responde cuántas veces puede aparecer un elemento en una instancia. <strong>Must Support (MS)</strong> señala que existen obligaciones de soporte para los actores HCEN, que deben consultarse en su contexto. Un elemento <code class="language-plaintext highlighter-rouge">0..1</code> marcado MS puede seguir ausente en una instancia; la marca, por sí sola, no lo convierte en <code class="language-plaintext highlighter-rouge">1..1</code>.</p>
+<figure>
+  <img src="leer-perfiles-vistas.svg" alt="HCENPatient hereda de UYPatient, que deriva de Patient. La vista diferencial muestra cambios respecto de UYPatient; snapshot incluye también las reglas heredadas." style="width:100%;max-width:960px;height:auto;" />
+</figure>
 
-<p>En esta guía, <strong>MS se utiliza exclusivamente en perfiles HCEN</strong>. Para practicar la diferencia, puede compararse el <a href="StructureDefinition-uy-patient.html">perfil de paciente del Core</a> con el <a href="hcen-perfiles.html">perfil de paciente HCEN</a>: HCEN exige el identificador interno del paciente (MRN), mientras que el nombre conserva cardinalidad opcional y se marca MS. Las obligaciones concretas se documentan en <a href="hcen-conformidad.html">Conformidad y capacidades HCEN</a>.</p>
+<figure aria-label="Comparación de las vistas diferencial y snapshot" style="width:100%;margin:0 0 1em;">
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px;width:100%;">
+    <img src="leer-perfiles-vistas-diff.png" alt="Vista diferencial del perfil." style="display:block;width:100%;height:auto;" />
+    <img src="leer-perfiles-vistas-snap.png" alt="Tabla snapshot del perfil." style="display:block;width:100%;height:auto;" />
+  </div>
+  <figcaption>Figura 1. Dos vistas de un mismo perfil.</figcaption>
+</figure>
 
-<p>Las <a href="conformidad.html">convenciones generales</a> explican cómo reconocer los requisitos normativos de toda la guía.</p>
+<p>Una fila en el diferencial no siempre implica una nueva exigencia: también puede aparecer por una traducción o una aclaración de su descripción. Si un elemento no aparece allí, puede seguir formando parte del recurso por herencia.</p>
 
+<p>Otras vistas, como la de elementos clave, ayudan a enfocarse en una selección de campos. La <strong>descripción detallada</strong> permite consultar la definición completa de cada elemento, y la sección de <strong>ejemplos</strong> muestra instancias. Los rótulos pueden aparecer en español o en inglés, como <em>Differential</em>, <em>Snapshot</em> o <em>Examples</em>.</p>
+
+<h3 id="leer-una-fila-de-izquierda-a-derecha">Leer una fila de izquierda a derecha</h3>
+
+<p>La tabla representa un árbol. La sangría indica qué elementos están dentro de otros: <code class="language-plaintext highlighter-rouge">Patient.name.family</code> se lee como «apellido, dentro del nombre, dentro del paciente».</p>
+
+<figure>
+  <img src="leer-perfiles-tabla.png" alt="Filas seleccionadas de HCENPatient: identifier admite uno o más identificadores; la slice mrn exige exactamente uno; name es opcional, único y Must Support; photo está prohibido. Se señalan las columnas nombre, marcas, cardinalidad, tipo y descripción." style="width:100%;max-width:960px;height:auto;" />
+  <figcaption>Figura 2. Lectura de filas seleccionadas de HCENPatient. Se omiten algunas filas y marcas.</figcaption>
+</figure>
+
+<p>La columna <strong>Nombre (Name)</strong> identifica el elemento, <strong>Marcas (Flags)</strong> destaca características que requieren atención, <strong>Card.</strong> indica cuántas veces puede aparecer, <strong>Tipo (Type)</strong> enlaza con su estructura y <strong>Descripción y restricciones (Description &amp; Constraints)</strong> resume su significado y otras reglas. En la tabla publicada, seguir el enlace del elemento permite ampliar su definición.</p>
+
+<p>Por ejemplo, la fila <code class="language-plaintext highlighter-rouge">name</code> de <code class="language-plaintext highlighter-rouge">HCENPatient</code> se interpreta así: puede aparecer como máximo un nombre, utiliza el perfil nacional <code class="language-plaintext highlighter-rouge">UYHumanName</code> y tiene Must Support indicado por la marca <code class="language-plaintext highlighter-rouge">S</code>.</p>
+
+<h3 id="cardinalidad-cuándo-aparece-un-dato-y-cuántas-veces">Cardinalidad: cuándo aparece un dato y cuántas veces</h3>
+
+<p>La cardinalidad se escribe como <strong>mínimo..máximo</strong>. El asterisco indica que no se fija un límite superior.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cardinalidad</th>
+      <th>Cómo interpretarla</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0..1</code></td>
+      <td>El elemento puede faltar o aparecer una única vez.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1..1</code></td>
+      <td>Debe aparecer exactamente una vez.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0..*</code></td>
+      <td>Puede faltar o aparecer varias veces.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">1..*</code></td>
+      <td>Debe aparecer al menos una vez.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">0..0</code></td>
+      <td>No se permite incluirlo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La regla se aplica <strong>dentro del elemento que lo contiene</strong>. Por ejemplo, <a href="StructureDefinition-uy-address.html">UYAddress</a> exige <code class="language-plaintext highlighter-rouge">country</code> con <code class="language-plaintext highlighter-rouge">1..1</code>. Eso significa que cada dirección que siga ese perfil debe incluir el país, pero no obliga por sí solo a que el paciente deba tener una dirección.</p>
+
+<p>Aunque un perfil limite un elemento a una sola aparición, su representación JSON conserva la lista si el elemento es repetible en FHIR base. Por eso <code class="language-plaintext highlighter-rouge">HCENPatient.name</code>, con <code class="language-plaintext highlighter-rouge">0..1</code>, sigue escribiéndose entre corchetes.</p>
+
+<h3 id="marcas-qué-significa-la-s-y-qué-otras-señales-aparecen">Marcas: qué significa la S y qué otras señales aparecen</h3>
+
+<p><strong>Must Support</strong>, que suele mostrarse como <code class="language-plaintext highlighter-rouge">S</code>, señala obligaciones de soporte para los sistemas. Una descripción más detallada de esta marca se puede encontrar en la sección siguiente de <a href="conformidad.html">convenciones y conformidad</a>.</p>
+
+<p>También pueden aparecer <code class="language-plaintext highlighter-rouge">I</code> que señala restricciones o invariantes, <code class="language-plaintext highlighter-rouge">?!</code> que identifica un elemento capaz de modificar la interpretación del recurso y <code class="language-plaintext highlighter-rouge">Σ</code> que indica pertenencia al conjunto de elementos de resumen de FHIR. Ninguna de estas marcas sustituye la cardinalidad. La <a href="https://hl7.org/fhir/R4/formats.html#table">leyenda de las tablas FHIR R4</a> amplía su significado.</p>
+
+<h3 id="seguir-los-tipos-las-referencias-y-las-slices">Seguir los tipos, las referencias y las slices</h3>
+
+<p>La columna Tipo también forma parte de la lectura: si <code class="language-plaintext highlighter-rouge">name</code> enlaza con <a href="StructureDefinition-uy-human-name.html">UYHumanName</a>, allí se encuentran las reglas de nombres, apellidos y sus extensiones. Si un elemento usa <code class="language-plaintext highlighter-rouge">Reference</code>, los perfiles de destino indican qué recursos puede referenciar. Por ejemplo, <code class="language-plaintext highlighter-rouge">UYPatient.managingOrganization</code> apunta a una organización que sigue <code class="language-plaintext highlighter-rouge">UYOrganization</code>.</p>
+
+<p>Algunos nombres terminan en <strong><code class="language-plaintext highlighter-rouge">[x]</code></strong>: indican una elección de tipo. En <code class="language-plaintext highlighter-rouge">deceased[x]</code>, por ejemplo, se puede usar <code class="language-plaintext highlighter-rouge">deceasedBoolean</code> o <code class="language-plaintext highlighter-rouge">deceasedDateTime</code>, según el tipo elegido y las opciones permitidas por el perfil. El texto <code class="language-plaintext highlighter-rouge">[x]</code> no se escribe literalmente en el JSON.</p>
+
+<p>Una <strong>slice</strong> es un grupo dentro de un elemento repetible, con reglas propias. En la figura 2, <code class="language-plaintext highlighter-rouge">identifier:mrn</code> distingue el número interno de paciente de otros identificadores. La fila general exige al menos un identificador y la slice <code class="language-plaintext highlighter-rouge">mrn</code> exige exactamente uno de ese grupo. Hay que cumplir ambas reglas.</p>
+
+<p>El nombre de la slice ayuda a leer el perfil, pero <strong>no</strong> es un campo que se agregue al JSON. Cada identificador sigue siendo una entrada de <code class="language-plaintext highlighter-rouge">identifier</code>, y las reglas de discriminación permiten reconocer a qué grupo pertenece. En <code class="language-plaintext highlighter-rouge">UYPatient</code> se utiliza <code class="language-plaintext highlighter-rouge">identifier.type</code> como discriminador. Para más detalles sobre el uso de slices consultar la <a href="https://hl7.org/fhir/R4/profiling.html#slicing">especificación base</a>.</p>
+
+<h3 id="revisar-los-valores-permitidos-y-las-condiciones-adicionales">Revisar los valores permitidos y las condiciones adicionales</h3>
+
+<p>Además de la estructura, un perfil puede establecer un <strong>valor fijo</strong>, un <strong>patrón</strong>, una <strong>vinculación terminológica</strong> o una <strong>invariante</strong>. Estas reglas aparecen en las tablas y en la definición detallada.</p>
+
+<figure>
+  <img src="leer-perfiles-valores.png" alt="En UYAddress, state es opcional y se vincula al ValueSet de departamentos con fuerza required; country es obligatorio y tiene el valor fijo URY. Required limita los valores cuando aparece el elemento, mientras que 1..1 exige su presencia." style="width:100%;max-width:960px;height:auto;" />
+  <figcaption>Figura 3. Dos reglas diferentes en UYAddress: Binding (elegir un valor del conjunto) y Fixed Value (utilizar un valor fijo).</figcaption>
+</figure>
+
+<p>Un <strong>binding</strong> vincula un elemento con un <code class="language-plaintext highlighter-rouge">ValueSet</code>. Para interpretarlo hay que revisar tanto el conjunto como la fuerza de la vinculación:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fuerza</th>
+      <th>Qué implica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">required</code></td>
+      <td>El valor debe pertenecer al conjunto. En un <code class="language-plaintext highlighter-rouge">CodeableConcept</code>, al menos una codificación debe pertenecer, el texto solo no alcanza.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">extensible</code></td>
+      <td>Si el conjunto contiene un concepto adecuado, debe utilizarse. Si no lo contiene, se admiten alternativas según el tipo de dato.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">preferred</code></td>
+      <td>Se recomienda utilizar el conjunto, pero se permiten otros códigos.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">example</code></td>
+      <td>El conjunto ilustra valores posibles, sin exigir ni recomendar su uso.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Un binding <code class="language-plaintext highlighter-rouge">required</code> no hace obligatorio al elemento.</strong> Por ejemplo, en la figura 3 <code class="language-plaintext highlighter-rouge">state</code> puede no incluirse, pero si se incluye, debe usar un valor del conjunto de departamentos. La presencia se determina por la cardinalidad.</p>
+
+<p>Un valor fijo, como <code class="language-plaintext highlighter-rouge">country = "URY"</code>, debe coincidir exactamente. Un patrón exige que se cumpla la estructura o el contenido indicado y puede admitir información adicional.</p>
+
+<p>Una <strong>invariante</strong> expresa una condición que no se resuelve solo con cardinalidades, por ejemplo una relación entre campos. Conviene leer su explicación junto con la expresión técnica.</p>
+
+<p>Para ampliar: <a href="https://hl7.org/fhir/R4/terminologies.html#strength">vinculaciones terminológicas en FHIR R4</a>.</p>
+
+<h3 id="pasar-del-perfil-a-un-ejemplo">Pasar del perfil a un ejemplo</h3>
+
+<p>Con la definición a mano, el siguiente paso es abrir el <a href="Patient-EjemploPacienteUY.html">paciente básico del Core</a>. Su narrativa ofrece una lectura rápida y la representación JSON permite observar la estructura que intercambian los sistemas.</p>
+
+<p>Un ejercicio breve consiste en localizar el MRN dentro de <code class="language-plaintext highlighter-rouge">identifier</code>, comparar <code class="language-plaintext highlighter-rouge">name</code> con su tipo <code class="language-plaintext highlighter-rouge">UYHumanName</code> y revisar las extensiones de los apellidos. Así se conecta cada regla con su representación concreta.</p>
+
+<p>Los ejemplos muestran una posibilidad, pero no enumeran todas las opciones ni reemplazan la definición del perfil. Para implementar un intercambio, también deben revisarse la <a href="hcen-transacciones.html">transacción correspondiente</a> y las <a href="conformidad.html">convenciones de conformidad</a>.</p>
+
+<p>El siguiente paso para entender como usar esta guía es leer la sección de <a href="conformidad.html">convenciones y conformidad</a></p>
 
 
 
@@ -441,11 +618,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

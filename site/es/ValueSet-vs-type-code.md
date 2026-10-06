@@ -2,9 +2,6 @@
 
 ## ValueSet: EJE 2 — Tipo detallado de documento 
 
- 
-Tipo detallado de documento según la hoja ValueSets de la especificación nacional. 
-
  **References** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
@@ -35,8 +32,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VStypeCode",
   "title" : "EJE 2 — Tipo detallado de documento",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Tipo detallado de documento según la hoja ValueSets de la especificación nacional.",
   "compose" : {
     "include" : [{
@@ -210,10 +214,6 @@ No Expansion for this valueset (not supported by Publication Tooling)
         "display" : "resumen de egreso de paciente internado"
       },
       {
-        "code" : "373942006",
-        "display" : "resumen de egreso de paciente internado"
-      },
-      {
         "code" : "261721000179105",
         "display" : "resumen de egreso en internación de cuidados básicos"
       },
@@ -227,10 +227,6 @@ No Expansion for this valueset (not supported by Publication Tooling)
       },
       {
         "code" : "261731000179107",
-        "display" : "resumen de egreso en internación de cuidados moderados"
-      },
-      {
-        "code" : "261731000179108",
         "display" : "resumen de egreso en internación de cuidados moderados"
       }]
     }]

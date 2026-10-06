@@ -2,20 +2,17 @@
 
 ## Introducción al Core
 
-**Core Uruguay** es la base nacional de representación de información de salud dentro de esta guía. Sus definiciones deben ser reutilizables en contextos que no dependan exclusivamente de HCEN.
+**Core Uruguay** es la base nacional de representación de información de salud dentro de esta guía. Sus definiciones son reutilizables en distintos contextos de intercambio.
 
-### Recorrido del Core
+### Contenido del Core
 
-1. Consultar[identificadores y datos comunes](identificadores.md).
-1. Seleccionar los[perfiles nacionales](perfiles.md)aplicables.
-1. Revisar sus[extensiones](extensiones.md)y[terminología](terminologia.md).
-1. Consultar los[ejemplos](ejemplos.md).
+* [Identificadores y datos comunes](identificadores.md): identificadores, nombres, direcciones y contactos.
+* [Perfiles nacionales](perfiles.md): pacientes, profesionales, organizaciones y roles profesionales.
+* [Extensiones](extensiones.md): definiciones que complementan la estructura de los datos.
+* [Terminología](terminologia.md): conjuntos de valores para datos geográficos, roles y especialidades.
+* [Ejemplos](ejemplos.md): instancias ficticias de los perfiles nacionales.
 
 ### Relación con HCEN
 
-HCEN reutilizará directamente los perfiles nacionales cuando sean suficientes. Si un intercambio necesita restricciones adicionales o marcas Must Support, estas se definirán en un perfil HCEN derivado del Core.
-
-Los perfiles Core no utilizarán Must Support. Esta decisión no elimina las cardinalidades ni las demás restricciones nacionales.
-
-El [catálogo inicial de perfiles](perfiles.md) ya está disponible como borrador, junto con sus tipos comunes, extensiones, terminología y ejemplos.
+HCEN reutiliza los perfiles nacionales. Las restricciones adicionales y las obligaciones de soporte se establecen en sus perfiles derivados y en las transacciones correspondientes.
 

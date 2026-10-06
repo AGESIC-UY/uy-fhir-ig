@@ -4,15 +4,22 @@
   <id value="vs-via-administracion"/>
   <language value="es"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-via-administracion</b></p><a name="vs-via-administracion"> </a><a name="hcvs-via-administracion"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-RouteOfAdministration.html"><code>http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration</code></a><span title="Version is explicitly stated to be 4.0.0"> version &#x1F4CD;4.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-PO">PO</a></td><td>Oral</td><td>Swallow, oral</td></tr></table></li><li>Include these codes as defined in <a href="https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html"><code>http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode</code></a><span title="Version is not explicitly stated, which means it is fixed to 1.4.0, the version found through the package references"> version &#x1F4E6;1.4.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.4.0/CodeSystem-formatcode.html#formatcode-urn.58hl7-org.58sdwg.58ccda-nonXMLBody.582.461">urn:hl7-org:sdwg:ccda-nonXMLBody:2.1</a></td><td>C-CDA 2.1 con cuerpo no estructurado</td><td>Now available in HL7 CodeSystem v3-HL7DocumentFormatCodes.</td></tr></table></li></ul></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-via-administracion</b></p><a name="vs-via-administracion"> </a><a name="hcvs-via-administracion"> </a><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-RouteOfAdministration.html"><code>http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration</code></a><span title="Version is explicitly stated to be 4.0.0"> version &#x1F4CD;4.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-RouteOfAdministration.html#v3-RouteOfAdministration-PO">PO</a></td><td>Oral</td><td>Swallow, oral</td></tr></table></li></ul></div>
   </text>
   <url value="http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion"/>
   <version value="0.1.0"/>
   <name value="VSViaAdministracion"/>
   <title value="Conjunto de Valores Vía de Administración (borrador)"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial."/>
   <compose>
     <include>
@@ -21,13 +28,6 @@
       <concept>
         <code value="PO"/>
         <display value="Oral"/>
-      </concept>
-    </include>
-    <include>
-      <system value="http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"/>
-      <concept>
-        <code value="urn:hl7-org:sdwg:ccda-nonXMLBody:2.1"/>
-        <display value="C-CDA 2.1 con cuerpo no estructurado"/>
       </concept>
     </include>
   </compose>

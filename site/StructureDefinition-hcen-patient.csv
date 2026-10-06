@@ -53,9 +53,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.identifier:ci","Patient.identifier","ci","","",0,1,"Y","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier]]} {[]}
 ","Cédula de identidad del paciente.","Cédula de identidad del paciente.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"
-"Patient.identifier:fni","Patient.identifier","fni","","",0,*,"Y","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier]]} {[]}
-","Identificador nacional emitido por otro país.","Identificador nacional extranjero del paciente, cuyo sistema identifica al organismo emisor.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","id",".id","FiveWs.identifier","PID-3"
 "Patient.identifier:ppn","Patient.identifier","ppn","","",0,*,"Y","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-ppn-identifier]]} {[]}
 ","Pasaporte del paciente.","Pasaporte del paciente.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"
@@ -127,7 +124,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.contact.telecom:email","Patient.contact.telecom","email","","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-email-contact-point]]} {[]}
 ","Detalles del correo electrónico de contacto.","Detalles del correo electrónico de contacto.","Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"",,,,"Patient.contact.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","telecom","n/a","NK1-5, NK1-6, NK1-40"
-"Patient.contact.address","Patient.contact.address","","","",0,1,"Y","","","Address {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-address]]} {[]}
+"Patient.contact.address","Patient.contact.address","","","",0,1,"","","","Address {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-address]]} {[]}
 ","Dirección física o postal de la persona de contacto en Uruguay.","Dirección física o postal de la persona de contacto en Uruguay.","","Need to keep track where the contact person can be contacted per postal mail or visited.","","","","","","","",,,,,"",,,,"Patient.contact.address",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","addr","n/a","NK1-4"
 "Patient.contact.gender","Patient.contact.gender","","","",0,1,"","","","code {[]} {[]}

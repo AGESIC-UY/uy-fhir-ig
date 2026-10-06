@@ -2,16 +2,12 @@
 
 ## Perfiles nacionales
 
-Los perfiles nacionales representan pacientes, profesionales, organizaciones y roles. Reutilizan los tipos de datos comunes y no utilizan Must Support.
-
-### Catálogo inicial
+Los perfiles nacionales definen la representación de pacientes, profesionales de salud, organizaciones y roles profesionales. Reutilizan los identificadores y datos comunes del Core.
 
 | | |
 | :--- | :--- |
-| [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md) | Una agrupación de personas u organizaciones con un propósito común. |
-| [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md) | Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados. |
-| [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md) | Una persona que está directa o indirectamente involucrada en la provisión de atención médica. |
-| [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) | Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios. |
-
-Cada página presenta el propósito del artefacto y su definición técnica. Los artefactos se incorporan como base de trabajo en estado de borrador.
+| [Paciente — UYPatient](StructureDefinition-uy-patient.md) | Datos demográficos y administrativos de una persona que recibe atención. |
+| [Profesional de salud — UYPractitioner](StructureDefinition-uy-practitioner.md) | Datos de la persona que participa en la provisión de atención de salud. |
+| [Organización — UYOrganization](StructureDefinition-uy-organization.md) | Identificación y datos de una institución u organización. |
+| [Rol profesional — UYPractitionerRole](StructureDefinition-uy-practitioner-role.md) | Función de un profesional en un contexto organizacional. |
 

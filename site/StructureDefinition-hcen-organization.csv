@@ -1,6 +1,6 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: HL7 v2 Mapping","Mapping: RIM Mapping","Mapping: ServD","Mapping: FiveWs Pattern Mapping"
 "Organization","Organization","","","",0,*,"","","","null {[]} {[]}
-","Perfil Organización para HCEN","Una agrupación de personas u organizaciones con un propósito común.","","","","","","","","","",,,,,"",,,,"Organization",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
+","Perfil Organización para Uruguay","Una agrupación de personas u organizaciones con un propósito común.","","","","","","","","","",,,,,"",,,,"Organization",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
 dom-3:If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource {contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()}dom-4:If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated {contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()}dom-5:If a resource is contained in another resource, it SHALL NOT have a security label {contained.meta.security.empty()}dom-6:A resource should have narrative for robust management {text.`div`.exists()}org-1:The organization SHALL at least have a name or an identifier, and possibly more than one {(identifier.count() + name.count()) > 0}","(also see master files messages)","Entity. Role, or Act","Organization(classCode=ORG, determinerCode=INST)","Organization"
 "Organization.id","Organization.id","","","",0,1,"","","Y","id {[]} {[]}
 ","ID lógico de este artefacto.","ID lógico de este artefacto.","El recurso puede no tener identificador lógico cuando se envía al servidor mediante una operación de creación.","","","","","","","","",,,,,"",,,,"Resource.id",0,1,"",""
@@ -31,8 +31,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",,"open","Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
-"Organization.identifier:organizationId","Organization.identifier","organizationId","","",1,1,"","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/hcen-aa-identifier]]} {[]}
-","Identificador único de la organización en HCEN","Identificador único de la organización en HCEN","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
+"Organization.identifier:organizationId","Organization.identifier","organizationId","","",1,1,"","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier]]} {[]}
+","Identificador de la organización.","Identificador de la organización.","","Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.","","","","","","","",,,,,"",,,,"Organization.identifier",0,*,"org-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XON.10 / XON.3",".scopes[Role](classCode=IDENT)","./Identifiers","FiveWs.identifier"
 "Organization.active","Organization.active","","","",0,1,"","Y","Y","boolean {[]} {[]}
@@ -57,7 +57,7 @@ We expect that some jurisdictions will profile this optionality to be a single c
 For searching knowing previous names that the organization was known by can be very useful.","","","","","","","",,,,,"",,,,"Organization.alias",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".name"
 "Organization.telecom","Organization.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
-","Detalles de contacto de la organización.","Detalles de contacto de la organización.","No se utiliza el código home. Estos datos corresponden al contacto oficial de la organización, no a las personas que trabajan en ella o la representan.","Human contact for the organization.","","","","","","","",,,,,"","value:system}
+","Datos de contacto de la organización.","Datos de contacto de la organización.","No se utiliza el código home. Estos datos corresponden al contacto oficial de la organización, no a las personas que trabajan en ella o la representan.","Human contact for the organization.","","","","","","","",,,,,"","value:system}
 ","",,"open","Organization.telecom",0,*,"org-3
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-3:The telecom of an organization can never be of use 'home' {where(use = 'home').empty()}","ORC-22?",".telecom","./ContactPoints"
@@ -70,7 +70,7 @@ org-3:The telecom of an organization can never be of use 'home' {where(use = 'ho
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-3:The telecom of an organization can never be of use 'home' {where(use = 'home').empty()}","ORC-22?",".telecom","./ContactPoints"
 "Organization.address","Organization.address","","","",0,*,"","","","Address {[]} {[]}
-","Una o más direcciones de la organización.","Una o más direcciones de la organización.","La organización puede tener varias direcciones con distintos usos o periodos de aplicación. No se utiliza el código home.","May need to keep track of the organization's addresses for contacting, billing or reporting requirements.","","","","","","","",,,,,"","profile:$this}
+","Direcciones físicas o postales de la organización.","Direcciones físicas o postales de la organización.","La organización puede tener varias direcciones con distintos usos o periodos de aplicación. No se utiliza el código home.","May need to keep track of the organization's addresses for contacting, billing or reporting requirements.","","","","","","","",,,,,"","profile:$this}
 ","",,"open","Organization.address",0,*,"org-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 org-2:An address of an organization can never be of use 'home' {where(use = 'home').empty()}","ORC-23?",".address","./PrimaryAddress and ./OtherAddresses"
@@ -99,7 +99,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Nombre asociado con el contacto.","Nombre asociado con el contacto.","","Need to be able to track the person by name.","","","","","","","",,,,,"",,,,"Organization.contact.name",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-5, PID-9","./name"
 "Organization.contact.telecom","Organization.contact.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
-","Detalles de contacto de la organización.","Detalles de contacto de la organización.","","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"","value:system}
+","Detalles de contacto de la persona.","Detalles de contacto de la persona.","","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"","value:system}
 ","",,"open","Organization.contact.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-13, PID-14","./telecom"
 "Organization.contact.telecom:phone","Organization.contact.telecom","phone","","",0,*,"","","","ContactPoint {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point]]} {[]}
@@ -109,7 +109,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Detalles de correo electrónico de contacto.","Detalles de correo electrónico de contacto.","","People have (primary) ways to contact them in some way such as phone, email.","","","","","","","",,,,,"",,,,"Organization.contact.telecom",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-13, PID-14","./telecom"
 "Organization.contact.address","Organization.contact.address","","","",0,1,"","","","Address {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-address]]} {[]}
-","Dirección del contacto de la organización.","Dirección física o postal del contacto de la organización, representada mediante UYAddress.","","May need to keep track of a contact party's address for contacting, billing or reporting requirements.","","","","","","","",,,,,"",,,,"Organization.contact.address",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Dirección física en Uruguay.","Dirección física en Uruguay.","","May need to keep track of a contact party's address for contacting, billing or reporting requirements.","","","","","","","",,,,,"",,,,"Organization.contact.address",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","PID-11","./addr"
 "Organization.endpoint","Organization.endpoint","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1]]}
 ","Endpoints técnicos que proveen acceso a servicios operados por la organización.","Endpoints técnicos que proveen acceso a servicios operados por la organización.","","Organizations have multiple systems that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.","","","","","","","",,,,,"",,,,"Organization.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

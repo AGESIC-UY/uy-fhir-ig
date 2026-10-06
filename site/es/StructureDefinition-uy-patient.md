@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: Perfil Paciente para Uruguay 
 
- 
-Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados. 
-
 **Usages:**
 
 * Derived from this Profile: [Perfil Paciente para HCEN](StructureDefinition-hcen-patient.md)
@@ -47,7 +44,6 @@ This structure refers to these other structures:
 
 * [Identificador MRN (http://fhir.hcen.gub.uy/StructureDefinition/uy-mrn-identifier)](StructureDefinition-uy-mrn-identifier.md)
 * [Identificador Cédula de Identidad (http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier)](StructureDefinition-uy-ci-identifier.md)
-* [Identificador Nacional Extranjero (http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier)](StructureDefinition-uy-fni-identifier.md)
 * [Identificador Pasaporte (http://fhir.hcen.gub.uy/StructureDefinition/uy-ppn-identifier)](StructureDefinition-uy-ppn-identifier.md)
 * [Nombre de Persona (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-human-name)](StructureDefinition-uy-human-name.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
@@ -105,7 +101,6 @@ This structure refers to these other structures:
 
 * [Identificador MRN (http://fhir.hcen.gub.uy/StructureDefinition/uy-mrn-identifier)](StructureDefinition-uy-mrn-identifier.md)
 * [Identificador Cédula de Identidad (http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier)](StructureDefinition-uy-ci-identifier.md)
-* [Identificador Nacional Extranjero (http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier)](StructureDefinition-uy-fni-identifier.md)
 * [Identificador Pasaporte (http://fhir.hcen.gub.uy/StructureDefinition/uy-ppn-identifier)](StructureDefinition-uy-ppn-identifier.md)
 * [Nombre de Persona (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-human-name)](StructureDefinition-uy-human-name.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
@@ -150,8 +145,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-patient.csv), 
   "name" : "UYPatient",
   "title" : "Perfil Paciente para Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -344,19 +346,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-patient.csv), 
       "type" : [{
         "code" : "Identifier",
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier"]
-      }]
-    },
-    {
-      "id" : "Patient.identifier:fni",
-      "path" : "Patient.identifier",
-      "sliceName" : "fni",
-      "short" : "Identificador nacional emitido por otro país.",
-      "definition" : "Identificador nacional extranjero del paciente, cuyo sistema identifica al organismo emisor.",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "Identifier",
-        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier"]
       }]
     },
     {

@@ -109,6 +109,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -176,8 +207,8 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.14"}
-    h3,h4,h5,h6{--heading-prefix:"8.14"}</style>
+    <style type="text/css">h2{--heading-prefix:"9.15"}
+    h3,h4,h5,h6{--heading-prefix:"9.15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -208,7 +239,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -259,7 +290,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -289,7 +320,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -301,7 +332,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -315,9 +361,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -327,6 +370,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -404,16 +450,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
 
-  
-    
-      <li>
-        <a href="StructureDefinition-hcen-patient-examples.html">Ejemplos</a>
-      </li>
-    
-  
-
-
-
 
   
     <li>
@@ -452,7 +488,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
           
 
             a partir de 
-2026-09-28
+2026-10-06
 .
           
         
@@ -509,11 +545,11 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

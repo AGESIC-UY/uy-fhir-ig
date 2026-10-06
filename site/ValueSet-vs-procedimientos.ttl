@@ -10,8 +10,8 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "vs-procedimientos"] ; # 
   fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Procedimientos: incluye todos los conceptos SNOMED CT que son miembros de los refsets SNOMED CT-UY <code>268951000179107</code> y <code>231971000179103</code> (SNOMED CT edición Uruguay).</p></div>"^^rdf:XMLLiteral ]
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-procedimientos</b></p><a name=\"vs-procedimientos\"> </a><a name=\"hcvs-procedimientos\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/5631000179106/version/20260615\"> version ?http://snomed.info/sct/5631000179106/version/20260615</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/29303009\">29303009</a></td><td>procedimiento electrocardiográfico (procedimiento)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/46973005\">46973005</a></td><td>medir la presión arterial (procedimiento)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/166900001\">166900001</a></td><td>determinación de glicemia por medidor de glucosa (procedimiento)</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos"^^xsd:anyURI ;
@@ -21,29 +21,32 @@
   fhir:name [ fhir:v "VSProcedimientos"] ; # 
   fhir:title [ fhir:v "Conjunto de Valores Procedimientos"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
-  fhir:description [ fhir:v "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay)."] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento)."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:filter ( [
-         fhir:property [ fhir:v "concept" ] ;
-         fhir:op [ fhir:v "in" ] ;
-         fhir:value [ fhir:v "268951000179107" ]
-       ] )
-     ] [
-       fhir:system [
-         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
-         fhir:l <http://snomed.info/sct>
-       ] ;
-       fhir:filter ( [
-         fhir:property [ fhir:v "concept" ] ;
-         fhir:op [ fhir:v "in" ] ;
-         fhir:value [ fhir:v "231971000179103" ]
+       fhir:version [ fhir:v "http://snomed.info/sct/5631000179106/version/20260615" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "29303009" ] ;
+         fhir:display [ fhir:v "procedimiento electrocardiográfico (procedimiento)" ]
+       ] [
+         fhir:code [ fhir:v "46973005" ] ;
+         fhir:display [ fhir:v "medir la presión arterial (procedimiento)" ]
+       ] [
+         fhir:code [ fhir:v "166900001" ] ;
+         fhir:display [ fhir:v "determinación de glicemia por medidor de glucosa (procedimiento)" ]
        ] )
      ] )
   ] . # 

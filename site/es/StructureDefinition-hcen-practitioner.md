@@ -2,14 +2,10 @@
 
 ## Perfil de los recursos: Perfil Profesional de Salud para HCEN 
 
- 
-Una persona que está directa o indirectamente involucrada en la provisión de atención médica. 
-
 **Usages:**
 
 * Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
-* Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md), [Perfil Rol del Profesional de Salud para HCEN](StructureDefinition-hcen-practitioner-role.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
-* Examples for this Profile: [Practitioner/hcen-profesional-ejemplo](Practitioner-hcen-profesional-ejemplo.md)
+* Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Perfil Rol del Profesional de Salud para HCEN](StructureDefinition-hcen-practitioner-role.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-practitioner)
 
@@ -35,8 +31,7 @@ Esta estructura se deriva de [UYPractitioner](StructureDefinition-uy-practitione
 
 ** Summary **
 
-Mandatory: 2 elements
- Must-Support: 1 element
+Mandatory: 3 elements
  Prohibited: 1 element
 
  **Vista de elementos clave** 
@@ -57,8 +52,7 @@ Esta estructura se deriva de [UYPractitioner](StructureDefinition-uy-practitione
 
 ** Summary **
 
-Mandatory: 2 elements
- Must-Support: 1 element
+Mandatory: 3 elements
  Prohibited: 1 element
 
  
@@ -78,8 +72,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
   "name" : "HCENPractitioner",
   "title" : "Perfil Profesional de Salud para HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Una persona que está directa o indirectamente involucrada en la provisión de atención médica.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -127,7 +128,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
     {
       "id" : "Practitioner.name",
       "path" : "Practitioner.name",
-      "mustSupport" : true
+      "min" : 1
     },
     {
       "id" : "Practitioner.photo",

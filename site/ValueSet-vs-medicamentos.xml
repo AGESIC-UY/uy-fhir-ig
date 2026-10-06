@@ -10,8 +10,15 @@
   <name value="VSMedicamentos"/>
   <title value="Conjunto de Valores Medicamentos (borrador)"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="PENDIENTE: subconjunto de códigos SNOMED CT para medicamentos, utilizado en la validación del CDA. Contiene un código de ejemplo mientras se define el listado oficial."/>
   <compose>
     <include>

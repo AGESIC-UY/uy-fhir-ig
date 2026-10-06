@@ -2,9 +2,6 @@
 
 ## CodeSystem: Localidades de Uruguay (OSE) 
 
- 
-Localidades del catálogo de regiones, departamentos y localidades utilizado por OSE. 
-
 Se hace referencia a este sistema de códigos en la definición de los siguientes conjuntos de valores:
 
 * [VSLocalidadesUY](ValueSet-vs-localidades-uy.md)
@@ -26,8 +23,15 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "name" : "CSLocalidadesUY",
   "title" : "Localidades de Uruguay (OSE)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Localidades del catálogo de regiones, departamentos y localidades utilizado por OSE.",
   "copyright" : "Fuente: OSE, Catálogo de Datos Abiertos de Uruguay, recurso Regiones, departamentos y localidades (actualización 2025-12-16), Licencia de Datos Abiertos de Uruguay.",
   "caseSensitive" : true,

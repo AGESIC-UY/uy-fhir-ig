@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Evento Clínico 
 
- 
-Evento clínico (Encounter) asociado a una Hoja de Consulta No Urgente (CNU) de HCEN. 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Evento Clínico](StructureDefinition-hcen-encounter.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -102,11 +99,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
   "name" : "HCENEncounter",
   "title" : "HCEN Evento Clínico",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Evento clínico (Encounter) asociado a una Hoja de Consulta No Urgente (CNU) de HCEN.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENEncounterToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYEncounter."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -178,14 +188,70 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-type-code"
-      }
+      },
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/code"
+      }]
+    },
+    {
+      "id" : "Encounter.type.coding.system",
+      "path" : "Encounter.type.coding.system",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/code/@codeSystem"
+      }]
+    },
+    {
+      "id" : "Encounter.type.coding.code",
+      "path" : "Encounter.type.coding.code",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/code/@code"
+      }]
+    },
+    {
+      "id" : "Encounter.type.coding.display",
+      "path" : "Encounter.type.coding.display",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/code/@displayName"
+      }]
     },
     {
       "id" : "Encounter.serviceType",
       "path" : "Encounter.serviceType",
       "short" : "Servicio médico específico asociado al evento clínico (eje 3 del catálogo de documentos de Uruguay)",
       "definition" : "Servicio médico específico asociado al evento clínico (eje 3 del catálogo de documentos de Uruguay)",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code"
+      }]
+    },
+    {
+      "id" : "Encounter.serviceType.coding.system",
+      "path" : "Encounter.serviceType.coding.system",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@codeSystem"
+      }]
+    },
+    {
+      "id" : "Encounter.serviceType.coding.code",
+      "path" : "Encounter.serviceType.coding.code",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@code"
+      }]
+    },
+    {
+      "id" : "Encounter.serviceType.coding.display",
+      "path" : "Encounter.serviceType.coding.display",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@displayName"
+      }]
     },
     {
       "id" : "Encounter.priority",
@@ -200,6 +266,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {
@@ -216,7 +286,43 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
       "id" : "Encounter.participant",
       "path" : "Encounter.participant",
       "short" : "Profesional involucrado en el evento clínico",
-      "definition" : "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico."
+      "definition" : "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico.",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor"
+      }]
+    },
+    {
+      "id" : "Encounter.participant.type",
+      "path" : "Encounter.participant.type",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor"
+      }]
+    },
+    {
+      "id" : "Encounter.participant.period",
+      "path" : "Encounter.participant.period",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/time"
+      }]
+    },
+    {
+      "id" : "Encounter.participant.period.start",
+      "path" : "Encounter.participant.period.start",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/time/@value"
+      }]
+    },
+    {
+      "id" : "Encounter.participant.individual",
+      "path" : "Encounter.participant.individual",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor"
+      }]
     },
     {
       "id" : "Encounter.appointment",
@@ -227,7 +333,27 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
       "id" : "Encounter.period",
       "path" : "Encounter.period",
       "short" : "Inicio y finalización del evento clínico",
-      "definition" : "Inicio y finalización del evento clínico."
+      "definition" : "Inicio y finalización del evento clínico.",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime"
+      }]
+    },
+    {
+      "id" : "Encounter.period.start",
+      "path" : "Encounter.period.start",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/low/@value"
+      }]
+    },
+    {
+      "id" : "Encounter.period.end",
+      "path" : "Encounter.period.end",
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/high/@value"
+      }]
     },
     {
       "id" : "Encounter.length",
@@ -272,6 +398,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENEncounterToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor/representedOrganization"
       }]
     },
     {

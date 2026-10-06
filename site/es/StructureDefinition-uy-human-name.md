@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: Nombre de Persona (Uruguay) 
 
- 
-Nombre de una persona optimizado para su visualización y almacenamiento estructurado, con los apellidos discriminados mediante extensiones. 
-
 **Usages:**
 
 * Use this DataType Profile: [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md), [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
@@ -77,6 +74,12 @@ This structure refers to these extensions:
 
 Otras representaciones de perfil: [CSV](../StructureDefinition-uy-human-name.csv), [Excel](../StructureDefinition-uy-human-name.xlsx), [Schematron](../StructureDefinition-uy-human-name.sch) 
 
+### Notas:
+
+### Representación de los apellidos
+
+El campo `family` conserva los apellidos juntos, mientras que las extensiones permiten distinguir sus componentes. En el [ejemplo de paciente](Patient-EjemploPacienteUY.md), `family` contiene «Pérez Rodríguez», la extensión de primer apellido contiene «Pérez» y la de segundo apellido, «Rodríguez». Ambas extensiones son opcionales; su definición no implica que todas las personas deban tener dos apellidos.
+
 
 
 ## Resource Content
@@ -90,8 +93,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-human-name.csv
   "name" : "UYHumanName",
   "title" : "Nombre de Persona (Uruguay)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Nombre de una persona optimizado para su visualización y almacenamiento estructurado, con los apellidos discriminados mediante extensiones.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

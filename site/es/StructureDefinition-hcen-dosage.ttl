@@ -22,11 +22,26 @@
   fhir:name [ fhir:v "HCENDosage"] ; # 
   fhir:title [ fhir:v "HCEN Dosificación"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
   fhir:description [ fhir:v "Pauta de dosificación reutilizable para las prescripciones y administraciones de medicación registradas en la Hoja de Consulta No Urgente (CNU)."] ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
+     fhir:identity [ fhir:v "HCENDosageToCDA" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3/cda"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3/cda>
+     ] ;
+     fhir:name [ fhir:v "CDA (R2)" ] ;
+     fhir:comment [ fhir:v "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYDosage." ]
+  ] [
      fhir:identity [ fhir:v "rim" ] ;
      fhir:uri [
        fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
@@ -395,6 +410,9 @@
        fhir:isModifier [ fhir:v false ] ;
        fhir:isSummary [ fhir:v true ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENDosageToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "RXO-7" ]
        ] [
@@ -435,6 +453,9 @@
        fhir:isModifier [ fhir:v false ] ;
        fhir:isSummary [ fhir:v true ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENDosageToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value" ]
+       ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v ".effectiveTime" ]
        ] )
@@ -1420,12 +1441,20 @@
        fhir:id [ fhir:v "Dosage.patientInstruction" ] ;
        fhir:path [ fhir:v "Dosage.patientInstruction" ] ;
        fhir:short [ fhir:v "Instrucción adicional dirigida al paciente" ] ;
-       fhir:definition [ fhir:v "Es una instrucción adicional específicamente dirigida al paciente." ]
+       fhir:definition [ fhir:v "Es una instrucción adicional específicamente dirigida al paciente." ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENDosageToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Dosage.timing" ] ;
        fhir:path [ fhir:v "Dosage.timing" ] ;
        fhir:short [ fhir:v "Frecuencia de administración" ] ;
-       fhir:definition [ fhir:v "Indica cuándo y con qué frecuencia debe administrarse el medicamento." ]
+       fhir:definition [ fhir:v "Indica cuándo y con qué frecuencia debe administrarse el medicamento." ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENDosageToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Dosage.asNeeded[x]" ] ;
        fhir:path [ fhir:v "Dosage.asNeeded[x]" ] ;

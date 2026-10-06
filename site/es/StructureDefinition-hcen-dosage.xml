@@ -36,10 +36,23 @@
   <name value="HCENDosage"/>
   <title value="HCEN Dosificación"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Pauta de dosificación reutilizable para las prescripciones y administraciones de medicación registradas en la Hoja de Consulta No Urgente (CNU)."/>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="HCENDosageToCDA"/>
+    <uri value="http://hl7.org/v3/cda"/>
+    <name value="CDA (R2)"/>
+    <comment value="Mapeo a HL7 CDA R2, según la columna &quot;Mapeo CDA&quot; de la hoja HCEN|UYDosage."/>
+  </mapping>
   <mapping>
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
@@ -331,6 +344,10 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
+        <identity value="HCENDosageToCDA"/>
+        <map value="section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text"/>
+      </mapping>
+      <mapping>
         <identity value="v2"/>
         <map value="RXO-7"/>
       </mapping>
@@ -365,6 +382,10 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="HCENDosageToCDA"/>
+        <map value="section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value"/>
+      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value=".effectiveTime"/>
@@ -1167,11 +1188,19 @@
       <path value="Dosage.patientInstruction"/>
       <short value="Instrucción adicional dirigida al paciente"/>
       <definition value="Es una instrucción adicional específicamente dirigida al paciente."/>
+      <mapping>
+        <identity value="HCENDosageToCDA"/>
+        <map value="section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text"/>
+      </mapping>
     </element>
     <element id="Dosage.timing">
       <path value="Dosage.timing"/>
       <short value="Frecuencia de administración"/>
       <definition value="Indica cuándo y con qué frecuencia debe administrarse el medicamento."/>
+      <mapping>
+        <identity value="HCENDosageToCDA"/>
+        <map value="section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value"/>
+      </mapping>
     </element>
     <element id="Dosage.asNeeded[x]">
       <path value="Dosage.asNeeded[x]"/>

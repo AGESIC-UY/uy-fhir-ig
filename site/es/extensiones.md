@@ -2,14 +2,10 @@
 
 ## Extensiones del Core
 
-Las extensiones propias del Core permiten distinguir los apellidos dentro de HumanName.family. El perfil de paciente también referencia extensiones de HL7, declaradas como dependencias de la guía.
-
-### Catálogo inicial
+Las extensiones propias del Core complementan el nombre de la persona y se utilizan en `HumanName.family`. El perfil [UYPatient](StructureDefinition-uy-patient.md) también referencia extensiones de HL7 incluidas en las dependencias de la guía.
 
 | | |
 | :--- | :--- |
-| [Primer Apellido](StructureDefinition-ext-primer-apellido.md) | Primer apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad. |
-| [Segundo Apellido](StructureDefinition-ext-segundo-apellido.md) | Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad. |
-
-Cada página presenta el propósito del artefacto y su definición técnica. Los artefactos se incorporan como base de trabajo en estado de borrador.
+| [Primer apellido](StructureDefinition-ext-primer-apellido.md) | Identifica por separado el primer apellido de la persona. |
+| [Segundo apellido](StructureDefinition-ext-segundo-apellido.md) | Identifica por separado el segundo apellido de la persona. |
 

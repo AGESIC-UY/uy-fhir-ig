@@ -3,15 +3,22 @@
   "id" : "vs-class-code",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-class-code</b></p><a name=\"vs-class-code\"> </a><a name=\"hcvs-class-code\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/34098-4/\">34098-4</a></td><td>ateneo clínico</td></tr><tr><td><a href=\"https://loinc.org/51851-4/\">51851-4</a></td><td>documentación administrativa</td></tr><tr><td><a href=\"https://loinc.org/34133-9/\">34133-9</a></td><td>historia clínica previa escaneada</td></tr><tr><td><a href=\"https://loinc.org/82593-5/\">82593-5</a></td><td>historial de inmunizaciones</td></tr><tr><td><a href=\"https://loinc.org/34750-0/\">34750-0</a></td><td>hoja de anestesia</td></tr><tr><td><a href=\"https://loinc.org/34108-1/\">34108-1</a></td><td>hoja de consulta no urgente</td></tr><tr><td><a href=\"https://loinc.org/34111-5/\">34111-5</a></td><td>hoja de consulta urgente</td></tr><tr><td><a href=\"https://loinc.org/34848-2/\">34848-2</a></td><td>hoja de descripción operatoria</td></tr><tr><td><a href=\"https://loinc.org/18761-7/\">18761-7</a></td><td>hoja de traslado especializado</td></tr><tr><td><a href=\"https://loinc.org/11526-1/\">11526-1</a></td><td>informe de anatomía patológica</td></tr><tr><td><a href=\"https://loinc.org/18748-4/\">18748-4</a></td><td>informe de imagenología</td></tr><tr><td><a href=\"https://loinc.org/11502-2/\">11502-2</a></td><td>informe de laboratorio</td></tr><tr><td><a href=\"https://loinc.org/28570-0/\">28570-0</a></td><td>informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>resumen de egreso de paciente internado</td></tr><tr><td><a href=\"https://loinc.org/18842-6/\">18842-6</a></td><td>resumen de egreso de paciente internado</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-class-code</b></p><a name=\"vs-class-code\"> </a><a name=\"hcvs-class-code\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/34098-4/\">34098-4</a></td><td>ateneo clínico</td></tr><tr><td><a href=\"https://loinc.org/51851-4/\">51851-4</a></td><td>documentación administrativa</td></tr><tr><td><a href=\"https://loinc.org/82593-5/\">82593-5</a></td><td>historial de inmunizaciones</td></tr><tr><td><a href=\"https://loinc.org/34750-0/\">34750-0</a></td><td>hoja de anestesia</td></tr><tr><td><a href=\"https://loinc.org/34108-1/\">34108-1</a></td><td>hoja de consulta no urgente</td></tr><tr><td><a href=\"https://loinc.org/34111-5/\">34111-5</a></td><td>hoja de consulta urgente</td></tr><tr><td><a href=\"https://loinc.org/34848-2/\">34848-2</a></td><td>hoja de descripción operatoria</td></tr><tr><td><a href=\"https://loinc.org/18761-7/\">18761-7</a></td><td>hoja de traslado especializado</td></tr><tr><td><a href=\"https://loinc.org/11526-1/\">11526-1</a></td><td>informe de anatomía patológica</td></tr><tr><td><a href=\"https://loinc.org/18748-4/\">18748-4</a></td><td>informe de imagenología</td></tr><tr><td><a href=\"https://loinc.org/11502-2/\">11502-2</a></td><td>informe de laboratorio</td></tr><tr><td><a href=\"https://loinc.org/28570-0/\">28570-0</a></td><td>informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)</td></tr><tr><td><a href=\"https://loinc.org/18842-5/\">18842-5</a></td><td>resumen de egreso de paciente internado</td></tr></table></li></ul></div>"
   },
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
   "version" : "0.1.0",
   "name" : "VSclassCode",
   "title" : "EJE 1 — Tipo genérico de documento",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Tipo genérico de documento según la hoja ValueSets de la especificación nacional.",
   "copyright" : "Includes LOINC® content, copyright Regenstrief Institute, Inc. and the LOINC Committee. Available under the license at https://loinc.org/terms-of-use/.",
   "compose" : {
@@ -24,10 +31,6 @@
       {
         "code" : "51851-4",
         "display" : "documentación administrativa"
-      },
-      {
-        "code" : "34133-9",
-        "display" : "historia clínica previa escaneada"
       },
       {
         "code" : "82593-5",
@@ -71,10 +74,6 @@
       },
       {
         "code" : "18842-5",
-        "display" : "resumen de egreso de paciente internado"
-      },
-      {
-        "code" : "18842-6",
         "display" : "resumen de egreso de paciente internado"
       }]
     }]

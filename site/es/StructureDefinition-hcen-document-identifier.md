@@ -2,12 +2,9 @@
 
 ## Perfil del tipo de datos: Identificador documental HCEN 
 
- 
-OID del documento clínico y de su versión, compartido por sus representaciones FHIR y CDA. 
-
 **Usages:**
 
-* Use this DataType Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
+* Use this DataType Profile: [HCEN Documento de Consulta No Urgente](StructureDefinition-hcen-consulta-no-urgente-bundle.md), [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-identifier)
 
@@ -80,8 +77,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ide
   "name" : "HCENDocumentIdentifier",
   "title" : "Identificador documental HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "OID del documento clínico y de su versión, compartido por sus representaciones FHIR y CDA.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

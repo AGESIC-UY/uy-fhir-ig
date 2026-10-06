@@ -2,8 +2,6 @@
 
 ## Extensión: Por Orden De 
 
-Organización por cuya orden se generó el documento. Mapea a DocumentEntry.byOrder.
-
 **Context of Use**
 
 **Usage info**
@@ -33,7 +31,7 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
 Simple Extension with the type Reference: Organización por cuya orden se generó el documento. Mapea a DocumentEntry.byOrder.
 
- **Vista diferencialDifferential View** 
+ **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
@@ -64,8 +62,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-by-order-of.c
   "name" : "ByOrderOf",
   "title" : "Por Orden De",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Organización por cuya orden se generó el documento. Mapea a DocumentEntry.byOrder.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

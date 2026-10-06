@@ -2,8 +2,20 @@
 
 ## Perfil del tipo de datos: Identificador MRN para HCEN 
 
- 
-Identificador interno del paciente emitido por un prestador admitido en HCEN. 
+### Autoridad de asignación del identificador
+
+El campo `system` identifica a la **Assigning Authority (AA)**, la autoridad o aplicación que genera el número de identificación local del paciente. Su OID utiliza la rama de objetos de UNAOID `2.16.858.2` y se expresa como una URI:
+
+```
+urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]
+
+```
+
+El consecutivo interno lo administra la organización y permite distinguir sus aplicaciones cuando más de una genera identificadores de pacientes. Por ejemplo, `urn:oid:2.16.858.2.99999999.72768.1` representa una AA ficticia con consecutivo 1. El valor local del paciente se informa en `value`; el OID de la AA no sustituye ese número.
+
+La invariante comprueba la estructura del OID. La autorización del dominio y su correspondencia con la institución emisora se verifican mediante lógica interna de Plataforma. El OID institucional de Organization no sustituye al dominio de asignación del MRN.
+
+La guía pública no incluye el catálogo operativo de dominios MRN ni aplica un binding a ese catálogo. Los ejemplos utilizan dominios ficticios: una validación estructural satisfactoria no acredita su autorización para operar.
 
 **Usages:**
 
@@ -63,12 +75,6 @@ Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identi
 
 Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-mrn-identifier.csv), [Excel](../StructureDefinition-hcen-mrn-identifier.xlsx), [Schematron](../StructureDefinition-hcen-mrn-identifier.sch) 
 
-### Notas:
-
-### Autorización del dominio
-
-La invariante comprueba la sintaxis urn:oid:, no que Salud Digital haya autorizado ese dominio. El ValueSet de dominios es un marcador sin contenido operativo; no se utiliza un binding sobre el elemento uri. La verificación de pertenencia debe realizarse contra el catálogo o mecanismo que publique Salud Digital.
-
 
 
 ## Resource Content
@@ -82,9 +88,16 @@ La invariante comprueba la sintaxis urn:oid:, no que Salud Digital haya autoriza
   "name" : "HCENMRNIdentifier",
   "title" : "Identificador MRN para HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "Identificador interno del paciente emitido por un prestador admitido en HCEN.",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Identificador local del paciente dentro de un dominio de asignación autorizado para HCEN.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "v2",
@@ -111,18 +124,18 @@ La invariante comprueba la sintaxis urn:oid:, no que Salud Digital haya autoriza
       "id" : "Identifier",
       "path" : "Identifier",
       "short" : "Identificador local del paciente para HCEN",
-      "definition" : "MRN del prestador emisor. Conserva el tipo MR del Core y exige un dominio OID autorizado para HCEN."
+      "definition" : "MRN dentro de un dominio de la institución emisora. Conserva el tipo MR del Core."
     },
     {
       "id" : "Identifier.system",
       "path" : "Identifier.system",
-      "short" : "OID del prestador que emitió el MRN",
-      "definition" : "Dominio emisor del MRN, expresado como urn:oid: y validado por Salud Digital. La forma URI se verifica con una invariante; la pertenencia al catálogo requiere una comprobación externa.",
+      "short" : "OID del dominio de asignación del MRN",
+      "definition" : "OID de la Assigning Authority (AA) que genera el identificador local del paciente, con formato urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]. Su autorización se verifica por separado.",
       "constraint" : [{
-        "key" : "hcen-oid-uri",
+        "key" : "hcen-oid-aa",
         "severity" : "error",
-        "human" : "El dominio debe ser una URI urn:oid: con arcos numéricos válidos. La autorización del OID se verifica por separado.",
-        "expression" : "matches('^urn:oid:([01][.]([0-9]|[1-3][0-9])|2[.](0|[1-9][0-9]*))([.](0|[1-9][0-9]*))*$')",
+        "human" : "La AA debe tener el formato urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno], con arcos numéricos válidos. La autorización del OID se verifica por separado.",
+        "expression" : "matches('^urn:oid:2[.]16[.]858[.]2[.](0|[1-9][0-9]*)[.]72768[.](0|[1-9][0-9]*)$')",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-mrn-identifier"
       }]
     }]

@@ -50,9 +50,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.identifier:ci","Patient.identifier","ci","","",0,*,"","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier]]} {[]}
 ","Cédula de identidad del paciente.","Cédula de identidad del paciente.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"
-"Patient.identifier:fni","Patient.identifier","fni","","",0,*,"","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier]]} {[]}
-","Identificador nacional emitido por otro país.","Identificador nacional extranjero del paciente, cuyo sistema identifica al organismo emisor.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","id",".id","FiveWs.identifier","PID-3"
 "Patient.identifier:ppn","Patient.identifier","ppn","","",0,*,"","","Y","Identifier {[CanonicalType[http://fhir.hcen.gub.uy/StructureDefinition/uy-ppn-identifier]]} {[]}
 ","Pasaporte del paciente.","Pasaporte del paciente.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"

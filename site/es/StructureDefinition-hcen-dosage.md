@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: HCEN Dosificación 
 
- 
-Pauta de dosificación reutilizable para las prescripciones y administraciones de medicación registradas en la Hoja de Consulta No Urgente (CNU). 
-
 **Usages:**
 
 * Use this DataType Profile: [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md)
@@ -108,11 +105,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
   "name" : "HCENDosage",
   "title" : "HCEN Dosificación",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Pauta de dosificación reutilizable para las prescripciones y administraciones de medicación registradas en la Hoja de Consulta No Urgente (CNU).",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENDosageToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYDosage."
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
@@ -160,13 +170,21 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
       "id" : "Dosage.patientInstruction",
       "path" : "Dosage.patientInstruction",
       "short" : "Instrucción adicional dirigida al paciente",
-      "definition" : "Es una instrucción adicional específicamente dirigida al paciente."
+      "definition" : "Es una instrucción adicional específicamente dirigida al paciente.",
+      "mapping" : [{
+        "identity" : "HCENDosageToCDA",
+        "map" : "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text"
+      }]
     },
     {
       "id" : "Dosage.timing",
       "path" : "Dosage.timing",
       "short" : "Frecuencia de administración",
-      "definition" : "Indica cuándo y con qué frecuencia debe administrarse el medicamento."
+      "definition" : "Indica cuándo y con qué frecuencia debe administrarse el medicamento.",
+      "mapping" : [{
+        "identity" : "HCENDosageToCDA",
+        "map" : "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value"
+      }]
     },
     {
       "id" : "Dosage.asNeeded[x]",

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" role="img" aria-labelledby="hcen-cu-publicar-documentos-title hcen-cu-publicar-documentos-desc">
+  <title id="hcen-cu-publicar-documentos-title">Publicar uno o más documentos clínicos</title>
+  <desc id="hcen-cu-publicar-documentos-desc">El prestador conserva las representaciones FHIR y CDA en su repositorio y envía a Plataforma el Bundle de publicación. Plataforma verifica y registra los metadatos y devuelve la aceptación o un error.</desc>
+  <defs>
+    <linearGradient id="hcen-cu-publicar-documentos-plataforma" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#163959"/><stop offset="1" stop-color="#0057b8"/></linearGradient>
+    <marker id="hcen-cu-publicar-documentos-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 8 5 1 9" fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="418" rx="18" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+  <path d="M150 84 V402" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="45" y="22" width="210" height="62" rx="13" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <text x="150" y="49" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Prestador</text>
+  <text x="150" y="70" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Publicador y repositorio</text>
+  <path d="M610 84 V402" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="505" y="22" width="210" height="62" rx="13" fill="url(#hcen-cu-publicar-documentos-plataforma)"/>
+  <text x="610" y="49" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Plataforma</text>
+  <text x="610" y="70" text-anchor="middle" fill="#dbe9f8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Registro central</text>
+  <rect x="35.0" y="116" width="230" height="54" rx="9" fill="#fff4cf" stroke="#e0b94a" stroke-width="1.5"/>
+  <text x="150" y="140" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Conserva el documento en FHIR</text>
+  <text x="150" y="158" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">y CDA en su repositorio</text>
+  <text x="380.0" y="200" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Bundle de publicación: conjunto de envío, metadatos,</text>
+  <text x="380.0" y="218" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">documento FHIR y contexto</text>
+  <path d="M166 230 H606" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-publicar-documentos-arrow)"/>
+  <circle cx="150" cy="230" r="12" fill="#0057b8"/><text x="150" y="235" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">1</text>
+  <rect x="495.0" y="258" width="230" height="72" rx="9" fill="#fff4cf" stroke="#e0b94a" stroke-width="1.5"/>
+  <text x="610" y="282" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Verifica el envío y registra</text>
+  <text x="610" y="300" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">los metadatos; no conserva</text>
+  <text x="610" y="318" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">el documento</text>
+  <text x="380.0" y="360" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Aceptación o error</text>
+  <path d="M594 372 H154" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-publicar-documentos-arrow)"/>
+  <circle cx="610" cy="372" r="12" fill="#0057b8"/><text x="610" y="377" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">2</text>
+</svg>

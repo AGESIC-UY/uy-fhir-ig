@@ -2,16 +2,9 @@
 
 ## ValueSet: Conjunto de Valores Diagnósticos 
 
- 
-Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay). El listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en). 
-
  **References** 
 
 * [HCEN Diagnóstico](StructureDefinition-hcen-diagnostico.md)
-
-Este conjunto de valores incluye los conceptos SNOMED CT miembros del refset SNOMED CT-UY `261341000179103`. Por su tamaño, los conceptos no se listan en esta guía.
-
-Consultar el listado completo en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).
 
 ### Logical Definition (CLD)
 
@@ -19,7 +12,7 @@ Consultar el listado completo en el [navegador SNOMED CT-UY](https://snomedbrows
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -38,16 +31,59 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSDiagnosticoConsulta",
   "title" : "Conjunto de Valores Diagnósticos",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "261341000179103"
+      "version" : "http://snomed.info/sct/5631000179106/version/20260615",
+      "concept" : [{
+        "code" : "27337007",
+        "display" : "extrasístoles ventriculares unifocales"
+      },
+      {
+        "code" : "38341003",
+        "display" : "hipertensión arterial (trastorno)"
+      },
+      {
+        "code" : "302866003",
+        "display" : "hipoglicemia (trastorno)"
+      },
+      {
+        "code" : "235595009",
+        "display" : "enfermedad por reflujo gastroesofágico (trastorno)"
+      },
+      {
+        "code" : "446221000",
+        "display" : "insuficiencia cardíaca con fracción de eyección conservada (trastorno)"
+      },
+      {
+        "code" : "398057008",
+        "display" : "cefalea de tipo tensional (trastorno)"
+      },
+      {
+        "code" : "4556007",
+        "display" : "gastritis (trastorno)"
+      },
+      {
+        "code" : "413838009",
+        "display" : "cardiopatía isquémica crónica (trastorno)"
+      },
+      {
+        "code" : "1381430004",
+        "display" : "angina de pecho sin obstrucción de arterias coronarias (trastorno)"
+      },
+      {
+        "code" : "1085006",
+        "display" : "candidiasis de la vulva (trastorno)"
       }]
     }]
   }

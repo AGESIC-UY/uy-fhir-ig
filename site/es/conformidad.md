@@ -2,34 +2,73 @@
 
 ## Convenciones y conformidad
 
-Esta página explica cómo reconocer las obligaciones de la guía y qué debe revisarse para evaluar una implementación. Los requisitos concretos se documentan en el perfil, la transacción o el actor al que corresponden.
+Esta sección reúne los criterios comunes para interpretar los requisitos de la guía y comprender qué significa cumplirlos. Se aplica tanto a las definiciones del Core Uruguay como a los intercambios HCEN.
 
-**Acceso directo:** [perfiles del Core](perfiles.md) · [transacciones HCEN](hcen-transacciones.md) · [conformidad y capacidades HCEN](hcen-conformidad.md).
+Las obligaciones específicas se describen en los perfiles, las transacciones y las responsabilidades de cada actor.
+
+### Requisitos, explicaciones y ejemplos
+
+La guía combina distintos tipos de contenido. Reconocer su función permite distinguir una regla de implementación de una explicación que ayuda a entenderla.
+
+| | |
+| :--- | :--- |
+| Requisitos | Establecen las condiciones que se deben cumplir o las opciones y recomendaciones que se aplican en un contexto. Pueden expresarse en el texto o en las definiciones técnicas. |
+| Explicaciones | Aportan contexto, describen el propósito de una decisión y orientan la lectura. No agregan por sí solas obligaciones a las definidas para la implementación. |
+| Ejemplos y figuras | Ilustran una representación o un comportamiento posible. No enumeran todas las opciones ni sustituyen las reglas del perfil o de la transacción. |
+| Puntos pendientes | Identifican decisiones o definiciones todavía abiertas. Su publicación no implica que exista un acuerdo definitivo sobre ellas. |
+
+Los requisitos se leen junto con su ámbito de aplicación. Una regla de una transacción HCEN, por ejemplo, corresponde a ese intercambio y a los actores indicados.
 
 ### Lenguaje de los requisitos
 
+Para distinguir el grado de exigencia, la guía utiliza los términos de conformidad habituales en FHIR, acompañados por su equivalente en español.
+
 | | | |
 | :--- | :--- | :--- |
-| **SHALL** | Debe | Requisito obligatorio. |
-| **SHOULD** | Debería | Recomendación; apartarse de ella requiere evaluar y justificar las consecuencias. |
-| **MAY** | Puede | Opción permitida. |
-| **MUST** | Debe | Equivale a SHALL; esta guía prefiere SHALL en requisitos nuevos. |
+| **SHALL** | Debe | Expresa un requisito obligatorio dentro del ámbito indicado. |
+| **SHALL NOT** | No debe | Expresa una prohibición. |
+| **SHOULD** | Debería | Expresa una recomendación. Puede haber motivos válidos para adoptar otra opción, considerando sus consecuencias. |
+| **SHOULD NOT** | No debería | Desaconseja una opción, aunque puede haber razones justificadas para utilizarla. |
+| **MAY** | Puede | Identifica una opción permitida, cuya implementación no es obligatoria. |
 
-El texto introductorio ayuda a entender el propósito de una definición. Un ejemplo muestra una representación posible. Las secciones señaladas como pendientes identifican trabajo por resolver. Estos contenidos no establecen por sí mismos requisitos adicionales a los definidos en los artefactos y las transacciones.
+**MUST** equivale a SHALL y **MUST NOT**, a SHALL NOT. Esta guía prefiere SHALL para expresar nuevos requisitos. Estos términos se interpretan conforme al [lenguaje de conformidad de FHIR R4](https://hl7.org/fhir/R4/conformance-rules.html).
 
-### Qué se comprueba
+Las reglas de las definiciones técnicas también se aplican aunque no estén acompañadas por estas palabras. Por ejemplo, un elemento con cardinalidad `1..1` es obligatorio sin necesidad de repetir «debe» en su descripción. La interpretación de tablas, marcas y restricciones se desarrolla en [Cómo leer los perfiles](como-leer.md).
 
-1. **Estructura de los datos:**recurso o perfil base, cardinalidades, tipos, slices, referencias, valores fijos e invariantes del perfil aplicable.
-1. **Terminología:**códigos y fuerza de la vinculación con cada`ValueSet`. Por ejemplo, un vínculo`required`restringe los valores admitidos; las fuerzas`extensible`,`preferred`y`example`tienen efectos distintos que deben leerse en la definición correspondiente.
-1. **Comportamiento del sistema:**para HCEN, actor, caso de uso, transacción, respuesta y capacidades declaradas. Una instancia que cumple un perfil no demuestra por sí sola que el sistema complete el intercambio.
+### Alcance de la conformidad
 
-### Must Support: aplicación exclusiva en HCEN
+La **conformidad** expresa el cumplimiento de las reglas aplicables a un recurso o a una implementación. Para que esa afirmación sea útil, importa precisar qué se evaluó y contra qué versión de las definiciones.
 
-Los perfiles nacionales del Core no utilizan marcas **Must Support (MS)**. En esta guía, MS se reserva para los perfiles HCEN. Las obligaciones de soporte se definen según el actor y el caso de uso en [Conformidad y capacidades HCEN](hcen-conformidad.md).
+Esta guía distingue dos ámbitos complementarios:
 
-MS no implica automáticamente presencia obligatoria ni sustituye la cardinalidad. Tampoco debe confundirse con la palabra normativa MUST, que expresa un requisito obligatorio. Para interpretar un elemento MS es necesario leer la obligación asignada al actor que lo produce o consume.
+* **Representación de los datos.** Los perfiles del Core Uruguay establecen cómo estructurar información reutilizable en el contexto nacional. Cumplir un perfil incluye sus reglas y las que hereda de FHIR base o de otros perfiles.
+* **Intercambio con HCEN.** Además de representar los datos, los sistemas tienen responsabilidades sobre su envío, recepción y procesamiento. Estas se describen en los actores, las transacciones y la conformidad específica de HCEN.
 
-### Validación
+Por ejemplo, comprobar que un paciente cumple `HCENPatient` aporta evidencia sobre ese recurso. Para evaluar el registro o la actualización de pacientes también hay que comprobar el comportamiento definido para esa transacción.
 
-El [plan de verificación HCEN](hcen-conformidad.md) organiza las pruebas de recursos y comportamiento. Los contratos pendientes impiden considerar cerrados los criterios de conformidad y acreditación de esta versión en borrador.
+La integración HCEN se evalúa sobre el despliegue del prestador, que puede reunir varios productos. El alcance de esa evaluación y la distribución de responsabilidades se detallan en [Conformidad y capacidades HCEN](hcen-conformidad.md).
+
+### Must Support en esta guía
+
+La marca **Must Support (MS)**, representada con la letra S en las tablas, señala obligaciones de soporte cuyo significado se define en el contexto de la guía. En esta publicación se utiliza exclusivamente en los perfiles HCEN, donde esas obligaciones se establecen según los actores y los intercambios previstos. El Core Uruguay, por su parte, define una base de representación de datos reutilizable en distintos contextos y por ende no usa ni define ningún MS.
+
+MS no equivale a la palabra normativa MUST ni determina por sí sola que un dato deba aparecer en todas las instancias. La presencia se rige por la cardinalidad y por las obligaciones del intercambio. Tampoco permite deducir, de forma general, que todo receptor deba almacenar o mostrar todos los elementos marcados.
+
+Las obligaciones concretas de emisores y receptores, incluido el tratamiento de datos conocidos o ausentes, se establecen en [Must Support y ausencia de datos en HCEN](hcen-conformidad.md#must-support).
+
+### Validación y evidencia de cumplimiento
+
+La validación automática permite comprobar parte de los requisitos, pero la evaluación de una implementación también incluye pruebas del intercambio.
+
+| | |
+| :--- | :--- |
+| Estructura y contenido | Que el recurso respete los perfiles aplicables: datos requeridos, tipos, referencias y demás restricciones. |
+| Terminología | Que los códigos correspondan a los sistemas y conjuntos de valores definidos, según las reglas de cada elemento. |
+| Comportamiento | Que los participantes procesen las solicitudes, respuestas y situaciones de error según la transacción. |
+
+Para validar las reglas locales, la herramienta necesita las definiciones de esta guía y sus dependencias. Validar únicamente contra FHIR base no comprueba las restricciones nacionales o HCEN. Del mismo modo, declarar un perfil en `meta.profile` identifica el cumplimiento que se pretende, pero no lo demuestra.
+
+Los resultados deben interpretarse según el alcance real de la comprobación. Si no se pudo consultar una terminología o resolver una definición, esa parte de la validación queda sin verificar. Por ello, conviene conservar la versión de la guía, los recursos evaluados y los resultados de las pruebas junto con las limitaciones encontradas.
+
+El [plan de verificación HCEN](hcen-conformidad.md) desarrolla la evidencia específica de los intercambios. La especificación base amplía los [alcances de la validación FHIR](https://hl7.org/fhir/R4/validation.html).
 

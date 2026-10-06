@@ -2,8 +2,7 @@
 
 ## Perfil de los recursos: Perfil Rol del Profesional de Salud para Uruguay 
 
- 
-Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios. 
+Este perfil representa la función de un profesional en un contexto organizacional. Los datos personales se mantienen en [UYPractitioner](StructureDefinition-uy-practitioner.md) y los de la institución en [UYOrganization](StructureDefinition-uy-organization.md). Esta separación permite representar distintas vinculaciones de un mismo profesional sin repetir sus datos personales.
 
 **Usages:**
 
@@ -108,8 +107,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-practitioner-r
   "name" : "UYPractitionerRole",
   "title" : "Perfil Rol del Profesional de Salud para Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

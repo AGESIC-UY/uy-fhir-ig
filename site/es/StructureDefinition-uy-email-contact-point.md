@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: Contacto por Correo Electrónico (Uruguay) 
 
- 
-Detalles de contacto por correo electrónico de una persona u organización. 
-
 **Usages:**
 
 * Use this DataType Profile: [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md), [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md), [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
@@ -82,8 +79,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-email-contact-
   "name" : "UYEmailContactPoint",
   "title" : "Contacto por Correo Electrónico (Uruguay)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Detalles de contacto por correo electrónico de una persona u organización.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

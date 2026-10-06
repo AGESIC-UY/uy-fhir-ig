@@ -1,4 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,8 +19,48 @@
   fhir:language [ fhir:v "es"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Persona Ejemplo Prueba</b></p><p>Identificador institucional: PACIENTE-SINTETICO-001. Sistema emisor: https://example.org/institucion/identificadores/pacientes.</p><p>Identificador nacional extranjero de ejemplo: ARG-EJEMPLO-001. Sistema emisor: urn:oid:2.16.858.1.032.68909.</p><p>Nombre de pila: Persona. Primer apellido: Ejemplo. Segundo apellido: Prueba.</p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es\"><p><b>Paciente Ejemplo</b></p><p>Nombre de pila: Juan Carlos. Apellido: Pérez Rodríguez.</p><p>Sexo asignado al nacer: Masculino.</p><p>Sexo administrativo: Masculino.</p><p>Fecha de nacimiento: 1980-01-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.perez@example.com</p></div>"^^rdf:XMLLiteral ]
   ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/administrative-gender>
+           ] ;
+           fhir:code [ fhir:v "male" ] ;
+           fhir:display [ fhir:v "Male" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:76689-9 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "76689-9" ] ;
+           fhir:display [ fhir:v "Sex Assigned At Birth" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender>
+     ]
+  ] ) ; # 
   fhir:identifier ( [
      fhir:type [
        fhir:coding ( [
@@ -35,7 +76,7 @@
        fhir:v "https://example.org/institucion/identificadores/pacientes"^^xsd:anyURI ;
        fhir:l <https://example.org/institucion/identificadores/pacientes>
      ] ;
-     fhir:value [ fhir:v "PACIENTE-SINTETICO-001" ]
+     fhir:value [ fhir:v "MRN1234" ]
   ] [
      fhir:type [
        fhir:coding ( [
@@ -48,14 +89,14 @@
        ] )
      ] ;
      fhir:system [
-       fhir:v "urn:oid:2.16.858.1.032.68909"^^xsd:anyURI ;
-       fhir:l <urn:oid:2.16.858.1.032.68909>
+       fhir:v "urn:oid:2.16.858.2.10000675.68909"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.2.10000675.68909>
      ] ;
-     fhir:value [ fhir:v "ARG-EJEMPLO-001" ]
+     fhir:value [ fhir:v "1234567-8" ]
   ] ) ; # 
   fhir:name ( [
      fhir:family [
-       fhir:v "Ejemplo Prueba" ;
+       fhir:v "Pérez Rodríguez" ;
        fhir:extension ( [
          fhir:url [
            fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido"^^xsd:anyURI ;
@@ -63,7 +104,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Ejemplo"
+           fhir:v "Pérez"
          ]
        ] [
          fhir:url [
@@ -72,11 +113,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Prueba"
+           fhir:v "Rodríguez"
          ]
        ] )
      ] ;
-     fhir:given ( [ fhir:v "Persona" ] )
+     fhir:given ( [ fhir:v "Juan" ] [ fhir:v "Carlos" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+598 99 123 456" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "juan.perez@example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1980-01-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Calle Falsa 1234" ] ) ;
+     fhir:city [ fhir:v "MONTEVIDEO" ] ;
+     fhir:state [ fhir:v "Montevideo" ] ;
+     fhir:country [ fhir:v "URY" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

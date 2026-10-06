@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Rol del Profesional 
 
- 
-Referencias simples de roles y especialidades en salud (metadato fundacional) para PractitionerRole.code. 
-
  **References** 
 
 * [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md)
@@ -34,8 +31,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "RolProfesional",
   "title" : "Conjunto de Valores Rol del Profesional",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Referencias simples de roles y especialidades en salud (metadato fundacional) para PractitionerRole.code.",
   "compose" : {
     "include" : [{

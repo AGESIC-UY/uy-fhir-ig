@@ -4,25 +4,32 @@
 
 Esta sección explica qué cubre la guía y cómo encontrar la información necesaria para una implementación. Está dirigida tanto a quienes comienzan con FHIR como a quienes necesitan localizar una regla técnica concreta.
 
-**Acceso directo:** [perfiles del Core](perfiles.md) · [transacciones HCEN](hcen-transacciones.md) · [índice de artefactos](artifacts.md).
+**Acceso directo:** [perfiles nacionales](perfiles.md) · [introducción a HCEN](hcen.md) · [índice de artefactos](artifacts.md).
 
-### Qué cubre cada bloque
+### Core Uruguay
 
-| | | |
-| :--- | :--- | :--- |
-| [Core Uruguay](introduccion.md) | ¿Cómo se representan datos de uso nacional? | Identificadores, datos comunes, perfiles, extensiones, terminología y ejemplos. |
-| [HCEN](hcen.md) | ¿Cómo se utilizan esos datos en un intercambio con la plataforma? | Actores, casos de uso, transacciones, perfiles adicionales y capacidades de los sistemas. |
+El Core reúne las definiciones generales para representar información de salud en el contexto uruguayo. Aborda decisiones que pueden aparecer en distintas implementaciones: cómo identificar a una persona u organización, cómo estructurar un nombre o una dirección y qué terminología utilizar. Publica [perfiles nacionales](perfiles.md), [identificadores y datos comunes](identificadores.md), [extensiones](extensiones.md), [terminología](terminologia.md) y [ejemplos](ejemplos.md).
 
-No es necesario empezar por el Core para interoperar con HCEN. Se puede saltar directamente a la Guía HCEN, y al
+### Guía HCEN
+
+La Guía HCEN reúne las definiciones necesarias para implementar la interoperabilidad con HCEN sobre FHIR. Documenta [actores](hcen-actores.md), [casos de uso](hcen-casos-de-uso.md), [transacciones](hcen-transacciones.md) y [perfiles propios](hcen-perfiles.md). Sus reglas incluyen tanto la estructura de los datos como las responsabilidades de los sistemas durante el intercambio.
+
+En esta versión, el recorrido HCEN cubre el registro y actualización de pacientes, la publicación de documentos, la consulta de metadatos y la recuperación de documentos.
+
+#### HCEN puede implementarse directamente
+
+Si el objetivo es integrar un sistema con la Plataforma HCEN, **se puede empezar por la Guía HCEN**, no se requiere implementar el Core como una etapa previa. Las definiciones nacionales que correspondan se aplican dentro de la implementación HCEN, porque sus perfiles las heredan o las reutilizan.
+
+Por ejemplo, [HCENPatient](StructureDefinition-hcen-patient.md) deriva de [UYPatient](StructureDefinition-uy-patient.md). Una instancia que cumple el perfil HCEN cumple también las restricciones heredadas del perfil nacional Core UY.
 
 ### Recorrido sugerido
 
 1. Para conocer el vocabulario, comenzar por los[conceptos básicos de FHIR](conceptos-fhir.md).
-1. Para interpretar una definición técnica, seguir[cómo leer los perfiles](como-leer.md)y las[convenciones de conformidad](conformidad.md).
-1. Para representar información, identificar el[perfil nacional](perfiles.md)y consultar los[datos comunes](identificadores.md)que utiliza.
-1. Para implementar un intercambio, continuar con el[caso de uso](hcen-casos-de-uso.md), la[transacción](hcen-transacciones.md)y las obligaciones HCEN correspondientes.
+1. Para interpretar una definición técnica, seguir con[cómo leer los perfiles](como-leer.md)y las[convenciones de conformidad](conformidad.md).
+1. Para representar información general, identificar el[perfil nacional](perfiles.md)y consultar los[datos comunes](identificadores.md)que utiliza.
+1. Para implementar los intercambios con HCEN, comprender los[casos de uso](hcen-casos-de-uso.md), las[transacciones](hcen-transacciones.md)y las obligaciones HCEN correspondientes.
 
 ### Límites de esta versión
 
-La guía utiliza **FHIR R4 (4.0.1)** y se publica como borrador. El Core contiene una primera base reutilizable. HCEN incluye perfiles y cuatro transacciones para pacientes y documentos, con contratos operativos, seguridad y criterios de acreditación aún por cerrar. Los materiales históricos son referencias de trabajo; solo forman parte de esta guía las decisiones incorporadas expresamente en sus páginas y artefactos.
+Esta publicación es un **borrador de desarrollo**. El Core contiene una primera base nacional y la Guía HCEN documenta únicamente las transacciones básicas. Las definiciones presentes en estas guías pueden presentar cambios sustanciales mientras el borrador esté en desarrollo.
 

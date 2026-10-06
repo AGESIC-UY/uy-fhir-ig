@@ -1,12 +1,14 @@
-# Consultar metadatos documentales - Guía de Implementación FHIR de Uruguay v0.1.0
+# Consultar metadatos - Guía de Implementación FHIR de Uruguay v0.1.0
 
-## Consultar metadatos documentales
+## Consultar metadatos
 
-Esta transacción permite encontrar metadatos DocumentReference registrados en Plataforma. El prestador utiliza la respuesta para seleccionar documentos; recuperar el contenido corresponde a [HCEN-TX-68](hcen-iti-68.md).
+Esta transacción permite encontrar metadatos DocumentReference registrados en Plataforma. El prestador utiliza la respuesta para seleccionar documentos; recuperar el contenido corresponde a [Recuperar documentos](hcen-iti-68.md).
 
 ### Actores y solicitud
 
 El prestador consulta y Plataforma responde. La consulta inicial propuesta identifica al paciente con su MRN local mediante `patient.identifier`, usando el token `system|value` codificado en la URL.
+
+Consulta de metadatos de los documentos de un paciente.
 
 ```
 GET [base]/DocumentReference?patient.identifier=[system-codificado]%7C[valor-codificado]
@@ -36,7 +38,7 @@ Una búsqueda válida sin coincidencias produce un conjunto vacío, no un error 
 
 ### Errores y verificación
 
-El [OperationOutcome de parámetro no admitido](OperationOutcome-iti67-error-parametro.md) es ilustrativo; el contrato debe decidir cuándo rechazar un parámetro y cuándo informar que no fue aplicado. No debe inferirse un estado HTTP a partir de `issue.code`.
+El OperationOutcome de parámetro no admitido (material de desarrollo reservado para una versión futura) es ilustrativo; el contrato debe decidir cuándo rechazar un parámetro y cuándo informar que no fue aplicado. No debe inferirse un estado HTTP a partir de `issue.code`.
 
 Las pruebas deben cubrir una coincidencia, resultado vacío, dominio y valor MRN, mensajes `outcome` y navegación entre páginas cuando se acuerde la paginación. Consultar los [ejemplos](hcen-ejemplos.md). Los filtros definitivos y la declaración formal de capacidades quedan pendientes para una versión posterior.
 

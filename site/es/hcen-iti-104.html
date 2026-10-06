@@ -107,6 +107,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -206,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -257,7 +288,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -287,7 +318,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -299,7 +330,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -313,9 +359,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -325,6 +368,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -390,16 +436,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#actores-y-precondiciones" id="markdown-toc-actores-y-precondiciones">Actores y precondiciones</a></li>
   <li><a href="#solicitud" id="markdown-toc-solicitud">Solicitud</a></li>
+  <li><a href="#mapeo-desde-inus" id="markdown-toc-mapeo-desde-inus">Mapeo desde INUS</a></li>
   <li><a href="#respuesta-y-errores" id="markdown-toc-respuesta-y-errores">Respuesta y errores</a></li>
   <li><a href="#verificación-y-límites" id="markdown-toc-verificación-y-límites">Verificación y límites</a></li>
 </ul>
 
 </div>
-<p>Esta transacción permite registrar o actualizar la identificación y los datos demográficos de un paciente del prestador en Plataforma. Toma como referencia la alimentación de pacientes de <a href="https://profiles.ihe.net/ITI/PIXm/3.1.0/ITI-104.html">PIXm ITI-104, versión 3.1.0</a>.</p>
+<p>Esta transacción permite registrar o actualizar la identificación y los datos demográficos de un paciente del prestador en Plataforma. Toma como referencia de diseño, sin declarar conformidad con PIXm, la alimentación de pacientes de <a href="https://profiles.ihe.net/ITI/PIXm/3.1.0/ITI-104.html">PIXm ITI-104, versión 3.1.0</a>.</p>
 
 <h3 id="actores-y-precondiciones">Actores y precondiciones</h3>
 
-<p>El prestador actúa como fuente de identidad y Plataforma administra los registros e identidades. El prestador debe (SHALL) usar su MRN local y un dominio autorizado conforme a <a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a>. El cuerpo debe (SHALL) cumplir <a href="StructureDefinition-hcen-patient.html">HCENPatient</a>.</p>
+<p>El prestador actúa como fuente de identidad y Plataforma administra los registros e identidades. El prestador debe (SHALL) usar su MRN local y un dominio autorizado por Plataforma. <a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a> controla su formato; la autorización se verifica mediante lógica interna de Plataforma, como se explica en <a href="hcen-identificadores.html">Identificadores HCEN</a>. El cuerpo debe (SHALL) cumplir <a href="StructureDefinition-hcen-patient.html">HCENPatient</a>.</p>
+
+<figure style="margin:0 0 1em;">
+  <img src="hcen-cu-registrar-paciente.svg" alt="El prestador envía a Plataforma el paciente con su MRN y los datos conocidos. Plataforma crea o actualiza el registro y devuelve el resultado." style="width:100%;max-width:760px;height:auto;" />
+  <figcaption>Registro o actualización de un paciente.</figcaption>
+</figure>
 
 <h3 id="solicitud">Solicitud</h3>
 
@@ -414,6 +466,67 @@ Content-Type: application/fhir+json
 
 <p>La solicitud representa el estado actualizado del recurso, no un parche parcial. El emisor debe (SHALL) enviar los datos MS que conoce; su ausencia no permite eliminar requisitos obligatorios. Consultar <a href="hcen-conformidad.html#must-support">Must Support</a>.</p>
 
+<p>El MRN es el único dato demográfico obligatorio del perfil. Nombre, nacimiento y sexo administrativo se envían cuando se conocen según MS, con los mismos mínimos para registro y publicación. En una emergencia, la ausencia de esos datos no impide registrar al paciente identificado por su MRN.</p>
+
+<p><a id="mapeo-inus"></a></p>
+<h3 id="mapeo-desde-inus">Mapeo desde INUS</h3>
+
+<p>El mapeo conserva el significado de los datos de la mensajería INUS-EMPI en su representación FHIR. No traslada automáticamente las cardinalidades de los campos HL7 v2 al perfil HCENPatient.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dato INUS</th>
+      <th>Representación FHIR</th>
+      <th>Orientación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PID-3, MRN y AA</td>
+      <td><code class="language-plaintext highlighter-rouge">identifier[mrn].value</code> y <code class="language-plaintext highlighter-rouge">identifier[mrn].system</code></td>
+      <td>El número local se informa en value y el OID de la AA como URI urn:oid: en system.</td>
+    </tr>
+    <tr>
+      <td>PID-3, otros identificadores</td>
+      <td>Slices de <code class="language-plaintext highlighter-rouge">identifier</code> correspondientes</td>
+      <td>Conservar el número y su sistema emisor; no sustituir el MRN obligatorio.</td>
+    </tr>
+    <tr>
+      <td>PID-5, nombres y primer apellido</td>
+      <td><code class="language-plaintext highlighter-rouge">name.given</code> y <code class="language-plaintext highlighter-rouge">name.family.extension[primerApellido]</code></td>
+      <td>Conservar el orden de los nombres y expresar también los apellidos en family.</td>
+    </tr>
+    <tr>
+      <td>PID-6, usado para segundo apellido</td>
+      <td><code class="language-plaintext highlighter-rouge">name.family.extension[segundoApellido]</code></td>
+      <td>No utilizar Mother's Maiden Name: el segundo apellido no expresa por sí solo el apellido de soltera de la madre.</td>
+    </tr>
+    <tr>
+      <td>PID-7, nacimiento</td>
+      <td><code class="language-plaintext highlighter-rouge">birthDate</code></td>
+      <td>Convertir AAAAMMDD a AAAA-MM-DD cuando se conoce la fecha completa.</td>
+    </tr>
+    <tr>
+      <td>PID-8, sexo administrativo ISO 5218</td>
+      <td><code class="language-plaintext highlighter-rouge">gender</code></td>
+      <td>0 → unknown; 1 → male; 2 → female. El valor 9 (no aplica) no tiene equivalencia exacta con los códigos FHIR; no convertirlo automáticamente a other.</td>
+    </tr>
+    <tr>
+      <td>PID-11, dirección</td>
+      <td><code class="language-plaintext highlighter-rouge">address</code></td>
+      <td>Representar la dirección con las reglas del Core y conservar su uso cuando exista una correspondencia.</td>
+    </tr>
+    <tr>
+      <td>PID-13, contactos</td>
+      <td><code class="language-plaintext highlighter-rouge">telecom</code></td>
+      <td>Distinguir teléfono y correo electrónico y conservar sus valores.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>El mapeo no agrega obligatoriedad al segundo apellido ni a los demás datos demográficos opcionales. Los datos desconocidos se tratan según <a href="hcen-conformidad.html#must-support">Must Support</a>.</p>
+
 <h3 id="respuesta-y-errores">Respuesta y errores</h3>
 
 <p>La semántica propuesta sigue la <a href="https://hl7.org/fhir/R4/http.html#cond-update">actualización condicional FHIR R4</a>: cero coincidencias permite crear el paciente, una coincidencia permite actualizarlo y más de una impide seleccionar el destino.</p>
@@ -427,7 +540,7 @@ Content-Type: application/fhir+json
   </thead>
   <tbody>
     <tr>
-      <td>Alta</td>
+      <td>Registro inicial</td>
       <td>201 Created; identificación del recurso según FHIR.</td>
     </tr>
     <tr>
@@ -445,11 +558,11 @@ Content-Type: application/fhir+json
   </tbody>
 </table>
 
-<p>El prestador debería (SHOULD) completar esta transacción antes de publicar documentos. Plataforma dispone del mecanismo de respaldo indicado en <a href="hcen-iti-65.html">Publicación</a>; su política de coincidencia no se deduce del perfil Patient.</p>
+<p>El prestador debería (SHOULD) completar esta transacción antes de publicar documentos. El mecanismo de respaldo de Plataforma se describe como propuesta en en <a href="hcen-iti-65.html">Publicación</a>; su política de coincidencia no se deduce del perfil Patient.</p>
 
 <h3 id="verificación-y-límites">Verificación y límites</h3>
 
-<p>Las pruebas deben cubrir alta, actualización, discordancia entre token y cuerpo, MRN no autorizado, datos MS conocidos y múltiples coincidencias. El <a href="Patient-hcen-paciente-ejemplo.html">ejemplo de paciente</a> ilustra el cuerpo; el <a href="OperationOutcome-iti104-error-coincidencia-multiple.html">resultado de coincidencia múltiple</a> ilustra el error.</p>
+<p>Las pruebas deben cubrir registro inicial, actualización, discordancia entre token y cuerpo, MRN no autorizado, datos MS conocidos y múltiples coincidencias. El ejemplo de paciente (material de desarrollo reservado para una versión futura) ilustra el cuerpo; el resultado de coincidencia múltiple (material de desarrollo reservado para una versión futura) ilustra el error.</p>
 
 <p>Quedan pendientes la política de concurrencia, las reglas de unificación y los contratos de fusión, inactivación y eliminación. La existencia de <code class="language-plaintext highlighter-rouge">Patient.link</code> no declara esos flujos como implementados.</p>
 
@@ -478,11 +591,11 @@ Content-Type: application/fhir+json
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

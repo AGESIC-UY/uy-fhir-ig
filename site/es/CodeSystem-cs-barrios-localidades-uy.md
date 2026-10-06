@@ -2,9 +2,6 @@
 
 ## CodeSystem: Sistema de códigos de barrios y localidades postales de Uruguay 
 
- 
-Barrios y localidades presentes en el listado nacional de códigos postales del Correo Uruguayo. 
-
 Se hace referencia a este sistema de códigos en la definición de los siguientes conjuntos de valores:
 
 * [VSBarriosLocalidadesUY](ValueSet-vs-barrios-localidades-uy.md)
@@ -26,8 +23,15 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "name" : "CSBarriosLocalidadesUY",
   "title" : "Sistema de códigos de barrios y localidades postales de Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Barrios y localidades presentes en el listado nacional de códigos postales del Correo Uruguayo.",
   "copyright" : "Fuente: Correo Uruguayo, listado de códigos postales consultado el 2026-09-21.",
   "caseSensitive" : true,

@@ -2,9 +2,6 @@
 
 ## ValueSet: Formato del documento FHIR HCEN (Experimental) 
 
- 
-Formato técnico de la representación FHIR referenciada por DocumentReference.content.attachment.url. La selección inicial utiliza el código IHE para indicar que el tipo MIME es suficiente; no declara perfiles clínicos CDA ni C-CDA. 
-
  **References** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
@@ -33,8 +30,15 @@ Formato técnico de la representación FHIR referenciada por DocumentReference.c
   "title" : "Formato del documento FHIR HCEN",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Formato técnico de la representación FHIR referenciada por DocumentReference.content.attachment.url. La selección inicial utiliza el código IHE para indicar que el tipo MIME es suficiente; no declara perfiles clínicos CDA ni C-CDA.",
   "compose" : {
     "include" : [{

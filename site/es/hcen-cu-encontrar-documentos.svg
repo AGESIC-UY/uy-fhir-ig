@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="332" viewBox="0 0 760 332" role="img" aria-labelledby="hcen-cu-encontrar-documentos-title hcen-cu-encontrar-documentos-desc">
+  <title id="hcen-cu-encontrar-documentos-title">Encontrar documentos de un paciente</title>
+  <desc id="hcen-cu-encontrar-documentos-desc">El prestador solicitante consulta a Plataforma por el MRN del paciente. Plataforma devuelve los metadatos de los documentos coincidentes, que pueden ser ninguno. El solicitante elige qué documento recuperar.</desc>
+  <defs>
+    <linearGradient id="hcen-cu-encontrar-documentos-plataforma" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#163959"/><stop offset="1" stop-color="#0057b8"/></linearGradient>
+    <marker id="hcen-cu-encontrar-documentos-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 8 5 1 9" fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="330" rx="18" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+  <path d="M150 84 V314" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="45" y="22" width="210" height="62" rx="13" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <text x="150" y="49" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Prestador solicitante</text>
+  <text x="150" y="70" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Consultante</text>
+  <path d="M610 84 V314" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="505" y="22" width="210" height="62" rx="13" fill="url(#hcen-cu-encontrar-documentos-plataforma)"/>
+  <text x="610" y="49" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Plataforma</text>
+  <text x="610" y="70" text-anchor="middle" fill="#dbe9f8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Registro central</text>
+  <text x="380.0" y="130" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Consulta por el MRN del paciente</text>
+  <path d="M166 142 H606" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-encontrar-documentos-arrow)"/>
+  <circle cx="150" cy="142" r="12" fill="#0057b8"/><text x="150" y="147" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">1</text>
+  <text x="380.0" y="184" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Metadatos de los documentos encontrados</text>
+  <text x="380.0" y="202" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">(el resultado puede estar vacío)</text>
+  <path d="M594 214 H154" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-encontrar-documentos-arrow)"/>
+  <circle cx="610" cy="214" r="12" fill="#0057b8"/><text x="610" y="219" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">2</text>
+  <rect x="35.0" y="242" width="230" height="54" rx="9" fill="#fff4cf" stroke="#e0b94a" stroke-width="1.5"/>
+  <text x="150" y="266" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Elige qué documento</text>
+  <text x="150" y="284" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="14">recuperar</text>
+</svg>

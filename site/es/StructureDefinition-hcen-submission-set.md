@@ -2,13 +2,17 @@
 
 ## Perfil de los recursos: Conjunto de envío HCEN 
 
- 
-Lista HCEN que agrupa referencias documentales para su envío. Reutiliza extensiones y tipos de identificador oficiales de IHE MHD sin declarar conformidad integral con el perfil IHE. 
+### Agrupación y autoría
+
+Este conjunto enumera todos y solo los DocumentReference miembros del envío, cada uno una única vez y sin significado en el orden. No incluye carpetas ni entradas eliminadas. Su uniqueId es S, un identificador propio distinto de [oid_documento_clinico], y utiliza HCENDocumentIdentifier. Su entryUUID técnico obligatorio utiliza HCENSubmissionSetIdentifier con formato `urn:uuid:2.[oid_documento_clinico]`, derivado de [oid_documento_clinico] de cualquiera de sus miembros. Esta forma es una convención histórica HCEN/XDS, no un UUID RFC estándar.
+
+La clasificación se expresa con la extensión IHE `designationType`. El tipo fijo de List, `submissionset`, identifica la función de la lista y no sustituye esa clasificación. `homeCommunityId` identifica la comunidad de origen y es obligatorio.
+
+`source` referencia al HCENPractitionerRole que creó el conjunto. En publicación, ese rol, su Practitioner y su Organization deben estar incluidos como entradas del envío. List admite una sola referencia `source`; los recursos Practitioner u Organization adicionales del Bundle no se interpretan como autores del conjunto ni sustituyen al rol obligatorio.
 
 **Usages:**
 
 * Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
-* Examples for this Profile: [List/hcen-conjunto-ejemplo](List-hcen-conjunto-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-submission-set)
 
@@ -36,8 +40,8 @@ Esta estructura se deriva de [List](http://hl7.org/fhir/R4/list.html) .
 
 ** Summary **
 
-Mandatory: 10 elements
- Must-Support: 3 elements
+Mandatory: 13 elements
+ Must-Support: 1 element
  Fixed: 2 elements
  Prohibited: 2 elements
 
@@ -46,9 +50,8 @@ Mandatory: 10 elements
 This structure refers to these other structures:
 
 * [EntryUUID del conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-identifier)](StructureDefinition-hcen-submission-set-identifier.md)
-* [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
+* [Identificador global del conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-unique-id-identifier)](StructureDefinition-hcen-submission-set-unique-id-identifier.md)
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
-* [Perfil Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner)](StructureDefinition-hcen-practitioner.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
 
@@ -56,6 +59,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
+* [http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id](StructureDefinition-ext-home-community-id.md)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-designationType.html)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-sourceId.html)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-intendedRecipient.html)
@@ -86,8 +90,8 @@ Esta estructura se deriva de [List](http://hl7.org/fhir/R4/list.html) .
 
 ** Summary **
 
-Mandatory: 10 elements
- Must-Support: 3 elements
+Mandatory: 13 elements
+ Must-Support: 1 element
  Fixed: 2 elements
  Prohibited: 2 elements
 
@@ -96,9 +100,8 @@ Mandatory: 10 elements
 This structure refers to these other structures:
 
 * [EntryUUID del conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-identifier)](StructureDefinition-hcen-submission-set-identifier.md)
-* [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
+* [Identificador global del conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-unique-id-identifier)](StructureDefinition-hcen-submission-set-unique-id-identifier.md)
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
-* [Perfil Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner)](StructureDefinition-hcen-practitioner.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
 
@@ -106,6 +109,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
+* [http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id](StructureDefinition-ext-home-community-id.md)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-designationType.html)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-sourceId.html)
 * [https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-intendedRecipient](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-ihe-intendedRecipient.html)
@@ -120,14 +124,6 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
 Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-set.csv), [Excel](../StructureDefinition-hcen-submission-set.xlsx), [Schematron](../StructureDefinition-hcen-submission-set.sch) 
 
-### Notas:
-
-### Agrupación de documentos
-
-Este conjunto contiene uno o más DocumentReference del envío, sin carpetas ni entradas eliminadas. Su entryUUID técnico utiliza HCENSubmissionSetIdentifier con formato `urn:uuid:2.[oid_documento_clinico]` y su uniqueId documental utiliza HCENDocumentIdentifier.
-
-La clasificación se expresa con la extensión IHE designationType. El tipo fijo de List, submissionset, identifica la función de la lista y no sustituye esa clasificación.
-
 
 
 ## Resource Content
@@ -141,8 +137,15 @@ La clasificación se expresa con la extensión IHE designationType. El tipo fijo
   "name" : "HCENSubmissionSet",
   "title" : "Conjunto de envío HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Lista HCEN que agrupa referencias documentales para su envío. Reutiliza extensiones y tipos de identificador oficiales de IHE MHD sin declarar conformidad integral con el perfil IHE.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -216,7 +219,20 @@ La clasificación se expresa con la extensión IHE designationType. El tipo fijo
       },
       "short" : "Contenido adicional definido por implementaciones.",
       "definition" : "Contenido adicional definido por implementaciones.",
-      "min" : 2
+      "min" : 3
+    },
+    {
+      "id" : "List.extension:homeCommunityId",
+      "path" : "List.extension",
+      "sliceName" : "homeCommunityId",
+      "short" : "Comunidad de origen del conjunto.",
+      "definition" : "Identificador de la comunidad desde la cual se accede a los documentos del conjunto.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id"]
+      }]
     },
     {
       "id" : "List.extension:designationType",
@@ -276,33 +292,32 @@ La clasificación se expresa con la extensión IHE designationType. El tipo fijo
       },
       "short" : "Identificadores para este conjunto de documentos.",
       "definition" : "Identificadores para este conjunto de documentos.",
-      "min" : 1
+      "min" : 2
     },
     {
       "id" : "List.identifier:entryUUID",
       "path" : "List.identifier",
       "sliceName" : "entryUUID",
-      "short" : "EntryUUID opcional con formato urn:uuid:2.[oid_documento_clinico].",
-      "definition" : "Identificador técnico opcional del conjunto, derivado del OID clínico con el formato urn:uuid:2.[oid_documento_clinico].",
-      "min" : 0,
+      "short" : "EntryUUID con formato urn:uuid:2.[oid_documento_clinico].",
+      "definition" : "Identificador técnico obligatorio del conjunto, derivado del OID [oid_documento_clinico] de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]. No existe primer documento obligatorio, documento principal ni orden relevante.",
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "Identifier",
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-identifier"]
-      }],
-      "mustSupport" : true
+      }]
     },
     {
       "id" : "List.identifier:uniqueId",
       "path" : "List.identifier",
       "sliceName" : "uniqueId",
-      "short" : "OID documental del conjunto.",
-      "definition" : "Identificador documental del conjunto, representado mediante HCENDocumentIdentifier.",
+      "short" : "OID global S propio del SubmissionSet.",
+      "definition" : "OID global S propio del SubmissionSet, distinto del identificador documental [oid_documento_clinico], representado mediante HCENSubmissionSetUniqueIdIdentifier.",
       "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "Identifier",
-        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier"]
+        "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-unique-id-identifier"]
       }]
     },
     {
@@ -375,14 +390,17 @@ La clasificación se expresa con la extensión IHE designationType. El tipo fijo
       "id" : "List.source",
       "path" : "List.source",
       "short" : "Autor que creó el conjunto de envío.",
-      "definition" : "Autor que creó el conjunto de envío.",
+      "definition" : "Referencia obligatoria a HCENPractitionerRole, que identifica al profesional y su institución como autor del conjunto. Los recursos Practitioner u Organization adicionales del envío no sustituyen esta referencia.",
+      "min" : 1,
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner",
-        "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role",
-        "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
-      }],
-      "mustSupport" : true
+        "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"]
+      }]
+    },
+    {
+      "id" : "List.source.reference",
+      "path" : "List.source.reference",
+      "min" : 1
     },
     {
       "id" : "List.orderedBy",

@@ -107,6 +107,37 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 .uy-scope-figure { max-width:640px; margin:24px auto 28px; }
 .uy-scope-figure img { display:block; width:100%; height:auto; }
 .uy-scope-figure figcaption { margin-top:10px; color:#40566b; font-size:14px; line-height:1.5; text-align:center; }
+#segment-content figcaption { font-size:13px; font-weight:700; line-height:1.5; margin-top:8px; margin-bottom:24px; }
+/* Mapeos (p.ej. CDA R2): las rutas de destino son cadenas largas sin espacios;
+   se ajustan en varias líneas en vez de extender la tabla hacia la derecha. */
+#segment-content table[id$="M"] { max-width:100%; }
+#segment-content table[id$="M"] td { overflow-wrap:anywhere; word-break:break-word; }
+/* HCENConsultaNoUrgente: se oculta la columna de mapeo heredada de
+   Composition (FHIR base) que HCEN no utiliza — FiveWs Pattern Mapping
+   (6ª y última columna de esta tabla; no tiene columna XDS metadata
+   equivalent, esa es propia de perfiles de DocumentReference). No hay
+   forma de quitarla del arreglo StructureDefinition.mapping heredado
+   vía FSH. */
+#segment-content table#uy-consulta-no-urgenteM > tr > :is(th,td):nth-child(6) { display:none; }
+/* Ejemplo de HCENConsultaNoUrgente: la narrativa (Composition.text) simula un
+   documento clínico con secciones — ver Composition-hcen-cnu-ejemplo-consulta.html
+   y la pestaña Ejemplos de StructureDefinition-uy-consulta-no-urgente.html. */
+.uy-clinical-doc { max-width:760px; margin:20px 0 28px; border:1px solid #d9e3ee; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px #16395912; background:#fff; }
+.uy-clinical-doc__header { margin:0; padding:16px 22px; background:linear-gradient(110deg,#002b6e,#0057b8 70%,#0072ce); border-bottom:3px solid #f5a623; }
+.uy-clinical-doc__title { margin:0; color:#fff; font-size:18px; font-weight:650; }
+.uy-clinical-doc__subtitle { margin:4px 0 0; color:#e3efff; font-size:12.5px; }
+.uy-clinical-doc__section { padding:14px 22px; border-top:1px solid #e4ebf2; }
+.uy-clinical-doc__section:first-of-type { border-top:0; }
+.uy-clinical-doc__section--patient,.uy-clinical-doc__section--encounter { background:#f5f8fc; }
+.uy-clinical-doc__section-title { margin:0 0 8px; color:#163959; font-size:13px; font-weight:650; text-transform:uppercase; letter-spacing:.4px; }
+.uy-clinical-doc__section p { margin:0; color:#24374a; line-height:1.55; }
+.uy-clinical-doc__fields { display:grid; grid-template-columns:max-content 1fr; column-gap:16px; row-gap:4px; margin:0; }
+.uy-clinical-doc__fields dt { color:#4d6073; font-weight:600; }
+.uy-clinical-doc__fields dd { margin:0; color:#24374a; }
+.uy-clinical-doc__section--followup { background:#fff8e8; }
+@media(max-width:560px) {
+  .uy-clinical-doc__fields { grid-template-columns:1fr; }
+}
 /* Tablas narrativas: opción «Líneas finas». Las tablas de jerarquía generadas conservan sus controles y estilos. */
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) { width:100%; max-width:100%; margin:14px 0 22px; border-collapse:collapse; }
 #segment-content table:not([class]):not([data-fhir]):not([fhir]):not([border]) :is(th,td) { padding:10px 13px; border:0; text-align:left; vertical-align:top; }
@@ -206,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Borrador de desarrollo
+            <span style="display:inline-block;">0.1.0 - Versión inicial
 
 
             </span>
@@ -257,7 +288,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core UY
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Core Uruguay
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -287,7 +318,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="hcen.html">Introducción a HCEN</a>
+        <a href="hcen.html">Introducción</a>
       </li>
       <li>
         <a href="hcen-actores.html">Actores y responsabilidades</a>
@@ -299,7 +330,22 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <a href="hcen-transacciones.html">Transacciones</a>
       </li>
       <li>
-        <a href="hcen-perfiles.html">Perfiles HCEN</a>
+        <a href="hcen-iti-104.html">— Registrar o actualizar pacientes</a>
+      </li>
+      <li>
+        <a href="hcen-iti-65.html">— Publicar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-67.html">— Consultar metadatos</a>
+      </li>
+      <li>
+        <a href="hcen-iti-68.html">— Recuperar documentos</a>
+      </li>
+      <li>
+        <a href="hcen-perfiles.html">Perfiles</a>
+      </li>
+      <li>
+        <a href="hcen-identificadores.html">Identificadores</a>
       </li>
       <li>
         <a href="hcen-documentos-clinicos.html">Documentos clínicos</a>
@@ -313,9 +359,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
-      <li>
-        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -325,6 +368,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <ul class="dropdown-menu">
       <li>
         <a href="artifacts.html">Índice de artefactos</a>
+      </li>
+      <li>
+        <a href="hcen-glosario.html">Glosario</a>
       </li>
       <li>
         <a href="descargas.html">Descargas</a>
@@ -393,9 +439,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Los perfiles HCEN agregan las restricciones del intercambio a los recursos nacionales o a FHIR R4. Para datos de personas y organizaciones se utilizan los derivados del Core; para publicar se combinan metadatos, documento clínico y sobre de envío.</p>
+<p>Los perfiles HCEN agregan las restricciones del intercambio a los recursos nacionales o a FHIR R4. Para datos de personas y organizaciones se utilizan los derivados del Core; para publicar se combinan metadatos, documento clínico y Bundle de publicación.</p>
 
 <h3 id="seleccionar-un-perfil">Seleccionar un perfil</h3>
+
+<p>Los perfiles se agrupan según su función en el intercambio.</p>
+
+<h4 id="identificadores">Identificadores</h4>
+
+<p>Tipos de dato para los identificadores del paciente, del documento y de sus metadatos. Su uso se explica en <a href="hcen-identificadores.html">Identificadores HCEN</a>.</p>
 
 <table>
   <thead>
@@ -407,45 +459,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
+      <td><a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a></td>
+      <td><code class="language-plaintext highlighter-rouge">UYMRNIdentifier</code></td>
+      <td>Formato del dominio OID del MRN; autorización mediante lógica interna de Plataforma.</td>
+    </tr>
+    <tr>
       <td><a href="StructureDefinition-hcen-document-identifier.html">HCENDocumentIdentifier</a></td>
-      <td><code class="language-plaintext highlighter-rouge">$MHDuniqueIdIdentifier</code></td>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier">IHE MHD UniqueIdIdentifier</a></td>
       <td>OID del documento clínico con <code class="language-plaintext highlighter-rouge">use = usual</code>.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-document-reference-identifier.html">HCENDocumentReferenceIdentifier</a></td>
-      <td><code class="language-plaintext highlighter-rouge">$MHDentryUUIDIdentifier</code></td>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier">IHE MHD EntryUUID Identifier</a></td>
       <td>EntryUUID del DocumentReference.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-submission-set-identifier.html">HCENSubmissionSetIdentifier</a></td>
-      <td><code class="language-plaintext highlighter-rouge">$MHDentryUUIDIdentifier</code></td>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier">IHE MHD EntryUUID Identifier</a></td>
       <td>EntryUUID del SubmissionSet.</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a></td>
-      <td><code class="language-plaintext highlighter-rouge">UYMRNIdentifier</code></td>
-      <td>Dominio OID del MRN, con autorización externa.</td>
+      <td><a href="StructureDefinition-hcen-submission-set-unique-id-identifier.html">HCENSubmissionSetUniqueIdIdentifier</a></td>
+      <td><a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier">IHE MHD UniqueIdIdentifier</a></td>
+      <td>UniqueId del SubmissionSet: OID global S propio del conjunto, distinto de <code class="language-plaintext highlighter-rouge">[oid_documento_clinico]</code>, con <code class="language-plaintext highlighter-rouge">use = usual</code>.</td>
     </tr>
+  </tbody>
+</table>
+
+<h4 id="personas-y-organizaciones">Personas y organizaciones</h4>
+
+<p>Derivan de los perfiles de Core Uruguay y agregan las obligaciones del intercambio.</p>
+
+<table>
+  <thead>
     <tr>
-      <td><a href="StructureDefinition-hcen-aa-identifier.html">HCENAAIdentifier</a></td>
-      <td><code class="language-plaintext highlighter-rouge">UYAAIdentifier</code></td>
-      <td>OID de una institución incluida en el catálogo HCEN.</td>
+      <th>Perfil</th>
+      <th>Base</th>
+      <th>Uso</th>
     </tr>
-    <tr>
-      <td><a href="StructureDefinition-hcen-cda-binary.html">HCENCdaBinary</a></td>
-      <td><code class="language-plaintext highlighter-rouge">Binary</code></td>
-      <td>CDA completo encapsulado como base64.</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-hcen-document-reference.html">HCENDocumentReference</a></td>
-      <td><code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
-      <td>Metadatos, clasificación y referencias FHIR/CDA.</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-hcen-organization.html">HCENOrganization</a></td>
-      <td><code class="language-plaintext highlighter-rouge">UYOrganization</code></td>
-      <td>Organización identificada y con nombre.</td>
-    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><a href="StructureDefinition-hcen-patient.html">HCENPatient</a></td>
       <td><code class="language-plaintext highlighter-rouge">UYPatient</code></td>
@@ -462,14 +515,66 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Relación obligatoria entre profesional y organización.</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a></td>
-      <td><code class="language-plaintext highlighter-rouge">Bundle</code></td>
-      <td>Sobre preliminar de publicación basado en MHD UnContained.</td>
+      <td><a href="StructureDefinition-hcen-organization.html">HCENOrganization</a></td>
+      <td><code class="language-plaintext highlighter-rouge">UYOrganization</code></td>
+      <td>Organización identificada y con nombre.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="metadatos-y-envío">Metadatos y envío</h4>
+
+<p>Se utilizan para <a href="hcen-iti-65.html">publicar</a>, <a href="hcen-iti-67.html">consultar</a> y <a href="hcen-iti-68.html">recuperar</a> documentos de cualquier tipo.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Perfil</th>
+      <th>Base</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-hcen-document-reference.html">HCENDocumentReference</a></td>
+      <td><code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td>Metadatos, clasificación y referencias FHIR/CDA.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-submission-set.html">HCENSubmissionSet</a></td>
       <td><code class="language-plaintext highlighter-rouge">List</code></td>
       <td>Agrupación de uno o más documentos para publicación.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a></td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code></td>
+      <td>Bundle de publicación preliminar basado en MHD UnContained.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-hcen-cda-binary.html">HCENCdaBinary</a></td>
+      <td><code class="language-plaintext highlighter-rouge">Binary</code></td>
+      <td>CDA completo encapsulado como base64.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="documento-clínico-de-consulta-no-urgente">Documento clínico de Consulta No Urgente</h4>
+
+<p>Describen el contenido clínico de la <a href="hcen-documentos-clinicos.html">Hoja de Consulta No Urgente</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Perfil</th>
+      <th>Base</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-hcen-consulta-no-urgente-bundle.html">HCENConsultaNoUrgenteBundle</a></td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code></td>
+      <td>Documento FHIR (<code class="language-plaintext highlighter-rouge">document</code>) que transporta la HCENConsultaNoUrgente y los recursos que referencia.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-uy-consulta-no-urgente.html">HCENConsultaNoUrgente</a></td>
@@ -484,7 +589,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="StructureDefinition-hcen-motivo-consulta.html">HCENMotivoConsulta</a></td>
       <td><code class="language-plaintext highlighter-rouge">Condition</code></td>
-      <td>Motivo registrado en una CNU.</td>
+      <td>Motivo de consulta registrado en una CNU.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-diagnostico.html">HCENDiagnostico</a></td>
@@ -494,34 +599,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="StructureDefinition-hcen-procedimiento.html">HCENProcedimiento</a></td>
       <td><code class="language-plaintext highlighter-rouge">Procedure</code></td>
-      <td>Procedimiento o tratamiento no farmacológico realizado.</td>
+      <td>Procedimiento o tratamiento no farmacológico realizado durante la asistencia.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-medication-administration.html">HCENMedicationAdministration</a></td>
       <td><code class="language-plaintext highlighter-rouge">MedicationAdministration</code></td>
-      <td>Tratamiento farmacológico realizado.</td>
+      <td>Tratamiento farmacológico realizado durante la asistencia.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-medication-request.html">HCENMedicationRequest</a></td>
       <td><code class="language-plaintext highlighter-rouge">MedicationRequest</code></td>
-      <td>Prescripción farmacológica al finalizar la consulta.</td>
+      <td>Tratamiento farmacológico indicado al final de la asistencia.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-service-request.html">HCENServiceRequest</a></td>
       <td><code class="language-plaintext highlighter-rouge">ServiceRequest</code></td>
-      <td>Solicitud o indicación no farmacológica.</td>
+      <td>Tratamiento no farmacológico indicado al final de la asistencia o instrucciones de seguimiento.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-hcen-dosage.html">HCENDosage</a></td>
       <td><code class="language-plaintext highlighter-rouge">Dosage</code></td>
-      <td>Pauta reutilizable por la prescripción farmacológica.</td>
+      <td>Pauta de administración indicada por el profesional.</td>
     </tr>
   </tbody>
 </table>
 
 <h3 id="datos-contexto-y-conformidad">Datos, contexto y conformidad</h3>
 
-<p>Los perfiles HCEN de personas y organizaciones conservan las definiciones reutilizables del Core y agregan cardinalidades, referencias y MS. La primera familia de perfiles clínicos corresponde a la <a href="hcen-documentos-clinicos.html">Hoja de Consulta No Urgente</a>. En esta versión no se publica un perfil específico para el Bundle documental ni para el Bundle <code class="language-plaintext highlighter-rouge">searchset</code>.</p>
+<p>Los perfiles HCEN de personas y organizaciones conservan las definiciones reutilizables del Core y agregan cardinalidades, referencias y MS. La primera familia de perfiles clínicos corresponde a la <a href="hcen-documentos-clinicos.html">Hoja de Consulta No Urgente</a>, cuyo Bundle documental se perfila en HCENConsultaNoUrgenteBundle. En esta versión no se publica un perfil específico para el Bundle <code class="language-plaintext highlighter-rouge">searchset</code>.</p>
 
 <p>Para completar identificadores consultar <a href="hcen-identificadores.html">Identificadores HCEN</a>. Las obligaciones de MS se definen en <a href="hcen-conformidad.html#must-support">Conformidad</a>; el comportamiento del envío se explica en <a href="hcen-iti-65.html">Publicación</a>.</p>
 
@@ -550,11 +655,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="">AGESIC</a>.  
+          IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
           Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-09-28 15:20:00 -0300">
-    2026-09-28
+  <span title="2026-10-06 01:23:00 -0300">
+    2026-10-06
   </span>
 
           <br/>

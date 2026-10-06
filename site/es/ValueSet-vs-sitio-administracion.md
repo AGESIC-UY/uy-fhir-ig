@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Sitio de Administración (borrador) 
 
- 
-PENDIENTE: subconjunto de códigos SNOMED CT para sitios anatómicos de administración de medicación. Contiene un código de ejemplo mientras se define el listado oficial. 
-
  **References** 
 
 * [HCEN Dosificación](StructureDefinition-hcen-dosage.md)
@@ -35,8 +32,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "VSSitioAdministracion",
   "title" : "Conjunto de Valores Sitio de Administración (borrador)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "PENDIENTE: subconjunto de códigos SNOMED CT para sitios anatómicos de administración de medicación. Contiene un código de ejemplo mientras se define el listado oficial.",
   "compose" : {
     "include" : [{

@@ -2,9 +2,6 @@
 
 ## ValueSet: Conjunto de Valores Especialidad Médica 
 
- 
-Especialidades médicas válidas para PractitionerRole.specialty. 
-
  **References** 
 
 * [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md)
@@ -34,8 +31,15 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "EspecialidadMedica",
   "title" : "Conjunto de Valores Especialidad Médica",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Especialidades médicas válidas para PractitionerRole.specialty.",
   "compose" : {
     "include" : [{

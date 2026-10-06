@@ -2,14 +2,22 @@
 
 ## Perfil de los recursos: Perfil Paciente para HCEN 
 
- 
-Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados. 
+### Datos conocidos y registro del paciente
+
+Este perfil toma PIXm Patient como referencia de diseño, sin declarar conformidad con el estándar PIXm. Los mismos mínimos se aplican al registro de pacientes y al contexto de publicación documental.
+
+El MRN es obligatorio; nombre, sexo administrativo y nacimiento conservan la cardinalidad opcional y se envían cuando se conocen según MS. Esto permite registrar un paciente y su evento clínico en una emergencia aunque todavía no se disponga de esos datos. No informar un dato desconocido no autoriza omitir el MRN ni enviar elementos vacíos.
+
+### Sexo o género
+
+`recordedSexOrGender` no significa por sí sola sexo asignado al nacer. Si se usa con ese propósito, el contenido debe identificar el tipo de registro. No se agrega un código fijo no acordado. La cardinalidad heredada de `genderIdentity` se conserva sin agregar MS.
+
+El mapeo de identificadores, nombres y sexo administrativo desde INUS se explica en [Registrar o actualizar pacientes](hcen-iti-104.md#mapeo-inus).
 
 **Usages:**
 
 * Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
 * Refer to this Profile: [HCEN Diagnóstico](StructureDefinition-hcen-diagnostico.md), [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md), [HCEN Evento Clínico](StructureDefinition-hcen-encounter.md), [HCEN Administración de Medicación](StructureDefinition-hcen-medication-administration.md)... Show 6 more, [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md), [HCEN Motivo de Consulta](StructureDefinition-hcen-motivo-consulta.md), [HCEN Procedimiento](StructureDefinition-hcen-procedimiento.md), [HCEN Solicitud de Servicio](StructureDefinition-hcen-service-request.md), [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
-* Examples for this Profile: [Patient/hcen-paciente-ejemplo](Patient-hcen-paciente-ejemplo.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-patient)
 
@@ -38,7 +46,7 @@ Esta estructura se deriva de [UYPatient](StructureDefinition-uy-patient.md) .
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 13 elements
+ Must-Support: 11 elements
  Prohibited: 3 elements
 
 **Structures**
@@ -74,7 +82,7 @@ Esta estructura se deriva de [UYPatient](StructureDefinition-uy-patient.md) .
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 13 elements
+ Must-Support: 11 elements
  Prohibited: 3 elements
 
 **Structures**
@@ -93,14 +101,6 @@ This structure refers to these extensions:
 
 Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-patient.csv), [Excel](../StructureDefinition-hcen-patient.xlsx), [Schematron](../StructureDefinition-hcen-patient.sch) 
 
-### Notas:
-
-### Ausencia de datos y sexo o género
-
-El MRN es obligatorio; nombre, sexo administrativo y nacimiento conservan la cardinalidad opcional y se envían cuando se conocen según MS. No informar un dato desconocido no autoriza omitir el MRN ni enviar elementos vacíos.
-
-recordedSexOrGender no significa por sí sola sexo asignado al nacer. Si se usa con ese propósito, el contenido debe identificar el tipo de registro. No se agrega un código fijo no acordado. La nota del ODS de no utilizar genderIdentity no se transforma en una prohibición: se conserva la cardinalidad heredada sin agregar MS.
-
 
 
 ## Resource Content
@@ -114,8 +114,15 @@ recordedSexOrGender no significa por sí sola sexo asignado al nacer. Si se usa 
   "name" : "HCENPatient",
   "title" : "Perfil Paciente para HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -205,12 +212,6 @@ recordedSexOrGender no significa por sí sola sexo asignado al nacer. Si se usa 
       "mustSupport" : true
     },
     {
-      "id" : "Patient.identifier:fni",
-      "path" : "Patient.identifier",
-      "sliceName" : "fni",
-      "mustSupport" : true
-    },
-    {
       "id" : "Patient.identifier:ppn",
       "path" : "Patient.identifier",
       "sliceName" : "ppn",
@@ -269,8 +270,7 @@ recordedSexOrGender no significa por sí sola sexo asignado al nacer. Si se usa 
       "id" : "Patient.contact.address",
       "path" : "Patient.contact.address",
       "short" : "Dirección física o postal de la persona de contacto en Uruguay.",
-      "definition" : "Dirección física o postal de la persona de contacto en Uruguay.",
-      "mustSupport" : true
+      "definition" : "Dirección física o postal de la persona de contacto en Uruguay."
     },
     {
       "id" : "Patient.link.type",

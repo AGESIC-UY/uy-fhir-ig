@@ -118,18 +118,18 @@
   "name" : "TelemedicineModality"
 },
 {
-  "id" : "hcen-aa-identifier",
-  "type" : "StructureDefinition",
-  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-aa-identifier",
-  "version" : "0.1.0",
-  "name" : "HCENAAIdentifier"
-},
-{
   "id" : "hcen-cda-binary",
   "type" : "StructureDefinition",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary",
   "version" : "0.1.0",
   "name" : "HCENCdaBinary"
+},
+{
+  "id" : "hcen-consulta-no-urgente-bundle",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle",
+  "version" : "0.1.0",
+  "name" : "HCENConsultaNoUrgenteBundle"
 },
 {
   "id" : "hcen-diagnostico",
@@ -265,11 +265,11 @@
   "name" : "HCENSubmissionSetIdentifier"
 },
 {
-  "id" : "uy-aa-identifier",
+  "id" : "hcen-submission-set-unique-id-identifier",
   "type" : "StructureDefinition",
-  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-aa-identifier",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-unique-id-identifier",
   "version" : "0.1.0",
-  "name" : "UYAAIdentifier"
+  "name" : "HCENSubmissionSetUniqueIdIdentifier"
 },
 {
   "id" : "uy-address",
@@ -300,13 +300,6 @@
   "name" : "UYEmailContactPoint"
 },
 {
-  "id" : "uy-fni-identifier",
-  "type" : "StructureDefinition",
-  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-fni-identifier",
-  "version" : "0.1.0",
-  "name" : "UYFNIIdentifier"
-},
-{
   "id" : "uy-human-name",
   "type" : "StructureDefinition",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-human-name",
@@ -319,6 +312,13 @@
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-mrn-identifier",
   "version" : "0.1.0",
   "name" : "UYMRNIdentifier"
+},
+{
+  "id" : "uy-org-identifier",
+  "type" : "StructureDefinition",
+  "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier",
+  "version" : "0.1.0",
+  "name" : "UYOrgIdentifier"
 },
 {
   "id" : "uy-organization",
@@ -454,11 +454,11 @@
   "name" : "VSMedicamentos"
 },
 {
-  "id" : "vs-motivo-consulta",
+  "id" : "vs-motivos-consulta",
   "type" : "ValueSet",
-  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta",
   "version" : "0.1.0",
-  "name" : "VSMotivoConsulta"
+  "name" : "VSMotivosConsulta"
 },
 {
   "id" : "vs-practice-setting",
@@ -466,13 +466,6 @@
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
   "version" : "0.1.0",
   "name" : "VSpracticeSetting"
-},
-{
-  "id" : "vs-prestador-oid-mrn",
-  "type" : "ValueSet",
-  "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
-  "version" : "0.1.0",
-  "name" : "PrestadorOidMrn"
 },
 {
   "id" : "vs-procedimientos",

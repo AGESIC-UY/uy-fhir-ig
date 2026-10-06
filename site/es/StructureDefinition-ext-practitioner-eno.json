@@ -11,8 +11,15 @@
   "name" : "PractitionerEno",
   "title" : "Enfermedad de Notificación Obligatoria (ENO)",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Indica si este profesional actúa como notificador de una Enfermedad de Notificación Obligatoria (ENO) en el documento. Mapea a DocumentEntry.authorENO.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{

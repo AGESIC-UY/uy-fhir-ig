@@ -2,9 +2,6 @@
 
 ## CodeSystem: Sistema de códigos de departamentos de Uruguay 
 
- 
-Los 19 departamentos de la República Oriental del Uruguay. 
-
 Se hace referencia a este sistema de códigos en la definición de los siguientes conjuntos de valores:
 
 * [VSDepartamentosUY](ValueSet-vs-departamentos-uy.md)
@@ -26,9 +23,17 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "name" : "CSDepartamentosUY",
   "title" : "Sistema de códigos de departamentos de Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Los 19 departamentos de la República Oriental del Uruguay.",
+  "copyright" : "Fuente: Correo Uruguayo, departamentos del listado nacional de códigos postales consultado el 2026-09-21.",
   "caseSensitive" : true,
   "content" : "complete",
   "count" : 19,

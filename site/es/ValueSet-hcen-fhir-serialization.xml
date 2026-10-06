@@ -12,8 +12,15 @@
   <title value="Tipos MIME de documentos FHIR HCEN"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Serializaciones FHIR JSON y XML para la representación Bundle documental. No identifica el formato del CDA encapsulado."/>
   <compose>
     <include>

@@ -2,9 +2,6 @@
 
 ## Perfil de los recursos: HCEN Procedimiento 
 
- 
-Procedimiento registrado en la Hoja de Consulta No Urgente (CNU). 
-
 **Usages:**
 
 * Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
@@ -39,9 +36,9 @@ Esta estructura se deriva de [Procedure](http://hl7.org/fhir/R4/procedure.html) 
 
 ** Summary **
 
-Mandatory: 2 elements(13 nested mandatory elements)
+Mandatory: 2 elements(7 nested mandatory elements)
  Must-Support: 3 elements
- Fixed: 6 elements
+ Fixed: 4 elements
  Prohibited: 22 elements
 
 **Structures**
@@ -81,9 +78,9 @@ Esta estructura se deriva de [Procedure](http://hl7.org/fhir/R4/procedure.html) 
 
 ** Summary **
 
-Mandatory: 2 elements(13 nested mandatory elements)
+Mandatory: 2 elements(7 nested mandatory elements)
  Must-Support: 3 elements
- Fixed: 6 elements
+ Fixed: 4 elements
  Prohibited: 22 elements
 
 **Structures**
@@ -116,11 +113,24 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
   "name" : "HCENProcedimiento",
   "title" : "HCEN Procedimiento",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU).",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENProcedimientoToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYProcedimiento."
+  },
+  {
     "identity" : "workflow",
     "uri" : "http://hl7.org/fhir/workflow",
     "name" : "Workflow Pattern"
@@ -201,7 +211,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "id" : "Procedure.status",
       "path" : "Procedure.status",
       "short" : "Estado del procedimiento",
-      "definition" : "Indica el estado del procedimiento."
+      "definition" : "Indica el estado del procedimiento.",
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "procedure/@moodCode=\"EVN\""
+      }]
     },
     {
       "id" : "Procedure.statusReason",
@@ -246,6 +260,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
         "human" : "code.coding debe tener al menos una entrada (al menos una codificación).",
         "expression" : "coding.exists()",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"
+      }],
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/code"
       }]
     },
     {
@@ -272,7 +290,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "id" : "Procedure.code.coding:snomed.system",
       "path" : "Procedure.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://snomed.info/sct"
+      "fixedUri" : "http://snomed.info/sct",
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/code/@codeSystem"
+      }]
     },
     {
       "id" : "Procedure.code.coding:snomed.code",
@@ -281,43 +303,22 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos"
-      }
+      },
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/code/@code"
+      }]
     },
     {
       "id" : "Procedure.code.coding:snomed.display",
       "path" : "Procedure.code.coding.display",
       "short" : "Texto descriptivo del código SNOMED CT del procedimiento",
       "definition" : "Texto descriptivo del código SNOMED CT del procedimiento",
-      "min" : 1
-    },
-    {
-      "id" : "Procedure.code.coding:tesauro",
-      "path" : "Procedure.code.coding",
-      "sliceName" : "tesauro",
-      "short" : "Código del procedimiento en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Código del procedimiento en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "Procedure.code.coding:tesauro.system",
-      "path" : "Procedure.code.coding.system",
       "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "Procedure.code.coding:tesauro.code",
-      "path" : "Procedure.code.coding.code",
-      "short" : "Código del procedimiento en el tesauro local",
-      "definition" : "Código del procedimiento en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "Procedure.code.coding:tesauro.display",
-      "path" : "Procedure.code.coding.display",
-      "short" : "Texto descriptivo del código del procedimiento en el tesauro local",
-      "definition" : "Texto descriptivo del código del procedimiento en el tesauro local",
-      "min" : 1
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/code/@displayName"
+      }]
     },
     {
       "id" : "Procedure.subject",
@@ -327,6 +328,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "ClinicalDocument/recordTarget/patientRole/id"
       }]
     },
     {
@@ -380,6 +385,10 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
         "human" : "code.coding debe tener al menos una entrada (al menos una codificación).",
         "expression" : "coding.exists()",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"
+      }],
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/entryRelationship/observation[code/@code='258031000179107']/value"
       }]
     },
     {
@@ -400,7 +409,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "short" : "Resultado SNOMED CT del procedimiento",
       "definition" : "Resultado SNOMED CT del procedimiento",
       "min" : 0,
-      "max" : "1"
+      "max" : "1",
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/entryRelationship/observation[code/@code='258031000179107']/value"
+      }]
     },
     {
       "id" : "Procedure.outcome.coding:snomed.system",
@@ -422,35 +435,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "path" : "Procedure.outcome.coding.display",
       "short" : "Texto descriptivo del resultado SNOMED CT del procedimiento",
       "definition" : "Texto descriptivo del resultado SNOMED CT del procedimiento",
-      "min" : 1
-    },
-    {
-      "id" : "Procedure.outcome.coding:tesauro",
-      "path" : "Procedure.outcome.coding",
-      "sliceName" : "tesauro",
-      "short" : "Resultado del procedimiento en el tesauro local (URI pendiente de confirmación institucional)",
-      "definition" : "Resultado del procedimiento en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md.",
-      "min" : 0,
-      "max" : "1"
-    },
-    {
-      "id" : "Procedure.outcome.coding:tesauro.system",
-      "path" : "Procedure.outcome.coding.system",
-      "min" : 1,
-      "fixedUri" : "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba"
-    },
-    {
-      "id" : "Procedure.outcome.coding:tesauro.code",
-      "path" : "Procedure.outcome.coding.code",
-      "short" : "Resultado del procedimiento en el tesauro local",
-      "definition" : "Resultado del procedimiento en el tesauro local",
-      "min" : 1
-    },
-    {
-      "id" : "Procedure.outcome.coding:tesauro.display",
-      "path" : "Procedure.outcome.coding.display",
-      "short" : "Texto descriptivo del resultado del procedimiento en el tesauro local",
-      "definition" : "Texto descriptivo del resultado del procedimiento en el tesauro local",
       "min" : 1
     },
     {
@@ -478,7 +462,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-procedimient
       "path" : "Procedure.note",
       "short" : "Observaciones sobre el procedimiento: hallazgos (diagnóstico) o comentarios relevantes (terapéutico)",
       "definition" : "Observaciones sobre el procedimiento: hallazgos (diagnóstico) o comentarios relevantes (terapéutico)",
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "HCENProcedimientoToCDA",
+        "map" : "section/entry/procedure/entryRelationship/observation[code/@code='703852005']/value"
+      }]
     },
     {
       "id" : "Procedure.focalDevice",

@@ -11,7 +11,7 @@
   fhir:id [ fhir:v "vs-diagnostico-consulta"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-diagnostico-consulta</b></p><a name=\"vs-diagnostico-consulta\"> </a><a name=\"hcvs-diagnostico-consulta\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  in 261341000179103</li></ul></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-diagnostico-consulta</b></p><a name=\"vs-diagnostico-consulta\"> </a><a name=\"hcvs-diagnostico-consulta\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/5631000179106/version/20260615\"> version ?http://snomed.info/sct/5631000179106/version/20260615</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/27337007\">27337007</a></td><td>extrasístoles ventriculares unifocales</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/38341003\">38341003</a></td><td>hipertensión arterial (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/302866003\">302866003</a></td><td>hipoglicemia (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/235595009\">235595009</a></td><td>enfermedad por reflujo gastroesofágico (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/446221000\">446221000</a></td><td>insuficiencia cardíaca con fracción de eyección conservada (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/398057008\">398057008</a></td><td>cefalea de tipo tensional (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/4556007\">4556007</a></td><td>gastritis (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/413838009\">413838009</a></td><td>cardiopatía isquémica crónica (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/1381430004\">1381430004</a></td><td>angina de pecho sin obstrucción de arterias coronarias (trastorno)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/1085006\">1085006</a></td><td>candidiasis de la vulva (trastorno)</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta"^^xsd:anyURI ;
@@ -21,19 +21,53 @@
   fhir:name [ fhir:v "VSDiagnosticoConsulta"] ; # 
   fhir:title [ fhir:v "Conjunto de Valores Diagnósticos"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-09-28T15:20:04-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
-  fhir:description [ fhir:v "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en)."] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "AGESIC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg)."] ; # 
   fhir:compose [
      fhir:include ( [
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:filter ( [
-         fhir:property [ fhir:v "concept" ] ;
-         fhir:op [ fhir:v "in" ] ;
-         fhir:value [ fhir:v "261341000179103" ]
+       fhir:version [ fhir:v "http://snomed.info/sct/5631000179106/version/20260615" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "27337007" ] ;
+         fhir:display [ fhir:v "extrasístoles ventriculares unifocales" ]
+       ] [
+         fhir:code [ fhir:v "38341003" ] ;
+         fhir:display [ fhir:v "hipertensión arterial (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "302866003" ] ;
+         fhir:display [ fhir:v "hipoglicemia (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "235595009" ] ;
+         fhir:display [ fhir:v "enfermedad por reflujo gastroesofágico (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "446221000" ] ;
+         fhir:display [ fhir:v "insuficiencia cardíaca con fracción de eyección conservada (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "398057008" ] ;
+         fhir:display [ fhir:v "cefalea de tipo tensional (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "4556007" ] ;
+         fhir:display [ fhir:v "gastritis (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "413838009" ] ;
+         fhir:display [ fhir:v "cardiopatía isquémica crónica (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "1381430004" ] ;
+         fhir:display [ fhir:v "angina de pecho sin obstrucción de arterias coronarias (trastorno)" ]
+       ] [
+         fhir:code [ fhir:v "1085006" ] ;
+         fhir:display [ fhir:v "candidiasis de la vulva (trastorno)" ]
        ] )
      ] )
   ] . # 

@@ -2,9 +2,6 @@
 
 ## Perfil del tipo de datos: EntryUUID del conjunto de envío HCEN 
 
- 
-Identificador técnico entryUUID de un SubmissionSet HCEN, basado en el perfil IHE MHD EntryUUID Identifier. 
-
 **Usages:**
 
 * Use this DataType Profile: [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
@@ -76,8 +73,15 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
   "name" : "HCENSubmissionSetIdentifier",
   "title" : "EntryUUID del conjunto de envío HCEN",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Identificador técnico entryUUID de un SubmissionSet HCEN, basado en el perfil IHE MHD EntryUUID Identifier.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
@@ -105,7 +109,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
       "id" : "Identifier",
       "path" : "Identifier",
       "short" : "EntryUUID del conjunto HCEN",
-      "definition" : "Identificador técnico del SubmissionSet, derivado del OID del documento con el formato urn:uuid:2.[oid_documento_clinico]."
+      "definition" : "Identificador técnico del SubmissionSet, derivado del OID [oid_documento_clinico] de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]. No existe primer documento obligatorio, documento principal ni orden relevante."
     },
     {
       "id" : "Identifier.use",
@@ -123,7 +127,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
       "id" : "Identifier.value",
       "path" : "Identifier.value",
       "short" : "URI urn:uuid:2.[oid_documento_clinico]",
-      "definition" : "EntryUUID del SubmissionSet formado anteponiendo urn:uuid:2. al OID del documento clínico.",
+      "definition" : "EntryUUID del SubmissionSet formado anteponiendo urn:uuid:2. al OID [oid_documento_clinico] de cualquiera de sus documentos miembros, sin selección clínica especial ni orden obligatorio.",
       "constraint" : [{
         "key" : "hcen-submission-set-entryuuid",
         "severity" : "error",

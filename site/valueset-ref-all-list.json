@@ -33,7 +33,6 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
     "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
   },
   {
@@ -71,8 +70,8 @@
     "http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
@@ -104,7 +103,7 @@
     "status" : "draft",
     "name" : "VSDiagnosticoConsulta",
     "title" : "Conjunto de Valores Diagnósticos",
-    "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -120,8 +119,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
-    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN"
+    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN",
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
@@ -161,12 +160,12 @@
     "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivo-consulta",
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta",
     "version" : "0.1.0",
     "status" : "draft",
-    "name" : "VSMotivoConsulta",
+    "name" : "VSMotivosConsulta",
     "title" : "Conjunto de Valores Motivos de Consulta",
-    "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+    "description" : "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -185,21 +184,12 @@
     "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
   },
   {
-    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-prestador-oid-mrn",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "PrestadorOidMrn",
-    "title" : "OIDs de instituciones HCEN",
-    "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
-    "systems" : ["urn:ietf:rfc:3986"]
-  },
-  {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
     "version" : "0.1.0",
     "status" : "draft",
     "name" : "VSProcedimientos",
     "title" : "Conjunto de Valores Procedimientos",
-    "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+    "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -227,8 +217,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
-    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN"
+    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN",
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion",
@@ -240,8 +230,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
@@ -277,8 +267,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico"
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
@@ -287,12 +277,11 @@
     "name" : "VSViaAdministracion",
     "title" : "Conjunto de Valores Vía de Administración (borrador)",
     "description" : "PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial.",
-    "systems" : ["http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-    "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"],
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
@@ -348,8 +337,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.97"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación"
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
@@ -363,10 +352,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.1"],
     "uses" : {
     },
-    "StructureDefinition-hcen-practitioner.html" : "Perfil Profesional de Salud para HCEN",
     "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay",
     "StructureDefinition-hcen-patient.html" : "Perfil Paciente para HCEN",
-    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+    "StructureDefinition-hcen-practitioner.html" : "Perfil Profesional de Salud para HCEN"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -380,10 +369,10 @@
     "sources" : ["2.16.840.1.113883.4.642.3.141"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento",
     "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
-    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -397,6 +386,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.620"],
     "uses" : {
     },
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
     "StructureDefinition-hcen-provide-document-bundle.html" : "Envío para publicación documental HCEN"
   },
   {
@@ -481,8 +471,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.164"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-code",
@@ -497,9 +487,9 @@
     "uses" : {
     },
     "StructureDefinition-hcen-medication-request.html" : "HCEN Prescripción de Medicación",
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento",
     "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
-    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -513,8 +503,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.168"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
@@ -528,8 +518,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.170"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
@@ -543,8 +533,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.171"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
@@ -558,8 +548,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.166"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
@@ -618,8 +608,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.512"],
     "uses" : {
     },
-    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
-    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN"
+    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN",
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -678,6 +668,20 @@
     "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
   },
   {
+    "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FHIRDocumentTypeCodes",
+    "title" : "FHIR Document Type Codes",
+    "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.4.642.3.240"],
+    "sources" : ["2.16.840.1.113883.4.642.3.240"],
+    "uses" : {
+    },
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
+  },
+  {
     "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
     "version" : "4.0.1",
     "status" : "active",
@@ -717,8 +721,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.244"],
     "uses" : {
     },
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/dose-rate-type",
@@ -888,6 +892,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.624"],
     "uses" : {
     },
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
     "StructureDefinition-hcen-provide-document-bundle.html" : "Envío para publicación documental HCEN"
   },
   {
@@ -902,18 +907,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
-    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
-    "StructureDefinition-hcen-document-reference-identifier.html" : "EntryUUID de DocumentReference HCEN",
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
+    "StructureDefinition-ext-repository-id.html" : "ID Único del Repositorio",
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
+    "StructureDefinition-hcen-submission-set-unique-id-identifier.html" : "Identificador global del conjunto de envío HCEN",
     "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
-    "StructureDefinition-hcen-aa-identifier.html" : "Identificador de institución para HCEN",
+    "StructureDefinition-uy-org-identifier.html" : "Identificador de Organización",
     "StructureDefinition-hcen-document-identifier.html" : "Identificador documental HCEN",
+    "StructureDefinition-hcen-submission-set-identifier.html" : "EntryUUID del conjunto de envío HCEN",
     "StructureDefinition-hcen-mrn-identifier.html" : "Identificador MRN para HCEN",
     "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
-    "StructureDefinition-hcen-submission-set-identifier.html" : "EntryUUID del conjunto de envío HCEN",
-    "StructureDefinition-ext-repository-id.html" : "ID Único del Repositorio",
-    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
+    "StructureDefinition-hcen-document-reference-identifier.html" : "EntryUUID de DocumentReference HCEN"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -927,18 +931,17 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
-    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
-    "StructureDefinition-hcen-document-reference-identifier.html" : "EntryUUID de DocumentReference HCEN",
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-uy-aa-identifier.html" : "Identificador de Organización",
+    "StructureDefinition-ext-repository-id.html" : "ID Único del Repositorio",
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
+    "StructureDefinition-hcen-submission-set-unique-id-identifier.html" : "Identificador global del conjunto de envío HCEN",
     "StructureDefinition-uy-ci-identifier.html" : "Identificador Cédula de Identidad",
-    "StructureDefinition-hcen-aa-identifier.html" : "Identificador de institución para HCEN",
+    "StructureDefinition-uy-org-identifier.html" : "Identificador de Organización",
     "StructureDefinition-hcen-document-identifier.html" : "Identificador documental HCEN",
+    "StructureDefinition-hcen-submission-set-identifier.html" : "EntryUUID del conjunto de envío HCEN",
     "StructureDefinition-hcen-mrn-identifier.html" : "Identificador MRN para HCEN",
     "StructureDefinition-uy-mrn-identifier.html" : "Identificador MRN",
-    "StructureDefinition-hcen-submission-set-identifier.html" : "EntryUUID del conjunto de envío HCEN",
-    "StructureDefinition-ext-repository-id.html" : "ID Único del Repositorio",
-    "StructureDefinition-uy-fni-identifier.html" : "Identificador Nacional Extranjero"
+    "StructureDefinition-uy-ppn-identifier.html" : "Identificador Pasaporte",
+    "StructureDefinition-hcen-document-reference-identifier.html" : "EntryUUID de DocumentReference HCEN"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -952,26 +955,27 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico",
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
     "StructureDefinition-hcen-medication-request.html" : "HCEN Prescripción de Medicación",
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-hcen-provide-document-bundle.html" : "Envío para publicación documental HCEN",
-    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-hcen-organization.html" : "Perfil Organización para HCEN",
+    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
+    "StructureDefinition-hcen-patient.html" : "Perfil Paciente para HCEN",
+    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
+    "StructureDefinition-hcen-encounter.html" : "HCEN Evento Clínico",
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
     "StructureDefinition-hcen-practitioner.html" : "Perfil Profesional de Salud para HCEN",
     "StructureDefinition-hcen-cda-binary.html" : "Representación CDA de un documento HCEN",
-    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay",
-    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN",
-    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
-    "StructureDefinition-hcen-organization.html" : "Perfil Organización para HCEN",
-    "StructureDefinition-hcen-submission-set.html" : "Conjunto de envío HCEN",
-    "StructureDefinition-uy-patient.html" : "Perfil Paciente para Uruguay",
     "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
-    "StructureDefinition-hcen-patient.html" : "Perfil Paciente para HCEN",
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento",
+    "StructureDefinition-hcen-practitioner-role.html" : "Perfil Rol del Profesional de Salud para HCEN",
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay",
+    "StructureDefinition-hcen-medication-administration.html" : "HCEN Administración de Medicación",
+    "StructureDefinition-uy-practitioner-role.html" : "Perfil Rol del Profesional de Salud para Uruguay",
+    "StructureDefinition-hcen-provide-document-bundle.html" : "Envío para publicación documental HCEN",
     "StructureDefinition-uy-organization.html" : "Perfil Organización para Uruguay",
-    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
-    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
+    "StructureDefinition-hcen-submission-set.html" : "Conjunto de envío HCEN"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -1101,8 +1105,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.169"],
     "uses" : {
     },
-    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico",
-    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta"
+    "StructureDefinition-hcen-motivo-consulta.html" : "HCEN Motivo de Consulta",
+    "StructureDefinition-hcen-diagnostico.html" : "HCEN Diagnóstico"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/marital-status",
@@ -1174,8 +1178,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.96"],
     "uses" : {
     },
-    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación",
-    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio"
+    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
+    "StructureDefinition-hcen-dosage.html" : "HCEN Dosificación"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -1375,8 +1379,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.427"],
     "uses" : {
     },
-    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
-    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento",
+    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
@@ -1432,8 +1436,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.432"],
     "uses" : {
     },
-    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio",
-    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento"
+    "StructureDefinition-hcen-procedimiento.html" : "HCEN Procedimiento",
+    "StructureDefinition-hcen-service-request.html" : "HCEN Solicitud de Servicio"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
@@ -1532,8 +1536,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.27"],
     "uses" : {
     },
-    "StructureDefinition-hcen-submission-set.html" : "Conjunto de envío HCEN",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-hcen-submission-set.html" : "Conjunto de envío HCEN"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -1547,6 +1551,7 @@
     "sources" : ["2.16.840.1.113883.4.642.3.622"],
     "uses" : {
     },
+    "StructureDefinition-hcen-consulta-no-urgente-bundle.html" : "HCEN Documento de Consulta No Urgente",
     "StructureDefinition-hcen-provide-document-bundle.html" : "Envío para publicación documental HCEN"
   },
   {
@@ -1565,8 +1570,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.47"],
     "uses" : {
     },
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/service-type",
@@ -1634,8 +1639,8 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0360|2.7"],
     "uses" : {
     },
-    "StructureDefinition-hcen-practitioner.html" : "Perfil Profesional de Salud para HCEN",
-    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay"
+    "StructureDefinition-uy-practitioner.html" : "Perfil Profesional de Salud para Uruguay",
+    "StructureDefinition-hcen-practitioner.html" : "Perfil Profesional de Salud para HCEN"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
@@ -1647,8 +1652,8 @@
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
     "uses" : {
     },
-    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente",
-    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN"
+    "StructureDefinition-hcen-document-reference.html" : "Perfil Document Reference HCEN",
+    "StructureDefinition-uy-consulta-no-urgente.html" : "HCEN Consulta No Urgente"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",

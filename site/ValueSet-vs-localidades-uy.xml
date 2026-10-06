@@ -3,19 +3,1850 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-localidades-uy"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-localidades-uy</b></p><a name="vs-localidades-uy"> </a><a name="hcvs-localidades-uy"> </a><ul><li>Include all codes defined in <a href="CodeSystem-cs-localidades-uy.html"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-localidades-uy</b></p><a name="vs-localidades-uy"> </a><a name="hcvs-localidades-uy"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-cs-localidades-uy.html"><code>http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-18DEJULIO">18 DE JULIO</a></td><td>18 DE JULIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-19DEABRIL">19 DE ABRIL</a></td><td>19 DE ABRIL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-25DEAGOSTO">25 DE AGOSTO</a></td><td>25 DE AGOSTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-25DEMAYO">25 DE MAYO</a></td><td>25 DE MAYO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ABROJAL">ABROJAL</a></td><td>ABROJAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ACEGUA">ACEGUA</a></td><td>ACEGUA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ACHAR">ACHAR</a></td><td>ACHAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AEROPARQUE">AEROPARQUE</a></td><td>AEROPARQUE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AGRACIADA">AGRACIADA</a></td><td>AGRACIADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AGUASBLANCAS">AGUAS BLANCAS</a></td><td>AGUAS BLANCAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AGUASBUENAS">AGUAS BUENAS</a></td><td>AGUAS BUENAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AGUASCTES.46">AGUAS CTES.</a></td><td>AGUAS CTES.</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AGUASDULCES">AGUAS DULCES</a></td><td>AGUAS DULCES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AIGUA">AIGUA</a></td><td>AIGUA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ALGORTA">ALGORTA</a></td><td>ALGORTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AMARILLO">AMARILLO</a></td><td>AMARILLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ANDRESITO">ANDRESITO</a></td><td>ANDRESITO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ANTONIOPOLIS">ANTONIOPOLIS</a></td><td>ANTONIOPOLIS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARAMENDIA">ARAMENDIA</a></td><td>ARAMENDIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARAMINDA">ARAMINDA</a></td><td>ARAMINDA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARBOLITO1">ARBOLITO1</a></td><td>ARBOLITO1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARBOLITO2">ARBOLITO2</a></td><td>ARBOLITO2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARENITASBLANCA">ARENITAS BLANCA</a></td><td>ARENITAS BLANCA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARROYOBLANCO">ARROYO BLANCO</a></td><td>ARROYO BLANCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARTIGAS">ARTIGAS</a></td><td>ARTIGAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ARTILLEROS">ARTILLEROS</a></td><td>ARTILLEROS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ATLANTIDA">ATLANTIDA</a></td><td>ATLANTIDA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AUTODROMO">AUTODROMO</a></td><td>AUTODROMO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-AYUI">AYUI</a></td><td>AYUI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-B.46BRUM">B. BRUM</a></td><td>B. BRUM</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-B.46RIVERA">B. RIVERA</a></td><td>B. RIVERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-B.46BLANCOS">B.BLANCOS</a></td><td>B.BLANCOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BALNEARIOBUENOSAIRES.40ADCL.41">BALNEARIO BUENOS AIRES (ADCL)</a></td><td>BALNEARIO BUENOS AIRES (ADCL)</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BA.209ADODEMEDIN">BAÑADO DE MEDIN</a></td><td>BAÑADO DE MEDIN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BARRACARRASCO">BARRA CARRASCO</a></td><td>BARRA CARRASCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BARRACHUY">BARRA CHUY</a></td><td>BARRA CHUY</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BARRADVALIZAS">BARRA D VALIZAS</a></td><td>BARRA D VALIZAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BARRAURUGUAYA">BARRA URUGUAYA</a></td><td>BARRA URUGUAYA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BARRIOARTIGAS">BARRIO ARTIGAS</a></td><td>BARRIO ARTIGAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BATLLEYORDO.209EZ">BATLLE Y ORDOÑEZ</a></td><td>BATLLE Y ORDOÑEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BELEN">BELEN</a></td><td>BELEN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BELLAUNION">BELLA UNION</a></td><td>BELLA UNION</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BELLOHORIZONTE">BELLO HORIZONTE</a></td><td>BELLO HORIZONTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BERRONDO">BERRONDO</a></td><td>BERRONDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BIARRITZ">BIARRITZ</a></td><td>BIARRITZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BIASSINI">BIASSINI</a></td><td>BIASSINI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BLANCAARENA">BLANCA ARENA</a></td><td>BLANCA ARENA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BLANQUILLO">BLANQUILLO</a></td><td>BLANQUILLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BOCADELCUFRE">BOCA DEL CUFRE</a></td><td>BOCA DEL CUFRE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BOLIVAR">BOLIVAR</a></td><td>BOLIVAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BONILLA">BONILLA</a></td><td>BONILLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRIO.46ARGENTINO">BRIO. ARGENTINO</a></td><td>BRIO. ARGENTINO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRIO.46BUENOSAIRES">BRIO. BUENOS AIRES</a></td><td>BRIO. BUENOS AIRES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRIO.46ESPA.209OL">BRIO.ESPAÑOL</a></td><td>BRIO.ESPAÑOL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRISASDEPLATA">BRISAS DE PLATA</a></td><td>BRISAS DE PLATA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRITOPOLIS">BRITOPOLIS</a></td><td>BRITOPOLIS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRRADELOSCHANCHOS">BRRA DE LOS CHANCHOS</a></td><td>BRRA DE LOS CHANCHOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRRIOPINTADITO">BRRIO PINTADITO</a></td><td>BRRIO PINTADITO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BRRIO.46ALBISU">BRRIO.ALBISU</a></td><td>BRRIO.ALBISU</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-BURICAYUPI">BURICAYUPI</a></td><td>BURICAYUPI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46DELPERDIDO">C. DEL PERDIDO</a></td><td>C. DEL PERDIDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46COLORADO">C.COLORADO</a></td><td>C.COLORADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46MIGUELETE">C.MIGUELETE</a></td><td>C.MIGUELETE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46REYLES">C.REYLES</a></td><td>C.REYLES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46ROSSEL">C.ROSSEL</a></td><td>C.ROSSEL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-C.46VALDENSE">C.VALDENSE</a></td><td>C.VALDENSE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CAMPAMENTO">CAMPAMENTO</a></td><td>CAMPAMENTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CANELONES">CANELONES</a></td><td>CANELONES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CA.209ADADELESTADO">CAÑADA DEL ESTADO</a></td><td>CAÑADA DEL ESTADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CA.209ADAMILAN">CAÑADA MILAN</a></td><td>CAÑADA MILAN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CA.209ADANIETO">CAÑADA NIETO</a></td><td>CAÑADA NIETO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CAP.46FARRUCO">CAP. FARRUCO</a></td><td>CAP. FARRUCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CAPILLADCELLA">CAPILLA D CELLA</a></td><td>CAPILLA D CELLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CAPURRO">CAPURRO</a></td><td>CAPURRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARAGUATANORTE">CARAGUATA NORTE</a></td><td>CARAGUATA NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARDAL">CARDAL</a></td><td>CARDAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARDONA">CARDONA</a></td><td>CARDONA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARDOZOCHICO">CARDOZO CHICO</a></td><td>CARDOZO CHICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARDOZOGRANDE">CARDOZO GRANDE</a></td><td>CARDOZO GRANDE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARMELO">CARMELO</a></td><td>CARMELO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CARRETAQUEMADA">CARRETA QUEMADA</a></td><td>CARRETA QUEMADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CASTILLOS">CASTILLOS</a></td><td>CASTILLOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CASUPA">CASUPA</a></td><td>CASUPA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CDAD.46DELPLATA">CDAD.DEL PLATA</a></td><td>CDAD.DEL PLATA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CEBOLLATI">CEBOLLATI</a></td><td>CEBOLLATI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERRILLADA">CERRILLADA</a></td><td>CERRILLADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERRILLOS">CERRILLOS</a></td><td>CERRILLOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROCHATO1">CERRO CHATO1</a></td><td>CERRO CHATO1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROCHATO2">CERRO CHATO2</a></td><td>CERRO CHATO2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROCOLORADO">CERRO COLORADO</a></td><td>CERRO COLORADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROCUENTAS">CERRO CUENTAS</a></td><td>CERRO CUENTAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERRODELARBOLITO">CERRO DEL ARBOLITO</a></td><td>CERRO DEL ARBOLITO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROEJIDO">CERRO EJIDO</a></td><td>CERRO EJIDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROPELADO">CERRO PELADO</a></td><td>CERRO PELADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROPEREYRA">CERRO PEREYRA</a></td><td>CERRO PEREYRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROSAZULES">CERROS AZULES</a></td><td>CERROS AZULES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CERROSBLANCOS">CERROS BLANCOS</a></td><td>CERROS BLANCOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CHAMBERLAIN">CHAMBERLAIN</a></td><td>CHAMBERLAIN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CHAMIZO">CHAMIZO</a></td><td>CHAMIZO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CHAPICUY">CHAPICUY</a></td><td>CHAPICUY</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CHINGOLAS">CHINGOLAS</a></td><td>CHINGOLAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CHUY">CHUY</a></td><td>CHUY</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CLARA">CLARA</a></td><td>CLARA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLINAS">COLINAS</a></td><td>COLINAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIA">COLONIA</a></td><td>COLONIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIA18JUL.46">COLONIA 18 JUL.</a></td><td>COLONIA 18 JUL.</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIAGARIBALDI">COLONIA GARIBALDI</a></td><td>COLONIA GARIBALDI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIAITAPEBI">COLONIA ITAPEBI</a></td><td>COLONIA ITAPEBI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIALAVALLE">COLONIA LAVALLE</a></td><td>COLONIA LAVALLE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COLONIANICOLIC">COLONIA NICOLIC</a></td><td>COLONIA NICOLIC</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CONCHILLAS">CONCHILLAS</a></td><td>CONCHILLAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CONSTANCIA">CONSTANCIA</a></td><td>CONSTANCIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CONSTITUCION">CONSTITUCION</a></td><td>CONSTITUCION</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COSMOPOLITA">COSMOPOLITA</a></td><td>COSMOPOLITA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COSTAAZUL1">COSTA AZUL1</a></td><td>COSTA AZUL1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-COSTAAZUL2">COSTA AZUL2</a></td><td>COSTA AZUL2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CRUZDECAMINOS">CRUZ DE CAMINOS</a></td><td>CRUZ DE CAMINOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUARO">CUARO</a></td><td>CUARO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUAR.211">CUARÓ</a></td><td>CUARÓ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUAROCHICO">CUARO CHICO</a></td><td>CUARO CHICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUCHILLAALTA">CUCHILLA ALTA</a></td><td>CUCHILLA ALTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUCHILLADELOMBU">CUCHILLA DEL OMBU</a></td><td>CUCHILLA DEL OMBU</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CUFRE">CUFRE</a></td><td>CUFRE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-CURTINA">CURTINA</a></td><td>CURTINA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-DAYMAN">DAYMAN</a></td><td>DAYMAN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-DOLORES">DOLORES</a></td><td>DOLORES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-DURAZNO">DURAZNO</a></td><td>DURAZNO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-E.46MARTINEZ">E.MARTINEZ</a></td><td>E.MARTINEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ECILDAPAULIER">ECILDA PAULIER</a></td><td>ECILDA PAULIER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-EGA.209A">EGAÑA</a></td><td>EGAÑA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELBELLACO">EL BELLACO</a></td><td>EL BELLACO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELCHORRO">EL CHORRO</a></td><td>EL CHORRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELEUCALIPTO">EL EUCALIPTO</a></td><td>EL EUCALIPTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELPINAR-SUR">EL PINAR - SUR</a></td><td>EL PINAR - SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELTALA">EL TALA</a></td><td>EL TALA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ELTESORO">EL TESORO</a></td><td>EL TESORO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ESPERANZA">ESPERANZA</a></td><td>ESPERANZA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-EST.46ATLANTIDA">EST.ATLANTIDA</a></td><td>EST.ATLANTIDA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-EST.46LAFLORESTA">EST.LA FLORESTA</a></td><td>EST.LA FLORESTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ESTANZUELA">ESTANZUELA</a></td><td>ESTANZUELA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-F.46MARCOS">F.MARCOS</a></td><td>F.MARCOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-F.46STA.46ROSA">F.STA.ROSA</a></td><td>F.STA.ROSA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FCIO.46SANCHEZ">FCIO. SANCHEZ</a></td><td>FCIO. SANCHEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FEDERACION">FEDERACION</a></td><td>FEDERACION</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FELICIANO">FELICIANO</a></td><td>FELICIANO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FERRER">FERRER</a></td><td>FERRER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FLORIDA">FLORIDA</a></td><td>FLORIDA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FOMENTO">FOMENTO</a></td><td>FOMENTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FRAILEMUERTO">FRAILE MUERTO</a></td><td>FRAILE MUERTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FRAYBENTOS">FRAY BENTOS</a></td><td>FRAY BENTOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-FUNDACIONPOLANCO">FUNDACION POLANCO</a></td><td>FUNDACION POLANCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-G.46AZNARES">G.AZNARES</a></td><td>G.AZNARES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GALLINAL">GALLINAL</a></td><td>GALLINAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GARZON">GARZON</a></td><td>GARZON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GOMENSORO">GOMENSORO</a></td><td>GOMENSORO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GONZALEZ">GONZALEZ</a></td><td>GONZALEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GO.209I">GOÑI</a></td><td>GOÑI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GUAYUVIRA">GUAYUVIRA</a></td><td>GUAYUVIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GUAZUBIRA">GUAZUBIRA</a></td><td>GUAZUBIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GUAZUBIRAVIEJO">GUAZUBIRA VIEJO</a></td><td>GUAZUBIRA VIEJO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-GUICHON">GUICHON</a></td><td>GUICHON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-I.46CORTINAS">I. CORTINAS</a></td><td>I. CORTINAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ILLESCAS">ILLESCAS</a></td><td>ILLESCAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-INDEPENDENCIA">INDEPENDENCIA</a></td><td>INDEPENDENCIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ISIDORONOBLIA">ISIDORO NOBLIA</a></td><td>ISIDORO NOBLIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ISLAPATRULLA">ISLA PATRULLA</a></td><td>ISLA PATRULLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ITUZAINGO">ITUZAINGO</a></td><td>ITUZAINGO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-J.46J.46CASTRO">J.J. CASTRO</a></td><td>J.J. CASTRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-J.46LACAZE">J.LACAZE</a></td><td>J.LACAZE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-J.46P.46VARELA">J.P.VARELA</a></td><td>J.P.VARELA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-JACKSON">JACKSON</a></td><td>JACKSON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-JOANICO">JOANICO</a></td><td>JOANICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-JOSEIGNACIO">JOSE IGNACIO</a></td><td>JOSE IGNACIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-JOSEIGNACIO.40ADCL.41">JOSE IGNACIO (ADCL)</a></td><td>JOSE IGNACIO (ADCL)</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-JUANSOLER">JUAN SOLER</a></td><td>JUAN SOLER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-KILOMETRO110">KILOMETRO 110</a></td><td>KILOMETRO 110</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-KIYU">KIYU</a></td><td>KIYU</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-L.46GEIRES">L.GEIRES</a></td><td>L.GEIRES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAAGUADA">LA AGUADA</a></td><td>LA AGUADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAALDEA">LA ALDEA</a></td><td>LA ALDEA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LABARRA">LA BARRA</a></td><td>LA BARRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LABOLSA">LA BOLSA</a></td><td>LA BOLSA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LABOTA">LA BOTA</a></td><td>LA BOTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LABOTAZB">LA BOTA ZB</a></td><td>LA BOTA ZB</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LABOYADA">LA BOYADA</a></td><td>LA BOYADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACALERA">LA CALERA</a></td><td>LA CALERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACALZADA">LA CALZADA</a></td><td>LA CALZADA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACAPUERA">LA CAPUERA</a></td><td>LA CAPUERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACAPUERA.40ZB.41">LA CAPUERA (ZB)</a></td><td>LA CAPUERA (ZB)</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACASILLA">LA CASILLA</a></td><td>LA CASILLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACONCORDIA">LA CONCORDIA</a></td><td>LA CONCORDIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACORONILLA">LA CORONILLA</a></td><td>LA CORONILLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACRUZ">LA CRUZ</a></td><td>LA CRUZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LACUCHILLA">LA CUCHILLA</a></td><td>LA CUCHILLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAFLORESTA">LA FLORESTA</a></td><td>LA FLORESTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAHILERA">LA HILERA</a></td><td>LA HILERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAJUANITA">LA JUANITA</a></td><td>LA JUANITA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAMACANA">LA MACANA</a></td><td>LA MACANA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAMICAELA">LA MICAELA</a></td><td>LA MICAELA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPALMA">LA PALMA</a></td><td>LA PALMA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPALOMA1">LA PALOMA1</a></td><td>LA PALOMA1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPALOMA2">LA PALOMA2</a></td><td>LA PALOMA2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPAZ1">LA PAZ1</a></td><td>LA PAZ1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPAZ2">LA PAZ2</a></td><td>LA PAZ2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPEDRERA">LA PEDRERA</a></td><td>LA PEDRERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAPUENTE">LA PUENTE</a></td><td>LA PUENTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LATENTACION">LA TENTACION</a></td><td>LA TENTACION</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LATUNA">LA TUNA</a></td><td>LA TUNA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAGOMERIN">LAGO MERIN</a></td><td>LAGO MERIN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAGOMARNORTE">LAGOMAR NORTE</a></td><td>LAGOMAR NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAGOMARSUR">LAGOMAR SUR</a></td><td>LAGOMAR SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAGUNADEROCHA">LAGUNA DE ROCHA</a></td><td>LAGUNA DE ROCHA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAMAS">LAMAS</a></td><td>LAMAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASCHILCAS">LAS CHILCAS</a></td><td>LAS CHILCAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASFLORES">LAS FLORES</a></td><td>LAS FLORES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASPAJAS">LAS PAJAS</a></td><td>LAS PAJAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASPALMAS">LAS PALMAS</a></td><td>LAS PALMAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASPIEDRAS">LAS PIEDRAS</a></td><td>LAS PIEDRAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASTOSCASNORT">LAS TOSCAS NORT</a></td><td>LAS TOSCAS NORT</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASTOSCAS1">LAS TOSCAS1</a></td><td>LAS TOSCAS1</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASTOSCAS2">LAS TOSCAS2</a></td><td>LAS TOSCAS2</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASVEGASNORTE">LAS VEGAS NORTE</a></td><td>LAS VEGAS NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASVEGASSUR">LAS VEGAS SUR</a></td><td>LAS VEGAS SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LASCANO">LASCANO</a></td><td>LASCANO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LAURELES">LAURELES</a></td><td>LAURELES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LIBERTAD">LIBERTAD</a></td><td>LIBERTAD</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOMASDSOLYMAR">LOMAS D SOLYMAR</a></td><td>LOMAS D SOLYMAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOMASNORTE">LOMAS NORTE</a></td><td>LOMAS NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOMASSOLYMAR3">LOMAS SOLYMAR 3</a></td><td>LOMAS SOLYMAR 3</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSCERROS">LOS CERROS</a></td><td>LOS CERROS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSCUADRADOS">LOS CUADRADOS</a></td><td>LOS CUADRADOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSFEOS">LOS FEOS</a></td><td>LOS FEOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSFURTADOS">LOS FURTADOS</a></td><td>LOS FURTADOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSHIGUERONES">LOS HIGUERONES</a></td><td>LOS HIGUERONES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSPINOS">LOS PINOS</a></td><td>LOS PINOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSSEMPER">LOS SEMPER</a></td><td>LOS SEMPER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSTALAS">LOS TALAS</a></td><td>LOS TALAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-LOSTITANES">LOS TITANES</a></td><td>LOS TITANES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MALBINA">M ALBINA</a></td><td>M ALBINA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-M.46CHICO">M.CHICO</a></td><td>M.CHICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-M.46CORAL">M.CORAL</a></td><td>M.CORAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-M.46DECORRALES">M.DE CORRALES</a></td><td>M.DE CORRALES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-M.46GRANDE">M.GRANDE</a></td><td>M.GRANDE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MACIEL">MACIEL</a></td><td>MACIEL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MALABRIGO">MAL ABRIGO</a></td><td>MAL ABRIGO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MALDONADO">MALDONADO</a></td><td>MALDONADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MALDONADO.40ZB.41">MALDONADO (ZB)</a></td><td>MALDONADO (ZB)</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MALVAREZ">MALVAREZ</a></td><td>MALVAREZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MANANTIALES">MANANTIALES</a></td><td>MANANTIALES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MANGRULLO">MANGRULLO</a></td><td>MANGRULLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MARGAT">MARGAT</a></td><td>MARGAT</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MARINDIA">MARINDIA</a></td><td>MARINDIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MARISCALA">MARISCALA</a></td><td>MARISCALA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MASOLLER">MASOLLER</a></td><td>MASOLLER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MEDANOSNORTE">MEDANOS NORTE</a></td><td>MEDANOS NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MEDANOSSOLYMAR">MEDANOS SOLYMAR</a></td><td>MEDANOS SOLYMAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MELLIZOS">MELLIZOS</a></td><td>MELLIZOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MELO">MELO</a></td><td>MELO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MERCEDES">MERCEDES</a></td><td>MERCEDES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MERINOS">MERINOS</a></td><td>MERINOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MIGUEZ">MIGUEZ</a></td><td>MIGUEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MINAS">MINAS</a></td><td>MINAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MOIRONES">MOIRONES</a></td><td>MOIRONES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MONTES">MONTES</a></td><td>MONTES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MONTESSOLYMAR">MONTES SOLYMAR</a></td><td>MONTES SOLYMAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MONTEVIDEO">MONTEVIDEO</a></td><td>MONTEVIDEO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MONTVIDEOCHICO">MONTVIDEO CHICO</a></td><td>MONTVIDEO CHICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-MORATO">MORATO</a></td><td>MORATO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-N.46HELVECIA">N.HELVECIA</a></td><td>N.HELVECIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-N.46PALMIRA">N.PALMIRA</a></td><td>N.PALMIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-NEPTUNIANORTE">NEPTUNIA NORTE</a></td><td>NEPTUNIA NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-NEPTUNIASUR">NEPTUNIA SUR</a></td><td>NEPTUNIA SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-NUEVACARRARA">NUEVA CARRARA</a></td><td>NUEVA CARRARA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-NUEVOBERLIN">NUEVO BERLIN</a></td><td>NUEVO BERLIN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-O.46DELAVALLE">O.DE LAVALLE</a></td><td>O.DE LAVALLE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-O.46DEORIBE">O.DE ORIBE</a></td><td>O.DE ORIBE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-OCEANPARK">OCEAN PARK</a></td><td>OCEAN PARK</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ORGOROZO">ORGOROZO</a></td><td>ORGOROZO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46CASTELLANOS">P. CASTELLANOS</a></td><td>P. CASTELLANOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46AZUCAR">P.AZUCAR</a></td><td>P.AZUCAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46CERRO">P.CERRO</a></td><td>P.CERRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46D.46PLATANORTE">P.D.PLATA NORTE</a></td><td>P.D.PLATA NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46DEPACHE">P.DE PACHE</a></td><td>P.DE PACHE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46DELPLATA">P.DEL PLATA</a></td><td>P.DEL PLATA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46DEL.46ESTE">P.DEL.ESTE</a></td><td>P.DEL.ESTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46SEVERINO">P.SEVERINO</a></td><td>P.SEVERINO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46SOLA">P.SOLA</a></td><td>P.SOLA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-P.46TOROS">P.TOROS</a></td><td>P.TOROS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PALMITAS">PALMITAS</a></td><td>PALMITAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PALOSOLO">PALO SOLO</a></td><td>PALO SOLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PANDO">PANDO</a></td><td>PANDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PANDULE">PANDULE</a></td><td>PANDULE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PARAJEPENSE">PARAJE PENSE</a></td><td>PARAJE PENSE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PARALL.201">PARALLÉ</a></td><td>PARALLÉ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PARQUEMIRAMAR">PARQUE MIRAMAR</a></td><td>PARQUE MIRAMAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PARQUESOLYMAR">PARQUE SOLYMAR</a></td><td>PARQUE SOLYMAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASANO">PASANO</a></td><td>PASANO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOARRIERA">PASO ARRIERA</a></td><td>PASO ARRIERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOATAQUES">PASO ATAQUES</a></td><td>PASO ATAQUES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOCARRASCO">PASO CARRASCO</a></td><td>PASO CARRASCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODPARQUE">PASO D PARQUE</a></td><td>PASO D PARQUE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODELACRUZ">PASO DE LA CRUZ</a></td><td>PASO DE LA CRUZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODELASCARRETAS">PASO DE LAS CARRETAS</a></td><td>PASO DE LAS CARRETAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODELOSNOVILLOS">PASO DE LOS NOVILLOS</a></td><td>PASO DE LOS NOVILLOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODELMEDIO">PASO DEL MEDIO</a></td><td>PASO DEL MEDIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASODELTAPADO">PASO DEL TAPADO</a></td><td>PASO DEL TAPADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOFARIAS">PASO FARIAS</a></td><td>PASO FARIAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOHOSPITAL">PASO HOSPITAL</a></td><td>PASO HOSPITAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PASOPEREIRA">PASO PEREIRA</a></td><td>PASO PEREIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PAYSANDU">PAYSANDU</a></td><td>PAYSANDU</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PBLO.46FERNANDEZ">PBLO. FERNANDEZ</a></td><td>PBLO. FERNANDEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PERALTA">PERALTA</a></td><td>PERALTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PIEDRADELTORO">PIEDRA DEL TORO</a></td><td>PIEDRA DEL TORO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PIEDRAS.46COLORA.46">PIEDRAS.COLORA.</a></td><td>PIEDRAS.COLORA.</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINAMARNORTE">PINAMAR NORTE</a></td><td>PINAMAR NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINAMARSUR">PINAMAR SUR</a></td><td>PINAMAR SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINAR-NORTE">PINAR - NORTE</a></td><td>PINAR - NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINARES">PINARES</a></td><td>PINARES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINARES-ATL">PINARES - ATL</a></td><td>PINARES - ATL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINTADO">PINTADO</a></td><td>PINTADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PINTADOGRANDE">PINTADO GRANDE</a></td><td>PINTADO GRANDE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PI.209ERA">PIÑERA</a></td><td>PIÑERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PIRARAJA">PIRARAJA</a></td><td>PIRARAJA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PIRIAPOLIS">PIRIAPOLIS</a></td><td>PIRIAPOLIS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PIRIAPOLISINT">PIRIAPOLIS INT</a></td><td>PIRIAPOLIS INT</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PLACIDOROSAS">PLACIDO ROSAS</a></td><td>PLACIDO ROSAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-POBLADOALONSO">POBLADO ALONSO</a></td><td>POBLADO ALONSO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-POBLADOELORO">POBLADO EL ORO</a></td><td>POBLADO EL ORO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-POBLADOURUGUAY">POBLADO URUGUAY</a></td><td>POBLADO URUGUAY</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-POLANCODELYI">POLANCO DEL YI</a></td><td>POLANCO DEL YI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-POLANCOLAVALLEJA">POLANCO LAVALLEJA</a></td><td>POLANCO LAVALLEJA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PORVENIR">PORVENIR</a></td><td>PORVENIR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PROGRESO">PROGRESO</a></td><td>PROGRESO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PTA.46DEVALDEZ">PTA. DE VALDEZ</a></td><td>PTA. DE VALDEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PTA.46DELDIABLO">PTA. DEL DIABLO</a></td><td>PTA. DEL DIABLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOAREVALO">PUEBLO AREVALO</a></td><td>PUEBLO AREVALO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOCASTILLO">PUEBLO CASTILLO</a></td><td>PUEBLO CASTILLO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOCELESTE">PUEBLO CELESTE</a></td><td>PUEBLO CELESTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOCOLON">PUEBLO COLON</a></td><td>PUEBLO COLON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLODELOSSANTOS">PUEBLO DE LOS SANTOS</a></td><td>PUEBLO DE LOS SANTOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLODELBARRO">PUEBLO DEL BARRO</a></td><td>PUEBLO DEL BARRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOEDEN">PUEBLO EDEN</a></td><td>PUEBLO EDEN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOGRECO">PUEBLO GRECO</a></td><td>PUEBLO GRECO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOHERIBERTO">PUEBLO HERIBERTO</a></td><td>PUEBLO HERIBERTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOLABOLSA">PUEBLO LA BOLSA</a></td><td>PUEBLO LA BOLSA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLONUEVO">PUEBLO NUEVO</a></td><td>PUEBLO NUEVO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOSOTO">PUEBLO SOTO</a></td><td>PUEBLO SOTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUEBLOZEBALLOS">PUEBLO ZEBALLOS</a></td><td>PUEBLO ZEBALLOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUENTEDEVALIZAS">PUENTE DE VALIZAS</a></td><td>PUENTE DE VALIZAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUIMAYEN">PUIMAYEN</a></td><td>PUIMAYEN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUNTA5SAUCES">PUNTA 5 SAUCES</a></td><td>PUNTA 5 SAUCES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUNTABALLENA">PUNTA BALLENA</a></td><td>PUNTA BALLENA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUNTARUBIA">PUNTA RUBIA</a></td><td>PUNTA RUBIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-PUNTASDELPARAO">PUNTAS DEL PARAO</a></td><td>PUNTAS DEL PARAO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-QUEBRACHO">QUEBRACHO</a></td><td>QUEBRACHO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-QUEGUAYCHICO">QUEGUAY CHICO</a></td><td>QUEGUAY CHICO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-QUEGUAYAR">QUEGUAYAR</a></td><td>QUEGUAYAR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RADIAL">RADIAL</a></td><td>RADIAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RAFAELPERAZZA">RAFAEL PERAZZA</a></td><td>RAFAEL PERAZZA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RAIGON">RAIGON</a></td><td>RAIGON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-REBOLEDO">REBOLEDO</a></td><td>REBOLEDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RIACHUELO">RIACHUELO</a></td><td>RIACHUELO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RINCON">RINCON</a></td><td>RINCON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RINCONDEPACHECO">RINCON DE PACHECO</a></td><td>RINCON DE PACHECO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RINCONDEPINTADO">RINCON DE PINTADO</a></td><td>RINCON DE PINTADO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RINCONDELPINO">RINCON DEL PINO</a></td><td>RINCON DEL PINO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RINCONPEREIRA">RINCON PEREIRA</a></td><td>RINCON PEREIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RIOBRANCO">RIO BRANCO</a></td><td>RIO BRANCO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RISSO">RISSO</a></td><td>RISSO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RIVERA">RIVERA</a></td><td>RIVERA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ROCHA">ROCHA</a></td><td>ROCHA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RODO">RODO</a></td><td>RODO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-RODRIGUEZ">RODRIGUEZ</a></td><td>RODRIGUEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ROSARIO">ROSARIO</a></td><td>ROSARIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46ANTONIO">S.ANTONIO</a></td><td>S.ANTONIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46BAUTISTA">S.BAUTISTA</a></td><td>S.BAUTISTA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46DELYI">S.DEL YI</a></td><td>S.DEL YI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46GRANDE">S.GRANDE</a></td><td>S.GRANDE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46GREGORIO">S.GREGORIO</a></td><td>S.GREGORIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46JACINTO">S.JACINTO</a></td><td>S.JACINTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46JORGE">S.JORGE</a></td><td>S.JORGE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-S.46RAMON">S.RAMON</a></td><td>S.RAMON</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SACACHISPAS">SACACHISPAS</a></td><td>SACACHISPAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SALINAS">SALINAS</a></td><td>SALINAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SALTO">SALTO</a></td><td>SALTO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANANTONIO">SAN ANTONIO</a></td><td>SAN ANTONIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANBENITO">SAN BENITO</a></td><td>SAN BENITO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANCARLOS">SAN CARLOS</a></td><td>SAN CARLOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANCRISTOBAL">SAN CRISTOBAL</a></td><td>SAN CRISTOBAL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANGABRIEL">SAN GABRIEL</a></td><td>SAN GABRIEL</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANGREGORIO">SAN GREGORIO</a></td><td>SAN GREGORIO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANJAVIER">SAN JAVIER</a></td><td>SAN JAVIER</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANJOSE">SAN JOSE</a></td><td>SAN JOSE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANLUIS">SAN LUIS</a></td><td>SAN LUIS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANLUIS.40CNLNES.41">SAN LUIS(CNLNES)</a></td><td>SAN LUIS(CNLNES)</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANPEDRO">SAN PEDRO</a></td><td>SAN PEDRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANCHEZ">SANCHEZ</a></td><td>SANCHEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANTAANA">SANTA ANA</a></td><td>SANTA ANA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANTAANAC">SANTA ANA C</a></td><td>SANTA ANA C</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANTACLARA">SANTA CLARA</a></td><td>SANTA CLARA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANTAMONICA">SANTA MONICA</a></td><td>SANTA MONICA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SANTATERESITA">SANTA TERESITA</a></td><td>SANTA TERESITA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SAU.46DELYI">SAU.DEL YI</a></td><td>SAU.DEL YI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SAUCE">SAUCE</a></td><td>SAUCE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SAUCEDEBATOVI">SAUCE DE BATOVI</a></td><td>SAUCE DE BATOVI</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SAUCEDEPORTEZUELO">SAUCE DE PORTEZUELO</a></td><td>SAUCE DE PORTEZUELO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SAUCE.46">SAUCE.</a></td><td>SAUCE.</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SDI.46DENAVARRO">SDI. DE NAVARRO</a></td><td>SDI. DE NAVARRO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SEQUEIRA">SEQUEIRA</a></td><td>SEQUEIRA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SHANGRILA">SHANGRILA</a></td><td>SHANGRILA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SJ.46CARRASCONOR">SJ.CARRASCO NOR</a></td><td>SJ.CARRASCO NOR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SJ.46CARRASCOSUR">SJ.CARRASCO SUR</a></td><td>SJ.CARRASCO SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOCA">SOCA</a></td><td>SOCA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOLIS">SOLIS</a></td><td>SOLIS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOLISDEMATAOJ">SOLIS DE MATAOJ</a></td><td>SOLIS DE MATAOJ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOLYMARNORTE">SOLYMAR NORTE</a></td><td>SOLYMAR NORTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOLYMARSUR">SOLYMAR SUR</a></td><td>SOLYMAR SUR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SOUDRIERS">SOUDRIERS</a></td><td>SOUDRIERS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-STA.46CATALINA">STA. CATALINA</a></td><td>STA. CATALINA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-STA.46LUCIADELESTE">STA. LUCIA DEL ESTE</a></td><td>STA. LUCIA DEL ESTE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-STA.46ROSA">STA. ROSA</a></td><td>STA. ROSA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-STA.46LUCIA">STA.LUCIA</a></td><td>STA.LUCIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-SUAREZ">SUAREZ</a></td><td>SUAREZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-T.46TRES">T.TRES</a></td><td>T.TRES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TACUAREMBO">TACUAREMBO</a></td><td>TACUAREMBO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TALA">TALA</a></td><td>TALA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TAMBORES">TAMBORES</a></td><td>TAMBORES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TAPIA">TAPIA</a></td><td>TAPIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TARARIRAS">TARARIRAS</a></td><td>TARARIRAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TARUMAN">TARUMAN</a></td><td>TARUMAN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TIATUCURA">TIATUCURA</a></td><td>TIATUCURA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TIERRCOLORADAS">TIERR COLORADAS</a></td><td>TIERR COLORADAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TOLEDO">TOLEDO</a></td><td>TOLEDO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TOPADOR">TOPADOR</a></td><td>TOPADOR</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TOTORALDSAUCE">TOTORAL D SAUCE</a></td><td>TOTORAL D SAUCE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TRANQUERAS">TRANQUERAS</a></td><td>TRANQUERAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TRESISLAS">TRES ISLAS</a></td><td>TRES ISLAS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TRINIDAD">TRINIDAD</a></td><td>TRINIDAD</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-TUPAMBAE">TUPAMBAE</a></td><td>TUPAMBAE</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-V.46ANSINA">V.ANSINA</a></td><td>V.ANSINA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-V.46ARGENTINA">V.ARGENTINA</a></td><td>V.ARGENTINA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-V.46CARMEN">V.CARMEN</a></td><td>V.CARMEN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VALENTIN">VALENTIN</a></td><td>VALENTIN</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VALENTINES">VALENTINES</a></td><td>VALENTINES</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VALLESOBA">VALLE SOBA</a></td><td>VALLE SOBA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VELAZQUEZ">VELAZQUEZ</a></td><td>VELAZQUEZ</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VERGARA">VERGARA</a></td><td>VERGARA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VIANA">VIANA</a></td><td>VIANA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VICHADERO">VICHADERO</a></td><td>VICHADERO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VILLAMARIA">VILLA MARIA</a></td><td>VILLA MARIA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VILLAMONTA.209ESA">VILLA MONTAÑESA</a></td><td>VILLA MONTAÑESA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VILLAOLMOS">VILLA OLMOS</a></td><td>VILLA OLMOS</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VILLASARA">VILLA SARA</a></td><td>VILLA SARA</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-VILLASORIANO">VILLA SORIANO</a></td><td>VILLA SORIANO</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-YOUNG">YOUNG</a></td><td>YOUNG</td></tr><tr><td><a href="CodeSystem-cs-localidades-uy.html#cs-localidades-uy-ZAPICAN">ZAPICAN</a></td><td>ZAPICAN</td></tr></table></li></ul></div>
   </text>
   <url value="http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy"/>
   <version value="0.1.0"/>
   <name value="VSLocalidadesUY"/>
   <title value="Localidades de Uruguay"/>
   <status value="draft"/>
-  <date value="2026-09-28T15:20:04-03:00"/>
+  <date value="2026-10-06T01:23:13-03:00"/>
   <publisher value="AGESIC"/>
+  <contact>
+    <name value="AGESIC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"/>
+    </telecom>
+  </contact>
   <description value="Localidades de Uruguay publicadas en el catálogo de OSE, para vincular Address.city."/>
   <compose>
     <include>
       <system value="http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy"/>
+      <concept>
+        <code value="18 DE JULIO"/>
+        <display value="18 DE JULIO"/>
+      </concept>
+      <concept>
+        <code value="19 DE ABRIL"/>
+        <display value="19 DE ABRIL"/>
+      </concept>
+      <concept>
+        <code value="25 DE AGOSTO"/>
+        <display value="25 DE AGOSTO"/>
+      </concept>
+      <concept>
+        <code value="25 DE MAYO"/>
+        <display value="25 DE MAYO"/>
+      </concept>
+      <concept>
+        <code value="ABROJAL"/>
+        <display value="ABROJAL"/>
+      </concept>
+      <concept>
+        <code value="ACEGUA"/>
+        <display value="ACEGUA"/>
+      </concept>
+      <concept>
+        <code value="ACHAR"/>
+        <display value="ACHAR"/>
+      </concept>
+      <concept>
+        <code value="AEROPARQUE"/>
+        <display value="AEROPARQUE"/>
+      </concept>
+      <concept>
+        <code value="AGRACIADA"/>
+        <display value="AGRACIADA"/>
+      </concept>
+      <concept>
+        <code value="AGUAS BLANCAS"/>
+        <display value="AGUAS BLANCAS"/>
+      </concept>
+      <concept>
+        <code value="AGUAS BUENAS"/>
+        <display value="AGUAS BUENAS"/>
+      </concept>
+      <concept>
+        <code value="AGUAS CTES."/>
+        <display value="AGUAS CTES."/>
+      </concept>
+      <concept>
+        <code value="AGUAS DULCES"/>
+        <display value="AGUAS DULCES"/>
+      </concept>
+      <concept>
+        <code value="AIGUA"/>
+        <display value="AIGUA"/>
+      </concept>
+      <concept>
+        <code value="ALGORTA"/>
+        <display value="ALGORTA"/>
+      </concept>
+      <concept>
+        <code value="AMARILLO"/>
+        <display value="AMARILLO"/>
+      </concept>
+      <concept>
+        <code value="ANDRESITO"/>
+        <display value="ANDRESITO"/>
+      </concept>
+      <concept>
+        <code value="ANTONIOPOLIS"/>
+        <display value="ANTONIOPOLIS"/>
+      </concept>
+      <concept>
+        <code value="ARAMENDIA"/>
+        <display value="ARAMENDIA"/>
+      </concept>
+      <concept>
+        <code value="ARAMINDA"/>
+        <display value="ARAMINDA"/>
+      </concept>
+      <concept>
+        <code value="ARBOLITO1"/>
+        <display value="ARBOLITO1"/>
+      </concept>
+      <concept>
+        <code value="ARBOLITO2"/>
+        <display value="ARBOLITO2"/>
+      </concept>
+      <concept>
+        <code value="ARENITAS BLANCA"/>
+        <display value="ARENITAS BLANCA"/>
+      </concept>
+      <concept>
+        <code value="ARROYO BLANCO"/>
+        <display value="ARROYO BLANCO"/>
+      </concept>
+      <concept>
+        <code value="ARTIGAS"/>
+        <display value="ARTIGAS"/>
+      </concept>
+      <concept>
+        <code value="ARTILLEROS"/>
+        <display value="ARTILLEROS"/>
+      </concept>
+      <concept>
+        <code value="ATLANTIDA"/>
+        <display value="ATLANTIDA"/>
+      </concept>
+      <concept>
+        <code value="AUTODROMO"/>
+        <display value="AUTODROMO"/>
+      </concept>
+      <concept>
+        <code value="AYUI"/>
+        <display value="AYUI"/>
+      </concept>
+      <concept>
+        <code value="B. BRUM"/>
+        <display value="B. BRUM"/>
+      </concept>
+      <concept>
+        <code value="B. RIVERA"/>
+        <display value="B. RIVERA"/>
+      </concept>
+      <concept>
+        <code value="B.BLANCOS"/>
+        <display value="B.BLANCOS"/>
+      </concept>
+      <concept>
+        <code value="BALNEARIO BUENOS AIRES (ADCL)"/>
+        <display value="BALNEARIO BUENOS AIRES (ADCL)"/>
+      </concept>
+      <concept>
+        <code value="BAÑADO DE MEDIN"/>
+        <display value="BAÑADO DE MEDIN"/>
+      </concept>
+      <concept>
+        <code value="BARRA CARRASCO"/>
+        <display value="BARRA CARRASCO"/>
+      </concept>
+      <concept>
+        <code value="BARRA CHUY"/>
+        <display value="BARRA CHUY"/>
+      </concept>
+      <concept>
+        <code value="BARRA D VALIZAS"/>
+        <display value="BARRA D VALIZAS"/>
+      </concept>
+      <concept>
+        <code value="BARRA URUGUAYA"/>
+        <display value="BARRA URUGUAYA"/>
+      </concept>
+      <concept>
+        <code value="BARRIO ARTIGAS"/>
+        <display value="BARRIO ARTIGAS"/>
+      </concept>
+      <concept>
+        <code value="BATLLE Y ORDOÑEZ"/>
+        <display value="BATLLE Y ORDOÑEZ"/>
+      </concept>
+      <concept>
+        <code value="BELEN"/>
+        <display value="BELEN"/>
+      </concept>
+      <concept>
+        <code value="BELLA UNION"/>
+        <display value="BELLA UNION"/>
+      </concept>
+      <concept>
+        <code value="BELLO HORIZONTE"/>
+        <display value="BELLO HORIZONTE"/>
+      </concept>
+      <concept>
+        <code value="BERRONDO"/>
+        <display value="BERRONDO"/>
+      </concept>
+      <concept>
+        <code value="BIARRITZ"/>
+        <display value="BIARRITZ"/>
+      </concept>
+      <concept>
+        <code value="BIASSINI"/>
+        <display value="BIASSINI"/>
+      </concept>
+      <concept>
+        <code value="BLANCA ARENA"/>
+        <display value="BLANCA ARENA"/>
+      </concept>
+      <concept>
+        <code value="BLANQUILLO"/>
+        <display value="BLANQUILLO"/>
+      </concept>
+      <concept>
+        <code value="BOCA DEL CUFRE"/>
+        <display value="BOCA DEL CUFRE"/>
+      </concept>
+      <concept>
+        <code value="BOLIVAR"/>
+        <display value="BOLIVAR"/>
+      </concept>
+      <concept>
+        <code value="BONILLA"/>
+        <display value="BONILLA"/>
+      </concept>
+      <concept>
+        <code value="BRIO. ARGENTINO"/>
+        <display value="BRIO. ARGENTINO"/>
+      </concept>
+      <concept>
+        <code value="BRIO. BUENOS AIRES"/>
+        <display value="BRIO. BUENOS AIRES"/>
+      </concept>
+      <concept>
+        <code value="BRIO.ESPAÑOL"/>
+        <display value="BRIO.ESPAÑOL"/>
+      </concept>
+      <concept>
+        <code value="BRISAS DE PLATA"/>
+        <display value="BRISAS DE PLATA"/>
+      </concept>
+      <concept>
+        <code value="BRITOPOLIS"/>
+        <display value="BRITOPOLIS"/>
+      </concept>
+      <concept>
+        <code value="BRRA DE LOS CHANCHOS"/>
+        <display value="BRRA DE LOS CHANCHOS"/>
+      </concept>
+      <concept>
+        <code value="BRRIO PINTADITO"/>
+        <display value="BRRIO PINTADITO"/>
+      </concept>
+      <concept>
+        <code value="BRRIO.ALBISU"/>
+        <display value="BRRIO.ALBISU"/>
+      </concept>
+      <concept>
+        <code value="BURICAYUPI"/>
+        <display value="BURICAYUPI"/>
+      </concept>
+      <concept>
+        <code value="C. DEL PERDIDO"/>
+        <display value="C. DEL PERDIDO"/>
+      </concept>
+      <concept>
+        <code value="C.COLORADO"/>
+        <display value="C.COLORADO"/>
+      </concept>
+      <concept>
+        <code value="C.MIGUELETE"/>
+        <display value="C.MIGUELETE"/>
+      </concept>
+      <concept>
+        <code value="C.REYLES"/>
+        <display value="C.REYLES"/>
+      </concept>
+      <concept>
+        <code value="C.ROSSEL"/>
+        <display value="C.ROSSEL"/>
+      </concept>
+      <concept>
+        <code value="C.VALDENSE"/>
+        <display value="C.VALDENSE"/>
+      </concept>
+      <concept>
+        <code value="CAMPAMENTO"/>
+        <display value="CAMPAMENTO"/>
+      </concept>
+      <concept>
+        <code value="CANELONES"/>
+        <display value="CANELONES"/>
+      </concept>
+      <concept>
+        <code value="CAÑADA DEL ESTADO"/>
+        <display value="CAÑADA DEL ESTADO"/>
+      </concept>
+      <concept>
+        <code value="CAÑADA MILAN"/>
+        <display value="CAÑADA MILAN"/>
+      </concept>
+      <concept>
+        <code value="CAÑADA NIETO"/>
+        <display value="CAÑADA NIETO"/>
+      </concept>
+      <concept>
+        <code value="CAP. FARRUCO"/>
+        <display value="CAP. FARRUCO"/>
+      </concept>
+      <concept>
+        <code value="CAPILLA D CELLA"/>
+        <display value="CAPILLA D CELLA"/>
+      </concept>
+      <concept>
+        <code value="CAPURRO"/>
+        <display value="CAPURRO"/>
+      </concept>
+      <concept>
+        <code value="CARAGUATA NORTE"/>
+        <display value="CARAGUATA NORTE"/>
+      </concept>
+      <concept>
+        <code value="CARDAL"/>
+        <display value="CARDAL"/>
+      </concept>
+      <concept>
+        <code value="CARDONA"/>
+        <display value="CARDONA"/>
+      </concept>
+      <concept>
+        <code value="CARDOZO CHICO"/>
+        <display value="CARDOZO CHICO"/>
+      </concept>
+      <concept>
+        <code value="CARDOZO GRANDE"/>
+        <display value="CARDOZO GRANDE"/>
+      </concept>
+      <concept>
+        <code value="CARMELO"/>
+        <display value="CARMELO"/>
+      </concept>
+      <concept>
+        <code value="CARRETA QUEMADA"/>
+        <display value="CARRETA QUEMADA"/>
+      </concept>
+      <concept>
+        <code value="CASTILLOS"/>
+        <display value="CASTILLOS"/>
+      </concept>
+      <concept>
+        <code value="CASUPA"/>
+        <display value="CASUPA"/>
+      </concept>
+      <concept>
+        <code value="CDAD.DEL PLATA"/>
+        <display value="CDAD.DEL PLATA"/>
+      </concept>
+      <concept>
+        <code value="CEBOLLATI"/>
+        <display value="CEBOLLATI"/>
+      </concept>
+      <concept>
+        <code value="CERRILLADA"/>
+        <display value="CERRILLADA"/>
+      </concept>
+      <concept>
+        <code value="CERRILLOS"/>
+        <display value="CERRILLOS"/>
+      </concept>
+      <concept>
+        <code value="CERRO CHATO1"/>
+        <display value="CERRO CHATO1"/>
+      </concept>
+      <concept>
+        <code value="CERRO CHATO2"/>
+        <display value="CERRO CHATO2"/>
+      </concept>
+      <concept>
+        <code value="CERRO COLORADO"/>
+        <display value="CERRO COLORADO"/>
+      </concept>
+      <concept>
+        <code value="CERRO CUENTAS"/>
+        <display value="CERRO CUENTAS"/>
+      </concept>
+      <concept>
+        <code value="CERRO DEL ARBOLITO"/>
+        <display value="CERRO DEL ARBOLITO"/>
+      </concept>
+      <concept>
+        <code value="CERRO EJIDO"/>
+        <display value="CERRO EJIDO"/>
+      </concept>
+      <concept>
+        <code value="CERRO PELADO"/>
+        <display value="CERRO PELADO"/>
+      </concept>
+      <concept>
+        <code value="CERRO PEREYRA"/>
+        <display value="CERRO PEREYRA"/>
+      </concept>
+      <concept>
+        <code value="CERROS AZULES"/>
+        <display value="CERROS AZULES"/>
+      </concept>
+      <concept>
+        <code value="CERROS BLANCOS"/>
+        <display value="CERROS BLANCOS"/>
+      </concept>
+      <concept>
+        <code value="CHAMBERLAIN"/>
+        <display value="CHAMBERLAIN"/>
+      </concept>
+      <concept>
+        <code value="CHAMIZO"/>
+        <display value="CHAMIZO"/>
+      </concept>
+      <concept>
+        <code value="CHAPICUY"/>
+        <display value="CHAPICUY"/>
+      </concept>
+      <concept>
+        <code value="CHINGOLAS"/>
+        <display value="CHINGOLAS"/>
+      </concept>
+      <concept>
+        <code value="CHUY"/>
+        <display value="CHUY"/>
+      </concept>
+      <concept>
+        <code value="CLARA"/>
+        <display value="CLARA"/>
+      </concept>
+      <concept>
+        <code value="COLINAS"/>
+        <display value="COLINAS"/>
+      </concept>
+      <concept>
+        <code value="COLONIA"/>
+        <display value="COLONIA"/>
+      </concept>
+      <concept>
+        <code value="COLONIA 18 JUL."/>
+        <display value="COLONIA 18 JUL."/>
+      </concept>
+      <concept>
+        <code value="COLONIA GARIBALDI"/>
+        <display value="COLONIA GARIBALDI"/>
+      </concept>
+      <concept>
+        <code value="COLONIA ITAPEBI"/>
+        <display value="COLONIA ITAPEBI"/>
+      </concept>
+      <concept>
+        <code value="COLONIA LAVALLE"/>
+        <display value="COLONIA LAVALLE"/>
+      </concept>
+      <concept>
+        <code value="COLONIA NICOLIC"/>
+        <display value="COLONIA NICOLIC"/>
+      </concept>
+      <concept>
+        <code value="CONCHILLAS"/>
+        <display value="CONCHILLAS"/>
+      </concept>
+      <concept>
+        <code value="CONSTANCIA"/>
+        <display value="CONSTANCIA"/>
+      </concept>
+      <concept>
+        <code value="CONSTITUCION"/>
+        <display value="CONSTITUCION"/>
+      </concept>
+      <concept>
+        <code value="COSMOPOLITA"/>
+        <display value="COSMOPOLITA"/>
+      </concept>
+      <concept>
+        <code value="COSTA AZUL1"/>
+        <display value="COSTA AZUL1"/>
+      </concept>
+      <concept>
+        <code value="COSTA AZUL2"/>
+        <display value="COSTA AZUL2"/>
+      </concept>
+      <concept>
+        <code value="CRUZ DE CAMINOS"/>
+        <display value="CRUZ DE CAMINOS"/>
+      </concept>
+      <concept>
+        <code value="CUARO"/>
+        <display value="CUARO"/>
+      </concept>
+      <concept>
+        <code value="CUARÓ"/>
+        <display value="CUARÓ"/>
+      </concept>
+      <concept>
+        <code value="CUARO CHICO"/>
+        <display value="CUARO CHICO"/>
+      </concept>
+      <concept>
+        <code value="CUCHILLA ALTA"/>
+        <display value="CUCHILLA ALTA"/>
+      </concept>
+      <concept>
+        <code value="CUCHILLA DEL OMBU"/>
+        <display value="CUCHILLA DEL OMBU"/>
+      </concept>
+      <concept>
+        <code value="CUFRE"/>
+        <display value="CUFRE"/>
+      </concept>
+      <concept>
+        <code value="CURTINA"/>
+        <display value="CURTINA"/>
+      </concept>
+      <concept>
+        <code value="DAYMAN"/>
+        <display value="DAYMAN"/>
+      </concept>
+      <concept>
+        <code value="DOLORES"/>
+        <display value="DOLORES"/>
+      </concept>
+      <concept>
+        <code value="DURAZNO"/>
+        <display value="DURAZNO"/>
+      </concept>
+      <concept>
+        <code value="E.MARTINEZ"/>
+        <display value="E.MARTINEZ"/>
+      </concept>
+      <concept>
+        <code value="ECILDA PAULIER"/>
+        <display value="ECILDA PAULIER"/>
+      </concept>
+      <concept>
+        <code value="EGAÑA"/>
+        <display value="EGAÑA"/>
+      </concept>
+      <concept>
+        <code value="EL BELLACO"/>
+        <display value="EL BELLACO"/>
+      </concept>
+      <concept>
+        <code value="EL CHORRO"/>
+        <display value="EL CHORRO"/>
+      </concept>
+      <concept>
+        <code value="EL EUCALIPTO"/>
+        <display value="EL EUCALIPTO"/>
+      </concept>
+      <concept>
+        <code value="EL PINAR - SUR"/>
+        <display value="EL PINAR - SUR"/>
+      </concept>
+      <concept>
+        <code value="EL TALA"/>
+        <display value="EL TALA"/>
+      </concept>
+      <concept>
+        <code value="EL TESORO"/>
+        <display value="EL TESORO"/>
+      </concept>
+      <concept>
+        <code value="ESPERANZA"/>
+        <display value="ESPERANZA"/>
+      </concept>
+      <concept>
+        <code value="EST.ATLANTIDA"/>
+        <display value="EST.ATLANTIDA"/>
+      </concept>
+      <concept>
+        <code value="EST.LA FLORESTA"/>
+        <display value="EST.LA FLORESTA"/>
+      </concept>
+      <concept>
+        <code value="ESTANZUELA"/>
+        <display value="ESTANZUELA"/>
+      </concept>
+      <concept>
+        <code value="F.MARCOS"/>
+        <display value="F.MARCOS"/>
+      </concept>
+      <concept>
+        <code value="F.STA.ROSA"/>
+        <display value="F.STA.ROSA"/>
+      </concept>
+      <concept>
+        <code value="FCIO. SANCHEZ"/>
+        <display value="FCIO. SANCHEZ"/>
+      </concept>
+      <concept>
+        <code value="FEDERACION"/>
+        <display value="FEDERACION"/>
+      </concept>
+      <concept>
+        <code value="FELICIANO"/>
+        <display value="FELICIANO"/>
+      </concept>
+      <concept>
+        <code value="FERRER"/>
+        <display value="FERRER"/>
+      </concept>
+      <concept>
+        <code value="FLORIDA"/>
+        <display value="FLORIDA"/>
+      </concept>
+      <concept>
+        <code value="FOMENTO"/>
+        <display value="FOMENTO"/>
+      </concept>
+      <concept>
+        <code value="FRAILE MUERTO"/>
+        <display value="FRAILE MUERTO"/>
+      </concept>
+      <concept>
+        <code value="FRAY BENTOS"/>
+        <display value="FRAY BENTOS"/>
+      </concept>
+      <concept>
+        <code value="FUNDACION POLANCO"/>
+        <display value="FUNDACION POLANCO"/>
+      </concept>
+      <concept>
+        <code value="G.AZNARES"/>
+        <display value="G.AZNARES"/>
+      </concept>
+      <concept>
+        <code value="GALLINAL"/>
+        <display value="GALLINAL"/>
+      </concept>
+      <concept>
+        <code value="GARZON"/>
+        <display value="GARZON"/>
+      </concept>
+      <concept>
+        <code value="GOMENSORO"/>
+        <display value="GOMENSORO"/>
+      </concept>
+      <concept>
+        <code value="GONZALEZ"/>
+        <display value="GONZALEZ"/>
+      </concept>
+      <concept>
+        <code value="GOÑI"/>
+        <display value="GOÑI"/>
+      </concept>
+      <concept>
+        <code value="GUAYUVIRA"/>
+        <display value="GUAYUVIRA"/>
+      </concept>
+      <concept>
+        <code value="GUAZUBIRA"/>
+        <display value="GUAZUBIRA"/>
+      </concept>
+      <concept>
+        <code value="GUAZUBIRA VIEJO"/>
+        <display value="GUAZUBIRA VIEJO"/>
+      </concept>
+      <concept>
+        <code value="GUICHON"/>
+        <display value="GUICHON"/>
+      </concept>
+      <concept>
+        <code value="I. CORTINAS"/>
+        <display value="I. CORTINAS"/>
+      </concept>
+      <concept>
+        <code value="ILLESCAS"/>
+        <display value="ILLESCAS"/>
+      </concept>
+      <concept>
+        <code value="INDEPENDENCIA"/>
+        <display value="INDEPENDENCIA"/>
+      </concept>
+      <concept>
+        <code value="ISIDORO NOBLIA"/>
+        <display value="ISIDORO NOBLIA"/>
+      </concept>
+      <concept>
+        <code value="ISLA PATRULLA"/>
+        <display value="ISLA PATRULLA"/>
+      </concept>
+      <concept>
+        <code value="ITUZAINGO"/>
+        <display value="ITUZAINGO"/>
+      </concept>
+      <concept>
+        <code value="J.J. CASTRO"/>
+        <display value="J.J. CASTRO"/>
+      </concept>
+      <concept>
+        <code value="J.LACAZE"/>
+        <display value="J.LACAZE"/>
+      </concept>
+      <concept>
+        <code value="J.P.VARELA"/>
+        <display value="J.P.VARELA"/>
+      </concept>
+      <concept>
+        <code value="JACKSON"/>
+        <display value="JACKSON"/>
+      </concept>
+      <concept>
+        <code value="JOANICO"/>
+        <display value="JOANICO"/>
+      </concept>
+      <concept>
+        <code value="JOSE IGNACIO"/>
+        <display value="JOSE IGNACIO"/>
+      </concept>
+      <concept>
+        <code value="JOSE IGNACIO (ADCL)"/>
+        <display value="JOSE IGNACIO (ADCL)"/>
+      </concept>
+      <concept>
+        <code value="JUAN SOLER"/>
+        <display value="JUAN SOLER"/>
+      </concept>
+      <concept>
+        <code value="KILOMETRO 110"/>
+        <display value="KILOMETRO 110"/>
+      </concept>
+      <concept>
+        <code value="KIYU"/>
+        <display value="KIYU"/>
+      </concept>
+      <concept>
+        <code value="L.GEIRES"/>
+        <display value="L.GEIRES"/>
+      </concept>
+      <concept>
+        <code value="LA AGUADA"/>
+        <display value="LA AGUADA"/>
+      </concept>
+      <concept>
+        <code value="LA ALDEA"/>
+        <display value="LA ALDEA"/>
+      </concept>
+      <concept>
+        <code value="LA BARRA"/>
+        <display value="LA BARRA"/>
+      </concept>
+      <concept>
+        <code value="LA BOLSA"/>
+        <display value="LA BOLSA"/>
+      </concept>
+      <concept>
+        <code value="LA BOTA"/>
+        <display value="LA BOTA"/>
+      </concept>
+      <concept>
+        <code value="LA BOTA ZB"/>
+        <display value="LA BOTA ZB"/>
+      </concept>
+      <concept>
+        <code value="LA BOYADA"/>
+        <display value="LA BOYADA"/>
+      </concept>
+      <concept>
+        <code value="LA CALERA"/>
+        <display value="LA CALERA"/>
+      </concept>
+      <concept>
+        <code value="LA CALZADA"/>
+        <display value="LA CALZADA"/>
+      </concept>
+      <concept>
+        <code value="LA CAPUERA"/>
+        <display value="LA CAPUERA"/>
+      </concept>
+      <concept>
+        <code value="LA CAPUERA (ZB)"/>
+        <display value="LA CAPUERA (ZB)"/>
+      </concept>
+      <concept>
+        <code value="LA CASILLA"/>
+        <display value="LA CASILLA"/>
+      </concept>
+      <concept>
+        <code value="LA CONCORDIA"/>
+        <display value="LA CONCORDIA"/>
+      </concept>
+      <concept>
+        <code value="LA CORONILLA"/>
+        <display value="LA CORONILLA"/>
+      </concept>
+      <concept>
+        <code value="LA CRUZ"/>
+        <display value="LA CRUZ"/>
+      </concept>
+      <concept>
+        <code value="LA CUCHILLA"/>
+        <display value="LA CUCHILLA"/>
+      </concept>
+      <concept>
+        <code value="LA FLORESTA"/>
+        <display value="LA FLORESTA"/>
+      </concept>
+      <concept>
+        <code value="LA HILERA"/>
+        <display value="LA HILERA"/>
+      </concept>
+      <concept>
+        <code value="LA JUANITA"/>
+        <display value="LA JUANITA"/>
+      </concept>
+      <concept>
+        <code value="LA MACANA"/>
+        <display value="LA MACANA"/>
+      </concept>
+      <concept>
+        <code value="LA MICAELA"/>
+        <display value="LA MICAELA"/>
+      </concept>
+      <concept>
+        <code value="LA PALMA"/>
+        <display value="LA PALMA"/>
+      </concept>
+      <concept>
+        <code value="LA PALOMA1"/>
+        <display value="LA PALOMA1"/>
+      </concept>
+      <concept>
+        <code value="LA PALOMA2"/>
+        <display value="LA PALOMA2"/>
+      </concept>
+      <concept>
+        <code value="LA PAZ1"/>
+        <display value="LA PAZ1"/>
+      </concept>
+      <concept>
+        <code value="LA PAZ2"/>
+        <display value="LA PAZ2"/>
+      </concept>
+      <concept>
+        <code value="LA PEDRERA"/>
+        <display value="LA PEDRERA"/>
+      </concept>
+      <concept>
+        <code value="LA PUENTE"/>
+        <display value="LA PUENTE"/>
+      </concept>
+      <concept>
+        <code value="LA TENTACION"/>
+        <display value="LA TENTACION"/>
+      </concept>
+      <concept>
+        <code value="LA TUNA"/>
+        <display value="LA TUNA"/>
+      </concept>
+      <concept>
+        <code value="LAGO MERIN"/>
+        <display value="LAGO MERIN"/>
+      </concept>
+      <concept>
+        <code value="LAGOMAR NORTE"/>
+        <display value="LAGOMAR NORTE"/>
+      </concept>
+      <concept>
+        <code value="LAGOMAR SUR"/>
+        <display value="LAGOMAR SUR"/>
+      </concept>
+      <concept>
+        <code value="LAGUNA DE ROCHA"/>
+        <display value="LAGUNA DE ROCHA"/>
+      </concept>
+      <concept>
+        <code value="LAMAS"/>
+        <display value="LAMAS"/>
+      </concept>
+      <concept>
+        <code value="LAS CHILCAS"/>
+        <display value="LAS CHILCAS"/>
+      </concept>
+      <concept>
+        <code value="LAS FLORES"/>
+        <display value="LAS FLORES"/>
+      </concept>
+      <concept>
+        <code value="LAS PAJAS"/>
+        <display value="LAS PAJAS"/>
+      </concept>
+      <concept>
+        <code value="LAS PALMAS"/>
+        <display value="LAS PALMAS"/>
+      </concept>
+      <concept>
+        <code value="LAS PIEDRAS"/>
+        <display value="LAS PIEDRAS"/>
+      </concept>
+      <concept>
+        <code value="LAS TOSCAS NORT"/>
+        <display value="LAS TOSCAS NORT"/>
+      </concept>
+      <concept>
+        <code value="LAS TOSCAS1"/>
+        <display value="LAS TOSCAS1"/>
+      </concept>
+      <concept>
+        <code value="LAS TOSCAS2"/>
+        <display value="LAS TOSCAS2"/>
+      </concept>
+      <concept>
+        <code value="LAS VEGAS NORTE"/>
+        <display value="LAS VEGAS NORTE"/>
+      </concept>
+      <concept>
+        <code value="LAS VEGAS SUR"/>
+        <display value="LAS VEGAS SUR"/>
+      </concept>
+      <concept>
+        <code value="LASCANO"/>
+        <display value="LASCANO"/>
+      </concept>
+      <concept>
+        <code value="LAURELES"/>
+        <display value="LAURELES"/>
+      </concept>
+      <concept>
+        <code value="LIBERTAD"/>
+        <display value="LIBERTAD"/>
+      </concept>
+      <concept>
+        <code value="LOMAS D SOLYMAR"/>
+        <display value="LOMAS D SOLYMAR"/>
+      </concept>
+      <concept>
+        <code value="LOMAS NORTE"/>
+        <display value="LOMAS NORTE"/>
+      </concept>
+      <concept>
+        <code value="LOMAS SOLYMAR 3"/>
+        <display value="LOMAS SOLYMAR 3"/>
+      </concept>
+      <concept>
+        <code value="LOS CERROS"/>
+        <display value="LOS CERROS"/>
+      </concept>
+      <concept>
+        <code value="LOS CUADRADOS"/>
+        <display value="LOS CUADRADOS"/>
+      </concept>
+      <concept>
+        <code value="LOS FEOS"/>
+        <display value="LOS FEOS"/>
+      </concept>
+      <concept>
+        <code value="LOS FURTADOS"/>
+        <display value="LOS FURTADOS"/>
+      </concept>
+      <concept>
+        <code value="LOS HIGUERONES"/>
+        <display value="LOS HIGUERONES"/>
+      </concept>
+      <concept>
+        <code value="LOS PINOS"/>
+        <display value="LOS PINOS"/>
+      </concept>
+      <concept>
+        <code value="LOS SEMPER"/>
+        <display value="LOS SEMPER"/>
+      </concept>
+      <concept>
+        <code value="LOS TALAS"/>
+        <display value="LOS TALAS"/>
+      </concept>
+      <concept>
+        <code value="LOS TITANES"/>
+        <display value="LOS TITANES"/>
+      </concept>
+      <concept>
+        <code value="M ALBINA"/>
+        <display value="M ALBINA"/>
+      </concept>
+      <concept>
+        <code value="M.CHICO"/>
+        <display value="M.CHICO"/>
+      </concept>
+      <concept>
+        <code value="M.CORAL"/>
+        <display value="M.CORAL"/>
+      </concept>
+      <concept>
+        <code value="M.DE CORRALES"/>
+        <display value="M.DE CORRALES"/>
+      </concept>
+      <concept>
+        <code value="M.GRANDE"/>
+        <display value="M.GRANDE"/>
+      </concept>
+      <concept>
+        <code value="MACIEL"/>
+        <display value="MACIEL"/>
+      </concept>
+      <concept>
+        <code value="MAL ABRIGO"/>
+        <display value="MAL ABRIGO"/>
+      </concept>
+      <concept>
+        <code value="MALDONADO"/>
+        <display value="MALDONADO"/>
+      </concept>
+      <concept>
+        <code value="MALDONADO (ZB)"/>
+        <display value="MALDONADO (ZB)"/>
+      </concept>
+      <concept>
+        <code value="MALVAREZ"/>
+        <display value="MALVAREZ"/>
+      </concept>
+      <concept>
+        <code value="MANANTIALES"/>
+        <display value="MANANTIALES"/>
+      </concept>
+      <concept>
+        <code value="MANGRULLO"/>
+        <display value="MANGRULLO"/>
+      </concept>
+      <concept>
+        <code value="MARGAT"/>
+        <display value="MARGAT"/>
+      </concept>
+      <concept>
+        <code value="MARINDIA"/>
+        <display value="MARINDIA"/>
+      </concept>
+      <concept>
+        <code value="MARISCALA"/>
+        <display value="MARISCALA"/>
+      </concept>
+      <concept>
+        <code value="MASOLLER"/>
+        <display value="MASOLLER"/>
+      </concept>
+      <concept>
+        <code value="MEDANOS NORTE"/>
+        <display value="MEDANOS NORTE"/>
+      </concept>
+      <concept>
+        <code value="MEDANOS SOLYMAR"/>
+        <display value="MEDANOS SOLYMAR"/>
+      </concept>
+      <concept>
+        <code value="MELLIZOS"/>
+        <display value="MELLIZOS"/>
+      </concept>
+      <concept>
+        <code value="MELO"/>
+        <display value="MELO"/>
+      </concept>
+      <concept>
+        <code value="MERCEDES"/>
+        <display value="MERCEDES"/>
+      </concept>
+      <concept>
+        <code value="MERINOS"/>
+        <display value="MERINOS"/>
+      </concept>
+      <concept>
+        <code value="MIGUEZ"/>
+        <display value="MIGUEZ"/>
+      </concept>
+      <concept>
+        <code value="MINAS"/>
+        <display value="MINAS"/>
+      </concept>
+      <concept>
+        <code value="MOIRONES"/>
+        <display value="MOIRONES"/>
+      </concept>
+      <concept>
+        <code value="MONTES"/>
+        <display value="MONTES"/>
+      </concept>
+      <concept>
+        <code value="MONTES SOLYMAR"/>
+        <display value="MONTES SOLYMAR"/>
+      </concept>
+      <concept>
+        <code value="MONTEVIDEO"/>
+        <display value="MONTEVIDEO"/>
+      </concept>
+      <concept>
+        <code value="MONTVIDEO CHICO"/>
+        <display value="MONTVIDEO CHICO"/>
+      </concept>
+      <concept>
+        <code value="MORATO"/>
+        <display value="MORATO"/>
+      </concept>
+      <concept>
+        <code value="N.HELVECIA"/>
+        <display value="N.HELVECIA"/>
+      </concept>
+      <concept>
+        <code value="N.PALMIRA"/>
+        <display value="N.PALMIRA"/>
+      </concept>
+      <concept>
+        <code value="NEPTUNIA NORTE"/>
+        <display value="NEPTUNIA NORTE"/>
+      </concept>
+      <concept>
+        <code value="NEPTUNIA SUR"/>
+        <display value="NEPTUNIA SUR"/>
+      </concept>
+      <concept>
+        <code value="NUEVA CARRARA"/>
+        <display value="NUEVA CARRARA"/>
+      </concept>
+      <concept>
+        <code value="NUEVO BERLIN"/>
+        <display value="NUEVO BERLIN"/>
+      </concept>
+      <concept>
+        <code value="O.DE LAVALLE"/>
+        <display value="O.DE LAVALLE"/>
+      </concept>
+      <concept>
+        <code value="O.DE ORIBE"/>
+        <display value="O.DE ORIBE"/>
+      </concept>
+      <concept>
+        <code value="OCEAN PARK"/>
+        <display value="OCEAN PARK"/>
+      </concept>
+      <concept>
+        <code value="ORGOROZO"/>
+        <display value="ORGOROZO"/>
+      </concept>
+      <concept>
+        <code value="P. CASTELLANOS"/>
+        <display value="P. CASTELLANOS"/>
+      </concept>
+      <concept>
+        <code value="P.AZUCAR"/>
+        <display value="P.AZUCAR"/>
+      </concept>
+      <concept>
+        <code value="P.CERRO"/>
+        <display value="P.CERRO"/>
+      </concept>
+      <concept>
+        <code value="P.D.PLATA NORTE"/>
+        <display value="P.D.PLATA NORTE"/>
+      </concept>
+      <concept>
+        <code value="P.DE PACHE"/>
+        <display value="P.DE PACHE"/>
+      </concept>
+      <concept>
+        <code value="P.DEL PLATA"/>
+        <display value="P.DEL PLATA"/>
+      </concept>
+      <concept>
+        <code value="P.DEL.ESTE"/>
+        <display value="P.DEL.ESTE"/>
+      </concept>
+      <concept>
+        <code value="P.SEVERINO"/>
+        <display value="P.SEVERINO"/>
+      </concept>
+      <concept>
+        <code value="P.SOLA"/>
+        <display value="P.SOLA"/>
+      </concept>
+      <concept>
+        <code value="P.TOROS"/>
+        <display value="P.TOROS"/>
+      </concept>
+      <concept>
+        <code value="PALMITAS"/>
+        <display value="PALMITAS"/>
+      </concept>
+      <concept>
+        <code value="PALO SOLO"/>
+        <display value="PALO SOLO"/>
+      </concept>
+      <concept>
+        <code value="PANDO"/>
+        <display value="PANDO"/>
+      </concept>
+      <concept>
+        <code value="PANDULE"/>
+        <display value="PANDULE"/>
+      </concept>
+      <concept>
+        <code value="PARAJE PENSE"/>
+        <display value="PARAJE PENSE"/>
+      </concept>
+      <concept>
+        <code value="PARALLÉ"/>
+        <display value="PARALLÉ"/>
+      </concept>
+      <concept>
+        <code value="PARQUE MIRAMAR"/>
+        <display value="PARQUE MIRAMAR"/>
+      </concept>
+      <concept>
+        <code value="PARQUE SOLYMAR"/>
+        <display value="PARQUE SOLYMAR"/>
+      </concept>
+      <concept>
+        <code value="PASANO"/>
+        <display value="PASANO"/>
+      </concept>
+      <concept>
+        <code value="PASO ARRIERA"/>
+        <display value="PASO ARRIERA"/>
+      </concept>
+      <concept>
+        <code value="PASO ATAQUES"/>
+        <display value="PASO ATAQUES"/>
+      </concept>
+      <concept>
+        <code value="PASO CARRASCO"/>
+        <display value="PASO CARRASCO"/>
+      </concept>
+      <concept>
+        <code value="PASO D PARQUE"/>
+        <display value="PASO D PARQUE"/>
+      </concept>
+      <concept>
+        <code value="PASO DE LA CRUZ"/>
+        <display value="PASO DE LA CRUZ"/>
+      </concept>
+      <concept>
+        <code value="PASO DE LAS CARRETAS"/>
+        <display value="PASO DE LAS CARRETAS"/>
+      </concept>
+      <concept>
+        <code value="PASO DE LOS NOVILLOS"/>
+        <display value="PASO DE LOS NOVILLOS"/>
+      </concept>
+      <concept>
+        <code value="PASO DEL MEDIO"/>
+        <display value="PASO DEL MEDIO"/>
+      </concept>
+      <concept>
+        <code value="PASO DEL TAPADO"/>
+        <display value="PASO DEL TAPADO"/>
+      </concept>
+      <concept>
+        <code value="PASO FARIAS"/>
+        <display value="PASO FARIAS"/>
+      </concept>
+      <concept>
+        <code value="PASO HOSPITAL"/>
+        <display value="PASO HOSPITAL"/>
+      </concept>
+      <concept>
+        <code value="PASO PEREIRA"/>
+        <display value="PASO PEREIRA"/>
+      </concept>
+      <concept>
+        <code value="PAYSANDU"/>
+        <display value="PAYSANDU"/>
+      </concept>
+      <concept>
+        <code value="PBLO. FERNANDEZ"/>
+        <display value="PBLO. FERNANDEZ"/>
+      </concept>
+      <concept>
+        <code value="PERALTA"/>
+        <display value="PERALTA"/>
+      </concept>
+      <concept>
+        <code value="PIEDRA DEL TORO"/>
+        <display value="PIEDRA DEL TORO"/>
+      </concept>
+      <concept>
+        <code value="PIEDRAS.COLORA."/>
+        <display value="PIEDRAS.COLORA."/>
+      </concept>
+      <concept>
+        <code value="PINAMAR NORTE"/>
+        <display value="PINAMAR NORTE"/>
+      </concept>
+      <concept>
+        <code value="PINAMAR SUR"/>
+        <display value="PINAMAR SUR"/>
+      </concept>
+      <concept>
+        <code value="PINAR - NORTE"/>
+        <display value="PINAR - NORTE"/>
+      </concept>
+      <concept>
+        <code value="PINARES"/>
+        <display value="PINARES"/>
+      </concept>
+      <concept>
+        <code value="PINARES - ATL"/>
+        <display value="PINARES - ATL"/>
+      </concept>
+      <concept>
+        <code value="PINTADO"/>
+        <display value="PINTADO"/>
+      </concept>
+      <concept>
+        <code value="PINTADO GRANDE"/>
+        <display value="PINTADO GRANDE"/>
+      </concept>
+      <concept>
+        <code value="PIÑERA"/>
+        <display value="PIÑERA"/>
+      </concept>
+      <concept>
+        <code value="PIRARAJA"/>
+        <display value="PIRARAJA"/>
+      </concept>
+      <concept>
+        <code value="PIRIAPOLIS"/>
+        <display value="PIRIAPOLIS"/>
+      </concept>
+      <concept>
+        <code value="PIRIAPOLIS INT"/>
+        <display value="PIRIAPOLIS INT"/>
+      </concept>
+      <concept>
+        <code value="PLACIDO ROSAS"/>
+        <display value="PLACIDO ROSAS"/>
+      </concept>
+      <concept>
+        <code value="POBLADO ALONSO"/>
+        <display value="POBLADO ALONSO"/>
+      </concept>
+      <concept>
+        <code value="POBLADO EL ORO"/>
+        <display value="POBLADO EL ORO"/>
+      </concept>
+      <concept>
+        <code value="POBLADO URUGUAY"/>
+        <display value="POBLADO URUGUAY"/>
+      </concept>
+      <concept>
+        <code value="POLANCO DEL YI"/>
+        <display value="POLANCO DEL YI"/>
+      </concept>
+      <concept>
+        <code value="POLANCO LAVALLEJA"/>
+        <display value="POLANCO LAVALLEJA"/>
+      </concept>
+      <concept>
+        <code value="PORVENIR"/>
+        <display value="PORVENIR"/>
+      </concept>
+      <concept>
+        <code value="PROGRESO"/>
+        <display value="PROGRESO"/>
+      </concept>
+      <concept>
+        <code value="PTA. DE VALDEZ"/>
+        <display value="PTA. DE VALDEZ"/>
+      </concept>
+      <concept>
+        <code value="PTA. DEL DIABLO"/>
+        <display value="PTA. DEL DIABLO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO AREVALO"/>
+        <display value="PUEBLO AREVALO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO CASTILLO"/>
+        <display value="PUEBLO CASTILLO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO CELESTE"/>
+        <display value="PUEBLO CELESTE"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO COLON"/>
+        <display value="PUEBLO COLON"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO DE LOS SANTOS"/>
+        <display value="PUEBLO DE LOS SANTOS"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO DEL BARRO"/>
+        <display value="PUEBLO DEL BARRO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO EDEN"/>
+        <display value="PUEBLO EDEN"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO GRECO"/>
+        <display value="PUEBLO GRECO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO HERIBERTO"/>
+        <display value="PUEBLO HERIBERTO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO LA BOLSA"/>
+        <display value="PUEBLO LA BOLSA"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO NUEVO"/>
+        <display value="PUEBLO NUEVO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO SOTO"/>
+        <display value="PUEBLO SOTO"/>
+      </concept>
+      <concept>
+        <code value="PUEBLO ZEBALLOS"/>
+        <display value="PUEBLO ZEBALLOS"/>
+      </concept>
+      <concept>
+        <code value="PUENTE DE VALIZAS"/>
+        <display value="PUENTE DE VALIZAS"/>
+      </concept>
+      <concept>
+        <code value="PUIMAYEN"/>
+        <display value="PUIMAYEN"/>
+      </concept>
+      <concept>
+        <code value="PUNTA 5 SAUCES"/>
+        <display value="PUNTA 5 SAUCES"/>
+      </concept>
+      <concept>
+        <code value="PUNTA BALLENA"/>
+        <display value="PUNTA BALLENA"/>
+      </concept>
+      <concept>
+        <code value="PUNTA RUBIA"/>
+        <display value="PUNTA RUBIA"/>
+      </concept>
+      <concept>
+        <code value="PUNTAS DEL PARAO"/>
+        <display value="PUNTAS DEL PARAO"/>
+      </concept>
+      <concept>
+        <code value="QUEBRACHO"/>
+        <display value="QUEBRACHO"/>
+      </concept>
+      <concept>
+        <code value="QUEGUAY CHICO"/>
+        <display value="QUEGUAY CHICO"/>
+      </concept>
+      <concept>
+        <code value="QUEGUAYAR"/>
+        <display value="QUEGUAYAR"/>
+      </concept>
+      <concept>
+        <code value="RADIAL"/>
+        <display value="RADIAL"/>
+      </concept>
+      <concept>
+        <code value="RAFAEL PERAZZA"/>
+        <display value="RAFAEL PERAZZA"/>
+      </concept>
+      <concept>
+        <code value="RAIGON"/>
+        <display value="RAIGON"/>
+      </concept>
+      <concept>
+        <code value="REBOLEDO"/>
+        <display value="REBOLEDO"/>
+      </concept>
+      <concept>
+        <code value="RIACHUELO"/>
+        <display value="RIACHUELO"/>
+      </concept>
+      <concept>
+        <code value="RINCON"/>
+        <display value="RINCON"/>
+      </concept>
+      <concept>
+        <code value="RINCON DE PACHECO"/>
+        <display value="RINCON DE PACHECO"/>
+      </concept>
+      <concept>
+        <code value="RINCON DE PINTADO"/>
+        <display value="RINCON DE PINTADO"/>
+      </concept>
+      <concept>
+        <code value="RINCON DEL PINO"/>
+        <display value="RINCON DEL PINO"/>
+      </concept>
+      <concept>
+        <code value="RINCON PEREIRA"/>
+        <display value="RINCON PEREIRA"/>
+      </concept>
+      <concept>
+        <code value="RIO BRANCO"/>
+        <display value="RIO BRANCO"/>
+      </concept>
+      <concept>
+        <code value="RISSO"/>
+        <display value="RISSO"/>
+      </concept>
+      <concept>
+        <code value="RIVERA"/>
+        <display value="RIVERA"/>
+      </concept>
+      <concept>
+        <code value="ROCHA"/>
+        <display value="ROCHA"/>
+      </concept>
+      <concept>
+        <code value="RODO"/>
+        <display value="RODO"/>
+      </concept>
+      <concept>
+        <code value="RODRIGUEZ"/>
+        <display value="RODRIGUEZ"/>
+      </concept>
+      <concept>
+        <code value="ROSARIO"/>
+        <display value="ROSARIO"/>
+      </concept>
+      <concept>
+        <code value="S.ANTONIO"/>
+        <display value="S.ANTONIO"/>
+      </concept>
+      <concept>
+        <code value="S.BAUTISTA"/>
+        <display value="S.BAUTISTA"/>
+      </concept>
+      <concept>
+        <code value="S.DEL YI"/>
+        <display value="S.DEL YI"/>
+      </concept>
+      <concept>
+        <code value="S.GRANDE"/>
+        <display value="S.GRANDE"/>
+      </concept>
+      <concept>
+        <code value="S.GREGORIO"/>
+        <display value="S.GREGORIO"/>
+      </concept>
+      <concept>
+        <code value="S.JACINTO"/>
+        <display value="S.JACINTO"/>
+      </concept>
+      <concept>
+        <code value="S.JORGE"/>
+        <display value="S.JORGE"/>
+      </concept>
+      <concept>
+        <code value="S.RAMON"/>
+        <display value="S.RAMON"/>
+      </concept>
+      <concept>
+        <code value="SACACHISPAS"/>
+        <display value="SACACHISPAS"/>
+      </concept>
+      <concept>
+        <code value="SALINAS"/>
+        <display value="SALINAS"/>
+      </concept>
+      <concept>
+        <code value="SALTO"/>
+        <display value="SALTO"/>
+      </concept>
+      <concept>
+        <code value="SAN ANTONIO"/>
+        <display value="SAN ANTONIO"/>
+      </concept>
+      <concept>
+        <code value="SAN BENITO"/>
+        <display value="SAN BENITO"/>
+      </concept>
+      <concept>
+        <code value="SAN CARLOS"/>
+        <display value="SAN CARLOS"/>
+      </concept>
+      <concept>
+        <code value="SAN CRISTOBAL"/>
+        <display value="SAN CRISTOBAL"/>
+      </concept>
+      <concept>
+        <code value="SAN GABRIEL"/>
+        <display value="SAN GABRIEL"/>
+      </concept>
+      <concept>
+        <code value="SAN GREGORIO"/>
+        <display value="SAN GREGORIO"/>
+      </concept>
+      <concept>
+        <code value="SAN JAVIER"/>
+        <display value="SAN JAVIER"/>
+      </concept>
+      <concept>
+        <code value="SAN JOSE"/>
+        <display value="SAN JOSE"/>
+      </concept>
+      <concept>
+        <code value="SAN LUIS"/>
+        <display value="SAN LUIS"/>
+      </concept>
+      <concept>
+        <code value="SAN LUIS(CNLNES)"/>
+        <display value="SAN LUIS(CNLNES)"/>
+      </concept>
+      <concept>
+        <code value="SAN PEDRO"/>
+        <display value="SAN PEDRO"/>
+      </concept>
+      <concept>
+        <code value="SANCHEZ"/>
+        <display value="SANCHEZ"/>
+      </concept>
+      <concept>
+        <code value="SANTA ANA"/>
+        <display value="SANTA ANA"/>
+      </concept>
+      <concept>
+        <code value="SANTA ANA C"/>
+        <display value="SANTA ANA C"/>
+      </concept>
+      <concept>
+        <code value="SANTA CLARA"/>
+        <display value="SANTA CLARA"/>
+      </concept>
+      <concept>
+        <code value="SANTA MONICA"/>
+        <display value="SANTA MONICA"/>
+      </concept>
+      <concept>
+        <code value="SANTA TERESITA"/>
+        <display value="SANTA TERESITA"/>
+      </concept>
+      <concept>
+        <code value="SAU.DEL YI"/>
+        <display value="SAU.DEL YI"/>
+      </concept>
+      <concept>
+        <code value="SAUCE"/>
+        <display value="SAUCE"/>
+      </concept>
+      <concept>
+        <code value="SAUCE DE BATOVI"/>
+        <display value="SAUCE DE BATOVI"/>
+      </concept>
+      <concept>
+        <code value="SAUCE DE PORTEZUELO"/>
+        <display value="SAUCE DE PORTEZUELO"/>
+      </concept>
+      <concept>
+        <code value="SAUCE."/>
+        <display value="SAUCE."/>
+      </concept>
+      <concept>
+        <code value="SDI. DE NAVARRO"/>
+        <display value="SDI. DE NAVARRO"/>
+      </concept>
+      <concept>
+        <code value="SEQUEIRA"/>
+        <display value="SEQUEIRA"/>
+      </concept>
+      <concept>
+        <code value="SHANGRILA"/>
+        <display value="SHANGRILA"/>
+      </concept>
+      <concept>
+        <code value="SJ.CARRASCO NOR"/>
+        <display value="SJ.CARRASCO NOR"/>
+      </concept>
+      <concept>
+        <code value="SJ.CARRASCO SUR"/>
+        <display value="SJ.CARRASCO SUR"/>
+      </concept>
+      <concept>
+        <code value="SOCA"/>
+        <display value="SOCA"/>
+      </concept>
+      <concept>
+        <code value="SOLIS"/>
+        <display value="SOLIS"/>
+      </concept>
+      <concept>
+        <code value="SOLIS DE MATAOJ"/>
+        <display value="SOLIS DE MATAOJ"/>
+      </concept>
+      <concept>
+        <code value="SOLYMAR NORTE"/>
+        <display value="SOLYMAR NORTE"/>
+      </concept>
+      <concept>
+        <code value="SOLYMAR SUR"/>
+        <display value="SOLYMAR SUR"/>
+      </concept>
+      <concept>
+        <code value="SOUDRIERS"/>
+        <display value="SOUDRIERS"/>
+      </concept>
+      <concept>
+        <code value="STA. CATALINA"/>
+        <display value="STA. CATALINA"/>
+      </concept>
+      <concept>
+        <code value="STA. LUCIA DEL ESTE"/>
+        <display value="STA. LUCIA DEL ESTE"/>
+      </concept>
+      <concept>
+        <code value="STA. ROSA"/>
+        <display value="STA. ROSA"/>
+      </concept>
+      <concept>
+        <code value="STA.LUCIA"/>
+        <display value="STA.LUCIA"/>
+      </concept>
+      <concept>
+        <code value="SUAREZ"/>
+        <display value="SUAREZ"/>
+      </concept>
+      <concept>
+        <code value="T.TRES"/>
+        <display value="T.TRES"/>
+      </concept>
+      <concept>
+        <code value="TACUAREMBO"/>
+        <display value="TACUAREMBO"/>
+      </concept>
+      <concept>
+        <code value="TALA"/>
+        <display value="TALA"/>
+      </concept>
+      <concept>
+        <code value="TAMBORES"/>
+        <display value="TAMBORES"/>
+      </concept>
+      <concept>
+        <code value="TAPIA"/>
+        <display value="TAPIA"/>
+      </concept>
+      <concept>
+        <code value="TARARIRAS"/>
+        <display value="TARARIRAS"/>
+      </concept>
+      <concept>
+        <code value="TARUMAN"/>
+        <display value="TARUMAN"/>
+      </concept>
+      <concept>
+        <code value="TIATUCURA"/>
+        <display value="TIATUCURA"/>
+      </concept>
+      <concept>
+        <code value="TIERR COLORADAS"/>
+        <display value="TIERR COLORADAS"/>
+      </concept>
+      <concept>
+        <code value="TOLEDO"/>
+        <display value="TOLEDO"/>
+      </concept>
+      <concept>
+        <code value="TOPADOR"/>
+        <display value="TOPADOR"/>
+      </concept>
+      <concept>
+        <code value="TOTORAL D SAUCE"/>
+        <display value="TOTORAL D SAUCE"/>
+      </concept>
+      <concept>
+        <code value="TRANQUERAS"/>
+        <display value="TRANQUERAS"/>
+      </concept>
+      <concept>
+        <code value="TRES ISLAS"/>
+        <display value="TRES ISLAS"/>
+      </concept>
+      <concept>
+        <code value="TRINIDAD"/>
+        <display value="TRINIDAD"/>
+      </concept>
+      <concept>
+        <code value="TUPAMBAE"/>
+        <display value="TUPAMBAE"/>
+      </concept>
+      <concept>
+        <code value="V.ANSINA"/>
+        <display value="V.ANSINA"/>
+      </concept>
+      <concept>
+        <code value="V.ARGENTINA"/>
+        <display value="V.ARGENTINA"/>
+      </concept>
+      <concept>
+        <code value="V.CARMEN"/>
+        <display value="V.CARMEN"/>
+      </concept>
+      <concept>
+        <code value="VALENTIN"/>
+        <display value="VALENTIN"/>
+      </concept>
+      <concept>
+        <code value="VALENTINES"/>
+        <display value="VALENTINES"/>
+      </concept>
+      <concept>
+        <code value="VALLE SOBA"/>
+        <display value="VALLE SOBA"/>
+      </concept>
+      <concept>
+        <code value="VELAZQUEZ"/>
+        <display value="VELAZQUEZ"/>
+      </concept>
+      <concept>
+        <code value="VERGARA"/>
+        <display value="VERGARA"/>
+      </concept>
+      <concept>
+        <code value="VIANA"/>
+        <display value="VIANA"/>
+      </concept>
+      <concept>
+        <code value="VICHADERO"/>
+        <display value="VICHADERO"/>
+      </concept>
+      <concept>
+        <code value="VILLA MARIA"/>
+        <display value="VILLA MARIA"/>
+      </concept>
+      <concept>
+        <code value="VILLA MONTAÑESA"/>
+        <display value="VILLA MONTAÑESA"/>
+      </concept>
+      <concept>
+        <code value="VILLA OLMOS"/>
+        <display value="VILLA OLMOS"/>
+      </concept>
+      <concept>
+        <code value="VILLA SARA"/>
+        <display value="VILLA SARA"/>
+      </concept>
+      <concept>
+        <code value="VILLA SORIANO"/>
+        <display value="VILLA SORIANO"/>
+      </concept>
+      <concept>
+        <code value="YOUNG"/>
+        <display value="YOUNG"/>
+      </concept>
+      <concept>
+        <code value="ZAPICAN"/>
+        <display value="ZAPICAN"/>
+      </concept>
     </include>
   </compose>
 </ValueSet>

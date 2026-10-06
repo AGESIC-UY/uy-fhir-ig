@@ -11,8 +11,15 @@
   "name" : "UruguayFHIRImplementationGuide",
   "title" : "Guía de Implementación FHIR de Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Base nacional Core y especificaciones de interoperabilidad con HCEN.",
   "packageId" : "fhir.uy",
   "license" : "CC0-1.0",
@@ -54,7 +61,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Borrador de desarrollo"
+        "valueString" : "Versión inicial"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -355,7 +362,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Borrador de desarrollo"
+        "valueString" : "Versión inicial"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -661,18 +668,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/hcen-cda-ejemplo"
-      },
-      "name" : "CDA ficticio encapsulado HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -681,30 +676,6 @@
       "name" : "Certificación del Profesional",
       "description" : "Indica si este profesional es quien certifica (firma) el documento, para discriminarlo de los demás autores listados. Mapea a DocumentEntry.authorCertification.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Composition"
-      }],
-      "reference" : {
-        "reference" : "Composition/hcen-composicion-ejemplo"
-      },
-      "name" : "Composición ilustrativa sin perfil clínico",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "List"
-      }],
-      "reference" : {
-        "reference" : "List/hcen-conjunto-ejemplo"
-      },
-      "name" : "Conjunto de envío ficticio HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set"
     },
     {
       "extension" : [{
@@ -751,7 +722,7 @@
         "reference" : "ValueSet/vs-diagnostico-consulta"
       },
       "name" : "Conjunto de Valores Diagnósticos",
-      "description" : "Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+      "description" : "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg).",
       "exampleBoolean" : false
     },
     {
@@ -796,10 +767,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/vs-motivo-consulta"
+        "reference" : "ValueSet/vs-motivos-consulta"
       },
       "name" : "Conjunto de Valores Motivos de Consulta",
-      "description" : "Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).\nEl listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).",
+      "description" : "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC).",
       "exampleBoolean" : false
     },
     {
@@ -811,7 +782,7 @@
         "reference" : "ValueSet/vs-procedimientos"
       },
       "name" : "Conjunto de Valores Procedimientos",
-      "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+      "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
       "exampleBoolean" : false
     },
     {
@@ -889,30 +860,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/hcen-consulta-ejemplo"
-      },
-      "name" : "Consulta documental con una coincidencia",
-      "description" : "Resultado ficticio. Las URLs example.org son ilustrativas y no representan endpoints HCEN.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/hcen-consulta-vacia"
-      },
-      "name" : "Consulta documental sin coincidencias",
-      "description" : "Una búsqueda válida sin coincidencias devuelve un searchset vacío.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
@@ -985,18 +932,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/hcen-documento-ejemplo"
-      },
-      "name" : "Documento FHIR ficticio HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1029,18 +964,6 @@
       "name" : "EJE 3 — Servicio médico del documento",
       "description" : "Servicio médico del documento según la hoja ValueSets de la especificación nacional.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/iti104-error-coincidencia-multiple"
-      },
-      "name" : "El MRN coincide con más de un paciente.",
-      "description" : "OperationOutcome ilustrativo; no fija el estado HTTP ni el catálogo definitivo de errores HCEN.",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1087,7 +1010,7 @@
         "reference" : "StructureDefinition/hcen-provide-document-bundle"
       },
       "name" : "Envío para publicación documental HCEN",
-      "description" : "Sobre de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR, CDA y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo.",
+      "description" : "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo.",
       "exampleBoolean" : false
     },
     {
@@ -1123,7 +1046,7 @@
         "reference" : "StructureDefinition/uy-consulta-no-urgente"
       },
       "name" : "HCEN Consulta No Urgente",
-      "description" : "Hoja de Consulta No Urgente (CNU) — documento clínico raíz que agrupa motivo de consulta, diagnósticos, procedimientos, tratamientos e instrucciones de seguimiento de una consulta no urgente (policlínica o radio).",
+      "description" : "Hoja de Consulta No Urgente (CNU) - Documento clínico que representa la información asistencial registrada durante una consulta no urgente, realizada en el ámbito institucional, domiciliario o residencial. Incluye el motivo de consulta, los diagnósticos o problemas de salud identificados y, cuando corresponda, los procedimientos realizados, los tratamientos farmacológicos y no farmacológicos realizados o indicados, y las instrucciones para la continuidad asistencial del paciente.",
       "exampleBoolean" : false
     },
     {
@@ -1136,6 +1059,18 @@
       },
       "name" : "HCEN Diagnóstico",
       "description" : "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), modelado como Condition con category fija 'diagnostico'.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hcen-consulta-no-urgente-bundle"
+      },
+      "name" : "HCEN Documento de Consulta No Urgente",
+      "description" : "Bundle de tipo document que transporta la Composition HCENConsultaNoUrgente y los recursos administrativos y clínicos que referencia, como representación FHIR intercambiable del documento de Consulta No Urgente.",
       "exampleBoolean" : false
     },
     {
@@ -1219,7 +1154,7 @@
         "reference" : "StructureDefinition/ext-home-community-id"
       },
       "name" : "ID de Comunidad de Origen",
-      "description" : "El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId.",
+      "description" : "Identificador de la comunidad de origen del documento o conjunto de envío. Mapea a DocumentEntry.homeCommunityId y SubmissionSet.homeCommunityId.",
       "exampleBoolean" : false
     },
     {
@@ -1264,19 +1199,7 @@
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/hcen-aa-identifier"
-      },
-      "name" : "Identificador de institución para HCEN",
-      "description" : "Identificador de una institución admitida en HCEN, representado como un OID del catálogo institucional.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:complex-type"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/uy-aa-identifier"
+        "reference" : "StructureDefinition/uy-org-identifier"
       },
       "name" : "Identificador de Organización",
       "description" : "Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización.",
@@ -1300,6 +1223,18 @@
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/hcen-submission-set-unique-id-identifier"
+      },
+      "name" : "Identificador global del conjunto de envío HCEN",
+      "description" : "OID global S propio del SubmissionSet, distinto del identificador documental [oid_documento_clinico] y sin imponer una estructura documental.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/uy-mrn-identifier"
       },
       "name" : "Identificador MRN",
@@ -1315,19 +1250,7 @@
         "reference" : "StructureDefinition/hcen-mrn-identifier"
       },
       "name" : "Identificador MRN para HCEN",
-      "description" : "Identificador interno del paciente emitido por un prestador admitido en HCEN.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:complex-type"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/uy-fni-identifier"
-      },
-      "name" : "Identificador Nacional Extranjero",
-      "description" : "Identificador nacional de una persona emitido por otro país.",
+      "description" : "Identificador local del paciente dentro de un dominio de asignación autorizado para HCEN.",
       "exampleBoolean" : false
     },
     {
@@ -1341,18 +1264,6 @@
       "name" : "Identificador Pasaporte",
       "description" : "Pasaporte del paciente.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/iti68-error-formato"
-      },
-      "name" : "La serialización solicitada no está soportada.",
-      "description" : "OperationOutcome ilustrativo; no fija el estado HTTP ni el catálogo definitivo de errores HCEN.",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1381,18 +1292,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "DocumentReference"
-      }],
-      "reference" : {
-        "reference" : "DocumentReference/hcen-referencia-ejemplo"
-      },
-      "name" : "Metadatos documentales ficticios HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1405,18 +1304,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/iti68-error-no-encontrado"
-      },
-      "name" : "No existe la representación solicitada.",
-      "description" : "OperationOutcome ilustrativo; no fija el estado HTTP ni el catálogo definitivo de errores HCEN.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
@@ -1424,18 +1311,6 @@
       },
       "name" : "Nombre de Persona (Uruguay)",
       "description" : "Nombre de una persona optimizado para su visualización y almacenamiento estructurado, con los apellidos discriminados mediante extensiones.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-prestador-oid-mrn"
-      },
-      "name" : "OIDs de instituciones HCEN",
-      "description" : "OIDs de instituciones admitidos por HCEN, representados como códigos URI del sistema urn:ietf:rfc:3986.",
       "exampleBoolean" : false
     },
     {
@@ -1465,50 +1340,14 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/hcen-organizacion-ejemplo"
-      },
-      "name" : "Organización HCEN de ejemplo",
-      "description" : "Ejemplo técnico que utiliza un OID del catálogo institucional para validar el perfil; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
         "reference" : "Patient/EjemploPacienteUY"
       },
-      "name" : "Paciente CORE UY con identificador institucional",
-      "description" : "Ejemplo sintético nacional: namespace institucional ajeno al catálogo restringido HCEN.",
+      "name" : "Paciente Uruguayo (CORE UY)",
+      "description" : "Ejemplo de un paciente genérico en Uruguay",
       "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/hcen-paciente-ejemplo"
-      },
-      "name" : "Paciente ficticio HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/iti67-error-parametro"
-      },
-      "name" : "Parámetro de búsqueda no admitido.",
-      "description" : "OperationOutcome ilustrativo; no fija el estado HTTP ni el catálogo definitivo de errores HCEN.",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1657,18 +1496,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/hcen-profesional-ejemplo"
-      },
-      "name" : "Profesional ficticio HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1689,18 +1516,6 @@
       "name" : "Rol profesional CORE UY",
       "description" : "Ejemplo sintético de rol que referencia los perfiles nacionales.",
       "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "PractitionerRole"
-      }],
-      "reference" : {
-        "reference" : "PractitionerRole/hcen-rol-ejemplo"
-      },
-      "name" : "Rol profesional ficticio HCEN",
-      "description" : "Ejemplo ficticio para revisar el contrato HCEN. Los dominios y códigos requieren validación; no acredita conformidad operativa.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"
     },
     {
       "extension" : [{
@@ -1753,18 +1568,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/hcen-publicacion-ejemplo"
-      },
-      "name" : "Sobre de publicación documental HCEN",
-      "description" : "Ejemplo completo de la estructura propuesta, con un documento ficticio en dos representaciones. No constituye una prueba validada ni fija la respuesta o persistencia de Plataforma.",
-      "exampleCanonical" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1773,18 +1576,6 @@
       "name" : "Tipos MIME de documentos FHIR HCEN",
       "description" : "Serializaciones FHIR JSON y XML para la representación Bundle documental. No identifica el formato del CDA encapsulado.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/iti65-error-duplicado"
-      },
-      "name" : "Ya existe un documento con el mismo identificador documental.",
-      "description" : "OperationOutcome ilustrativo; no fija el estado HTTP ni el catálogo definitivo de errores HCEN.",
-      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{
@@ -1951,7 +1742,7 @@
               "valueUrl" : "hcen-iti-67.html"
             }],
             "nameUrl" : "hcen-iti-67.html",
-            "title" : "Consultar metadatos documentales",
+            "title" : "Consultar metadatos",
             "generation" : "markdown"
           },
           {
@@ -2027,6 +1818,15 @@
           "title" : "Ejemplos de intercambio",
           "generation" : "markdown"
         }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "hcen-glosario.html"
+        }],
+        "nameUrl" : "hcen-glosario.html",
+        "title" : "Glosario HCEN",
+        "generation" : "markdown"
       },
       {
         "extension" : [{

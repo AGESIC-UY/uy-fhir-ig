@@ -3,32 +3,39 @@
   "id" : "vs-procedimientos",
   "language" : "es",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Procedimientos: incluye todos los conceptos SNOMED CT que son miembros de los refsets SNOMED CT-UY <code>268951000179107</code> y <code>231971000179103</code> (SNOMED CT edición Uruguay).</p></div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-procedimientos</b></p><a name=\"vs-procedimientos\"> </a><a name=\"hcvs-procedimientos\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/5631000179106/version/20260615\"> version &#x1F4CD;http://snomed.info/sct/5631000179106/version/20260615</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/29303009\">29303009</a></td><td>procedimiento electrocardiográfico (procedimiento)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/46973005\">46973005</a></td><td>medir la presión arterial (procedimiento)</td></tr><tr><td><a href=\"http://snomed.info/sct/5631000179106/id/166900001\">166900001</a></td><td>determinación de glicemia por medidor de glucosa (procedimiento)</td></tr></table></li></ul></div>"
   },
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
   "version" : "0.1.0",
   "name" : "VSProcedimientos",
   "title" : "Conjunto de Valores Procedimientos",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
-  "description" : "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay).",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
+  "description" : "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento).",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "268951000179107"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "in",
-        "value" : "231971000179103"
+      "version" : "http://snomed.info/sct/5631000179106/version/20260615",
+      "concept" : [{
+        "code" : "29303009",
+        "display" : "procedimiento electrocardiográfico (procedimiento)"
+      },
+      {
+        "code" : "46973005",
+        "display" : "medir la presión arterial (procedimiento)"
+      },
+      {
+        "code" : "166900001",
+        "display" : "determinación de glicemia por medidor de glucosa (procedimiento)"
       }]
     }]
   }

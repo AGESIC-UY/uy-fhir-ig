@@ -2,9 +2,6 @@
 
 ## ValueSet: Departamentos de Uruguay 
 
- 
-Los 19 departamentos admitidos en Address.state. 
-
  **References** 
 
 * [Dirección (Uruguay)](StructureDefinition-uy-address.md)
@@ -32,12 +29,95 @@ Los 19 departamentos admitidos en Address.state.
   "name" : "VSDepartamentosUY",
   "title" : "Departamentos de Uruguay",
   "status" : "draft",
-  "date" : "2026-09-28T15:20:04-03:00",
+  "date" : "2026-10-06T01:23:13-03:00",
   "publisher" : "AGESIC",
+  "contact" : [{
+    "name" : "AGESIC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
+    }]
+  }],
   "description" : "Los 19 departamentos admitidos en Address.state.",
   "compose" : {
     "include" : [{
-      "system" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy"
+      "system" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
+      "concept" : [{
+        "code" : "Artigas",
+        "display" : "Artigas"
+      },
+      {
+        "code" : "Canelones",
+        "display" : "Canelones"
+      },
+      {
+        "code" : "Cerro Largo",
+        "display" : "Cerro Largo"
+      },
+      {
+        "code" : "Colonia",
+        "display" : "Colonia"
+      },
+      {
+        "code" : "Durazno",
+        "display" : "Durazno"
+      },
+      {
+        "code" : "Flores",
+        "display" : "Flores"
+      },
+      {
+        "code" : "Florida",
+        "display" : "Florida"
+      },
+      {
+        "code" : "Lavalleja",
+        "display" : "Lavalleja"
+      },
+      {
+        "code" : "Maldonado",
+        "display" : "Maldonado"
+      },
+      {
+        "code" : "Montevideo",
+        "display" : "Montevideo"
+      },
+      {
+        "code" : "Paysandú",
+        "display" : "Paysandú"
+      },
+      {
+        "code" : "Río Negro",
+        "display" : "Río Negro"
+      },
+      {
+        "code" : "Rivera",
+        "display" : "Rivera"
+      },
+      {
+        "code" : "Rocha",
+        "display" : "Rocha"
+      },
+      {
+        "code" : "Salto",
+        "display" : "Salto"
+      },
+      {
+        "code" : "San José",
+        "display" : "San José"
+      },
+      {
+        "code" : "Soriano",
+        "display" : "Soriano"
+      },
+      {
+        "code" : "Tacuarembó",
+        "display" : "Tacuarembó"
+      },
+      {
+        "code" : "Treinta y Tres",
+        "display" : "Treinta y Tres"
+      }]
     }]
   }
 }
