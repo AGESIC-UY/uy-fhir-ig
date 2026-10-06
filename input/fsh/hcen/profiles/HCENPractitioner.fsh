@@ -7,7 +7,7 @@ Description: "Una persona que está directa o indirectamente involucrada en la p
 * photo 0..0
 * identifier 1..*
 * identifier[ci] 1..1
-* name MS
+* name 1..*
 
 // Descripciones del ODS, adaptadas a las rutas FHIR R4 y al contexto HCEN.
 * id ^short = "ID lógico de este artefacto."

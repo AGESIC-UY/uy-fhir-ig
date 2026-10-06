@@ -13,7 +13,6 @@ Description: "Datos demográficos y administrativos sobre una persona que recibe
 * identifier[mrn] 1..1
 * identifier[mrn] only HCENMRNIdentifier
 * identifier[ci] 0..1 MS
-* identifier[fni] MS
 * identifier[ppn] MS
 * name 0..1 MS
 * telecom MS
@@ -116,6 +115,5 @@ Description: "Datos demográficos y administrativos sobre una persona que recibe
 * . ^short = "Perfil Paciente para HCEN"
 * . ^definition = "Datos demográficos y administrativos sobre una persona que recibe atención médica o servicios relacionados."
 
-* contact.address MS
 
 * extension[mothersMaidenName] ^definition = "El segundo apellido no equivale al apellido materno"

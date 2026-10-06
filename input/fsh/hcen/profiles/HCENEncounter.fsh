@@ -31,10 +31,11 @@
 //   Composition.encounter había dejado esta documentación sin modelar):
 //   `type` tiene Estado "cc" con un binding relativo propio en su propia
 //   fila ("/tipo-detallado-documento-clinico-eje-2") — se reutiliza
-//   `VStypeCode` (terminología HCEN, definida para este eje, igual que
-//   `VSclassCode` para el eje 1 en HCENConsultaNoUrgente.type).
-//   Binding preferred, por analogía con ese mismo caso (la hoja no indica
-//   fuerza explícita). `serviceType` también es "cc", pero su único
+//   `VStypeCode` (terminología HCEN, definida para este eje).
+//   HCENConsultaNoUrgente.type está fijado a LOINC 34108-1 y no utiliza
+//   VSclassCode. El binding de Encounter.type se conserva preferred
+//   (la hoja no indica fuerza explícita).
+//   `serviceType` también es "cc", pero su único
 //   binding relativo ("/servicio-medico-documentoclinico-eje-3") está en
 //   una subfila `.coding.code` marcada "sc" — por la regla ya establecida
 //   en el proyecto ("sc" nunca es accionable, sin importar el contenido
@@ -54,10 +55,13 @@
 // - Errores de tipeo del Excel resueltos al nombre real del elemento FHIR
 //   (no como elementos nuevos): "baseOn" → `basedOn`, "appoiment" →
 //   `appointment`, "hospitalizaction" → `hospitalization`.
-// - No se agrega bloque `Mapping` (a diferencia de HCENConsultaNoUrgente):
-//   la columna "Mapeo CDA" solo trae datos en filas marcadas "sc" (salvo
-//   `type`, ya cubierto arriba), igual que en el resto de los perfiles
-//   CNU hermanos, ninguno de los cuales tiene Mapping propio.
+// - **Mapeo CDA**: agregado a partir de la columna "Mapeo CDA" de la hoja
+//   (incluye filas marcadas "sc", ya que el bloque `Mapping` es solo
+//   documentación de referencia y no una restricción estructural). La hoja
+//   reutiliza el mismo destino CDA genérico `ClinicalDocument/author/
+//   assignedAuthor` para `participant`, `participant.type` y
+//   `participant.individual` — no distingue un path propio por
+//   sub-elemento; se documenta tal cual.
 
 Profile: HCENEncounter
 Parent: Encounter
@@ -166,3 +170,31 @@ Description: "Evento clínico (Encounter) asociado a una Hoja de Consulta No Urg
 * serviceType MS
 * serviceType ^short = "Servicio médico específico asociado al evento clínico (eje 3 del catálogo de documentos de Uruguay)"
 * serviceType ^definition = "Servicio médico específico asociado al evento clínico (eje 3 del catálogo de documentos de Uruguay)"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYEncounter
+// ──────────────────────────────────────────
+
+Mapping: HCENEncounterToCDA
+Source: HCENEncounter
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYEncounter."
+* type -> "ClinicalDocument/componentOf/encompassingEncounter/code"
+* type.coding.system -> "ClinicalDocument/componentOf/encompassingEncounter/code/@codeSystem"
+* type.coding.code -> "ClinicalDocument/componentOf/encompassingEncounter/code/@code"
+* type.coding.display -> "ClinicalDocument/componentOf/encompassingEncounter/code/@displayName"
+* serviceType -> "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code"
+* serviceType.coding.system -> "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@codeSystem"
+* serviceType.coding.code -> "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@code"
+* serviceType.coding.display -> "ClinicalDocument/componentOf/encompassingEncounter/location/healthCareFacility/code/@displayName"
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* participant -> "ClinicalDocument/author/assignedAuthor"
+* participant.type -> "ClinicalDocument/author/assignedAuthor"
+* participant.period -> "ClinicalDocument/author/time"
+* participant.period.start -> "ClinicalDocument/author/time/@value"
+* participant.individual -> "ClinicalDocument/author/assignedAuthor"
+* period -> "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime"
+* period.start -> "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/low/@value"
+* period.end -> "ClinicalDocument/componentOf/encompassingEncounter/effectiveTime/high/@value"
+* serviceProvider -> "ClinicalDocument/author/assignedAuthor/representedOrganization"

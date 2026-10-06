@@ -7,6 +7,7 @@ Alias: $iheIntendedRecipient = https://profiles.ihe.net/ITI/MHD/StructureDefinit
 Alias: $iheSourceId = https://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId
 Alias: $LOINC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
+Alias: $SCTUY = http://snomed.info/sct
 Alias: $compositionStatus = http://hl7.org/fhir/composition-status
 Alias: $medAdminPerformFunction = http://terminology.hl7.org/CodeSystem/med-admin-perform-function
 Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality

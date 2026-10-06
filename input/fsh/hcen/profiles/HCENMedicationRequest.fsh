@@ -119,8 +119,7 @@ Description: "Prescripción de medicación registrada en la Hoja de Consulta No 
 * medication[x].coding ^slicing.discriminator.path = "system"
 * medication[x].coding ^slicing.rules = #open
 * medication[x].coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * medication[x].coding[snomed].system 1..1
 * medication[x].coding[snomed].code 1..1
@@ -132,16 +131,6 @@ Description: "Prescripción de medicación registrada en la Hoja de Consulta No 
 * medication[x].coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del medicamento prescripto"
 * medication[x].coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del medicamento prescripto"
 
-* medication[x].coding[tesauro].system 1..1
-* medication[x].coding[tesauro].code 1..1
-* medication[x].coding[tesauro].display 1..1
-* medication[x].coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* medication[x].coding[tesauro] ^short = "Código del medicamento prescripto en el tesauro local (URI pendiente de confirmación institucional)"
-* medication[x].coding[tesauro] ^definition = "Código del medicamento prescripto en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* medication[x].coding[tesauro].code ^short = "Código del medicamento prescripto en el tesauro local"
-* medication[x].coding[tesauro].code ^definition = "Código del medicamento prescripto en el tesauro local"
-* medication[x].coding[tesauro].display ^short = "Texto descriptivo del código del medicamento prescripto en el tesauro local"
-* medication[x].coding[tesauro].display ^definition = "Texto descriptivo del código del medicamento prescripto en el tesauro local"
 
 // ──────────────────────────────────────────
 // subject
@@ -167,3 +156,15 @@ Description: "Prescripción de medicación registrada en la Hoja de Consulta No 
 * dosageInstruction only HCENDosage
 * dosageInstruction ^short = "Pauta de administración indicada por el profesional (p.ej. Ibuprofeno 400 mg: tomar 1 comprimido cada 8 horas durante 5 días)"
 * dosageInstruction ^definition = "Pauta de administración indicada por el profesional (p.ej. Ibuprofeno 400 mg: tomar 1 comprimido cada 8 horas durante 5 días)"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYMedicationRequest
+// ──────────────────────────────────────────
+
+Mapping: HCENMedicationRequestToCDA
+Source: HCENMedicationRequest
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYMedicationRequest."
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* note -> "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='703852005']/value"

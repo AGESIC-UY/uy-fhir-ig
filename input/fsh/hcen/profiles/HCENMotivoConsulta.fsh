@@ -9,7 +9,7 @@
 // reutilizables "IG CORE UY" con prefijo UY).
 
 // ─────────────────────────────────────────────────────────────────────
-// Invariante compartida: al menos un coding (snomed o tesauro) presente
+// Invariante compartida: al menos un coding (SNOMED CT u otra codificación) presente
 // Reutilizada por los perfiles HCEN basados en Condition con slicing
 // SNOMED CT y codificaciones adicionales en `code` (HCENMotivoConsulta, HCENDiagnostico, ...).
 // ─────────────────────────────────────────────────────────────────────
@@ -79,29 +79,18 @@ Description: "Motivo de consulta registrado en la Hoja de Consulta No Urgente (C
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * code.coding[snomed].system 1..1
 * code.coding[snomed].code 1..1
 * code.coding[snomed].display 1..1
 * code.coding[snomed].system = $SCT (exactly)
-* code.coding[snomed].code from VSMotivoConsulta (extensible)
+* code.coding[snomed].code from VSMotivosConsulta (extensible)
 * code.coding[snomed] ^short = "Código SNOMED CT del motivo de consulta"
 * code.coding[snomed] ^definition = "Código SNOMED CT del motivo de consulta"
 * code.coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del motivo de consulta"
 * code.coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del motivo de consulta"
 
-* code.coding[tesauro].system 1..1
-* code.coding[tesauro].code 1..1
-* code.coding[tesauro].display 1..1
-* code.coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* code.coding[tesauro] ^short = "Código del motivo de consulta en el tesauro local (URI pendiente de confirmación institucional)"
-* code.coding[tesauro] ^definition = "Código del motivo de consulta en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* code.coding[tesauro].code ^short = "Código del motivo de consulta en el tesauro local"
-* code.coding[tesauro].code ^definition = "Código del motivo de consulta en el tesauro local"
-* code.coding[tesauro].display ^short = "Texto descriptivo del código del motivo de consulta en el tesauro local"
-* code.coding[tesauro].display ^definition = "Texto descriptivo del código del motivo de consulta en el tesauro local"
 
 // ──────────────────────────────────────────
 // subject
@@ -111,3 +100,22 @@ Description: "Motivo de consulta registrado en la Hoja de Consulta No Urgente (C
 * subject only Reference(HCENPatient)
 * subject ^short = "Paciente al que se le asocia el motivo de consulta"
 * subject ^definition = "Paciente al que se le asocia el motivo de consulta"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYMotivoConsulta
+// ──────────────────────────────────────────
+
+Mapping: HCENMotivoConsultaToCDA
+Source: HCENMotivoConsulta
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYMotivoConsulta."
+* category -> "section/entry/observation/code"
+* category.coding.system -> "section/entry/observation/code/@codeSystem"
+* category.coding.code -> "section/entry/observation/code/@code"
+* category.coding.display -> "section/entry/observation/code/@displayName"
+* code.coding[snomed] -> "section/entry/observation[code/@code='7611000179107']/value"
+* code.coding[snomed].system -> "section/entry/observation/value/@codeSystem"
+* code.coding[snomed].code -> "section/entry/observation/value/@code"
+* code.coding[snomed].display -> "section/entry/observation/value/@displayName"
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"

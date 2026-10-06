@@ -4,7 +4,7 @@ Esta sección define qué significa cumplir el contrato HCEN y cómo organizar l
 
 **HCEN-CONF-001 / HCEN-CONF-002.** El despliegue de un prestador debe (SHALL) cubrir íntegramente las cuatro transacciones del alcance. Puede utilizar varios productos; cada producto debe identificar sus funciones y versión, y la declaración integral corresponde al despliegue del prestador. Deben identificarse prestador responsable, productos, versiones, configuración desplegada y versión de la guía utilizada.
 
-La conformidad HCEN es local: no equivale a declarar conformidad IHE MHD o PIXm. La versión actual tampoco define perfiles clínicos específicos como ConsultaNoUrgente.
+La conformidad HCEN es local: no equivale a declarar conformidad IHE MHD o PIXm. Los perfiles clínicos incorporados se describen en [Documentos clínicos HCEN](hcen-documentos-clinicos.html).
 
 <a id="must-support"></a>
 ### Must Support y ausencia de datos
@@ -27,14 +27,15 @@ Los perfiles Core permanecen sin MS. Las obligaciones adicionales están en sus 
 | Área | Evidencia que debe prepararse |
 | --- | --- |
 | Datos | Validación contra perfiles; ejemplos positivos y negativos; códigos y dominios autorizados. |
-| Pacientes | Alta, actualización, coincidencias múltiples y correspondencia del MRN del cuerpo con el filtro. |
-| Publicación | Metadatos válidos, referencias resueltas, dos representaciones, concordancia y rechazo de duplicados. |
+| Pacientes | Registro inicial, actualización, coincidencias múltiples y correspondencia del MRN del cuerpo con el filtro. |
+| Publicación | Metadatos válidos, referencias resueltas, envíos con y sin Binary, concordancia y rechazo de duplicados. |
 | Consulta | Coincidencias, vacío, filtros acordados y paginación cuando se defina. |
 | Recuperación | FHIR y CDA, como solicitante y proveedor, con errores y formatos admitidos. |
 | Despliegue | Cobertura conjunta de productos y trazabilidad de sus versiones. |
 
-La validación estructural no demuestra el comportamiento completo. Los ejemplos de esta incorporación están preparados para revisión y no se presentan como validados por IG Publisher.
+La validación estructural no demuestra el comportamiento completo. La versión 0.1.0 publica únicamente EjemploPacienteUY, EjemploProfesionalUY, EjemploOrganizacionUY y EjemploRolProfesionalUY. Los ejemplos completos de HCEN quedan fuera de esta versión. La compilación estructural no acredita QA completo, validación terminológica integral ni conformidad operativa. La validación de una implementación requiere evidencia de los intercambios y sus capacidades efectivamente disponibles.
 
+<a id="seguridad"></a>
 ### Seguridad y acreditación pendientes
 
 Deben definirse o referenciarse autenticación, autorización, consentimiento, transporte seguro, auditoría, trazabilidad y condiciones operativas. La falta de un contrato publicado aquí no implica ausencia de obligaciones en esas materias.

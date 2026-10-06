@@ -9,7 +9,7 @@ Description: "Una agrupación de personas u organizaciones con un propósito com
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier contains organizationId 0..1
-* identifier[organizationId] only UYAAIdentifier
+* identifier[organizationId] only UYOrgIdentifier
 
 * name 0..1
 * partOf only Reference(UYOrganization)

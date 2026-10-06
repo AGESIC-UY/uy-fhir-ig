@@ -9,7 +9,7 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 // ─────────────────────────────────────────────────────────
 
 * extension contains
-    HomeCommunityId named homeCommunityId 0..1 and
+    HomeCommunityId named homeCommunityId 1..1 and
     RepositoryId named repositoryId 1..1 and
     AmountOfStudies named amountOfStudies 0..1 and
     ScannedDocument named scannedDocument 0..1 and
@@ -41,10 +41,10 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-    entryUUID 0..1 MS and
+    entryUUID 1..1 and
     uniqueId 0..1 MS
 * identifier[entryUUID] only HCENDocumentReferenceIdentifier
-* identifier[entryUUID] ^short = "EntryUUID opcional con formato urn:uuid:1.[oid_documento_clinico]."
+* identifier[entryUUID] ^short = "EntryUUID con formato urn:uuid:1.[oid_documento_clinico]."
 * identifier[uniqueId] only HCENDocumentIdentifier
 * identifier[uniqueId] ^short = "Repetición opcional del OID documental."
 
@@ -80,9 +80,15 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 // Autor, autenticador y custodio
 // ─────────────────────────────────────────────────────────
 
-* author 0..* MS
+* author 1..* MS
 * author only Reference(HCENPractitioner or HCENPractitionerRole or HCENOrganization)
-* author ^short = "Profesionales, roles u organizaciones autores del documento."
+* author ^slicing.discriminator.type = #type
+* author ^slicing.discriminator.path = "resolve()"
+* author ^slicing.rules = #open
+* author contains practitionerRole 1..* MS
+* author[practitionerRole] only Reference(HCENPractitionerRole)
+* author[practitionerRole].reference 1..1
+* author ^short = "Autoría mediante rol profesional e institución."
 
 * authenticator 0..1
 * authenticator only Reference(HCENPractitioner or HCENPractitionerRole or HCENOrganization)
@@ -98,6 +104,8 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 
 * relatesTo 0..* MS
 * relatesTo.target only Reference(HCENDocumentReference)
+* relatesTo.target.reference 1..1
+* relatesTo.target.reference obeys hcen-historical-reference
 * relatesTo ^short = "Relaciones con otros documentos; su presencia no define un flujo de reemplazo."
 
 // ─────────────────────────────────────────────────────────
@@ -150,7 +158,9 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 * context.event 0..*
 * context.event ^short = "Actos clínicos principales documentados."
 
-* context.period 0..1 MS
+* context.period 1..1
+* context.period.start 1..1
+* context.period.end 1..1
 * context.period ^short = "Tiempo de servicio que está siendo documentado"
 
 * context.facilityType 1..1
@@ -219,11 +229,11 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 * extension[byOrderOf] ^definition = "Institución que indicó realizar el acto asistencial."
 * masterIdentifier ^definition = "OID de la versión documental, compartido por FHIR y CDA."
 * identifier ^definition = "Identificadores de negocio y técnicos de la referencia documental."
-* identifier[entryUUID] ^definition = "Identificador técnico opcional de la referencia documental, derivado del OID clínico con el formato urn:uuid:1.[oid_documento_clinico]."
-* identifier[uniqueId] ^definition = "Repetición opcional del OID documental."
+* identifier[entryUUID] ^definition = "Identificador técnico obligatorio de la referencia documental, derivado del OID clínico con el formato urn:uuid:1.[oid_documento_clinico]."
+* identifier[uniqueId] ^definition = "Repetición opcional de masterIdentifier en la colección identifier. Conserva el mismo system y value; no identifica otro documento."
 * status ^definition = "Estado de la referencia: current, superseded o entered-in-error."
 * subject ^definition = "Paciente al que pertenece el documento."
-* author ^definition = "Profesionales, roles u organizaciones autores del documento."
+* author ^definition = "Debe incluir al menos una referencia a HCENPractitionerRole, que vincula al profesional con su institución. Las referencias directas adicionales a Practitioner u Organization se admiten y se ignoran al determinar la autoría."
 * authenticator ^definition = "Profesional, rol u organización que autentica legalmente el documento."
 * relatesTo ^definition = "Relaciones con otros documentos; su presencia no define un flujo de reemplazo."
 * description ^definition = "Descripción legible del documento."
@@ -244,3 +254,5 @@ Description: "Referencia documental HCEN con las representaciones CDA y FHIR. To
 * content.attachment.hash ^definition = "Hash del Bundle FHIR recuperable mediante attachment.url"
 * content.format ^definition = "Reglas de formato del Bundle FHIR recuperable mediante attachment.url"
 * context.period ^definition = "Tiempo de servicio que está siendo documentado"
+
+* obeys hcen-document-reference-entryuuid-d

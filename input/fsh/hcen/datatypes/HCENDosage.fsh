@@ -98,3 +98,15 @@ Description: "Pauta de dosificación reutilizable para las prescripciones y admi
 * route from VSViaAdministracion (extensible)
 * route ^short = "Vía de administración (p.ej. oral, intravenosa, intramuscular, subcutánea, inhalatoria)"
 * route ^definition = "Vía de administración (p.ej. oral, intravenosa, intramuscular, subcutánea, inhalatoria)"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYDosage
+// ──────────────────────────────────────────
+
+Mapping: HCENDosageToCDA
+Source: HCENDosage
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYDosage."
+* patientInstruction -> "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/act[code/@code='7891000179103']/text"
+* timing -> "section/entry/substanceAdministration[@moodCode='INT']/entryRelationship/observation[code/@code='224851000179103']/value"

@@ -1,8 +1,15 @@
-Esta transacción permite encontrar metadatos DocumentReference registrados en Plataforma. El prestador utiliza la respuesta para seleccionar documentos; recuperar el contenido corresponde a [HCEN-TX-68](hcen-iti-68.html).
+Esta transacción permite encontrar metadatos DocumentReference registrados en Plataforma. El prestador utiliza la respuesta para seleccionar documentos; recuperar el contenido corresponde a [Recuperar documentos](hcen-iti-68.html).
 
 ### Actores y solicitud
 
 El prestador consulta y Plataforma responde. La consulta inicial propuesta identifica al paciente con su MRN local mediante `patient.identifier`, usando el token `system|value` codificado en la URL.
+
+<figure style="margin:0 0 1em;">
+  <img src="hcen-cu-encontrar-documentos.svg"
+       alt="El prestador solicitante consulta a Plataforma por el MRN del paciente y recibe los metadatos de los documentos encontrados, que pueden ser ninguno. Luego elige qué documento recuperar."
+       style="width:100%;max-width:760px;height:auto;"/>
+  <figcaption>Consulta de metadatos de los documentos de un paciente.</figcaption>
+</figure>
 
 ```http
 GET [base]/DocumentReference?patient.identifier=[system-codificado]%7C[valor-codificado]
@@ -31,6 +38,6 @@ Una búsqueda válida sin coincidencias produce un conjunto vacío, no un error 
 
 ### Errores y verificación
 
-El [OperationOutcome de parámetro no admitido](OperationOutcome-iti67-error-parametro.html) es ilustrativo; el contrato debe decidir cuándo rechazar un parámetro y cuándo informar que no fue aplicado. No debe inferirse un estado HTTP a partir de `issue.code`.
+El OperationOutcome de parámetro no admitido (material de desarrollo reservado para una versión futura) es ilustrativo; el contrato debe decidir cuándo rechazar un parámetro y cuándo informar que no fue aplicado. No debe inferirse un estado HTTP a partir de `issue.code`.
 
 Las pruebas deben cubrir una coincidencia, resultado vacío, dominio y valor MRN, mensajes `outcome` y navegación entre páginas cuando se acuerde la paginación. Consultar los [ejemplos](hcen-ejemplos.html). Los filtros definitivos y la declaración formal de capacidades quedan pendientes para una versión posterior.

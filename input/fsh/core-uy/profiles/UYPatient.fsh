@@ -31,11 +31,9 @@ Description: "Datos demográficos y administrativos sobre una persona que recibe
 * identifier contains
     mrn 0..* and
     ci 0..* and
-    fni 0..* and
     ppn 0..* 
 * identifier[mrn] only UYMRNIdentifier
 * identifier[ci] only UYCIIdentifier
-* identifier[fni] only UYFNIIdentifier
 * identifier[ppn] only UYPPNIdentifier
 
 * contact.organization only Reference(UYOrganization)
@@ -197,8 +195,6 @@ Description: "Datos demográficos y administrativos sobre una persona que recibe
 * identifier[mrn] ^definition = "Identificador interno del paciente en la organización."
 * identifier[ci] ^short = "Cédula de identidad del paciente."
 * identifier[ci] ^definition = "Cédula de identidad del paciente."
-* identifier[fni] ^short = "Identificador nacional emitido por otro país."
-* identifier[fni] ^definition = "Identificador nacional extranjero del paciente, cuyo sistema identifica al organismo emisor."
 * identifier[ppn] ^short = "Pasaporte del paciente."
 * identifier[ppn] ^definition = "Pasaporte del paciente."
 * telecom[phone] ^short = "Detalles de teléfono de contacto."

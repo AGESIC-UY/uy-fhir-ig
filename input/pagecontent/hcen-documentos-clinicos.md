@@ -1,4 +1,4 @@
-Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU); su publicación utiliza el sobre y los metadatos definidos por la transacción de [publicación de documentos](hcen-iti-65.html).
+Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU); su publicación utiliza el Bundle de publicación y los metadatos definidos por la transacción de [publicación de documentos](hcen-iti-65.html). Esta versión no especifica otros tipos de documento clínico.
 
 ### Hoja de Consulta No Urgente
 
@@ -14,7 +14,9 @@ Esta sección describe la representación FHIR de los documentos clínicos que i
 | Prescripción farmacológica | [HCENMedicationRequest](StructureDefinition-hcen-medication-request.html) | Tratamiento farmacológico final |
 | Pauta de dosificación | [HCENDosage](StructureDefinition-hcen-dosage.html) | Utilizada por las prescripciones de medicación |
 
-La sección de observaciones admite referencias FHIR base a `Appointment` u `Observation`, porque esta versión no incorpora perfiles HCEN específicos para esos recursos. `encounter` referencia [HCENEncounter](StructureDefinition-hcen-encounter.html), que fija el estado del evento a `finished` y tipa los ejes 2 y 3 del catálogo de documentos (`type`/`serviceType`).
+`HCENConsultaNoUrgente.type` está fijado a LOINC `34108-1`. `encounter` referencia [HCENEncounter](StructureDefinition-hcen-encounter.html), que fija el estado del evento a `finished`.
+
+[HCENConsultaNoUrgenteBundle](StructureDefinition-hcen-consulta-no-urgente-bundle.html) garantiza la CNU en la primera entrada mediante tres reglas complementarias: `bdl-11` exige que la primera entrada sea Composition; `hcen-cnu-single-composition` exige una sola Composition; el slice `compositionCNU 1..1` identifica esa única Composition como HCENConsultaNoUrgente.
 
 ### Codificaciones pendientes
 
@@ -22,6 +24,6 @@ Los slices identifican SNOMED CT cuando se utiliza ese sistema. Se admiten codif
 
 ### Relación con el intercambio documental
 
-La `Composition` y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html), que actúa como sobre de publicación e incluye además `DocumentReference`, `SubmissionSet`, el CDA y los recursos de contexto necesarios.
+La `Composition` y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html), que actúa como Bundle de publicación e incluye además `DocumentReference`, `SubmissionSet` y los recursos de contexto necesarios. Los metadatos referencian el CDA; el Binary CDA no debería (SHOULD NOT) enviarse. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío, sin exigir correspondencia con los metadatos.
 
-Esta versión no incorpora una instancia de ejemplo CNU. Los [ejemplos de intercambio](hcen-ejemplos.html) continúan ilustrando el sobre y las transacciones sin declarar conformidad con el perfil CNU.
+Los ejemplos de Consulta No Urgente, su CDA de apoyo y los ejemplos de intercambio HCEN se reservan para una versión futura. La publicación 0.1.0 incluye únicamente [ejemplos básicos del Core](ejemplos.html).

@@ -115,8 +115,7 @@ Description: "Solicitud de servicio (procedimiento, interconsulta, estudio, etc.
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * code.coding[snomed].system 1..1
 * code.coding[snomed].code 1..1
@@ -128,16 +127,6 @@ Description: "Solicitud de servicio (procedimiento, interconsulta, estudio, etc.
 * code.coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del servicio o procedimiento solicitado"
 * code.coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del servicio o procedimiento solicitado"
 
-* code.coding[tesauro].system 1..1
-* code.coding[tesauro].code 1..1
-* code.coding[tesauro].display 1..1
-* code.coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* code.coding[tesauro] ^short = "Código del servicio o procedimiento solicitado en el tesauro local (URI pendiente de confirmación institucional)"
-* code.coding[tesauro] ^definition = "Código del servicio o procedimiento solicitado en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* code.coding[tesauro].code ^short = "Código del servicio o procedimiento solicitado en el tesauro local"
-* code.coding[tesauro].code ^definition = "Código del servicio o procedimiento solicitado en el tesauro local"
-* code.coding[tesauro].display ^short = "Texto descriptivo del código del servicio o procedimiento solicitado en el tesauro local"
-* code.coding[tesauro].display ^definition = "Texto descriptivo del código del servicio o procedimiento solicitado en el tesauro local"
 
 // ──────────────────────────────────────────
 // quantity[x] — cantidad del servicio solicitado
@@ -178,3 +167,23 @@ Description: "Solicitud de servicio (procedimiento, interconsulta, estudio, etc.
 * patientInstruction 1..1
 * patientInstruction ^short = "Indicaciones particulares realizadas por el médico, dirigidas al paciente"
 * patientInstruction ^definition = "Indicaciones particulares realizadas por el médico, dirigidas al paciente"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYServiceRequest
+// PENDIENTE: la hoja mapea `performerType` a la entrada CDA "Referencia al
+// alta" (observation código 7731000179109) — semánticamente inconsistente
+// (performerType no es un texto de referencia), probable error de la hoja;
+// no se propaga. También le da a `patientInstruction` el mismo path CDA
+// que `note` (entrada "Próxima consulta", código 7581000179102) —
+// duplicado sin distinguir destino propio; tampoco se propaga hasta
+// confirmar el mapeo real.
+// ──────────────────────────────────────────
+
+Mapping: HCENServiceRequestToCDA
+Source: HCENServiceRequest
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYServiceRequest."
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* occurrence[x] -> "section/entry/observation[code/@code='7571000179104']/value"
+* note -> "section/entry/observation[code/@code='7581000179102']/value"

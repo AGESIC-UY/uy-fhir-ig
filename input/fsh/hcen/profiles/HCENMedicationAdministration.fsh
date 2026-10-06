@@ -78,8 +78,7 @@ Description: "Administración de medicación registrada en la Hoja de Consulta N
 * medication[x].coding ^slicing.discriminator.path = "system"
 * medication[x].coding ^slicing.rules = #open
 * medication[x].coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * medication[x].coding[snomed].system 1..1
 * medication[x].coding[snomed].code 1..1
@@ -91,16 +90,6 @@ Description: "Administración de medicación registrada en la Hoja de Consulta N
 * medication[x].coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del medicamento"
 * medication[x].coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del medicamento"
 
-* medication[x].coding[tesauro].system 1..1
-* medication[x].coding[tesauro].code 1..1
-* medication[x].coding[tesauro].display 1..1
-* medication[x].coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* medication[x].coding[tesauro] ^short = "Código del medicamento en el tesauro local (URI pendiente de confirmación institucional)"
-* medication[x].coding[tesauro] ^definition = "Código del medicamento en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* medication[x].coding[tesauro].code ^short = "Código del medicamento en el tesauro local"
-* medication[x].coding[tesauro].code ^definition = "Código del medicamento en el tesauro local"
-* medication[x].coding[tesauro].display ^short = "Texto descriptivo del código del medicamento en el tesauro local"
-* medication[x].coding[tesauro].display ^definition = "Texto descriptivo del código del medicamento en el tesauro local"
 
 // ──────────────────────────────────────────
 // subject
@@ -151,3 +140,19 @@ Description: "Administración de medicación registrada en la Hoja de Consulta N
 * dosage.dose.unit MS
 * dosage.dose.system MS
 * dosage.dose.code MS
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYMedicationaAdministratio
+// PENDIENTE: la hoja le da a `dosage`/`dosage.text` el mismo path CDA
+// exacto que `note` (probable copy-paste, mismo patrón de hoja clonada ya
+// documentado en este perfil) — no se propaga ese mapeo hasta confirmar el
+// path real.
+// ──────────────────────────────────────────
+
+Mapping: HCENMedicationAdministrationToCDA
+Source: HCENMedicationAdministration
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYMedicationaAdministratio."
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* note -> "section/entry/substanceAdministration[@moodCode='EVN']/entryRelationship/observation[code/@code='703852005']/value"

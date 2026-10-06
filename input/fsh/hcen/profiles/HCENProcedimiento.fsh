@@ -7,7 +7,7 @@
 // Nomenclatura HCENProcedimiento según la hoja "Estructura IG" del mismo
 // archivo. Reutiliza la invariante compartida `hcen-coding-required-1`
 // (motivo-consulta.fsh) en `code` y `outcome`, ambos con el mismo
-// slicing cerrado SNOMED CT y codificaciones adicionales que HCENMotivoConsulta/HCENDiagnostico.
+// slicing abierto SNOMED CT y codificaciones adicionales que HCENMotivoConsulta/HCENDiagnostico.
 
 Profile: HCENProcedimiento
 Parent: Procedure
@@ -90,8 +90,7 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * code.coding[snomed].system 1..1
 * code.coding[snomed].code 1..1
@@ -103,16 +102,6 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 * code.coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del procedimiento"
 * code.coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del procedimiento"
 
-* code.coding[tesauro].system 1..1
-* code.coding[tesauro].code 1..1
-* code.coding[tesauro].display 1..1
-* code.coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* code.coding[tesauro] ^short = "Código del procedimiento en el tesauro local (URI pendiente de confirmación institucional)"
-* code.coding[tesauro] ^definition = "Código del procedimiento en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* code.coding[tesauro].code ^short = "Código del procedimiento en el tesauro local"
-* code.coding[tesauro].code ^definition = "Código del procedimiento en el tesauro local"
-* code.coding[tesauro].display ^short = "Texto descriptivo del código del procedimiento en el tesauro local"
-* code.coding[tesauro].display ^definition = "Texto descriptivo del código del procedimiento en el tesauro local"
 
 // ──────────────────────────────────────────
 // subject
@@ -135,8 +124,7 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 * outcome.coding ^slicing.discriminator.path = "system"
 * outcome.coding ^slicing.rules = #open
 * outcome.coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * outcome.coding[snomed].system 1..1
 * outcome.coding[snomed].code 1..1
@@ -148,16 +136,6 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 * outcome.coding[snomed].display ^short = "Texto descriptivo del resultado SNOMED CT del procedimiento"
 * outcome.coding[snomed].display ^definition = "Texto descriptivo del resultado SNOMED CT del procedimiento"
 
-* outcome.coding[tesauro].system 1..1
-* outcome.coding[tesauro].code 1..1
-* outcome.coding[tesauro].display 1..1
-* outcome.coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* outcome.coding[tesauro] ^short = "Resultado del procedimiento en el tesauro local (URI pendiente de confirmación institucional)"
-* outcome.coding[tesauro] ^definition = "Resultado del procedimiento en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* outcome.coding[tesauro].code ^short = "Resultado del procedimiento en el tesauro local"
-* outcome.coding[tesauro].code ^definition = "Resultado del procedimiento en el tesauro local"
-* outcome.coding[tesauro].display ^short = "Texto descriptivo del resultado del procedimiento en el tesauro local"
-* outcome.coding[tesauro].display ^definition = "Texto descriptivo del resultado del procedimiento en el tesauro local"
 
 // ──────────────────────────────────────────
 // note
@@ -166,3 +144,25 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 * note 0..* MS
 * note ^short = "Observaciones sobre el procedimiento: hallazgos (diagnóstico) o comentarios relevantes (terapéutico)"
 * note ^definition = "Observaciones sobre el procedimiento: hallazgos (diagnóstico) o comentarios relevantes (terapéutico)"
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYProcedimiento
+// `status` no
+// tiene un path CDA real asociado — la hoja documenta el valor fijo de
+// atributo `procedure/@moodCode="EVN"` en su lugar.
+// ──────────────────────────────────────────
+
+Mapping: HCENProcedimientoToCDA
+Source: HCENProcedimiento
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYProcedimiento."
+* status -> "procedure/@moodCode=\"EVN\""
+* code -> "section/entry/procedure/code"
+* code.coding[snomed].code -> "section/entry/procedure/code/@code"
+* code.coding[snomed].system -> "section/entry/procedure/code/@codeSystem"
+* code.coding[snomed].display -> "section/entry/procedure/code/@displayName"
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* outcome -> "section/entry/procedure/entryRelationship/observation[code/@code='258031000179107']/value"
+* outcome.coding[snomed] -> "section/entry/procedure/entryRelationship/observation[code/@code='258031000179107']/value"
+* note -> "section/entry/procedure/entryRelationship/observation[code/@code='703852005']/value"

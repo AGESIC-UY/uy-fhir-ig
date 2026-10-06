@@ -1,11 +1,11 @@
-Profile: UYFNIIdentifier
+Profile: UYOrgIdentifier
 Parent: Identifier
-Id: uy-fni-identifier
-Title: "Identificador Nacional Extranjero"
-Description: "Identificador nacional de una persona emitido por otro país."
+Id: uy-org-identifier
+Title: "Identificador de Organización"
+Description: "Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización."
 
 * type 1..1
-* type = $v2-0203#NI "National unique individual identifier" 
+* type = $v2-0203#XX "Organization identifier" 
 * system 1..1
 * value 1..1
 * assigner only Reference(UYOrganization)
@@ -21,8 +21,6 @@ Description: "Identificador nacional de una persona emitido por otro país."
 * type ^definition = "Codificación del tipo de identificador."
 * system ^short = "Namespace/URI que define de manera unívoca el sistema emisor del identificador."
 * system ^definition = "Namespace/URI que define de manera unívoca el sistema emisor del identificador."
-* system ^example[0].label = "DNI Argentino"
-* system ^example[0].valueString = "urn:oid:2.16.858.1.032.68909"
 * value ^short = "El valor alfanumérico o numérico único del identificador."
 * value ^definition = "El valor alfanumérico o numérico único del identificador."
 * period ^short = "Periodo de validez del identificador."
@@ -31,8 +29,8 @@ Description: "Identificador nacional de una persona emitido por otro país."
 * assigner ^definition = "Organización que emite, administra o es responsable del identificador."
 
 // Textos de presentación complementarios: raíz, comentarios y vinculaciones.
-* . ^short = "Identificador Nacional Extranjero"
-* . ^definition = "Identificador nacional de una persona emitido por otro país; el sistema no se fija porque depende del organismo emisor."
+* . ^short = "Identificador de Organización"
+* . ^definition = "Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización."
 * use ^binding.description = "Propósito de uso del identificador."
 * use ^comment = "Las aplicaciones pueden considerar permanente un identificador salvo que se indique explícitamente que es temporal."
 * type ^binding.description = "Categoría del identificador, utilizada para elegirlo según el propósito."

@@ -1,12 +1,8 @@
 Los ejemplos utilizan datos ficticios y muestran instancias de los cuatro perfiles nacionales. No representan intercambios HCEN completos.
 
-### Catálogo inicial
-
-| Artefacto | Propósito |
+| Ejemplo | Perfil de referencia |
 | --- | --- |
-| [Organización CORE UY sin identificador HCEN](Organization-EjemploOrganizacionUY.html) | Ejemplo con datos ficticios para ilustrar el perfil UYOrganization. |
-| [Paciente CORE UY con identificador institucional](Patient-EjemploPacienteUY.html) | Ejemplo con datos ficticios para ilustrar el perfil UYPatient. |
-| [Profesional CORE UY sin cédula informada](Practitioner-EjemploProfesionalUY.html) | Ejemplo con datos ficticios para ilustrar el perfil UYPractitioner. |
-| [Rol profesional CORE UY](PractitionerRole-EjemploRolProfesionalUY.html) | Ejemplo con datos ficticios para ilustrar el perfil UYPractitionerRole. |
-
-Cada página presenta el propósito del artefacto y su definición técnica. Los artefactos se incorporan como base de trabajo en estado de borrador.
+| [Paciente](Patient-EjemploPacienteUY.html) | [UYPatient](StructureDefinition-uy-patient.html) |
+| [Profesional de salud](Practitioner-EjemploProfesionalUY.html) | [UYPractitioner](StructureDefinition-uy-practitioner.html) |
+| [Organización](Organization-EjemploOrganizacionUY.html) | [UYOrganization](StructureDefinition-uy-organization.html) |
+| [Rol profesional](PractitionerRole-EjemploRolProfesionalUY.html) | [UYPractitionerRole](StructureDefinition-uy-practitioner-role.html) |

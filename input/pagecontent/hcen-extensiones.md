@@ -7,7 +7,7 @@ Las extensiones HCEN representan datos específicos del intercambio documental. 
 | [Cantidad de Estudios](StructureDefinition-ext-amount-of-studies.html) | Cantidad de estudios incluidos en el documento. Mapea a DocumentEntry.amountOfStudies. |
 | [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.html) | Referencia al recurso Binary que contiene la representación CDA del documento clínico. |
 | [Por Orden De](StructureDefinition-ext-by-order-of.html) | Organización por cuya orden se generó el documento. Mapea a DocumentEntry.byOrder. |
-| [ID de Comunidad de Origen](StructureDefinition-ext-home-community-id.html) | El homeCommunityId donde reside el artefacto. Mapea a DocumentEntry.homeCommunityId. |
+| [ID de Comunidad de Origen](StructureDefinition-ext-home-community-id.html) | Comunidad de origen del documento o conjunto. Obligatoria en DocumentReference y SubmissionSet. |
 | [Certificación del Profesional](StructureDefinition-ext-practitioner-certification.html) | Definición disponible para representar al profesional que certifica un documento. No se utiliza actualmente en ningún perfil. |
 | [Enfermedad de Notificación Obligatoria (ENO)](StructureDefinition-ext-practitioner-eno.html) | Definición disponible para representar al profesional que notifica una ENO. No se utiliza actualmente en ningún perfil. |
 | [ID Único del Repositorio](StructureDefinition-ext-repository-id.html) | Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS. |

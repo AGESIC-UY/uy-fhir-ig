@@ -5,6 +5,7 @@ Title: "Conjunto de envío HCEN"
 Description: "Lista HCEN que agrupa referencias documentales para su envío. Reutiliza extensiones y tipos de identificador oficiales de IHE MHD sin declarar conformidad integral con el perfil IHE."
 
 * extension contains
+    HomeCommunityId named homeCommunityId 1..1 and
     $iheDesignationType named designationType 1..1 and
     $iheSourceId named sourceId 1..1 and
     $iheIntendedRecipient named intendedRecipient 0..* MS
@@ -14,10 +15,10 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
 * identifier ^slicing.discriminator.path = "use"
 * identifier ^slicing.rules = #open
 * identifier contains
-    entryUUID 0..1 MS and
+    entryUUID 1..1 and
     uniqueId 1..1
 * identifier[entryUUID] only HCENSubmissionSetIdentifier
-* identifier[uniqueId] only HCENDocumentIdentifier
+* identifier[uniqueId] only HCENSubmissionSetUniqueIdIdentifier
 
 * status = #current
 * mode = #working
@@ -28,16 +29,17 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
 * subject 1..1
 * subject only Reference(HCENPatient)
 * date 1..1
-* source 0..1 MS
-* source only Reference(HCENPractitioner or HCENPractitionerRole or HCENPatient)
+* source 1..1
+* source only Reference(HCENPractitionerRole)
+* source.reference 1..1
 * entry 1..*
 * entry.item only Reference(HCENDocumentReference)
 
 * extension[designationType] ^short = "Tipo de contenido o designación clínica del conjunto."
 * extension[sourceId] ^short = "Identificador de la entidad que origina el envío."
 * extension[intendedRecipient] ^short = "Personas u organizaciones destinatarias del conjunto."
-* identifier[entryUUID] ^short = "EntryUUID opcional con formato urn:uuid:2.[oid_documento_clinico]."
-* identifier[uniqueId] ^short = "OID documental del conjunto."
+* identifier[entryUUID] ^short = "EntryUUID con formato urn:uuid:2.[oid_documento_clinico]."
+* identifier[uniqueId] ^short = "OID global S propio del SubmissionSet."
 * subject ^short = "Paciente al que pertenecen los documentos incluidos."
 * date ^short = "Fecha y hora de agrupación del conjunto."
 * source ^short = "Autor que creó el conjunto de envío."
@@ -96,9 +98,11 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
 * extension[designationType] ^definition = "Tipo de contenido o designación clínica del conjunto."
 * extension[sourceId] ^definition = "Identificador de la entidad que origina el envío."
 * extension[intendedRecipient] ^definition = "Personas u organizaciones destinatarias del conjunto."
-* identifier[entryUUID] ^definition = "Identificador técnico opcional del conjunto, derivado del OID clínico con el formato urn:uuid:2.[oid_documento_clinico]."
-* identifier[uniqueId] ^definition = "Identificador documental del conjunto, representado mediante HCENDocumentIdentifier."
+* identifier[entryUUID] ^definition = "Identificador técnico obligatorio del conjunto, derivado del OID [oid_documento_clinico] de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]. No existe primer documento obligatorio, documento principal ni orden relevante."
+* identifier[uniqueId] ^definition = "OID global S propio del SubmissionSet, distinto del identificador documental [oid_documento_clinico], representado mediante HCENSubmissionSetUniqueIdIdentifier."
 * subject ^definition = "Paciente al que pertenecen los documentos incluidos."
 * date ^definition = "Fecha y hora de agrupación del conjunto."
-* source ^definition = "Autor que creó el conjunto de envío."
+* source ^definition = "Referencia obligatoria a HCENPractitionerRole, que identifica al profesional y su institución como autor del conjunto. Los recursos Practitioner u Organization adicionales del envío no sustituyen esta referencia."
+* extension[homeCommunityId] ^short = "Comunidad de origen del conjunto."
+* extension[homeCommunityId] ^definition = "Identificador de la comunidad desde la cual se accede a los documentos del conjunto."
 * entry.item ^definition = "Referencia a un DocumentReference incluido en el conjunto."

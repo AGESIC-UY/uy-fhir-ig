@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="388" viewBox="0 0 760 388" role="img" aria-labelledby="hcen-cu-recuperar-documento-title hcen-cu-recuperar-documento-desc">
+  <title id="hcen-cu-recuperar-documento-title">Recuperar y entregar un documento</title>
+  <desc id="hcen-cu-recuperar-documento-desc">El prestador solicitante pide a Plataforma una representación del documento. Plataforma solicita el contenido al repositorio del prestador de origen, lo recibe y lo devuelve al solicitante como Bundle documental o Binary con CDA.</desc>
+  <defs>
+    <linearGradient id="hcen-cu-recuperar-documento-plataforma" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#163959"/><stop offset="1" stop-color="#0057b8"/></linearGradient>
+    <marker id="hcen-cu-recuperar-documento-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 8 5 1 9" fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect x="1" y="1" width="758" height="386" rx="18" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+  <path d="M125 84 V370" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="20" y="22" width="210" height="62" rx="13" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <text x="125" y="49" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Prestador solicitante</text>
+  <text x="125" y="70" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Solicitante de documentos</text>
+  <path d="M380 84 V370" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="275" y="22" width="210" height="62" rx="13" fill="url(#hcen-cu-recuperar-documento-plataforma)"/>
+  <text x="380" y="49" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Plataforma</text>
+  <text x="380" y="70" text-anchor="middle" fill="#dbe9f8" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Intermediaria</text>
+  <path d="M635 84 V370" stroke="#8ca4bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="530" y="22" width="210" height="62" rx="13" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <text x="635" y="49" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">Prestador de origen</text>
+  <text x="635" y="70" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="14">Repositorio</text>
+  <text x="252.5" y="130" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Solicita una representación</text>
+  <text x="252.5" y="148" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">(FHIR o CDA)</text>
+  <path d="M141 160 H376" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-recuperar-documento-arrow)"/>
+  <circle cx="125" cy="160" r="12" fill="#0057b8"/><text x="125" y="165" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">1</text>
+  <text x="507.5" y="202" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Solicita el contenido</text>
+  <path d="M396 214 H631" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-recuperar-documento-arrow)"/>
+  <circle cx="380" cy="214" r="12" fill="#0057b8"/><text x="380" y="219" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">2</text>
+  <text x="507.5" y="256" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Entrega el documento</text>
+  <path d="M619 268 H384" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-recuperar-documento-arrow)"/>
+  <circle cx="635" cy="268" r="12" fill="#0057b8"/><text x="635" y="273" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">3</text>
+  <text x="252.5" y="310" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Bundle documental</text>
+  <text x="252.5" y="328" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">o Binary con CDA</text>
+  <path d="M364 340 H129" fill="none" stroke="#0057b8" stroke-width="2.5" marker-end="url(#hcen-cu-recuperar-documento-arrow)"/>
+  <circle cx="380" cy="340" r="12" fill="#0057b8"/><text x="380" y="345" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700">4</text>
+</svg>

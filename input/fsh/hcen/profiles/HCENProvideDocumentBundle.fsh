@@ -4,7 +4,7 @@ Profile: HCENProvideDocumentBundle
 Parent: Bundle
 Id: hcen-provide-document-bundle
 Title: "Envío para publicación documental HCEN"
-Description: "Sobre de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR, CDA y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo."
+Description: "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo."
 * type = #transaction
 * entry 4..*
 * entry.fullUrl 1..1
@@ -19,7 +19,6 @@ Description: "Sobre de publicación basado en MHD UnContained Comprehensive Prov
     submissionSet 1..1 and
     documentReference 1..* and
     documentBundle 1..* and
-    cdaBinary 1..* and
     patient 0..* and
     practitioner 0..* and
     practitionerRole 0..* and
@@ -29,9 +28,8 @@ Description: "Sobre de publicación basado en MHD UnContained Comprehensive Prov
 * entry[documentReference].resource only HCENDocumentReference
 * entry[documentReference].request.url = "DocumentReference"
 * entry[documentBundle].resource only Bundle
+* entry[documentBundle].resource obeys hcen-document-self-contained
 * entry[documentBundle].request.url = "Bundle"
-* entry[cdaBinary].resource only HCENCdaBinary
-* entry[cdaBinary].request.url = "Binary"
 * entry[patient].resource only HCENPatient
 * entry[patient].request.url = "Patient"
 * entry[practitioner].resource only HCENPractitioner
@@ -40,14 +38,17 @@ Description: "Sobre de publicación basado en MHD UnContained Comprehensive Prov
 * entry[practitionerRole].request.url = "PractitionerRole"
 * entry[organization].resource only HCENOrganization
 * entry[organization].request.url = "Organization"
-* obeys hcen-iti65-fullurl-unique and hcen-publication-current and hcen-publication-no-replace
+* obeys hcen-fullurl-unique and hcen-publication-current
 * entry ^short = "Metadatos, representaciones y contexto del envío"
-* entry ^definition = "Un SubmissionSet y uno o más DocumentReference, Bundles documentales y Binary CDA. Las entradas adicionales contienen recursos de contexto referenciados, no nuevas operaciones de negocio."
+* entry ^definition = "Un SubmissionSet, uno o más DocumentReference y Bundles documentales, y los recursos de contexto referenciados. Binary CDA SHOULD NOT incluirse; su presencia no invalida el envío y, si se recibe, puede ignorarse."
 * entry.fullUrl ^short = "Identidad de la entrada dentro del envío"
 * entry.fullUrl ^definition = "URI única que permite resolver las referencias del envío sin descargar recursos individuales de sistemas externos."
 * entry.request ^short = "Acción propuesta para procesar la entrada"
 * entry.request ^definition = "Representación preliminar de alta con POST. El contrato de publicación debe resolver la persistencia de las representaciones documentales."
-* . ^short = "Sobre de publicación documental HCEN"
-* . ^definition = "Bundle de intercambio que transporta ambos formatos del documento y sus metadatos; no es el documento clínico."
+* . ^short = "Bundle de publicación documental HCEN"
+* . ^definition = "Bundle de intercambio que transporta el documento FHIR, sus metadatos y contexto; no es el documento clínico."
 
-* obeys hcen-publication-fhir-links and hcen-publication-cda-links and hcen-publication-members
+* obeys hcen-publication-fhir-links and hcen-publication-members
+* obeys hcen-publication-context and hcen-publication-contained and hcen-publication-authors
+
+* obeys hcen-publication-document-identifier and hcen-publication-submission-entryuuid-member

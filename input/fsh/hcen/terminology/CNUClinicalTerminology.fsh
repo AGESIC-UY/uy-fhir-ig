@@ -1,49 +1,46 @@
 // Terminología clínica específica de la Hoja de Consulta No Urgente (CNU).
 // Los ejes documentales específicos se mantienen en la terminología HCEN.
 
-// ValueSet: Motivos de Consulta (SNOMED CT-UY, refset oficial)
-// Fuente: input-cache/Pack CMD_Version 9.4.4/Subconjuntos de valores_
-// edUYSNOMED_20260615/Subconjuntos del cuerpo/Motivo de consulta,
-// diagnóstico_20260615.xlsx — 141.695 conceptos, prácticamente la
-// jerarquía completa de "Clinical finding" (no un listado chico curado).
-// En vez de enumerar cada código, se referencia por membresía el refset
-// SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay, MAIN/
-// SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15) del que ese archivo es el volcado
-// de miembros — mecanismo estándar de FHIR para subsets grandes de
-// SNOMED CT (filter concept/in/<refsetId>), en vez de una enumeración
-// literal impracticable.
+// ValueSet: Motivos de Consulta (SNOMED CT, listado de prueba)
+// Fuente: docs/Códigos para prueba FHIR.xlsx, pestaña "MC".
 // ─────────────────────────────────────────────────────────────────────
 
-ValueSet: VSMotivoConsulta
-Id: vs-motivo-consulta
+ValueSet: VSMotivosConsulta
+Id: vs-motivos-consulta
 Title: "Conjunto de Valores Motivos de Consulta"
-Description: """
-Motivos de consulta: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).
-El listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).
-"""
-* ^text.status = #extensions
-* ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Motivos de consulta: incluye todos los conceptos SNOMED CT que son miembros del refset SNOMED CT-UY <code>261341000179103</code> (SNOMED CT edición Uruguay). El listado completo de conceptos puede consultarse en el <a href=\"https://snomedbrowser.org/?perspective=full&amp;conceptId1=261341000179103&amp;edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&amp;release=&amp;languages=es,en\">navegador SNOMED CT-UY</a>.</p></div>"
+Description: "Motivos de consulta: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña MC)."
 
-* include codes from system $SCT where concept in #261341000179103
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#80313002 "palpitaciones (hallazgo)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#185349003 "control de salud (procedimiento)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#248228001 "lipotimia (hallazgo)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#68154008 "tos crónica"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#60845006 "disnea de esfuerzo"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#25064002 "cefalea (hallazgo)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#21522001 "dolor abdominal (hallazgo)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#300995000 "angina de esfuerzo (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#371807002 "angina de pecho atípica (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#67882000 "prurito de la vulva (trastorno)"
 
 // ─────────────────────────────────────────────────────────────────────
-// ValueSet: Diagnósticos (SNOMED CT-UY, mismo refset que Motivos de Consulta)
-// Fuente: el mismo archivo que VSMotivoConsulta (input-cache/Pack
-// CMD_Version 9.4.4/Subconjuntos de valores_edUYSNOMED_20260615/
-// Subconjuntos del cuerpo/Motivo de consulta, diagnóstico_20260615.xlsx)
-// — se referencia por membresía el mismo refset SNOMED CT-UY
-// 261341000179103, per pedido explícito del usuario.
+// ValueSet: Diagnósticos (SNOMED CT, listado de prueba)
+// Fuente: docs/Códigos para prueba FHIR.xlsx, pestaña "Dg".
 // ─────────────────────────────────────────────────────────────────────
 
 ValueSet: VSDiagnosticoConsulta
 Id: vs-diagnostico-consulta
 Title: "Conjunto de Valores Diagnósticos"
-Description: """
-Diagnósticos: miembros del refset SNOMED CT-UY 261341000179103 (SNOMED CT edición Uruguay).
-El listado completo de conceptos puede consultarse en el [navegador SNOMED CT-UY](https://snomedbrowser.org/?perspective=full&conceptId1=261341000179103&edition=MAIN/SNOMEDCT-ES/SNOMEDCT-UY/2026-06-15&release=&languages=es,en).
-"""
+Description: "Diagnósticos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Dg)."
 
-* include codes from system $SCT where concept in #261341000179103
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#27337007 "extrasístoles ventriculares unifocales"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#38341003 "hipertensión arterial (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#302866003 "hipoglicemia (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#235595009 "enfermedad por reflujo gastroesofágico (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#446221000 "insuficiencia cardíaca con fracción de eyección conservada (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#398057008 "cefalea de tipo tensional (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#4556007 "gastritis (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#413838009 "cardiopatía isquémica crónica (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#1381430004 "angina de pecho sin obstrucción de arterias coronarias (trastorno)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#1085006 "candidiasis de la vulva (trastorno)"
 
 // ─────────────────────────────────────────────────────────────────────
 // ValueSet: Tipo de Procedimiento (SNOMED) — PLACEHOLDER
@@ -61,23 +58,18 @@ Description: "PENDIENTE: agrupador de tipo de procedimiento (p.ej. diagnóstico,
 * $SCT#71388002 "Procedure (procedure)" // PLACEHOLDER — reemplazar con el listado oficial de tipo de procedimiento
 
 // ─────────────────────────────────────────────────────────────────────
-// ValueSet: Procedimientos (SNOMED CT-UY, 2 refsets oficiales)
-// La hoja HCEN|UYProcedimiento referencia un refset "procedimientos"
-// (extensión uruguaya de SNOMED) para code.coding:snomed. Per pedido
-// explícito del usuario, referencia por membresía dos refsets SNOMED
-// CT-UY: 268951000179107 y 231971000179103 (unión — cualquiera de los
-// dos, dos `include` separados en vez de un único filtro compuesto).
+// ValueSet: Procedimientos (SNOMED CT, listado de prueba)
+// Fuente: docs/Códigos para prueba FHIR.xlsx, pestaña "Procedimiento".
 // ─────────────────────────────────────────────────────────────────────
 
 ValueSet: VSProcedimientos
 Id: vs-procedimientos
 Title: "Conjunto de Valores Procedimientos"
-Description: "Procedimientos: miembros de los refsets SNOMED CT-UY 268951000179107 y 231971000179103 (SNOMED CT edición Uruguay)."
-* ^text.status = #extensions
-* ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Procedimientos: incluye todos los conceptos SNOMED CT que son miembros de los refsets SNOMED CT-UY <code>268951000179107</code> y <code>231971000179103</code> (SNOMED CT edición Uruguay).</p></div>"
+Description: "Procedimientos: listado de códigos SNOMED CT de prueba (docs/Códigos para prueba FHIR.xlsx, pestaña Procedimiento)."
 
-* include codes from system $SCT where concept in #268951000179107
-* include codes from system $SCT where concept in #231971000179103
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#29303009 "procedimiento electrocardiográfico (procedimiento)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#46973005 "medir la presión arterial (procedimiento)"
+* $SCTUY|http://snomed.info/sct/5631000179106/version/20260615#166900001 "determinación de glicemia por medidor de glucosa (procedimiento)"
 
 // ─────────────────────────────────────────────────────────────────────
 // ValueSet: Resultado de Procedimiento (SNOMED)
@@ -95,7 +87,7 @@ Description: "Resultados posibles de un procedimiento (procedure.outcome)."
 * $SCT#260415000 "no detectado"
 * $SCT#280413001 "resultado normal"
 * $SCT#280415008 "resultado anormal"
-* $SCT#41998400 "no concluyente"
+* $SCT#419984006 "no concluyente"
 
 // ─────────────────────────────────────────────────────────────────────
 // ValueSet: Medicamentos (SNOMED) — PLACEHOLDER
@@ -146,7 +138,6 @@ Description: "PENDIENTE: subconjunto de códigos para vías de administración f
 * ^status = #draft
 
 * $v3-RouteOfAdmin#PO "Oral" // PLACEHOLDER — reemplazar con el listado oficial de vías de administración
-* http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-nonXMLBody:2.1 "C-CDA 2.1 con cuerpo no estructurado"
 
 // ─────────────────────────────────────────────────────────────────────
 // ValueSet: Solicitud de Procedimiento (SNOMED) — PLACEHOLDER

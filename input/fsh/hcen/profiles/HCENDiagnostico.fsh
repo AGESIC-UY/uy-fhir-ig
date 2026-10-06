@@ -79,8 +79,7 @@ Description: "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), m
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-    snomed 0..1 and
-    tesauro 0..1
+    snomed 0..1
 
 * code.coding[snomed].system 1..1
 * code.coding[snomed].code 1..1
@@ -92,16 +91,6 @@ Description: "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), m
 * code.coding[snomed].display ^short = "Texto descriptivo del código SNOMED CT del diagnóstico"
 * code.coding[snomed].display ^definition = "Texto descriptivo del código SNOMED CT del diagnóstico"
 
-* code.coding[tesauro].system 1..1
-* code.coding[tesauro].code 1..1
-* code.coding[tesauro].display 1..1
-* code.coding[tesauro].system = "http://msp.gub.uy/fhir/CodeSystem/tesauro-hiba" (exactly)
-* code.coding[tesauro] ^short = "Código del diagnóstico en el tesauro local (URI pendiente de confirmación institucional)"
-* code.coding[tesauro] ^definition = "Código del diagnóstico en el tesauro local. La URI del sistema es provisional; ver docs/hcen-primera-version.md."
-* code.coding[tesauro].code ^short = "Código del diagnóstico en el tesauro local"
-* code.coding[tesauro].code ^definition = "Código del diagnóstico en el tesauro local"
-* code.coding[tesauro].display ^short = "Texto descriptivo del código del diagnóstico en el tesauro local"
-* code.coding[tesauro].display ^definition = "Texto descriptivo del código del diagnóstico en el tesauro local"
 
 // ──────────────────────────────────────────
 // subject
@@ -125,3 +114,25 @@ Description: "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), m
 * onsetPeriod.start ^definition = "Indica la fecha de inicio del problema de salud."
 * onsetPeriod.end ^short = "Fecha de fin del problema de salud"
 * onsetPeriod.end ^definition = "Indica la fecha de fin del problema de salud."
+
+// ──────────────────────────────────────────
+// Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYDiagnostico
+// ──────────────────────────────────────────
+
+Mapping: HCENDiagnosticoToCDA
+Source: HCENDiagnostico
+Target: "http://hl7.org/v3/cda"
+Title: "CDA (R2)"
+Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCEN|UYDiagnostico."
+* category -> "section/entry/observation/code"
+* category.coding.system -> "section/entry/observation/code/@codeSystem"
+* category.coding.code -> "section/entry/observation/code/@code"
+* category.coding.display -> "section/entry/observation/code/@displayName"
+* code.coding[snomed] -> "section/entry/observation[code/@code='439401001']/value"
+* code.coding[snomed].system -> "section/entry/observation/value/@codeSystem"
+* code.coding[snomed].code -> "section/entry/observation/value/@code"
+* code.coding[snomed].display -> "section/entry/observation/value/@displayName"
+* subject -> "ClinicalDocument/recordTarget/patientRole/id"
+* onset[x] -> "section/entry/observation/effectiveTime"
+* onsetPeriod.start -> "section/entry/observation/effectiveTime/low/@value"
+* onsetPeriod.end -> "section/entry/observation/effectiveTime/high/@value"

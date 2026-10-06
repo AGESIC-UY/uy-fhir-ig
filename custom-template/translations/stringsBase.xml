@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+<translation name="ADL" en="ADL" es="ADL"/>
+<translation name="Abstract" en="Abstract" es="Resumen"/>
+<translation name="Actors" en="Actors" es="Actores"/>
+<translation name="AllTables" en="All" es="Todos"/>
+<translation name="ArtifactsIntro" en="This page provides a list of the FHIR artifacts defined as part of this implementation guide." es="Esta página proporciona una lista de los artefactos FHIR definidos como parte de esta guía de implementación."/>
+<translation name="ArtifactsSummary" en="Artifacts Summary" es="Resumen de artefactos"/>
+<translation name="ArtifactsTable" en="Artifacts Table" es="Tabla de artefactos"/>
+<translation name="ArtifactsTableIntro" en="This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide." es="This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."/>
+<translation name="CISearchMsg" en="Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page." es="Nota: esta búsqueda busca en la compilación actual de {{site.data.fhir.ig.title}}.  Esta página solo existe para la compilación de CI - las versiones publicadas usarán una página de búsqueda diferente."/>
+<translation name="CSV" en="CSV" es="CSV"/>
+<translation name="Category" en="Category" es="Category"/>
+<translation name="ChangeHistory" en="Change History" es="Historial de cambios"/>
+<translation name="ChangesIn" en="Changes in the %ID% %TYPE%." es="Cambios en el %ID% %TYPE%."/>
+<translation name="ClearAll" en="Clear all" es="Clear all"/>
+<translation name="CodeSystemValuesets" en="This Code system is referenced in the definition of the following value sets:" es="Se hace referencia a este sistema de códigos en la definición de los siguientes conjuntos de valores:"/>
+<translation name="ComputableName" en="Computable Name" es="Nombre computable"/>
+<translation name="Contained" en="Contained resources" es="Recursos contenidos"/>
+<translation name="Content" en="Content" es="Contenido"/>
+<translation name="Contents" en="Contents" es="Contenido"/>
+<translation name="CopyURL" en="Click to copy URL" es="Haga clic para copiar la URL"/>
+<translation name="CopyVersioned" en="Click to copy versioned URL" es="Haga clic para copiar la URL versionada"/>
+<translation name="CopyrightLegal" en="Copyright/Legal" es="Derechos de autor"/>
+<translation name="CountryFlag" en="flag" es="bandera"/>
+<translation name="CurrentBuild" en="Current Build" es="Compilación actual"/>
+<translation name="DataTypeProfile" en="Data Type Profile" es="Perfil del tipo de datos"/>
+<translation name="DefinitionsFor" en="Definitions for the %MODEL%" es="Definiciones del %MODEL%."/>
+<translation name="Derive" en="This structure is derived from %ARTIFACT%" es="Esta estructura se deriva de %ARTIFACT%."/>
+<translation name="Description" en="Description" es="Description"/>
+<translation name="DetailedDescriptions" en="Detailed Descriptions" es="Descripciones detalladas"/>
+<translation name="Diagram" en="Diagram" es="Diagrama"/>
+<translation name="DifferentialTable" en="Differential Table" es="Tabla diferencial"/>
+<translation name="DifferentialView" en="Differential View" es="Vista diferencial"/>
+<translation name="Download" en="Download" es="Descargar"/>
+<translation name="Example" en="Example" es="Ejemplo"/>
+<translation name="Examples" en="Examples" es="Ejemplos"/>
+<translation name="ExamplesForProfile" en="Examples for the %ID% Profile." es="Ejemplos para el perfil %ID%."/>
+<translation name="ExamplesForResource" en="Examples for the %ID% Resource." es="Ejemplos para el recurso %ID%."/>
+<translation name="Excel" en="Excel" es="Excel"/>
+<translation name="Expansion" en="Expansion" es="Expansión"/>
+<translation name="Experimental" en="Experimental" es="Experimental"/>
+<translation name="Extension" en="Extension" es="Extensión"/>
+<translation name="FormalExtension" en="Formal Views of Extension Content" es="Visiones formales del contenido de la ampliación"/>
+<translation name="FormalProfile" en="Formal Views of Profile Content" es="Vistas formales del contenido del perfil"/>
+<translation name="FormalResource" en="Formal Views of Resource Content" es="Vistas formales del contenido del recurso"/>
+<translation name="FormatProfile" en="%FMT% Profile" es="%FMT% Perfil"/>
+<translation name="FormatRep" en="%FMT% representation of the %ID% %TYPE%." es="%FMT% representación del %ID% %TYPE%."/>
+<translation name="FormatResource" en="%FMT% Resource" es="Recurso %FMT%"/>
+<translation name="FromNormative" en="from v%NORMVER%" es="de v%NORMVER%"/>
+<translation name="GeneratedDate" en="Generated %DATE%" es="Generado %DATE%"/>
+<translation name="GlobalProfiles" en="Global Profiles" es="Perfiles mundiales"/>
+<translation name="Globals" en="Globals" es="Globales"/>
+<translation name="Grouping" en="Grouping" es="Grouping"/>
+<translation name="HighlightChanges" en="Highlight text changes?" es="¿Resaltar los cambios en el texto?"/>
+<translation name="HighlightChangesHelp" en="Enable this to see changes since the last official release" es="Habilite esto para ver los cambios desde la última versión oficial"/>
+<translation name="History" en="History" es="Historia"/>
+<translation name="HistoryOfChange" en="History of changes for %ARTIFACT%." es="Historial de cambios para %ARTIFACT%."/>
+<translation name="IGCopyright" en="IG © %YEAR%" es="IG © %YEAR%."/>
+<translation name="IGPackage" en="Package %PKG% based on %FHIRVER%." es="Paquete %PKG% basado en %FHIRVER%."/>
+<translation name="Id" en="Id" es="Id"/>
+<translation name="Instances" en="Instances" es="Instancias"/>
+<translation name="JSON" en="JSON" es="JSON"/>
+<translation name="JSONTemplate" en="JSON Template" es="Plantilla JSON"/>
+<translation name="KeyElementsTable" en="Key Elements Table" es="Tabla de elementos clave"/>
+<translation name="KeyElementsView" en="Key Elements View" es="Vista de elementos clave"/>
+<translation name="Keywords" en="Keywords" es="Palabras clave"/>
+<translation name="Language" en="Language" es="Idioma"/>
+<translation name="Links" en="Links" es="Enlaces"/>
+<translation name="LogicalModel" en="Logical Model" es="Modelo lógico"/>
+<translation name="Mappings" en="Mappings" es="Mapeos"/>
+<translation name="MappingsFor" en="Mappings for the %ID% %TYPE%." es="Mapeos para el %ID% %TYPE%."/>
+<translation name="MaturityLevel" en="Maturity Level" es="Nivel de madurez"/>
+<translation name="ModelOf" en="Instance of logical model" es="Instance of logical model"/>
+<translation name="ModifiedContent" en="Modified Content" es="Contenido modificado"/>
+<translation name="NO_TRANS" en="There is no translation page available for the current page, so it has been rendered in the default language" es="There is no translation page available for the current page, so it has been rendered in the default language"/>
+<translation name="NarrativeContent" en="Narrative Content" es="Contenido narrativo"/>
+<translation name="NewContent" en="New Content" es="Contenido nuevo"/>
+<translation name="NextPage" en="next &gt;" es="siguiente &gt;"/>
+<translation name="NoExamples" en="No examples are currently available for the %ID% Profile." es="Actualmente no hay ejemplos disponibles para el perfil %ID%."/>
+<translation name="NoQuestionnaireResponses" en="There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG." es="Actualmente no hay instancias QuestionnaireResponse para este cuestionario definidas en este IG."/>
+<translation name="NoTestPlan" en="No test plans are currently available for the %ARTIFACT%." es="Actualmente no se dispone de planes de pruebas para el %ARTIFACT%."/>
+<translation name="NoTestScript" en="No test scripts are currently available for the %ARTIFACT%." es="Actualmente no se dispone de guiones de prueba para el %ARTIFACT%."/>
+<translation name="Notes" en="Notes" es="Notas"/>
+<translation name="Obligations" en="Obligations" es="Obligaciones"/>
+<translation name="OfficialURL" en="Official URL" es="URL oficial"/>
+<translation name="OpenEHR" en="openEHR View" es="openEHR Ver"/>
+<translation name="OtherIdentifiers" en="Other Identifiers" es="Otros identificadores"/>
+<translation name="OtherReps" en="Other representations of profile:" es="Otras representaciones de perfil:"/>
+<translation name="PageBottom" en="bottom" es="fondo"/>
+<translation name="PageStandardsStatus" en="Page standards status" es="Estado de las normas de la página"/>
+<translation name="PageTop" en="top" es="top"/>
+<translation name="PrevPage" en="&lt; prev" es="&lt; anterior"/>
+<translation name="Processes" en="Processes" es="Procesos"/>
+<translation name="PseudoJSON" en="Pseudo JSON" es="Pseudo JSON"/>
+<translation name="PseudoTTL" en="Pseudo TTL" es="Pseudo TTL"/>
+<translation name="PseudoXML" en="Pseudo XML" es="Pseudo XML"/>
+<translation name="QAReport" en="QA Report" es="Informe de control de calidad"/>
+<translation name="QuestionnaireLogic" en="Form Logic" es="Lógica de formas"/>
+<translation name="QuestionnaireResponses" en="Sample completed form" es="Ejemplo de formulario cumplimentado"/>
+<translation name="QuestionnaireSample" en="Sample Rendering" es="Ejemplo de renderización"/>
+<translation name="QuestionnaireTree" en="Tree view" es="Vista del árbol"/>
+<translation name="Raw" en="Raw %FMT%" es="%FMT% bruto"/>
+<translation name="ReadingStructures" en="Description Differentials, Snapshots, and other representations" es="Descripción de perfiles, diferenciales, instantáneas y sus representaciones"/>
+<translation name="ReadingTerminology" en="Description of the above table(s)" es="Descripción de los cuadros anteriores"/>
+<translation name="Realm" en="Realm" es="Realm"/>
+<translation name="ResourceDate" en="as of %RESDATE%" es="a partir de %RESDATE%."/>
+<translation name="ResourceModel" en="Resource" es="Recurso"/>
+<translation name="ResourceNoExamples" en="No examples are currently available for the %ID% Resource" es="Actualmente no hay ejemplos disponibles para el recurso %ID%"/>
+<translation name="ResourceOtherReps" en="Other representations of resource:" es="Otras representaciones del recurso:"/>
+<translation name="ResourceProfile" en="Resource Profile" es="Perfil de los recursos"/>
+<translation name="ResponsesQuestionnaire" en="Responses for this Questionnaire" es="Respuestas a este cuestionario"/>
+<translation name="Responsible" en="Responsible" es="Responsable"/>
+<translation name="Schematron" en="Schematron" es="Schematron"/>
+<translation name="Search" en="Search" es="Search"/>
+<translation name="SearchParameters" en="Search Parameters" es="Parámetros de búsqueda"/>
+<translation name="SnapshotTable" en="Snapshot Table" es="Tabla snapshot"/>
+<translation name="SnapshotView" en="Snapshot View" es="Vista instantánea"/>
+<translation name="Specification" en="Specification" es="Especificación"/>
+<translation name="StandardsStatus" en="Standards Status" es="Estado de las normas"/>
+<translation name="StatisticsReferences" en="Statistics/References" es="Estadísticas/Referencias"/>
+<translation name="Structure" en="Structure" es="Estructura"/>
+<translation name="Swagger" en="Raw OpenAPI-Swagger Definition file" es="Archivo de definición OpenAPI-Swagger sin procesar"/>
+<translation name="TRANS_HLP" en="This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)." es="Esta página incluye traducciones del idioma original en el que se redactó la guía.  Puede encontrar información sobre estas traducciones e instrucciones sobre cómo hacer comentarios sobre las traducciones [aquí](translationinfo.html)."/>
+<translation name="TTL" en="TTL" es="TTL"/>
+<translation name="TTLTemplate" en="TTL Template" es="Plantilla TTL"/>
+<translation name="TableOfContents" en="Table of Contents" es="Índice"/>
+<translation name="TermParameters" en="Terminology Parameters" es="Terminology Parameters"/>
+<translation name="TestPlans" en="Test Plans" es="Planes de pruebas"/>
+<translation name="TestQuestionnaire" en="Test this Questionnaire" es="Pruebe este cuestionario"/>
+<translation name="TestScripts" en="Test Scripts" es="Guiones de prueba"/>
+<translation name="Testing" en="Testing" es="Pruebas"/>
+<translation name="Title" en="Title" es="Title"/>
+<translation name="Type" en="Type" es="Type"/>
+<translation name="UMLDiagram" en="UML Diagram" es="Diagrama UML"/>
+<translation name="Usage" en="Usage" es="Utilización"/>
+<translation name="UseGrouping" en="Use grouping" es="Use grouping"/>
+<translation name="Version" en="Version" es="Versión"/>
+<translation name="VisitFCP" en="Visit the FHIR Community Process Specification Registry" es="Visite el Registro de Especificación de Procesos de la Comunidad FHIR"/>
+<translation name="WorkInProgress" en="The content in this section has not undergone work group review and may be significantly revised prior to the next ballot." es="El contenido de esta sección no ha sido revisado por el grupo de trabajo y puede ser objeto de importantes modificaciones antes de la próxima votación."/>
+<translation name="XML" en="XML" es="XML"/>
+<translation name="XMLTemplate" en="XML Template" es="Plantilla XML"/>
+</translations>

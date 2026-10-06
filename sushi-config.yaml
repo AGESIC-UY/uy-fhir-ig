@@ -3,7 +3,7 @@ canonical: http://fhir.hcen.gub.uy
 name: UruguayFHIRImplementationGuide
 title: Guía de Implementación FHIR de Uruguay
 description: Base nacional Core y especificaciones de interoperabilidad con HCEN.
-# Identificador de trabajo; pendiente de confirmación institucional.
+# Identificador del paquete para la versión 0.1.0.
 packageId: fhir.uy
 language: es
 # Idioma de publicacion de la plantilla; language identifica el contenido.
@@ -14,9 +14,10 @@ status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: Borrador de desarrollo
+releaseLabel: Versión inicial
 publisher:
   name: AGESIC
+  url: https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital
 
 # Dependencias utilizadas por los perfiles Core.
 dependencies:
@@ -31,7 +32,7 @@ menu:
     Conceptos básicos de FHIR: conceptos-fhir.html
     Cómo leer los perfiles: como-leer.html
     Convenciones y conformidad: conformidad.html
-  Core UY:
+  Core Uruguay:
     Introducción al Core: introduccion.html
     Identificadores y datos comunes: identificadores.html
     Perfiles nacionales: perfiles.html
@@ -39,18 +40,24 @@ menu:
     Terminología: terminologia.html
     Ejemplos: ejemplos.html
   Guía HCEN:
-    Introducción a HCEN: hcen.html
+    Introducción: hcen.html
     Actores y responsabilidades: hcen-actores.html
     Casos de uso: hcen-casos-de-uso.html
     Transacciones: hcen-transacciones.html
-    Perfiles HCEN: hcen-perfiles.html
+    "— Registrar o actualizar pacientes": hcen-iti-104.html
+    "— Publicar documentos": hcen-iti-65.html
+    "— Consultar metadatos": hcen-iti-67.html
+    "— Recuperar documentos": hcen-iti-68.html
+    Perfiles: hcen-perfiles.html
+    Identificadores: hcen-identificadores.html
     Documentos clínicos: hcen-documentos-clinicos.html
     Extensiones: hcen-extensiones.html
     Terminología: hcen-terminologia.html
     Conformidad y capacidades: hcen-conformidad.html
-    Ejemplos de intercambio: hcen-ejemplos.html
+    # Ejemplos de intercambio: hcen-ejemplos.html
   Recursos:
     Índice de artefactos: artifacts.html
+    Glosario: hcen-glosario.html
     Descargas: descargas.html
     Historial de cambios: cambios.html
 
@@ -90,7 +97,7 @@ pages:
       hcen-iti-65.md:
         title: Publicar documentos
       hcen-iti-67.md:
-        title: Consultar metadatos documentales
+        title: Consultar metadatos
       hcen-iti-68.md:
         title: Recuperar documentos
     hcen-perfiles.md:
@@ -107,6 +114,8 @@ pages:
       title: Conformidad y capacidades HCEN
     hcen-ejemplos.md:
       title: Ejemplos de intercambio
+  hcen-glosario.md:
+    title: Glosario HCEN
   descargas.md:
     title: Descargas
   cambios.md:

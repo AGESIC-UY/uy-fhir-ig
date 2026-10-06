@@ -1,20 +1,37 @@
 Instance: EjemploPacienteUY
 InstanceOf: UYPatient
-Title: "Paciente CORE UY con identificador institucional"
-Description: "Ejemplo sintético nacional: namespace institucional ajeno al catálogo restringido HCEN."
-* identifier[mrn].system = "https://example.org/institucion/identificadores/pacientes"
-* identifier[mrn].value = "PACIENTE-SINTETICO-001"
-* identifier[fni].system = "urn:oid:2.16.858.1.032.68909"
-* identifier[fni].value = "ARG-EJEMPLO-001"
-* name.family = "Ejemplo Prueba"
-* name.family.extension[primerApellido].valueString = "Ejemplo"
-* name.family.extension[segundoApellido].valueString = "Prueba"
-* name.given = "Persona"
+Title: "Paciente Uruguayo (CORE UY)"
+Description: "Ejemplo de un paciente genérico en Uruguay"
 * language = #es
 * text.status = #generated
-* text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Persona Ejemplo Prueba</b></p><p>Identificador institucional: PACIENTE-SINTETICO-001. Sistema emisor: https://example.org/institucion/identificadores/pacientes.</p><p>Identificador nacional extranjero de ejemplo: ARG-EJEMPLO-001. Sistema emisor: urn:oid:2.16.858.1.032.68909.</p><p>Nombre de pila: Persona. Primer apellido: Ejemplo. Segundo apellido: Prueba.</p></div>
-"""
+* text.div = """<div xmlns="http://www.w3.org/1999/xhtml" lang="es"><p><b>Paciente Ejemplo</b></p><p>Nombre de pila: Juan Carlos. Apellido: Pérez Rodríguez.</p><p>Sexo asignado al nacer: Masculino.</p><p>Sexo administrativo: Masculino.</p><p>Fecha de nacimiento: 1980-01-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.perez@example.com</p></div>"""
+
+* extension[recordedSexOrGender].extension[value].url = "value"
+* extension[recordedSexOrGender].extension[value].valueCodeableConcept.coding[0].system = "http://hl7.org/fhir/administrative-gender"
+* extension[recordedSexOrGender].extension[value].valueCodeableConcept.coding[0].code = #male
+* extension[recordedSexOrGender].extension[value].valueCodeableConcept.coding[0].display = "Male"
+* extension[recordedSexOrGender].extension[type].url = "type"
+* extension[recordedSexOrGender].extension[type].valueCodeableConcept.coding[0].system = "http://loinc.org"
+* extension[recordedSexOrGender].extension[type].valueCodeableConcept.coding[0].code = #76689-9
+* extension[recordedSexOrGender].extension[type].valueCodeableConcept.coding[0].display = "Sex Assigned At Birth"
+* identifier[mrn].system = "https://example.org/institucion/identificadores/pacientes"
+* identifier[mrn].value = "MRN1234"
+* identifier[ci].system = "urn:oid:2.16.858.2.10000675.68909"
+* identifier[ci].value = "1234567-8"
+* name.family = "Pérez Rodríguez"
+* name.family.extension[primerApellido].valueString = "Pérez"
+* name.family.extension[segundoApellido].valueString = "Rodríguez"
+* name.given[0] = "Juan"
+* name.given[1] = "Carlos"
+* telecom[phone].use = #mobile
+* telecom[phone].value = "+598 99 123 456"
+* telecom[email].use = #home
+* telecom[email].value = "juan.perez@example.com"
+* gender = #male
+* birthDate = "1980-01-01"
+* address[uyAddress].line[0] = "Calle Falsa 1234"
+* address[uyAddress].city = "MONTEVIDEO"
+* address[uyAddress].state = "Montevideo"
 
 Instance: EjemploProfesionalUY
 InstanceOf: UYPractitioner

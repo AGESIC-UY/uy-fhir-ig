@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430" role="img" aria-labelledby="hcen-modelo-title hcen-modelo-desc">
+  <title id="hcen-modelo-title">Modelo federado de HCEN</title>
+  <desc id="hcen-modelo-desc">El prestador de origen conserva los documentos en su repositorio y registra pacientes y metadatos en Plataforma. Otro prestador consulta los metadatos en Plataforma y le solicita un documento. Plataforma obtiene el contenido del repositorio de origen y lo devuelve al solicitante.</desc>
+  <defs>
+    <linearGradient id="hcen-modelo-plataforma" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163959"/>
+      <stop offset="1" stop-color="#0057b8"/>
+    </linearGradient>
+    <marker id="hcen-modelo-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1 8 5 1 9" fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="428" rx="20" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+
+  <!-- Prestador de origen -->
+  <rect x="20" y="30" width="220" height="220" rx="16" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <path d="M38 31 H222" stroke="#f5a623" stroke-width="5" stroke-linecap="round"/>
+  <text x="130" y="68" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700">Prestador de origen</text>
+  <text x="130" y="94" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Crea el documento</text>
+  <rect x="40" y="150" width="180" height="80" rx="10" fill="#eef5fc" stroke="#8ca4bd" stroke-width="1.5"/>
+  <text x="130" y="180" text-anchor="middle" fill="#163959" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700">Repositorio</text>
+  <text x="130" y="204" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Documentos FHIR y CDA</text>
+
+  <!-- Plataforma -->
+  <rect x="330" y="30" width="220" height="220" rx="16" fill="url(#hcen-modelo-plataforma)"/>
+  <text x="440" y="68" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700">Plataforma HCEN</text>
+  <text x="440" y="94" text-anchor="middle" fill="#dbe9f8" font-family="'Segoe UI', Arial, sans-serif" font-size="15">No conserva documentos</text>
+  <rect x="350" y="150" width="180" height="80" rx="10" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-opacity=".6" stroke-width="1.5"/>
+  <text x="440" y="180" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700">Registro</text>
+  <text x="440" y="204" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Pacientes y metadatos</text>
+
+  <!-- Prestador solicitante -->
+  <rect x="640" y="30" width="220" height="220" rx="16" fill="#ffffff" stroke="#0057b8" stroke-width="2.5"/>
+  <path d="M658 31 H842" stroke="#f5a623" stroke-width="5" stroke-linecap="round"/>
+  <text x="750" y="68" text-anchor="middle" fill="#003580" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700">Prestador solicitante</text>
+  <text x="750" y="94" text-anchor="middle" fill="#40566b" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Atiende al paciente</text>
+  <text x="750" y="180" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">Busca y lee documentos</text>
+  <text x="750" y="202" text-anchor="middle" fill="#24374a" font-family="'Segoe UI', Arial, sans-serif" font-size="15">de otros prestadores</text>
+
+  <!-- Flujos -->
+  <path d="M242 122 H326" fill="none" stroke="#0057b8" stroke-width="3" marker-end="url(#hcen-modelo-arrow)"/>
+  <circle cx="285" cy="104" r="13" fill="#0057b8"/>
+  <text x="285" y="109" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700">1</text>
+
+  <path d="M638 122 H554" fill="none" stroke="#0057b8" stroke-width="3" marker-end="url(#hcen-modelo-arrow)"/>
+  <circle cx="595" cy="104" r="13" fill="#0057b8"/>
+  <text x="595" y="109" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700">2</text>
+
+  <path d="M638 190 H554" fill="none" stroke="#0057b8" stroke-width="3" marker-end="url(#hcen-modelo-arrow)"/>
+  <circle cx="595" cy="210" r="13" fill="#0057b8"/>
+  <text x="595" y="215" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700">3</text>
+
+  <path d="M326 190 H242" fill="none" stroke="#0057b8" stroke-width="3" marker-end="url(#hcen-modelo-arrow)"/>
+  <circle cx="285" cy="210" r="13" fill="#0057b8"/>
+  <text x="285" y="215" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700">4</text>
+
+  <!-- Leyenda -->
+  <path d="M40 272 H840" stroke="#d9e3ee" stroke-width="2"/>
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#24374a">
+    <circle cx="52" cy="300" r="11" fill="#0057b8"/>
+    <text x="52" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">1</text>
+    <text x="74" y="305">Registra pacientes y publica los metadatos de sus documentos.</text>
+    <circle cx="52" cy="332" r="11" fill="#0057b8"/>
+    <text x="52" y="337" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">2</text>
+    <text x="74" y="337">Consulta los metadatos de los documentos de un paciente.</text>
+    <circle cx="52" cy="364" r="11" fill="#0057b8"/>
+    <text x="52" y="369" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">3</text>
+    <text x="74" y="369">Solicita a Plataforma el documento elegido.</text>
+    <circle cx="52" cy="396" r="11" fill="#0057b8"/>
+    <text x="52" y="401" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">4</text>
+    <text x="74" y="401">Plataforma lo obtiene del repositorio de origen y lo devuelve al solicitante.</text>
+  </g>
+</svg>

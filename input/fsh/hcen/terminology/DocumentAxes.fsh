@@ -10,7 +10,6 @@ Description: "Tipo genérico de documento según la hoja ValueSets de la especif
 
 * http://loinc.org#34098-4 "ateneo clínico"
 * http://loinc.org#51851-4 "documentación administrativa"
-* http://loinc.org#34133-9 "historia clínica previa escaneada"
 * http://loinc.org#82593-5 "historial de inmunizaciones"
 * http://loinc.org#34750-0 "hoja de anestesia"
 * http://loinc.org#34108-1 "hoja de consulta no urgente"
@@ -22,7 +21,6 @@ Description: "Tipo genérico de documento según la hoja ValueSets de la especif
 * http://loinc.org#11502-2 "informe de laboratorio"
 * http://loinc.org#28570-0 "informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)"
 * http://loinc.org#18842-5 "resumen de egreso de paciente internado"
-* http://loinc.org#18842-6 "resumen de egreso de paciente internado"
 
 ValueSet: VStypeCode
 Id: vs-type-code
@@ -71,12 +69,10 @@ Description: "Tipo detallado de documento según la hoja ValueSets de la especif
 * http://snomed.info/sct#271171000179102 "informe neuropsicológico"
 * http://snomed.info/sct#256691000179104 "resumen de egreso de internación domiciliaria"
 * http://snomed.info/sct#373942005 "resumen de egreso de paciente internado"
-* http://snomed.info/sct#373942006 "resumen de egreso de paciente internado"
 * http://snomed.info/sct#261721000179105 "resumen de egreso en internación de cuidados básicos"
 * http://snomed.info/sct#261751000179101 "resumen de egreso en internación de cuidados intensivos"
 * http://snomed.info/sct#261741000179104 "resumen de egreso en internación de cuidados intermedios"
 * http://snomed.info/sct#261731000179107 "resumen de egreso en internación de cuidados moderados"
-* http://snomed.info/sct#261731000179108 "resumen de egreso en internación de cuidados moderados"
 
 ValueSet: VSpracticeSetting
 Id: vs-practice-setting
@@ -147,7 +143,6 @@ Description: "Servicio médico del documento según la hoja ValueSets de la espe
 * http://snomed.info/sct#830149003 "servicio de neurofisiología clínica"
 * http://snomed.info/sct#788005004 "servicio de neurología"
 * http://snomed.info/sct#310068003 "servicio de neuropediatría"
-* http://snomed.info/sct#1240781000168100 "servicio de nutrición"
 * http://snomed.info/sct#722176000 "servicio de odontología"
 * http://snomed.info/sct#4031000179101 "servicio de odontología pediátrica"
 * http://snomed.info/sct#310160007 "servicio de oftalmología"
