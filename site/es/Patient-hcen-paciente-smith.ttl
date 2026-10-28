@@ -1,0 +1,148 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Patient/hcen-paciente-smith> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-paciente-smith"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/administrative-gender>
+           ] ;
+           fhir:code [ fhir:v "male" ] ;
+           fhir:display [ fhir:v "Male" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:76689-9 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "76689-9" ] ;
+           fhir:display [ fhir:v "Sex assigned at birth" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "MR" ] ;
+         fhir:display [ fhir:v "Medical record number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.858.2.999999.72768.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.2.999999.72768.1>
+     ] ;
+     fhir:value [ fhir:v "1904217" ]
+  ] [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PPN" ] ;
+         fhir:display [ fhir:v "Passport number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.858.1.840.68912"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.1.840.68912>
+     ] ;
+     fhir:value [ fhir:v "AAH480000" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2021-04-15"^^xsd:date ] ;
+       fhir:end [ fhir:v "2031-04-14"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "John Doe Smith" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "John" ] [ fhir:v "Doe" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+598 99 318 000" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+1 555 555 5555" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "john.doe@example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1979-06-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "temp" ] ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "Gaboto 1234" ] ) ;
+     fhir:city [ fhir:v "MONTEVIDEO" ] ;
+     fhir:district [ fhir:v "CORDON" ] ;
+     fhir:state [ fhir:v "Montevideo" ] ;
+     fhir:postalCode [ fhir:v "11200" ] ;
+     fhir:country [ fhir:v "URY" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2021-04-15"^^xsd:date ] ;
+       fhir:end [ fhir:v "2021-04-30"^^xsd:date ]
+     ]
+  ] [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:line ( [ fhir:v "123 Main St" ] ) ;
+     fhir:city [ fhir:v "Anytown" ] ;
+     fhir:state [ fhir:v "Anystate" ] ;
+     fhir:postalCode [ fhir:v "12345" ] ;
+     fhir:country [ fhir:v "USA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

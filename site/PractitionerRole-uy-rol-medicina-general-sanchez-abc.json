@@ -1,0 +1,48 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "uy-rol-medicina-general-sanchez-abc",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p><b>Rol de Dr. Juan Pedro Sánchez Martínez en ABC</b></p><p>Rol: Médico general</p><p>Especialidad: medicina general</p><p>Fecha de inicio: 2018-03-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.sanchez@example.org</p></div>"
+  },
+  "active" : true,
+  "period" : {
+    "start" : "2018-03-01"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/uy-profesional-sanchez",
+    "display" : "Dr. Juan Pedro Sánchez Martínez"
+  },
+  "organization" : {
+    "reference" : "Organization/uy-organizacion-abc",
+    "display" : "ABC"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "59058001",
+      "display" : "médico general"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394802001",
+      "display" : "medicina general"
+    }]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 99 123 456",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "juan.sanchez@example.org",
+    "use" : "work"
+  }]
+}

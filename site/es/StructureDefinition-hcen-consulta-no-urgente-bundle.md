@@ -1,12 +1,20 @@
-# HCEN Documento de Consulta No Urgente - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Documento de Consulta No Urgente - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Documento de Consulta No Urgente 
 
-**Usages:**
+Este Bundle de tipo `document` representa la Hoja de Consulta No Urgente y sus recursos clínicos.
 
-* This Profile is not used by any profiles in this Implementation Guide
+La primera entrada contiene la única Composition del documento, perfilada como [HCENConsultaNoUrgente](StructureDefinition-uy-consulta-no-urgente.md).
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-consulta-no-urgente-bundle)
+El identificador del Bundle coincide en `system` y `value` con el de la Composition y con el `masterIdentifier` de su DocumentReference. El documento debe resolver sus referencias clínicas con sus propios recursos, independientemente del contexto incluido en el envío de publicación.
+
+Es la representación del documento clínico como tal. Es distinto del [Bundle de publicación](StructureDefinition-hcen-provide-document-bundle.md), que incorpora además los metadatos del intercambio.
+
+**Usos:**
+
+* Ejemplos de este perfil: [Bundle/hcen-cnu-medicina-general-bundle](Bundle-hcen-cnu-medicina-general-bundle.md)
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-consulta-no-urgente-bundle)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,79 +22,79 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-** Summary **
+#### Restricciones
 
-Mandatory: 6 elements
- Fixed: 1 element
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
+
+** Resumen **
+
+Obligatorios: 6 elementos
+ Fijos: 1 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [HCEN Consulta No Urgente (http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente)](StructureDefinition-uy-consulta-no-urgente.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Bundle.entry
+* El elemento 1 se divide en slices según el valor de Bundle.entry
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 6 elements
- Fixed: 1 element
+Obligatorios: 6 elementos
+ Fijos: 1 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [HCEN Consulta No Urgente (http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente)](StructureDefinition-uy-consulta-no-urgente.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Bundle.entry
+* El elemento 1 se divide en slices según el valor de Bundle.entry
 
  
 
@@ -101,11 +109,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-consulta-no-
   "resourceType" : "StructureDefinition",
   "id" : "hcen-consulta-no-urgente-bundle",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENConsultaNoUrgenteBundle",
   "title" : "HCEN Documento de Consulta No Urgente",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

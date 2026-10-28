@@ -1,4 +1,4 @@
-# Glosario HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Glosario HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Glosario HCEN
 
@@ -52,13 +52,12 @@ El uso de cada identificador se detalla en [Identificadores HCEN](hcen-identific
 | | |
 | :--- | :--- |
 | IHE | Integrating the Healthcare Enterprise: organización que publica perfiles de integración basados en estándares. |
-| ITI | IT Infrastructure, el dominio de IHE al que pertenecen estos perfiles. Sus transacciones se numeran, por ejemplo ITI-65. |
+| ITI | IT Infrastructure, el dominio de IHE al que pertenecen estos perfiles. Sus transacciones se numeran, por ejemplo ITI-65. Los intercambios locales de esta guía se identifican con el prefijo HCEN. |
 | XDS | Cross-Enterprise Document Sharing: perfil de IHE para compartir documentos mediante un registro de metadatos y repositorios. |
 | MHD | Mobile access to Health Documents: perfil de IHE que ofrece las funciones de XDS mediante FHIR. Referencia para publicar, consultar y recuperar. |
 | PIXm | Patient Identifier Cross-referencing for mobile: perfil de IHE sobre FHIR para identidades de pacientes. Referencia para registrar pacientes. |
 | UnContained | Opción de MHD en la que los recursos referenciados por los metadatos viajan como entradas del Bundle y no como recursos contenidos. |
 | INUS | Índice Nacional de Usuarios de Salud. Su mensajería HL7 v2 es el antecedente del registro de pacientes. |
-| HCEN-PUB-001 y similares | Identificador de un requisito, que permite citarlo desde otras páginas. |
 | MS (Must Support) | Marca de un elemento que el emisor debe enviar cuando conoce el dato. Ver[Must Support](hcen-conformidad.md#must-support). |
 | OperationOutcome | Recurso FHIR con el que se informa el detalle de un error. |
 

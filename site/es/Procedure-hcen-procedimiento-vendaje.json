@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "hcen-procedimiento-vendaje",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "229534005",
+      "display" : "Vendaje de extremidad superior"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "outcome" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "280413001",
+      "display" : "resultado normal"
+    }]
+  },
+  "note" : [{
+    "text" : "Paciente sedado durante el procedimiento"
+  }]
+}

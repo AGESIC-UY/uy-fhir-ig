@@ -1,35 +1,38 @@
-# Documento Escaneado - Guía de Implementación FHIR de Uruguay v0.1.0
+# Documento Escaneado - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: Documento Escaneado 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+Cuando la extensión está presente, `valueBoolean` es obligatorio. El valor `false` indica que el documento no fue generado a partir de un escaneo físico; no equivale a omitir un dato desconocido.
 
-**Usages:**
+**Información de uso**
 
-* Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+**Usos:**
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-scanned-document)
+* Utilizar esta extensión: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+* Ejemplos de esta extensión: [Bundle/hcen-provide-document-bundle-cnu-asse](Bundle-hcen-provide-document-bundle-cnu-asse.md)
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-scanned-document)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument.
+Extensión simple de tipo boolean: Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument.
 
  **Vista diferencial** 
 
@@ -37,13 +40,13 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
  **Vista instantánea** 
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument.
+Extensión simple de tipo boolean: Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument.
 
  
 
@@ -58,11 +61,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-scanned-docum
   "resourceType" : "StructureDefinition",
   "id" : "ext-scanned-document",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-scanned-document",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "ScannedDocument",
   "title" : "Documento Escaneado",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

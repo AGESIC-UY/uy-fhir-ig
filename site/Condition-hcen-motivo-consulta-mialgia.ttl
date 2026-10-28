@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Condition/hcen-motivo-consulta-mialgia> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-motivo-consulta-mialgia"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es-UY"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Motivo de consulta: mialgia.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:7611000179107 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "7611000179107" ] ;
+       fhir:display [ fhir:v "motivo de consulta" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:68962001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "68962001" ] ;
+       fhir:display [ fhir:v "Mialgia" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

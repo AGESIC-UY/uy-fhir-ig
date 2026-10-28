@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/PractitionerRole/uy-rol-medicina-general-sanchez-abc> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "uy-rol-medicina-general-sanchez-abc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2018-03-01"^^xsd:date ]
+  ] ; # 
+  fhir:practitioner [
+     fhir:l <http://fhir.hcen.gub.uy/Practitioner/uy-profesional-sanchez> ;
+     fhir:reference [ fhir:v "Practitioner/uy-profesional-sanchez" ] ;
+     fhir:display [ fhir:v "Dr. Juan Pedro Sánchez Martínez" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/uy-organizacion-abc> ;
+     fhir:reference [ fhir:v "Organization/uy-organizacion-abc" ] ;
+     fhir:display [ fhir:v "ABC" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:59058001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "59058001" ] ;
+       fhir:display [ fhir:v "médico general" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394802001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "394802001" ] ;
+       fhir:display [ fhir:v "medicina general" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+598 99 123 456" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "juan.sanchez@example.org" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,13 +1,18 @@
-# Perfil Rol del Profesional de Salud para HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Perfil Rol del Profesional de Salud para HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: Perfil Rol del Profesional de Salud para HCEN 
 
-**Usages:**
+El rol vincula obligatoriamente un [HCENPractitioner](StructureDefinition-hcen-practitioner.md) mediante `practitioner` y una [HCENOrganization](StructureDefinition-hcen-organization.md) mediante `organization`.
 
-* Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
-* Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md), [HCEN Administración de Medicación](StructureDefinition-hcen-medication-administration.md), [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md), [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+`code`, `specialty` y `location` son Must Support y se informan cuando se conocen, conforme a las [reglas de HCEN](hcen-conformidad.md#must-support). En una publicación, el rol utilizado en la autoría y los recursos del profesional y de la organización deben formar parte del [Bundle de publicación](StructureDefinition-hcen-provide-document-bundle.md).
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-practitioner-role)
+**Usos:**
+
+* Utilizar este perfil: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
+* Referencia a este perfil: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md), [HCEN Administración de Medicación](StructureDefinition-hcen-medication-administration.md), [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md), [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [PractitionerRole/hcen-rol-medicina-general-rodriguez-asse](PractitionerRole-hcen-rol-medicina-general-rodriguez-asse.md) and [PractitionerRole/hcen-rol-traumatologia-sousa](PractitionerRole-hcen-rol-traumatologia-sousa.md)
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-practitioner-role)
 
 ### Vistas formales del contenido del perfil
 
@@ -15,39 +20,39 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [UYPractitionerRole](StructureDefinition-uy-practitioner-role.md) .
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UYPractitionerRole](StructureDefinition-uy-practitioner-role.md) .
 
-** Summary **
+#### Bindings terminológicos
 
-Mandatory: 2 elements
- Must-Support: 3 elements
+#### Restricciones
 
-**Structures**
+Esta estructura se deriva de [UYPractitionerRole](StructureDefinition-uy-practitioner-role.md) .
 
-This structure refers to these other structures:
+** Resumen **
+
+Obligatorios: 2 elementos
+ Must-Support: 3 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner)](StructureDefinition-hcen-practitioner.md)
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
@@ -55,20 +60,20 @@ Esta estructura se deriva de [UYPractitionerRole](StructureDefinition-uy-practit
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UYPractitionerRole](StructureDefinition-uy-practitioner-role.md) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 2 elements
- Must-Support: 3 elements
+Obligatorios: 2 elementos
+ Must-Support: 3 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner)](StructureDefinition-hcen-practitioner.md)
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
@@ -86,11 +91,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
   "resourceType" : "StructureDefinition",
   "id" : "hcen-practitioner-role",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENPractitionerRole",
   "title" : "Perfil Rol del Profesional de Salud para HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -102,6 +107,12 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
   "description" : "Roles y organizaciones específicos para los cuales el profesional está autorizado a proveer servicios.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "HCENPractitionerRoleToCDA",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)",
+    "comment" : "Mapeo a HL7 CDA R2. El rol corresponde al autor asignado del documento: vincula a la persona (assignedPerson) con la organización a la que representa (representedOrganization)."
+  },
+  {
     "identity" : "v2",
     "uri" : "http://hl7.org/v2",
     "name" : "HL7 v2 Mapping"
@@ -130,7 +141,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
     "element" : [{
       "id" : "PractitionerRole",
       "path" : "PractitionerRole",
-      "short" : "Perfil Rol del Profesional de Salud para HCEN"
+      "short" : "Perfil Rol del Profesional de Salud para HCEN",
+      "mapping" : [{
+        "identity" : "HCENPractitionerRoleToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor"
+      }]
     },
     {
       "id" : "PractitionerRole.practitioner",
@@ -139,6 +154,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENPractitionerRoleToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor/assignedPerson",
+        "comment" : "Referencia al HCENPractitioner construido con assignedAuthor/id y assignedPerson."
       }]
     },
     {
@@ -148,6 +168,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-practitioner
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
+      }],
+      "mapping" : [{
+        "identity" : "HCENPractitionerRoleToCDA",
+        "map" : "ClinicalDocument/author/assignedAuthor/representedOrganization",
+        "comment" : "Referencia a la HCENOrganization construida con representedOrganization."
       }]
     },
     {

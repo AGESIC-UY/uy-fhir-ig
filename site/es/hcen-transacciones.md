@@ -1,23 +1,21 @@
-# Transacciones - Guía de Implementación FHIR de Uruguay v0.1.0
+# Transacciones - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Transacciones
 
-Las transacciones describen las reglas del intercambio entre el prestador y Plataforma. Los códigos ITI identifican la referencia técnica IHE; los requisitos locales y las capacidades pendientes se encuentran en las páginas HCEN enlazadas aquí.
+Las transacciones describen el intercambio entre el prestador y Plataforma. Cada una tiene un nombre funcional y un código HCEN ITI, que conserva la numeración del intercambio IHE tomado como referencia.
 
 | | | |
 | :--- | :--- | :--- |
-| [Registrar o actualizar pacientes](hcen-iti-104.md) | PIXm ITI-104 | Patient y actualización condicional por identificador |
-| [Publicar documentos](hcen-iti-65.md) | MHD ITI-65 | Bundle de publicación con SubmissionSet, DocumentReference, Bundle documental y contexto |
-| [Consultar metadatos](hcen-iti-67.md) | MHD ITI-67 | Búsqueda de DocumentReference y Bundle searchset |
-| [Recuperar documentos](hcen-iti-68.md) | MHD ITI-68 | Solicitud de una representación y respuesta FHIR |
+| HCEN ITI-104 | [Registrar o actualizar pacientes](hcen-iti-104.md) | PUT condicional de Patient por dominio y valor MRN. |
+| HCEN ITI-65 | [Publicar documentos](hcen-iti-65.md) | POST de un Bundle con metadatos, documentos FHIR y contexto. |
+| HCEN ITI-67 | [Consultar metadatos](hcen-iti-67.md) | POST a`DocumentReference/_search`con los parámetros de búsqueda. |
+| HCEN ITI-68 | [Recuperar documentos](hcen-iti-68.md) | GET a la URL recibida, con`Accept`para seleccionar FHIR o CDA. |
 
-### Cómo se nombran las transacciones
-
-Cada transacción se identifica por su nombre funcional y, cuando corresponde, por la referencia IHE. «Publicar documentos» utiliza MHD ITI-65 como referencia de diseño; esa referencia no declara conformidad integral con IHE. Las siglas se explican en el [Glosario HCEN](hcen-glosario.md).
+Las referencias de diseño son PIXm ITI-104 para pacientes y MHD ITI-65, ITI-67 e ITI-68 para documentos. El uso de estos códigos no declara conformidad integral con IHE. La [introducción a HCEN](hcen.md#relación-con-ihe) explica esa relación.
 
 ### Cómo interpretar las solicitudes
 
-Las rutas que contienen `[base]`, `[url-fhir]` o `[url-cda]` son plantillas. Los dominios `example.org` no son servicios HCEN. Las rutas concretas, los controles de acceso y las capacidades operativas deben acordarse con Salud Digital.
+Las rutas con `[base]`, `[base-publicacion]` o `[URL-recibida-en-ITI-67]` representan las direcciones utilizadas por cada interacción. Los dominios `example.org` son ilustrativos. Las direcciones de los servicios y los controles de acceso deben acordarse con Salud Digital.
 
-Las páginas separan requisitos del borrador, decisiones propuestas y pendientes. No acreditan que los servicios estén implementados o disponibles. Las obligaciones de datos se consultan en los perfiles; las de comportamiento se verifican en cada transacción y en [Conformidad](hcen-conformidad.md).
+Cada página describe actores, solicitud, procesamiento, respuesta y errores. Los perfiles explican cómo completar los recursos, las obligaciones comunes y el alcance de las verificaciones están en [Conformidad HCEN](hcen-conformidad.md). El [recorrido de ejemplos](hcen-ejemplos.md#recorrido-intercambio) enlaza los recursos disponibles para los intercambios.
 

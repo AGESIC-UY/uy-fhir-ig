@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-vendaje> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-procedimiento-vendaje"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:229534005 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "229534005" ] ;
+       fhir:display [ fhir:v "Vendaje de extremidad superior" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] ; # 
+  fhir:outcome [
+     fhir:coding ( [
+       a sct:280413001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "280413001" ] ;
+       fhir:display [ fhir:v "resultado normal" ]
+     ] )
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Paciente sedado durante el procedimiento" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,336 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Patient/uy-paciente-perez-completo> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "uy-paciente-perez-completo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:446151000124109 ;
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:version [ fhir:v "http://snomed.info/sct/900000000000207008/version/20250201" ] ;
+           fhir:code [ fhir:v "446151000124109" ] ;
+           fhir:display [ fhir:v "Identifies as male gender" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-genderIdentity>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA29519-8 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "LA29519-8" ] ;
+           fhir:display [ fhir:v "she/her/her/hers/herself" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-pronouns"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-pronouns>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://hl7.org/fhir/administrative-gender"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/administrative-gender>
+           ] ;
+           fhir:code [ fhir:v "male" ] ;
+           fhir:display [ fhir:v "Male" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:76689-9 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "76689-9" ] ;
+           fhir:display [ fhir:v "Sex assigned at birth" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "MR" ] ;
+         fhir:display [ fhir:v "Medical record number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://example.org/institucion/identificadores/pacientes"^^xsd:anyURI ;
+       fhir:l <https://example.org/institucion/identificadores/pacientes>
+     ] ;
+     fhir:value [ fhir:v "MRN1234" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "NI" ] ;
+         fhir:display [ fhir:v "National unique individual identifier" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.858.1.858.68909"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.1.858.68909>
+     ] ;
+     fhir:value [ fhir:v "12345678" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PPN" ] ;
+         fhir:display [ fhir:v "Passport number" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.858.2.858.68912"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.858.2.858.68912>
+     ] ;
+     fhir:value [ fhir:v "D1234567" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-01"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Juan Carlos Pérez Rodríguez II" ] ;
+     fhir:family [
+       fhir:v "Pérez Rodríguez" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido"^^xsd:anyURI ;
+           fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Pérez"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido"^^xsd:anyURI ;
+           fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Rodríguez"
+         ]
+       ] )
+     ] ;
+     fhir:given ( [ fhir:v "Juan" ] [ fhir:v "Carlos" ] ) ;
+     fhir:suffix ( [ fhir:v "II" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+598 99 123 456" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2018"^^xsd:gYear ]
+     ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "juan.perez@example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1980-01-01"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:Boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:text [ fhir:v "Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY" ] ;
+     fhir:line ( [ fhir:v "Calle Falsa 1234" ] ) ;
+     fhir:city [ fhir:v "MONTEVIDEO" ] ;
+     fhir:district [ fhir:v "CIUDAD VIEJA" ] ;
+     fhir:state [ fhir:v "Montevideo" ] ;
+     fhir:postalCode [ fhir:v "11000" ] ;
+     fhir:country [ fhir:v "URY" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2015-01-01"^^xsd:date ]
+     ]
+  ] [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "physical" ] ;
+     fhir:text [ fhir:v "Av. Italia 5678, POCITOS, MONTEVIDEO, Montevideo, URY" ] ;
+     fhir:line ( [ fhir:v "Av. Italia 5678" ] ) ;
+     fhir:city [ fhir:v "MONTEVIDEO" ] ;
+     fhir:district [ fhir:v "POCITOS" ] ;
+     fhir:state [ fhir:v "Montevideo" ] ;
+     fhir:postalCode [ fhir:v "11300" ] ;
+     fhir:country [ fhir:v "URY" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-01"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-MaritalStatus>
+       ] ;
+       fhir:code [ fhir:v "M" ] ;
+       fhir:display [ fhir:v "Married" ]
+     ] )
+  ] ; # 
+  fhir:multipleBirth [
+     a fhir:Boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0131>
+         ] ;
+         fhir:code [ fhir:v "C" ] ;
+         fhir:display [ fhir:v "Emergency Contact" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:text [ fhir:v "María Fernández González" ] ;
+       fhir:family [
+         fhir:v "Fernández González" ;
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido"^^xsd:anyURI ;
+             fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido>
+           ] ;
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Fernández"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido"^^xsd:anyURI ;
+             fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido>
+           ] ;
+           fhir:value [
+             a fhir:String ;
+             fhir:v "González"
+           ]
+         ] )
+       ] ;
+       fhir:given ( [ fhir:v "María" ] )
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+598 99 654 321" ] ;
+       fhir:use [ fhir:v "mobile" ]
+     ] ) ;
+     fhir:address [
+       fhir:use [ fhir:v "home" ] ;
+       fhir:type [ fhir:v "physical" ] ;
+       fhir:text [ fhir:v "Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY" ] ;
+       fhir:line ( [ fhir:v "Calle Falsa 1234" ] ) ;
+       fhir:city [ fhir:v "MONTEVIDEO" ] ;
+       fhir:district [ fhir:v "CIUDAD VIEJA" ] ;
+       fhir:state [ fhir:v "Montevideo" ] ;
+       fhir:postalCode [ fhir:v "11000" ] ;
+       fhir:country [ fhir:v "URY" ]
+     ] ;
+     fhir:gender [ fhir:v "female" ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ;
+           fhir:l <urn:ietf:bcp:47>
+         ] ;
+         fhir:code [ fhir:v "es-UY" ] ;
+         fhir:display [ fhir:v "Español (Uruguay)" ]
+       ] )
+     ] ;
+     fhir:preferred [ fhir:v true ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:l <http://fhir.hcen.gub.uy/Practitioner/uy-profesional-sanchez-completo> ;
+     fhir:reference [ fhir:v "Practitioner/uy-profesional-sanchez-completo" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/uy-organizacion-abc-completa> ;
+     fhir:reference [ fhir:v "Organization/uy-organizacion-abc-completa" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:l <http://fhir.hcen.gub.uy/Patient/uy-paciente-perez> ;
+       fhir:reference [ fhir:v "Patient/uy-paciente-perez" ]
+     ] ;
+     fhir:type [ fhir:v "seealso" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

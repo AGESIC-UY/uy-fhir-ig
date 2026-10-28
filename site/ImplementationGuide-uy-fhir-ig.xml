@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig"/>
-  <version value="0.1.0"/>
+  <version value="0.2.0"/>
   <name value="UruguayFHIRImplementationGuide"/>
   <title value="Guía de Implementación FHIR de Uruguay"/>
   <status value="draft"/>
-  <date value="2026-10-06T01:23:13-03:00"/>
+  <date value="2026-10-28T18:02:56-03:00"/>
   <publisher value="AGESIC"/>
   <contact>
     <name value="AGESIC"/>
@@ -54,7 +54,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="Versión inicial"/>
+        <valueString value="Borrador para pruebas de implementación"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -273,7 +273,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="Versión inicial"/>
+        <valueString value="Borrador para pruebas de implementación"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -635,6 +635,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/vs-sexo-biologico"/>
+      </reference>
+      <name value="Conjunto de Valores Sexo Biológico"/>
+      <description value="Sexo biológico: listado de códigos."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/vs-sitio-administracion"/>
       </reference>
       <name value="Conjunto de Valores Sitio de Administración (borrador)"/>
@@ -673,6 +684,16 @@
       <name value="Conjunto de Valores Vía de Administración (borrador)"/>
       <description value="PENDIENTE: subconjunto de códigos para vías de administración farmacológica (oral, intravenosa, intramuscular, subcutánea, inhalatoria, etc.). Contiene un código de ejemplo mientras se define el listado oficial."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/uy-consulta-no-urgente-traumatologia"/>
+      </reference>
+      <name value="Consulta no urgente"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -738,6 +759,17 @@
       </reference>
       <name value="Documento Escaneado"/>
       <description value="Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/uy-dni-identifier"/>
+      </reference>
+      <name value="Documento Nacional de Identidad"/>
+      <description value="Identificación nacional de la persona, asociada al país que la emite."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -814,8 +846,268 @@
         <reference value="StructureDefinition/hcen-provide-document-bundle"/>
       </reference>
       <name value="Envío para publicación documental HCEN"/>
-      <description value="Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo."/>
+      <description value="Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. Plataforma procesa y valida el envío como fachada FHIR y registra metadatos en XDS, sin persistir recursos FHIR."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/hcen-binario-cda-consulta-no-urgente"/>
+      </reference>
+      <name value="example-hcen-binario-cda-consulta-no-urgente"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/hcen-cnu-medicina-general-bundle"/>
+      </reference>
+      <name value="example-hcen-cnu-medicina-general-bundle"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/hcen-diagnostico-desgarro-muscular"/>
+      </reference>
+      <name value="example-hcen-diagnostico-desgarro-muscular"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/hcen-encuentro-traumatologia"/>
+      </reference>
+      <name value="example-hcen-encuentro-traumatologia"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/hcen-med-admin-paracetamol"/>
+      </reference>
+      <name value="example-hcen-med-admin-paracetamol"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/hcen-med-req-paracetamol"/>
+      </reference>
+      <name value="example-hcen-med-req-paracetamol"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/hcen-motivo-consulta-mialgia"/>
+      </reference>
+      <name value="example-hcen-motivo-consulta-mialgia"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/hcen-organizacion-asse"/>
+      </reference>
+      <name value="example-hcen-organizacion-asse"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/hcen-paciente-gonzalez"/>
+      </reference>
+      <name value="example-hcen-paciente-gonzalez"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/hcen-paciente-smith"/>
+      </reference>
+      <name value="example-hcen-paciente-smith"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/hcen-practitioner-sousa"/>
+      </reference>
+      <name value="example-hcen-practitioner-sousa"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/hcen-procedimiento-oxigeno"/>
+      </reference>
+      <name value="example-hcen-procedimiento-oxigeno"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/hcen-procedimiento-vendaje"/>
+      </reference>
+      <name value="example-hcen-procedimiento-vendaje"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/hcen-profesional-rodriguez"/>
+      </reference>
+      <name value="example-hcen-profesional-rodriguez"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/hcen-provide-document-bundle-cnu-asse"/>
+      </reference>
+      <name value="example-hcen-provide-document-bundle-cnu-asse"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/hcen-rol-medicina-general-rodriguez-asse"/>
+      </reference>
+      <name value="example-hcen-rol-medicina-general-rodriguez-asse"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/hcen-rol-traumatologia-sousa"/>
+      </reference>
+      <name value="example-hcen-rol-traumatologia-sousa"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/hcen-servicio-req-reposo"/>
+      </reference>
+      <name value="example-hcen-servicio-req-reposo"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/hcen-servicio-req-seguimiento"/>
+      </reference>
+      <name value="example-hcen-servicio-req-seguimiento"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/uy-organizacion-abc"/>
+      </reference>
+      <name value="example-uy-organizacion-abc"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/uy-organizacion-abc-completa"/>
+      </reference>
+      <name value="example-uy-organizacion-abc-completa"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/uy-paciente-perez"/>
+      </reference>
+      <name value="example-uy-paciente-perez"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/uy-paciente-perez-completo"/>
+      </reference>
+      <name value="example-uy-paciente-perez-completo"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/uy-profesional-sanchez"/>
+      </reference>
+      <name value="example-uy-profesional-sanchez"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/uy-profesional-sanchez-completo"/>
+      </reference>
+      <name value="example-uy-profesional-sanchez-completo"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/uy-rol-medicina-general-sanchez-abc"/>
+      </reference>
+      <name value="example-uy-rol-medicina-general-sanchez-abc"/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -957,7 +1249,7 @@
         <reference value="StructureDefinition/ext-binary-resource-id"/>
       </reference>
       <name value="ID del Recurso Binario"/>
-      <description value="Referencia al recurso Binary que contiene la representación CDA del documento clínico."/>
+      <description value="Referencia al recurso FHIR Binary del prestador que contiene la representación CDA XML del documento clínico. En HCEN ITI-65 se informa la URL HTTP(S) absoluta original de ese recurso. La recuperación del CDA se realiza mediante la URL devuelta por HCEN ITI-67, según las reglas de HCEN ITI-68."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -973,13 +1265,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ext-identidad-de-genero"/>
+      </reference>
+      <name value="Identidad de género"/>
+      <description value="Extensión para representar la identidad de género de una persona. Hereda de la extensión de HL7 individual-genderIdentity."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:complex-type"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/uy-ci-identifier"/>
+        <reference value="StructureDefinition/hcen-ci-identifier"/>
       </reference>
       <name value="Identificador Cédula de Identidad"/>
-      <description value="Cédula de identidad del paciente."/>
+      <description value="Cédula de identidad uruguaya utilizada para identificar pacientes y profesionales en HCEN, con system fijo urn:oid:2.16.858.2.10000675.68909."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -991,6 +1294,17 @@
       </reference>
       <name value="Identificador de Organización"/>
       <description value="Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/hcen-org-identifier"/>
+      </reference>
+      <name value="Identificador de Organización para HCEN"/>
+      <description value="Identificador URI OID de una organización uruguaya para los intercambios HCEN."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1094,17 +1408,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/EjemploOrganizacionUY"/>
-      </reference>
-      <name value="Organización CORE UY sin identificador HCEN"/>
-      <description value="Ejemplo sintético de organización nacional identificada por su nombre."/>
-      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -1119,11 +1422,11 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/EjemploPacienteUY"/>
+        <reference value="Patient/hcen-paciente-dni-ci"/>
       </reference>
-      <name value="Paciente Uruguayo (CORE UY)"/>
-      <description value="Ejemplo de un paciente genérico en Uruguay"/>
-      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"/>
+      <name value="Paciente con DNI nacional y CI HCEN"/>
+      <description value="Paciente ficticio con MRN, DNI nacional y CI HCEN en identificadores independientes."/>
+      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1248,14 +1551,25 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
+        <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="Practitioner/EjemploProfesionalUY"/>
+        <reference value="StructureDefinition/ext-pronombres"/>
       </reference>
-      <name value="Profesional CORE UY sin cédula informada"/>
-      <description value="Ejemplo sintético que muestra que la CI obligatoria pertenece al perfil HCEN."/>
-      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"/>
+      <name value="Pronombres"/>
+      <description value="Extensión para representar los pronombres de una persona. Hereda de la extensión de HL7 individual-pronouns."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-pronombres-uy"/>
+      </reference>
+      <name value="Pronombres personales en Uruguay"/>
+      <description value="Pronombres personales: listado de códigos."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1270,17 +1584,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="PractitionerRole"/>
-      </extension>
-      <reference>
-        <reference value="PractitionerRole/EjemploRolProfesionalUY"/>
-      </reference>
-      <name value="Rol profesional CORE UY"/>
-      <description value="Ejemplo sintético de rol que referencia los perfiles nacionales."/>
-      <exampleCanonical value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -1288,6 +1591,17 @@
       </reference>
       <name value="Segundo Apellido"/>
       <description value="Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ext-sexo-al-nacer"/>
+      </reference>
+      <name value="Sexo al nacer"/>
+      <description value="Extensión para representar el sexo asignado al nacer de una persona. Hereda de la extensión de HL7 individual-recordedSexOrGender."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1464,7 +1778,7 @@
               <valueUrl value="hcen-iti-104.html"/>
             </extension>
             <nameUrl value="hcen-iti-104.html"/>
-            <title value="Registrar o actualizar pacientes"/>
+            <title value="Registrar o actualizar pacientes — HCEN ITI-104"/>
             <generation value="markdown"/>
           </page>
           <page>
@@ -1472,7 +1786,7 @@
               <valueUrl value="hcen-iti-65.html"/>
             </extension>
             <nameUrl value="hcen-iti-65.html"/>
-            <title value="Publicar documentos"/>
+            <title value="Publicar documentos — HCEN ITI-65"/>
             <generation value="markdown"/>
           </page>
           <page>
@@ -1480,7 +1794,7 @@
               <valueUrl value="hcen-iti-67.html"/>
             </extension>
             <nameUrl value="hcen-iti-67.html"/>
-            <title value="Consultar metadatos"/>
+            <title value="Consultar metadatos — HCEN ITI-67"/>
             <generation value="markdown"/>
           </page>
           <page>
@@ -1488,7 +1802,7 @@
               <valueUrl value="hcen-iti-68.html"/>
             </extension>
             <nameUrl value="hcen-iti-68.html"/>
-            <title value="Recuperar documentos"/>
+            <title value="Recuperar documentos — HCEN ITI-68"/>
             <generation value="markdown"/>
           </page>
         </page>

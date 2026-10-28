@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "hcen-servicio-req-seguimiento",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "390906007",
+      "display" : "Follow-up encounter"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "occurrencePeriod" : {
+    "start" : "2019-09-02"
+  },
+  "patientInstruction" : "Revisión a los 10 días. Referencia al alta: consulta de atención primaria."
+}

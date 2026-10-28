@@ -18,11 +18,11 @@
      fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-eno"^^xsd:anyURI ;
      fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-eno>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PractitionerEno"] ; # 
   fhir:title [ fhir:v "Enfermedad de Notificación Obligatoria (ENO)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-28T18:02:56-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "AGESIC" ] ;

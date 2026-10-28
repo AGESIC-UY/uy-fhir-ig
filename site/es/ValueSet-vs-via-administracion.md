@@ -1,13 +1,13 @@
-# Conjunto de Valores Vía de Administración (borrador) - Guía de Implementación FHIR de Uruguay v0.1.0
+# Conjunto de Valores Vía de Administración (borrador) - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Conjunto de Valores Vía de Administración (borrador) 
 
- **References** 
+ **Referencias** 
 
 * [HCEN Dosificación](StructureDefinition-hcen-dosage.md)
 * [HCEN Administración de Medicación](StructureDefinition-hcen-medication-administration.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
@@ -26,11 +26,11 @@
   "resourceType" : "ValueSet",
   "id" : "vs-via-administracion",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSViaAdministracion",
   "title" : "Conjunto de Valores Vía de Administración (borrador)",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

@@ -1,4 +1,4 @@
-# Propósito y alcance - Guía de Implementación FHIR de Uruguay v0.1.0
+# Propósito y alcance - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Propósito y alcance
 

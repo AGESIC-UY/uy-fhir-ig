@@ -1,12 +1,12 @@
-# Formato del documento FHIR HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Formato del documento FHIR HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Formato del documento FHIR HCEN (Experimental) 
 
- **References** 
+ **Referencias** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
@@ -25,12 +25,12 @@
   "resourceType" : "ValueSet",
   "id" : "vs-format-code",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "FormatCode",
   "title" : "Formato del documento FHIR HCEN",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

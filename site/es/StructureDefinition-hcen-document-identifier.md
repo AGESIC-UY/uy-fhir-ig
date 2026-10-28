@@ -1,12 +1,12 @@
-# Identificador documental HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Identificador documental HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil del tipo de datos: Identificador documental HCEN 
 
-**Usages:**
+**Usos:**
 
-* Use this DataType Profile: [HCEN Documento de Consulta No Urgente](StructureDefinition-hcen-consulta-no-urgente-bundle.md), [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Utilizar este perfil de tipo de datos: [HCEN Documento de Consulta No Urgente](StructureDefinition-hcen-consulta-no-urgente-bundle.md), [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-identifier)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-identifier)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,51 +14,51 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UniqueIdIdentifier.html) .
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UniqueIdIdentifier.html) .
 
-** Summary **
+#### Restricciones
 
-Fixed: 1 element
+#### Bindings terminológicos
+
+#### Restricciones
+
+Esta estructura se deriva de [UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UniqueIdIdentifier.html) .
+
+** Resumen **
+
+Fijos: 1 elementos
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UniqueIdIdentifier.html) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UniqueIdIdentifier.html) .
 
-** Summary **
+** Resumen **
 
-Fixed: 1 element
+Fijos: 1 elementos
 
  
 
@@ -73,11 +73,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ide
   "resourceType" : "StructureDefinition",
   "id" : "hcen-document-identifier",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENDocumentIdentifier",
   "title" : "Identificador documental HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

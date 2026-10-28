@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Historial de cambios - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Historial de cambios - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Historial de cambios</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><b>Historial de cambios</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Historial de cambios</h2>
   
 
@@ -432,23 +435,94 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#020---28102026" id="markdown-toc-020---28102026">0.2.0 - 28/10/2026</a>    <ul>
+      <li><a href="#traducciones-de-la-guía" id="markdown-toc-traducciones-de-la-guía">Traducciones de la guía</a></li>
+      <li><a href="#identificación-de-personas-y-organizaciones" id="markdown-toc-identificación-de-personas-y-organizaciones">Identificación de personas y organizaciones</a></li>
+      <li><a href="#datos-del-paciente" id="markdown-toc-datos-del-paciente">Datos del paciente</a></li>
+      <li><a href="#consulta-no-urgente-y-mapeos-cda" id="markdown-toc-consulta-no-urgente-y-mapeos-cda">Consulta No Urgente y mapeos CDA</a></li>
+      <li><a href="#metadatos-y-publicación" id="markdown-toc-metadatos-y-publicación">Metadatos y publicación</a></li>
+      <li><a href="#ejemplos-y-documentación-del-intercambio" id="markdown-toc-ejemplos-y-documentación-del-intercambio">Ejemplos y documentación del intercambio</a></li>
+    </ul>
+  </li>
+  <li><a href="#011---091026" id="markdown-toc-011---091026">0.1.1 - 09/10/26</a></li>
+  <li><a href="#010---061026" id="markdown-toc-010---061026">0.1.0 - 06/10/26</a></li>
+</ul>
+
 </div>
+<h2 id="020---28102026">0.2.0 - 28/10/2026</h2>
+
+<p>Esta versión actualiza la identificación de personas y organizaciones, los datos del paciente y la publicación de documentos. Se mantiene FHIR R4 (<code class="language-plaintext highlighter-rouge">4.0.1</code>), el paquete <code class="language-plaintext highlighter-rouge">fhir.uy</code>, la base canónica y el estado de borrador.</p>
+
+<h3 id="traducciones-de-la-guía">Traducciones de la guía</h3>
+
+<ul>
+  <li>Se agregan traducciones a la mayoría de los elementos de la guía y se eliminan las traducciones dentro de los recursos, así se puede tener una vista diferencial más limpia.</li>
+</ul>
+
+<h3 id="identificación-de-personas-y-organizaciones">Identificación de personas y organizaciones</h3>
+
+<ul>
+  <li>Se sustituye <code class="language-plaintext highlighter-rouge">UYCIIdentifier</code> del Core por <a href="StructureDefinition-uy-dni-identifier.html">UYDNIIdentifier</a>. El DNI utiliza el dominio <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.1.[CodPais].68909</code>, con el código numérico del país sin ceros iniciales. La nueva invariante <code class="language-plaintext highlighter-rouge">uy-dni-oid-country</code> comprueba su formato, no la asignación del código de país.</li>
+  <li><code class="language-plaintext highlighter-rouge">UYPatient</code> y <code class="language-plaintext highlighter-rouge">UYPractitioner</code> utilizan el slice <code class="language-plaintext highlighter-rouge">identifier[dni]</code> en lugar del anterior <code class="language-plaintext highlighter-rouge">identifier[ci]</code> del Core. El DNI sigue siendo opcional: repetible en pacientes y con un máximo de uno en profesionales. Ambos perfiles pasan a discriminar los identificadores por perfil, con slicing abierto. Las implementaciones deben distinguirlos por su contenido y no únicamente por <code class="language-plaintext highlighter-rouge">type</code> o <code class="language-plaintext highlighter-rouge">system</code>.</li>
+  <li>Se incorpora <a href="StructureDefinition-hcen-ci-identifier.html">HCENCIIdentifier</a> para la CI uruguaya específica de HCEN, con <code class="language-plaintext highlighter-rouge">system = urn:oid:2.16.858.2.10000675.68909</code>. <code class="language-plaintext highlighter-rouge">HCENPatient</code> conserva la CI opcional y Must Support (<code class="language-plaintext highlighter-rouge">0..1 MS</code>), <code class="language-plaintext highlighter-rouge">HCENPractitioner</code> la exige (<code class="language-plaintext highlighter-rouge">1..1</code>). El DNI heredado y la CI HCEN pueden coexistir, pero no se sustituyen entre sí.</li>
+  <li>Se incorpora <a href="StructureDefinition-hcen-org-identifier.html">HCENOrgIdentifier</a>, utilizado por <code class="language-plaintext highlighter-rouge">HCENOrganization.identifier[organizationId]</code> y por <code class="language-plaintext highlighter-rouge">HCENSubmissionSet.extension[sourceId].valueIdentifier</code>. Exige <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y el OID completo en <code class="language-plaintext highlighter-rouge">value</code>, bajo las ramas <code class="language-plaintext highlighter-rouge">2.16.858.0.0</code>, <code class="language-plaintext highlighter-rouge">.0.1</code> o <code class="language-plaintext highlighter-rouge">.0.2</code>. La nueva invariante <code class="language-plaintext highlighter-rouge">hcen-org-oid</code> verifica la sintaxis, sin acreditar la asignación o autorización institucional.</li>
+  <li>Cuando se informa <code class="language-plaintext highlighter-rouge">assigner</code>, los identificadores HCEN de MRN, CI y organización referencian <code class="language-plaintext highlighter-rouge">HCENOrganization</code>. En particular, <code class="language-plaintext highlighter-rouge">HCENMRNIdentifier.assigner</code> se restringe desde <code class="language-plaintext highlighter-rouge">UYOrganization</code> al perfil HCEN.</li>
+</ul>
+
+<h3 id="datos-del-paciente">Datos del paciente</h3>
+
+<ul>
+  <li>Se incorporan las extensiones locales <a href="StructureDefinition-ext-identidad-de-genero.html">Identidad de género</a>, <a href="StructureDefinition-ext-pronombres.html">Pronombres</a> y <a href="StructureDefinition-ext-sexo-al-nacer.html">Sexo al nacer</a>, derivadas de las extensiones HL7 correspondientes. <code class="language-plaintext highlighter-rouge">UYPatient</code> utiliza estas canónicas locales en los slices <code class="language-plaintext highlighter-rouge">identidadDeGenero</code>, <code class="language-plaintext highlighter-rouge">pronombres</code> y <code class="language-plaintext highlighter-rouge">sexoAlNacer</code>, en lugar de las referencias directas anteriores a HL7.</li>
+  <li>Pronombres y sexo al nacer incorporan los conjuntos <a href="ValueSet-vs-pronombres-uy.html">VSPronombresUY</a> y <a href="ValueSet-vs-sexo-biologico.html">VSSexoBiologico</a>, con vinculación <code class="language-plaintext highlighter-rouge">extensible</code>. La extensión de sexo al nacer exige el componente <code class="language-plaintext highlighter-rouge">type</code> y el patrón LOINC <code class="language-plaintext highlighter-rouge">76689-9</code> («Sex assigned at birth»). <code class="language-plaintext highlighter-rouge">HCENPatient</code> conserva <code class="language-plaintext highlighter-rouge">sexoAlNacer</code> como <code class="language-plaintext highlighter-rouge">0..1 MS</code>.</li>
+</ul>
+
+<h3 id="consulta-no-urgente-y-mapeos-cda">Consulta No Urgente y mapeos CDA</h3>
+
+<ul>
+  <li><a href="StructureDefinition-uy-consulta-no-urgente.html">HCENConsultaNoUrgente</a> exige <code class="language-plaintext highlighter-rouge">encounter 1..1</code>, anteriormente era opcional con Must Support. Se retira la marca MS de ese elemento y de <code class="language-plaintext highlighter-rouge">text</code> en las ocho secciones clínicas perfiladas.</li>
+  <li><a href="StructureDefinition-hcen-encounter.html">HCENEncounter</a> exige al menos un participante, con <code class="language-plaintext highlighter-rouge">participant.period</code> y <code class="language-plaintext highlighter-rouge">participant.period.start</code> obligatorios. Las instancias deben aportar la fecha y hora de participación que el mapeo utiliza para la firma del profesional en CDA.</li>
+  <li>Se agregan mapeos CDA para <code class="language-plaintext highlighter-rouge">HCENPractitioner</code>, <code class="language-plaintext highlighter-rouge">HCENPractitionerRole</code> y <code class="language-plaintext highlighter-rouge">HCENOrganization</code>, incluidos los identificadores y la organización representada. Se incorpora el mapeo de <code class="language-plaintext highlighter-rouge">HCENServiceRequest.patientInstruction</code>.</li>
+  <li>Se retira el mapeo de <code class="language-plaintext highlighter-rouge">category.coding.display</code> a <code class="language-plaintext highlighter-rouge">@displayName</code> en <code class="language-plaintext highlighter-rouge">HCENDiagnostico</code> y <code class="language-plaintext highlighter-rouge">HCENMotivoConsulta</code>, y el de <code class="language-plaintext highlighter-rouge">HCENDiagnostico.onsetPeriod.end</code> a <code class="language-plaintext highlighter-rouge">effectiveTime/high</code>.</li>
+</ul>
+
+<h3 id="metadatos-y-publicación">Metadatos y publicación</h3>
+
+<ul>
+  <li><a href="StructureDefinition-ext-home-community-id.html">HomeCommunityId</a> fija el valor <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.2.10000675.73183.1</code> para <code class="language-plaintext highlighter-rouge">home-community</code>.</li>
+  <li><a href="StructureDefinition-hcen-submission-set.html">HCENSubmissionSet</a> vincula <code class="language-plaintext highlighter-rouge">designationType.valueCodeableConcept</code> al conjunto del tipo detallado de documento (EJE 2), con fuerza <code class="language-plaintext highlighter-rouge">extensible</code>. Se documentan sus mapeos XDS para <code class="language-plaintext highlighter-rouge">contentTypeCode</code> y <code class="language-plaintext highlighter-rouge">sourceId</code>.</li>
+  <li>En <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a>, las invariantes <code class="language-plaintext highlighter-rouge">hcen-publication-fhir-links</code> y <code class="language-plaintext highlighter-rouge">hcen-publication-document-identifier</code> vinculan cada DocumentReference con su Bundle document por el par <code class="language-plaintext highlighter-rouge">system</code> y <code class="language-plaintext highlighter-rouge">value</code> del identificador. Ya no exigen que la URL original del documento coincida con el <code class="language-plaintext highlighter-rouge">fullUrl</code> de la entrada. Se mantiene la correspondencia uno a uno, se rechazan identificadores duplicados y documentos huérfanos, y las URL FHIR deben ser distintas dentro del envío.</li>
+</ul>
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>Durante la preparación de la versión 0.2.0 se incorporó y luego se eliminó la invariante <code>hcen-document-retrieval-url</code> que prohibía las referencias internas <code>urn:uuid:</code> en <code>attachment.url</code> y en la <code>extension:binary</code> de DocumentReference. Plataforma debe exigir esta invariante, pero el Gateway no, por eso se eliminó.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<h3 id="ejemplos-y-documentación-del-intercambio">Ejemplos y documentación del intercambio</h3>
+
+<ul>
+  <li>Los cuatro ejemplos básicos del Core se sustituyen por instancias con nombres e identificadores propios de cada escenario. Se agregan tres ejemplos completos. Las referencias a los antiguos <code class="language-plaintext highlighter-rouge">EjemploPacienteUY</code>, <code class="language-plaintext highlighter-rouge">EjemploProfesionalUY</code>, <code class="language-plaintext highlighter-rouge">EjemploOrganizacionUY</code> y <code class="language-plaintext highlighter-rouge">EjemploRolProfesionalUY</code> deben actualizarse a los ejemplos publicados en esta versión.</li>
+  <li>Se incorporan veintiún ejemplos HCEN: pacientes con CI, sin CI y con DNI y CI, profesionales y organizaciones, recursos clínicos y CDA de traumatología, y los Bundles documental y de publicación de medicina general. Los dos escenarios clínicos son independientes.</li>
+  <li>Las cuatro transacciones se presentan como HCEN ITI-104, HCEN ITI-65, HCEN ITI-67 y HCEN ITI-68, con secciones comunes de actores, solicitud, procesamiento, respuesta y errores. Se precisan la actualización por MRN, la creación del paciente desde la publicación, el rechazo completo del envío, la consulta mediante POST y la selección de representación mediante <code class="language-plaintext highlighter-rouge">Accept</code>.</li>
+</ul>
+
+<h2 id="011---091026">0.1.1 - 09/10/26</h2>
+
+<p>Actualización de correcciones para validación. Se mantiene FHIR R4 (<code class="language-plaintext highlighter-rouge">4.0.1</code>) y el estado de borrador.</p>
+
+<ul>
+  <li>Se corrige la cardinalidad de <code class="language-plaintext highlighter-rouge">section</code> en <a href="StructureDefinition-uy-consulta-no-urgente.html">HCENConsultaNoUrgente</a>, de <code class="language-plaintext highlighter-rouge">2..8</code> a <code class="language-plaintext highlighter-rouge">2..*</code>.</li>
+  <li>Se actualizan los indicadores de versión y la documentación de descargas, ejemplos y conformidad.</li>
+</ul>
 
 <h2 id="010---061026">0.1.0 - 06/10/26</h2>
 
 <p>Versión inicial de la Guía de Implementación.</p>
 
-<h2 id="cambios-esperables-en-próximas-versiones">Cambios esperables en próximas versiones</h2>
-
-<ul>
-  <li>Mejoras en las traducciones de algunos recursos y elementos.</li>
-  <li>Ejemplos para la implementación HCEN.</li>
-  <li>Recursos de conformidad adicionales para HCEN.</li>
-  <li>Ajustes de consistencia en nombres de perfiles.</li>
-  <li>Ajustes en nombres o identificadores técnicos de artefactos de la guía.</li>
-</ul>
 
 
 
@@ -475,10 +549,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

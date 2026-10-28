@@ -1,18 +1,18 @@
-# Conjunto de Valores Solicitud de Procedimiento (borrador) - Guía de Implementación FHIR de Uruguay v0.1.0
+# Conjunto de Valores Solicitud de Procedimiento (borrador) - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Conjunto de Valores Solicitud de Procedimiento (borrador) 
 
- **References** 
+ **Referencias** 
 
 * [HCEN Solicitud de Servicio](StructureDefinition-hcen-service-request.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No hay expansión de este ValueSet (no admitida por las herramientas de publicación)
 
 -------
 
@@ -27,11 +27,11 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "vs-solicitud-procedimiento",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSSolicitudProcedimiento",
   "title" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

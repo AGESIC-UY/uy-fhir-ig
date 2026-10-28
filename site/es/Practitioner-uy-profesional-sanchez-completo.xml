@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="uy-profesional-sanchez-completo"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+        <display value="National unique individual identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.1.858.68909"/>
+    <value value="38700001"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Juan Pedro Sánchez Martínez"/>
+    <family value="Sánchez Martínez">
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+        <valueString value="Sánchez"/>
+      </extension>
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+        <valueString value="Martínez"/>
+      </extension>
+    </family>
+    <given value="Juan"/>
+    <given value="Pedro"/>
+    <prefix value="Dr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 123 456"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.sanchez@example.org"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="home"/>
+    <type value="physical"/>
+    <text value="Calle 123, MONTEVIDEO, Montevideo, URY"/>
+    <line value="Calle 123"/>
+    <city value="MONTEVIDEO"/>
+    <district value="CIUDAD VIEJA"/>
+    <state value="Montevideo"/>
+    <postalCode value="11000"/>
+    <country value="URY"/>
+  </address>
+  <gender value="male"/>
+  <birthDate value="1975-05-15"/>
+  <qualification>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+        <code value="MD"/>
+        <display value="Doctor of Medicine"/>
+      </coding>
+    </code>
+    <period>
+      <start value="2000-01-01"/>
+      <end value="2025-12-31"/>
+    </period>
+    <issuer>
+      <display value="Universidad de la República, Uruguay"/>
+    </issuer>
+  </qualification>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="es-UY"/>
+      <display value="Español (Uruguay)"/>
+    </coding>
+  </communication>
+</Practitioner>

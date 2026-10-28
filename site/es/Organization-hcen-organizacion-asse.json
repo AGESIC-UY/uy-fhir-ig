@@ -1,0 +1,46 @@
+{
+  "resourceType" : "Organization",
+  "id" : "hcen-organizacion-asse",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "XX",
+        "display" : "Organization identifier"
+      }]
+    },
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.858.0.0.2.1"
+  }],
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov",
+      "display" : "Healthcare Provider"
+    }]
+  }],
+  "name" : "Administración de los Servicios de Salud del Estado",
+  "alias" : ["ASSE"],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 2486 5008",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "work",
+    "type" : "both",
+    "line" : ["Av. Luis Alberto de Herrera 3326"],
+    "city" : "MONTEVIDEO",
+    "state" : "Montevideo",
+    "country" : "URY"
+  }]
+}

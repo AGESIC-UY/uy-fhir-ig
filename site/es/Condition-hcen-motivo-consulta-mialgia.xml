@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="hcen-motivo-consulta-mialgia"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="7611000179107"/>
+      <display value="motivo de consulta"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="68962001"/>
+      <display value="Mialgia"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+</Condition>

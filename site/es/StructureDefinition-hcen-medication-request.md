@@ -1,12 +1,13 @@
-# HCEN Prescripción de Medicación - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Prescripción de Medicación - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Prescripción de Medicación 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Referencia a este perfil: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [MedicationRequest/hcen-med-req-paracetamol](MedicationRequest-hcen-med-req-paracetamol.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-medication-request)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-medication-request)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,35 +15,35 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 1 element(3 nested mandatory elements)
- Fixed: 3 elements
- Prohibited: 22 elements
+#### Restricciones
 
-**Structures**
+#### Bindings terminológicos
 
-This structure refers to these other structures:
+#### Restricciones
+
+Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) .
+
+** Resumen **
+
+Obligatorios: 1 elementos(3 elementosos obligatorios anidados)
+ Fijos: 3 elementos
+ Prohibidos: 22 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
@@ -50,41 +51,41 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of MedicationRequest.medication[x].coding
+* El elemento 1 se divide en slices según el valor de MedicationRequest.medication[x].coding
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 1 element(3 nested mandatory elements)
- Fixed: 3 elements
- Prohibited: 22 elements
+Obligatorios: 1 elementos(3 elementosos obligatorios anidados)
+ Fijos: 3 elementos
+ Prohibidos: 22 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
@@ -92,9 +93,9 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of MedicationRequest.medication[x].coding
+* El elemento 1 se divide en slices según el valor de MedicationRequest.medication[x].coding
 
  
 
@@ -109,11 +110,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
   "resourceType" : "StructureDefinition",
   "id" : "hcen-medication-request",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENMedicationRequest",
   "title" : "HCEN Prescripción de Medicación",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -227,8 +228,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
     {
       "id" : "MedicationRequest.medication[x]",
       "path" : "MedicationRequest.medication[x]",
-      "short" : "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología)",
-      "definition" : "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología)",
+      "short" : "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)",
+      "definition" : "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)",
       "type" : [{
         "code" : "CodeableConcept"
       }],
@@ -249,7 +250,9 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-r
           "path" : "system"
         }],
         "rules" : "open"
-      }
+      },
+      "short" : "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)",
+      "definition" : "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
     },
     {
       "id" : "MedicationRequest.medication[x].coding:snomed",

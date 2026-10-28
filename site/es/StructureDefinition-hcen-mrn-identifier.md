@@ -1,4 +1,4 @@
-# Identificador MRN para HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Identificador MRN para HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil del tipo de datos: Identificador MRN para HCEN 
 
@@ -13,15 +13,15 @@ urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]
 
 El consecutivo interno lo administra la organización y permite distinguir sus aplicaciones cuando más de una genera identificadores de pacientes. Por ejemplo, `urn:oid:2.16.858.2.99999999.72768.1` representa una AA ficticia con consecutivo 1. El valor local del paciente se informa en `value`; el OID de la AA no sustituye ese número.
 
-La invariante comprueba la estructura del OID. La autorización del dominio y su correspondencia con la institución emisora se verifican mediante lógica interna de Plataforma. El OID institucional de Organization no sustituye al dominio de asignación del MRN.
+La invariante comprueba la estructura del OID. La autorización del dominio y su correspondencia con la institución emisora se verifican mediante lógica interna de Plataforma. El OID institucional de Organization no sustituye al dominio de asignación del MRN: en HCENOrganization se informa en `identifier[organizationId].value`, con `system = urn:ietf:rfc:3986`. Si se informa el emisor del MRN mediante `assigner`, debe referenciar una HCENOrganization.
 
 La guía pública no incluye el catálogo operativo de dominios MRN ni aplica un binding a ese catálogo. Los ejemplos utilizan dominios ficticios: una validación estructural satisfactoria no acredita su autorización para operar.
 
-**Usages:**
+**Usos:**
 
-* Use this DataType Profile: [Perfil Paciente para HCEN](StructureDefinition-hcen-patient.md)
+* Utilizar este perfil de tipo de datos: [Perfil Paciente para HCEN](StructureDefinition-hcen-patient.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-mrn-identifier)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-mrn-identifier)
 
 ### Vistas formales del contenido del perfil
 
@@ -29,47 +29,59 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identifier.md) .
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identifier.md) .
 
-** Summary **
+#### Restricciones
+
+#### Bindings terminológicos
+
+#### Restricciones
+
+Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identifier.md) .
+
+** Resumen **
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
+
+* [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identifier.md) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [UYMRNIdentifier](StructureDefinition-uy-mrn-identifier.md) .
 
-** Summary **
+** Resumen **
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
+
+* [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
 
  
 
@@ -84,11 +96,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-mrn-identifi
   "resourceType" : "StructureDefinition",
   "id" : "hcen-mrn-identifier",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-mrn-identifier",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENMRNIdentifier",
   "title" : "Identificador MRN para HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -137,6 +149,14 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-mrn-identifi
         "human" : "La AA debe tener el formato urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno], con arcos numéricos válidos. La autorización del OID se verifica por separado.",
         "expression" : "matches('^urn:oid:2[.]16[.]858[.]2[.](0|[1-9][0-9]*)[.]72768[.](0|[1-9][0-9]*)$')",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-mrn-identifier"
+      }]
+    },
+    {
+      "id" : "Identifier.assigner",
+      "path" : "Identifier.assigner",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
       }]
     }]
   }

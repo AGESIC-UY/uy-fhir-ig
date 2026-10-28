@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="hcen-encuentro-traumatologia"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="6821000179104"/>
+      <display value="Hoja de consulta no urgente centralizada - policlínica"/>
+    </coding>
+  </type>
+  <serviceType>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="4101000179107"/>
+      <display value="servicio de traumatología y ortopedia"/>
+    </coding>
+  </serviceType>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <participant>
+    <period>
+      <start value="2019-08-23T10:05:24-03:00"/>
+    </period>
+    <individual>
+      <reference value="PractitionerRole/hcen-rol-traumatologia-sousa"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2019-08-23T10:05:24-03:00"/>
+    <end value="2019-08-23T10:15:24-03:00"/>
+  </period>
+  <serviceProvider>
+    <reference value="Organization/hcen-organizacion-asse"/>
+  </serviceProvider>
+</Encounter>

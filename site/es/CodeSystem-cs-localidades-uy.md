@@ -1,4 +1,4 @@
-# Localidades de Uruguay (OSE) - Guía de Implementación FHIR de Uruguay v0.1.0
+# Localidades de Uruguay (OSE) - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## CodeSystem: Localidades de Uruguay (OSE) 
 
@@ -19,11 +19,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "resourceType" : "CodeSystem",
   "id" : "cs-localidades-uy",
   "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "CSLocalidadesUY",
   "title" : "Localidades de Uruguay (OSE)",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

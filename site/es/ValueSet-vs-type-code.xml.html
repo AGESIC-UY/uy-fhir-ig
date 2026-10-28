@@ -10,7 +10,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>EJE 2 — Tipo detallado de documento - XML Representation - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>EJE 2 — Tipo detallado de documento - XML Representation - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -24,9 +24,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -209,8 +209,8 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.66"}
-    h3,h4,h5,h6{--heading-prefix:"9.66"}</style>
+    <style type="text/css">h2{--heading-prefix:"9.72"}
+    h3,h4,h5,h6{--heading-prefix:"9.72"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -241,7 +241,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -363,6 +363,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -399,7 +402,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Resumen de artefactos</b></a></li><li><b>EJE 2 — Tipo detallado de documento</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='artifacts.html'><b>Resumen de artefactos</b></a></li><li><b>EJE 2 — Tipo detallado de documento</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -413,7 +416,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -473,7 +476,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
           
 
             a partir de 
-2026-10-06
+2026-10-28
 .
           
         
@@ -499,11 +502,11 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ConjuntoValores / ConjuntoDeValores vs-type-code&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;vs-type-code&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcvs-type-code&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;http://www.snomed.org/&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt;&lt;span title=&quot;Version is not explicitly stated. No matching Code System found&quot;&gt; version Not Stated (use latest from terminology server)&lt;/span&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/271301000179106&quot;&gt;271301000179106&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de reunión interdisciplinaria del equipo asistencial&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/232911000179100&quot;&gt;232911000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;datos del certificado de defunción&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/221331000179102&quot;&gt;221331000179102&lt;/a&gt;&lt;/td&gt;&lt;td&gt;datos del certificado de nacido vivo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/7081000179105&quot;&gt;7081000179105&lt;/a&gt;&lt;/td&gt;&lt;td&gt;historia clínica previa escaneada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/41000179103&quot;&gt;41000179103&lt;/a&gt;&lt;/td&gt;&lt;td&gt;historial de inmunizaciones&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/270081000179106&quot;&gt;270081000179106&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de anestesia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/6821000179104&quot;&gt;6821000179104&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de consulta no urgente centralizada - policlínica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/5481000179108&quot;&gt;5481000179108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de consulta no urgente no centralizada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4181000179103&quot;&gt;4181000179103&lt;/a&gt;&lt;/td&gt;&lt;td&gt;registro de enfermería de paciente en policlínica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/259531000179109&quot;&gt;259531000179109&lt;/a&gt;&lt;/td&gt;&lt;td&gt;registro de consulta de telemedicina&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/5461000179100&quot;&gt;5461000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de consulta urgente centralizada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/5471000179106&quot;&gt;5471000179106&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de consulta urgente no centralizada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/371526002&quot;&gt;371526002&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de descripción operatoria&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/230551000179106&quot;&gt;230551000179106&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de traslado especializado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/371528001&quot;&gt;371528001&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de anatomía patológica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/6431000179100&quot;&gt;6431000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de papanicolaou&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/258951000179102&quot;&gt;258951000179102&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de técnicas auxiliares de anatomía patológica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4211000179102&quot;&gt;4211000179102&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de densitometría ósea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4221000179107&quot;&gt;4221000179107&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de ecografía&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/227841000179108&quot;&gt;227841000179108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de ecografía doppler&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4231000179109&quot;&gt;4231000179109&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de mamografía&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4271000179106&quot;&gt;4271000179106&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de medicina nuclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/371527006&quot;&gt;371527006&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de radiología convencional&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4251000179103&quot;&gt;4251000179103&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de resonancia magnética nuclear&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4261000179100&quot;&gt;4261000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de tomografía axial computarizada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/235931000179102&quot;&gt;235931000179102&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de tomografía por emisión de positrones&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4241000179101&quot;&gt;4241000179101&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de laboratorio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/269071000179107&quot;&gt;269071000179107&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Informe de laboratorio de analítica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/4341000179107&quot;&gt;4341000179107&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de microbiología&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/271121000179101&quot;&gt;271121000179101&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de test de HPV&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/5531000179105&quot;&gt;5531000179105&lt;/a&gt;&lt;/td&gt;&lt;td&gt;hoja de enfermería&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/215791000179105&quot;&gt;215791000179105&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de electrofisiología&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/246961000179100&quot;&gt;246961000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de endoscopía&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261911000179103&quot;&gt;261911000179103&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de estudio cardiológico invasivo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261901000179100&quot;&gt;261901000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de estudio cardiológico no invasivo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/215801000179109&quot;&gt;215801000179109&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de fonoaudiología&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/6791000179108&quot;&gt;6791000179108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de neurofisiología clínica&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261921000179108&quot;&gt;261921000179108&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de procedimiento de radioterapia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/5501000179100&quot;&gt;5501000179100&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe de procedimiento diagnóstico y/o terapéutico (no quirúrgico)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/271171000179102&quot;&gt;271171000179102&lt;/a&gt;&lt;/td&gt;&lt;td&gt;informe neuropsicológico&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/256691000179104&quot;&gt;256691000179104&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso de internación domiciliaria&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/373942005&quot;&gt;373942005&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso de paciente internado&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261721000179105&quot;&gt;261721000179105&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso en internación de cuidados básicos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261751000179101&quot;&gt;261751000179101&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso en internación de cuidados intensivos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261741000179104&quot;&gt;261741000179104&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso en internación de cuidados intermedios&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://snomed.info/id/261731000179107&quot;&gt;261731000179107&lt;/a&gt;&lt;/td&gt;&lt;td&gt;resumen de egreso en internación de cuidados moderados&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://fhir.hcen.gub.uy/ValueSet/vs-type-code&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.2.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;VStypeCode&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EJE 2 — Tipo detallado de documento&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-10-06T01:23:13-03:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-10-28T18:02:56-03:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;AGESIC&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;AGESIC&quot;/&gt;
@@ -743,10 +746,10 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

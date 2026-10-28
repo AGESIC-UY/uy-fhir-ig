@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="hcen-med-admin-paracetamol"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p>Fármaco: paracetamol 650 mg comprimido. Se administra 1 comprimido.</p></div>
+  </text>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="20921000179102"/>
+      <display value="Paracetamol 650 mg comprimido"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <effectiveDateTime value="2019-08-23T10:05:24-03:00"/>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/med-admin-perform-function"/>
+        <code value="performer"/>
+        <display value="Performer"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="PractitionerRole/hcen-rol-traumatologia-sousa"/>
+    </actor>
+  </performer>
+  <dosage>
+    <text value="Se administra 1 comprimido"/>
+    <dose>
+      <value value="1"/>
+      <unit value="comprimido"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{comprimido}"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

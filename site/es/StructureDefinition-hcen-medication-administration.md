@@ -1,12 +1,13 @@
-# HCEN Administración de Medicación - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Administración de Medicación - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Administración de Medicación 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Referencia a este perfil: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [MedicationAdministration/hcen-med-admin-paracetamol](MedicationAdministration-hcen-med-admin-paracetamol.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-medication-administration)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-medication-administration)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,87 +15,87 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 1 element(3 nested mandatory elements)
- Must-Support: 8 elements
- Fixed: 3 elements
- Prohibited: 12 elements
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) .
+
+** Resumen **
+
+Obligatorios: 1 elementos(3 elementosos obligatorios anidados)
+ Must-Support: 8 elementos
+ Fijos: 3 elementos
+ Prohibidos: 12 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of MedicationAdministration.medication[x].coding
-* The element 1 is sliced based on the value of MedicationAdministration.effective[x]
-* The element 1 is sliced based on the value of MedicationAdministration.dosage.rate[x]
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.medication[x].coding
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.effective[x]
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.dosage.rate[x]
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 1 element(3 nested mandatory elements)
- Must-Support: 8 elements
- Fixed: 3 elements
- Prohibited: 12 elements
+Obligatorios: 1 elementos(3 elementosos obligatorios anidados)
+ Must-Support: 8 elementos
+ Fijos: 3 elementos
+ Prohibidos: 12 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Rol del Profesional de Salud para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role)](StructureDefinition-hcen-practitioner-role.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of MedicationAdministration.medication[x].coding
-* The element 1 is sliced based on the value of MedicationAdministration.effective[x]
-* The element 1 is sliced based on the value of MedicationAdministration.dosage.rate[x]
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.medication[x].coding
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.effective[x]
+* El elemento 1 se divide en slices según el valor de MedicationAdministration.dosage.rate[x]
 
  
 
@@ -109,11 +110,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-medication-a
   "resourceType" : "StructureDefinition",
   "id" : "hcen-medication-administration",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENMedicationAdministration",
   "title" : "HCEN Administración de Medicación",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

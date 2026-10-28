@@ -1,28 +1,56 @@
-# Envío para publicación documental HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Envío para publicación documental HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: Envío para publicación documental HCEN 
 
 ### Organización del envío
 
-Este perfil adapta la organización de UnContainedComprehensiveProvideDocumentBundle de MHD 4.2.3. Deriva de Bundle porque el slicing IHE es cerrado y exige perfiles IHE de metadatos, mientras HCEN incorpora contexto adicional y reglas propias de identificación. No declara conformidad integral IHE.
+Este perfil deriva de Bundle y adapta la organización de UnContainedComprehensiveProvideDocumentBundle de MHD 4.2.3. Incorpora contexto y reglas de identificación propios de HCEN, por lo que no declara conformidad con el perfil IHE, cuyo slicing es cerrado.
 
-El envío incluye un SubmissionSet, uno o más DocumentReference, sus Bundles documentales FHIR y los recursos de contexto referenciados. Binary CDA no debería (SHOULD NOT) enviarse; su referencia en los metadatos permanece obligatoria. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío, sin obligación de correspondencia Binary ↔ metadatos y sin cardinalidad 0..0.
+| | | |
+| :--- | :--- | :--- |
+| SubmissionSet | 1..1 | HCENSubmissionSet con los DocumentReference miembros. |
+| DocumentReference | 1..* | Metadatos de cada documento. |
+| Bundle documental | 1..* | Documento FHIR enviado para validación. |
+| Contexto | Según las referencias presentes | Patient, PractitionerRole, Practitioner y Organization con sus perfiles HCEN. |
+| Binary CDA | Opcional en Plataforma | No se recomienda incluirlo; su contenido puede ignorarse. |
 
-Los PractitionerRole utilizados como autores y sus Practitioner y Organization deben estar incluidos como entradas del envío. Las demás entradas necesarias se determinan por los [paths explícitos del contrato de metadatos](hcen-iti-65.md#referencias-locales), sin extender la resolución local a toda Reference ni exigir un ejemplar de cada tipo. Las referencias de metadatos controladas por `hcen-publication-context` deben resolverse a entradas del envío; los recursos contenidos no sustituyen esas entradas. Dentro del documento FHIR se admiten recursos contenidos cuando la estructura FHIR lo permite. Cada Bundle documental debe resolver sus propias referencias clínicas.
+El envío debe aportar los recursos necesarios para validar sus metadatos. El documento FHIR debe ser autocontenido respecto de sus referencias clínicas, independientemente del Bundle de publicación.
 
-Las referencias históricas `relatesTo` pueden apuntar a un DocumentReference ya existente en HCEN y no obligan a incluirlo en el envío. Las relaciones de reemplazo se ignoran porque su procesamiento no está soportado actualmente.
+Cada DocumentReference corresponde a exactamente un Bundle documental por `masterIdentifier.system` y `masterIdentifier.value`, coincidentes con `Bundle.identifier.system` y `Bundle.identifier.value`. La Composition raíz conserva ese mismo identificador. No se admiten asociaciones ambiguas, identificadores duplicados ni documentos huérfanos. El SubmissionSet enumera todos y solo los DocumentReference miembros, una vez cada uno.
 
-### Validación y contrato de publicación
+### Referencias de contexto
 
-Las invariantes comprueban unicidad de `fullUrl`, correspondencia uno a uno entre DocumentReference y Bundle documental, pertenencia de todos y solo los DocumentReference al SubmissionSet sin duplicados, resolución de los paths explícitos de metadatos y autocontención de cada documento. El orden de los miembros no tiene significado. No comprueban la equivalencia clínica, la correspondencia de versión ni la existencia de los documentos históricos en HCEN; esta última se verifica durante el procesamiento.
+Las referencias siguientes deben resolverse a entradas del envío, según los perfiles y las invariantes de publicación:
 
-La persistencia y respuesta de las entradas POST siguen pendientes. Una transacción FHIR estándar no puede interpretarse como procesamiento parcial sin adaptar el contrato. Consultar [Publicación](hcen-iti-65.md#pendientes) antes de utilizar este Bundle de publicación en un servicio.
+| | |
+| :--- | :--- |
+| DocumentReference | `subject`,`author`,`authenticator`,`custodian`,`funder`,`byOrderOf`y`context.sourcePatientInfo`. |
+| SubmissionSet | `subject`,`source`y los DocumentReference de`entry.item`. |
+| PractitionerRole utilizado en autoría, autenticación o source | `practitioner`y`organization`. |
 
-**Usages:**
+Los recursos contenidos no sustituyen las entradas de este contexto. Dentro del documento FHIR pueden utilizarse recursos contenidos cuando la estructura FHIR lo permita. La regla de contexto no exige un ejemplar de cada tipo si el envío no lo referencia, ni extiende el cierre local a toda referencia administrativa del recurso.
 
-* This Profile is not used by any profiles in this Implementation Guide
+La autoría debe incluir al menos un HCENPractitionerRole. `SubmissionSet.source` debe referenciar un rol profesional. Cada rol utilizado y su Practitioner y Organization deben incluirse como entradas. Las referencias directas adicionales a Practitioner u Organization en `author` no sustituyen al rol obligatorio.
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-provide-document-bundle)
+DocumentReference y SubmissionSet deben informar `homeCommunityId`. El período de servicio se describe en [HCENDocumentReference](StructureDefinition-hcen-document-reference.md).
+
+`SubmissionSet.extension[sourceId].valueIdentifier` identifica a la entidad que origina el envío. Puede ser una intermediaria distinta de la organización clínica. Los formatos e identidades se explican en [Identificadores HCEN](hcen-identificadores.md).
+
+Las referencias históricas `relatesTo` pueden apuntar a un DocumentReference ya existente en HCEN y no obligan a incluirlo en el envío. Su presencia no habilita el procesamiento de reemplazos.
+
+### Correspondencia documental e invariantes
+
+Las invariantes comprueban la unicidad de `fullUrl`, la correspondencia uno a uno por identificador entre DocumentReference y Bundle documental, la membresía exacta del SubmissionSet, las referencias de contexto y la autocontención de cada documento. También exigen que las URL FHIR de los documentos sean distintas dentro del envío, por comparación exacta.
+
+En un envío con varios documentos, cada uno conserva su identidad y su Bundle documental. El orden de los miembros del SubmissionSet no tiene significado. Su `entryUUID` se deriva del identificador de cualquiera de sus miembros, según [HCENSubmissionSet](StructureDefinition-hcen-submission-set.md).
+
+Estas invariantes no comprueban la equivalencia clínica ni la correspondencia de versión entre FHIR y CDA. Tampoco comprueban la existencia de documentos históricos en HCEN, que se verifica durante el procesamiento. La validación del envío, la atomicidad y la respuesta se describen en [HCEN ITI-65](hcen-iti-65.md).
+
+**Usos:**
+
+* Ejemplos de este perfil: [Bundle/hcen-provide-document-bundle-cnu-asse](Bundle-hcen-provide-document-bundle-cnu-asse.md)
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-provide-document-bundle)
 
 ### Vistas formales del contenido del perfil
 
@@ -30,32 +58,32 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-** Summary **
+#### Restricciones
 
-Mandatory: 4 elements(2 nested mandatory elements)
- Prohibited: 1 element
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
+
+** Resumen **
+
+Obligatorios: 4 elementos(2 elementosos obligatorios anidados)
+ Prohibidos: 1 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set)](StructureDefinition-hcen-submission-set.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
@@ -66,38 +94,38 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Bundle.entry
+* El elemento 1 se divide en slices según el valor de Bundle.entry
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Bundle](http://hl7.org/fhir/R4/bundle.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 4 elements(2 nested mandatory elements)
- Prohibited: 1 element
+Obligatorios: 4 elementos(2 elementosos obligatorios anidados)
+ Prohibidos: 1 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Conjunto de envío HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set)](StructureDefinition-hcen-submission-set.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
@@ -108,9 +136,9 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Bundle.entry
+* El elemento 1 se divide en slices según el valor de Bundle.entry
 
  
 
@@ -125,11 +153,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-provide-docu
   "resourceType" : "StructureDefinition",
   "id" : "hcen-provide-document-bundle",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENProvideDocumentBundle",
   "title" : "Envío para publicación documental HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -138,7 +166,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-provide-docu
       "value" : "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital"
     }]
   }],
-  "description" : "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo.",
+  "description" : "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. Plataforma procesa y valida el envío como fachada FHIR y registra metadatos en XDS, sin persistir recursos FHIR.",
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "v2",
@@ -188,8 +216,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-provide-docu
       {
         "key" : "hcen-publication-fhir-links",
         "severity" : "error",
-        "human" : "Cada DocumentReference se vincula por attachment.url a un único Bundle documental del envío, y cada Bundle documental tiene un único DocumentReference: no hay destinos compartidos ni Bundles huérfanos.",
-        "expression" : "entry.resource.ofType(DocumentReference).all(content.attachment.url.count() = 1) and entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).isDistinct() and entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).subsetOf(%context.entry.where(resource is Bundle).fullUrl.select(toString())) and entry.where(resource is Bundle).fullUrl.select(toString()).subsetOf(%context.entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()))",
+        "human" : "La correspondencia documental es uno a uno: identificadores completos y distintos en ambos lados y la misma cantidad de DocumentReference y Bundles documentales. Las URL originales FHIR son distintas dentro del envío por comparación exacta. Se complementa con hcen-publication-document-identifier.",
+        "expression" : "entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).isDistinct() and entry.resource.ofType(DocumentReference).all(masterIdentifier.system.exists() and masterIdentifier.value.exists()) and entry.resource.ofType(Bundle).where(type = 'document').all(identifier.system.exists() and identifier.value.exists()) and entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).isDistinct() and entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString())).isDistinct() and entry.resource.ofType(DocumentReference).count() = entry.resource.ofType(Bundle).where(type = 'document').count()",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle"
       },
       {
@@ -223,8 +251,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-provide-docu
       {
         "key" : "hcen-publication-document-identifier",
         "severity" : "error",
-        "human" : "El masterIdentifier de cada DocumentReference coincide en system y value con el identifier del Bundle documental vinculado mediante attachment.url.",
-        "expression" : "entry.resource.ofType(DocumentReference).select((content.attachment.url.toString().length().toString() & ':' & content.attachment.url.toString()) & (masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).subsetOf(%context.entry.where(resource is Bundle).select((fullUrl.toString().length().toString() & ':' & fullUrl.toString()) & (resource.identifier.system.toString().length().toString() & ':' & resource.identifier.system.toString()) & (resource.identifier.value.toString().length().toString() & ':' & resource.identifier.value.toString())))",
+        "human" : "Los pares system y value de masterIdentifier y Bundle.identifier coinciden en ambos sentidos. Junto con la unicidad y cardinalidad de hcen-publication-fhir-links impide asociaciones ambiguas y documentos huérfanos, independientemente de las URL.",
+        "expression" : "entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).subsetOf(%context.entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString()))) and entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString())).subsetOf(%context.entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())))",
         "source" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle"
       },
       {
@@ -269,8 +297,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-provide-docu
     {
       "id" : "Bundle.entry.request",
       "path" : "Bundle.entry.request",
-      "short" : "Acción propuesta para procesar la entrada",
-      "definition" : "Representación preliminar de alta con POST. El contrato de publicación debe resolver la persistencia de las representaciones documentales.",
+      "short" : "Acción transaccional para procesar la entrada",
+      "definition" : "Entrada POST del intercambio transaccional. Plataforma registra los metadatos en XDS sin crear un recurso FHIR persistente; los documentos permanecen en el prestador.",
       "min" : 1
     },
     {

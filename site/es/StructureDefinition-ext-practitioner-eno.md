@@ -1,35 +1,39 @@
-# Enfermedad de Notificación Obligatoria (ENO) - Guía de Implementación FHIR de Uruguay v0.1.0
+# Enfermedad de Notificación Obligatoria (ENO) - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: Enfermedad de Notificación Obligatoria (ENO) 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+Esta extensión se mantiene definida, pero no se incorpora a [HCENPractitioner](StructureDefinition-hcen-practitioner.md) ni a otro perfil hasta que se acuerde cómo representar su contexto documental.
 
-**Usages:**
+Cuando la extensión está presente, `valueBoolean` es obligatorio. El valor `false` no equivale a omitir un dato desconocido.
 
-* This Extension is not used by any profiles in this Implementation Guide
+**Información de uso**
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-practitioner-eno)
+**Usos:**
+
+* Ningún perfil de esta guía utiliza esta extensión
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-practitioner-eno)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si este profesional actúa como notificador de una Enfermedad de Notificación Obligatoria (ENO) en el documento. Mapea a DocumentEntry.authorENO.
+Extensión simple de tipo boolean: Indica si este profesional actúa como notificador de una Enfermedad de Notificación Obligatoria (ENO) en el documento. Mapea a DocumentEntry.authorENO.
 
  **Vista diferencial** 
 
@@ -37,13 +41,13 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
  **Vista instantánea** 
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si este profesional actúa como notificador de una Enfermedad de Notificación Obligatoria (ENO) en el documento. Mapea a DocumentEntry.authorENO.
+Extensión simple de tipo boolean: Indica si este profesional actúa como notificador de una Enfermedad de Notificación Obligatoria (ENO) en el documento. Mapea a DocumentEntry.authorENO.
 
  
 
@@ -58,11 +62,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-practitioner-
   "resourceType" : "StructureDefinition",
   "id" : "ext-practitioner-eno",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-eno",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PractitionerEno",
   "title" : "Enfermedad de Notificación Obligatoria (ENO)",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="hcen-procedimiento-vendaje"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p>Vendaje de extremidad superior. Resultado: normal. Paciente sedado durante el procedimiento.</p></div>
+  </text>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="229534005"/>
+      <display value="Vendaje de extremidad superior"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <outcome>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="280413001"/>
+      <display value="resultado normal"/>
+    </coding>
+  </outcome>
+  <note>
+    <text value="Paciente sedado durante el procedimiento"/>
+  </note>
+</Procedure>

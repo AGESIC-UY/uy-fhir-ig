@@ -1,0 +1,93 @@
+{
+  "resourceType" : "Organization",
+  "id" : "uy-organizacion-abc-completa",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "XX",
+        "display" : "Organization identifier"
+      }]
+    },
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.858.0.0.2.1234"
+  }],
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov",
+      "display" : "Healthcare Provider"
+    }]
+  }],
+  "name" : "Organización ABC",
+  "alias" : ["ABC"],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 2486 5008",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "work",
+    "type" : "both",
+    "line" : ["Av. Luis Alberto de Herrera 1234"],
+    "city" : "MONTEVIDEO",
+    "state" : "Montevideo",
+    "country" : "URY"
+  }],
+  "partOf" : {
+    "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.858.0.0.2.1235"
+    },
+    "display" : "Organización AAA"
+  },
+  "contact" : [{
+    "purpose" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+        "code" : "ADMIN",
+        "display" : "Administrative"
+      }]
+    },
+    "name" : {
+      "text" : "María Fernández González",
+      "family" : "Fernández González",
+      "_family" : {
+        "extension" : [{
+          "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+          "valueString" : "Fernández"
+        },
+        {
+          "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+          "valueString" : "González"
+        }]
+      },
+      "given" : ["María"]
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+598 99 654 321",
+      "use" : "work"
+    }],
+    "address" : {
+      "use" : "home",
+      "type" : "physical",
+      "text" : "Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY",
+      "line" : ["Calle Falsa 1234"],
+      "city" : "MONTEVIDEO",
+      "district" : "CIUDAD VIEJA",
+      "state" : "Montevideo",
+      "postalCode" : "11000",
+      "country" : "URY"
+    }
+  }]
+}

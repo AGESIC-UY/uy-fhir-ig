@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="hcen-organizacion-asse"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p><b>Administración de los Servicios de Salud del Estado (ASSE)</b></p><p>Identificador de la institución: urn:oid:2.16.858.0.0.2.1.</p><p>Tipo: prestador de servicios de salud.</p><p>Dirección: Av. Luis Alberto de Herrera 3326, MONTEVIDEO, Montevideo, URY.</p><p>Teléfono: +598 2486 5008.</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="XX"/>
+        <display value="Organization identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.858.0.0.2.1"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Administración de los Servicios de Salud del Estado"/>
+  <alias value="ASSE"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 2486 5008"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <type value="both"/>
+    <line value="Av. Luis Alberto de Herrera 3326"/>
+    <city value="MONTEVIDEO"/>
+    <state value="Montevideo"/>
+    <country value="URY"/>
+  </address>
+</Organization>

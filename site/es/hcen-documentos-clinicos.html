@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Documentos clínicos HCEN - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Documentos clínicos HCEN - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Documentos clínicos HCEN</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Documentos clínicos HCEN</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Documentos clínicos HCEN</h2>
   
 
@@ -440,7 +443,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU); su publicación utiliza el Bundle de publicación y los metadatos definidos por la transacción de <a href="hcen-iti-65.html">publicación de documentos</a>. Esta versión no especifica otros tipos de documento clínico.</p>
+<p>Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU), su publicación utiliza el Bundle de publicación y los metadatos definidos por la transacción de <a href="hcen-iti-65.html">publicación de documentos</a>. Esta versión no especifica otros tipos de documento clínico.</p>
 
 <h3 id="hoja-de-consulta-no-urgente">Hoja de Consulta No Urgente</h3>
 
@@ -493,19 +496,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><code class="language-plaintext highlighter-rouge">HCENConsultaNoUrgente.type</code> está fijado a LOINC <code class="language-plaintext highlighter-rouge">34108-1</code>. <code class="language-plaintext highlighter-rouge">encounter</code> referencia <a href="StructureDefinition-hcen-encounter.html">HCENEncounter</a>, que fija el estado del evento a <code class="language-plaintext highlighter-rouge">finished</code>.</p>
-
-<p><a href="StructureDefinition-hcen-consulta-no-urgente-bundle.html">HCENConsultaNoUrgenteBundle</a> garantiza la CNU en la primera entrada mediante tres reglas complementarias: <code class="language-plaintext highlighter-rouge">bdl-11</code> exige que la primera entrada sea Composition; <code class="language-plaintext highlighter-rouge">hcen-cnu-single-composition</code> exige una sola Composition; el slice <code class="language-plaintext highlighter-rouge">compositionCNU 1..1</code> identifica esa única Composition como HCENConsultaNoUrgente.</p>
+<p>El perfil del <a href="StructureDefinition-hcen-consulta-no-urgente-bundle.html">Bundle documental CNU</a> define cómo reunir la Composition y los recursos clínicos en un documento.</p>
 
 <h3 id="codificaciones-pendientes">Codificaciones pendientes</h3>
 
-<p>Los slices identifican SNOMED CT cuando se utiliza ese sistema. Se admiten codificaciones adicionales mediante slicing abierto, pero esta guía no fija la URI del tesauro local mencionado en el material de origen porque todavía está pendiente de confirmación. Los conjuntos marcados como provisionales contienen códigos de ejemplo y no constituyen refsets nacionales aprobados; consultar <a href="hcen-terminologia.html#terminología-clínica-de-cnu">Terminología HCEN</a>.</p>
+<p>Los slices identifican SNOMED CT cuando se utiliza ese sistema. Se admiten codificaciones adicionales mediante slicing abierto, por ejemplo un tesauro clínico — ver <a href="hcen-terminologia.html#tesauro-clínico">Tesauro clínico</a> — pero esta guía no fija la URI de ese sistema porque todavía está pendiente de confirmación. Los conjuntos marcados como provisionales contienen códigos de ejemplo y no constituyen refsets nacionales aprobados; consultar <a href="hcen-terminologia.html#terminología-clínica-de-cnu">Terminología HCEN</a>.</p>
 
 <h3 id="relación-con-el-intercambio-documental">Relación con el intercambio documental</h3>
 
-<p>La <code class="language-plaintext highlighter-rouge">Composition</code> y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a>, que actúa como Bundle de publicación e incluye además <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">SubmissionSet</code> y los recursos de contexto necesarios. Los metadatos referencian el CDA; el Binary CDA no debería (SHOULD NOT) enviarse. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío, sin exigir correspondencia con los metadatos.</p>
+<p>La <code class="language-plaintext highlighter-rouge">Composition</code> y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a>, que actúa como Bundle de publicación e incluye además <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">SubmissionSet</code> y los recursos de contexto necesarios. Las condiciones del envío y el tratamiento del CDA se describen en <a href="hcen-iti-65.html">HCEN ITI-65</a>.</p>
 
-<p>Los ejemplos de Consulta No Urgente, su CDA de apoyo y los ejemplos de intercambio HCEN se reservan para una versión futura. La publicación 0.1.0 incluye únicamente <a href="ejemplos.html">ejemplos básicos del Core</a>.</p>
+<p>Consultar los <a href="hcen-ejemplos.html">ejemplos CNU</a>: documento y publicación de medicina general, y Composition con recursos individuales y CDA de apoyo de traumatología. Son escenarios distintos y deben mantenerse separados.</p>
 
 
 
@@ -533,10 +534,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

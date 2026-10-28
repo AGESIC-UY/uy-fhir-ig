@@ -1,0 +1,238 @@
+# example-uy-paciente-perez-completo - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Patient: example-uy-paciente-perez-completo
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "uy-paciente-perez-completo",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"]
+  },
+  "language" : "es-UY",
+  "extension" : [{
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/sct/900000000000207008/version/20250201",
+          "code" : "446151000124109",
+          "display" : "Identifies as male gender"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
+  },
+  {
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA29519-8",
+          "display" : "she/her/her/hers/herself"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-pronouns"
+  },
+  {
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "code" : "male",
+          "display" : "Male"
+        }]
+      }
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "76689-9",
+          "display" : "Sex assigned at birth"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "MR",
+        "display" : "Medical record number"
+      }]
+    },
+    "system" : "https://example.org/institucion/identificadores/pacientes",
+    "value" : "MRN1234"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NI",
+        "display" : "National unique individual identifier"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.1.858.68909",
+    "value" : "12345678"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PPN",
+        "display" : "Passport number"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.2.858.68912",
+    "value" : "D1234567",
+    "period" : {
+      "start" : "2020-01-01"
+    }
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "Juan Carlos Pérez Rodríguez II",
+    "family" : "Pérez Rodríguez",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+        "valueString" : "Pérez"
+      },
+      {
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+        "valueString" : "Rodríguez"
+      }]
+    },
+    "given" : ["Juan", "Carlos"],
+    "suffix" : ["II"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 99 123 456",
+    "use" : "mobile",
+    "period" : {
+      "start" : "2018"
+    }
+  },
+  {
+    "system" : "email",
+    "value" : "juan.perez@example.com",
+    "use" : "home"
+  }],
+  "gender" : "male",
+  "birthDate" : "1980-01-01",
+  "deceasedBoolean" : false,
+  "address" : [{
+    "use" : "home",
+    "type" : "physical",
+    "text" : "Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY",
+    "line" : ["Calle Falsa 1234"],
+    "city" : "MONTEVIDEO",
+    "district" : "CIUDAD VIEJA",
+    "state" : "Montevideo",
+    "postalCode" : "11000",
+    "country" : "URY",
+    "period" : {
+      "start" : "2015-01-01"
+    }
+  },
+  {
+    "use" : "work",
+    "type" : "physical",
+    "text" : "Av. Italia 5678, POCITOS, MONTEVIDEO, Montevideo, URY",
+    "line" : ["Av. Italia 5678"],
+    "city" : "MONTEVIDEO",
+    "district" : "POCITOS",
+    "state" : "Montevideo",
+    "postalCode" : "11300",
+    "country" : "URY",
+    "period" : {
+      "start" : "2020-01-01"
+    }
+  }],
+  "maritalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code" : "M",
+      "display" : "Married"
+    }]
+  },
+  "multipleBirthBoolean" : false,
+  "contact" : [{
+    "relationship" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+        "code" : "C",
+        "display" : "Emergency Contact"
+      }]
+    }],
+    "name" : {
+      "text" : "María Fernández González",
+      "family" : "Fernández González",
+      "_family" : {
+        "extension" : [{
+          "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+          "valueString" : "Fernández"
+        },
+        {
+          "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+          "valueString" : "González"
+        }]
+      },
+      "given" : ["María"]
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+598 99 654 321",
+      "use" : "mobile"
+    }],
+    "address" : {
+      "use" : "home",
+      "type" : "physical",
+      "text" : "Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY",
+      "line" : ["Calle Falsa 1234"],
+      "city" : "MONTEVIDEO",
+      "district" : "CIUDAD VIEJA",
+      "state" : "Montevideo",
+      "postalCode" : "11000",
+      "country" : "URY"
+    },
+    "gender" : "female"
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "urn:ietf:bcp:47",
+        "code" : "es-UY",
+        "display" : "Español (Uruguay)"
+      }]
+    },
+    "preferred" : true
+  }],
+  "generalPractitioner" : [{
+    "reference" : "Practitioner/uy-profesional-sanchez-completo"
+  }],
+  "managingOrganization" : {
+    "reference" : "Organization/uy-organizacion-abc-completa"
+  },
+  "link" : [{
+    "other" : {
+      "reference" : "Patient/uy-paciente-perez"
+    },
+    "type" : "seealso"
+  }]
+}
+
+```

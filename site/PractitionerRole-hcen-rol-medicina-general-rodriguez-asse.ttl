@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-medicina-general-rodriguez-asse> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-rol-medicina-general-rodriguez-asse"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es-UY"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Martín Andrés Rodríguez Silva ejerce como médico general, especialidad medicina general, en la Administración de los Servicios de Salud del Estado (ASSE) desde el 01/03/2018.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2018-03-01"^^xsd:date ]
+  ] ; # 
+  fhir:practitioner [
+     fhir:l <http://fhir.hcen.gub.uy/Practitioner/hcen-profesional-rodriguez> ;
+     fhir:reference [ fhir:v "Practitioner/hcen-profesional-rodriguez" ] ;
+     fhir:display [ fhir:v "Martín Andrés Rodríguez Silva" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+     fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ] ;
+     fhir:display [ fhir:v "ASSE" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:59058001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "59058001" ] ;
+       fhir:display [ fhir:v "médico general" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394802001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "394802001" ] ;
+       fhir:display [ fhir:v "medicina general" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

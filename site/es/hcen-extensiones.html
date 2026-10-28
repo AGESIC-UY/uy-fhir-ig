@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Extensiones HCEN - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Extensiones HCEN - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Extensiones HCEN</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Extensiones HCEN</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Extensiones HCEN</h2>
   
 
@@ -432,12 +435,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#extensiones-locales" id="markdown-toc-extensiones-locales">Extensiones locales</a></li>
-  <li><a href="#extensiones-ihe-reutilizadas" id="markdown-toc-extensiones-ihe-reutilizadas">Extensiones IHE reutilizadas</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
 <p>Las extensiones HCEN representan datos específicos del intercambio documental. Se utilizan en los perfiles enlazados; no agregan por sí solas requisitos a los perfiles Core.</p>
 
@@ -465,7 +464,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td><a href="StructureDefinition-ext-home-community-id.html">ID de Comunidad de Origen</a></td>
-      <td>Comunidad de origen del documento o conjunto. Obligatoria en DocumentReference y SubmissionSet.</td>
+      <td>Comunidad de origen del documento o conjunto. Obligatoria en DocumentReference y SubmissionSet, con valor fijo <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.2.10000675.73183.1</code>.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-ext-practitioner-certification.html">Certificación del Profesional</a></td>
@@ -494,14 +493,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h3 id="extensiones-ihe-reutilizadas">Extensiones IHE reutilizadas</h3>
-
-<p>HCENSubmissionSet utiliza <code class="language-plaintext highlighter-rouge">ihe-designationType</code> para su clasificación clínica, <code class="language-plaintext highlighter-rouge">ihe-sourceId</code> para identificar al origen e <code class="language-plaintext highlighter-rouge">ihe-intendedRecipient</code> para destinatarios, desde MHD 4.2.3. No se publica una extensión local ContentTypeCode que duplique <code class="language-plaintext highlighter-rouge">designationType</code>.</p>
-
-<p>La extensión <code class="language-plaintext highlighter-rouge">binary</code> de DocumentReference.content.attachment es una referencia a HCENCdaBinary, no su <code class="language-plaintext highlighter-rouge">id</code> ni los datos CDA. Las extensiones de certificación y notificación obligatoria se mantienen definidas, pero no se incorporan a HCENPractitioner ni a otro perfil hasta que se acuerde cómo representar su contexto documental.</p>
-
-<p>Las extensiones locales simples requieren un valor cuando están presentes. Una extensión booleana con valor <code class="language-plaintext highlighter-rouge">false</code> no equivale a omitir un dato desconocido. Los apellidos y las extensiones comunes de personas se consultan en el <a href="extensiones.html">Core</a>.</p>
-
 
 
 
@@ -528,10 +519,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

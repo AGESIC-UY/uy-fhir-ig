@@ -1,0 +1,235 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Composition/uy-consulta-no-urgente-traumatologia> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "uy-consulta-no-urgente-traumatologia"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es-UY"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><div class=\"uy-clinical-doc\"><div class=\"uy-clinical-doc__header\"><p class=\"uy-clinical-doc__title\">Hoja de Consulta No Urgente</p><p class=\"uy-clinical-doc__subtitle\">Documento final — 23/08/2019 11:05 (UTC-03:00) — Administración de los Servicios de Salud del Estado (ASSE)</p></div><div class=\"uy-clinical-doc__section uy-clinical-doc__section--patient\"><h4 class=\"uy-clinical-doc__section-title\">Datos del paciente</h4><dl class=\"uy-clinical-doc__fields\"><dt>Nombre</dt><dd>María Laura González Pereira</dd><dt>Cédula de identidad</dt><dd>45000001</dd><dt>Identificador (MRN ficticio FHIR)</dt><dd>1873455</dd><dt>Sexo administrativo</dt><dd>Femenino</dd><dt>Fecha de nacimiento</dt><dd>14/03/1987</dd></dl></div><div class=\"uy-clinical-doc__section uy-clinical-doc__section--encounter\"><h4 class=\"uy-clinical-doc__section-title\">Datos de la consulta</h4><dl class=\"uy-clinical-doc__fields\"><dt>Profesional</dt><dd>Guillermo Sousa</dd><dt>Institución</dt><dd>Administración de los Servicios de Salud del Estado (ASSE)</dd><dt>Servicio</dt><dd>Policlínica de traumatología (consulta ambulatoria)</dd><dt>Fecha y hora</dt><dd>23/08/2019, 10:05 a 10:15</dd><dt>Confidencialidad</dt><dd>Normal</dd></dl></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Motivos de consulta</h4><p>Mialgia.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Diagnósticos</h4><p>Desgarro muscular. Fecha de inicio: 22/08/2016. Estado: problema no resuelto. Grado de certeza: confirmado.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Procedimientos</h4><p>Vendaje de extremidad superior. Resultado: normal. Observaciones: paciente sedado durante el procedimiento.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Tratamiento no farmacológico realizado</h4><p>Indicación/recomendación: administración de oxígeno.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Tratamiento farmacológico realizado</h4><p>Paracetamol 650 mg comprimido. Se administra 1 comprimido.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Tratamiento no farmacológico indicado al alta</h4><p>Hacer reposo durante las próximas 2 semanas.</p></div><div class=\"uy-clinical-doc__section\"><h4 class=\"uy-clinical-doc__section-title\">Tratamiento farmacológico indicado al alta</h4><p>1 comprimido de paracetamol 650 mg, vía oral, cada 8 horas durante 5 días, tomar con alimentos. Suspender en caso de alguna reacción adversa.</p></div><div class=\"uy-clinical-doc__section uy-clinical-doc__section--followup\"><h4 class=\"uy-clinical-doc__section-title\">Instrucciones de seguimiento</h4><p>Próximo control: 02/09/2019 (revisión a los 10 días). Referencia al alta: consulta de atención primaria.</p></div></div></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.858.2.1.67430.20190823110524.1.1" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:34108-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "34108-1" ] ;
+       fhir:display [ fhir:v "Hoja de consulta no urgente" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://fhir.hcen.gub.uy/Encounter/hcen-encuentro-traumatologia> ;
+     fhir:reference [ fhir:v "Encounter/hcen-encuentro-traumatologia" ]
+  ] ; # 
+  fhir:date [ fhir:v "2019-08-23T11:05:24-03:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> ;
+     fhir:reference [ fhir:v "PractitionerRole/hcen-rol-traumatologia-sousa" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Consulta no urgente"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:custodian [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+     fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Motivos de consulta" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10154-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "10154-3" ] ;
+         fhir:display [ fhir:v "Motivo de consulta" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Descripción del motivo de consulta: mialgia.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-motivo-consulta-mialgia> ;
+       fhir:reference [ fhir:v "Condition/hcen-motivo-consulta-mialgia" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Diagnósticos" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Diagnostico" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Desgarro muscular. Fecha de inicio: 22/08/2016. Estado del problema: problema no resuelto. Grado de certeza: confirmado.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-diagnostico-desgarro-muscular> ;
+       fhir:reference [ fhir:v "Condition/hcen-diagnostico-desgarro-muscular" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Procedimientos relevantes realizados" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:47519-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "47519-4" ] ;
+         fhir:display [ fhir:v "Procedimientos relevantes realizados" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Vendaje de extremidad superior. Resultado del procedimiento: normal. Observaciones relevantes: paciente sedado durante el procedimiento.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-vendaje> ;
+       fhir:reference [ fhir:v "Procedure/hcen-procedimiento-vendaje" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento no farmacológico realizado durante la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:258071000179109 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "258071000179109" ] ;
+         fhir:display [ fhir:v "Tratamiento no farmacológico realizado durante la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Indicación/recomendación: administración de oxígeno.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-oxigeno> ;
+       fhir:reference [ fhir:v "Procedure/hcen-procedimiento-oxigeno" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento farmacológico realizado durante la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:19011-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "19011-6" ] ;
+         fhir:display [ fhir:v "Tratamiento farmacológico realizado durante la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Fármaco: paracetamol 650 mg comprimido. Observaciones relevantes: se administra 1 comprimido.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/MedicationAdministration/hcen-med-admin-paracetamol> ;
+       fhir:reference [ fhir:v "MedicationAdministration/hcen-med-admin-paracetamol" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento no farmacológico indicado al final de la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:258081000179106 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "258081000179106" ] ;
+         fhir:display [ fhir:v "Tratamiento no farmacológico indicado al final de la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Indicación/recomendación: hacer reposo durante las próximas 2 semanas.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-reposo> ;
+       fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-reposo" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento farmacológico indicado al final de la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:29305-0 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "29305-0" ] ;
+         fhir:display [ fhir:v "Tratamiento farmacológico indicado al final de la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Fármaco: 1 comprimido de paracetamol 650 mg comprimido. Vía de administración: vía oral. Cantidad: 1 comprimido. Frecuencia de administración: cada 8 horas. Momento de administración: tomar con alimentos. Duración: 5 días. Observaciones relevantes: suspender en caso de alguna reacción adversa.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/MedicationRequest/hcen-med-req-paracetamol> ;
+       fhir:reference [ fhir:v "MedicationRequest/hcen-med-req-paracetamol" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Instrucciones de seguimiento" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18776-5 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "18776-5" ] ;
+         fhir:display [ fhir:v "Instrucciones de seguimiento" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Fecha de próxima consulta: 02/09/2019. Próxima consulta: revisión a los 10 días. Referencia al alta: consulta de atención primaria.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-seguimiento> ;
+       fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-seguimiento" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

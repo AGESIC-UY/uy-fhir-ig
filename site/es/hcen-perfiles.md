@@ -1,8 +1,8 @@
-# Perfiles HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Perfiles HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfiles HCEN
 
-Los perfiles HCEN agregan las restricciones del intercambio a los recursos nacionales o a FHIR R4. Para datos de personas y organizaciones se utilizan los derivados del Core; para publicar se combinan metadatos, documento clínico y Bundle de publicación.
+Los perfiles HCEN agregan las restricciones del intercambio a los recursos nacionales o a FHIR R4.
 
 ### Seleccionar un perfil
 
@@ -14,11 +14,13 @@ Tipos de dato para los identificadores del paciente, del documento y de sus meta
 
 | | | |
 | :--- | :--- | :--- |
+| [HCENCIIdentifier](StructureDefinition-hcen-ci-identifier.md) | `Identifier` | CI uruguaya en HCEN; opcional MS en pacientes y obligatoria en profesionales. |
+| [HCENOrgIdentifier](StructureDefinition-hcen-org-identifier.md) | `UYOrgIdentifier` | `system = urn:ietf:rfc:3986`y URI OID de organización en`value`. |
 | [HCENMRNIdentifier](StructureDefinition-hcen-mrn-identifier.md) | `UYMRNIdentifier` | Formato del dominio OID del MRN; autorización mediante lógica interna de Plataforma. |
 | [HCENDocumentIdentifier](StructureDefinition-hcen-document-identifier.md) | [IHE MHD UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier) | OID del documento clínico con`use = usual`. |
 | [HCENDocumentReferenceIdentifier](StructureDefinition-hcen-document-reference-identifier.md) | [IHE MHD EntryUUID Identifier](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier) | EntryUUID del DocumentReference. |
 | [HCENSubmissionSetIdentifier](StructureDefinition-hcen-submission-set-identifier.md) | [IHE MHD EntryUUID Identifier](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier) | EntryUUID del SubmissionSet. |
-| [HCENSubmissionSetUniqueIdIdentifier](StructureDefinition-hcen-submission-set-unique-id-identifier.md) | [IHE MHD UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier) | UniqueId del SubmissionSet: OID global S propio del conjunto, distinto de`[oid_documento_clinico]`, con`use = usual`. |
+| [HCENSubmissionSetUniqueIdIdentifier](StructureDefinition-hcen-submission-set-unique-id-identifier.md) | [IHE MHD UniqueIdIdentifier](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier) | UniqueId del SubmissionSet, distinto de`[oid_documento_clinico]`, con`use = usual`. |
 
 #### Personas y organizaciones
 
@@ -30,6 +32,8 @@ Derivan de los perfiles de Core Uruguay y agregan las obligaciones del intercamb
 | [HCENPractitioner](StructureDefinition-hcen-practitioner.md) | `UYPractitioner` | Profesional identificado por CI en los metadatos. |
 | [HCENPractitionerRole](StructureDefinition-hcen-practitioner-role.md) | `UYPractitionerRole` | Relación obligatoria entre profesional y organización. |
 | [HCENOrganization](StructureDefinition-hcen-organization.md) | `UYOrganization` | Organización identificada y con nombre. |
+
+ Los datos obligatorios, opcionales y Must Support se explican en las páginas de [HCENPatient](StructureDefinition-hcen-patient.md), [HCENPractitioner](StructureDefinition-hcen-practitioner.md) y [HCENPractitionerRole](StructureDefinition-hcen-practitioner-role.md). Las reglas comunes de [Must Support](hcen-conformidad.md#must-support) se aplican a todos ellos.
 
 #### Metadatos y envío
 
@@ -58,10 +62,4 @@ Describen el contenido clínico de la [Hoja de Consulta No Urgente](hcen-documen
 | [HCENMedicationRequest](StructureDefinition-hcen-medication-request.md) | `MedicationRequest` | Tratamiento farmacológico indicado al final de la asistencia. |
 | [HCENServiceRequest](StructureDefinition-hcen-service-request.md) | `ServiceRequest` | Tratamiento no farmacológico indicado al final de la asistencia o instrucciones de seguimiento. |
 | [HCENDosage](StructureDefinition-hcen-dosage.md) | `Dosage` | Pauta de administración indicada por el profesional. |
-
-### Datos, contexto y conformidad
-
-Los perfiles HCEN de personas y organizaciones conservan las definiciones reutilizables del Core y agregan cardinalidades, referencias y MS. La primera familia de perfiles clínicos corresponde a la [Hoja de Consulta No Urgente](hcen-documentos-clinicos.md), cuyo Bundle documental se perfila en HCENConsultaNoUrgenteBundle. En esta versión no se publica un perfil específico para el Bundle `searchset`.
-
-Para completar identificadores consultar [Identificadores HCEN](hcen-identificadores.md). Las obligaciones de MS se definen en [Conformidad](hcen-conformidad.md#must-support); el comportamiento del envío se explica en [Publicación](hcen-iti-65.md).
 

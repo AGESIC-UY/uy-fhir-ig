@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Consultar metadatos - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Consultar metadatos — HCEN ITI-67 - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-transacciones.html'><b>Transacciones</b></a></li><li><b>Consultar metadatos</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-transacciones.html'><b>Transacciones</b></a></li><li><b>Consultar metadatos — HCEN ITI-67</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,8 +418,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Consultar metadatos</h2>
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Consultar metadatos — HCEN ITI-67</h2>
   
 
 
@@ -434,76 +437,135 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#actores-y-solicitud" id="markdown-toc-actores-y-solicitud">Actores y solicitud</a></li>
-  <li><a href="#filtros-en-revisión" id="markdown-toc-filtros-en-revisión">Filtros en revisión</a></li>
+  <li><a href="#actores-y-precondiciones" id="markdown-toc-actores-y-precondiciones">Actores y precondiciones</a></li>
+  <li><a href="#solicitud" id="markdown-toc-solicitud">Solicitud</a></li>
+  <li><a href="#reglas-de-procesamiento" id="markdown-toc-reglas-de-procesamiento">Reglas de procesamiento</a></li>
   <li><a href="#respuesta" id="markdown-toc-respuesta">Respuesta</a></li>
-  <li><a href="#errores-y-verificación" id="markdown-toc-errores-y-verificación">Errores y verificación</a></li>
+  <li><a href="#errores" id="markdown-toc-errores">Errores</a></li>
 </ul>
 
 </div>
-<p>Esta transacción permite encontrar metadatos DocumentReference registrados en Plataforma. El prestador utiliza la respuesta para seleccionar documentos; recuperar el contenido corresponde a <a href="hcen-iti-68.html">Recuperar documentos</a>.</p>
+<p>Esta transacción permite encontrar los metadatos de documentos registrados en Plataforma. El implementador consulta por el MRN del paciente, selecciona un documento y utiliza la URL recibida para recuperarlo mediante <a href="hcen-iti-68.html">HCEN ITI-68</a>.</p>
 
-<h3 id="actores-y-solicitud">Actores y solicitud</h3>
+<p>Plataforma consulta el Registro XDS y construye los DocumentReference de respuesta. No se presupone que conserve recursos FHIR individuales accesibles por GET.</p>
 
-<p>El prestador consulta y Plataforma responde. La consulta inicial propuesta identifica al paciente con su MRN local mediante <code class="language-plaintext highlighter-rouge">patient.identifier</code>, usando el token <code class="language-plaintext highlighter-rouge">system|value</code> codificado en la URL.</p>
+<h3 id="actores-y-precondiciones">Actores y precondiciones</h3>
 
-<figure style="margin:0 0 1em;">
-  <img src="hcen-cu-encontrar-documentos.svg" alt="El prestador solicitante consulta a Plataforma por el MRN del paciente y recibe los metadatos de los documentos encontrados, que pueden ser ninguno. Luego elige qué documento recuperar." style="width:100%;max-width:760px;height:auto;" />
-  <figcaption>Consulta de metadatos de los documentos de un paciente.</figcaption>
-</figure>
+<p>El prestador actúa como solicitante y Plataforma consulta los metadatos registrados. La solicitud identifica al paciente mediante su dominio y valor MRN.</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/DocumentReference?patient.identifier=[system-codificado]%7C[valor-codificado]
-Accept: application/fhir+json
-</span></code></pre></div></div>
+<h3 id="solicitud">Solicitud</h3>
 
-<h3 id="filtros-en-revisión">Filtros en revisión</h3>
+<p>La consulta se realiza mediante POST sobre <code class="language-plaintext highlighter-rouge">DocumentReference/_search</code>. El cuerpo contiene los parámetros codificados como formulario, no un recurso JSON.</p>
 
-<p>Se toma como referencia <a href="https://profiles.ihe.net/ITI/MHD/4.2.3/ITI-67.html">MHD ITI-67, versión 4.2.3</a>. La siguiente lista organiza los filtros candidatos del borrador; <strong>no acredita que Plataforma los soporte ni los convierte en capacidades obligatorias confirmadas</strong>.</p>
+<h4 id="filtros-aceptados">Filtros aceptados</h4>
+
+<p>La siguiente tabla presenta los filtros aceptados por la solicitud. No es la lista final de parámetros, podrá ampliarse o ajustarse en próximas versiones.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Propósito</th>
-      <th>Parámetros candidatos</th>
+      <th>Parámetro</th>
+      <th>Obligatorio</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Identificar al paciente o documento</td>
-      <td><code class="language-plaintext highlighter-rouge">patient</code>, <code class="language-plaintext highlighter-rouge">patient.identifier</code>, <code class="language-plaintext highlighter-rouge">identifier</code></td>
+      <td><code class="language-plaintext highlighter-rouge">patient.identifier</code></td>
+      <td>Sí</td>
+      <td>Dominio y valor MRN del paciente, con el formato <code>system&#124;value</code>. La CI no sustituye al MRN.</td>
     </tr>
     <tr>
-      <td>Clasificar</td>
-      <td><code class="language-plaintext highlighter-rouge">category</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">setting</code>, <code class="language-plaintext highlighter-rouge">facility</code>, <code class="language-plaintext highlighter-rouge">event</code>, <code class="language-plaintext highlighter-rouge">format</code>, <code class="language-plaintext highlighter-rouge">security-label</code></td>
+      <td><code class="language-plaintext highlighter-rouge">status</code></td>
+      <td>Sí</td>
+      <td>Estado del documento.</td>
     </tr>
     <tr>
-      <td>Limitar por tiempo</td>
-      <td><code class="language-plaintext highlighter-rouge">creation</code>, <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">period</code></td>
+      <td><code class="language-plaintext highlighter-rouge">period1</code></td>
+      <td>No</td>
+      <td>Límite inferior del período de búsqueda.</td>
     </tr>
     <tr>
-      <td>Identificar autores</td>
-      <td><code class="language-plaintext highlighter-rouge">author.given</code>, <code class="language-plaintext highlighter-rouge">author.family</code></td>
+      <td><code class="language-plaintext highlighter-rouge">period2</code></td>
+      <td>No</td>
+      <td>Límite superior del período de búsqueda.</td>
     </tr>
     <tr>
-      <td>Estado y relaciones</td>
-      <td><code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">related</code></td>
+      <td><code class="language-plaintext highlighter-rouge">category</code></td>
+      <td>No</td>
+      <td>Tipo genérico de documento (EJE 1).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">type</code></td>
+      <td>No</td>
+      <td>Tipo detallado de documento (EJE 2).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">setting</code></td>
+      <td>No</td>
+      <td>Servicio médico (EJE 3).</td>
     </tr>
   </tbody>
 </table>
 
-<p>Salud Digital debe confirmar filtros mínimos, combinaciones, cadenas sobre autor, paginación y tratamiento de parámetros desconocidos. No se incorporan automáticamente las opciones IHE de búsqueda de texto completo ni <code class="language-plaintext highlighter-rouge">targetCommunityIdList</code>.</p>
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El Gateway puede soportar un conjunto distinto de parámetros opcionales en comparación a Plataforma. Se asegura que soporta los obligatorios.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<h4 id="ejemplos-de-solicitud">Ejemplos de solicitud</h4>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">[base]/DocumentReference/_search</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
+
+patient.identifier=[dominio-codificado]%7C[MRN-codificado]&amp;status=current
+</code></pre></div></div>
+
+<p>Por ejemplo, con los datos del paciente de la guía:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">[base]/DocumentReference/_search</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
+
+patient.identifier=urn%3Aoid%3A2.16.858.2.999999.72768.1%7C1873455&amp;status=current
+</code></pre></div></div>
+
+<p>El dominio del ejemplo es ficticio.</p>
+
+<h3 id="reglas-de-procesamiento">Reglas de procesamiento</h3>
+
+<p>Plataforma consulta el Registro XDS aplicando los filtros de la solicitud.</p>
 
 <h3 id="respuesta">Respuesta</h3>
 
-<p>La respuesta de búsqueda propuesta es <code class="language-plaintext highlighter-rouge">200 OK</code> con un Bundle <code class="language-plaintext highlighter-rouge">searchset</code>. En esta versión no se publica un perfil específico para ese Bundle. Las coincidencias utilizan <code class="language-plaintext highlighter-rouge">entry.search.mode = match</code>; los mensajes OperationOutcome utilizan <code class="language-plaintext highlighter-rouge">outcome</code>. Se incluye un enlace <code class="language-plaintext highlighter-rouge">self</code> y, cuando haya continuación, el cliente utiliza los enlaces devueltos por Plataforma.</p>
+<p>Una consulta válida devuelve un Bundle de búsqueda con los metadatos encontrados. Si no hay coincidencias, el resultado es vacío. Esto no representa un error de documento inexistente.</p>
 
-<p>Una búsqueda válida sin coincidencias produce un conjunto vacío, no un error de documento inexistente. <code class="language-plaintext highlighter-rouge">total</code>, si se devuelve, expresa el total de coincidencias, no la cantidad de recursos auxiliares. La inclusión de otros recursos mediante <code class="language-plaintext highlighter-rouge">_include</code> queda fuera del contrato inicial.</p>
+<p>Cada resultado permite identificar el documento y obtener su URL de recuperación en <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code>. Esta versión describe el resultado de forma general, sin especificar la estructura detallada del DocumentReference devuelto por Plataforma.</p>
 
-<h3 id="errores-y-verificación">Errores y verificación</h3>
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El resultado que devuelve el Gateway para la ITI-67 difiere del que devuelve Plataforma en algunos campos del DocumentReference. En particular son relevantes: Gateway devuelve la extension binary con un id interno - Plataforma no, Gateway devuelve identificadores internos para los recursos referenciados - Plataforma los devuelve en <code>contained</code></p>
+</div>
+<!-- HCEN-POC: fin -->
 
-<p>El OperationOutcome de parámetro no admitido (material de desarrollo reservado para una versión futura) es ilustrativo; el contrato debe decidir cuándo rechazar un parámetro y cuándo informar que no fue aplicado. No debe inferirse un estado HTTP a partir de <code class="language-plaintext highlighter-rouge">issue.code</code>.</p>
+<h4 id="url-de-recuperación">URL de recuperación</h4>
 
-<p>Las pruebas deben cubrir una coincidencia, resultado vacío, dominio y valor MRN, mensajes <code class="language-plaintext highlighter-rouge">outcome</code> y navegación entre páginas cuando se acuerde la paginación. Consultar los <a href="hcen-ejemplos.html">ejemplos</a>. Los filtros definitivos y la declaración formal de capacidades quedan pendientes para una versión posterior.</p>
+<p>La ubicación pública del documento tiene la forma conceptual:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[base]/Document?Repositoryuniqueid=[oid-repositorio]&amp;Documentuniqueid=[oid-documento]
+</code></pre></div></div>
+
+<p>Los parámetros identifican el repositorio y el documento. No son el identificador del SubmissionSet ni el <code class="language-plaintext highlighter-rouge">fullUrl</code> del envío. La URL devuelta no es la URL original del prestador que se informó en HCEN ITI-65.</p>
+
+<p>Para recuperar contenido se utiliza la URL completa recibida, sin reconstruirla. <code class="language-plaintext highlighter-rouge">Accept</code> selecciona la representación existente, como se explica en <a href="hcen-iti-68.html">HCEN ITI-68</a>.</p>
+
+<h3 id="errores">Errores</h3>
+
+<p>Una solicitud sin los filtros obligatorios se rechaza. Esta versión no especifica los códigos HTTP particulares para los errores de validación.</p>
 
 
 
@@ -531,10 +593,10 @@ Accept: application/fhir+json
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

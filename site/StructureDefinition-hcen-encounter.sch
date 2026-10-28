@@ -20,6 +20,7 @@
       <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
       <sch:assert test="count(f:episodeOfCare) &lt;= 0">episodeOfCare: maximum cardinality of 'episodeOfCare' is 0</sch:assert>
       <sch:assert test="count(f:basedOn) &lt;= 0">basedOn: maximum cardinality of 'basedOn' is 0</sch:assert>
+      <sch:assert test="count(f:participant) &gt;= 1">participant: minimum cardinality of 'participant' is 1</sch:assert>
       <sch:assert test="count(f:appointment) &lt;= 0">appointment: maximum cardinality of 'appointment' is 0</sch:assert>
       <sch:assert test="count(f:length) &lt;= 0">length: maximum cardinality of 'length' is 0</sch:assert>
       <sch:assert test="count(f:reasonCode) &lt;= 0">reasonCode: maximum cardinality of 'reasonCode' is 0</sch:assert>
@@ -67,9 +68,16 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:Encounter/f:participant</sch:title>
+    <sch:rule context="f:Encounter/f:participant">
+      <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:Encounter/f:participant/f:period</sch:title>
     <sch:rule context="f:Encounter/f:participant/f:period">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:start) &gt;= 1">start: minimum cardinality of 'start' is 1</sch:assert>
       <sch:assert test="count(f:start) &lt;= 1">start: maximum cardinality of 'start' is 1</sch:assert>
       <sch:assert test="count(f:end) &lt;= 1">end: maximum cardinality of 'end' is 1</sch:assert>
     </sch:rule>

@@ -1,35 +1,39 @@
-# Certificación del Profesional - Guía de Implementación FHIR de Uruguay v0.1.0
+# Certificación del Profesional - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: Certificación del Profesional 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+Esta extensión se mantiene definida, pero no se incorpora a [HCENPractitioner](StructureDefinition-hcen-practitioner.md) ni a otro perfil hasta que se acuerde cómo representar su contexto documental.
 
-**Usages:**
+Cuando la extensión está presente, `valueBoolean` es obligatorio. El valor `false` no equivale a omitir un dato desconocido.
 
-* This Extension is not used by any profiles in this Implementation Guide
+**Información de uso**
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-practitioner-certification)
+**Usos:**
+
+* Ningún perfil de esta guía utiliza esta extensión
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-practitioner-certification)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si este profesional es quien certifica (firma) el documento, para discriminarlo de los demás autores listados. Mapea a DocumentEntry.authorCertification.
+Extensión simple de tipo boolean: Indica si este profesional es quien certifica (firma) el documento, para discriminarlo de los demás autores listados. Mapea a DocumentEntry.authorCertification.
 
  **Vista diferencial** 
 
@@ -37,13 +41,13 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
  **Vista instantánea** 
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type boolean: Indica si este profesional es quien certifica (firma) el documento, para discriminarlo de los demás autores listados. Mapea a DocumentEntry.authorCertification.
+Extensión simple de tipo boolean: Indica si este profesional es quien certifica (firma) el documento, para discriminarlo de los demás autores listados. Mapea a DocumentEntry.authorCertification.
 
  
 
@@ -58,11 +62,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-practitioner-
   "resourceType" : "StructureDefinition",
   "id" : "ext-practitioner-certification",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-practitioner-certification",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PractitionerCertification",
   "title" : "Certificación del Profesional",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

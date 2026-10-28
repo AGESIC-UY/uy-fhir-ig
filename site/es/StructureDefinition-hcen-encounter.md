@@ -1,12 +1,13 @@
-# HCEN Evento Clínico - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Evento Clínico - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Evento Clínico 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [HCEN Evento Clínico](StructureDefinition-hcen-encounter.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Referencia a este perfil: [HCEN Evento Clínico](StructureDefinition-hcen-encounter.md) and [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [Encounter/hcen-encuentro-traumatologia](Encounter-hcen-encuentro-traumatologia.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-encounter)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-encounter)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,34 +15,34 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Encounter](http://hl7.org/fhir/R4/encounter.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Encounter](http://hl7.org/fhir/R4/encounter.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 1 element
- Must-Support: 2 elements
- Fixed: 2 elements
- Prohibited: 14 elements
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [Encounter](http://hl7.org/fhir/R4/encounter.html) .
+
+** Resumen **
+
+Obligatorios: 4 elementos
+ Must-Support: 2 elementos
+ Fijos: 2 elementos
+ Prohibidos: 14 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
@@ -49,34 +50,34 @@ This structure refers to these other structures:
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Encounter](http://hl7.org/fhir/R4/encounter.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Encounter](http://hl7.org/fhir/R4/encounter.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 1 element
- Must-Support: 2 elements
- Fixed: 2 elements
- Prohibited: 14 elements
+Obligatorios: 4 elementos
+ Must-Support: 2 elementos
+ Fijos: 2 elementos
+ Prohibidos: 14 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
@@ -95,11 +96,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
   "resourceType" : "StructureDefinition",
   "id" : "hcen-encounter",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENEncounter",
   "title" : "HCEN Evento Clínico",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -285,8 +286,9 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
     {
       "id" : "Encounter.participant",
       "path" : "Encounter.participant",
-      "short" : "Profesional involucrado en el evento clínico",
-      "definition" : "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico.",
+      "short" : "Profesional involucrado en el evento clínico — al menos uno, con la hora de firma en period.start",
+      "definition" : "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico. Al menos un participant debe estar presente para registrar la hora de firma en period.start.",
+      "min" : 1,
       "mapping" : [{
         "identity" : "HCENEncounterToCDA",
         "map" : "ClinicalDocument/author/assignedAuthor"
@@ -303,6 +305,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
     {
       "id" : "Encounter.participant.period",
       "path" : "Encounter.participant.period",
+      "min" : 1,
       "mapping" : [{
         "identity" : "HCENEncounterToCDA",
         "map" : "ClinicalDocument/author/time"
@@ -311,6 +314,9 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-encounter.cs
     {
       "id" : "Encounter.participant.period.start",
       "path" : "Encounter.participant.period.start",
+      "short" : "Hora de firma del profesional — única ubicación disponible en esta guía para este dato",
+      "definition" : "Hora de firma del profesional (mapea a ClinicalDocument/author/time en CDA, donde es obligatoria). No existe otra ubicación en esta guía para este dato.",
+      "min" : 1,
       "mapping" : [{
         "identity" : "HCENEncounterToCDA",
         "map" : "ClinicalDocument/author/time/@value"

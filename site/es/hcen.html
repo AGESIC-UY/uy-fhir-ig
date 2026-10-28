@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Introducción a HCEN - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Introducción a HCEN - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Introducción a HCEN</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><b>Introducción a HCEN</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Introducción a HCEN</h2>
   
 
@@ -435,7 +438,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#qué-es-hcen" id="markdown-toc-qué-es-hcen">¿Qué es HCEN?</a></li>
-  <li><a href="#de-dónde-se-parte" id="markdown-toc-de-dónde-se-parte">De dónde se parte</a></li>
   <li><a href="#alcance-de-esta-versión" id="markdown-toc-alcance-de-esta-versión">Alcance de esta versión</a></li>
   <li><a href="#marco-normativo" id="markdown-toc-marco-normativo">Marco normativo</a></li>
   <li><a href="#recorrido-de-implementación" id="markdown-toc-recorrido-de-implementación">Recorrido de implementación</a></li>
@@ -443,74 +445,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Este bloque describe cómo un prestador registra pacientes, publica metadatos y comparte documentos clínicos mediante la <strong>Historia Clínica Electrónica Nacional (HCEN)</strong>. Reutiliza las representaciones de <a href="introduccion.html">Core Uruguay</a> y agrega las obligaciones del intercambio. Los términos y siglas propios de este bloque se explican en el <a href="hcen-glosario.html">Glosario HCEN</a>.</p>
+<p>Este bloque describe cómo un prestador puede interoperar con la <strong>Historia Clínica Electrónica Nacional (HCEN)</strong> a través de FHIR. Reutiliza las representaciones de <a href="introduccion.html">Core Uruguay</a> y agrega las obligaciones del intercambio. Los términos y siglas propios de este bloque se explican en el <a href="hcen-glosario.html">Glosario HCEN</a>.</p>
 
 <h3 id="qué-es-hcen">¿Qué es HCEN?</h3>
 
-<p>HCEN permite que los prestadores de salud compartan los documentos clínicos de una persona con fines asistenciales. Su funcionamiento es federado: cada prestador conserva sus documentos en su propio repositorio, y Plataforma registra a los pacientes y los metadatos que permiten encontrar esos documentos. Cuando otro prestador necesita un documento, lo solicita a Plataforma, que lo obtiene del repositorio de origen.</p>
+<p>La HCEN es una plataforma de interoperabilidad que permite el intercambio de información clínica entre las instituciones, conectando a las organizaciones a través de una red privada de datos.​ Su principal cometido es promover y mejorar la continuidad del proceso asistencial de los usuarios del sistema de salud uruguayo.</p>
+
+<p>HCEN permite que los prestadores compartan los documentos clínicos que generan durante la atención, facilitando el acceso a la información de un paciente ante un evento asistencial.</p>
+
+<p>Plataforma HCEN está basada originalmente en el estándar <strong>IHE XDS.b</strong> y ofrece una interfaz FHIR para el intercambio de información. A diferencia de un servidor FHIR convencional, no almacena los recursos clínicos publicados, sino que utiliza un <strong>modelo federado</strong>: cada prestador conserva los documentos en su propio repositorio, mientras que Plataforma registra la información de los pacientes y los metadatos necesarios para localizar esos documentos.</p>
+
+<p>Cuando un prestador necesita consultar un documento clínico, puede buscarlo y solicitarlo a través de Plataforma, que lo recupera del repositorio de origen y se lo entrega.</p>
 
 <figure style="margin:0 0 1em;">
   <img src="hcen-modelo-federado.svg" alt="El prestador de origen conserva los documentos en su repositorio y registra pacientes y metadatos en Plataforma. El prestador solicitante consulta los metadatos y solicita un documento a Plataforma, que lo obtiene del repositorio de origen y lo devuelve." style="width:100%;max-width:880px;height:auto;" />
-  <figcaption>Los documentos permanecen en el prestador de origen; Plataforma registra pacientes y metadatos e intermedia la recuperación.</figcaption>
+  <figcaption>Los documentos permanecen en el prestador de origen. Plataforma registra pacientes y metadatos e intermedia la recuperación.</figcaption>
 </figure>
 
 <p>Las funciones de cada parte se detallan en <a href="hcen-actores.html">Actores y responsabilidades</a>.</p>
 
-<h3 id="de-dónde-se-parte">De dónde se parte</h3>
-
-<p>El intercambio que esta guía toma como antecedente utiliza documentos <strong>CDA</strong> (Clinical Document Architecture, el formato de documentos clínicos de HL7), metadatos <strong>XDS</strong> (Cross-Enterprise Document Sharing, el perfil de <strong>IHE</strong>, Integrating the Healthcare Enterprise, para compartir documentos entre organizaciones) y mensajería HL7 v2 para la identificación de pacientes. Esta guía describe el mismo intercambio sobre FHIR, tomando como referencia los perfiles equivalentes de IHE.</p>
-
-<p>Ese origen explica dos decisiones que se repiten en las páginas siguientes:</p>
-
-<ul>
-  <li>Cada documento se conserva en <strong>dos representaciones</strong>, FHIR y CDA, y ambas deben poder recuperarse.</li>
-  <li>Los metadatos conservan conceptos de XDS, como el conjunto de envío o los identificadores <code class="language-plaintext highlighter-rouge">entryUUID</code> y <code class="language-plaintext highlighter-rouge">uniqueId</code>.</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th>Concepto conocido</th>
-      <th>Equivalente en esta guía</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Conjunto de envío XDS (SubmissionSet)</td>
-      <td>Recurso <code class="language-plaintext highlighter-rouge">List</code>, perfilado en <a href="StructureDefinition-hcen-submission-set.html">HCENSubmissionSet</a></td>
-    </tr>
-    <tr>
-      <td>Metadatos del documento XDS (DocumentEntry)</td>
-      <td>Recurso <code class="language-plaintext highlighter-rouge">DocumentReference</code>, perfilado en <a href="StructureDefinition-hcen-document-reference.html">HCENDocumentReference</a></td>
-    </tr>
-    <tr>
-      <td>Documento CDA</td>
-      <td>Se conserva para recuperación mediante <a href="StructureDefinition-hcen-cda-binary.html">HCENCdaBinary</a> y se referencia en los metadatos. Binary CDA no debería (SHOULD NOT) enviarse en la publicación</td>
-    </tr>
-    <tr>
-      <td>Alimentación de identidades de pacientes en HL7 v2</td>
-      <td><a href="hcen-iti-104.html">Registrar o actualizar pacientes</a>, con el recurso <code class="language-plaintext highlighter-rouge">Patient</code></td>
-    </tr>
-    <tr>
-      <td>Publicación y registro de documentos</td>
-      <td><a href="hcen-iti-65.html">Publicar documentos</a></td>
-    </tr>
-    <tr>
-      <td>Consulta al registro de metadatos</td>
-      <td><a href="hcen-iti-67.html">Consultar metadatos</a></td>
-    </tr>
-    <tr>
-      <td>Recuperación de documentos del repositorio</td>
-      <td><a href="hcen-iti-68.html">Recuperar documentos</a></td>
-    </tr>
-  </tbody>
-</table>
+<p>El intercambio que esta guía toma como antecedente utiliza documentos <strong>CDA</strong> (Clinical Document Architecture, el formato de documentos clínicos de HL7), metadatos <strong>XDS</strong> (Cross-Enterprise Document Sharing, el perfil de <strong>IHE</strong> - Integrating the Healthcare Enterprise) y mensajería HL7 v2 para la identificación de pacientes. Esta guía describe el mismo intercambio sobre FHIR, tomando como referencia los perfiles equivalentes de IHE.</p>
 
 <h3 id="alcance-de-esta-versión">Alcance de esta versión</h3>
 
-<p>La primera versión HCEN abarca cuatro funciones obligatorias para el despliegue de un prestador: registrar y actualizar pacientes, publicar documentos, consultar metadatos y recuperar las representaciones FHIR y CDA. El alcance documental comprende la publicación de documentos nuevos; no incorpora reemplazo ni anulación como operaciones de esta etapa.</p>
+<p>La primera versión HCEN abarca cuatro funciones obligatorias para el despliegue de un prestador: registrar y actualizar pacientes, publicar documentos, consultar metadatos y recuperar las representaciones FHIR y CDA. No incorpora reemplazo ni anulación como operaciones de esta etapa.</p>
 
-<p>La guía continúa en borrador. Los perfiles expresan una primera propuesta computable; las transacciones distinguen las reglas adoptadas para este borrador de los contratos que deben cerrarse antes de una integración operativa. No se publican endpoints reales ni se acredita una implementación de Plataforma.</p>
+<p>Con respecto al contenido de los documentos clínicos, esta primera versión solo modela en FHIR Consulta No Urgente.</p>
+
+<p>La guía continúa en borrador. Algunos detalles operativos y las direcciones de los servicios se definirán más adelante.</p>
 
 <p>Autenticación, autorización, consentimiento, auditoría y acreditación no se especifican en esta versión. Consultar <a href="hcen-conformidad.html#seguridad">Seguridad y acreditación pendientes</a>.</p>
 
@@ -530,9 +492,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="relación-con-ihe">Relación con IHE</h3>
 
-<p>Se toma como referencia <strong>Mobile access to Health Documents (MHD), versión 4.2.3</strong>, sobre FHIR R4, para publicación, consulta y recuperación; y <strong>Patient Identifier Cross-referencing for mobile (PIXm), versión 3.1.0</strong>, para alimentación de pacientes. Los códigos ITI que acompañan a cada transacción identifican su referencia en esos perfiles.</p>
+<p>Se toma como referencia <strong>Mobile access to Health Documents (MHD), versión 4.2.3</strong>, sobre FHIR R4, para publicación, consulta y recuperación, y <strong>Patient Identifier Cross-referencing for mobile (PIXm), versión 3.1.0</strong>, para registro y actualización de pacientes.</p>
 
-<p>HCEN define un contrato local. La reutilización de extensiones, identificadores y patrones de IHE no declara conformidad integral con sus perfiles. En particular, el Bundle de publicación se basa en <a href="https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UnContained.Comprehensive.ProvideBundle.html">UnContained Comprehensive Provide Document Bundle</a>, y preserva convenciones de identificación y metadatos del ecosistema HCEN/XDS. Transporta el documento FHIR y la referencia al CDA, que no debería (SHOULD NOT) incluirse en el Bundle. Las diferencias se explican en <a href="hcen-iti-65.html">Publicar documentos</a>.</p>
+<p>HCEN define un contrato local. La reutilización de extensiones, identificadores y patrones de IHE no declara conformidad integral con sus perfiles.</p>
 
 
 
@@ -560,10 +522,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

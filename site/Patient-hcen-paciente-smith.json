@@ -1,0 +1,111 @@
+{
+  "resourceType" : "Patient",
+  "id" : "hcen-paciente-smith",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>John Doe Smith. Paciente activo. Sexo administrativo: masculino. Fecha de nacimiento: 1979-06-22.</p><p>MRN: 1904217. Pasaporte: AAH480000. Domicilio habitual en Estados Unidos y domicilio temporal en Uruguay del 15 al 30 de abril de 2021.</p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "value",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/administrative-gender",
+          "code" : "male",
+          "display" : "Male"
+        }]
+      }
+    },
+    {
+      "url" : "type",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "76689-9",
+          "display" : "Sex assigned at birth"
+        }]
+      }
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+  }],
+  "identifier" : [{
+    "use" : "usual",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "MR",
+        "display" : "Medical record number"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.2.999999.72768.1",
+    "value" : "1904217"
+  },
+  {
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PPN",
+        "display" : "Passport number"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.1.840.68912",
+    "value" : "AAH480000",
+    "period" : {
+      "start" : "2021-04-15",
+      "end" : "2031-04-14"
+    }
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "John Doe Smith",
+    "family" : "Smith",
+    "given" : ["John",
+    "Doe"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 99 318 000",
+    "use" : "mobile"
+  },
+  {
+    "system" : "phone",
+    "value" : "+1 555 555 5555",
+    "use" : "mobile"
+  },
+  {
+    "system" : "email",
+    "value" : "john.doe@example.com",
+    "use" : "home"
+  }],
+  "gender" : "male",
+  "birthDate" : "1979-06-22",
+  "address" : [{
+    "use" : "temp",
+    "type" : "physical",
+    "line" : ["Gaboto 1234"],
+    "city" : "MONTEVIDEO",
+    "district" : "CORDON",
+    "state" : "Montevideo",
+    "postalCode" : "11200",
+    "country" : "URY",
+    "period" : {
+      "start" : "2021-04-15",
+      "end" : "2021-04-30"
+    }
+  },
+  {
+    "use" : "home",
+    "type" : "physical",
+    "line" : ["123 Main St"],
+    "city" : "Anytown",
+    "state" : "Anystate",
+    "postalCode" : "12345",
+    "country" : "USA"
+  }]
+}

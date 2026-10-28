@@ -1,40 +1,31 @@
-# Introducción a HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Introducción a HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Introducción a HCEN
 
-Este bloque describe cómo un prestador registra pacientes, publica metadatos y comparte documentos clínicos mediante la **Historia Clínica Electrónica Nacional (HCEN)**. Reutiliza las representaciones de [Core Uruguay](introduccion.md) y agrega las obligaciones del intercambio. Los términos y siglas propios de este bloque se explican en el [Glosario HCEN](hcen-glosario.md).
+Este bloque describe cómo un prestador puede interoperar con la **Historia Clínica Electrónica Nacional (HCEN)** a través de FHIR. Reutiliza las representaciones de [Core Uruguay](introduccion.md) y agrega las obligaciones del intercambio. Los términos y siglas propios de este bloque se explican en el [Glosario HCEN](hcen-glosario.md).
 
 ### ¿Qué es HCEN?
 
-HCEN permite que los prestadores de salud compartan los documentos clínicos de una persona con fines asistenciales. Su funcionamiento es federado: cada prestador conserva sus documentos en su propio repositorio, y Plataforma registra a los pacientes y los metadatos que permiten encontrar esos documentos. Cuando otro prestador necesita un documento, lo solicita a Plataforma, que lo obtiene del repositorio de origen.
+La HCEN es una plataforma de interoperabilidad que permite el intercambio de información clínica entre las instituciones, conectando a las organizaciones a través de una red privada de datos.​ Su principal cometido es promover y mejorar la continuidad del proceso asistencial de los usuarios del sistema de salud uruguayo.
 
-Los documentos permanecen en el prestador de origen; Plataforma registra pacientes y metadatos e intermedia la recuperación.
+HCEN permite que los prestadores compartan los documentos clínicos que generan durante la atención, facilitando el acceso a la información de un paciente ante un evento asistencial.
+
+Plataforma HCEN está basada originalmente en el estándar **IHE XDS.b** y ofrece una interfaz FHIR para el intercambio de información. A diferencia de un servidor FHIR convencional, no almacena los recursos clínicos publicados, sino que utiliza un **modelo federado**: cada prestador conserva los documentos en su propio repositorio, mientras que Plataforma registra la información de los pacientes y los metadatos necesarios para localizar esos documentos.
+
+Cuando un prestador necesita consultar un documento clínico, puede buscarlo y solicitarlo a través de Plataforma, que lo recupera del repositorio de origen y se lo entrega.
+
+Los documentos permanecen en el prestador de origen. Plataforma registra pacientes y metadatos e intermedia la recuperación.
 Las funciones de cada parte se detallan en [Actores y responsabilidades](hcen-actores.md).
 
-### De dónde se parte
-
-El intercambio que esta guía toma como antecedente utiliza documentos **CDA** (Clinical Document Architecture, el formato de documentos clínicos de HL7), metadatos **XDS** (Cross-Enterprise Document Sharing, el perfil de **IHE**, Integrating the Healthcare Enterprise, para compartir documentos entre organizaciones) y mensajería HL7 v2 para la identificación de pacientes. Esta guía describe el mismo intercambio sobre FHIR, tomando como referencia los perfiles equivalentes de IHE.
-
-Ese origen explica dos decisiones que se repiten en las páginas siguientes:
-
-* Cada documento se conserva en **dos representaciones**, FHIR y CDA, y ambas deben poder recuperarse.
-* Los metadatos conservan conceptos de XDS, como el conjunto de envío o los identificadores `entryUUID` y `uniqueId`.
-
-| | |
-| :--- | :--- |
-| Conjunto de envío XDS (SubmissionSet) | Recurso`List`, perfilado en[HCENSubmissionSet](StructureDefinition-hcen-submission-set.md) |
-| Metadatos del documento XDS (DocumentEntry) | Recurso`DocumentReference`, perfilado en[HCENDocumentReference](StructureDefinition-hcen-document-reference.md) |
-| Documento CDA | Se conserva para recuperación mediante[HCENCdaBinary](StructureDefinition-hcen-cda-binary.md)y se referencia en los metadatos. Binary CDA no debería (SHOULD NOT) enviarse en la publicación |
-| Alimentación de identidades de pacientes en HL7 v2 | [Registrar o actualizar pacientes](hcen-iti-104.md), con el recurso`Patient` |
-| Publicación y registro de documentos | [Publicar documentos](hcen-iti-65.md) |
-| Consulta al registro de metadatos | [Consultar metadatos](hcen-iti-67.md) |
-| Recuperación de documentos del repositorio | [Recuperar documentos](hcen-iti-68.md) |
+El intercambio que esta guía toma como antecedente utiliza documentos **CDA** (Clinical Document Architecture, el formato de documentos clínicos de HL7), metadatos **XDS** (Cross-Enterprise Document Sharing, el perfil de **IHE** - Integrating the Healthcare Enterprise) y mensajería HL7 v2 para la identificación de pacientes. Esta guía describe el mismo intercambio sobre FHIR, tomando como referencia los perfiles equivalentes de IHE.
 
 ### Alcance de esta versión
 
-La primera versión HCEN abarca cuatro funciones obligatorias para el despliegue de un prestador: registrar y actualizar pacientes, publicar documentos, consultar metadatos y recuperar las representaciones FHIR y CDA. El alcance documental comprende la publicación de documentos nuevos; no incorpora reemplazo ni anulación como operaciones de esta etapa.
+La primera versión HCEN abarca cuatro funciones obligatorias para el despliegue de un prestador: registrar y actualizar pacientes, publicar documentos, consultar metadatos y recuperar las representaciones FHIR y CDA. No incorpora reemplazo ni anulación como operaciones de esta etapa.
 
-La guía continúa en borrador. Los perfiles expresan una primera propuesta computable; las transacciones distinguen las reglas adoptadas para este borrador de los contratos que deben cerrarse antes de una integración operativa. No se publican endpoints reales ni se acredita una implementación de Plataforma.
+Con respecto al contenido de los documentos clínicos, esta primera versión solo modela en FHIR Consulta No Urgente.
+
+La guía continúa en borrador. Algunos detalles operativos y las direcciones de los servicios se definirán más adelante.
 
 Autenticación, autorización, consentimiento, auditoría y acreditación no se especifican en esta versión. Consultar [Seguridad y acreditación pendientes](hcen-conformidad.md#seguridad).
 
@@ -52,7 +43,7 @@ El intercambio de información clínica con fines asistenciales a través de HCE
 
 ### Relación con IHE
 
-Se toma como referencia **Mobile access to Health Documents (MHD), versión 4.2.3**, sobre FHIR R4, para publicación, consulta y recuperación; y **Patient Identifier Cross-referencing for mobile (PIXm), versión 3.1.0**, para alimentación de pacientes. Los códigos ITI que acompañan a cada transacción identifican su referencia en esos perfiles.
+Se toma como referencia **Mobile access to Health Documents (MHD), versión 4.2.3**, sobre FHIR R4, para publicación, consulta y recuperación, y **Patient Identifier Cross-referencing for mobile (PIXm), versión 3.1.0**, para registro y actualización de pacientes.
 
-HCEN define un contrato local. La reutilización de extensiones, identificadores y patrones de IHE no declara conformidad integral con sus perfiles. En particular, el Bundle de publicación se basa en [UnContained Comprehensive Provide Document Bundle](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.UnContained.Comprehensive.ProvideBundle.html), y preserva convenciones de identificación y metadatos del ecosistema HCEN/XDS. Transporta el documento FHIR y la referencia al CDA, que no debería (SHOULD NOT) incluirse en el Bundle. Las diferencias se explican en [Publicar documentos](hcen-iti-65.md).
+HCEN define un contrato local. La reutilización de extensiones, identificadores y patrones de IHE no declara conformidad integral con sus perfiles.
 

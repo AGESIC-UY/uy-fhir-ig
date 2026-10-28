@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Publicar documentos - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Publicar documentos — HCEN ITI-65 - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-transacciones.html'><b>Transacciones</b></a></li><li><b>Publicar documentos</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-transacciones.html'><b>Transacciones</b></a></li><li><b>Publicar documentos — HCEN ITI-65</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,8 +418,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Publicar documentos</h2>
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Publicar documentos — HCEN ITI-65</h2>
   
 
 
@@ -434,158 +437,100 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#actores-y-secuencia" id="markdown-toc-actores-y-secuencia">Actores y secuencia</a></li>
-  <li><a href="#representaciones-y-metadatos" id="markdown-toc-representaciones-y-metadatos">Representaciones y metadatos</a></li>
-  <li><a href="#referencias-locales-del-contrato-de-metadatos" id="markdown-toc-referencias-locales-del-contrato-de-metadatos">Referencias locales del contrato de metadatos</a></li>
-  <li><a href="#identificación-y-concordancia" id="markdown-toc-identificación-y-concordancia">Identificación y concordancia</a></li>
-  <li><a href="#solicitud-y-respuesta-propuestas" id="markdown-toc-solicitud-y-respuesta-propuestas">Solicitud y respuesta propuestas</a></li>
-  <li><a href="#verificación-y-pendientes-de-cierre" id="markdown-toc-verificación-y-pendientes-de-cierre">Verificación y pendientes de cierre</a></li>
+  <li><a href="#actores-y-precondiciones" id="markdown-toc-actores-y-precondiciones">Actores y precondiciones</a></li>
+  <li><a href="#solicitud" id="markdown-toc-solicitud">Solicitud</a></li>
+  <li><a href="#reglas-de-procesamiento" id="markdown-toc-reglas-de-procesamiento">Reglas de procesamiento</a></li>
+  <li><a href="#respuesta" id="markdown-toc-respuesta">Respuesta</a></li>
+  <li><a href="#errores" id="markdown-toc-errores">Errores</a></li>
 </ul>
 
 </div>
-<p>Esta transacción publica los metadatos que permiten descubrir y recuperar uno o más documentos clínicos de un prestador. Utiliza MHD como interfaz FHIR y preserva determinadas convenciones de identificación y metadatos del ecosistema HCEN/XDS. Toma MHD ITI-65 como referencia de diseño, sin declarar conformidad integral con sus capacidades, y utiliza <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a> como Bundle de publicación.</p>
+<p>Esta transacción publica los metadatos que permiten descubrir y recuperar documentos clínicos. El prestador envía un <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a> y conserva las representaciones FHIR y CDA en su repositorio.</p>
 
-<h3 id="actores-y-secuencia">Actores y secuencia</h3>
+<p>Plataforma valida el envío y registra los metadatos según el <a href="hcen.html">modelo de intercambio HCEN</a>. El prestador conserva los documentos para su recuperación posterior.</p>
 
-<ol>
-  <li>El prestador prepara y conserva las representaciones FHIR y CDA.</li>
-  <li>Completa DocumentReference y agrupa los documentos en un SubmissionSet.</li>
-  <li>Incluye el contexto necesario para procesar la publicación y remite el Bundle de publicación a Plataforma.</li>
-  <li>Plataforma verifica metadatos, identificadores y concordancia entre representaciones.</li>
-  <li>El prestador procesa la aceptación o el error según el contrato que se cierre para publicación.</li>
-</ol>
+<h3 id="actores-y-precondiciones">Actores y precondiciones</h3>
 
-<figure style="margin:0 0 1em;">
-  <img src="hcen-cu-publicar-documentos.svg" alt="El prestador conserva el documento en FHIR y CDA en su repositorio y envía el Bundle de publicación a Plataforma, que verifica el envío, registra los metadatos y devuelve la aceptación o un error." style="width:100%;max-width:760px;height:auto;" />
-  <figcaption>Publicación de documentos: el contenido permanece en el repositorio del prestador.</figcaption>
+<p>El prestador conserva las representaciones del documento y envía sus recursos de publicación. Plataforma recibe el envío, valida los recursos FHIR y registra los metadatos.</p>
+
+<p>El paciente debería (SHOULD) registrarse previamente mediante <a href="hcen-iti-104.html">HCEN ITI-104</a>. Este registro previo no es obligatorio: la publicación permite crear al paciente cuando todavía no existe.</p>
+
+<figure>
+  <img src="hcen-cu-publicar-documentos.svg" alt="El prestador conserva FHIR y CDA y envía los recursos FHIR de publicación. Plataforma valida el envío y registra los metadatos o devuelve un error." style="width:100%;max-width:760px;height:auto;" />
+  <figcaption>El prestador conserva los documentos. Plataforma valida el envío FHIR y registra sus metadatos.</figcaption>
 </figure>
 
-<p>El paciente debería (SHOULD) registrarse previamente mediante <a href="hcen-iti-104.html">Registrar o actualizar pacientes</a>. El respaldo de registro de pacientes de Plataforma no habilita a omitir el MRN ni sustituye la recomendación de registro previo.</p>
+<h3 id="solicitud">Solicitud</h3>
 
-<p><a id="representaciones"></a></p>
-<h3 id="representaciones-y-metadatos">Representaciones y metadatos</h3>
-
-<p><strong>HCEN-PUB-001 / HCEN-DOC-001.</strong> El prestador debe (SHALL) conservar ambas representaciones: un Bundle documental FHIR, cuya primera entrada sea Composition, y un CDA recuperable mediante <a href="StructureDefinition-hcen-cda-binary.html">HCENCdaBinary</a>. El Bundle documental debe (SHALL) incluirse en el envío. Binary CDA no debería (SHOULD NOT) enviarse en HCENProvideDocumentBundle. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío; la referencia al CDA en los metadatos permanece obligatoria según el perfil. Se admiten CDA de nivel 1 o 3; un PDF debe (SHALL) estar embebido en CDA nivel 1.</p>
-
-<p><strong>HCEN-DOC-002.</strong> <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code> identifica la representación FHIR. La extensión <code class="language-plaintext highlighter-rouge">binary</code> de ese Attachment referencia el Binary con CDA. <code class="language-plaintext highlighter-rouge">contentType</code>, <code class="language-plaintext highlighter-rouge">size</code>, <code class="language-plaintext highlighter-rouge">hash</code> y <code class="language-plaintext highlighter-rouge">format</code> describen la representación FHIR; no describen el CDA. La estructura y los <a href="hcen-terminologia.html">tres ejes de clasificación</a> están definidos en <a href="StructureDefinition-hcen-document-reference.html">HCENDocumentReference</a>.</p>
-
-<p>La guía XDS describe metadatos del documento CDA. En este intercambio, los campos del Attachment describen los bytes de la representación FHIR indicada en <code class="language-plaintext highlighter-rouge">url</code>. En particular, FHIR R4 define <code class="language-plaintext highlighter-rouge">Attachment.hash</code> como SHA-1 codificado en base64; el SHA-512 del CDA indicado por la guía XDS no se informa en ese campo. <code class="language-plaintext highlighter-rouge">attachment.creation</code> representa la creación documental y <code class="language-plaintext highlighter-rouge">date</code>, la indexación; no son la misma fecha por definición.</p>
-
-<p><strong>HCEN-PUB-002.</strong> El envío debe (SHALL) aportar los metadatos, el Bundle documental FHIR y las entradas necesarias para resolver los paths explícitos del contrato de metadatos indicados a continuación. Plataforma no debe completar ese contexto consultando recursos individuales externos. Esta regla no se extiende a toda Reference del Bundle de publicación. El documento FHIR debe ser autocontenido respecto de sus referencias clínicas, independientemente del Bundle de publicación que lo transporta.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Entrada del Bundle de publicación</th>
-      <th>Cardinalidad</th>
-      <th>Recurso</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>submissionSet</td>
-      <td>1..1</td>
-      <td>HCENSubmissionSet</td>
-    </tr>
-    <tr>
-      <td>documentReference</td>
-      <td>1..*</td>
-      <td>HCENDocumentReference</td>
-    </tr>
-    <tr>
-      <td>documentBundle</td>
-      <td>1..*</td>
-      <td>Bundle documental FHIR</td>
-    </tr>
-    <tr>
-      <td>Binary (entrada abierta, sin slice específico)</td>
-      <td>0..*</td>
-      <td>Binary CDA SHOULD NOT enviarse; si llega, se tolera y puede ignorarse</td>
-    </tr>
-    <tr>
-      <td>patient, practitioner, practitionerRole, organization</td>
-      <td>0..* por tipo</td>
-      <td>Perfiles HCEN del contexto</td>
-    </tr>
-    <tr>
-      <td>Otros recursos de contexto necesarios</td>
-      <td>Según las referencias presentes</td>
-      <td>Recursos FHIR del intercambio</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Cada DocumentReference de publicación enlaza un único Bundle documental FHIR y cada Bundle documental del envío tiene un único DocumentReference: no hay Bundles documentales huérfanos. El identificador [oid_documento_clinico] coincide entre ambos y la Composition raíz. La referencia al CDA permanece según el perfil. Binary CDA no debería (SHOULD NOT) enviarse. Si llega, se tolera y puede ignorarse, sin obligación de correspondencia Binary ↔ metadatos ni cardinalidad 0..0. El SubmissionSet enumera todos y solo los DocumentReference miembros del envío, cada uno una sola vez; el orden no tiene significado. Los recursos de contexto se incluyen según las referencias presentes: no se exige un ejemplar de cada tipo cuando el envío no lo utiliza. Las referencias de metadatos controladas por <code class="language-plaintext highlighter-rouge">hcen-publication-context</code> deben resolverse a entradas del envío; los recursos contenidos no sustituyen esas entradas. Dentro de cada documento FHIR se admiten referencias a recursos contenidos cuando la estructura FHIR lo permita.</p>
-
-<p><a id="referencias-locales"></a></p>
-<h3 id="referencias-locales-del-contrato-de-metadatos">Referencias locales del contrato de metadatos</h3>
-
-<p>La política de resolución a entradas del Bundle de publicación se aplica a estos paths explícitos:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Recurso</th>
-      <th>Paths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DocumentReference</td>
-      <td><code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">authenticator</code>, <code class="language-plaintext highlighter-rouge">custodian</code>, extensiones <code class="language-plaintext highlighter-rouge">funder</code> y <code class="language-plaintext highlighter-rouge">byOrderOf</code>, <code class="language-plaintext highlighter-rouge">context.sourcePatientInfo</code></td>
-    </tr>
-    <tr>
-      <td>SubmissionSet</td>
-      <td><code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">source</code>, <code class="language-plaintext highlighter-rouge">entry.item</code> (DocumentReference miembros)</td>
-    </tr>
-    <tr>
-      <td>PractitionerRole utilizado en autoría, autenticación o source</td>
-      <td><code class="language-plaintext highlighter-rouge">practitioner</code>, <code class="language-plaintext highlighter-rouge">organization</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Los recursos contenidos no sustituyen esas entradas. La regla no obliga a resolver localmente <code class="language-plaintext highlighter-rouge">Identifier.assigner</code>, endpoints, <code class="language-plaintext highlighter-rouge">Organization.partOf</code>, <code class="language-plaintext highlighter-rouge">context.encounter</code>, <code class="language-plaintext highlighter-rouge">intendedRecipient</code> ni otras referencias administrativas o clínicas fuera de esta lista. Cada Bundle documental conserva su propia regla de autocontención clínica. Las referencias históricas <code class="language-plaintext highlighter-rouge">relatesTo</code> tienen el tratamiento específico indicado más abajo.</p>
-
-<p><strong>HCEN-PUB-005.</strong> <code class="language-plaintext highlighter-rouge">DocumentReference.author</code> debe (SHALL) incluir al menos un HCENPractitionerRole y <code class="language-plaintext highlighter-rouge">SubmissionSet.source</code> debe (SHALL) referenciar un HCENPractitionerRole. Cada rol de autoría, su Practitioner y su Organization deben (SHALL) estar incluidos como entradas del envío. Las referencias directas adicionales a Practitioner u Organization en <code class="language-plaintext highlighter-rouge">author</code> se admiten y se ignoran al determinar la autoría. Los recursos adicionales del Bundle tampoco sustituyen el <code class="language-plaintext highlighter-rouge">source</code> obligatorio del conjunto.</p>
-
-<p><strong>HCEN-PUB-006.</strong> DocumentReference y SubmissionSet deben (SHALL) informar su comunidad de origen mediante <code class="language-plaintext highlighter-rouge">homeCommunityId</code>. El período clínico de DocumentReference debe (SHALL) incluir inicio y fin del servicio en <code class="language-plaintext highlighter-rouge">context.period.start</code> y <code class="language-plaintext highlighter-rouge">context.period.end</code>.</p>
-
-<p><strong>HCEN-PUB-007.</strong> Una referencia histórica <code class="language-plaintext highlighter-rouge">relatesTo.target</code> debe (SHALL) identificar un DocumentReference existente en HCEN mediante <code class="language-plaintext highlighter-rouge">DocumentReference/{id}</code> o una URL HTTP(S) absoluta equivalente. El <code class="language-plaintext highlighter-rouge">id</code> es el identificador lógico del recurso, no el OID documental. No se admite sustituir la referencia por <code class="language-plaintext highlighter-rouge">Reference.identifier</code>. Plataforma debe (SHALL) verificar la existencia y pertenencia del recurso a HCEN al procesar el envío; comprobar la forma de la URL no demuestra esa existencia. El documento anterior puede quedar fuera del Bundle.</p>
-
-<p>El procesamiento de reemplazos no está soportado actualmente. Una relación <code class="language-plaintext highlighter-rouge">replaces</code> se ignora y no modifica el documento anterior; no constituye una solicitud operativa de reemplazo. Su referencia debe cumplir igualmente HCEN-PUB-007.</p>
-
-<h3 id="identificación-y-concordancia">Identificación y concordancia</h3>
-
-<p><strong>HCEN-ID-002 / HCEN-ID-004.</strong> Los identificadores y sus ubicaciones se especifican en <a href="hcen-identificadores.html">Identificadores documentales</a>. Un SubmissionSet debe (SHALL) incluir uno o más documentos y utiliza perfiles diferentes para su entryUUID técnico y su uniqueId documental.</p>
-
-<p><strong>HCEN-PUB-003.</strong> Plataforma debe (SHALL) rechazar los errores de los recursos del intercambio distintos del documento clínico. Debe comprobar la concordancia mínima de paciente, identificador documental y versión entre FHIR, CDA y metadatos. No se exige una comparación clínica exhaustiva entre ambas representaciones. La política sobre errores internos del documento clínico permanece pendiente.</p>
-
-<p><strong>HCEN-PUB-004.</strong> Plataforma no debe (SHALL NOT) registrar dos documentos con el mismo identificador. Un reenvío de un documento registrado debe (SHALL) producir un error; no se define como publicación idempotente. El prestador no debería (SHOULD NOT) eludir esta regla asignando otro identificador al mismo documento.</p>
-
-<h3 id="solicitud-y-respuesta-propuestas">Solicitud y respuesta propuestas</h3>
-
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST [base-publicacion]
-Content-Type: application/fhir+json
-Accept: application/fhir+json
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">POST</span> <span class="nn">[base-publicacion]</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/fhir+json</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/fhir+json</span>
 
 { recurso HCENProvideDocumentBundle }
-</span></code></pre></div></div>
+</code></pre></div></div>
 
-<p>El perfil conserva <code class="language-plaintext highlighter-rouge">type = transaction</code> y entradas POST como propuesta basada en <a href="https://profiles.ihe.net/ITI/MHD/4.2.3/ITI-65.html">MHD 4.2.3</a>. Se aparta del slicing cerrado de IHE para incorporar el contexto HCEN y las representaciones simultáneas; deriva de Bundle, no del perfil IHE.</p>
+<p>Se utiliza <code class="language-plaintext highlighter-rouge">Bundle.type = transaction</code> y las entradas POST del perfil. Las entradas POST representan acciones de publicación, sin crear recursos FHIR persistentes recuperables individualmente en Plataforma.</p>
 
-<p>Una transacción REST FHIR implica atomicidad y una respuesta <code class="language-plaintext highlighter-rouge">transaction-response</code> correlacionada con todas las entradas. Sin embargo, la decisión HCEN de no almacenar los documentos en Plataforma requiere precisar cómo se procesan los POST de Bundle y Binary y los recursos de contexto. <strong>Esta versión no define una respuesta exitosa operativa ni afirma que esos recursos se creen de forma persistente.</strong> No debe interpretarse el Bundle de publicación como contrato de un servidor FHIR genérico ya cerrado.</p>
+<p>El perfil <a href="StructureDefinition-hcen-provide-document-bundle.html">HCENProvideDocumentBundle</a> define las entradas, las referencias de contexto y la correspondencia entre metadatos y documentos. El envío debe incluir todos los recursos FHIR necesarios para su validación.</p>
 
-<p>El ejemplo de duplicado (material de desarrollo reservado para una versión futura) usa <code class="language-plaintext highlighter-rouge">issue.code = duplicate</code> para describir el problema. El estado HTTP y la codificación local definitiva quedan pendientes.</p>
+<p><a id="representaciones"></a></p>
+<h4 id="representaciones-y-ubicaciones">Representaciones y ubicaciones</h4>
+
+<p>El prestador debe (SHALL) conservar ambas representaciones: un Bundle documental FHIR, cuya primera entrada sea Composition, y un CDA XML. El Bundle documental debe incluirse en el envío. La extensión <code class="language-plaintext highlighter-rouge">binary</code> referencia un <a href="StructureDefinition-hcen-cda-binary.html">HCENCdaBinary</a>. Se admiten CDA de nivel 1 o 3. Un PDF debe estar embebido en CDA nivel 1.</p>
+
+<p>El Binary CDA no debería (SHOULD NOT) enviarse a Plataforma. Si se incluye, su presencia no invalida por sí misma el envío y su contenido puede ignorarse. La referencia al CDA permanece obligatoria.</p>
+
+<p>El envío debe (SHALL) informar las ubicaciones HTTP(S) en el servidor del prestador para el Bundle FHIR y el Binary CDA, según <a href="StructureDefinition-hcen-document-reference.html#representaciones">HCENDocumentReference</a>. Esto es fundamental para que Plataforma sepa luego a dónde ir a buscar los recursos cuando otros prestadores los soliciten. Estas ubicaciones (urls) son distintas del <code class="language-plaintext highlighter-rouge">fullUrl</code> de las entradas y de la URL de recuperación devuelta por HCEN ITI-67.</p>
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El Gateway guarda el contenido localmente para que pueda recuperarse durante la prueba. Por eso exige incluir el Binary CDA en HCEN ITI-65 y vincularlo desde los metadatos del documento.</p>
+  <p>En la variante PoC se utilizan referencias <code>urn:uuid:</code> a las entradas del envío para enlazar el Bundle documental y su Binary. La invariante que exigía HTTP(S) en esas ubicaciones está comentada temporalmente. Plataforma sigue necesitando las URL originales recuperables del prestador.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<p><a id="referencias-locales"></a>
+Las <a href="StructureDefinition-hcen-provide-document-bundle.html#referencias-locales">referencias de contexto</a> deben resolverse dentro del envío. Los recursos contenidos no sustituyen las entradas exigidas para ese contexto.</p>
+
+<h3 id="reglas-de-procesamiento">Reglas de procesamiento</h3>
+
+<h4 id="identificación-del-paciente">Identificación del paciente</h4>
+
+<p>La coincidencia se determina por dominio MRN y valor MRN. Si el paciente no existe, Plataforma lo crea a partir del Patient incluido. Si existe, lo utiliza sin actualizarlo.</p>
+
+<h4 id="validación-y-atomicidad">Validación y atomicidad</h4>
+
+<p>Plataforma valida contra la IG los recursos FHIR enviados, incluido el documento clínico. Un incumplimiento impide aceptar la publicación. No inspecciona el contenido CDA ni comprueba su equivalencia con FHIR. Conservar ambas representaciones del mismo documento y versión es responsabilidad del prestador. Durante la publicación no se consultan recursos adicionales al prestador. La recuperación se realiza en HCEN ITI-68.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code> debe ser único respecto de los documentos ya registrados. Volver a enviar el mismo identificador produce un error, incluso si el envío es idéntico. No debe asignarse otro identificador al mismo documento para eludir este control.</p>
+
+<p>El envío se procesa de forma atómica: si falla, se rechaza completo. No deben quedar documentos publicados parcialmente ni un paciente creado por una publicación que falló.</p>
+
+<p>Esta transacción contempla la publicación de documentos nuevos. El procesamiento de reemplazos no forma parte del alcance de esta versión.</p>
+
+<h3 id="respuesta">Respuesta</h3>
+
+<p><a id="contrato-respuesta"></a></p>
+
+<p>La respuesta exitosa es un Bundle <code class="language-plaintext highlighter-rouge">transaction-response</code>, con una respuesta por entrada del Bundle recibido, en el mismo orden. El Bundle documental anidado cuenta como una entrada, sin desglosar sus recursos clínicos. No se devuelve un <code class="language-plaintext highlighter-rouge">Location</code> real de recursos FHIR persistentes en Plataforma.</p>
+
+<p>Cada entrada incluye <code class="language-plaintext highlighter-rouge">entry.response.status</code>, obligatorio en FHIR R4. Los valores concretos por entrada no se especifican en esta versión.</p>
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El Gateway persiste recursos en HAPI y puede devolver ubicaciones reales locales en la respuesta. Esas ubicaciones pertenecen al simulador y no describen la respuesta de Plataforma.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<h3 id="errores">Errores</h3>
 
 <p><a id="pendientes"></a></p>
-<h3 id="verificación-y-pendientes-de-cierre">Verificación y pendientes de cierre</h3>
 
-<p>Las pruebas deben comprobar el listado del SubmissionSet, la resolución de los paths explícitos de metadatos y la autocontención de los documentos FHIR, la autoría mediante rol profesional, las referencias históricas, la ausencia de duplicados, la identidad del paciente y la concordancia de identificador y versión. Deben cubrir envíos sin Binary y envíos que lo incluyan, comprobando que se tolera y puede ignorarse, sin exigir correspondencia Binary ↔ metadatos.</p>
+<p>Los incumplimientos de los perfiles y las reglas de publicación, incluidos los identificadores documentales duplicados, provocan el rechazo completo del envío. No se conservan documentos ni pacientes creados por una publicación fallida.</p>
 
-<p>Antes del uso operativo deben cerrarse: persistencia y atomicidad, formato de respuesta, registro de respaldo del paciente, validación clínica y códigos HTTP de error. Si la publicación se implementa como operación específica y no como transacción REST, deberá ajustarse el perfil y definirse el contrato de esa operación; no basta con cambiar la URL.</p>
-
-<p>El ejemplo completo de Bundle de publicación queda reservado como material de desarrollo para una versión futura, pendiente de revisión y validación integral del Publisher.</p>
+<p>Esta versión no especifica el detalle de los códigos HTTP de error ni los valores de estado por entrada de la respuesta exitosa.</p>
 
 
 
@@ -613,10 +558,10 @@ Accept: application/fhir+json
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

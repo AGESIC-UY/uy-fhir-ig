@@ -1,12 +1,19 @@
-# HCEN Consulta No Urgente - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Consulta No Urgente - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Consulta No Urgente 
 
-**Usages:**
+La Composition organiza la Hoja de Consulta No Urgente y referencia al paciente, al rol profesional autor, a la organización custodia y al encuentro clínico. `type` está fijado a LOINC `34108-1`.
 
-* Use this Profile: [HCEN Documento de Consulta No Urgente](StructureDefinition-hcen-consulta-no-urgente-bundle.md)
+`encounter` es obligatorio y referencia [HCENEncounter](StructureDefinition-hcen-encounter.md), con estado `finished`. Ese encuentro debe incluir al menos un participante con `period.start`, donde se registra la fecha y hora de firma del profesional según el mapeo CDA.
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/uy-consulta-no-urgente)
+Las secciones de motivos de consulta y diagnósticos son obligatorias. Las demás secciones se utilizan según el contenido de la atención. El slicing es abierto: se admiten secciones adicionales que respeten las restricciones del perfil. La [descripción de la CNU](hcen-documentos-clinicos.md) permite localizar el perfil de cada entrada clínica.
+
+**Usos:**
+
+* Utilizar este perfil: [HCEN Documento de Consulta No Urgente](StructureDefinition-hcen-consulta-no-urgente-bundle.md)
+* Ejemplos de este perfil: [Composition/uy-consulta-no-urgente-traumatologia](Composition-uy-consulta-no-urgente-traumatologia.md)
+
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/uy-consulta-no-urgente)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,34 +21,34 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Composition](http://hl7.org/fhir/R4/composition.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Composition](http://hl7.org/fhir/R4/composition.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 11 elements(13 nested mandatory elements)
- Must-Support: 18 elements
- Fixed: 11 elements
- Prohibited: 38 elements
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [Composition](http://hl7.org/fhir/R4/composition.html) .
+
+** Resumen **
+
+Obligatorios: 12 elementos(13 elementosos obligatorios anidados)
+ Must-Support: 9 elementos
+ Fijos: 11 elementos
+ Prohibidos: 38 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
@@ -57,40 +64,40 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Composition.section
+* El elemento 1 se divide en slices según el valor de Composition.section
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Composition](http://hl7.org/fhir/R4/composition.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Composition](http://hl7.org/fhir/R4/composition.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 11 elements(13 nested mandatory elements)
- Must-Support: 18 elements
- Fixed: 11 elements
- Prohibited: 38 elements
+Obligatorios: 12 elementos(13 elementosos obligatorios anidados)
+ Must-Support: 9 elementos
+ Fijos: 11 elementos
+ Prohibidos: 38 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
@@ -106,9 +113,9 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Composition.section
+* El elemento 1 se divide en slices según el valor de Composition.section
 
  
 
@@ -123,11 +130,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
   "resourceType" : "StructureDefinition",
   "id" : "uy-consulta-no-urgente",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENConsultaNoUrgente",
   "title" : "HCEN Consulta No Urgente",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -285,13 +292,13 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.encounter",
       "path" : "Composition.encounter",
-      "short" : "Información contextual del evento CNU",
-      "definition" : "Información contextual del evento CNU",
+      "short" : "Información contextual del evento CNU — obligatorio porque es la única vía para la hora de firma del profesional",
+      "definition" : "Información contextual del evento CNU. Obligatorio: es la única ubicación disponible en esta guía para la hora de firma del profesional (ver HCENEncounter.participant.period.start).",
+      "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"]
       }],
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument.componentOf.encompassingEncounter"
@@ -386,8 +393,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
         "rules" : "open"
       },
       "short" : "Secciones que componen el documento de CNU",
-      "min" : 2,
-      "max" : "8"
+      "min" : 2
     },
     {
       "id" : "Composition.section:motivosConsulta",
@@ -464,10 +470,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:motivosConsulta.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='10154-3']/text"
@@ -573,10 +575,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:diagnosticos.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='11450-4']/text"
@@ -682,10 +680,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:procedimientos.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='47519-4']/text"
@@ -791,10 +785,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:tratamientoNoFarmacologicoRealizado.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='258071000179109']/text"
@@ -900,10 +890,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:tratamientoFarmacologicoRealizado.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='19011-6']/text"
@@ -1009,10 +995,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:tratamientoNoFarmacologicoFinal.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='258081000179106']/text"
@@ -1118,10 +1100,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:tratamientoFarmacologicoFinal.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='29305-0']/text"
@@ -1227,10 +1205,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-consulta-no-ur
     {
       "id" : "Composition.section:instruccionesSeguimiento.text",
       "path" : "Composition.section.text",
-      "short" : "Contenido narrativo de la sección para interpretación humana",
-      "definition" : "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados.",
-      "comment" : "This profile does not constrain the narrative in regard to content, language, or traceability to data elements.",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "HCENConsultaNoUrgenteToCDA",
         "map" : "ClinicalDocument/component/structuredBody/component/section[code/@code='18776-5']/text"

@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Ejemplos de intercambio - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Ejemplos de intercambio - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Ejemplos de intercambio</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Ejemplos de intercambio</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Ejemplos de intercambio</h2>
   
 
@@ -432,12 +435,129 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<p>La versión 0.1.0 publica únicamente <a href="ejemplos.html">ejemplos básicos del Core</a>.</p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#personas-y-organizaciones" id="markdown-toc-personas-y-organizaciones">Personas y organizaciones</a></li>
+  <li><a href="#cnu-de-medicina-general-documento-y-publicación" id="markdown-toc-cnu-de-medicina-general-documento-y-publicación">CNU de medicina general: documento y publicación</a></li>
+  <li><a href="#cnu-de-traumatología-recursos-individuales-y-cda" id="markdown-toc-cnu-de-traumatología-recursos-individuales-y-cda">CNU de traumatología: recursos individuales y CDA</a></li>
+  <li><a href="#recorrido-de-intercambio" id="markdown-toc-recorrido-de-intercambio">Recorrido de intercambio</a></li>
+  <li><a href="#alcance-de-la-comprobación" id="markdown-toc-alcance-de-la-comprobación">Alcance de la comprobación</a></li>
+</ul>
 
-<p>Los ejemplos complejos de HCEN, documentos y transacciones se conservan como material de desarrollo para una versión futura. No forman parte de la publicación 0.1.0 ni deben interpretarse como ejemplos conformantes oficiales. Su incorporación requiere completar la validación integral con Publisher y terminología.</p>
+</div>
+<p>Los ejemplos ilustran los perfiles HCEN y dos escenarios de Consulta No Urgente (CNU). Los datos personales son ficticios; los identificadores y las URLs de ejemplo no deben utilizarse como configuración de producción.</p>
+
+<h3 id="personas-y-organizaciones">Personas y organizaciones</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ejemplo</th>
+      <th>Qué ilustra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="Patient-hcen-paciente-gonzalez.html">María Laura González Pereira</a></td>
+      <td>Paciente con MRN y cédula de identidad.</td>
+    </tr>
+    <tr>
+      <td><a href="Patient-hcen-paciente-smith.html">John Doe Smith</a></td>
+      <td>Paciente sin CI, con MRN, pasaporte y domicilios en Uruguay y en el exterior.</td>
+    </tr>
+    <tr>
+      <td><a href="Patient-hcen-paciente-dni-ci.html">Paciente con DNI y CI</a></td>
+      <td>MRN, DNI nacional y CI HCEN en identificadores independientes; tipos codificados con sus textos descriptivos.</td>
+    </tr>
+    <tr>
+      <td><a href="Organization-hcen-organizacion-asse.html">ASSE</a></td>
+      <td>Organización referenciada por los roles; no constituye una asignación de dominios MRN o repositorios.</td>
+    </tr>
+    <tr>
+      <td><a href="Practitioner-hcen-profesional-rodriguez.html">Martín Andrés Rodríguez Silva</a> y <a href="PractitionerRole-hcen-rol-medicina-general-rodriguez-asse.html">rol en medicina general</a></td>
+      <td>Autoría del escenario de publicación.</td>
+    </tr>
+    <tr>
+      <td><a href="Practitioner-hcen-practitioner-sousa.html">Guillermo Sousa</a> y <a href="PractitionerRole-hcen-rol-traumatologia-sousa.html">rol en traumatología</a></td>
+      <td>Autoría del escenario de traumatología.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cnu-de-medicina-general-documento-y-publicación">CNU de medicina general: documento y publicación</h3>
+
+<p>El <a href="Bundle-hcen-cnu-medicina-general-bundle.html">Bundle documental</a> representa la consulta del 07/10/2026 por palpitaciones, con diagnóstico de hipertensión arterial. Incluye la Composition como primera entrada, paciente, encuentro, autor, rol, organización y entradas clínicas. Las referencias <code class="language-plaintext highlighter-rouge">urn:uuid:</code> se resuelven contra los <code class="language-plaintext highlighter-rouge">fullUrl</code> del documento.</p>
+
+<p>El <a href="Bundle-hcen-provide-document-bundle-cnu-asse.html">Bundle de publicación</a> contiene ese mismo documento, un SubmissionSet (<code class="language-plaintext highlighter-rouge">List</code>), un <code class="language-plaintext highlighter-rouge">DocumentReference</code> y el contexto de paciente y autoría. Permite seguir la identidad documental compartida entre Bundle, Composition y <code class="language-plaintext highlighter-rouge">DocumentReference.masterIdentifier</code>, distinguirla de la identidad del envío y revisar la membresía del SubmissionSet. Los metadatos se consultan dentro del envío; no se publican como instancias independientes.</p>
+
+<p>Las URL originales FHIR y CDA utilizan el dominio reservado <code class="language-plaintext highlighter-rouge">asse.example.org</code>, ilustrativo del prestador y sin identificar un servicio real de ASSE. Son distintas de los <code class="language-plaintext highlighter-rouge">urn:uuid:</code> internos; la correspondencia documental se comprueba por <code class="language-plaintext highlighter-rouge">system</code> y <code class="language-plaintext highlighter-rouge">value</code>. La referencia externa al CDA es ilustrativa y no corresponde al Binary de traumatología listado abajo. El envío no incluye un Binary, de acuerdo con la recomendación de <a href="hcen-iti-65.html">Publicación de documentos</a>. El procesamiento y la respuesta se describen en esa transacción.</p>
+
+<h3 id="cnu-de-traumatología-recursos-individuales-y-cda">CNU de traumatología: recursos individuales y CDA</h3>
+
+<p>La <a href="Composition-uy-consulta-no-urgente-traumatologia.html">Composition de traumatología</a> corresponde al 23/08/2019 y se acompaña de un <a href="Binary-hcen-binario-cda-consulta-no-urgente.html">Binary con CDA de apoyo</a>. Es un escenario distinto del documento de medicina general; no deben intercambiarse sus documentos ni identificadores.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contenido</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Encuentro</td>
+      <td><a href="Encounter-hcen-encuentro-traumatologia.html">Consulta de traumatología</a></td>
+    </tr>
+    <tr>
+      <td>Motivo de consulta</td>
+      <td><a href="Condition-hcen-motivo-consulta-mialgia.html">Mialgia</a></td>
+    </tr>
+    <tr>
+      <td>Diagnóstico</td>
+      <td><a href="Condition-hcen-diagnostico-desgarro-muscular.html">Desgarro muscular</a></td>
+    </tr>
+    <tr>
+      <td>Procedimientos</td>
+      <td><a href="Procedure-hcen-procedimiento-vendaje.html">Vendaje</a> y <a href="Procedure-hcen-procedimiento-oxigeno.html">oxígeno</a></td>
+    </tr>
+    <tr>
+      <td>Medicación administrada</td>
+      <td><a href="MedicationAdministration-hcen-med-admin-paracetamol.html">Paracetamol</a></td>
+    </tr>
+    <tr>
+      <td>Medicación indicada</td>
+      <td><a href="MedicationRequest-hcen-med-req-paracetamol.html">Prescripción de paracetamol</a></td>
+    </tr>
+    <tr>
+      <td>Indicaciones y seguimiento</td>
+      <td><a href="ServiceRequest-hcen-servicio-req-reposo.html">Reposo</a> y <a href="ServiceRequest-hcen-servicio-req-seguimiento.html">control posterior</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>La Composition individual no sustituye al Bundle documental requerido para intercambiar un documento FHIR. El perfil de Binary tampoco valida por sí solo las plantillas CDA ni la equivalencia clínica entre XML y FHIR.</p>
+
+<p><a id="recorrido-intercambio"></a></p>
+<h3 id="recorrido-de-intercambio">Recorrido de intercambio</h3>
+
+<p>El recorrido recomendado registra al paciente mediante HCEN ITI-104, publica la consulta mediante HCEN ITI-65, busca sus metadatos por POST en HCEN ITI-67 y recupera FHIR y CDA mediante HCEN ITI-68. También debe probarse la publicación de un paciente que todavía no existe.</p>
+
+<p>Los ejemplos publicados corresponden a las reglas de publicación de Plataforma.</p>
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El tutorial del Gateway incluye ejemplos adaptados para el recorrido local: agrega un Binary con CDA nivel 1 del escenario de medicina general y utiliza referencias internas a las entradas del envío. Las diferencias se explican en <a href="hcen-iti-65.html">HCEN ITI-65</a>. El CDA de traumatología no debe utilizarse como representación de ese documento.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<p>Esta versión no publica cuerpos completos de respuesta HCEN ITI-67 ni una respuesta operativa HCEN ITI-65 con estados no confirmados.</p>
+
+<h3 id="alcance-de-la-comprobación">Alcance de la comprobación</h3>
+
+<p>Los ejemplos permiten revisar estructura, referencias, identidades y narrativas. La evaluación de recursos, terminología e intercambios se describe en <a href="hcen-conformidad.html">Conformidad HCEN</a>.</p>
+
+<p>En el ejemplo HCEN ITI-65, <code class="language-plaintext highlighter-rouge">sourceId</code> identifica una entidad intermediaria ilustrativa mediante un OID sintético, sin asignación oficial declarada. La organización clínica ASSE conserva su identificador de organización. Ambos usan <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y la URI OID completa en <code class="language-plaintext highlighter-rouge">value</code>.</p>
 
 
 
@@ -465,10 +585,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

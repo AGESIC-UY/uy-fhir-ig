@@ -1,57 +1,58 @@
-# ID Único del Repositorio - Guía de Implementación FHIR de Uruguay v0.1.0
+# ID Único del Repositorio - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: ID Único del Repositorio 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+**Información de uso**
 
-**Usages:**
+**Usos:**
 
-* Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+* Utilizar esta extensión: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+* Ejemplos de esta extensión: [Bundle/hcen-provide-document-bundle-cnu-asse](Bundle-hcen-provide-document-bundle-cnu-asse.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-repository-id)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-repository-id)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type Identifier: Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
+Extensión simple de tipo Identifier: Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantánea** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type Identifier: Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
+Extensión simple de tipo Identifier: Identificador único del repositorio. Mapea a DocumentEntry.repositoryUniqueId de XDS.
 
  
 
@@ -66,11 +67,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-repository-id
   "resourceType" : "StructureDefinition",
   "id" : "ext-repository-id",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "RepositoryId",
   "title" : "ID Único del Repositorio",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

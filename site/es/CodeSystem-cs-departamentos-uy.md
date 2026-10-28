@@ -1,4 +1,4 @@
-# Sistema de códigos de departamentos de Uruguay - Guía de Implementación FHIR de Uruguay v0.1.0
+# Sistema de códigos de departamentos de Uruguay - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## CodeSystem: Sistema de códigos de departamentos de Uruguay 
 
@@ -19,11 +19,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "resourceType" : "CodeSystem",
   "id" : "cs-departamentos-uy",
   "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "CSDepartamentosUY",
   "title" : "Sistema de códigos de departamentos de Uruguay",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

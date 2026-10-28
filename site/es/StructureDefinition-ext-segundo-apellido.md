@@ -1,36 +1,36 @@
-# Segundo Apellido - Guía de Implementación FHIR de Uruguay v0.1.0
+# Segundo Apellido - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: Segundo Apellido 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+**Información de uso**
 
-**Usages:**
+**Usos:**
 
-* Use this Extension: [Nombre de Persona (Uruguay)](StructureDefinition-uy-human-name.md)
-* Examples for this Extension: [Patient/EjemploPacienteUY](Patient-EjemploPacienteUY.md)
+* Utilizar esta extensión: [Nombre de Persona (Uruguay)](StructureDefinition-uy-human-name.md)
+* Ejemplos de esta extensión: [Bundle/hcen-cnu-medicina-general-bundle](Bundle-hcen-cnu-medicina-general-bundle.md), [Bundle/hcen-provide-document-bundle-cnu-asse](Bundle-hcen-provide-document-bundle-cnu-asse.md), [Organización ABC](Organization-uy-organizacion-abc-completa.md), [Patient/hcen-paciente-gonzalez](Patient-hcen-paciente-gonzalez.md)... Show 5 more, [Patient/uy-paciente-perez-completo](Patient-uy-paciente-perez-completo.md), [Patient/uy-paciente-perez](Patient-uy-paciente-perez.md), [Practitioner/hcen-profesional-rodriguez](Practitioner-hcen-profesional-rodriguez.md), [Practitioner/uy-profesional-sanchez-completo](Practitioner-uy-profesional-sanchez-completo.md) and [Practitioner/uy-profesional-sanchez](Practitioner-uy-profesional-sanchez.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-segundo-apellido)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-segundo-apellido)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type string: Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
+Extensión simple de tipo string: Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
 
  **Vista diferencial** 
 
@@ -38,13 +38,13 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
  **Vista instantánea** 
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type string: Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
+Extensión simple de tipo string: Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.
 
  
 
@@ -59,11 +59,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-segundo-apell
   "resourceType" : "StructureDefinition",
   "id" : "ext-segundo-apellido",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "SegundoApellido",
   "title" : "Segundo Apellido",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -96,12 +96,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-segundo-apell
       "definition" : "Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad."
     },
     {
-      "id" : "Extension.id",
-      "path" : "Extension.id",
-      "short" : "Identificador del elemento dentro del recurso.",
-      "definition" : "Identificador del elemento dentro del recurso."
-    },
-    {
       "id" : "Extension.extension",
       "path" : "Extension.extension",
       "max" : "0"
@@ -109,8 +103,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-segundo-apell
     {
       "id" : "Extension.url",
       "path" : "Extension.url",
-      "short" : "URL canónica que identifica la extensión.",
-      "definition" : "URL canónica que identifica la extensión.",
       "fixedUri" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido"
     },
     {

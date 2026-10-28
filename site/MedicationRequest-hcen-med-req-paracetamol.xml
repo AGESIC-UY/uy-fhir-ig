@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="hcen-med-req-paracetamol"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p>Fármaco: 1 comprimido de paracetamol 650 mg. Vía de administración: vía oral. Cantidad: 1 comprimido. Frecuencia: cada 8 horas. Tomar con alimentos. Duración: 5 días. Observaciones: suspender en caso de alguna reacción adversa.</p></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="20921000179102"/>
+      <display value="Paracetamol 650 mg comprimido"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <requester>
+    <reference value="PractitionerRole/hcen-rol-traumatologia-sousa"/>
+  </requester>
+  <note>
+    <text value="Suspender en caso de alguna reacción adversa"/>
+  </note>
+  <dosageInstruction>
+    <text value="1 comprimido de paracetamol 650 mg, vía oral, cada 8 horas durante 5 días, tomar con alimentos"/>
+    <patientInstruction value="Tomar con alimentos"/>
+    <timing>
+      <repeat>
+        <boundsDuration>
+          <value value="5"/>
+          <unit value="días"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="d"/>
+        </boundsDuration>
+        <frequency value="1"/>
+        <period value="8"/>
+        <periodUnit value="h"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+        <code value="PO"/>
+        <display value="Swallow, oral"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+        <unit value="comprimido"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="{comprimido}"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

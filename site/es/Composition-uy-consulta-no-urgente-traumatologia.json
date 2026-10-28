@@ -1,0 +1,167 @@
+{
+  "resourceType" : "Composition",
+  "id" : "uy-consulta-no-urgente-traumatologia",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "identifier" : {
+    "use" : "usual",
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.858.2.1.67430.20190823110524.1.1"
+  },
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "34108-1",
+      "display" : "Hoja de consulta no urgente"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "encounter" : {
+    "reference" : "Encounter/hcen-encuentro-traumatologia"
+  },
+  "date" : "2019-08-23T11:05:24-03:00",
+  "author" : [{
+    "reference" : "PractitionerRole/hcen-rol-traumatologia-sousa"
+  }],
+  "title" : "Consulta no urgente",
+  "confidentiality" : "N",
+  "custodian" : {
+    "reference" : "Organization/hcen-organizacion-asse"
+  },
+  "section" : [{
+    "title" : "Motivos de consulta",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "10154-3",
+        "display" : "Motivo de consulta"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "Condition/hcen-motivo-consulta-mialgia"
+    }]
+  },
+  {
+    "title" : "Diagnósticos",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "11450-4",
+        "display" : "Diagnostico"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "Condition/hcen-diagnostico-desgarro-muscular"
+    }]
+  },
+  {
+    "title" : "Procedimientos relevantes realizados",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "47519-4",
+        "display" : "Procedimientos relevantes realizados"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "Procedure/hcen-procedimiento-vendaje"
+    }]
+  },
+  {
+    "title" : "Tratamiento no farmacológico realizado durante la asistencia",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "258071000179109",
+        "display" : "Tratamiento no farmacológico realizado durante la asistencia"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "Procedure/hcen-procedimiento-oxigeno"
+    }]
+  },
+  {
+    "title" : "Tratamiento farmacológico realizado durante la asistencia",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "19011-6",
+        "display" : "Tratamiento farmacológico realizado durante la asistencia"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "MedicationAdministration/hcen-med-admin-paracetamol"
+    }]
+  },
+  {
+    "title" : "Tratamiento no farmacológico indicado al final de la asistencia",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "258081000179106",
+        "display" : "Tratamiento no farmacológico indicado al final de la asistencia"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "ServiceRequest/hcen-servicio-req-reposo"
+    }]
+  },
+  {
+    "title" : "Tratamiento farmacológico indicado al final de la asistencia",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "29305-0",
+        "display" : "Tratamiento farmacológico indicado al final de la asistencia"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "MedicationRequest/hcen-med-req-paracetamol"
+    }]
+  },
+  {
+    "title" : "Instrucciones de seguimiento",
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "18776-5",
+        "display" : "Instrucciones de seguimiento"
+      }]
+    },
+    "text" : {
+      "status" : "generated"
+    },
+    "entry" : [{
+      "reference" : "ServiceRequest/hcen-servicio-req-seguimiento"
+    }]
+  }]
+}

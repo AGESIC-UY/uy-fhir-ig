@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="uy-organizacion-abc-completa"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="XX"/>
+        <display value="Organization identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.858.0.0.2.1234"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Organización ABC"/>
+  <alias value="ABC"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 2486 5008"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <type value="both"/>
+    <line value="Av. Luis Alberto de Herrera 1234"/>
+    <city value="MONTEVIDEO"/>
+    <state value="Montevideo"/>
+    <country value="URY"/>
+  </address>
+  <partOf>
+    <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.858.0.0.2.1235"/>
+    </identifier>
+    <display value="Organización AAA"/>
+  </partOf>
+  <contact>
+    <purpose>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+        <code value="ADMIN"/>
+        <display value="Administrative"/>
+      </coding>
+    </purpose>
+    <name>
+      <text value="María Fernández González"/>
+      <family value="Fernández González">
+        <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+          <valueString value="Fernández"/>
+        </extension>
+        <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+          <valueString value="González"/>
+        </extension>
+      </family>
+      <given value="María"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="+598 99 654 321"/>
+      <use value="work"/>
+    </telecom>
+    <address>
+      <use value="home"/>
+      <type value="physical"/>
+      <text value="Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY"/>
+      <line value="Calle Falsa 1234"/>
+      <city value="MONTEVIDEO"/>
+      <district value="CIUDAD VIEJA"/>
+      <state value="Montevideo"/>
+      <postalCode value="11000"/>
+      <country value="URY"/>
+    </address>
+  </contact>
+</Organization>

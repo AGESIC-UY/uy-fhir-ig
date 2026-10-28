@@ -18,11 +18,11 @@
      fhir:v "http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig"^^xsd:anyURI ;
      fhir:l <http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "UruguayFHIRImplementationGuide"] ; # 
   fhir:title [ fhir:v "Guía de Implementación FHIR de Uruguay"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-28T18:02:56-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "AGESIC" ] ;
@@ -102,7 +102,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Versión inicial"
+           fhir:v "Borrador para pruebas de implementación"
          ]
        ] ) ;
        fhir:url [
@@ -759,7 +759,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Versión inicial"
+           fhir:v "Borrador para pruebas de implementación"
          ]
        ] ) ;
        fhir:url [
@@ -1673,6 +1673,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-sexo-biologico> ;
+         fhir:reference [ fhir:v "ValueSet/vs-sexo-biologico" ]
+       ] ;
+       fhir:name [ fhir:v "Conjunto de Valores Sexo Biológico" ] ;
+       fhir:description [ fhir:v "Sexo biológico: listado de códigos." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion> ;
          fhir:reference [ fhir:v "ValueSet/vs-sitio-administracion" ]
        ] ;
@@ -1744,6 +1765,27 @@
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Composition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Composition/uy-consulta-no-urgente-traumatologia> ;
+         fhir:reference [ fhir:v "Composition/uy-consulta-no-urgente-traumatologia" ]
+       ] ;
+       fhir:name [ fhir:v "Consulta no urgente" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente>
        ]
      ] [
        fhir:extension ( [
@@ -1867,6 +1909,27 @@
        ] ;
        fhir:name [ fhir:v "Documento Escaneado" ] ;
        fhir:description [ fhir:v "Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-dni-identifier> ;
+         fhir:reference [ fhir:v "StructureDefinition/uy-dni-identifier" ]
+       ] ;
+       fhir:name [ fhir:v "Documento Nacional de Identidad" ] ;
+       fhir:description [ fhir:v "Identificación nacional de la persona, asociada al país que la emite." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2013,10 +2076,556 @@
          fhir:reference [ fhir:v "StructureDefinition/hcen-provide-document-bundle" ]
        ] ;
        fhir:name [ fhir:v "Envío para publicación documental HCEN" ] ;
-       fhir:description [ fhir:v "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo." ] ;
+       fhir:description [ fhir:v "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. Plataforma procesa y valida el envío como fachada FHIR y registra metadatos en XDS, sin persistir recursos FHIR." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Binary/hcen-binario-cda-consulta-no-urgente> ;
+         fhir:reference [ fhir:v "Binary/hcen-binario-cda-consulta-no-urgente" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-binario-cda-consulta-no-urgente" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Bundle/hcen-cnu-medicina-general-bundle> ;
+         fhir:reference [ fhir:v "Bundle/hcen-cnu-medicina-general-bundle" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-cnu-medicina-general-bundle" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-diagnostico-desgarro-muscular> ;
+         fhir:reference [ fhir:v "Condition/hcen-diagnostico-desgarro-muscular" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-diagnostico-desgarro-muscular" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Encounter/hcen-encuentro-traumatologia> ;
+         fhir:reference [ fhir:v "Encounter/hcen-encuentro-traumatologia" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-encuentro-traumatologia" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/MedicationAdministration/hcen-med-admin-paracetamol> ;
+         fhir:reference [ fhir:v "MedicationAdministration/hcen-med-admin-paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-med-admin-paracetamol" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/MedicationRequest/hcen-med-req-paracetamol> ;
+         fhir:reference [ fhir:v "MedicationRequest/hcen-med-req-paracetamol" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-med-req-paracetamol" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-motivo-consulta-mialgia> ;
+         fhir:reference [ fhir:v "Condition/hcen-motivo-consulta-mialgia" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-motivo-consulta-mialgia" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+         fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-organizacion-asse" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+         fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-paciente-gonzalez" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-smith> ;
+         fhir:reference [ fhir:v "Patient/hcen-paciente-smith" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-paciente-smith" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Practitioner/hcen-practitioner-sousa> ;
+         fhir:reference [ fhir:v "Practitioner/hcen-practitioner-sousa" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-practitioner-sousa" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Procedure"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-oxigeno> ;
+         fhir:reference [ fhir:v "Procedure/hcen-procedimiento-oxigeno" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-procedimiento-oxigeno" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Procedure"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-vendaje> ;
+         fhir:reference [ fhir:v "Procedure/hcen-procedimiento-vendaje" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-procedimiento-vendaje" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Practitioner/hcen-profesional-rodriguez> ;
+         fhir:reference [ fhir:v "Practitioner/hcen-profesional-rodriguez" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-profesional-rodriguez" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Bundle/hcen-provide-document-bundle-cnu-asse> ;
+         fhir:reference [ fhir:v "Bundle/hcen-provide-document-bundle-cnu-asse" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-provide-document-bundle-cnu-asse" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-medicina-general-rodriguez-asse> ;
+         fhir:reference [ fhir:v "PractitionerRole/hcen-rol-medicina-general-rodriguez-asse" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-rol-medicina-general-rodriguez-asse" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> ;
+         fhir:reference [ fhir:v "PractitionerRole/hcen-rol-traumatologia-sousa" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-rol-traumatologia-sousa" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-reposo> ;
+         fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-reposo" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-servicio-req-reposo" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-seguimiento> ;
+         fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-seguimiento" ]
+       ] ;
+       fhir:name [ fhir:v "example-hcen-servicio-req-seguimiento" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Organization/uy-organizacion-abc> ;
+         fhir:reference [ fhir:v "Organization/uy-organizacion-abc" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-organizacion-abc" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Organization/uy-organizacion-abc-completa> ;
+         fhir:reference [ fhir:v "Organization/uy-organizacion-abc-completa" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-organizacion-abc-completa" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Patient/uy-paciente-perez> ;
+         fhir:reference [ fhir:v "Patient/uy-paciente-perez" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-paciente-perez" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Patient/uy-paciente-perez-completo> ;
+         fhir:reference [ fhir:v "Patient/uy-paciente-perez-completo" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-paciente-perez-completo" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Practitioner/uy-profesional-sanchez> ;
+         fhir:reference [ fhir:v "Practitioner/uy-profesional-sanchez" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-profesional-sanchez" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/Practitioner/uy-profesional-sanchez-completo> ;
+         fhir:reference [ fhir:v "Practitioner/uy-profesional-sanchez-completo" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-profesional-sanchez-completo" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/uy-rol-medicina-general-sanchez-abc> ;
+         fhir:reference [ fhir:v "PractitionerRole/uy-rol-medicina-general-sanchez-abc" ]
+       ] ;
+       fhir:name [ fhir:v "example-uy-rol-medicina-general-sanchez-abc" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role>
        ]
      ] [
        fhir:extension ( [
@@ -2286,7 +2895,7 @@
          fhir:reference [ fhir:v "StructureDefinition/ext-binary-resource-id" ]
        ] ;
        fhir:name [ fhir:v "ID del Recurso Binario" ] ;
-       fhir:description [ fhir:v "Referencia al recurso Binary que contiene la representación CDA del documento clínico." ] ;
+       fhir:description [ fhir:v "Referencia al recurso FHIR Binary del prestador que contiene la representación CDA XML del documento clínico. En HCEN ITI-65 se informa la URL HTTP(S) absoluta original de ese recurso. La recuperación del CDA se realiza mediante la URL devuelta por HCEN ITI-67, según las reglas de HCEN ITI-68." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2320,15 +2929,36 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-identidad-de-genero> ;
+         fhir:reference [ fhir:v "StructureDefinition/ext-identidad-de-genero" ]
+       ] ;
+       fhir:name [ fhir:v "Identidad de género" ] ;
+       fhir:description [ fhir:v "Extensión para representar la identidad de género de una persona. Hereda de la extensión de HL7 individual-genderIdentity." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:complex-type"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-ci-identifier> ;
-         fhir:reference [ fhir:v "StructureDefinition/uy-ci-identifier" ]
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-ci-identifier> ;
+         fhir:reference [ fhir:v "StructureDefinition/hcen-ci-identifier" ]
        ] ;
        fhir:name [ fhir:v "Identificador Cédula de Identidad" ] ;
-       fhir:description [ fhir:v "Cédula de identidad del paciente." ] ;
+       fhir:description [ fhir:v "Cédula de identidad uruguaya utilizada para identificar pacientes y profesionales en HCEN, con system fijo urn:oid:2.16.858.2.10000675.68909." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2350,6 +2980,27 @@
        ] ;
        fhir:name [ fhir:v "Identificador de Organización" ] ;
        fhir:description [ fhir:v "Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-org-identifier> ;
+         fhir:reference [ fhir:v "StructureDefinition/hcen-org-identifier" ]
+       ] ;
+       fhir:name [ fhir:v "Identificador de Organización para HCEN" ] ;
+       fhir:description [ fhir:v "Identificador URI OID de una organización uruguaya para los intercambios HCEN." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2551,28 +3202,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Organization"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/Organization/EjemploOrganizacionUY> ;
-         fhir:reference [ fhir:v "Organization/EjemploOrganizacionUY" ]
-       ] ;
-       fhir:name [ fhir:v "Organización CORE UY sin identificador HCEN" ] ;
-       fhir:description [ fhir:v "Ejemplo sintético de organización nacional identificada por su nombre." ] ;
-       fhir:example [
-         a fhir:Canonical ;
-         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization"^^xsd:anyURI ;
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-organization>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -2598,15 +3227,15 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/Patient/EjemploPacienteUY> ;
-         fhir:reference [ fhir:v "Patient/EjemploPacienteUY" ]
+         fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-dni-ci> ;
+         fhir:reference [ fhir:v "Patient/hcen-paciente-dni-ci" ]
        ] ;
-       fhir:name [ fhir:v "Paciente Uruguayo (CORE UY)" ] ;
-       fhir:description [ fhir:v "Ejemplo de un paciente genérico en Uruguay" ] ;
+       fhir:name [ fhir:v "Paciente con DNI nacional y CI HCEN" ] ;
+       fhir:description [ fhir:v "Paciente ficticio con MRN, DNI nacional y CI HCEN en identificadores independientes." ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"^^xsd:anyURI ;
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-patient>
+         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"^^xsd:anyURI ;
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient>
        ]
      ] [
        fhir:extension ( [
@@ -2847,19 +3476,39 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Practitioner"
+           fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/Practitioner/EjemploProfesionalUY> ;
-         fhir:reference [ fhir:v "Practitioner/EjemploProfesionalUY" ]
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-pronombres> ;
+         fhir:reference [ fhir:v "StructureDefinition/ext-pronombres" ]
        ] ;
-       fhir:name [ fhir:v "Profesional CORE UY sin cédula informada" ] ;
-       fhir:description [ fhir:v "Ejemplo sintético que muestra que la CI obligatoria pertenece al perfil HCEN." ] ;
+       fhir:name [ fhir:v "Pronombres" ] ;
+       fhir:description [ fhir:v "Extensión para representar los pronombres de una persona. Hereda de la extensión de HL7 individual-pronouns." ] ;
        fhir:example [
-         a fhir:Canonical ;
-         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"^^xsd:anyURI ;
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner>
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://fhir.hcen.gub.uy/ValueSet/vs-pronombres-uy> ;
+         fhir:reference [ fhir:v "ValueSet/vs-pronombres-uy" ]
+       ] ;
+       fhir:name [ fhir:v "Pronombres personales en Uruguay" ] ;
+       fhir:description [ fhir:v "Pronombres personales: listado de códigos." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -2890,19 +3539,18 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "PractitionerRole"
+           fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/EjemploRolProfesionalUY> ;
-         fhir:reference [ fhir:v "PractitionerRole/EjemploRolProfesionalUY" ]
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido> ;
+         fhir:reference [ fhir:v "StructureDefinition/ext-segundo-apellido" ]
        ] ;
-       fhir:name [ fhir:v "Rol profesional CORE UY" ] ;
-       fhir:description [ fhir:v "Ejemplo sintético de rol que referencia los perfiles nacionales." ] ;
+       fhir:name [ fhir:v "Segundo Apellido" ] ;
+       fhir:description [ fhir:v "Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad." ] ;
        fhir:example [
-         a fhir:Canonical ;
-         fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"^^xsd:anyURI ;
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role>
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -2916,11 +3564,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido> ;
-         fhir:reference [ fhir:v "StructureDefinition/ext-segundo-apellido" ]
+         fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/ext-sexo-al-nacer> ;
+         fhir:reference [ fhir:v "StructureDefinition/ext-sexo-al-nacer" ]
        ] ;
-       fhir:name [ fhir:v "Segundo Apellido" ] ;
-       fhir:description [ fhir:v "Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad." ] ;
+       fhir:name [ fhir:v "Sexo al nacer" ] ;
+       fhir:description [ fhir:v "Extensión para representar el sexo asignado al nacer de una persona. Hereda de la extensión de HL7 individual-recordedSexOrGender." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -3333,7 +3981,7 @@
                fhir:v "hcen-iti-104.html"^^xsd:anyURI ;
                fhir:l fhir:hcen-iti-104.html
              ] ;
-             fhir:title [ fhir:v "Registrar o actualizar pacientes" ] ;
+             fhir:title [ fhir:v "Registrar o actualizar pacientes — HCEN ITI-104" ] ;
              fhir:generation [ fhir:v "markdown" ]
            ] [
              fhir:extension ( [
@@ -3352,7 +4000,7 @@
                fhir:v "hcen-iti-65.html"^^xsd:anyURI ;
                fhir:l fhir:hcen-iti-65.html
              ] ;
-             fhir:title [ fhir:v "Publicar documentos" ] ;
+             fhir:title [ fhir:v "Publicar documentos — HCEN ITI-65" ] ;
              fhir:generation [ fhir:v "markdown" ]
            ] [
              fhir:extension ( [
@@ -3371,7 +4019,7 @@
                fhir:v "hcen-iti-67.html"^^xsd:anyURI ;
                fhir:l fhir:hcen-iti-67.html
              ] ;
-             fhir:title [ fhir:v "Consultar metadatos" ] ;
+             fhir:title [ fhir:v "Consultar metadatos — HCEN ITI-67" ] ;
              fhir:generation [ fhir:v "markdown" ]
            ] [
              fhir:extension ( [
@@ -3390,7 +4038,7 @@
                fhir:v "hcen-iti-68.html"^^xsd:anyURI ;
                fhir:l fhir:hcen-iti-68.html
              ] ;
-             fhir:title [ fhir:v "Recuperar documentos" ] ;
+             fhir:title [ fhir:v "Recuperar documentos — HCEN ITI-68" ] ;
              fhir:generation [ fhir:v "markdown" ]
            ] )
          ] [

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="hcen-servicio-req-reposo"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p>Indicación/recomendación: hacer reposo durante las próximas 2 semanas.</p></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="258061000179103"/>
+      <display value="Indicación/recomendación"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <patientInstruction value="Hacer reposo durante las próximas 2 semanas"/>
+</ServiceRequest>

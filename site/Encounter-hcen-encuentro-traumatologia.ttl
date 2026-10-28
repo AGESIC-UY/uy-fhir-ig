@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Encounter/hcen-encuentro-traumatologia> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-encuentro-traumatologia"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es-UY"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Consulta ambulatoria de traumatología, 23/08/2019, Administración de los Servicios de Salud del Estado (ASSE).</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:6821000179104 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "6821000179104" ] ;
+       fhir:display [ fhir:v "Hoja de consulta no urgente centralizada - policlínica" ]
+     ] )
+  ] ) ; # 
+  fhir:serviceType [
+     fhir:coding ( [
+       a sct:4101000179107 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "4101000179107" ] ;
+       fhir:display [ fhir:v "servicio de traumatología y ortopedia" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:period [
+       fhir:start [ fhir:v "2019-08-23T10:05:24-03:00"^^xsd:dateTime ]
+     ] ;
+     fhir:individual [
+       fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> ;
+       fhir:reference [ fhir:v "PractitionerRole/hcen-rol-traumatologia-sousa" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2019-08-23T10:05:24-03:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2019-08-23T10:15:24-03:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:serviceProvider [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+     fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

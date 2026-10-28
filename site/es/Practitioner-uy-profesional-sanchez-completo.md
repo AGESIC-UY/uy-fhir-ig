@@ -1,0 +1,94 @@
+# example-uy-profesional-sanchez-completo - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Practitioner: example-uy-profesional-sanchez-completo
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Practitioner",
+  "id" : "uy-profesional-sanchez-completo",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner"]
+  },
+  "language" : "es-UY",
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NI",
+        "display" : "National unique individual identifier"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.1.858.68909",
+    "value" : "38700001"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "Juan Pedro Sánchez Martínez",
+    "family" : "Sánchez Martínez",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+        "valueString" : "Sánchez"
+      },
+      {
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+        "valueString" : "Martínez"
+      }]
+    },
+    "given" : ["Juan", "Pedro"],
+    "prefix" : ["Dr."]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+598 99 123 456",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "juan.sanchez@example.org",
+    "use" : "work"
+  }],
+  "address" : [{
+    "use" : "home",
+    "type" : "physical",
+    "text" : "Calle 123, MONTEVIDEO, Montevideo, URY",
+    "line" : ["Calle 123"],
+    "city" : "MONTEVIDEO",
+    "district" : "CIUDAD VIEJA",
+    "state" : "Montevideo",
+    "postalCode" : "11000",
+    "country" : "URY"
+  }],
+  "gender" : "male",
+  "birthDate" : "1975-05-15",
+  "qualification" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+        "code" : "MD",
+        "display" : "Doctor of Medicine"
+      }]
+    },
+    "period" : {
+      "start" : "2000-01-01",
+      "end" : "2025-12-31"
+    },
+    "issuer" : {
+      "display" : "Universidad de la República, Uruguay"
+    }
+  }],
+  "communication" : [{
+    "coding" : [{
+      "system" : "urn:ietf:bcp:47",
+      "code" : "es-UY",
+      "display" : "Español (Uruguay)"
+    }]
+  }]
+}
+
+```

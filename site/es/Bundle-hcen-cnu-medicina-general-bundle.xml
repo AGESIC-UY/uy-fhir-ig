@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="hcen-cnu-medicina-general-bundle"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle"/>
+  </meta>
+  <language value="es"/>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.858.2.10001442.67430.20261007103112.1"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2026-10-07T10:31:12-03:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:4ad984ad-02c3-5b18-8a04-90139a241ccb"/>
+    <resource>
+      <Composition>
+        <id value="hcen-cnu-composicion"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <use value="usual"/>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.858.2.10001442.67430.20261007103112.1"/>
+        </identifier>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="34108-1"/>
+            <display value="hoja de consulta no urgente"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <encounter>
+          <reference value="urn:uuid:d3aeded4-2fa7-594f-8095-f2dd32467856"/>
+        </encounter>
+        <date value="2026-10-07T10:31:12-03:00"/>
+        <author>
+          <reference value="urn:uuid:f1a2d39f-9f67-5dbd-8679-ba35101f920f"/>
+        </author>
+        <title value="Consulta no urgente"/>
+        <confidentiality value="N"/>
+        <custodian>
+          <reference value="urn:uuid:c37642a5-8630-5132-8e16-d01f456114bb"/>
+        </custodian>
+        <section>
+          <title value="Motivos de consulta"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10154-3"/>
+              <display value="Motivo de consulta"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:d32d3745-8992-5610-84e2-93a3f8c3bf0f"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Diagnósticos"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Diagnostico"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:e01dd019-2ad3-5940-8510-736ee69241ae"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Procedimientos relevantes realizados"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="47519-4"/>
+              <display value="Procedimientos relevantes realizados"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:1f6e2271-6967-56d1-8f40-92c75263b052"/>
+          </entry>
+          <entry>
+            <reference value="urn:uuid:3a63c17a-f6c8-5192-b4e8-d90dd6c8ae0a"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Tratamiento no farmacológico indicado al final de la asistencia"/>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="258081000179106"/>
+              <display value="Tratamiento no farmacológico indicado al final de la asistencia"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:17a272a7-ab8b-5131-a4de-725ec45d9f93"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Tratamiento farmacológico indicado al final de la asistencia"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="29305-0"/>
+              <display value="Tratamiento farmacológico indicado al final de la asistencia"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:4510b9b1-c659-5994-a515-f31d10b24eac"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Instrucciones de seguimiento"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="18776-5"/>
+              <display value="Instrucciones de seguimiento"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/>
+          </text>
+          <entry>
+            <reference value="urn:uuid:79e57a47-caf1-554e-8243-07111da97309"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+    <resource>
+      <Patient>
+        <id value="hcen-paciente-gonzalez"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/administrative-gender"/>
+                <code value="female"/>
+                <display value="Female"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="76689-9"/>
+                <display value="Sex assigned at birth"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <identifier>
+          <use value="usual"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="MR"/>
+              <display value="Medical record number"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.858.2.999999.72768.1"/>
+          <value value="1873455"/>
+        </identifier>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NI"/>
+              <display value="National unique individual identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.858.2.10000675.68909"/>
+          <value value="45000001"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <text value="María Laura González Pereira"/>
+          <family value="González Pereira">
+            <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+              <valueString value="González"/>
+            </extension>
+            <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+              <valueString value="Pereira"/>
+            </extension>
+          </family>
+          <given value="María"/>
+          <given value="Laura"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+598 98 456 000"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="maria.gonzalez@example.com"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1987-03-14"/>
+        <address>
+          <use value="home"/>
+          <type value="physical"/>
+          <line value="Av. Brasil 2765"/>
+          <city value="MONTEVIDEO"/>
+          <district value="POCITOS"/>
+          <state value="Montevideo"/>
+          <postalCode value="11300"/>
+          <country value="URY"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d3aeded4-2fa7-594f-8095-f2dd32467856"/>
+    <resource>
+      <Encounter>
+        <id value="hcen-cnu-encuentro"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6821000179104"/>
+            <display value="hoja de consulta no urgente centralizada - policlínica"/>
+          </coding>
+        </type>
+        <serviceType>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="700232004"/>
+            <display value="servicio de medicina general"/>
+          </coding>
+        </serviceType>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <participant>
+          <period>
+            <start value="2026-10-07T10:31:12-03:00"/>
+          </period>
+          <individual>
+            <reference value="urn:uuid:f1a2d39f-9f67-5dbd-8679-ba35101f920f"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2026-10-07T10:05:00-03:00"/>
+          <end value="2026-10-07T10:25:00-03:00"/>
+        </period>
+        <serviceProvider>
+          <reference value="urn:uuid:c37642a5-8630-5132-8e16-d01f456114bb"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f1a2d39f-9f67-5dbd-8679-ba35101f920f"/>
+    <resource>
+      <PractitionerRole>
+        <id value="hcen-rol-medicina-general-rodriguez-asse"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <active value="true"/>
+        <period>
+          <start value="2018-03-01"/>
+        </period>
+        <practitioner>
+          <reference value="urn:uuid:305d79a0-aba1-5405-b05d-e9faf310ff4f"/>
+          <display value="Martín Andrés Rodríguez Silva"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:c37642a5-8630-5132-8e16-d01f456114bb"/>
+          <display value="ASSE"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="59058001"/>
+            <display value="médico general"/>
+          </coding>
+        </code>
+        <specialty>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394802001"/>
+            <display value="medicina general"/>
+          </coding>
+        </specialty>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:305d79a0-aba1-5405-b05d-e9faf310ff4f"/>
+    <resource>
+      <Practitioner>
+        <id value="hcen-profesional-rodriguez"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NI"/>
+              <display value="National unique individual identifier"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.858.2.10000675.68909"/>
+          <value value="38700001"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <text value="Martín Andrés Rodríguez Silva"/>
+          <family value="Rodríguez Silva">
+            <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+              <valueString value="Rodríguez"/>
+            </extension>
+            <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+              <valueString value="Silva"/>
+            </extension>
+          </family>
+          <given value="Martín"/>
+          <given value="Andrés"/>
+          <prefix value="Dr."/>
+        </name>
+        <gender value="male"/>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c37642a5-8630-5132-8e16-d01f456114bb"/>
+    <resource>
+      <Organization>
+        <id value="hcen-organizacion-asse"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="XX"/>
+              <display value="Organization identifier"/>
+            </coding>
+          </type>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.858.0.0.2.1"/>
+        </identifier>
+        <active value="true"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+        </type>
+        <name value="Administración de los Servicios de Salud del Estado"/>
+        <alias value="ASSE"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+598 2486 5008"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <use value="work"/>
+          <type value="both"/>
+          <line value="Av. Luis Alberto de Herrera 3326"/>
+          <city value="MONTEVIDEO"/>
+          <state value="Montevideo"/>
+          <country value="URY"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d32d3745-8992-5610-84e2-93a3f8c3bf0f"/>
+    <resource>
+      <Condition>
+        <id value="hcen-cnu-motivo-consulta"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="7611000179107"/>
+            <display value="motivo de consulta"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="80313002"/>
+            <display value="palpitaciones (hallazgo)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e01dd019-2ad3-5940-8510-736ee69241ae"/>
+    <resource>
+      <Condition>
+        <id value="hcen-cnu-diagnostico"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="439401001"/>
+            <display value="Diagnostico"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="38341003"/>
+            <display value="hipertensión arterial (trastorno)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1f6e2271-6967-56d1-8f40-92c75263b052"/>
+    <resource>
+      <Procedure>
+        <id value="hcen-cnu-procedimiento-ecg"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="29303009"/>
+            <display value="procedimiento electrocardiográfico (procedimiento)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <outcome>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="280413001"/>
+            <display value="resultado normal"/>
+          </coding>
+        </outcome>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3a63c17a-f6c8-5192-b4e8-d90dd6c8ae0a"/>
+    <resource>
+      <Procedure>
+        <id value="hcen-cnu-procedimiento-presion-arterial"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="completed"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="46973005"/>
+            <display value="medir la presión arterial (procedimiento)"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <outcome>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="280415008"/>
+            <display value="resultado anormal"/>
+          </coding>
+        </outcome>
+        <note>
+          <text value="PA 158/96 mmHg en brazo izquierdo, en reposo."/>
+        </note>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:17a272a7-ab8b-5131-a4de-725ec45d9f93"/>
+    <resource>
+      <ServiceRequest>
+        <id value="hcen-cnu-indicacion-dieta"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="386619000"/>
+            <display value="Low sodium diet"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <patientInstruction value="Reducir el consumo de sal y evitar alimentos procesados"/>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:4510b9b1-c659-5994-a515-f31d10b24eac"/>
+    <resource>
+      <MedicationRequest>
+        <id value="hcen-cnu-prescripcion-enalapril"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="318853004"/>
+            <display value="Enalapril maleate 10 mg oral tablet"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <authoredOn value="2026-10-07T10:31:12-03:00"/>
+        <requester>
+          <reference value="urn:uuid:f1a2d39f-9f67-5dbd-8679-ba35101f920f"/>
+        </requester>
+        <dosageInstruction>
+          <text value="1 comprimido vía oral cada 12 horas durante 30 días"/>
+          <timing>
+            <repeat>
+              <boundsDuration>
+                <value value="30"/>
+                <unit value="días"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="d"/>
+              </boundsDuration>
+              <frequency value="1"/>
+              <period value="12"/>
+              <periodUnit value="h"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+              <code value="PO"/>
+              <display value="Swallow, oral"/>
+            </coding>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="comprimido"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosageInstruction>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:79e57a47-caf1-554e-8243-07111da97309"/>
+    <resource>
+      <ServiceRequest>
+        <id value="hcen-cnu-seguimiento"/>
+        <meta>
+          <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+        </meta>
+        <language value="es"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <status value="active"/>
+        <intent value="plan"/>
+        <subject>
+          <reference value="urn:uuid:62e9ddfe-dc50-538b-8767-93f14cfef7df"/>
+        </subject>
+        <occurrenceDateTime value="2026-11-06"/>
+        <patientInstruction value="Concurrir a control el 06/11/2026 con el registro domiciliario de presión arterial"/>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,12 +1,13 @@
-# Representación CDA de un documento HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Representación CDA de un documento HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: Representación CDA de un documento HCEN 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.md)
+* Referencia a este perfil: [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.md)
+* Ejemplos de este perfil: [Binary/hcen-binario-cda-consulta-no-urgente](Binary-hcen-binario-cda-consulta-no-urgente.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-cda-binary)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-cda-binary)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,31 +15,31 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Binary](http://hl7.org/fhir/R4/binary.html) .
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Binary](http://hl7.org/fhir/R4/binary.html) .
 
-** Summary **
+#### Bindings terminológicos
 
-Mandatory: 1 element
+#### Restricciones
+
+Esta estructura se deriva de [Binary](http://hl7.org/fhir/R4/binary.html) .
+
+** Resumen **
+
+Obligatorios: 1 elementos
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
@@ -46,15 +47,15 @@ Esta estructura se deriva de [Binary](http://hl7.org/fhir/R4/binary.html) .
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Binary](http://hl7.org/fhir/R4/binary.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 1 element
+Obligatorios: 1 elementos
 
  
 
@@ -69,11 +70,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-cda-binary.c
   "resourceType" : "StructureDefinition",
   "id" : "hcen-cda-binary",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENCdaBinary",
   "title" : "Representación CDA de un documento HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

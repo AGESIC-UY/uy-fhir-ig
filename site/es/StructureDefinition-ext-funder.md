@@ -1,35 +1,35 @@
-# Organización Financiadora - Guía de Implementación FHIR de Uruguay v0.1.0
+# Organización Financiadora - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Extensión: Organización Financiadora 
 
-**Context of Use**
+**Contexto de uso**
 
-**Usage info**
+**Información de uso**
 
-**Usages:**
+**Usos:**
 
-* Use this Extension: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
+* Utilizar esta extensión: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-funder)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/ext-funder)
 
 ### Visiones formales del contenido de la ampliación
 
  [Descripción de perfiles, diferenciales, instantáneas y sus representaciones](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type Reference: Organización que financia el servicio. Mapea a DocumentEntry.funder.
+Extensión simple de tipo Reference: Organización que financia el servicio. Mapea a DocumentEntry.funder.
 
  **Vista diferencial** 
 
@@ -37,13 +37,13 @@ Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.ht
 
  **Vista instantánea** 
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Extension](http://hl7.org/fhir/R4/extensibility.html#Extension) .
 
-** Summary **
+** Resumen **
 
-Simple Extension with the type Reference: Organización que financia el servicio. Mapea a DocumentEntry.funder.
+Extensión simple de tipo Reference: Organización que financia el servicio. Mapea a DocumentEntry.funder.
 
  
 
@@ -58,11 +58,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-ext-funder.csv), 
   "resourceType" : "StructureDefinition",
   "id" : "ext-funder",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-funder",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "Funder",
   "title" : "Organización Financiadora",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

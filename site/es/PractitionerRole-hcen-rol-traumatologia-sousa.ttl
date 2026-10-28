@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-rol-traumatologia-sousa"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:l <http://fhir.hcen.gub.uy/Practitioner/hcen-practitioner-sousa> ;
+     fhir:reference [ fhir:v "Practitioner/hcen-practitioner-sousa" ] ;
+     fhir:display [ fhir:v "Guillermo Sousa" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+     fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ] ;
+     fhir:display [ fhir:v "ASSE" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       a sct:309343006 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "309343006" ] ;
+       fhir:display [ fhir:v "médico" ]
+     ] ) ;
+     fhir:text [ fhir:v "Médico traumatólogo" ]
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394801008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "394801008" ] ;
+       fhir:display [ fhir:v "traumatología y ortopedia" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSBarriosLocalidadesUY",
     "title" : "Sistema de códigos de barrios y localidades postales de Uruguay",
@@ -12,7 +12,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSCodigosPostalesUY",
     "title" : "Sistema de códigos postales de Uruguay",
@@ -23,7 +23,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSDepartamentosUY",
     "title" : "Sistema de códigos de departamentos de Uruguay",
@@ -34,7 +34,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSLocalidadesUY",
     "title" : "Localidades de Uruguay (OSE)",
@@ -42,30 +42,6 @@
     "uses" : {
     },
     "ValueSet-vs-localidades-uy.html" : "Localidades de Uruguay"
-  },
-  {
-    "url" : "http://hl7.org/fhir/address-type",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "AddressType",
-    "title" : "AddressType",
-    "description" : "The type of an address (physical / postal).",
-    "oids" : ["2.16.840.1.113883.4.642.4.70"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-address-type.html" : "AddressType"
-  },
-  {
-    "url" : "http://hl7.org/fhir/address-use",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "AddressUse",
-    "title" : "AddressUse",
-    "description" : "The use of an address.",
-    "oids" : ["2.16.840.1.113883.4.642.4.68"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-address-use.html" : "AddressUse"
   },
   {
     "url" : "http://hl7.org/fhir/administrative-gender",
@@ -77,7 +53,7 @@
     "oids" : ["2.16.840.1.113883.4.642.4.2"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-administrative-gender.html" : "AdministrativeGender"
+    "ValueSet-vs-sexo-biologico.html" : "Conjunto de Valores Sexo Biológico"
   },
   {
     "url" : "http://hl7.org/fhir/composition-status",
@@ -90,78 +66,6 @@
     "uses" : {
     },
     "ValueSet-vs-composition-status-cnu.html" : "Conjunto de Valores Estado de la Consulta No Urgente"
-  },
-  {
-    "url" : "http://hl7.org/fhir/contact-point-system",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "ContactPointSystem",
-    "title" : "ContactPointSystem",
-    "description" : "Telecommunications form for contact point.",
-    "oids" : ["2.16.840.1.113883.4.642.4.72"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-contact-point-system.html" : "ContactPointSystem"
-  },
-  {
-    "url" : "http://hl7.org/fhir/contact-point-use",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "ContactPointUse",
-    "title" : "ContactPointUse",
-    "description" : "Use of contact point.",
-    "oids" : ["2.16.840.1.113883.4.642.4.74"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-contact-point-use.html" : "ContactPointUse"
-  },
-  {
-    "url" : "http://hl7.org/fhir/days-of-week",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "DaysOfWeek",
-    "title" : "DaysOfWeek",
-    "description" : "The days of the week.",
-    "oids" : ["2.16.840.1.113883.4.642.4.513"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-days-of-week.html" : "DaysOfWeek"
-  },
-  {
-    "url" : "http://hl7.org/fhir/identifier-use",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "IdentifierUse",
-    "title" : "IdentifierUse",
-    "description" : "Identifies the purpose for this identifier, if known .",
-    "oids" : ["2.16.840.1.113883.4.642.4.58"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
-  },
-  {
-    "url" : "http://hl7.org/fhir/link-type",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "LinkType",
-    "title" : "LinkType",
-    "description" : "The type of link between this patient resource and another patient resource.",
-    "oids" : ["2.16.840.1.113883.4.642.4.424"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
-  },
-  {
-    "url" : "http://hl7.org/fhir/name-use",
-    "version" : "4.0.1",
-    "status" : "active",
-    "name" : "NameUse",
-    "title" : "NameUse",
-    "description" : "The use of a human name.",
-    "oids" : ["2.16.840.1.113883.4.642.4.66"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-name-use.html" : "NameUse"
   },
   {
     "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
@@ -185,7 +89,8 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-vs-class-code.html" : "EJE 1 — Tipo genérico de documento"
+    "ValueSet-vs-class-code.html" : "EJE 1 — Tipo genérico de documento",
+    "ValueSet-vs-pronombres-uy.html" : "Pronombres personales en Uruguay"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -197,20 +102,21 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-    "ValueSet-vs-solicitud-procedimiento.html" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
     "ValueSet-vs-sitio-administracion.html" : "Conjunto de Valores Sitio de Administración (borrador)",
-    "ValueSet-vs-rol-profesional.html" : "Conjunto de Valores Rol del Profesional",
+    "http://terminology.hl7.org/7.3.0/ValueSet-gender-identity.html" : "Gender Identity",
     "ValueSet-vs-type-code.html" : "EJE 2 — Tipo detallado de documento",
     "ValueSet-vs-diagnostico-consulta.html" : "Conjunto de Valores Diagnósticos",
-    "ValueSet-vs-procedimientos.html" : "Conjunto de Valores Procedimientos",
     "ValueSet-vs-motivos-consulta.html" : "Conjunto de Valores Motivos de Consulta",
     "ValueSet-vs-practice-setting.html" : "EJE 3 — Servicio médico del documento",
+    "ValueSet-vs-resultado-procedimiento.html" : "Conjunto de Valores Resultado de Procedimiento",
+    "ValueSet-vs-condition-category-cnu.html" : "Conjunto de Valores Categoría de Condition (CNU)",
+    "ValueSet-vs-rol-profesional.html" : "Conjunto de Valores Rol del Profesional",
     "ValueSet-vs-medicamentos.html" : "Conjunto de Valores Medicamentos (borrador)",
     "ValueSet-vs-especialidad-medica.html" : "Conjunto de Valores Especialidad Médica",
-    "ValueSet-vs-condition-category-cnu.html" : "Conjunto de Valores Categoría de Condition (CNU)",
-    "ValueSet-vs-resultado-procedimiento.html" : "Conjunto de Valores Resultado de Procedimiento",
-    "ValueSet-vs-tipo-procedimiento.html" : "Conjunto de Valores Tipo de Procedimiento (borrador)"
+    "ValueSet-vs-tipo-procedimiento.html" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
+    "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
+    "ValueSet-vs-procedimientos.html" : "Conjunto de Valores Procedimientos",
+    "ValueSet-vs-solicitud-procedimiento.html" : "Conjunto de Valores Solicitud de Procedimiento (borrador)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
@@ -237,52 +143,16 @@
     "http://hl7.org/fhir/R4/valueset-condition-ver-status.html" : "ConditionVerificationStatus"
   },
   {
-    "url" : "http://terminology.hl7.org/CodeSystem/contactentity-type",
+    "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
     "version" : "2.0.0",
     "status" : "active",
-    "name" : "ContactEntityType",
-    "title" : "Contact entity type",
-    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1129"],
+    "name" : "DataAbsentReason",
+    "title" : "DataAbsentReason",
+    "description" : "Used to specify why the normally expected content of the data element is missing.",
+    "oids" : ["2.16.840.1.113883.4.642.4.1048"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-contactentity-type.html" : "Contact entity type"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
-    "version" : "2.0.1",
-    "status" : "active",
-    "name" : "OrganizationType",
-    "title" : "Organization type",
-    "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
-    "oids" : ["2.16.840.1.113883.4.642.1.1128"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-organization-type.html" : "Organization type"
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
-    "version" : "3.0.0",
-    "status" : "active",
-    "name" : "ContactRole2",
-    "title" : "contactRole2",
-    "description" : "Code system of concepts which specify a relationship role that the next of kin/associated parties plays with regard to the patient. Also used in referrals, for example, it may be necessary to identify the contact representative at the clinic that sent a referral. Used in HL7 Version 2 messaging in the NK1 and CTD segments after 2.5, when it replace 2.16.840.1.113883.18.57.",
-    "oids" : ["2.16.840.1.113883.18.58"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" : "Patient Contact Relationship "
-  },
-  {
-    "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "IdentifierType",
-    "title" : "identifierType",
-    "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
-    "oids" : ["2.16.840.1.113883.18.108"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+    "http://terminology.hl7.org/7.3.0/ValueSet-gender-identity.html" : "Gender Identity"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
@@ -297,18 +167,6 @@
     "ValueSet-vs-confidentiality-cnu.html" : "Conjunto de Valores Confidencialidad de la Consulta No Urgente"
   },
   {
-    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-    "version" : "5.0.0",
-    "status" : "active",
-    "name" : "MaritalStatus",
-    "title" : "MaritalStatus",
-    "description" : "\\* \\* \\* No description supplied \\* \\* \\*\r\n\r\n*Open Issue:* The specific meanings of these codes can vary somewhat by jurisdiction and implementation so caution should be used when determining equivalency.\r\n\r\n*Open Issue:* fixing and completion of the hierarchy and proper good definitions of all the concepts is badly needed.",
-    "oids" : ["2.16.840.1.113883.5.2"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
-  },
-  {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
     "version" : "4.0.0",
     "status" : "active",
@@ -318,7 +176,7 @@
     "oids" : ["2.16.840.1.113883.5.1008"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
+    "http://terminology.hl7.org/7.3.0/ValueSet-gender-identity.html" : "Gender Identity"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
@@ -331,17 +189,5 @@
     "uses" : {
     },
     "ValueSet-vs-via-administracion.html" : "Conjunto de Valores Vía de Administración (borrador)"
-  },
-  {
-    "url" : "urn:ietf:bcp:47",
-    "version" : "2.0.1",
-    "status" : "active",
-    "name" : "Ietf3066",
-    "title" : "Tags for the Identification of Languages",
-    "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
-    "oids" : ["2.16.840.1.113883.6.121"],
-    "uses" : {
-    },
-    "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
   }]
 }

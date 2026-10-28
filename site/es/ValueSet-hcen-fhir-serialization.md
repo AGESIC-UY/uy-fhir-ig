@@ -1,18 +1,18 @@
-# Tipos MIME de documentos FHIR HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Tipos MIME de documentos FHIR HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Tipos MIME de documentos FHIR HCEN (Experimental) 
 
- **References** 
+ **Referencias** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
 ### Expansión
 
-No Expansion for this valueset (Unknown Code System)
+No hay expansión de este ValueSet (CodeSystem desconocido)
 
 -------
 
@@ -27,12 +27,12 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "hcen-fhir-serialization",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENFHIRSerialization",
   "title" : "Tipos MIME de documentos FHIR HCEN",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

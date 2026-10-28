@@ -1,12 +1,13 @@
-# HCEN Solicitud de Servicio - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Solicitud de Servicio - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Solicitud de Servicio 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Referencia a este perfil: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [ServiceRequest/hcen-servicio-req-reposo](ServiceRequest-hcen-servicio-req-reposo.md) and [ServiceRequest/hcen-servicio-req-seguimiento](ServiceRequest-hcen-servicio-req-seguimiento.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-service-request)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-service-request)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,87 +15,87 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 2 elements(4 nested mandatory elements)
- Must-Support: 5 elements
- Fixed: 2 elements
- Prohibited: 23 elements
+#### Restricciones
 
-**Structures**
+#### Bindings terminológicos
 
-This structure refers to these other structures:
+#### Restricciones
+
+Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) .
+
+** Resumen **
+
+Obligatorios: 2 elementos(4 elementosos obligatorios anidados)
+ Must-Support: 5 elementos
+ Fijos: 2 elementos
+ Prohibidos: 23 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of ServiceRequest.code.coding
-* The element 1 is sliced based on the value of ServiceRequest.occurrence[x]
+* El elemento 1 se divide en slices según el valor de ServiceRequest.code.coding
+* El elemento 1 se divide en slices según el valor de ServiceRequest.occurrence[x]
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 2 elements(4 nested mandatory elements)
- Must-Support: 5 elements
- Fixed: 2 elements
- Prohibited: 23 elements
+Obligatorios: 2 elementos(4 elementosos obligatorios anidados)
+ Must-Support: 5 elementos
+ Fijos: 2 elementos
+ Prohibidos: 23 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of ServiceRequest.code.coding
-* The element 1 is sliced based on the value of ServiceRequest.occurrence[x]
+* El elemento 1 se divide en slices según el valor de ServiceRequest.code.coding
+* El elemento 1 se divide en slices según el valor de ServiceRequest.occurrence[x]
 
  
 
@@ -109,11 +110,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
   "resourceType" : "StructureDefinition",
   "id" : "hcen-service-request",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENServiceRequest",
   "title" : "HCEN Solicitud de Servicio",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -466,7 +467,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-service-requ
       "path" : "ServiceRequest.patientInstruction",
       "short" : "Indicaciones particulares realizadas por el médico, dirigidas al paciente",
       "definition" : "Indicaciones particulares realizadas por el médico, dirigidas al paciente",
-      "min" : 1
+      "min" : 1,
+      "mapping" : [{
+        "identity" : "HCENServiceRequestToCDA",
+        "map" : "section/entry/observation[code/@code='7581000179102']/value"
+      }]
     },
     {
       "id" : "ServiceRequest.relevantHistory",

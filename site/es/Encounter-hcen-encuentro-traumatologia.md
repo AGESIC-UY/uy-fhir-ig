@@ -1,0 +1,57 @@
+# example-hcen-encuentro-traumatologia - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Encounter: example-hcen-encuentro-traumatologia
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Encounter",
+  "id" : "hcen-encuentro-traumatologia",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter"]
+  },
+  "language" : "es-UY",
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "6821000179104",
+      "display" : "Hoja de consulta no urgente centralizada - policlínica"
+    }]
+  }],
+  "serviceType" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "4101000179107",
+      "display" : "servicio de traumatología y ortopedia"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "participant" : [{
+    "period" : {
+      "start" : "2019-08-23T10:05:24-03:00"
+    },
+    "individual" : {
+      "reference" : "PractitionerRole/hcen-rol-traumatologia-sousa"
+    }
+  }],
+  "period" : {
+    "start" : "2019-08-23T10:05:24-03:00",
+    "end" : "2019-08-23T10:15:24-03:00"
+  },
+  "serviceProvider" : {
+    "reference" : "Organization/hcen-organizacion-asse"
+  }
+}
+
+```

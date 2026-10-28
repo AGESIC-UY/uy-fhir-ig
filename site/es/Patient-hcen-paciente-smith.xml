@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="hcen-paciente-smith"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/administrative-gender"/>
+          <code value="male"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex assigned at birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical record number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.2.999999.72768.1"/>
+    <value value="1904217"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+        <display value="Passport number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.1.840.68912"/>
+    <value value="AAH480000"/>
+    <period>
+      <start value="2021-04-15"/>
+      <end value="2031-04-14"/>
+    </period>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="John Doe Smith"/>
+    <family value="Smith"/>
+    <given value="John"/>
+    <given value="Doe"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 318 000"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="+1 555 555 5555"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="john.doe@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1979-06-22"/>
+  <address>
+    <use value="temp"/>
+    <type value="physical"/>
+    <line value="Gaboto 1234"/>
+    <city value="MONTEVIDEO"/>
+    <district value="CORDON"/>
+    <state value="Montevideo"/>
+    <postalCode value="11200"/>
+    <country value="URY"/>
+    <period>
+      <start value="2021-04-15"/>
+      <end value="2021-04-30"/>
+    </period>
+  </address>
+  <address>
+    <use value="home"/>
+    <type value="physical"/>
+    <line value="123 Main St"/>
+    <city value="Anytown"/>
+    <state value="Anystate"/>
+    <postalCode value="12345"/>
+    <country value="USA"/>
+  </address>
+</Patient>

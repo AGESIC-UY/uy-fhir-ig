@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="hcen-profesional-rodriguez"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+        <display value="National unique individual identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.2.10000675.68909"/>
+    <value value="38700001"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Martín Andrés Rodríguez Silva"/>
+    <family value="Rodríguez Silva">
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+        <valueString value="Rodríguez"/>
+      </extension>
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+        <valueString value="Silva"/>
+      </extension>
+    </family>
+    <given value="Martín"/>
+    <given value="Andrés"/>
+    <prefix value="Dr."/>
+  </name>
+  <gender value="male"/>
+</Practitioner>

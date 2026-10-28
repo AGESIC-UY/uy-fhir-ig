@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="uy-paciente-perez-completo"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20250201"/>
+          <code value="446151000124109"/>
+          <display value="Identifies as male gender"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="LA29519-8"/>
+          <display value="she/her/her/hers/herself"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/administrative-gender"/>
+          <code value="male"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex assigned at birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical record number"/>
+      </coding>
+    </type>
+    <system value="https://example.org/institucion/identificadores/pacientes"/>
+    <value value="MRN1234"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+        <display value="National unique individual identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.1.858.68909"/>
+    <value value="12345678"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+        <display value="Passport number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.2.858.68912"/>
+    <value value="D1234567"/>
+    <period>
+      <start value="2020-01-01"/>
+    </period>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="Juan Carlos Pérez Rodríguez II"/>
+    <family value="Pérez Rodríguez">
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+        <valueString value="Pérez"/>
+      </extension>
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+        <valueString value="Rodríguez"/>
+      </extension>
+    </family>
+    <given value="Juan"/>
+    <given value="Carlos"/>
+    <suffix value="II"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 123 456"/>
+    <use value="mobile"/>
+    <period>
+      <start value="2018"/>
+    </period>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.perez@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1980-01-01"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <use value="home"/>
+    <type value="physical"/>
+    <text value="Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY"/>
+    <line value="Calle Falsa 1234"/>
+    <city value="MONTEVIDEO"/>
+    <district value="CIUDAD VIEJA"/>
+    <state value="Montevideo"/>
+    <postalCode value="11000"/>
+    <country value="URY"/>
+    <period>
+      <start value="2015-01-01"/>
+    </period>
+  </address>
+  <address>
+    <use value="work"/>
+    <type value="physical"/>
+    <text value="Av. Italia 5678, POCITOS, MONTEVIDEO, Montevideo, URY"/>
+    <line value="Av. Italia 5678"/>
+    <city value="MONTEVIDEO"/>
+    <district value="POCITOS"/>
+    <state value="Montevideo"/>
+    <postalCode value="11300"/>
+    <country value="URY"/>
+    <period>
+      <start value="2020-01-01"/>
+    </period>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="M"/>
+      <display value="Married"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthBoolean value="false"/>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="C"/>
+        <display value="Emergency Contact"/>
+      </coding>
+    </relationship>
+    <name>
+      <text value="María Fernández González"/>
+      <family value="Fernández González">
+        <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+          <valueString value="Fernández"/>
+        </extension>
+        <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+          <valueString value="González"/>
+        </extension>
+      </family>
+      <given value="María"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="+598 99 654 321"/>
+      <use value="mobile"/>
+    </telecom>
+    <address>
+      <use value="home"/>
+      <type value="physical"/>
+      <text value="Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY"/>
+      <line value="Calle Falsa 1234"/>
+      <city value="MONTEVIDEO"/>
+      <district value="CIUDAD VIEJA"/>
+      <state value="Montevideo"/>
+      <postalCode value="11000"/>
+      <country value="URY"/>
+    </address>
+    <gender value="female"/>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="urn:ietf:bcp:47"/>
+        <code value="es-UY"/>
+        <display value="Español (Uruguay)"/>
+      </coding>
+    </language>
+    <preferred value="true"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Practitioner/uy-profesional-sanchez-completo"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/uy-organizacion-abc-completa"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="Patient/uy-paciente-perez"/>
+    </other>
+    <type value="seealso"/>
+  </link>
+</Patient>

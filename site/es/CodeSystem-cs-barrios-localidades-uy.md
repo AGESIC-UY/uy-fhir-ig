@@ -1,4 +1,4 @@
-# Sistema de códigos de barrios y localidades postales de Uruguay - Guía de Implementación FHIR de Uruguay v0.1.0
+# Sistema de códigos de barrios y localidades postales de Uruguay - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## CodeSystem: Sistema de códigos de barrios y localidades postales de Uruguay 
 
@@ -19,11 +19,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   "resourceType" : "CodeSystem",
   "id" : "cs-barrios-localidades-uy",
   "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "CSBarriosLocalidadesUY",
   "title" : "Sistema de códigos de barrios y localidades postales de Uruguay",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -59,7 +59,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "Ã‘ANGAPIRE",
-    "display" : "Ã‘ANGAPIRE"
+    "display" : "ÑANGAPIRE"
   },
   {
     "code" : "ABAYUBA",
@@ -451,35 +451,35 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "BAÃ‘ADO",
-    "display" : "BAÃ‘ADO"
+    "display" : "BAÑADO"
   },
   {
     "code" : "BAÃ‘ADO DE CAÃ‘AS",
-    "display" : "BAÃ‘ADO DE CAÃ‘AS"
+    "display" : "BAÑADO DE CAÑAS"
   },
   {
     "code" : "BAÃ‘ADO DE LAS PAJAS",
-    "display" : "BAÃ‘ADO DE LAS PAJAS"
+    "display" : "BAÑADO DE LAS PAJAS"
   },
   {
     "code" : "BAÃ‘ADO DE MEDINA",
-    "display" : "BAÃ‘ADO DE MEDINA"
+    "display" : "BAÑADO DE MEDINA"
   },
   {
     "code" : "BAÃ‘ADO DE ORO",
-    "display" : "BAÃ‘ADO DE ORO"
+    "display" : "BAÑADO DE ORO"
   },
   {
     "code" : "BAÃ‘ADO DE ROCHA",
-    "display" : "BAÃ‘ADO DE ROCHA"
+    "display" : "BAÑADO DE ROCHA"
   },
   {
     "code" : "BAÃ‘ADO DEL CHAJA",
-    "display" : "BAÃ‘ADO DEL CHAJA"
+    "display" : "BAÑADO DEL CHAJA"
   },
   {
     "code" : "BAÃ‘ADOS DE CARRASCO",
-    "display" : "BAÃ‘ADOS DE CARRASCO"
+    "display" : "BAÑADOS DE CARRASCO"
   },
   {
     "code" : "BAJOS DEL PERDIDO",
@@ -659,7 +659,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "BARRIO MENDAÃ‘A",
-    "display" : "BARRIO MENDAÃ‘A"
+    "display" : "BARRIO MENDAÑA"
   },
   {
     "code" : "BARRIO MONTERREY",
@@ -883,83 +883,83 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CAÃ‘ADA AMILIVIA",
-    "display" : "CAÃ‘ADA AMILIVIA"
+    "display" : "CAÑADA AMILIVIA"
   },
   {
     "code" : "CAÃ‘ADA BELLACA",
-    "display" : "CAÃ‘ADA BELLACA"
+    "display" : "CAÑADA BELLACA"
   },
   {
     "code" : "CAÃ‘ADA BRAVA",
-    "display" : "CAÃ‘ADA BRAVA"
+    "display" : "CAÑADA BRAVA"
   },
   {
     "code" : "CAÃ‘ADA CARDOZO",
-    "display" : "CAÃ‘ADA CARDOZO"
+    "display" : "CAÑADA CARDOZO"
   },
   {
     "code" : "CAÃ‘ADA CHICA",
-    "display" : "CAÃ‘ADA CHICA"
+    "display" : "CAÑADA CHICA"
   },
   {
     "code" : "CAÃ‘ADA DE LA CRUZ",
-    "display" : "CAÃ‘ADA DE LA CRUZ"
+    "display" : "CAÑADA DE LA CRUZ"
   },
   {
     "code" : "CAÃ‘ADA DE LAS PIEDRAS",
-    "display" : "CAÃ‘ADA DE LAS PIEDRAS"
+    "display" : "CAÑADA DE LAS PIEDRAS"
   },
   {
     "code" : "CAÃ‘ADA DE MONTAÃ‘O",
-    "display" : "CAÃ‘ADA DE MONTAÃ‘O"
+    "display" : "CAÑADA DE MONTAÑO"
   },
   {
     "code" : "CAÃ‘ADA DE SANTOS",
-    "display" : "CAÃ‘ADA DE SANTOS"
+    "display" : "CAÑADA DE SANTOS"
   },
   {
     "code" : "CAÃ‘ADA DEL ESTADO",
-    "display" : "CAÃ‘ADA DEL ESTADO"
+    "display" : "CAÑADA DEL ESTADO"
   },
   {
     "code" : "CAÃ‘ADA DEL PUEBLO",
-    "display" : "CAÃ‘ADA DEL PUEBLO"
+    "display" : "CAÑADA DEL PUEBLO"
   },
   {
     "code" : "CAÃ‘ADA DEL SAUCE",
-    "display" : "CAÃ‘ADA DEL SAUCE"
+    "display" : "CAÑADA DEL SAUCE"
   },
   {
     "code" : "CAÃ‘ADA GRANDE",
-    "display" : "CAÃ‘ADA GRANDE"
+    "display" : "CAÑADA GRANDE"
   },
   {
     "code" : "CAÃ‘ADA MAGALLANES",
-    "display" : "CAÃ‘ADA MAGALLANES"
+    "display" : "CAÑADA MAGALLANES"
   },
   {
     "code" : "CAÃ‘ADA NIETO",
-    "display" : "CAÃ‘ADA NIETO"
+    "display" : "CAÑADA NIETO"
   },
   {
     "code" : "CAÃ‘ADA PARAGUAYA",
-    "display" : "CAÃ‘ADA PARAGUAYA"
+    "display" : "CAÑADA PARAGUAYA"
   },
   {
     "code" : "CAÃ‘ADA PRUDENCIO",
-    "display" : "CAÃ‘ADA PRUDENCIO"
+    "display" : "CAÑADA PRUDENCIO"
   },
   {
     "code" : "CAÃ‘ADA SARANDI",
-    "display" : "CAÃ‘ADA SARANDI"
+    "display" : "CAÑADA SARANDI"
   },
   {
     "code" : "CAÃ‘AS",
-    "display" : "CAÃ‘AS"
+    "display" : "CAÑAS"
   },
   {
     "code" : "CAÃ‘ITAS",
-    "display" : "CAÃ‘ITAS"
+    "display" : "CAÑITAS"
   },
   {
     "code" : "CABALLERO",
@@ -999,7 +999,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CAMAÃ‘O",
-    "display" : "CAMAÃ‘O"
+    "display" : "CAMAÑO"
   },
   {
     "code" : "CAMINO DE LA CADENA",
@@ -1215,7 +1215,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CASERIO LAS CAÃ‘AS",
-    "display" : "CASERIO LAS CAÃ‘AS"
+    "display" : "CASERIO LAS CAÑAS"
   },
   {
     "code" : "CASTILLOS",
@@ -1307,7 +1307,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CERRO BLANCO DE CUÃ‘APIRU",
-    "display" : "CERRO BLANCO DE CUÃ‘APIRU"
+    "display" : "CERRO BLANCO DE CUÑAPIRU"
   },
   {
     "code" : "CERRO CAQUEIRO",
@@ -1687,11 +1687,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "COLONIA ESPAÃ‘A",
-    "display" : "COLONIA ESPAÃ‘A"
+    "display" : "COLONIA ESPAÑA"
   },
   {
     "code" : "COLONIA ESPAÃ‘OLA",
-    "display" : "COLONIA ESPAÃ‘OLA"
+    "display" : "COLONIA ESPAÑOLA"
   },
   {
     "code" : "COLONIA ESTRELLA",
@@ -1739,7 +1739,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "COLONIA LARRAÃ‘AGA",
-    "display" : "COLONIA LARRAÃ‘AGA"
+    "display" : "COLONIA LARRAÑAGA"
   },
   {
     "code" : "COLONIA LAS DELICIAS",
@@ -1831,7 +1831,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "COLONIA VIÃ‘AR",
-    "display" : "COLONIA VIÃ‘AR"
+    "display" : "COLONIA VIÑAR"
   },
   {
     "code" : "COLONIA WILSON",
@@ -1859,7 +1859,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CONSEJO DEL NIÃ‘O",
-    "display" : "CONSEJO DEL NIÃ‘O"
+    "display" : "CONSEJO DEL NIÑO"
   },
   {
     "code" : "CONSTANCIA",
@@ -1911,7 +1911,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CORTE DE LA LEÃ‘A",
-    "display" : "CORTE DE LA LEÃ‘A"
+    "display" : "CORTE DE LA LEÑA"
   },
   {
     "code" : "COSTA AZUL",
@@ -2039,7 +2039,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "COSTAS DE CUÃ‘APIRU",
-    "display" : "COSTAS DE CUÃ‘APIRU"
+    "display" : "COSTAS DE CUÑAPIRU"
   },
   {
     "code" : "COSTAS DE JOSE IGNACIO",
@@ -2155,7 +2155,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "CUÃ‘APIRU",
-    "display" : "CUÃ‘APIRU"
+    "display" : "CUÑAPIRU"
   },
   {
     "code" : "CUAREIM",
@@ -2411,7 +2411,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "EGAÃ‘A",
-    "display" : "EGAÃ‘A"
+    "display" : "EGAÑA"
   },
   {
     "code" : "EJIDO DE TREINTA Y TRES",
@@ -2431,7 +2431,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "EL BAÃ‘ADO",
-    "display" : "EL BAÃ‘ADO"
+    "display" : "EL BAÑADO"
   },
   {
     "code" : "EL BELLACO",
@@ -2451,7 +2451,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "EL CAÃ‘O",
-    "display" : "EL CAÃ‘O"
+    "display" : "EL CAÑO"
   },
   {
     "code" : "EL CANELON",
@@ -2527,7 +2527,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "EL ENSUEÃ‘O",
-    "display" : "EL ENSUEÃ‘O"
+    "display" : "EL ENSUEÑO"
   },
   {
     "code" : "EL ESPINILLAR",
@@ -2787,7 +2787,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "FLOR DE MAROÃ‘AS",
-    "display" : "FLOR DE MAROÃ‘AS"
+    "display" : "FLOR DE MAROÑAS"
   },
   {
     "code" : "FLORENCIO SANCHEZ",
@@ -2895,7 +2895,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "GOÃ‘I",
-    "display" : "GOÃ‘I"
+    "display" : "GOÑI"
   },
   {
     "code" : "GODOY",
@@ -3079,7 +3079,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "JOSE BATLLE Y ORDOÃ‘EZ",
-    "display" : "JOSE BATLLE Y ORDOÃ‘EZ"
+    "display" : "JOSE BATLLE Y ORDOÑEZ"
   },
   {
     "code" : "JOSE ENRIQUE RODO",
@@ -3351,7 +3351,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "LA MONTAÃ‘ESA",
-    "display" : "LA MONTAÃ‘ESA"
+    "display" : "LA MONTAÑESA"
   },
   {
     "code" : "LA PALMA",
@@ -3483,7 +3483,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "LARRAÃ‘AGA",
-    "display" : "LARRAÃ‘AGA"
+    "display" : "LARRAÑAGA"
   },
   {
     "code" : "LARRAYOS",
@@ -3511,7 +3511,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "LAS CAÃ‘AS",
-    "display" : "LAS CAÃ‘AS"
+    "display" : "LAS CAÑAS"
   },
   {
     "code" : "LAS CANTERAS",
@@ -3927,7 +3927,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "MAROÃ‘AS, PARQUE GUARANI",
-    "display" : "MAROÃ‘AS, PARQUE GUARANI"
+    "display" : "MAROÑAS, PARQUE GUARANI"
   },
   {
     "code" : "MARTIN CHICO",
@@ -4039,7 +4039,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "MINAS DE CUÃ‘APIRU (USINAS)",
-    "display" : "MINAS DE CUÃ‘APIRU (USINAS)"
+    "display" : "MINAS DE CUÑAPIRU (USINAS)"
   },
   {
     "code" : "MINAS DE NARANCIO",
@@ -4087,7 +4087,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "MOLLES DE CAÃ‘ADA GRANDE",
-    "display" : "MOLLES DE CAÃ‘ADA GRANDE"
+    "display" : "MOLLES DE CAÑADA GRANDE"
   },
   {
     "code" : "MOLLES DE GARZON",
@@ -4167,7 +4167,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "MOURIÃ‘O",
-    "display" : "MOURIÃ‘O"
+    "display" : "MOURIÑO"
   },
   {
     "code" : "MUNDO AZUL",
@@ -4743,7 +4743,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PASO DEL BAÃ‘ADO",
-    "display" : "PASO DEL BAÃ‘ADO"
+    "display" : "PASO DEL BAÑADO"
   },
   {
     "code" : "PASO DEL BOTE",
@@ -4811,7 +4811,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PASO DOÃ‘A ROSA",
-    "display" : "PASO DOÃ‘A ROSA"
+    "display" : "PASO DOÑA ROSA"
   },
   {
     "code" : "PASO ESPINOSA",
@@ -4923,11 +4923,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PEÃ‘AROL",
-    "display" : "PEÃ‘AROL"
+    "display" : "PEÑAROL"
   },
   {
     "code" : "PEÃ‘AROL, LAVALLEJA",
-    "display" : "PEÃ‘AROL, LAVALLEJA"
+    "display" : "PEÑAROL, LAVALLEJA"
   },
   {
     "code" : "PEDERNAL",
@@ -4955,7 +4955,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PEPE NUÃ‘EZ",
-    "display" : "PEPE NUÃ‘EZ"
+    "display" : "PEPE NUÑEZ"
   },
   {
     "code" : "PERICO MORENO",
@@ -4971,11 +4971,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PIÃ‘EIRO",
-    "display" : "PIÃ‘EIRO"
+    "display" : "PIÑEIRO"
   },
   {
     "code" : "PIÃ‘ERA",
-    "display" : "PIÃ‘ERA"
+    "display" : "PIÑERA"
   },
   {
     "code" : "PICADA DE BENITEZ",
@@ -5443,11 +5443,11 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PUNTAS DE CAÃ‘ADA CARDOZO",
-    "display" : "PUNTAS DE CAÃ‘ADA CARDOZO"
+    "display" : "PUNTAS DE CAÑADA CARDOZO"
   },
   {
     "code" : "PUNTAS DE CAÃ‘ADA GRANDE",
-    "display" : "PUNTAS DE CAÃ‘ADA GRANDE"
+    "display" : "PUNTAS DE CAÑADA GRANDE"
   },
   {
     "code" : "PUNTAS DE CAGANCHA",
@@ -5495,7 +5495,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "PUNTAS DE CUÃ‘APIRU",
-    "display" : "PUNTAS DE CUÃ‘APIRU"
+    "display" : "PUNTAS DE CUÑAPIRU"
   },
   {
     "code" : "PUNTAS DE DON CARLOS",
@@ -5851,7 +5851,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "RINCON DE CAÃ‘ADA NIETO",
-    "display" : "RINCON DE CAÃ‘ADA NIETO"
+    "display" : "RINCON DE CAÑADA NIETO"
   },
   {
     "code" : "RINCON DE CARRASCO",
@@ -6151,7 +6151,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "SALDAÃ‘AS",
-    "display" : "SALDAÃ‘AS"
+    "display" : "SALDAÑAS"
   },
   {
     "code" : "SALINAS",
@@ -6255,7 +6255,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "SAN JOSE DE LAS CAÃ‘AS",
-    "display" : "SAN JOSE DE LAS CAÃ‘AS"
+    "display" : "SAN JOSE DE LAS CAÑAS"
   },
   {
     "code" : "SAN JOSE DE MAYO",
@@ -7079,7 +7079,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "VILLA ESPAÃ‘OLA",
-    "display" : "VILLA ESPAÃ‘OLA"
+    "display" : "VILLA ESPAÑOLA"
   },
   {
     "code" : "VILLA FELICIDAD",
@@ -7151,7 +7151,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "VILLA MUÃ‘OZ, RETIRO",
-    "display" : "VILLA MUÃ‘OZ, RETIRO"
+    "display" : "VILLA MUÑOZ, RETIRO"
   },
   {
     "code" : "VILLA NUEVA",
@@ -7215,7 +7215,7 @@ Se hace referencia a este sistema de códigos en la definición de los siguiente
   },
   {
     "code" : "VILLA VIÃ‘OLES",
-    "display" : "VILLA VIÃ‘OLES"
+    "display" : "VILLA VIÑOLES"
   },
   {
     "code" : "VILLA VIEJA",

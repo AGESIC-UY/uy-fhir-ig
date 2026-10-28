@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "hcen-procedimiento-vendaje",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Vendaje de extremidad superior. Resultado: normal. Paciente sedado durante el procedimiento.</p></div>"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "229534005",
+      "display" : "Vendaje de extremidad superior"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "outcome" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "280413001",
+      "display" : "resultado normal"
+    }]
+  },
+  "note" : [{
+    "text" : "Paciente sedado durante el procedimiento"
+  }]
+}

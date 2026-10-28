@@ -17,11 +17,11 @@
      fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"^^xsd:anyURI ;
      fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "HCENServiceRequest"] ; # 
   fhir:title [ fhir:v "HCEN Solicitud de Servicio"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-10-06T01:23:13-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-10-28T18:02:56-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "AGESIC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "AGESIC" ] ;
@@ -3104,6 +3104,9 @@
        fhir:isModifier [ fhir:v false ] ;
        fhir:isSummary [ fhir:v true ] ;
        fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENServiceRequestToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/observation[code/@code='7581000179102']/value" ]
+       ] [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "NTE" ]
        ] [
@@ -3451,7 +3454,11 @@
        fhir:path [ fhir:v "ServiceRequest.patientInstruction" ] ;
        fhir:short [ fhir:v "Indicaciones particulares realizadas por el médico, dirigidas al paciente" ] ;
        fhir:definition [ fhir:v "Indicaciones particulares realizadas por el médico, dirigidas al paciente" ] ;
-       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ]
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "HCENServiceRequestToCDA" ] ;
+         fhir:map [ fhir:v "section/entry/observation[code/@code='7581000179102']/value" ]
+       ] )
      ] [
        fhir:id [ fhir:v "ServiceRequest.relevantHistory" ] ;
        fhir:path [ fhir:v "ServiceRequest.relevantHistory" ] ;

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="hcen-paciente-gonzalez"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p><b>María Laura González Pereira</b></p><p>MRN: 1873455 (dominio urn:oid:2.16.858.2.999999.72768.1). Cédula de identidad: 45000001.</p><p>Sexo asignado al nacer: femenino. Sexo administrativo: femenino.</p><p>Fecha de nacimiento: 1987-03-14.</p><p>Teléfono móvil: +598 98 456 000. Correo electrónico: maria.gonzalez@example.com.</p><p>Dirección: Av. Brasil 2765, POCITOS, MONTEVIDEO, Montevideo, 11300, URY.</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/administrative-gender"/>
+          <code value="female"/>
+          <display value="Female"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex assigned at birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical record number"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.2.999999.72768.1"/>
+    <value value="1873455"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+        <display value="National unique individual identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.2.10000675.68909"/>
+    <value value="45000001"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <text value="María Laura González Pereira"/>
+    <family value="González Pereira">
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+        <valueString value="González"/>
+      </extension>
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+        <valueString value="Pereira"/>
+      </extension>
+    </family>
+    <given value="María"/>
+    <given value="Laura"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 98 456 000"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="maria.gonzalez@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1987-03-14"/>
+  <address>
+    <use value="home"/>
+    <type value="physical"/>
+    <line value="Av. Brasil 2765"/>
+    <city value="MONTEVIDEO"/>
+    <district value="POCITOS"/>
+    <state value="Montevideo"/>
+    <postalCode value="11300"/>
+    <country value="URY"/>
+  </address>
+</Patient>

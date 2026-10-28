@@ -1,0 +1,36 @@
+# example-hcen-motivo-consulta-mialgia - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Condition: example-hcen-motivo-consulta-mialgia
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Condition",
+  "id" : "hcen-motivo-consulta-mialgia",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta"]
+  },
+  "language" : "es-UY",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "7611000179107",
+      "display" : "motivo de consulta"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "68962001",
+      "display" : "Mialgia"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  }
+}
+
+```

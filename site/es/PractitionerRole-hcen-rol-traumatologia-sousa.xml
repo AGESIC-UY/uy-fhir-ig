@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="hcen-rol-traumatologia-sousa"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <active value="true"/>
+  <practitioner>
+    <reference value="Practitioner/hcen-practitioner-sousa"/>
+    <display value="Guillermo Sousa"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/hcen-organizacion-asse"/>
+    <display value="ASSE"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="309343006"/>
+      <display value="médico"/>
+    </coding>
+    <text value="Médico traumatólogo"/>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394801008"/>
+      <display value="traumatología y ortopedia"/>
+    </coding>
+  </specialty>
+</PractitionerRole>

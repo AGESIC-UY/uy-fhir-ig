@@ -1,4 +1,4 @@
-# Perfil Document Reference HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# Perfil Document Reference HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: Perfil Document Reference HCEN 
 
@@ -8,7 +8,19 @@
 
 `identifier[uniqueId]` permite repetir el identificador de `masterIdentifier` en la colección de identificadores. Ambas ubicaciones representan el mismo documento: la primera corresponde al identificador documental principal del modelo MHD y la segunda permite expresarlo también en la colección `identifier`. La repetición es opcional; cuando se informa, `system` y `value` deben coincidir.
 
-`attachment.url` refiere al documento FHIR y la extensión `binary` a su CDA. Los campos `contentType`, `size`, `hash` y `format` describen la representación FHIR. En FHIR R4, `Attachment.hash` contiene un hash SHA-1 codificado en base64; no se utiliza para informar el SHA-512 del CDA descrito por la guía XDS. Ver [Identificadores HCEN](hcen-identificadores.md) y [Publicación](hcen-iti-65.md).
+### Ubicaciones y representación documental
+
+En HCEN ITI-65, `content.attachment.url` informa la URL HTTP(S) absoluta original del prestador para recuperar el Bundle documental FHIR. La extensión `binary` del Attachment contiene una referencia al recurso [HCENCdaBinary](StructureDefinition-hcen-cda-binary.md) del prestador que contiene el CDA XML del mismo documento.
+
+El valor de `binary` es una referencia al recurso, no su `id` ni los datos CDA. Consultar [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.md).
+
+Estas ubicaciones no son los `fullUrl` de las entradas del envío. `fullUrl` identifica cada entrada y puede utilizar `urn:uuid:`. Tampoco deben confundirse con la URL de recuperación que Plataforma devuelve en HCEN ITI-67, cuyo resultado se describe de forma general en la [transacción de consulta](hcen-iti-67.md).
+
+Los campos `contentType`, `size`, `hash` y `format` describen la representación FHIR. En FHIR R4, `Attachment.hash` contiene un hash SHA-1 codificado en base64; no se utiliza para informar el SHA-512 del CDA descrito por la guía XDS. Ver [Identificadores HCEN](hcen-identificadores.md) y [Publicación](hcen-iti-65.md).
+
+`context.period` debe incluir inicio y fin del servicio. El documento informa también la comunidad de origen y el repositorio mediante las extensiones `homeCommunityId` y `repositoryId`.
+
+Las extensiones locales simples requieren un valor cuando están presentes. Una extensión booleana con valor `false` no equivale a omitir un dato desconocido; esta distinción se aplica, por ejemplo, a [Documento Escaneado](StructureDefinition-ext-scanned-document.md).
 
 ### Autoría y relaciones
 
@@ -16,12 +28,12 @@ La autoría incluye al menos un HCENPractitionerRole, que vincula al profesional
 
 Las relaciones históricas pueden apuntar fuera del envío mediante `DocumentReference/{id}` o una URL HTTP(S) absoluta equivalente. El identificador es el `id` lógico del recurso; no se sustituye por el OID documental ni por `Reference.identifier`. Plataforma debe comprobar que el documento referenciado existe en HCEN. El procesamiento de reemplazos no está soportado actualmente: una relación `replaces` se ignora y no modifica el documento anterior.
 
-**Usages:**
+**Usos:**
 
-* Use this Profile: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
-* Refer to this Profile: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
+* Utilizar este perfil: [Envío para publicación documental HCEN](StructureDefinition-hcen-provide-document-bundle.md)
+* Referencia a este perfil: [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md) and [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-reference)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-document-reference)
 
 ### Vistas formales del contenido del perfil
 
@@ -29,35 +41,35 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 27 elements(1 nested mandatory element)
- Must-Support: 5 elements
- Prohibited: 1 element
+#### Restricciones
 
-**Structures**
+#### Bindings terminológicos
 
-This structure refers to these other structures:
+#### Restricciones
+
+Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) .
+
+** Resumen **
+
+Obligatorios: 27 elementos(1 elementosos obligatorios anidados)
+ Must-Support: 5 elementos
+ Prohibidos: 1 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [EntryUUID de DocumentReference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference-identifier)](StructureDefinition-hcen-document-reference-identifier.md)
@@ -67,9 +79,9 @@ This structure refers to these other structures:
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
 
-**Extensions**
+**Extensiones**
 
-This structure refers to these extensions:
+Esta estructura referencia las siguientes extensiones:
 
 * [http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id](StructureDefinition-ext-home-community-id.md)
 * [http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id](StructureDefinition-ext-repository-id.md)
@@ -82,42 +94,42 @@ This structure refers to these extensions:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of DocumentReference.identifier
-* The element 1 is sliced based on the value of DocumentReference.author
+* El elemento 1 se divide en slices según el valor de DocumentReference.identifier
+* El elemento 1 se divide en slices según el valor de DocumentReference.author
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [DocumentReference](http://hl7.org/fhir/R4/documentreference.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 27 elements(1 nested mandatory element)
- Must-Support: 5 elements
- Prohibited: 1 element
+Obligatorios: 27 elementos(1 elementosos obligatorios anidados)
+ Must-Support: 5 elementos
+ Prohibidos: 1 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador documental HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier)](StructureDefinition-hcen-document-identifier.md)
 * [EntryUUID de DocumentReference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference-identifier)](StructureDefinition-hcen-document-reference-identifier.md)
@@ -127,9 +139,9 @@ This structure refers to these other structures:
 * [Perfil Organización para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization)](StructureDefinition-hcen-organization.md)
 * [Perfil Document Reference HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference)](StructureDefinition-hcen-document-reference.md)
 
-**Extensions**
+**Extensiones**
 
-This structure refers to these extensions:
+Esta estructura referencia las siguientes extensiones:
 
 * [http://fhir.hcen.gub.uy/StructureDefinition/ext-home-community-id](StructureDefinition-ext-home-community-id.md)
 * [http://fhir.hcen.gub.uy/StructureDefinition/ext-repository-id](StructureDefinition-ext-repository-id.md)
@@ -142,10 +154,10 @@ This structure refers to these extensions:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of DocumentReference.identifier
-* The element 1 is sliced based on the value of DocumentReference.author
+* El elemento 1 se divide en slices según el valor de DocumentReference.identifier
+* El elemento 1 se divide en slices según el valor de DocumentReference.author
 
  
 
@@ -160,11 +172,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
   "resourceType" : "StructureDefinition",
   "id" : "hcen-document-reference",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENDocumentReference",
   "title" : "Perfil Document Reference HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -237,42 +249,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
       }]
     },
     {
-      "id" : "DocumentReference.id",
-      "path" : "DocumentReference.id",
-      "short" : "ID lógico de este artefacto.",
-      "definition" : "ID lógico de este artefacto."
-    },
-    {
-      "id" : "DocumentReference.meta",
-      "path" : "DocumentReference.meta",
-      "short" : "Metadatos sobre el recurso.",
-      "definition" : "Metadatos sobre el recurso."
-    },
-    {
-      "id" : "DocumentReference.implicitRules",
-      "path" : "DocumentReference.implicitRules",
-      "short" : "Conjunto de reglas bajo las cuales se creó este contenido.",
-      "definition" : "Conjunto de reglas bajo las cuales se creó este contenido."
-    },
-    {
-      "id" : "DocumentReference.language",
-      "path" : "DocumentReference.language",
-      "short" : "Idioma del contenido del recurso.",
-      "definition" : "Idioma del contenido del recurso."
-    },
-    {
-      "id" : "DocumentReference.text",
-      "path" : "DocumentReference.text",
-      "short" : "Resumen del recurso en texto para interpretación humana.",
-      "definition" : "Resumen del recurso en texto para interpretación humana."
-    },
-    {
-      "id" : "DocumentReference.contained",
-      "path" : "DocumentReference.contained",
-      "short" : "Recursos integrados en línea (inline).",
-      "definition" : "Recursos integrados en línea (inline)."
-    },
-    {
       "id" : "DocumentReference.extension",
       "path" : "DocumentReference.extension",
       "slicing" : {
@@ -283,8 +259,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
         "ordered" : false,
         "rules" : "open"
       },
-      "short" : "Contenido adicional definido por implementaciones.",
-      "definition" : "Contenido adicional definido por implementaciones.",
       "min" : 2
     },
     {
@@ -379,12 +353,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
       }]
     },
     {
-      "id" : "DocumentReference.modifierExtension",
-      "path" : "DocumentReference.modifierExtension",
-      "short" : "Extensiones que no pueden ser ignoradas.",
-      "definition" : "Extensiones que no pueden ser ignoradas."
-    },
-    {
       "id" : "DocumentReference.masterIdentifier",
       "path" : "DocumentReference.masterIdentifier",
       "short" : "OID de la versión documental, compartido por FHIR y CDA.",
@@ -435,12 +403,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-identifier"]
       }],
       "mustSupport" : true
-    },
-    {
-      "id" : "DocumentReference.status",
-      "path" : "DocumentReference.status",
-      "short" : "Estado de la referencia: current, superseded o entered-in-error.",
-      "definition" : "Estado de la referencia: current, superseded o entered-in-error."
     },
     {
       "id" : "DocumentReference.type",
@@ -524,8 +486,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.authenticator",
       "path" : "DocumentReference.authenticator",
-      "short" : "Profesional, rol u organización que autentica legalmente el documento.",
-      "definition" : "Profesional, rol u organización que autentica legalmente el documento.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner",
@@ -536,8 +496,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.custodian",
       "path" : "DocumentReference.custodian",
-      "short" : "Organización responsable de custodiar el documento",
-      "definition" : "Organización responsable de custodiar el documento",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization"]
@@ -558,8 +516,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.relatesTo.target",
       "path" : "DocumentReference.relatesTo.target",
-      "short" : "Documento objetivo de la relación.",
-      "definition" : "Documento objetivo de la relación.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-document-reference"]
@@ -578,16 +534,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
       }]
     },
     {
-      "id" : "DocumentReference.description",
-      "path" : "DocumentReference.description",
-      "short" : "Descripción legible del documento.",
-      "definition" : "Descripción legible del documento."
-    },
-    {
       "id" : "DocumentReference.securityLabel",
       "path" : "DocumentReference.securityLabel",
-      "short" : "Etiquetas de seguridad y confidencialidad del documento.",
-      "definition" : "Etiquetas de seguridad y confidencialidad del documento.",
       "min" : 1,
       "binding" : {
         "strength" : "extensible",
@@ -597,29 +545,19 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.content",
       "path" : "DocumentReference.content",
-      "short" : "El documento referenciado.",
-      "definition" : "El documento referenciado.",
       "max" : "1"
-    },
-    {
-      "id" : "DocumentReference.content.attachment",
-      "path" : "DocumentReference.content.attachment",
-      "short" : "Dónde acceder al documento (URL o Datos).",
-      "definition" : "Dónde acceder al documento (URL o Datos)."
     },
     {
       "id" : "DocumentReference.content.attachment.extension",
       "path" : "DocumentReference.content.attachment.extension",
-      "short" : "Contenido adicional definido por implementaciones.",
-      "definition" : "Contenido adicional definido por implementaciones.",
       "min" : 1
     },
     {
       "id" : "DocumentReference.content.attachment.extension:binary",
       "path" : "DocumentReference.content.attachment.extension",
       "sliceName" : "binary",
-      "short" : "Referencia al Binary que contiene el CDA del mismo documento.",
-      "definition" : "Referencia al Binary que contiene el CDA del mismo documento.",
+      "short" : "Referencia al Binary del prestador que contiene el CDA XML.",
+      "definition" : "En HCEN ITI-65, referencia al recurso FHIR HCENCdaBinary del prestador que contiene el CDA XML del mismo documento. La referencia informa la URL original recuperable del recurso Binary.",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -646,22 +584,18 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.content.attachment.language",
       "path" : "DocumentReference.content.attachment.language",
-      "short" : "Idioma del contenido documental expresado mediante BCP-47.",
-      "definition" : "Idioma del contenido documental expresado mediante BCP-47.",
       "min" : 1
     },
     {
       "id" : "DocumentReference.content.attachment.data",
       "path" : "DocumentReference.content.attachment.data",
-      "short" : "Datos en línea (base64).",
-      "definition" : "Datos en línea (base64).",
       "max" : "0"
     },
     {
       "id" : "DocumentReference.content.attachment.url",
       "path" : "DocumentReference.content.attachment.url",
-      "short" : "Referencia a la representación Bundle FHIR del documento.",
-      "definition" : "Referencia a la representación Bundle FHIR del documento.",
+      "short" : "URL original del Bundle FHIR del prestador en la publicación.",
+      "definition" : "En HCEN ITI-65, URL HTTP(S) absoluta original del prestador para recuperar el Bundle documental FHIR. Es distinta del fullUrl de la entrada del envío y de la URL de recuperación que devuelve Plataforma en HCEN ITI-67.",
       "min" : 1
     },
     {
@@ -677,16 +611,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
       "definition" : "Hash del Bundle FHIR recuperable mediante attachment.url"
     },
     {
-      "id" : "DocumentReference.content.attachment.title",
-      "path" : "DocumentReference.content.attachment.title",
-      "short" : "Título del documento para su presentación.",
-      "definition" : "Título del documento para su presentación."
-    },
-    {
       "id" : "DocumentReference.content.attachment.creation",
       "path" : "DocumentReference.content.attachment.creation",
-      "short" : "Fecha y hora de creación del documento referenciado.",
-      "definition" : "Fecha y hora de creación del documento referenciado.",
       "min" : 1
     },
     {
@@ -703,27 +629,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.context",
       "path" : "DocumentReference.context",
-      "short" : "Contexto clínico del documento.",
-      "definition" : "Contexto clínico del documento.",
       "min" : 1
-    },
-    {
-      "id" : "DocumentReference.context.encounter",
-      "path" : "DocumentReference.context.encounter",
-      "short" : "Contexto (episodio/visita) del documento.",
-      "definition" : "Contexto (episodio/visita) del documento."
-    },
-    {
-      "id" : "DocumentReference.context.event",
-      "path" : "DocumentReference.context.event",
-      "short" : "Actos clínicos principales documentados.",
-      "definition" : "Actos clínicos principales documentados."
     },
     {
       "id" : "DocumentReference.context.period",
       "path" : "DocumentReference.context.period",
-      "short" : "Tiempo de servicio que está siendo documentado",
-      "definition" : "Tiempo de servicio que está siendo documentado",
       "min" : 1
     },
     {
@@ -739,8 +649,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.context.facilityType",
       "path" : "DocumentReference.context.facilityType",
-      "short" : "Tipo de centro de salud donde se atendió al paciente.",
-      "definition" : "Tipo de centro de salud donde se atendió al paciente.",
       "min" : 1,
       "binding" : {
         "strength" : "example",
@@ -761,19 +669,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-document-ref
     {
       "id" : "DocumentReference.context.sourcePatientInfo",
       "path" : "DocumentReference.context.sourcePatientInfo",
-      "short" : "Datos del paciente tal como los informa el prestador de origen.",
-      "definition" : "Datos del paciente tal como los informa el prestador de origen.",
       "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient"]
       }]
-    },
-    {
-      "id" : "DocumentReference.context.related",
-      "path" : "DocumentReference.context.related",
-      "short" : "Identificadores o recursos relacionados con el documento.",
-      "definition" : "Identificadores o recursos relacionados con el documento."
     }]
   }
 }

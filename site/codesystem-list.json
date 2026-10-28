@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-barrios-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSBarriosLocalidadesUY",
     "title" : "Sistema de códigos de barrios y localidades postales de Uruguay",
@@ -9,7 +9,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-codigos-postales-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSCodigosPostalesUY",
     "title" : "Sistema de códigos postales de Uruguay",
@@ -17,7 +17,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-departamentos-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSDepartamentosUY",
     "title" : "Sistema de códigos de departamentos de Uruguay",
@@ -25,7 +25,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/CodeSystem/cs-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "CSLocalidadesUY",
     "title" : "Localidades de Uruguay (OSE)",

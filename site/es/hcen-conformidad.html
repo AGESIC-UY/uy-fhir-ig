@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Conformidad y capacidades HCEN - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Conformidad y capacidades HCEN - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Conformidad y capacidades HCEN</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Conformidad y capacidades HCEN</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Conformidad y capacidades HCEN</h2>
   
 
@@ -445,16 +448,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="unidad-de-conformidad">Unidad de conformidad</h3>
 
-<p><strong>HCEN-CONF-001 / HCEN-CONF-002.</strong> El despliegue de un prestador debe (SHALL) cubrir íntegramente las cuatro transacciones del alcance. Puede utilizar varios productos; cada producto debe identificar sus funciones y versión, y la declaración integral corresponde al despliegue del prestador. Deben identificarse prestador responsable, productos, versiones, configuración desplegada y versión de la guía utilizada.</p>
+<p>El despliegue de un prestador debe (SHALL) cubrir íntegramente las cuatro transacciones del alcance.</p>
 
 <p>La conformidad HCEN es local: no equivale a declarar conformidad IHE MHD o PIXm. Los perfiles clínicos incorporados se describen en <a href="hcen-documentos-clinicos.html">Documentos clínicos HCEN</a>.</p>
 
 <p><a id="must-support"></a></p>
 <h3 id="must-support-y-ausencia-de-datos">Must Support y ausencia de datos</h3>
 
-<p><strong>HCEN-MS-001.</strong> El emisor debe (SHALL) enviar siempre un dato MS cuando lo conoce. Solo puede faltar si es desconocido y las cardinalidades y demás restricciones permiten su ausencia. Esta obligación se aplica al prestador cuando registra pacientes o publica metadatos y a Plataforma cuando emite recursos perfilados, por ejemplo en una consulta.</p>
+<p>El emisor debe (SHALL) enviar siempre un dato MS cuando lo conoce. Solo puede faltar si es desconocido y las cardinalidades y demás restricciones permiten su ausencia. Esta obligación se aplica al prestador cuando registra pacientes o publica metadatos y a Plataforma cuando emite recursos perfilados, por ejemplo en una consulta.</p>
 
-<p><strong>HCEN-MS-002.</strong> MS no autoriza elementos vacíos ni cambia su cardinalidad. Si falta un elemento obligatorio del recurso de intercambio, Plataforma debe (SHALL) rechazarlo. La cardinalidad de un elemento anidado se evalúa cuando existe su contenedor. La política de validación del documento clínico tiene el pendiente específico de <a href="hcen-iti-65.html#pendientes">Publicación</a>.</p>
+<p>MS no autoriza elementos vacíos ni cambia su cardinalidad. Si falta un elemento obligatorio del recurso de intercambio, Plataforma debe (SHALL) rechazarlo. La cardinalidad de un elemento anidado se evalúa cuando existe su contenedor. El alcance de la validación del envío se detalla en <a href="hcen-iti-65.html">HCEN ITI-65</a>.</p>
 
 <table>
   <thead>
@@ -478,12 +481,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Repositorio que entrega un documento</td>
-      <td>Entregar la representación conservada conforme al contrato; no reconstruirla omitiendo datos conocidos.</td>
+      <td>Entregar la representación conservada conforme al contrato.</td>
     </tr>
   </tbody>
 </table>
 
-<p>Los perfiles Core permanecen sin MS. Las obligaciones adicionales están en sus derivados HCEN.</p>
+<p>La aplicación de estas reglas a los datos de pacientes y profesionales se explica en <a href="StructureDefinition-hcen-patient.html">HCENPatient</a> y <a href="StructureDefinition-hcen-practitioner.html">HCENPractitioner</a>.</p>
 
 <h3 id="plan-de-verificación">Plan de verificación</h3>
 
@@ -522,14 +525,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>La validación estructural no demuestra el comportamiento completo. La versión 0.1.0 publica únicamente EjemploPacienteUY, EjemploProfesionalUY, EjemploOrganizacionUY y EjemploRolProfesionalUY. Los ejemplos completos de HCEN quedan fuera de esta versión. La compilación estructural no acredita QA completo, validación terminológica integral ni conformidad operativa. La validación de una implementación requiere evidencia de los intercambios y sus capacidades efectivamente disponibles.</p>
+<p>La validación estructural no demuestra el comportamiento completo. Los <a href="ejemplos.html">ejemplos del Core</a> y los <a href="hcen-ejemplos.html">ejemplos HCEN</a> permiten revisar recursos y escenarios de CNU y publicación. Que los ejemplos compilen no demuestra que una implementación cumpla el intercambio completo. La validación de una implementación requiere evidencia de los intercambios y sus capacidades efectivamente disponibles.</p>
 
 <p><a id="seguridad"></a></p>
 <h3 id="seguridad-y-acreditación-pendientes">Seguridad y acreditación pendientes</h3>
 
 <p>Deben definirse o referenciarse autenticación, autorización, consentimiento, transporte seguro, auditoría, trazabilidad y condiciones operativas. La falta de un contrato publicado aquí no implica ausencia de obligaciones en esas materias.</p>
-
-<p>El borrador propone una evaluación por Salud Digital, pero no define su procedimiento, evidencias definitivas ni cuándo un cambio de versión requiere reevaluación. Una autodeclaración no equivale a acreditación. Los criterios de interpretación y visualización documental también están sujetos a revisión en <a href="hcen-iti-68.html">Recuperación</a>.</p>
 
 
 
@@ -557,10 +558,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

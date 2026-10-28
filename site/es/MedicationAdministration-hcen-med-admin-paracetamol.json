@@ -1,0 +1,44 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "hcen-med-admin-paracetamol",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "generated"
+  },
+  "status" : "completed",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "20921000179102",
+      "display" : "Paracetamol 650 mg comprimido"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "effectiveDateTime" : "2019-08-23T10:05:24-03:00",
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/med-admin-perform-function",
+        "code" : "performer",
+        "display" : "Performer"
+      }]
+    },
+    "actor" : {
+      "reference" : "PractitionerRole/hcen-rol-traumatologia-sousa"
+    }
+  }],
+  "dosage" : {
+    "text" : "Se administra 1 comprimido",
+    "dose" : {
+      "value" : 1,
+      "unit" : "comprimido",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{comprimido}"
+    }
+  }
+}

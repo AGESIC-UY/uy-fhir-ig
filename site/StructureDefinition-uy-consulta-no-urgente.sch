@@ -17,6 +17,7 @@
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:category) &lt;= 0">category: maximum cardinality of 'category' is 0</sch:assert>
       <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
+      <sch:assert test="count(f:encounter) &gt;= 1">encounter: minimum cardinality of 'encounter' is 1</sch:assert>
       <sch:assert test="count(f:attester) &lt;= 0">attester: maximum cardinality of 'attester' is 0</sch:assert>
       <sch:assert test="count(f:relatesTo) &lt;= 0">relatesTo: maximum cardinality of 'relatesTo' is 0</sch:assert>
       <sch:assert test="count(f:event) &lt;= 0">event: maximum cardinality of 'event' is 0</sch:assert>

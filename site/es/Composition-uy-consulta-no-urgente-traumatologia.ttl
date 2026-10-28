@@ -1,0 +1,226 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/Composition/uy-consulta-no-urgente-traumatologia> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "uy-consulta-no-urgente-traumatologia"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:identifier [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.858.2.1.67430.20190823110524.1.1" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:34108-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "34108-1" ] ;
+       fhir:display [ fhir:v "Hoja de consulta no urgente" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://fhir.hcen.gub.uy/Encounter/hcen-encuentro-traumatologia> ;
+     fhir:reference [ fhir:v "Encounter/hcen-encuentro-traumatologia" ]
+  ] ; # 
+  fhir:date [ fhir:v "2019-08-23T11:05:24-03:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> ;
+     fhir:reference [ fhir:v "PractitionerRole/hcen-rol-traumatologia-sousa" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Consulta no urgente"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:custodian [
+     fhir:l <http://fhir.hcen.gub.uy/Organization/hcen-organizacion-asse> ;
+     fhir:reference [ fhir:v "Organization/hcen-organizacion-asse" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Motivos de consulta" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10154-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "10154-3" ] ;
+         fhir:display [ fhir:v "Motivo de consulta" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-motivo-consulta-mialgia> ;
+       fhir:reference [ fhir:v "Condition/hcen-motivo-consulta-mialgia" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Diagnósticos" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Diagnostico" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Condition/hcen-diagnostico-desgarro-muscular> ;
+       fhir:reference [ fhir:v "Condition/hcen-diagnostico-desgarro-muscular" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Procedimientos relevantes realizados" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:47519-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "47519-4" ] ;
+         fhir:display [ fhir:v "Procedimientos relevantes realizados" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-vendaje> ;
+       fhir:reference [ fhir:v "Procedure/hcen-procedimiento-vendaje" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento no farmacológico realizado durante la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:258071000179109 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "258071000179109" ] ;
+         fhir:display [ fhir:v "Tratamiento no farmacológico realizado durante la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/Procedure/hcen-procedimiento-oxigeno> ;
+       fhir:reference [ fhir:v "Procedure/hcen-procedimiento-oxigeno" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento farmacológico realizado durante la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:19011-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "19011-6" ] ;
+         fhir:display [ fhir:v "Tratamiento farmacológico realizado durante la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/MedicationAdministration/hcen-med-admin-paracetamol> ;
+       fhir:reference [ fhir:v "MedicationAdministration/hcen-med-admin-paracetamol" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento no farmacológico indicado al final de la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:258081000179106 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "258081000179106" ] ;
+         fhir:display [ fhir:v "Tratamiento no farmacológico indicado al final de la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-reposo> ;
+       fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-reposo" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Tratamiento farmacológico indicado al final de la asistencia" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:29305-0 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "29305-0" ] ;
+         fhir:display [ fhir:v "Tratamiento farmacológico indicado al final de la asistencia" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/MedicationRequest/hcen-med-req-paracetamol> ;
+       fhir:reference [ fhir:v "MedicationRequest/hcen-med-req-paracetamol" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Instrucciones de seguimiento" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18776-5 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "18776-5" ] ;
+         fhir:display [ fhir:v "Instrucciones de seguimiento" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <http://fhir.hcen.gub.uy/ServiceRequest/hcen-servicio-req-seguimiento> ;
+       fhir:reference [ fhir:v "ServiceRequest/hcen-servicio-req-seguimiento" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

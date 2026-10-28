@@ -1,0 +1,49 @@
+# example-hcen-profesional-rodriguez - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Practitioner: example-hcen-profesional-rodriguez
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Practitioner",
+  "id" : "hcen-profesional-rodriguez",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"]
+  },
+  "language" : "es-UY",
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NI",
+        "display" : "National unique individual identifier"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.2.10000675.68909",
+    "value" : "38700001"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "Martín Andrés Rodríguez Silva",
+    "family" : "Rodríguez Silva",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+        "valueString" : "Rodríguez"
+      },
+      {
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido",
+        "valueString" : "Silva"
+      }]
+    },
+    "given" : ["Martín", "Andrés"],
+    "prefix" : ["Dr."]
+  }],
+  "gender" : "male"
+}
+
+```

@@ -1,12 +1,13 @@
-# HCEN Diagnóstico - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Diagnóstico - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: HCEN Diagnóstico 
 
-**Usages:**
+**Usos:**
 
-* Refer to this Profile: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Referencia a este perfil: [HCEN Consulta No Urgente](StructureDefinition-uy-consulta-no-urgente.md)
+* Ejemplos de este perfil: [Condition/hcen-diagnostico-desgarro-muscular](Condition-hcen-diagnostico-desgarro-muscular.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-diagnostico)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-diagnostico)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,87 +15,87 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
-
-#### Terminology Bindings (Differential)
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Mandatory: 5 elements(3 nested mandatory elements)
- Must-Support: 1 element
- Fixed: 3 elements
- Prohibited: 12 elements
+#### Restricciones
 
-**Structures**
+#### Bindings terminológicos
 
-This structure refers to these other structures:
+#### Restricciones
+
+Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
+
+** Resumen **
+
+Obligatorios: 5 elementos(3 elementosos obligatorios anidados)
+ Must-Support: 1 elementos
+ Fijos: 3 elementos
+ Prohibidos: 12 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Condition.code.coding
-* The element 1 is sliced based on the value of Condition.onset[x]
+* El elemento 1 se divide en slices según el valor de Condition.code.coding
+* El elemento 1 se divide en slices según el valor de Condition.onset[x]
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Condition](http://hl7.org/fhir/R4/condition.html) .
 
-** Summary **
+** Resumen **
 
-Mandatory: 5 elements(3 nested mandatory elements)
- Must-Support: 1 element
- Fixed: 3 elements
- Prohibited: 12 elements
+Obligatorios: 5 elementos(3 elementosos obligatorios anidados)
+ Must-Support: 1 elementos
+ Fijos: 3 elementos
+ Prohibidos: 12 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Perfil Paciente para HCEN (http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient)](StructureDefinition-hcen-patient.md)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Condition.code.coding
-* The element 1 is sliced based on the value of Condition.onset[x]
+* El elemento 1 se divide en slices según el valor de Condition.code.coding
+* El elemento 1 se divide en slices según el valor de Condition.onset[x]
 
  
 
@@ -109,11 +110,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
   "resourceType" : "StructureDefinition",
   "id" : "hcen-diagnostico",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENDiagnostico",
   "title" : "HCEN Diagnóstico",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -257,14 +258,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       }]
     },
     {
-      "id" : "Condition.category.coding.display",
-      "path" : "Condition.category.coding.display",
-      "mapping" : [{
-        "identity" : "HCENDiagnosticoToCDA",
-        "map" : "section/entry/observation/code/@displayName"
-      }]
-    },
-    {
       "id" : "Condition.severity",
       "path" : "Condition.severity",
       "max" : "0"
@@ -272,8 +265,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
     {
       "id" : "Condition.code",
       "path" : "Condition.code",
-      "short" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología)",
-      "definition" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología)",
+      "short" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)",
+      "definition" : "Código que identifica el diagnóstico (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)",
       "min" : 1,
       "constraint" : [{
         "key" : "hcen-coding-required-1",
@@ -292,7 +285,9 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
           "path" : "system"
         }],
         "rules" : "open"
-      }
+      },
+      "short" : "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)",
+      "definition" : "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
     },
     {
       "id" : "Condition.code.coding:snomed",
@@ -409,16 +404,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-diagnostico.
       "mapping" : [{
         "identity" : "HCENDiagnosticoToCDA",
         "map" : "section/entry/observation/effectiveTime/low/@value"
-      }]
-    },
-    {
-      "id" : "Condition.onset[x]:onsetPeriod.end",
-      "path" : "Condition.onset[x].end",
-      "short" : "Fecha de fin del problema de salud",
-      "definition" : "Indica la fecha de fin del problema de salud.",
-      "mapping" : [{
-        "identity" : "HCENDiagnosticoToCDA",
-        "map" : "section/entry/observation/effectiveTime/high/@value"
       }]
     },
     {

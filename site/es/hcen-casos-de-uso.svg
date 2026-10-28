@@ -1,0 +1,81 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-labelledby="hcen-casos-title hcen-casos-desc">
+  <title id="hcen-casos-title">Casos de uso entre dos prestadores en HCEN</title>
+  <desc id="hcen-casos-desc">Dos actores, Prestador A y Prestador B, se conectan a cuatro casos de uso agrupados en una caja Intercambio HCEN. Prestador A tiene los roles Fuente de identidad, Publicador de documentos y Proveedor de documentos, y participa en registrar o actualizar pacientes, publicar documentos y entregar documentos. Prestador B tiene los roles Consultante y Solicitante de documentos, y participa en encontrar y recuperar documentos. Ambos se conectan al caso Recuperar y entregar un documento.</desc>
+  <defs>
+    <linearGradient id="hcen-casos-cabecera" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163959"/>
+      <stop offset="1" stop-color="#0057b8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="1098" height="678" rx="20" fill="#f8fbff" stroke="#d9e3ee" stroke-width="2"/>
+
+  <!-- Caja que agrupa los cuatro casos de uso. -->
+  <rect x="320" y="24" width="460" height="570" rx="16" fill="#eef5fc" stroke="#8ca4bd" stroke-width="1.5"/>
+  <path d="M336 24 H764 Q780 24 780 40 V94 H320 V40 Q320 24 336 24Z" fill="url(#hcen-casos-cabecera)"/>
+  <g font-family="'Segoe UI', Arial, sans-serif" text-anchor="middle">
+    <text x="550" y="54" fill="#ffffff" font-size="20" font-weight="700">Intercambio HCEN</text>
+    <text x="550" y="78" fill="#dbe9f8" font-size="15">Casos de uso</text>
+  </g>
+
+  <!-- Asociaciones rectas, separadas de las figuras y de sus etiquetas. -->
+  <g fill="none" stroke="#0057b8" stroke-width="2" stroke-linecap="round">
+    <line x1="200" y1="230" x2="375" y2="160"/>
+    <line x1="200" y1="240" x2="375" y2="280"/>
+    <line x1="200" y1="250" x2="375" y2="520"/>
+    <line x1="900" y1="390" x2="725" y2="400"/>
+    <line x1="900" y1="410" x2="725" y2="520"/>
+  </g>
+
+  <!-- Una figura por prestador, con sus roles en gris. -->
+  <g id="hcen-casos-prestador-a">
+    <g fill="none" stroke="#003580" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="150" cy="188" r="15" fill="#ffffff"/>
+      <path d="M150 203 V247 M124 221 H176 M150 247 L129 273 M150 247 L171 273"/>
+    </g>
+    <g font-family="'Segoe UI', Arial, sans-serif" text-anchor="middle">
+      <text x="150" y="305" fill="#003580" font-size="18" font-weight="700">Prestador A</text>
+      <g fill="#626d78" font-size="14">
+        <text x="150" y="337">Fuente de identidad</text>
+        <text x="150" y="361">Publicador de documentos</text>
+        <text x="150" y="385">Proveedor de documentos</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="hcen-casos-prestador-b">
+    <g fill="none" stroke="#003580" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="950" cy="358" r="15" fill="#ffffff"/>
+      <path d="M950 373 V417 M924 391 H976 M950 417 L929 443 M950 417 L971 443"/>
+    </g>
+    <g font-family="'Segoe UI', Arial, sans-serif" text-anchor="middle">
+      <text x="950" y="475" fill="#003580" font-size="18" font-weight="700">Prestador B</text>
+      <g fill="#626d78" font-size="14">
+        <text x="950" y="507">Consultante</text>
+        <text x="950" y="531">Solicitante de documentos</text>
+      </g>
+    </g>
+  </g>
+
+  <g fill="#ffffff" stroke="#0057b8" stroke-width="2.5">
+    <ellipse cx="550" cy="160" rx="175" ry="44"/>
+    <ellipse cx="550" cy="280" rx="175" ry="44"/>
+    <ellipse cx="550" cy="400" rx="175" ry="44"/>
+    <ellipse cx="550" cy="520" rx="175" ry="44"/>
+  </g>
+  <g font-family="'Segoe UI', Arial, sans-serif" text-anchor="middle" fill="#24374a" font-size="17" font-weight="700">
+    <text x="550" y="155">Registrar o actualizar</text>
+    <text x="550" y="178">un paciente</text>
+    <text x="550" y="275">Publicar uno o más</text>
+    <text x="550" y="298">documentos clínicos</text>
+    <text x="550" y="395">Encontrar documentos</text>
+    <text x="550" y="418">de un paciente</text>
+    <text x="550" y="515">Recuperar y entregar</text>
+    <text x="550" y="538">un documento</text>
+  </g>
+
+  <g font-family="'Segoe UI', Arial, sans-serif" text-anchor="middle" fill="#24374a" font-size="15">
+    <text x="550" y="635">Los roles se muestran distribuidos entre A y B para ilustrar el intercambio.</text>
+    <text x="550" y="659">Cada prestador debe cubrir las cinco funciones en su despliegue.</text>
+  </g>
+</svg>

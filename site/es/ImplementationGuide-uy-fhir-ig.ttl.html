@@ -10,7 +10,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title> - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title> - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -24,9 +24,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -241,7 +241,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -363,6 +363,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -413,7 +416,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 <!-- layouts\layout-instance-format -->
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -473,7 +476,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
           
 
             a partir de 
-2026-10-06
+2026-10-28
 .
           
         
@@ -511,11 +514,11 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://fhir.hcen.gub.uy/ImplementationGuide/uy-fhir-ig&gt;
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.2.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;UruguayFHIRImplementationGuide&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Guía de Implementación FHIR de Uruguay&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2026-10-06T01:23:13-03:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2026-10-28T18:02:56-03:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;AGESIC&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.contact">fhir:contact</a> ( [
 <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;AGESIC&quot; ] ;
@@ -579,7 +582,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:value         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Versión inicial&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Borrador para pruebas de implementación&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&gt;       ]     ] [
@@ -1017,7 +1020,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:value         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Versión inicial&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Borrador para pruebas de implementación&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/ig-parameter&gt;       ]     ] [
@@ -1640,6 +1643,21 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ValueSet/vs-sexo-biologico ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet/vs-sexo-biologico&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Conjunto de Valores Sexo Biológico&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Sexo biológico: listado de códigos.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ValueSet/vs-sitio-administracion ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet/vs-sitio-administracion&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Conjunto de Valores Sitio de Administración (borrador)&quot; ] ;
@@ -1692,6 +1710,21 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Composition&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Composition/uy-consulta-no-urgente-traumatologia ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Composition/uy-consulta-no-urgente-traumatologia&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Consulta no urgente&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente&gt;       ]     ] [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
@@ -1779,6 +1812,21 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-scanned-document&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Documento Escaneado&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Indica si el documento fue generado a partir de un escaneo físico. Mapea a DocumentEntry.scannedDocument.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:complex-type&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/uy-dni-identifier ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/uy-dni-identifier&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Documento Nacional de Identidad&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificación nacional de la persona, asociada al país que la emite.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
@@ -1883,10 +1931,400 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/hcen-provide-document-bundle ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/hcen-provide-document-bundle&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Envío para publicación documental HCEN&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. Plataforma procesa y valida el envío como fachada FHIR y registra metadatos en XDS, sin persistir recursos FHIR.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Binary&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Binary/hcen-binario-cda-consulta-no-urgente ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Binary/hcen-binario-cda-consulta-no-urgente&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-binario-cda-consulta-no-urgente&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-cda-binary&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Bundle/hcen-cnu-medicina-general-bundle ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle/hcen-cnu-medicina-general-bundle&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-cnu-medicina-general-bundle&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-consulta-no-urgente-bundle&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Condition&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Condition/hcen-diagnostico-desgarro-muscular ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Condition/hcen-diagnostico-desgarro-muscular&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-diagnostico-desgarro-muscular&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Encounter/hcen-encuentro-traumatologia ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter/hcen-encuentro-traumatologia&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-encuentro-traumatologia&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-encounter&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MedicationAdministration&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:MedicationAdministration/hcen-med-admin-paracetamol ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MedicationAdministration/hcen-med-admin-paracetamol&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-med-admin-paracetamol&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-administration&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MedicationRequest&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:MedicationRequest/hcen-med-req-paracetamol ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MedicationRequest/hcen-med-req-paracetamol&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-med-req-paracetamol&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Condition&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Condition/hcen-motivo-consulta-mialgia ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Condition/hcen-motivo-consulta-mialgia&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-motivo-consulta-mialgia&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-motivo-consulta&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/hcen-organizacion-asse ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/hcen-organizacion-asse&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-organizacion-asse&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-organization&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/hcen-paciente-gonzalez ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/hcen-paciente-gonzalez&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-paciente-gonzalez&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/hcen-paciente-smith ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/hcen-paciente-smith&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-paciente-smith&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/hcen-practitioner-sousa ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/hcen-practitioner-sousa&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-practitioner-sousa&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Procedure&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Procedure/hcen-procedimiento-oxigeno ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Procedure/hcen-procedimiento-oxigeno&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-procedimiento-oxigeno&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Procedure&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Procedure/hcen-procedimiento-vendaje ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Procedure/hcen-procedimiento-vendaje&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-procedimiento-vendaje&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/hcen-profesional-rodriguez ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/hcen-profesional-rodriguez&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-profesional-rodriguez&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Bundle/hcen-provide-document-bundle-cnu-asse ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bundle/hcen-provide-document-bundle-cnu-asse&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-provide-document-bundle-cnu-asse&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-provide-document-bundle&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/hcen-rol-medicina-general-rodriguez-asse ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/hcen-rol-medicina-general-rodriguez-asse&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-rol-medicina-general-rodriguez-asse&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/hcen-rol-traumatologia-sousa ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/hcen-rol-traumatologia-sousa&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-rol-traumatologia-sousa&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ServiceRequest&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ServiceRequest/hcen-servicio-req-reposo ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ServiceRequest/hcen-servicio-req-reposo&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-servicio-req-reposo&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ServiceRequest&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ServiceRequest/hcen-servicio-req-seguimiento ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ServiceRequest/hcen-servicio-req-seguimiento&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-hcen-servicio-req-seguimiento&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/uy-organizacion-abc ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/uy-organizacion-abc&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-organizacion-abc&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/uy-organizacion-abc-completa ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/uy-organizacion-abc-completa&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-organizacion-abc-completa&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/uy-paciente-perez ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/uy-paciente-perez&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-paciente-perez&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/uy-paciente-perez-completo ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/uy-paciente-perez-completo&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-paciente-perez-completo&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/uy-profesional-sanchez ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/uy-profesional-sanchez&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-profesional-sanchez&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/uy-profesional-sanchez-completo ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/uy-profesional-sanchez-completo&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-profesional-sanchez-completo&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&gt;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/uy-rol-medicina-general-sanchez-abc ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/uy-rol-medicina-general-sanchez-abc&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;example-uy-rol-medicina-general-sanchez-abc&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role&gt;       ]     ] [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
@@ -2078,7 +2516,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-binary-resource-id ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-binary-resource-id&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ID del Recurso Binario&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Referencia al recurso Binary que contiene la representación CDA del documento clínico.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Referencia al recurso FHIR Binary del prestador que contiene la representación CDA XML del documento clínico. En HCEN ITI-65 se informa la URL HTTP(S) absoluta original de ese recurso. La recuperación del CDA se realiza mediante la URL devuelta por HCEN ITI-67, según las reglas de HCEN ITI-68.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
@@ -2103,12 +2541,27 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:extension&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-identidad-de-genero ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-identidad-de-genero&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identidad de género&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Extensión para representar la identidad de género de una persona. Hereda de la extensión de HL7 individual-genderIdentity.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:complex-type&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/uy-ci-identifier ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/uy-ci-identifier&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/hcen-ci-identifier ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/hcen-ci-identifier&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificador Cédula de Identidad&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Cédula de identidad del paciente.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Cédula de identidad uruguaya utilizada para identificar pacientes y profesionales en HCEN, con system fijo urn:oid:2.16.858.2.10000675.68909.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
@@ -2124,6 +2577,21 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/uy-org-identifier&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificador de Organización&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificador numérico o alfanumérico único asignado de forma oficial o local a una organización.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:complex-type&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/hcen-org-identifier ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/hcen-org-identifier&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificador de Organización para HCEN&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identificador URI OID de una organización uruguaya para los intercambios HCEN.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
@@ -2268,22 +2736,6 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization&quot;         ]       ] ) ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/EjemploOrganizacionUY ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/EjemploOrganizacionUY&quot; ]       ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organización CORE UY sin identificador HCEN&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ejemplo sintético de organización nacional identificada por su nombre.&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-organization&gt;       ]     ] [
-      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:extension&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-funder ;
@@ -2301,14 +2753,14 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/EjemploPacienteUY ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/EjemploPacienteUY&quot; ]       ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Paciente Uruguayo (CORE UY)&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ejemplo de un paciente genérico en Uruguay&quot; ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/hcen-paciente-dni-ci ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/hcen-paciente-dni-ci&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Paciente con DNI nacional y CI HCEN&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Paciente ficticio con MRN, DNI nacional y CI HCEN en identificadores independientes.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-patient&gt;       ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/hcen-patient&gt;       ]     ] [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
@@ -2480,16 +2932,30 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:extension&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/EjemploProfesionalUY ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/EjemploProfesionalUY&quot; ]       ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Profesional CORE UY sin cédula informada&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ejemplo sintético que muestra que la CI obligatoria pertenece al perfil HCEN.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-pronombres ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-pronombres&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pronombres&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Extensión para representar los pronombres de una persona. Hereda de la extensión de HL7 individual-pronouns.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner&gt;       ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ValueSet/vs-pronombres-uy ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ValueSet/vs-pronombres-uy&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pronombres personales en Uruguay&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pronombres personales: listado de códigos.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
@@ -2511,16 +2977,15 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/tools/StructureDefinition/resource-information&gt;         ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:extension&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:PractitionerRole/EjemploRolProfesionalUY ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PractitionerRole/EjemploRolProfesionalUY&quot; ]       ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Rol profesional CORE UY&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ejemplo sintético de rol que referencia los perfiles nacionales.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-segundo-apellido ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-segundo-apellido&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Segundo Apellido&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:Canonical ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role&gt;       ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.resource.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;^^xsd:anyURI ;
@@ -2529,10 +2994,10 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition:extension&quot;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">fhir:reference</a> [
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-segundo-apellido ;
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-segundo-apellido&quot; ]       ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Segundo Apellido&quot; ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Segundo apellido de la persona. Se representa como extensión de HumanName.family para permitir su discriminación, manteniendo family con todos los apellidos concatenados para interoperabilidad.&quot; ] ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:StructureDefinition/ext-sexo-al-nacer ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StructureDefinition/ext-sexo-al-nacer&quot; ]       ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Sexo al nacer&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Extensión para representar el sexo asignado al nacer de una persona. Hereda de la extensión de HL7 individual-recordedSexOrGender.&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example_x_">fhir:example</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false       ]     ] [
@@ -2838,7 +3303,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">a</a> fhir:Url ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;hcen-iti-104.html&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:l</a> fhir:hcen-iti-104.html             ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Registrar o actualizar pacientes&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Registrar o actualizar pacientes — HCEN ITI-104&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;markdown&quot; ]           ] [
             ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.page.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
@@ -2852,7 +3317,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">a</a> fhir:Url ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;hcen-iti-65.html&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:l</a> fhir:hcen-iti-65.html             ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Publicar documentos&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Publicar documentos — HCEN ITI-65&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;markdown&quot; ]           ] [
             ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.page.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
@@ -2866,7 +3331,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">a</a> fhir:Url ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;hcen-iti-67.html&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:l</a> fhir:hcen-iti-67.html             ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Consultar metadatos&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Consultar metadatos — HCEN ITI-67&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;markdown&quot; ]           ] [
             ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.page.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
@@ -2880,7 +3345,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">a</a> fhir:Url ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;hcen-iti-68.html&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:l</a> fhir:hcen-iti-68.html             ] ;
-<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Recuperar documentos&quot; ] ;
+<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Recuperar documentos — HCEN ITI-68&quot; ] ;
 <a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">fhir:generation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;markdown&quot; ]           ] )         ] [
           ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#ImplementationGuide.definition.page.extension">fhir:extension</a> [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
@@ -3104,10 +3569,10 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

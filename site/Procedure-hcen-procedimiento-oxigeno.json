@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "hcen-procedimiento-oxigeno",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-procedimiento"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Indicación/recomendación: administración de oxígeno.</p></div>"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "258061000179103",
+      "display" : "Indicación/recomendación"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "note" : [{
+    "text" : "Administración de oxígeno"
+  }]
+}

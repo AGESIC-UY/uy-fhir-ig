@@ -1,0 +1,44 @@
+# example-hcen-practitioner-sousa - Guía de Implementación FHIR de Uruguay v0.2.0
+
+## Ejemplo Practitioner: example-hcen-practitioner-sousa
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Practitioner",
+  "id" : "hcen-practitioner-sousa",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner"]
+  },
+  "language" : "es-UY",
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NI",
+        "display" : "National unique individual identifier"
+      }]
+    },
+    "system" : "urn:oid:2.16.858.2.10000675.68909",
+    "value" : "87600000"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "official",
+    "text" : "Guillermo Sousa",
+    "family" : "Sousa",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido",
+        "valueString" : "Sousa"
+      }]
+    },
+    "given" : ["Guillermo"]
+  }]
+}
+
+```

@@ -1,12 +1,12 @@
-# HCEN Dosificación - Guía de Implementación FHIR de Uruguay v0.1.0
+# HCEN Dosificación - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil del tipo de datos: HCEN Dosificación 
 
-**Usages:**
+**Usos:**
 
-* Use this DataType Profile: [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md)
+* Utilizar este perfil de tipo de datos: [HCEN Prescripción de Medicación](StructureDefinition-hcen-medication-request.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-dosage)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-dosage)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,79 +14,79 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [Dosage](http://hl7.org/fhir/R4/datatypes.html#Dosage) .
-
-#### Terminology Bindings (Differential)
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Dosage](http://hl7.org/fhir/R4/datatypes.html#Dosage) .
 
-** Summary **
+#### Bindings terminológicos (diferencial)
 
-Prohibited: 7 elements
+#### Bindings terminológicos
 
-**Structures**
+#### Restricciones
 
-This structure refers to these other structures:
+Esta estructura se deriva de [Dosage](http://hl7.org/fhir/R4/datatypes.html#Dosage) .
+
+** Resumen **
+
+Prohibidos: 7 elementos
+
+**Estructuras**
+
+Esta estructura referencia las siguientes estructuras:
 
 * [SimpleQuantity (http://hl7.org/fhir/StructureDefinition/SimpleQuantity)](http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Dosage.asNeeded[x]
-* The element 1 is sliced based on the value of Dosage.doseAndRate.dose[x]
-* The element 1 is sliced based on the value of Dosage.doseAndRate.rate[x]
+* El elemento 1 se divide en slices según el valor de Dosage.asNeeded[x]
+* El elemento 1 se divide en slices según el valor de Dosage.doseAndRate.dose[x]
+* El elemento 1 se divide en slices según el valor de Dosage.doseAndRate.rate[x]
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Dosage](http://hl7.org/fhir/R4/datatypes.html#Dosage) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos (diferencial)
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Dosage](http://hl7.org/fhir/R4/datatypes.html#Dosage) .
 
-** Summary **
+** Resumen **
 
-Prohibited: 7 elements
+Prohibidos: 7 elementos
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [SimpleQuantity (http://hl7.org/fhir/StructureDefinition/SimpleQuantity)](http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity)
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Dosage.asNeeded[x]
-* The element 1 is sliced based on the value of Dosage.doseAndRate.dose[x]
-* The element 1 is sliced based on the value of Dosage.doseAndRate.rate[x]
+* El elemento 1 se divide en slices según el valor de Dosage.asNeeded[x]
+* El elemento 1 se divide en slices según el valor de Dosage.doseAndRate.dose[x]
+* El elemento 1 se divide en slices según el valor de Dosage.doseAndRate.rate[x]
 
  
 
@@ -101,11 +101,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
   "resourceType" : "StructureDefinition",
   "id" : "hcen-dosage",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-dosage",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENDosage",
   "title" : "HCEN Dosificación",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -271,7 +271,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
       "path" : "Dosage.doseAndRate.dose[x]",
       "sliceName" : "doseRange",
       "short" : "Rango de cantidad por dosis",
-      "definition" : "Se utiliza cuando la cantidad por administración no es un valor único, sino un rango.",
+      "definition" : "Se utiliza cuando la cantidad por administración no es un valor único, sino que puede variar dentro de un rango. Ejemplo: Tomar entre 5 y 10 mL por dosis, según necesidad.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -283,7 +283,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
       "path" : "Dosage.doseAndRate.dose[x]",
       "sliceName" : "doseQuantity",
       "short" : "Cantidad exacta por dosis",
-      "definition" : "Se utiliza para indicar una cantidad exacta de medicamento por dosis.",
+      "definition" : "Se utiliza para indicar una cantidad exacta de medicamento que debe administrarse en cada dosis. Ejemplo: Administrar 500 mg por dosis.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -322,7 +322,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
       "path" : "Dosage.doseAndRate.rate[x]",
       "sliceName" : "rateRange",
       "short" : "Rango de velocidad de administración",
-      "definition" : "Se utiliza cuando la velocidad de administración puede variar entre un mínimo y un máximo.",
+      "definition" : "Se utiliza cuando la velocidad de administración puede variar entre un valor mínimo y uno máximo, en lugar de tener una velocidad única. Ejemplo: Administrar por infusión intravenosa a una velocidad de entre 50 y 100 mL/h.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -334,7 +334,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-dosage.csv),
       "path" : "Dosage.doseAndRate.rate[x]",
       "sliceName" : "rateQuantity",
       "short" : "Velocidad de administración exacta",
-      "definition" : "Permite indicar una velocidad específica de administración.",
+      "definition" : "Permite indicar una velocidad específica de administración del medicamento, expresada como una cantidad por unidad de tiempo. Ejemplo: administrar por infusión intravenosa a una velocidad de 100 mL/h.",
       "min" : 0,
       "max" : "1",
       "type" : [{

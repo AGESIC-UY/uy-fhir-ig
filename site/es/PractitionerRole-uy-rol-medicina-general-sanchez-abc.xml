@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="uy-rol-medicina-general-sanchez-abc"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <active value="true"/>
+  <period>
+    <start value="2018-03-01"/>
+  </period>
+  <practitioner>
+    <reference value="Practitioner/uy-profesional-sanchez"/>
+    <display value="Dr. Juan Pedro Sánchez Martínez"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/uy-organizacion-abc"/>
+    <display value="ABC"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="59058001"/>
+      <display value="médico general"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394802001"/>
+      <display value="medicina general"/>
+    </coding>
+  </specialty>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 123 456"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.sanchez@example.org"/>
+    <use value="work"/>
+  </telecom>
+</PractitionerRole>

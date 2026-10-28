@@ -7,7 +7,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Conjunto de Valores Categoría de Condition (CNU) - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Conjunto de Valores Categoría de Condition (CNU) - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -21,9 +21,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -206,8 +206,8 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.49"}
-    h3,h4,h5,h6{--heading-prefix:"9.49"}</style>
+    <style type="text/css">h2{--heading-prefix:"9.54"}
+    h3,h4,h5,h6{--heading-prefix:"9.54"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -238,7 +238,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -360,6 +360,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -396,7 +399,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Resumen de artefactos</b></a></li><li><b>Conjunto de Valores Categoría de Condition (CNU)</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='artifacts.html'><b>Resumen de artefactos</b></a></li><li><b>Conjunto de Valores Categoría de Condition (CNU)</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -410,7 +413,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 <!-- layouts\layout-valueset -->
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -464,7 +467,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <td colspan="4"><i>URL oficial</i>: <span class="copy-text">http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu<button title="Haga clic para copiar la URL" class="btn-copy" data-clipboard-text="http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu"/></span>
       </td>
       <td><i>Versión</i>:
-      <span class="copy-text">0.1.0<button title="Haga clic para copiar la URL versionada" class="btn-copy" data-clipboard-text="http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu|0.1.0"/></span>
+      <span class="copy-text">0.2.0<button title="Haga clic para copiar la URL versionada" class="btn-copy" data-clipboard-text="http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu|0.2.0"/></span>
       </td>
       <td style="text-align: right;border-left-style: hidden" title="Habilite esto para ver los cambios desde la última versión oficial">
         <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">¿Resaltar los cambios en el texto?</label>
@@ -489,7 +492,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
           
 
             a partir de 
-2026-10-06
+2026-10-28
 .
           
         
@@ -512,7 +515,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
   <p>
-    <b>References</b>
+    <b>Referencias</b>
   </p>
   
 <ul>
@@ -529,11 +532,11 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
   <a name="definition"> </a>
 
 <!-- Content Logical Definition heading in the fragment -->
-  <h3>Logical Definition (CLD)</h3>
-<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="vs-condition-category-cnu"> </a><a name="hcvs-condition-category-cnu"> </a><p>This value set includes codes based on the following rules:</p>
-<ul><li>Import all the codes that are contained in <a href="http://hl7.org/fhir/R4/valueset-condition-category.html">Condition Category Codes</a></li>
-<li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
-<table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr>
+  <h3>Definición lógica (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="vs-condition-category-cnu"> </a><a name="hcvs-condition-category-cnu"> </a><p>Este ValueSet incluye códigos según las siguientes reglas:</p>
+<ul><li>Importar todos los códigos contenidos en <a href="http://hl7.org/fhir/R4/valueset-condition-category.html">Condition Category Codes</a></li>
+<li>Incluir estos códigos definidos en <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="No se especifica la versión. No se encontró un CodeSystem coincidente"> version Not Stated (utilizar la última del servidor terminológico)</span>
+<table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Código</b></td><td><b>Texto de presentación</b></td></tr>
 <tr><td><a href="http://snomed.info/id/7611000179107">7611000179107</a></td>
 <td>motivo-consulta</td></tr>
 <tr><td><a href="http://snomed.info/id/439401001">439401001</a></td>
@@ -543,7 +546,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
   <a name="expansion"> </a>
   <h3 id="expansion">Expansión</h3>
 
-  <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px" title="No Expansion for this valueset (not supported by Publication Tooling&lt;!-- [No server available] --&gt;)">No Expansion for this valueset (not supported by Publication Tooling<!-- [No server available] -->)</p>
+  <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px" title="No hay expansión de este ValueSet (CodeSystem desconocido&lt;!-- [Error from https://tx.fhir.org/r4: Error: The cache &#39;39a69c06-a665-45d0-9d6d-36495b39c184&#39; was never issued by this server, and this server has no record of it ever existing. Caches are created with $cache-control?mode=start, and a cache-id is only valid on the server instance and endpoint that issued it - either it was issued somewhere else, or this server has restarted since it was issued] --&gt;)">No hay expansión de este ValueSet (CodeSystem desconocido<!-- [Error from https://tx.fhir.org/r4: Error: The cache '39a69c06-a665-45d0-9d6d-36495b39c184' was never issued by this server, and this server has no record of it ever existing. Caches are created with $cache-control?mode=start, and a cache-id is only valid on the server instance and endpoint that issued it - either it was issued somewhere else, or this server has restarted since it was issued] -->)</p>
 
 
   <hr/>
@@ -583,10 +586,10 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

@@ -1,12 +1,12 @@
-# Barrios y localidades postales de Uruguay - Guía de Implementación FHIR de Uruguay v0.1.0
+# Barrios y localidades postales de Uruguay - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Barrios y localidades postales de Uruguay 
 
- **References** 
+ **Referencias** 
 
 * [Dirección (Uruguay)](StructureDefinition-uy-address.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
@@ -25,11 +25,11 @@
   "resourceType" : "ValueSet",
   "id" : "vs-barrios-localidades-uy",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSBarriosLocalidadesUY",
   "title" : "Barrios y localidades postales de Uruguay",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -64,7 +64,7 @@
       },
       {
         "code" : "Ã‘ANGAPIRE",
-        "display" : "Ã‘ANGAPIRE"
+        "display" : "ÑANGAPIRE"
       },
       {
         "code" : "ABAYUBA",
@@ -456,35 +456,35 @@
       },
       {
         "code" : "BAÃ‘ADO",
-        "display" : "BAÃ‘ADO"
+        "display" : "BAÑADO"
       },
       {
         "code" : "BAÃ‘ADO DE CAÃ‘AS",
-        "display" : "BAÃ‘ADO DE CAÃ‘AS"
+        "display" : "BAÑADO DE CAÑAS"
       },
       {
         "code" : "BAÃ‘ADO DE LAS PAJAS",
-        "display" : "BAÃ‘ADO DE LAS PAJAS"
+        "display" : "BAÑADO DE LAS PAJAS"
       },
       {
         "code" : "BAÃ‘ADO DE MEDINA",
-        "display" : "BAÃ‘ADO DE MEDINA"
+        "display" : "BAÑADO DE MEDINA"
       },
       {
         "code" : "BAÃ‘ADO DE ORO",
-        "display" : "BAÃ‘ADO DE ORO"
+        "display" : "BAÑADO DE ORO"
       },
       {
         "code" : "BAÃ‘ADO DE ROCHA",
-        "display" : "BAÃ‘ADO DE ROCHA"
+        "display" : "BAÑADO DE ROCHA"
       },
       {
         "code" : "BAÃ‘ADO DEL CHAJA",
-        "display" : "BAÃ‘ADO DEL CHAJA"
+        "display" : "BAÑADO DEL CHAJA"
       },
       {
         "code" : "BAÃ‘ADOS DE CARRASCO",
-        "display" : "BAÃ‘ADOS DE CARRASCO"
+        "display" : "BAÑADOS DE CARRASCO"
       },
       {
         "code" : "BAJOS DEL PERDIDO",
@@ -664,7 +664,7 @@
       },
       {
         "code" : "BARRIO MENDAÃ‘A",
-        "display" : "BARRIO MENDAÃ‘A"
+        "display" : "BARRIO MENDAÑA"
       },
       {
         "code" : "BARRIO MONTERREY",
@@ -888,83 +888,83 @@
       },
       {
         "code" : "CAÃ‘ADA AMILIVIA",
-        "display" : "CAÃ‘ADA AMILIVIA"
+        "display" : "CAÑADA AMILIVIA"
       },
       {
         "code" : "CAÃ‘ADA BELLACA",
-        "display" : "CAÃ‘ADA BELLACA"
+        "display" : "CAÑADA BELLACA"
       },
       {
         "code" : "CAÃ‘ADA BRAVA",
-        "display" : "CAÃ‘ADA BRAVA"
+        "display" : "CAÑADA BRAVA"
       },
       {
         "code" : "CAÃ‘ADA CARDOZO",
-        "display" : "CAÃ‘ADA CARDOZO"
+        "display" : "CAÑADA CARDOZO"
       },
       {
         "code" : "CAÃ‘ADA CHICA",
-        "display" : "CAÃ‘ADA CHICA"
+        "display" : "CAÑADA CHICA"
       },
       {
         "code" : "CAÃ‘ADA DE LA CRUZ",
-        "display" : "CAÃ‘ADA DE LA CRUZ"
+        "display" : "CAÑADA DE LA CRUZ"
       },
       {
         "code" : "CAÃ‘ADA DE LAS PIEDRAS",
-        "display" : "CAÃ‘ADA DE LAS PIEDRAS"
+        "display" : "CAÑADA DE LAS PIEDRAS"
       },
       {
         "code" : "CAÃ‘ADA DE MONTAÃ‘O",
-        "display" : "CAÃ‘ADA DE MONTAÃ‘O"
+        "display" : "CAÑADA DE MONTAÑO"
       },
       {
         "code" : "CAÃ‘ADA DE SANTOS",
-        "display" : "CAÃ‘ADA DE SANTOS"
+        "display" : "CAÑADA DE SANTOS"
       },
       {
         "code" : "CAÃ‘ADA DEL ESTADO",
-        "display" : "CAÃ‘ADA DEL ESTADO"
+        "display" : "CAÑADA DEL ESTADO"
       },
       {
         "code" : "CAÃ‘ADA DEL PUEBLO",
-        "display" : "CAÃ‘ADA DEL PUEBLO"
+        "display" : "CAÑADA DEL PUEBLO"
       },
       {
         "code" : "CAÃ‘ADA DEL SAUCE",
-        "display" : "CAÃ‘ADA DEL SAUCE"
+        "display" : "CAÑADA DEL SAUCE"
       },
       {
         "code" : "CAÃ‘ADA GRANDE",
-        "display" : "CAÃ‘ADA GRANDE"
+        "display" : "CAÑADA GRANDE"
       },
       {
         "code" : "CAÃ‘ADA MAGALLANES",
-        "display" : "CAÃ‘ADA MAGALLANES"
+        "display" : "CAÑADA MAGALLANES"
       },
       {
         "code" : "CAÃ‘ADA NIETO",
-        "display" : "CAÃ‘ADA NIETO"
+        "display" : "CAÑADA NIETO"
       },
       {
         "code" : "CAÃ‘ADA PARAGUAYA",
-        "display" : "CAÃ‘ADA PARAGUAYA"
+        "display" : "CAÑADA PARAGUAYA"
       },
       {
         "code" : "CAÃ‘ADA PRUDENCIO",
-        "display" : "CAÃ‘ADA PRUDENCIO"
+        "display" : "CAÑADA PRUDENCIO"
       },
       {
         "code" : "CAÃ‘ADA SARANDI",
-        "display" : "CAÃ‘ADA SARANDI"
+        "display" : "CAÑADA SARANDI"
       },
       {
         "code" : "CAÃ‘AS",
-        "display" : "CAÃ‘AS"
+        "display" : "CAÑAS"
       },
       {
         "code" : "CAÃ‘ITAS",
-        "display" : "CAÃ‘ITAS"
+        "display" : "CAÑITAS"
       },
       {
         "code" : "CABALLERO",
@@ -1004,7 +1004,7 @@
       },
       {
         "code" : "CAMAÃ‘O",
-        "display" : "CAMAÃ‘O"
+        "display" : "CAMAÑO"
       },
       {
         "code" : "CAMINO DE LA CADENA",
@@ -1220,7 +1220,7 @@
       },
       {
         "code" : "CASERIO LAS CAÃ‘AS",
-        "display" : "CASERIO LAS CAÃ‘AS"
+        "display" : "CASERIO LAS CAÑAS"
       },
       {
         "code" : "CASTILLOS",
@@ -1312,7 +1312,7 @@
       },
       {
         "code" : "CERRO BLANCO DE CUÃ‘APIRU",
-        "display" : "CERRO BLANCO DE CUÃ‘APIRU"
+        "display" : "CERRO BLANCO DE CUÑAPIRU"
       },
       {
         "code" : "CERRO CAQUEIRO",
@@ -1692,11 +1692,11 @@
       },
       {
         "code" : "COLONIA ESPAÃ‘A",
-        "display" : "COLONIA ESPAÃ‘A"
+        "display" : "COLONIA ESPAÑA"
       },
       {
         "code" : "COLONIA ESPAÃ‘OLA",
-        "display" : "COLONIA ESPAÃ‘OLA"
+        "display" : "COLONIA ESPAÑOLA"
       },
       {
         "code" : "COLONIA ESTRELLA",
@@ -1744,7 +1744,7 @@
       },
       {
         "code" : "COLONIA LARRAÃ‘AGA",
-        "display" : "COLONIA LARRAÃ‘AGA"
+        "display" : "COLONIA LARRAÑAGA"
       },
       {
         "code" : "COLONIA LAS DELICIAS",
@@ -1836,7 +1836,7 @@
       },
       {
         "code" : "COLONIA VIÃ‘AR",
-        "display" : "COLONIA VIÃ‘AR"
+        "display" : "COLONIA VIÑAR"
       },
       {
         "code" : "COLONIA WILSON",
@@ -1864,7 +1864,7 @@
       },
       {
         "code" : "CONSEJO DEL NIÃ‘O",
-        "display" : "CONSEJO DEL NIÃ‘O"
+        "display" : "CONSEJO DEL NIÑO"
       },
       {
         "code" : "CONSTANCIA",
@@ -1916,7 +1916,7 @@
       },
       {
         "code" : "CORTE DE LA LEÃ‘A",
-        "display" : "CORTE DE LA LEÃ‘A"
+        "display" : "CORTE DE LA LEÑA"
       },
       {
         "code" : "COSTA AZUL",
@@ -2044,7 +2044,7 @@
       },
       {
         "code" : "COSTAS DE CUÃ‘APIRU",
-        "display" : "COSTAS DE CUÃ‘APIRU"
+        "display" : "COSTAS DE CUÑAPIRU"
       },
       {
         "code" : "COSTAS DE JOSE IGNACIO",
@@ -2160,7 +2160,7 @@
       },
       {
         "code" : "CUÃ‘APIRU",
-        "display" : "CUÃ‘APIRU"
+        "display" : "CUÑAPIRU"
       },
       {
         "code" : "CUAREIM",
@@ -2416,7 +2416,7 @@
       },
       {
         "code" : "EGAÃ‘A",
-        "display" : "EGAÃ‘A"
+        "display" : "EGAÑA"
       },
       {
         "code" : "EJIDO DE TREINTA Y TRES",
@@ -2436,7 +2436,7 @@
       },
       {
         "code" : "EL BAÃ‘ADO",
-        "display" : "EL BAÃ‘ADO"
+        "display" : "EL BAÑADO"
       },
       {
         "code" : "EL BELLACO",
@@ -2456,7 +2456,7 @@
       },
       {
         "code" : "EL CAÃ‘O",
-        "display" : "EL CAÃ‘O"
+        "display" : "EL CAÑO"
       },
       {
         "code" : "EL CANELON",
@@ -2532,7 +2532,7 @@
       },
       {
         "code" : "EL ENSUEÃ‘O",
-        "display" : "EL ENSUEÃ‘O"
+        "display" : "EL ENSUEÑO"
       },
       {
         "code" : "EL ESPINILLAR",
@@ -2792,7 +2792,7 @@
       },
       {
         "code" : "FLOR DE MAROÃ‘AS",
-        "display" : "FLOR DE MAROÃ‘AS"
+        "display" : "FLOR DE MAROÑAS"
       },
       {
         "code" : "FLORENCIO SANCHEZ",
@@ -2900,7 +2900,7 @@
       },
       {
         "code" : "GOÃ‘I",
-        "display" : "GOÃ‘I"
+        "display" : "GOÑI"
       },
       {
         "code" : "GODOY",
@@ -3084,7 +3084,7 @@
       },
       {
         "code" : "JOSE BATLLE Y ORDOÃ‘EZ",
-        "display" : "JOSE BATLLE Y ORDOÃ‘EZ"
+        "display" : "JOSE BATLLE Y ORDOÑEZ"
       },
       {
         "code" : "JOSE ENRIQUE RODO",
@@ -3356,7 +3356,7 @@
       },
       {
         "code" : "LA MONTAÃ‘ESA",
-        "display" : "LA MONTAÃ‘ESA"
+        "display" : "LA MONTAÑESA"
       },
       {
         "code" : "LA PALMA",
@@ -3488,7 +3488,7 @@
       },
       {
         "code" : "LARRAÃ‘AGA",
-        "display" : "LARRAÃ‘AGA"
+        "display" : "LARRAÑAGA"
       },
       {
         "code" : "LARRAYOS",
@@ -3516,7 +3516,7 @@
       },
       {
         "code" : "LAS CAÃ‘AS",
-        "display" : "LAS CAÃ‘AS"
+        "display" : "LAS CAÑAS"
       },
       {
         "code" : "LAS CANTERAS",
@@ -3932,7 +3932,7 @@
       },
       {
         "code" : "MAROÃ‘AS, PARQUE GUARANI",
-        "display" : "MAROÃ‘AS, PARQUE GUARANI"
+        "display" : "MAROÑAS, PARQUE GUARANI"
       },
       {
         "code" : "MARTIN CHICO",
@@ -4044,7 +4044,7 @@
       },
       {
         "code" : "MINAS DE CUÃ‘APIRU (USINAS)",
-        "display" : "MINAS DE CUÃ‘APIRU (USINAS)"
+        "display" : "MINAS DE CUÑAPIRU (USINAS)"
       },
       {
         "code" : "MINAS DE NARANCIO",
@@ -4092,7 +4092,7 @@
       },
       {
         "code" : "MOLLES DE CAÃ‘ADA GRANDE",
-        "display" : "MOLLES DE CAÃ‘ADA GRANDE"
+        "display" : "MOLLES DE CAÑADA GRANDE"
       },
       {
         "code" : "MOLLES DE GARZON",
@@ -4172,7 +4172,7 @@
       },
       {
         "code" : "MOURIÃ‘O",
-        "display" : "MOURIÃ‘O"
+        "display" : "MOURIÑO"
       },
       {
         "code" : "MUNDO AZUL",
@@ -4748,7 +4748,7 @@
       },
       {
         "code" : "PASO DEL BAÃ‘ADO",
-        "display" : "PASO DEL BAÃ‘ADO"
+        "display" : "PASO DEL BAÑADO"
       },
       {
         "code" : "PASO DEL BOTE",
@@ -4816,7 +4816,7 @@
       },
       {
         "code" : "PASO DOÃ‘A ROSA",
-        "display" : "PASO DOÃ‘A ROSA"
+        "display" : "PASO DOÑA ROSA"
       },
       {
         "code" : "PASO ESPINOSA",
@@ -4928,11 +4928,11 @@
       },
       {
         "code" : "PEÃ‘AROL",
-        "display" : "PEÃ‘AROL"
+        "display" : "PEÑAROL"
       },
       {
         "code" : "PEÃ‘AROL, LAVALLEJA",
-        "display" : "PEÃ‘AROL, LAVALLEJA"
+        "display" : "PEÑAROL, LAVALLEJA"
       },
       {
         "code" : "PEDERNAL",
@@ -4960,7 +4960,7 @@
       },
       {
         "code" : "PEPE NUÃ‘EZ",
-        "display" : "PEPE NUÃ‘EZ"
+        "display" : "PEPE NUÑEZ"
       },
       {
         "code" : "PERICO MORENO",
@@ -4976,11 +4976,11 @@
       },
       {
         "code" : "PIÃ‘EIRO",
-        "display" : "PIÃ‘EIRO"
+        "display" : "PIÑEIRO"
       },
       {
         "code" : "PIÃ‘ERA",
-        "display" : "PIÃ‘ERA"
+        "display" : "PIÑERA"
       },
       {
         "code" : "PICADA DE BENITEZ",
@@ -5448,11 +5448,11 @@
       },
       {
         "code" : "PUNTAS DE CAÃ‘ADA CARDOZO",
-        "display" : "PUNTAS DE CAÃ‘ADA CARDOZO"
+        "display" : "PUNTAS DE CAÑADA CARDOZO"
       },
       {
         "code" : "PUNTAS DE CAÃ‘ADA GRANDE",
-        "display" : "PUNTAS DE CAÃ‘ADA GRANDE"
+        "display" : "PUNTAS DE CAÑADA GRANDE"
       },
       {
         "code" : "PUNTAS DE CAGANCHA",
@@ -5500,7 +5500,7 @@
       },
       {
         "code" : "PUNTAS DE CUÃ‘APIRU",
-        "display" : "PUNTAS DE CUÃ‘APIRU"
+        "display" : "PUNTAS DE CUÑAPIRU"
       },
       {
         "code" : "PUNTAS DE DON CARLOS",
@@ -5856,7 +5856,7 @@
       },
       {
         "code" : "RINCON DE CAÃ‘ADA NIETO",
-        "display" : "RINCON DE CAÃ‘ADA NIETO"
+        "display" : "RINCON DE CAÑADA NIETO"
       },
       {
         "code" : "RINCON DE CARRASCO",
@@ -6156,7 +6156,7 @@
       },
       {
         "code" : "SALDAÃ‘AS",
-        "display" : "SALDAÃ‘AS"
+        "display" : "SALDAÑAS"
       },
       {
         "code" : "SALINAS",
@@ -6260,7 +6260,7 @@
       },
       {
         "code" : "SAN JOSE DE LAS CAÃ‘AS",
-        "display" : "SAN JOSE DE LAS CAÃ‘AS"
+        "display" : "SAN JOSE DE LAS CAÑAS"
       },
       {
         "code" : "SAN JOSE DE MAYO",
@@ -7084,7 +7084,7 @@
       },
       {
         "code" : "VILLA ESPAÃ‘OLA",
-        "display" : "VILLA ESPAÃ‘OLA"
+        "display" : "VILLA ESPAÑOLA"
       },
       {
         "code" : "VILLA FELICIDAD",
@@ -7156,7 +7156,7 @@
       },
       {
         "code" : "VILLA MUÃ‘OZ, RETIRO",
-        "display" : "VILLA MUÃ‘OZ, RETIRO"
+        "display" : "VILLA MUÑOZ, RETIRO"
       },
       {
         "code" : "VILLA NUEVA",
@@ -7220,7 +7220,7 @@
       },
       {
         "code" : "VILLA VIÃ‘OLES",
-        "display" : "VILLA VIÃ‘OLES"
+        "display" : "VILLA VIÑOLES"
       },
       {
         "code" : "VILLA VIEJA",

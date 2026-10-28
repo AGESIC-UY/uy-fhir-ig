@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="uy-consulta-no-urgente-traumatologia"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-consulta-no-urgente"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.858.2.1.67430.20190823110524.1.1"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="34108-1"/>
+      <display value="Hoja de consulta no urgente"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/hcen-encuentro-traumatologia"/>
+  </encounter>
+  <date value="2019-08-23T11:05:24-03:00"/>
+  <author>
+    <reference value="PractitionerRole/hcen-rol-traumatologia-sousa"/>
+  </author>
+  <title value="Consulta no urgente"/>
+  <confidentiality value="N"/>
+  <custodian>
+    <reference value="Organization/hcen-organizacion-asse"/>
+  </custodian>
+  <section>
+    <title value="Motivos de consulta"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10154-3"/>
+        <display value="Motivo de consulta"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="Condition/hcen-motivo-consulta-mialgia"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Diagnósticos"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="11450-4"/>
+        <display value="Diagnostico"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="Condition/hcen-diagnostico-desgarro-muscular"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Procedimientos relevantes realizados"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="47519-4"/>
+        <display value="Procedimientos relevantes realizados"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="Procedure/hcen-procedimiento-vendaje"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Tratamiento no farmacológico realizado durante la asistencia"/>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="258071000179109"/>
+        <display value="Tratamiento no farmacológico realizado durante la asistencia"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="Procedure/hcen-procedimiento-oxigeno"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Tratamiento farmacológico realizado durante la asistencia"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="19011-6"/>
+        <display value="Tratamiento farmacológico realizado durante la asistencia"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="MedicationAdministration/hcen-med-admin-paracetamol"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Tratamiento no farmacológico indicado al final de la asistencia"/>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="258081000179106"/>
+        <display value="Tratamiento no farmacológico indicado al final de la asistencia"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="ServiceRequest/hcen-servicio-req-reposo"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Tratamiento farmacológico indicado al final de la asistencia"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="29305-0"/>
+        <display value="Tratamiento farmacológico indicado al final de la asistencia"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="MedicationRequest/hcen-med-req-paracetamol"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Instrucciones de seguimiento"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="18776-5"/>
+        <display value="Instrucciones de seguimiento"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/>
+    </text>
+    <entry>
+      <reference value="ServiceRequest/hcen-servicio-req-seguimiento"/>
+    </entry>
+  </section>
+</Composition>

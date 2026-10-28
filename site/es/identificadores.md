@@ -1,4 +1,4 @@
-# Identificadores y datos comunes - Guía de Implementación FHIR de Uruguay v0.1.0
+# Identificadores y datos comunes - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Identificadores y datos comunes
 
@@ -8,7 +8,7 @@ Los perfiles de tipos de datos del Core definen identificadores, nombres, direcc
 
 | | |
 | :--- | :--- |
-| [Cédula de identidad](StructureDefinition-uy-ci-identifier.md) | Cédula de identidad uruguaya de una persona. |
+| [Documento nacional de identidad](StructureDefinition-uy-dni-identifier.md) | Identificación nacional de una persona, asociada al país que la emite. |
 | [Pasaporte](StructureDefinition-uy-ppn-identifier.md) | Número de pasaporte de una persona. |
 | [Identificador institucional de paciente (MRN)](StructureDefinition-uy-mrn-identifier.md) | Número interno de paciente en una institución (**Medical Record Number**). |
 | [Identificador de organización](StructureDefinition-uy-org-identifier.md) | Identificador oficial o local asignado a una organización. |

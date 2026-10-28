@@ -1,0 +1,38 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "hcen-rol-medicina-general-rodriguez-asse",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-practitioner-role"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Martín Andrés Rodríguez Silva ejerce como médico general, especialidad medicina general, en la Administración de los Servicios de Salud del Estado (ASSE) desde el 01/03/2018.</p></div>"
+  },
+  "active" : true,
+  "period" : {
+    "start" : "2018-03-01"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/hcen-profesional-rodriguez",
+    "display" : "Martín Andrés Rodríguez Silva"
+  },
+  "organization" : {
+    "reference" : "Organization/hcen-organizacion-asse",
+    "display" : "ASSE"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "59058001",
+      "display" : "médico general"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394802001",
+      "display" : "medicina general"
+    }]
+  }]
+}

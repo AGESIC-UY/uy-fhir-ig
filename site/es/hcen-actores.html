@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Actores y responsabilidades - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Actores y responsabilidades - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Actores y responsabilidades</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Actores y responsabilidades</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Actores y responsabilidades</h2>
   
 
@@ -440,7 +443,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>Esta página identifica a las partes que participan en HCEN y permite distribuir sus responsabilidades entre productos. Un actor representa una función del intercambio, no necesariamente una aplicación única.</p>
+<p>Esta página identifica a las partes que participan en la interacción con HCEN, y permite distribuir sus responsabilidades. Un actor representa una función del intercambio, no necesariamente una aplicación única.</p>
 
 <h3 id="prestador">Prestador</h3>
 
@@ -462,7 +465,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>Publicador de documentos</td>
-      <td>Conservar FHIR y CDA en su repositorio y enviar metadatos y el documento FHIR a Plataforma (el CDA se referencia mediante Binary, pero Binary no debería (SHOULD NOT) enviarse).</td>
+      <td>Conservar FHIR y CDA en su repositorio y enviar los recursos de publicación a Plataforma.</td>
       <td><a href="hcen-iti-65.html">Publicar documentos</a></td>
     </tr>
     <tr>
@@ -483,7 +486,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>El repositorio pertenece al ámbito del prestador: conserva el contenido documental y permite entregarlo posteriormente. La obligación de mantener ambas representaciones se define en <a href="hcen-iti-65.html#representaciones">Publicación</a>.</p>
+<p>El repositorio pertenece al ámbito del prestador, debe (SHALL) almacenar los documentos clínicos y entregarlos cuando sean requeridos. La obligación de mantener dos representaciones del mismo documento clínico se define en <a href="hcen-iti-65.html#representaciones">Publicación</a>.</p>
 
 <h3 id="plataforma">Plataforma</h3>
 
@@ -491,11 +494,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Plataforma administra los registros de pacientes y la unificación de identidades, registra DocumentReference y SubmissionSet y responde consultas de metadatos. Recibe el documento FHIR para validación sin asumir su almacenamiento como documento. Para recuperar contenido, actúa de intermediaria entre el prestador solicitante y el repositorio del prestador que lo conserva.</p>
 
-<p>La política de validación clínica y la semántica del envío transaccional requieren el cierre indicado en <a href="hcen-iti-65.html#pendientes">Publicación</a>. La descripción del actor no acredita que los servicios estén disponibles.</p>
+<p>Las reglas de validación y rechazo se describen en <a href="hcen-iti-65.html">Publicar documentos</a>.</p>
 
 <h3 id="distribución-entre-productos">Distribución entre productos</h3>
 
-<p>La declaración de un producto debe (SHALL) identificar qué funciones cubre y su versión. La conformidad integral se evalúa sobre el despliegue del prestador, conforme a <a href="hcen-conformidad.html">Conformidad y capacidades</a>; implementar únicamente la consulta no constituye integración integral.</p>
+<p>La declaración de un producto debe (SHALL) identificar qué funciones cubre y su versión. La conformidad integral se evalúa sobre el despliegue del prestador, conforme a <a href="hcen-conformidad.html">Conformidad y capacidades</a>.</p>
 
 
 
@@ -523,10 +526,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

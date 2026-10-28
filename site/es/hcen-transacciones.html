@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Transacciones - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Transacciones - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Transacciones</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><b>Transacciones</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Transacciones</h2>
   
 
@@ -432,56 +435,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#cómo-se-nombran-las-transacciones" id="markdown-toc-cómo-se-nombran-las-transacciones">Cómo se nombran las transacciones</a></li>
-  <li><a href="#cómo-interpretar-las-solicitudes" id="markdown-toc-cómo-interpretar-las-solicitudes">Cómo interpretar las solicitudes</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<p>Las transacciones describen las reglas del intercambio entre el prestador y Plataforma. Los códigos ITI identifican la referencia técnica IHE; los requisitos locales y las capacidades pendientes se encuentran en las páginas HCEN enlazadas aquí.</p>
+<p>Las transacciones describen el intercambio entre el prestador y Plataforma. Cada una tiene un nombre funcional y un código HCEN ITI, que conserva la numeración del intercambio IHE tomado como referencia.</p>
 
 <table>
   <thead>
     <tr>
+      <th>Transacción</th>
       <th>Objetivo</th>
-      <th>Referencia</th>
-      <th>Mensaje principal</th>
+      <th>Solicitud</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>HCEN ITI-104</td>
       <td><a href="hcen-iti-104.html">Registrar o actualizar pacientes</a></td>
-      <td>PIXm ITI-104</td>
-      <td>Patient y actualización condicional por identificador</td>
+      <td>PUT condicional de Patient por dominio y valor MRN.</td>
     </tr>
     <tr>
+      <td>HCEN ITI-65</td>
       <td><a href="hcen-iti-65.html">Publicar documentos</a></td>
-      <td>MHD ITI-65</td>
-      <td>Bundle de publicación con SubmissionSet, DocumentReference, Bundle documental y contexto</td>
+      <td>POST de un Bundle con metadatos, documentos FHIR y contexto.</td>
     </tr>
     <tr>
+      <td>HCEN ITI-67</td>
       <td><a href="hcen-iti-67.html">Consultar metadatos</a></td>
-      <td>MHD ITI-67</td>
-      <td>Búsqueda de DocumentReference y Bundle searchset</td>
+      <td>POST a <code class="language-plaintext highlighter-rouge">DocumentReference/_search</code> con los parámetros de búsqueda.</td>
     </tr>
     <tr>
+      <td>HCEN ITI-68</td>
       <td><a href="hcen-iti-68.html">Recuperar documentos</a></td>
-      <td>MHD ITI-68</td>
-      <td>Solicitud de una representación y respuesta FHIR</td>
+      <td>GET a la URL recibida, con <code class="language-plaintext highlighter-rouge">Accept</code> para seleccionar FHIR o CDA.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="cómo-se-nombran-las-transacciones">Cómo se nombran las transacciones</h3>
-
-<p>Cada transacción se identifica por su nombre funcional y, cuando corresponde, por la referencia IHE. «Publicar documentos» utiliza MHD ITI-65 como referencia de diseño; esa referencia no declara conformidad integral con IHE. Las siglas se explican en el <a href="hcen-glosario.html">Glosario HCEN</a>.</p>
+<p>Las referencias de diseño son PIXm ITI-104 para pacientes y MHD ITI-65, ITI-67 e ITI-68 para documentos. El uso de estos códigos no declara conformidad integral con IHE. La <a href="hcen.html#relación-con-ihe">introducción a HCEN</a> explica esa relación.</p>
 
 <h3 id="cómo-interpretar-las-solicitudes">Cómo interpretar las solicitudes</h3>
 
-<p>Las rutas que contienen <code class="language-plaintext highlighter-rouge">[base]</code>, <code class="language-plaintext highlighter-rouge">[url-fhir]</code> o <code class="language-plaintext highlighter-rouge">[url-cda]</code> son plantillas. Los dominios <code class="language-plaintext highlighter-rouge">example.org</code> no son servicios HCEN. Las rutas concretas, los controles de acceso y las capacidades operativas deben acordarse con Salud Digital.</p>
+<p>Las rutas con <code class="language-plaintext highlighter-rouge">[base]</code>, <code class="language-plaintext highlighter-rouge">[base-publicacion]</code> o <code class="language-plaintext highlighter-rouge">[URL-recibida-en-ITI-67]</code> representan las direcciones utilizadas por cada interacción. Los dominios <code class="language-plaintext highlighter-rouge">example.org</code> son ilustrativos. Las direcciones de los servicios y los controles de acceso deben acordarse con Salud Digital.</p>
 
-<p>Las páginas separan requisitos del borrador, decisiones propuestas y pendientes. No acreditan que los servicios estén implementados o disponibles. Las obligaciones de datos se consultan en los perfiles; las de comportamiento se verifican en cada transacción y en <a href="hcen-conformidad.html">Conformidad</a>.</p>
+<p>Cada página describe actores, solicitud, procesamiento, respuesta y errores. Los perfiles explican cómo completar los recursos, las obligaciones comunes y el alcance de las verificaciones están en <a href="hcen-conformidad.html">Conformidad HCEN</a>. El <a href="hcen-ejemplos.html#recorrido-intercambio">recorrido de ejemplos</a> enlaza los recursos disponibles para los intercambios.</p>
 
 
 
@@ -509,10 +506,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

@@ -1,4 +1,4 @@
-# Conceptos básicos de FHIR - Guía de Implementación FHIR de Uruguay v0.1.0
+# Conceptos básicos de FHIR - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Conceptos básicos de FHIR
 
@@ -63,7 +63,7 @@ Un paciente puede tener una cédula de identidad o un identificador interno dent
 
 Un error común es confundir el campo `identifier` con el campo `id`. `id` tiene otro propósito: identifica el recurso dentro de los de su mismo tipo en un servidor. Así, `Patient/paciente-123` permite localizar un registro de paciente, pero `paciente-123` no tiene por qué coincidir con su cédula o su identificador interno dentro de la institución.
 
-Una **referencia** conecta un recurso con otro. Por ejemplo, una observación puede apuntar a `Patient/paciente-123` para indicar a quién corresponde el resultado. De esa forma, los recursos se relacionan sin repetir todos los datos del paciente en cada estudio. Podés ver otra relación en el [ejemplo de rol profesional](PractitionerRole-EjemploRolProfesionalUY.md), que vincula un profesional con una organización.
+Una **referencia** conecta un recurso con otro. Por ejemplo, una observación puede apuntar a `Patient/paciente-123` para indicar a quién corresponde el resultado. De esa forma, los recursos se relacionan sin repetir todos los datos del paciente en cada estudio. Podés ver otra relación en el [ejemplo de rol profesional](PractitionerRole-uy-rol-medicina-general-sanchez-abc.md), que vincula un profesional con una organización.
 
 Cuando se necesita agrupar recursos, se utiliza un **Bundle**. Puede contener, por ejemplo, resultados de una búsqueda o los recursos que forman un documento FHIR. Su tipo indica para qué se agrupan y qué reglas corresponden.
 

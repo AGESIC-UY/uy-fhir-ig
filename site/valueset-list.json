@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://fhir.hcen.gub.uy/ValueSet/hcen-fhir-serialization",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "HCENFHIRSerialization",
     "title" : "Tipos MIME de documentos FHIR HCEN",
@@ -10,7 +10,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-barrios-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSBarriosLocalidadesUY",
     "title" : "Barrios y localidades postales de Uruguay",
@@ -19,7 +19,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSclassCode",
     "title" : "EJE 1 — Tipo genérico de documento",
@@ -28,7 +28,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-codigos-postales-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSCodigosPostalesUY",
     "title" : "Códigos postales de Uruguay",
@@ -37,7 +37,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-composition-status-cnu",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSCompositionStatusCNU",
     "title" : "Conjunto de Valores Estado de la Consulta No Urgente",
@@ -46,7 +46,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSConditionCategoryCNU",
     "title" : "Conjunto de Valores Categoría de Condition (CNU)",
@@ -56,7 +56,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-confidentiality-cnu",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSConfidentialityCNU",
     "title" : "Conjunto de Valores Confidencialidad de la Consulta No Urgente",
@@ -65,7 +65,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-departamentos-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSDepartamentosUY",
     "title" : "Departamentos de Uruguay",
@@ -74,7 +74,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-diagnostico-consulta",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSDiagnosticoConsulta",
     "title" : "Conjunto de Valores Diagnósticos",
@@ -83,7 +83,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-especialidad-medica",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "EspecialidadMedica",
     "title" : "Conjunto de Valores Especialidad Médica",
@@ -92,7 +92,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-format-code",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "FormatCode",
     "title" : "Formato del documento FHIR HCEN",
@@ -101,7 +101,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-localidades-uy",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSLocalidadesUY",
     "title" : "Localidades de Uruguay",
@@ -110,7 +110,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-medicamentos",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSMedicamentos",
     "title" : "Conjunto de Valores Medicamentos (borrador)",
@@ -119,7 +119,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-motivos-consulta",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSMotivosConsulta",
     "title" : "Conjunto de Valores Motivos de Consulta",
@@ -128,7 +128,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSpracticeSetting",
     "title" : "EJE 3 — Servicio médico del documento",
@@ -137,7 +137,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-procedimientos",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSProcedimientos",
     "title" : "Conjunto de Valores Procedimientos",
@@ -145,8 +145,17 @@
     "systems" : ["http://snomed.info/sct"]
   },
   {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-pronombres-uy",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "VSPronombresUY",
+    "title" : "Pronombres personales en Uruguay",
+    "description" : "Pronombres personales: listado de códigos.",
+    "systems" : ["http://loinc.org"]
+  },
+  {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-resultado-procedimiento",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSResultadoProcedimiento",
     "title" : "Conjunto de Valores Resultado de Procedimiento",
@@ -155,7 +164,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-rol-profesional",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "RolProfesional",
     "title" : "Conjunto de Valores Rol del Profesional",
@@ -163,8 +172,17 @@
     "systems" : ["http://snomed.info/sct"]
   },
   {
+    "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sexo-biologico",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "VSSexoBiologico",
+    "title" : "Conjunto de Valores Sexo Biológico",
+    "description" : "Sexo biológico: listado de códigos.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"]
+  },
+  {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-sitio-administracion",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSSitioAdministracion",
     "title" : "Conjunto de Valores Sitio de Administración (borrador)",
@@ -173,7 +191,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-solicitud-procedimiento",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSSolicitudProcedimiento",
     "title" : "Conjunto de Valores Solicitud de Procedimiento (borrador)",
@@ -182,7 +200,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-tipo-procedimiento",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSTipoProcedimiento",
     "title" : "Conjunto de Valores Tipo de Procedimiento (borrador)",
@@ -191,7 +209,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-type-code",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VStypeCode",
     "title" : "EJE 2 — Tipo detallado de documento",
@@ -200,7 +218,7 @@
   },
   {
     "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-via-administracion",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "status" : "draft",
     "name" : "VSViaAdministracion",
     "title" : "Conjunto de Valores Vía de Administración (borrador)",

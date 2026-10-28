@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.hcen.gub.uy/MedicationRequest/hcen-med-req-paracetamol> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hcen-med-req-paracetamol"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request"^^xsd:anyURI ;
+       fhir:l <http://fhir.hcen.gub.uy/StructureDefinition/hcen-medication-request>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:20921000179102 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "20921000179102" ] ;
+       fhir:display [ fhir:v "Paracetamol 650 mg comprimido" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.hcen.gub.uy/Patient/hcen-paciente-gonzalez> ;
+     fhir:reference [ fhir:v "Patient/hcen-paciente-gonzalez" ]
+  ] ; # 
+  fhir:requester [
+     fhir:l <http://fhir.hcen.gub.uy/PractitionerRole/hcen-rol-traumatologia-sousa> ;
+     fhir:reference [ fhir:v "PractitionerRole/hcen-rol-traumatologia-sousa" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Suspender en caso de alguna reacción adversa" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "1 comprimido de paracetamol 650 mg, vía oral, cada 8 horas durante 5 días, tomar con alimentos" ] ;
+     fhir:patientInstruction [ fhir:v "Tomar con alimentos" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:bounds [
+           a fhir:Duration ;
+           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "días" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "d" ]
+         ] ;
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "8"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "h" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
+         ] ;
+         fhir:code [ fhir:v "PO" ] ;
+         fhir:display [ fhir:v "Swallow, oral" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "comprimido" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "{comprimido}" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

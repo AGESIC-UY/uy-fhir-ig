@@ -1,19 +1,19 @@
-# Conjunto de Valores Categoría de Condition (CNU) - Guía de Implementación FHIR de Uruguay v0.1.0
+# Conjunto de Valores Categoría de Condition (CNU) - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: Conjunto de Valores Categoría de Condition (CNU) 
 
- **References** 
+ **Referencias** 
 
 * [HCEN Diagnóstico](StructureDefinition-hcen-diagnostico.md)
 * [HCEN Motivo de Consulta](StructureDefinition-hcen-motivo-consulta.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No hay expansión de este ValueSet (CodeSystem desconocido)
 
 -------
 
@@ -28,11 +28,11 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "vs-condition-category-cnu",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-condition-category-cnu",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSConditionCategoryCNU",
   "title" : "Conjunto de Valores Categoría de Condition (CNU)",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

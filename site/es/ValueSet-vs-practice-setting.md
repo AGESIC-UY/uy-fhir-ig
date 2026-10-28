@@ -1,18 +1,18 @@
-# EJE 3 — Servicio médico del documento - Guía de Implementación FHIR de Uruguay v0.1.0
+# EJE 3 — Servicio médico del documento - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: EJE 3 — Servicio médico del documento 
 
- **References** 
+ **Referencias** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No hay expansión de este ValueSet (no admitida por las herramientas de publicación)
 
 -------
 
@@ -27,11 +27,11 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "vs-practice-setting",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-practice-setting",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSpracticeSetting",
   "title" : "EJE 3 — Servicio médico del documento",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

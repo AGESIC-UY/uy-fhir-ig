@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="uy-paciente-perez"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/uy-patient"/>
+  </meta>
+  <language value="es-UY"/>
+  <text>
+    <status value="generated"/><div xml:lang="es-UY" xmlns="http://www.w3.org/1999/xhtml" lang="es-UY"><p><b>Juan Carlos Pérez Rodríguez</b></p><p>MRN: MRN1234 (dominio https://example.org/institucion/identificadores/pacientes). Documento nacional de identidad: 12345678.</p><p>Sexo asignado al nacer: masculino. Sexo administrativo: masculino.</p><p>Fecha de nacimiento: 1980-01-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.perez@example.com</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/administrative-gender"/>
+          <code value="male"/>
+          <display value="Male"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex assigned at birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical record number"/>
+      </coding>
+    </type>
+    <system value="https://example.org/institucion/identificadores/pacientes"/>
+    <value value="MRN1234"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+        <display value="National unique individual identifier"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.858.1.858.68909"/>
+    <value value="12345678"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <text value="Juan Carlos Pérez Rodríguez"/>
+    <family value="Pérez Rodríguez">
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-primer-apellido">
+        <valueString value="Pérez"/>
+      </extension>
+      <extension url="http://fhir.hcen.gub.uy/StructureDefinition/ext-segundo-apellido">
+        <valueString value="Rodríguez"/>
+      </extension>
+    </family>
+    <given value="Juan"/>
+    <given value="Carlos"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+598 99 123 456"/>
+    <use value="mobile"/>
+    <period>
+      <start value="2018"/>
+    </period>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="juan.perez@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1980-01-01"/>
+  <address>
+    <text value="Calle Falsa 1234, CIUDAD VIEJA, MONTEVIDEO, Montevideo, URY"/>
+    <line value="Calle Falsa 1234"/>
+    <city value="MONTEVIDEO"/>
+    <district value="CIUDAD VIEJA"/>
+    <state value="Montevideo"/>
+    <country value="URY"/>
+  </address>
+</Patient>

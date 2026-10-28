@@ -1,18 +1,18 @@
-# EJE 1 — Tipo genérico de documento - Guía de Implementación FHIR de Uruguay v0.1.0
+# EJE 1 — Tipo genérico de documento - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## ValueSet: EJE 1 — Tipo genérico de documento 
 
- **References** 
+ **Referencias** 
 
 * [Perfil Document Reference HCEN](StructureDefinition-hcen-document-reference.md)
 
-### Logical Definition (CLD)
+### Definición lógica (CLD)
 
  
 
 ### Expansión
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No hay expansión de este ValueSet (no admitida por las herramientas de publicación)
 
 -------
 
@@ -27,11 +27,11 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "vs-class-code",
   "url" : "http://fhir.hcen.gub.uy/ValueSet/vs-class-code",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSclassCode",
   "title" : "EJE 1 — Tipo genérico de documento",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",

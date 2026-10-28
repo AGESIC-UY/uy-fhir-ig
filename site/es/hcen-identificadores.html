@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Identificadores HCEN - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Identificadores HCEN - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-perfiles.html'><b>Perfiles HCEN</b></a></li><li><b>Identificadores HCEN</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='hcen.html'><b>Introducción a HCEN</b></a></li><li><a href='hcen-perfiles.html'><b>Perfiles HCEN</b></a></li><li><b>Identificadores HCEN</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Identificadores HCEN</h2>
   
 
@@ -435,7 +438,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#paciente-institución-y-repositorio" id="markdown-toc-paciente-institución-y-repositorio">Paciente, institución y repositorio</a></li>
-  <li><a href="#identificador-documental" id="markdown-toc-identificador-documental">Identificador documental</a></li>
+  <li><a href="#identificador-de-documento" id="markdown-toc-identificador-de-documento">Identificador de documento</a></li>
   <li><a href="#ubicación-en-los-recursos" id="markdown-toc-ubicación-en-los-recursos">Ubicación en los recursos</a></li>
   <li><a href="#ejemplo" id="markdown-toc-ejemplo">Ejemplo</a></li>
 </ul>
@@ -445,20 +448,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="paciente-institución-y-repositorio">Paciente, institución y repositorio</h3>
 
-<p><strong>HCEN-ID-001.</strong> El MRN identifica al paciente dentro del dominio del prestador. Su <code class="language-plaintext highlighter-rouge">system</code> debe (SHALL) ser un OID autorizado por Salud Digital, expresado como <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]</code>, y su <code class="language-plaintext highlighter-rouge">value</code> debe contener el identificador local. Esta exigencia no se extiende a todos los identificadores del paciente. <a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a> comprueba la sintaxis; la autorización del dominio y su relación con la institución emisora se verifican mediante lógica interna de Plataforma contra el catálogo HCEN privado, fuera de la validación del perfil. Los dominios operativos no se publican en esta guía.</p>
+<p>El MRN identifica al paciente dentro del dominio del prestador. Su <code class="language-plaintext highlighter-rouge">system</code> debe (SHALL) ser un OID autorizado por Salud Digital, expresado como <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]</code>, y su <code class="language-plaintext highlighter-rouge">value</code> debe contener el identificador local. Esta exigencia no se extiende a todos los identificadores del paciente. <a href="StructureDefinition-hcen-mrn-identifier.html">HCENMRNIdentifier</a> comprueba la sintaxis del identificador, la autorización del dominio y su relación con la institución emisora se verifican mediante lógica interna de Plataforma. Los dominios operativos no se publican en esta guía.</p>
 
-<p>La organización se identifica mediante <a href="StructureDefinition-uy-org-identifier.html">UYOrgIdentifier</a>, reutilizado por <a href="StructureDefinition-hcen-organization.html">HCENOrganization</a>. La IG pública no enumera OID institucionales autorizados ni define un binding de <code class="language-plaintext highlighter-rouge">Patient.identifier[mrn].system</code> o <code class="language-plaintext highlighter-rouge">Organization.identifier.value</code> a una lista pública de OID. Cuando corresponde, controla estructura y formato; la autorización del OID contra el catálogo HCEN se verifica mediante lógica interna de Plataforma. El identificador de la organización y el dominio de asignación de MRN cumplen funciones distintas; una institución puede administrar varios dominios MRN.</p>
+<p>La cédula de identidad uruguaya se representa mediante <a href="StructureDefinition-hcen-ci-identifier.html">HCENCIIdentifier</a>, con tipo <code class="language-plaintext highlighter-rouge">NI</code> y <code class="language-plaintext highlighter-rouge">system = urn:oid:2.16.858.2.10000675.68909</code>. Se utiliza en pacientes y profesionales. Su obligatoriedad y soporte se explican en <a href="StructureDefinition-hcen-patient.html">HCENPatient</a> y <a href="StructureDefinition-hcen-practitioner.html">HCENPractitioner</a>.</p>
 
-<p><strong>HCEN-ID-003.</strong> El repositorio debe (SHALL) tener un OID validado por Salud Digital. Se representa en la <a href="StructureDefinition-ext-repository-id.html">extensión RepositoryId</a> con <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y <code class="language-plaintext highlighter-rouge">value = urn:oid:...</code>. El mecanismo operativo de validación del OID del repositorio no está documentado en esta versión.</p>
+<p>El DNI nacional <a href="StructureDefinition-uy-dni-identifier.html">UYDNIIdentifier</a> se hereda del Core en <code class="language-plaintext highlighter-rouge">identifier[dni]</code> y sigue siendo opcional. Para Uruguay utiliza <code class="language-plaintext highlighter-rouge">urn:oid:2.16.858.1.858.68909</code>. DNI y CI HCEN pueden coexistir en identificadores separados, pero el DNI <strong>no</strong> sustituye al slice <code class="language-plaintext highlighter-rouge">ci</code> ni a sus obligaciones.</p>
 
-<h3 id="identificador-documental">Identificador documental</h3>
+<p>La organización se representa mediante <a href="StructureDefinition-hcen-org-identifier.html">HCENOrgIdentifier</a>, derivado de <a href="StructureDefinition-uy-org-identifier.html">UYOrgIdentifier</a>, y el slice <code class="language-plaintext highlighter-rouge">identifier[organizationId]</code> de <a href="StructureDefinition-hcen-organization.html">HCENOrganization</a>. Su representación es:</p>
 
-<p><strong>HCEN-ID-002.</strong> [oid_documento_clinico] representa el OID del documento clínico y sigue esta estructura:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Identifier.system = urn:ietf:rfc:3986
+Identifier.value  = urn:oid:2.16.858.0....
+</code></pre></div></div>
+
+<p>La invariante admite descendientes de las ramas de <a href="https://unaoid.gub.uy/Organizacion.aspx">UNAOID</a>: <code class="language-plaintext highlighter-rouge">2.16.858.0.0</code> (Estado), <code class="language-plaintext highlighter-rouge">2.16.858.0.1</code> (personas públicas no estatales) y <code class="language-plaintext highlighter-rouge">2.16.858.0.2</code> (empresas y organizaciones privadas), con arcos numéricos sin ceros iniciales. Comprueba el formato, no la asignación oficial ni la autorización del OID. La guía no publica una lista cerrada de instituciones o dominios autorizados.</p>
+
+<p>El identificador de la organización y el dominio de asignación MRN cumplen funciones distintas. Cuando se informa <code class="language-plaintext highlighter-rouge">assigner</code> en los identificadores HCEN de CI, MRN u organización, referencia una <a href="StructureDefinition-hcen-organization.html">HCENOrganization</a>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">HCENSubmissionSet.extension[sourceId].valueIdentifier</code> utiliza la misma representación de organización e identifica a la entidad que origina el envío. Esa entidad puede ser una intermediaria distinta de la organización clínica del documento.</p>
+
+<p>El repositorio debe (SHALL) tener un OID validado por Salud Digital. Se representa en la <a href="StructureDefinition-ext-repository-id.html">extensión RepositoryId</a> con <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y <code class="language-plaintext highlighter-rouge">value = urn:oid:...</code>. El mecanismo operativo de validación del OID del repositorio no está documentado en esta versión.</p>
+
+<h3 id="identificador-de-documento">Identificador de documento</h3>
+
+<p>[oid_documento_clinico] representa el OID del documento clínico y sigue esta estructura:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2.16.858.2.[ID ESTRUCTURA PRESTADOR].67430.[AAAAMMDDHHmmss].[Extras]
 </code></pre></div></div>
 
-<p>La fecha y hora corresponde a la creación en hora local de Uruguay. Los Extras son uno o más arcos numéricos de OID definidos por el prestador. Debe (SHALL) asegurar la unicidad, incluidos documentos creados en el mismo segundo. La invariante controla la forma; no comprueba que el prestador esté autorizado, que la fecha exista ni que coincida con la creación clínica.</p>
+<p>La fecha y hora corresponde a la creación en hora local de Uruguay. Los Extras son uno o más arcos numéricos de OID definidos por el prestador. Debe (SHALL) asegurar la unicidad, incluidos documentos creados en el mismo segundo. La invariante controla la forma, pero no comprueba que el prestador esté autorizado, que la fecha exista ni que coincida con la creación clínica.</p>
 
 <h3 id="ubicación-en-los-recursos">Ubicación en los recursos</h3>
 
@@ -504,18 +521,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>SubmissionSet <code class="language-plaintext highlighter-rouge">identifier[uniqueId]</code></td>
       <td><code class="language-plaintext highlighter-rouge">urn:oid:[oid_propio_del_conjunto_S]</code></td>
-      <td>HCENDocumentIdentifier; <code class="language-plaintext highlighter-rouge">use = usual</code>; S es distinto de [oid_documento_clinico]</td>
+      <td>HCENSubmissionSetUniqueIdIdentifier; <code class="language-plaintext highlighter-rouge">use = usual</code>; S es distinto de [oid_documento_clinico]</td>
     </tr>
   </tbody>
 </table>
 
-<p>Composition.identifier, Bundle.identifier y DocumentReference.masterIdentifier conservan [oid_documento_clinico]. DocumentReference utiliza uniqueId = [oid_documento_clinico] (repetición opcional) y entryUUID = 1.[oid_documento_clinico]. SubmissionSet utiliza uniqueId = S, propio del conjunto y distinto de [oid_documento_clinico], y entryUUID = 2.[oid_documento_clinico] derivado de cualquiera de los DocumentReference miembros. La elección del miembro y el orden de la lista no tienen significado normativo.</p>
+<p>El identificador del documento se conserva en Composition, Bundle documental y DocumentReference. El conjunto de envío tiene una identidad propia. La aplicación de estas convenciones se explica en <a href="StructureDefinition-hcen-document-reference.html">HCENDocumentReference</a> y <a href="StructureDefinition-hcen-submission-set.html">HCENSubmissionSet</a>.</p>
 
-<p>Los entryUUID de DocumentReference y SubmissionSet son obligatorios en el envío. La repetición de uniqueId en DocumentReference sigue siendo opcional: <code class="language-plaintext highlighter-rouge">masterIdentifier</code> es el identificador documental principal y <code class="language-plaintext highlighter-rouge">identifier[uniqueId]</code> permite incluirlo también en la colección de identificadores, sin asignar una identidad diferente.</p>
+<p>Los perfiles de <code class="language-plaintext highlighter-rouge">entryUUID</code> heredan de <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier">IHE MHD EntryUUID Identifier</a>, por lo que utilizan <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y <code class="language-plaintext highlighter-rouge">use = official</code>. En HCEN sus valores se derivan del OID documental: el DocumentReference antepone <code class="language-plaintext highlighter-rouge">urn:uuid:1.</code> y el SubmissionSet antepone <code class="language-plaintext highlighter-rouge">urn:uuid:2.</code> a [oid_documento_clinico] de cualquiera de sus miembros. Esta forma es una convención histórica del ecosistema HCEN/XDS, no representa un UUID RFC estándar. HCENDocumentIdentifier hereda de IHE MHD UniqueIdIdentifier y fija explícitamente <code class="language-plaintext highlighter-rouge">use = usual</code>.</p>
 
-<p>Los perfiles de <code class="language-plaintext highlighter-rouge">entryUUID</code> heredan de <a href="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier">IHE MHD EntryUUID Identifier</a>, por lo que utilizan <code class="language-plaintext highlighter-rouge">system = urn:ietf:rfc:3986</code> y <code class="language-plaintext highlighter-rouge">use = official</code>. En HCEN sus valores se derivan del OID documental: el DocumentReference antepone <code class="language-plaintext highlighter-rouge">urn:uuid:1.</code> y el SubmissionSet antepone <code class="language-plaintext highlighter-rouge">urn:uuid:2.</code> a [oid_documento_clinico] de cualquiera de sus miembros. Esta forma es una convención histórica del ecosistema HCEN/XDS; no representa un UUID RFC estándar. HCENDocumentIdentifier hereda de IHE MHD UniqueIdIdentifier y fija explícitamente <code class="language-plaintext highlighter-rouge">use = usual</code>.</p>
-
-<p>El CDA conserva el OID del documento en su identificador documental XML. Binary R4 no tiene <code class="language-plaintext highlighter-rouge">identifier</code>: no se inventa ese atributo ni se usa <code class="language-plaintext highlighter-rouge">Binary.id</code> como identificador de negocio. La versión documental se comprueba en los contenidos y metadatos; <code class="language-plaintext highlighter-rouge">meta.versionId</code> de un recurso del servidor no demuestra equivalencia clínica entre formatos. El mapeo definitivo de versión entre CDA y FHIR queda por cerrar.</p>
+<p>El CDA conserva el OID del documento en su identificador documental XML. Binary R4 no tiene <code class="language-plaintext highlighter-rouge">identifier</code>: no se inventa ese atributo ni se usa <code class="language-plaintext highlighter-rouge">Binary.id</code> como identificador de negocio. El prestador debe conservar la misma identidad y versión en contenidos y metadatos. Plataforma no inspecciona el CDA durante HCEN ITI-65. <code class="language-plaintext highlighter-rouge">meta.versionId</code> de un recurso del servidor no demuestra equivalencia clínica entre formatos. El mapeo definitivo de versión entre CDA y FHIR queda por cerrar.</p>
 
 <h3 id="ejemplo">Ejemplo</h3>
 
@@ -525,7 +540,7 @@ EntryUUID conjunto:     urn:uuid:2.2.16.858.2.99999999.67430.20260917100000.1
 UniqueId del conjunto:  urn:oid:2.16.858.2.99999999.67430.20260917100000.2
 </code></pre></div></div>
 
-<p>El prestador y los dominios del ejemplo son ficticios; no se declaran asignados ni autorizados. Ver <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>.</p>
+<p>El prestador y los dominios del ejemplo son ficticios, no se declaran asignados ni autorizados. Ver <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>.</p>
 
 
 
@@ -553,10 +568,10 @@ UniqueId del conjunto:  urn:oid:2.16.858.2.99999999.67430.20260917100000.2
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

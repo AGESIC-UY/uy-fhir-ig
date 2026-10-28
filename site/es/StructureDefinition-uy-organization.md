@@ -1,14 +1,14 @@
-# Perfil Organización para Uruguay - Guía de Implementación FHIR de Uruguay v0.1.0
+# Perfil Organización para Uruguay - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil de los recursos: Perfil Organización para Uruguay 
 
-**Usages:**
+**Usos:**
 
 * Derived from this Profile: [Perfil Organización para HCEN](StructureDefinition-hcen-organization.md)
-* Refer to this Profile: [Identificador Cédula de Identidad](StructureDefinition-uy-ci-identifier.md), [Identificador MRN](StructureDefinition-uy-mrn-identifier.md), [Identificador de Organización](StructureDefinition-uy-org-identifier.md), [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md)... Show 4 more, [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md), [Identificador Pasaporte](StructureDefinition-uy-ppn-identifier.md), [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
-* Examples for this Profile: [Organización de ejemplo CORE UY](Organization-EjemploOrganizacionUY.md)
+* Referencia a este perfil: [Identificador MRN](StructureDefinition-uy-mrn-identifier.md), [Identificador de Organización](StructureDefinition-uy-org-identifier.md), [Perfil Organización para Uruguay](StructureDefinition-uy-organization.md), [Perfil Paciente para Uruguay](StructureDefinition-uy-patient.md)... Show 3 more, [Identificador Pasaporte](StructureDefinition-uy-ppn-identifier.md), [Perfil Rol del Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner-role.md) and [Perfil Profesional de Salud para Uruguay](StructureDefinition-uy-practitioner.md)
+* Ejemplos de este perfil: [Organización ABC](Organization-uy-organizacion-abc-completa.md) and [Organización ABC](Organization-uy-organizacion-abc.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/uy-organization)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/uy-organization)
 
 ### Vistas formales del contenido del perfil
 
@@ -16,29 +16,25 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.html) .
 
-#### Terminology Bindings (Differential)
+#### Bindings terminológicos
 
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.html) .
 
-** Summary **
+** Resumen **
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier)](StructureDefinition-uy-org-identifier.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
@@ -49,38 +45,34 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Organization.identifier
-* The element 1 is sliced based on the value of Organization.telecom
-* The element 1 is sliced based on the value of Organization.address
-* The element 1 is sliced based on the value of Organization.contact.telecom
+* El elemento 1 se divide en slices según el valor de Organization.identifier
+* El elemento 1 se divide en slices según el valor de Organization.telecom
+* El elemento 1 se divide en slices según el valor de Organization.address
+* El elemento 1 se divide en slices según el valor de Organization.contact.telecom
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.html) .
 
-#### Terminology Bindings (Differential)
-
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [Organization](http://hl7.org/fhir/R4/organization.html) .
 
-** Summary **
+** Resumen **
 
-**Structures**
+**Estructuras**
 
-This structure refers to these other structures:
+Esta estructura referencia las siguientes estructuras:
 
 * [Identificador de Organización (http://fhir.hcen.gub.uy/StructureDefinition/uy-org-identifier)](StructureDefinition-uy-org-identifier.md)
 * [Contacto Telefónico (Uruguay) (http://fhir.hcen.gub.uy/StructureDefinition/uy-phone-contact-point)](StructureDefinition-uy-phone-contact-point.md)
@@ -91,12 +83,12 @@ This structure refers to these other structures:
 
 **Slices**
 
-This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+Esta estructura define los siguientes [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
 
-* The element 1 is sliced based on the value of Organization.identifier
-* The element 1 is sliced based on the value of Organization.telecom
-* The element 1 is sliced based on the value of Organization.address
-* The element 1 is sliced based on the value of Organization.contact.telecom
+* El elemento 1 se divide en slices según el valor de Organization.identifier
+* El elemento 1 se divide en slices según el valor de Organization.telecom
+* El elemento 1 se divide en slices según el valor de Organization.address
+* El elemento 1 se divide en slices según el valor de Organization.contact.telecom
 
  
 
@@ -111,11 +103,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
   "resourceType" : "StructureDefinition",
   "id" : "uy-organization",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/uy-organization",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "UYOrganization",
   "title" : "Perfil Organización para Uruguay",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -159,74 +151,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
       "definition" : "Una agrupación de personas u organizaciones con un propósito común."
     },
     {
-      "id" : "Organization.id",
-      "path" : "Organization.id",
-      "short" : "ID lógico de este artefacto.",
-      "definition" : "ID lógico de este artefacto.",
-      "comment" : "El recurso puede no tener identificador lógico cuando se envía al servidor mediante una operación de creación."
-    },
-    {
-      "id" : "Organization.meta",
-      "path" : "Organization.meta",
-      "short" : "Metadatos sobre el recurso.",
-      "definition" : "Metadatos sobre el recurso."
-    },
-    {
-      "id" : "Organization.implicitRules",
-      "path" : "Organization.implicitRules",
-      "short" : "Conjunto de reglas bajo las cuales se creó este contenido.",
-      "definition" : "Conjunto de reglas bajo las cuales se creó este contenido.",
-      "comment" : "Este elemento limita la interpretación del contenido a los sistemas que conocen las reglas indicadas y puede reducir la interoperabilidad. Debe evitarse cuando sea posible. Habitualmente referencia una guía que explica las reglas adicionales."
-    },
-    {
-      "id" : "Organization.language",
-      "path" : "Organization.language",
-      "short" : "Idioma del contenido del recurso.",
-      "definition" : "Idioma del contenido del recurso.",
-      "comment" : "El idioma facilita la indexación y la accesibilidad. No todo el contenido debe estar en el idioma principal. El idioma de la narrativa se indica también en el atributo lang de su elemento div; no se deduce automáticamente de Resource.language.",
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-          "valueCanonical" : "http://hl7.org/fhir/ValueSet/all-languages"
-        },
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "Language"
-        },
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-          "valueBoolean" : true
-        }],
-        "strength" : "preferred",
-        "description" : "Idioma humano del contenido.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/languages"
-      }
-    },
-    {
-      "id" : "Organization.text",
-      "path" : "Organization.text",
-      "short" : "Resumen del recurso en texto para interpretación humana.",
-      "definition" : "Resumen del recurso en texto para interpretación humana."
-    },
-    {
-      "id" : "Organization.contained",
-      "path" : "Organization.contained",
-      "short" : "Recursos inline.",
-      "definition" : "Recursos inline."
-    },
-    {
-      "id" : "Organization.extension",
-      "path" : "Organization.extension",
-      "short" : "Extensiones.",
-      "definition" : "Extensiones."
-    },
-    {
-      "id" : "Organization.modifierExtension",
-      "path" : "Organization.modifierExtension",
-      "short" : "Extensiones que no pueden ser ignoradas.",
-      "definition" : "Extensiones que no pueden ser ignoradas."
-    },
-    {
       "id" : "Organization.identifier",
       "path" : "Organization.identifier",
       "slicing" : {
@@ -235,9 +159,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
           "path" : "type"
         }],
         "rules" : "open"
-      },
-      "short" : "Identificadores de la organización.",
-      "definition" : "Identificadores de la organización."
+      }
     },
     {
       "id" : "Organization.identifier:organizationId",
@@ -253,41 +175,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
       }]
     },
     {
-      "id" : "Organization.active",
-      "path" : "Organization.active",
-      "short" : "Si el registro de la organización sigue activo.",
-      "definition" : "Si el registro de la organización sigue activo."
-    },
-    {
-      "id" : "Organization.type",
-      "path" : "Organization.type",
-      "short" : "Tipo de organización.",
-      "definition" : "Tipo de organización.",
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "OrganizationType"
-        }],
-        "strength" : "example",
-        "description" : "Clasificación de la organización.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/organization-type"
-      }
-    },
-    {
-      "id" : "Organization.name",
-      "path" : "Organization.name",
-      "short" : "Nombre utilizado para la organización.",
-      "definition" : "Nombre utilizado para la organización.",
-      "comment" : "Si cambia el nombre de la organización, puede conservarse el anterior en alias para facilitar las búsquedas."
-    },
-    {
-      "id" : "Organization.alias",
-      "path" : "Organization.alias",
-      "short" : "Lista de nombres alternativos de la organización.",
-      "definition" : "Lista de nombres alternativos de la organización.",
-      "comment" : "Los nombres alternativos o históricos no incluyen fechas: facilitan las búsquedas, pero no registran los periodos durante los que se utilizaron."
-    },
-    {
       "id" : "Organization.telecom",
       "path" : "Organization.telecom",
       "slicing" : {
@@ -296,10 +183,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
           "path" : "system"
         }],
         "rules" : "open"
-      },
-      "short" : "Datos de contacto de la organización.",
-      "definition" : "Datos de contacto de la organización.",
-      "comment" : "No se utiliza el código home. Estos datos corresponden al contacto oficial de la organización, no a las personas que trabajan en ella o la representan."
+      }
     },
     {
       "id" : "Organization.telecom:phone",
@@ -336,10 +220,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
           "path" : "$this"
         }],
         "rules" : "open"
-      },
-      "short" : "Direcciones físicas o postales de la organización.",
-      "definition" : "Direcciones físicas o postales de la organización.",
-      "comment" : "La organización puede tener varias direcciones con distintos usos o periodos de aplicación. No se utiliza el código home."
+      }
     },
     {
       "id" : "Organization.address:uyAddress",
@@ -357,8 +238,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
     {
       "id" : "Organization.partOf",
       "path" : "Organization.partOf",
-      "short" : "Organización de la cual forma parte esta organización.",
-      "definition" : "Organización de la cual forma parte esta organización.",
       "type" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
@@ -369,49 +248,8 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
       }]
     },
     {
-      "id" : "Organization.contact",
-      "path" : "Organization.contact",
-      "short" : "Contacto de la organización para un propósito específico.",
-      "definition" : "Contacto de la organización para un propósito específico."
-    },
-    {
-      "id" : "Organization.contact.id",
-      "path" : "Organization.contact.id",
-      "short" : "Identificador del elemento dentro del recurso.",
-      "definition" : "Identificador del elemento dentro del recurso."
-    },
-    {
-      "id" : "Organization.contact.extension",
-      "path" : "Organization.contact.extension",
-      "short" : "Contenido adicional definido mediante extensiones.",
-      "definition" : "Contenido adicional definido mediante extensiones."
-    },
-    {
-      "id" : "Organization.contact.modifierExtension",
-      "path" : "Organization.contact.modifierExtension",
-      "short" : "Extensiones que modifican el significado del elemento y no pueden ignorarse.",
-      "definition" : "Extensiones que modifican el significado del elemento y no pueden ignorarse."
-    },
-    {
-      "id" : "Organization.contact.purpose",
-      "path" : "Organization.contact.purpose",
-      "short" : "El tipo de propósito del contacto.",
-      "definition" : "El tipo de propósito del contacto.",
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "ContactPartyType"
-        }],
-        "strength" : "extensible",
-        "description" : "Propósito para el que se contacta a esta persona.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/contactentity-type"
-      }
-    },
-    {
       "id" : "Organization.contact.name",
       "path" : "Organization.contact.name",
-      "short" : "Nombre asociado con el contacto.",
-      "definition" : "Nombre asociado con el contacto.",
       "type" : [{
         "code" : "HumanName",
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-human-name"]
@@ -426,9 +264,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
           "path" : "system"
         }],
         "rules" : "open"
-      },
-      "short" : "Detalles de contacto de la persona.",
-      "definition" : "Detalles de contacto de la persona."
+      }
     },
     {
       "id" : "Organization.contact.telecom:phone",
@@ -465,12 +301,6 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-uy-organization.c
         "code" : "Address",
         "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/uy-address"]
       }]
-    },
-    {
-      "id" : "Organization.endpoint",
-      "path" : "Organization.endpoint",
-      "short" : "Endpoints técnicos que proveen acceso a servicios operados por la organización.",
-      "definition" : "Endpoints técnicos que proveen acceso a servicios operados por la organización."
     }]
   }
 }

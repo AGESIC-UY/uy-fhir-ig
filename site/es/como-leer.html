@@ -6,7 +6,7 @@
 <html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Cómo leer los perfiles - Guía de Implementación FHIR de Uruguay v0.1.0</title>
+    <title>Cómo leer los perfiles - Guía de Implementación FHIR de Uruguay v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,9 +20,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
     <link href="assets/css/project.css" rel="stylesheet"/>
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
-    <!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
+  	<!-- Diseño aprobado: Limpio, menú Guías, cabecera institucional compacta. -->
 <style type="text/css">
 :root {
   --ig-status-text-color:#003580;
@@ -237,7 +237,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
         <div id="ig-status" data-fhir="generated">
           <p><span style="font-size:12pt;font-weight:bold">Guía de Implementación FHIR de Uruguay</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - Versión inicial
+            <span style="display:inline-block;">0.2.0 - Borrador para pruebas de implementación
 
 
             </span>
@@ -359,6 +359,9 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
       <li>
         <a href="hcen-conformidad.html">Conformidad y capacidades</a>
       </li>
+      <li>
+        <a href="hcen-ejemplos.html">Ejemplos de intercambio</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -395,7 +398,7 @@ h1,h2,h3 { color:#163959; font-family:'Segoe UI',Arial,sans-serif; line-height:1
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='alcance.html'><b>Propósito y alcance</b></a></li><li><b>Cómo leer los perfiles</b></li>
+          <li><a href='toc.html'><b>Índice</b></a></li><li><a href='alcance.html'><b>Propósito y alcance</b></a></li><li><b>Cómo leer los perfiles</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -415,7 +418,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guía de Implementación FHIR de Uruguay - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhir.hcen.gub.uy/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Cómo leer los perfiles</h2>
   
 
@@ -468,7 +471,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Una fila en el diferencial no siempre implica una nueva exigencia: también puede aparecer por una traducción o una aclaración de su descripción. Si un elemento no aparece allí, puede seguir formando parte del recurso por herencia.</p>
 
-<p>Otras vistas, como la de elementos clave, ayudan a enfocarse en una selección de campos. La <strong>descripción detallada</strong> permite consultar la definición completa de cada elemento, y la sección de <strong>ejemplos</strong> muestra instancias. Los rótulos pueden aparecer en español o en inglés, como <em>Differential</em>, <em>Snapshot</em> o <em>Examples</em>.</p>
+<p>Otras vistas, como la de elementos clave, ayudan a enfocarse en una selección de campos. La <strong>descripción detallada</strong> permite consultar la definición completa de cada elemento, y la sección de <strong>ejemplos</strong> muestra instancias. Los rótulos pueden aparecer en español o en inglés, como <em>Differential</em>, <em>Snapshot</em> o <em>Ejemplos</em>.</p>
 
 <h3 id="leer-una-fila-de-izquierda-a-derecha">Leer una fila de izquierda a derecha</h3>
 
@@ -479,7 +482,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <figcaption>Figura 2. Lectura de filas seleccionadas de HCENPatient. Se omiten algunas filas y marcas.</figcaption>
 </figure>
 
-<p>La columna <strong>Nombre (Name)</strong> identifica el elemento, <strong>Marcas (Flags)</strong> destaca características que requieren atención, <strong>Card.</strong> indica cuántas veces puede aparecer, <strong>Tipo (Type)</strong> enlaza con su estructura y <strong>Descripción y restricciones (Description &amp; Constraints)</strong> resume su significado y otras reglas. En la tabla publicada, seguir el enlace del elemento permite ampliar su definición.</p>
+<p>La columna <strong>Nombre (Name)</strong> identifica el elemento, <strong>Marcas (Flags)</strong> destaca características que requieren atención, <strong>Card.</strong> indica cuántas veces puede aparecer, <strong>Tipo (Type)</strong> enlaza con su estructura y <strong>Descripción y restricciones (Descripción y restricciones)</strong> resume su significado y otras reglas. En la tabla publicada, seguir el enlace del elemento permite ampliar su definición.</p>
 
 <p>Por ejemplo, la fila <code class="language-plaintext highlighter-rouge">name</code> de <code class="language-plaintext highlighter-rouge">HCENPatient</code> se interpreta así: puede aparecer como máximo un nombre, utiliza el perfil nacional <code class="language-plaintext highlighter-rouge">UYHumanName</code> y tiene Must Support indicado por la marca <code class="language-plaintext highlighter-rouge">S</code>.</p>
 
@@ -536,7 +539,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Una <strong>slice</strong> es un grupo dentro de un elemento repetible, con reglas propias. En la figura 2, <code class="language-plaintext highlighter-rouge">identifier:mrn</code> distingue el número interno de paciente de otros identificadores. La fila general exige al menos un identificador y la slice <code class="language-plaintext highlighter-rouge">mrn</code> exige exactamente uno de ese grupo. Hay que cumplir ambas reglas.</p>
 
-<p>El nombre de la slice ayuda a leer el perfil, pero <strong>no</strong> es un campo que se agregue al JSON. Cada identificador sigue siendo una entrada de <code class="language-plaintext highlighter-rouge">identifier</code>, y las reglas de discriminación permiten reconocer a qué grupo pertenece. En <code class="language-plaintext highlighter-rouge">UYPatient</code> se utiliza <code class="language-plaintext highlighter-rouge">identifier.type</code> como discriminador. Para más detalles sobre el uso de slices consultar la <a href="https://hl7.org/fhir/R4/profiling.html#slicing">especificación base</a>.</p>
+<p>El nombre de la slice ayuda a leer el perfil, pero <strong>no</strong> es un campo que se agregue al JSON. Cada identificador sigue siendo una entrada de <code class="language-plaintext highlighter-rouge">identifier</code>, y las reglas de discriminación permiten reconocer a qué grupo pertenece. En <code class="language-plaintext highlighter-rouge">UYPatient</code> se discrimina por el perfil del identificador: su contenido determina si corresponde al MRN, al DNI o al pasaporte. Para más detalles sobre el uso de slices consultar la <a href="https://hl7.org/fhir/R4/profiling.html#slicing">especificación base</a>.</p>
 
 <h3 id="revisar-los-valores-permitidos-y-las-condiciones-adicionales">Revisar los valores permitidos y las condiciones adicionales</h3>
 
@@ -586,13 +589,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="pasar-del-perfil-a-un-ejemplo">Pasar del perfil a un ejemplo</h3>
 
-<p>Con la definición a mano, el siguiente paso es abrir el <a href="Patient-EjemploPacienteUY.html">paciente básico del Core</a>. Su narrativa ofrece una lectura rápida y la representación JSON permite observar la estructura que intercambian los sistemas.</p>
+<p>Con la definición a mano, el siguiente paso es abrir el <a href="Patient-uy-paciente-perez.html">paciente básico del Core</a>. Su narrativa ofrece una lectura rápida y la representación JSON permite observar la estructura que intercambian los sistemas.</p>
 
 <p>Un ejercicio breve consiste en localizar el MRN dentro de <code class="language-plaintext highlighter-rouge">identifier</code>, comparar <code class="language-plaintext highlighter-rouge">name</code> con su tipo <code class="language-plaintext highlighter-rouge">UYHumanName</code> y revisar las extensiones de los apellidos. Así se conecta cada regla con su representación concreta.</p>
 
 <p>Los ejemplos muestran una posibilidad, pero no enumeran todas las opciones ni reemplazan la definición del perfil. Para implementar un intercambio, también deben revisarse la <a href="hcen-transacciones.html">transacción correspondiente</a> y las <a href="conformidad.html">convenciones de conformidad</a>.</p>
 
-<p>El siguiente paso para entender como usar esta guía es leer la sección de <a href="conformidad.html">convenciones y conformidad</a></p>
+<p>El recorrido continúa en <a href="conformidad.html">Convenciones y conformidad</a>.</p>
+
 
 
 
@@ -619,10 +623,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2026+. <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital">AGESIC</a>.  
-          Paquete fhir.uy#0.1.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Paquete fhir.uy#0.2.0 basado en <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generado 
-  <span title="2026-10-06 01:23:00 -0300">
-    2026-10-06
+  <span title="2026-10-28 18:02:00 -0300">
+    2026-10-28
   </span>
 
           <br/>

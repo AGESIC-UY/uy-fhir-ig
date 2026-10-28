@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "hcen-servicio-req-reposo",
+  "meta" : {
+    "profile" : ["http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"]
+  },
+  "language" : "es-UY",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"es-UY\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\"><p>Indicación/recomendación: hacer reposo durante las próximas 2 semanas.</p></div>"
+  },
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "258061000179103",
+      "display" : "Indicación/recomendación"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/hcen-paciente-gonzalez"
+  },
+  "patientInstruction" : "Hacer reposo durante las próximas 2 semanas"
+}

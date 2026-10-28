@@ -1,12 +1,12 @@
-# EntryUUID del conjunto de envío HCEN - Guía de Implementación FHIR de Uruguay v0.1.0
+# EntryUUID del conjunto de envío HCEN - Guía de Implementación FHIR de Uruguay v0.2.0
 
 ## Perfil del tipo de datos: EntryUUID del conjunto de envío HCEN 
 
-**Usages:**
+**Usos:**
 
-* Use this DataType Profile: [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
+* Utilizar este perfil de tipo de datos: [Conjunto de envío HCEN](StructureDefinition-hcen-submission-set.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-submission-set-identifier)
+También se pueden consultar [los usos en FHIR IG Statistics](https://packages2.fhir.org/xig/fhir.uy|current/StructureDefinition/hcen-submission-set-identifier)
 
 ### Vistas formales del contenido del perfil
 
@@ -14,47 +14,47 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 *  [Tabla de elementos clave](#tabs-key) 
 *  [Tabla diferencial](#tabs-diff) 
-*  [Tabla de instantáneas](#tabs-snap) 
+*  [Tabla snapshot](#tabs-snap) 
 *  [Estadísticas/Referencias](#tabs-summ) 
 *  [Todos](#tabs-all) 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
-
-Esta estructura se deriva de [EntryUUIDIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html) .
-
-#### Constraints
-
-#### Terminology Bindings
-
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [EntryUUIDIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html) .
 
-** Summary **
+#### Restricciones
+
+#### Bindings terminológicos
+
+#### Restricciones
+
+Esta estructura se deriva de [EntryUUIDIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html) .
+
+** Resumen **
 
  **Vista de elementos clave** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
  **Vista diferencial** 
 
 Esta estructura se deriva de [EntryUUIDIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html) .
 
-#### Constraints
+#### Restricciones
 
  **Vista instantáneaView** 
 
-#### Terminology Bindings
+#### Bindings terminológicos
 
-#### Constraints
+#### Restricciones
 
 Esta estructura se deriva de [EntryUUIDIdentifier](https://profiles.ihe.net/ITI/MHD/4.2.3/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html) .
 
-** Summary **
+** Resumen **
 
  
 
@@ -69,11 +69,11 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
   "resourceType" : "StructureDefinition",
   "id" : "hcen-submission-set-identifier",
   "url" : "http://fhir.hcen.gub.uy/StructureDefinition/hcen-submission-set-identifier",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "HCENSubmissionSetIdentifier",
   "title" : "EntryUUID del conjunto de envío HCEN",
   "status" : "draft",
-  "date" : "2026-10-06T01:23:13-03:00",
+  "date" : "2026-10-28T18:02:56-03:00",
   "publisher" : "AGESIC",
   "contact" : [{
     "name" : "AGESIC",
@@ -109,7 +109,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
       "id" : "Identifier",
       "path" : "Identifier",
       "short" : "EntryUUID del conjunto HCEN",
-      "definition" : "Identificador técnico del SubmissionSet, derivado del OID [oid_documento_clinico] de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]. No existe primer documento obligatorio, documento principal ni orden relevante."
+      "definition" : "Identificador técnico del SubmissionSet, derivado del OID de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]."
     },
     {
       "id" : "Identifier.use",
@@ -127,7 +127,7 @@ Otras representaciones de perfil: [CSV](../StructureDefinition-hcen-submission-s
       "id" : "Identifier.value",
       "path" : "Identifier.value",
       "short" : "URI urn:uuid:2.[oid_documento_clinico]",
-      "definition" : "EntryUUID del SubmissionSet formado anteponiendo urn:uuid:2. al OID [oid_documento_clinico] de cualquiera de sus documentos miembros, sin selección clínica especial ni orden obligatorio.",
+      "definition" : "EntryUUID del SubmissionSet formado anteponiendo urn:uuid:2. al OID del documento clínico de cualquiera de sus documentos miembros, sin selección clínica especial ni orden obligatorio.",
       "constraint" : [{
         "key" : "hcen-submission-set-entryuuid",
         "severity" : "error",

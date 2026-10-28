@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="hcen-servicio-req-seguimiento"/>
+  <meta>
+    <profile value="http://fhir.hcen.gub.uy/StructureDefinition/hcen-service-request"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="390906007"/>
+      <display value="Follow-up encounter"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/hcen-paciente-gonzalez"/>
+  </subject>
+  <occurrencePeriod>
+    <start value="2019-09-02"/>
+  </occurrencePeriod>
+  <patientInstruction value="Revisión a los 10 días. Referencia al alta: consulta de atención primaria."/>
+</ServiceRequest>
