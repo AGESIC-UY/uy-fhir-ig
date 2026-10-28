@@ -1,6 +1,6 @@
 {
   "name": "fhir.uy.template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "Template local para la guía HCEN de Uruguay",

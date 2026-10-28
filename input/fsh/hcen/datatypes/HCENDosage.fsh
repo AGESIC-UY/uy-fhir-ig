@@ -71,17 +71,17 @@ Description: "Pauta de dosificación reutilizable para las prescripciones y admi
 * doseAndRate.dose[x] ^short = "Cantidad de medicamento por dosis"
 * doseAndRate.dose[x] ^definition = "Cantidad de medicamento que se administra en cada dosis."
 * doseAndRate.doseRange ^short = "Rango de cantidad por dosis"
-* doseAndRate.doseRange ^definition = "Se utiliza cuando la cantidad por administración no es un valor único, sino un rango."
+* doseAndRate.doseRange ^definition = "Se utiliza cuando la cantidad por administración no es un valor único, sino que puede variar dentro de un rango. Ejemplo: Tomar entre 5 y 10 mL por dosis, según necesidad."
 * doseAndRate.doseQuantity ^short = "Cantidad exacta por dosis"
-* doseAndRate.doseQuantity ^definition = "Se utiliza para indicar una cantidad exacta de medicamento por dosis."
+* doseAndRate.doseQuantity ^definition = "Se utiliza para indicar una cantidad exacta de medicamento que debe administrarse en cada dosis. Ejemplo: Administrar 500 mg por dosis."
 * doseAndRate.rate[x] ^short = "Velocidad de administración"
 * doseAndRate.rate[x] ^definition = "Permite indicar la velocidad a la que debe administrarse el medicamento."
 * doseAndRate.rateRatio ^short = "Velocidad de administración como relación"
 * doseAndRate.rateRatio ^definition = "Permite indicar la velocidad de administración mediante una relación (p.ej. 500 mL cada 4 horas)."
 * doseAndRate.rateRange ^short = "Rango de velocidad de administración"
-* doseAndRate.rateRange ^definition = "Se utiliza cuando la velocidad de administración puede variar entre un mínimo y un máximo."
+* doseAndRate.rateRange ^definition = "Se utiliza cuando la velocidad de administración puede variar entre un valor mínimo y uno máximo, en lugar de tener una velocidad única. Ejemplo: Administrar por infusión intravenosa a una velocidad de entre 50 y 100 mL/h."
 * doseAndRate.rateQuantity ^short = "Velocidad de administración exacta"
-* doseAndRate.rateQuantity ^definition = "Permite indicar una velocidad específica de administración."
+* doseAndRate.rateQuantity ^definition = "Permite indicar una velocidad específica de administración del medicamento, expresada como una cantidad por unidad de tiempo. Ejemplo: administrar por infusión intravenosa a una velocidad de 100 mL/h."
 
 // ──────────────────────────────────────────
 // site — sitio anatómico de administración

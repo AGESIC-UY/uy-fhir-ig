@@ -146,6 +146,8 @@ GOTO endscript
 
 :debugjekyll
     echo Running Jekyll build...
+    node scripts\prepare-presentation-localization.mjs
+    IF ERRORLEVEL 1 GOTO endscript
     jekyll build -s temp/pages -d output
     CALL :generate_search_index
 GOTO endscript

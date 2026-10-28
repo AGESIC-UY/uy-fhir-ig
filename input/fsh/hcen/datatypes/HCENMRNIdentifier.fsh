@@ -8,3 +8,4 @@ Description: "Identificador local del paciente dentro de un dominio de asignaci�
 * system ^definition = "OID de la Assigning Authority (AA) que genera el identificador local del paciente, con formato urn:oid:2.16.858.2.[IdInstitución].72768.[ConsecutivoInterno]. Su autorización se verifica por separado."
 * . ^short = "Identificador local del paciente para HCEN"
 * . ^definition = "MRN dentro de un dominio de la institución emisora. Conserva el tipo MR del Core."
+* assigner only Reference(HCENOrganization)

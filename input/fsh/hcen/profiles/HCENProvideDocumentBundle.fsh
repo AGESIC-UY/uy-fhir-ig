@@ -4,7 +4,7 @@ Profile: HCENProvideDocumentBundle
 Parent: Bundle
 Id: hcen-provide-document-bundle
 Title: "Envío para publicación documental HCEN"
-Description: "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. La semántica de persistencia de sus entradas debe cerrarse antes de uso operativo."
+Description: "Bundle de publicación basado en MHD UnContained Comprehensive Provide Document Bundle, adaptado al contrato HCEN con metadatos, documento FHIR y recursos de contexto. Plataforma procesa y valida el envío como fachada FHIR y registra metadatos en XDS, sin persistir recursos FHIR."
 * type = #transaction
 * entry 4..*
 * entry.fullUrl 1..1
@@ -43,8 +43,8 @@ Description: "Bundle de publicación basado en MHD UnContained Comprehensive Pro
 * entry ^definition = "Un SubmissionSet, uno o más DocumentReference y Bundles documentales, y los recursos de contexto referenciados. Binary CDA SHOULD NOT incluirse; su presencia no invalida el envío y, si se recibe, puede ignorarse."
 * entry.fullUrl ^short = "Identidad de la entrada dentro del envío"
 * entry.fullUrl ^definition = "URI única que permite resolver las referencias del envío sin descargar recursos individuales de sistemas externos."
-* entry.request ^short = "Acción propuesta para procesar la entrada"
-* entry.request ^definition = "Representación preliminar de alta con POST. El contrato de publicación debe resolver la persistencia de las representaciones documentales."
+* entry.request ^short = "Acción transaccional para procesar la entrada"
+* entry.request ^definition = "Entrada POST del intercambio transaccional. Plataforma registra los metadatos en XDS sin crear un recurso FHIR persistente; los documentos permanecen en el prestador."
 * . ^short = "Bundle de publicación documental HCEN"
 * . ^definition = "Bundle de intercambio que transporta el documento FHIR, sus metadatos y contexto; no es el documento clínico."
 

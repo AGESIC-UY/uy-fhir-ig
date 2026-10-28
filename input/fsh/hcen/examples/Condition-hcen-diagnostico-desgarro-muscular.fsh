@@ -1,0 +1,22 @@
+Instance: example-hcen-diagnostico-desgarro-muscular
+InstanceOf: Condition
+Usage: #example
+* id = "hcen-diagnostico-desgarro-muscular"
+* meta.profile[0] = "http://fhir.hcen.gub.uy/StructureDefinition/hcen-diagnostico"
+* language = #"es-UY"
+* text.status = #"generated"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\" xml:lang=\"es-UY\"><p>Desgarro muscular. Fecha de inicio: 22/08/2016. Estado: problema no resuelto. Grado de certeza: confirmado.</p></div>"
+* subject.reference = "Patient/hcen-paciente-gonzalez"
+* code.coding[0].system = "http://snomed.info/sct"
+* code.coding[0].code = #"262966007"
+* code.coding[0].display = "Desgarro muscular"
+* onsetPeriod.start = "2016-08-22"
+* category[0].coding[0].code = #"439401001"
+* category[0].coding[0].system = "http://snomed.info/sct"
+* category[0].coding[0].display = "Diagnostico"
+* clinicalStatus.coding[0].code = #"active"
+* clinicalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding[0].display = "Active"
+* verificationStatus.coding[0].code = #"confirmed"
+* verificationStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding[0].display = "Confirmed"

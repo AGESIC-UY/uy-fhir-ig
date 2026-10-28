@@ -158,6 +158,7 @@ function build_continuous() {
 
 function jekyll_build() {
   echo "Running Jekyll build..."
+  node scripts/prepare-presentation-localization.mjs || return 1
   jekyll build -s temp/pages -d output
   generate_search_index
 }

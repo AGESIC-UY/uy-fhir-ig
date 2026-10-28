@@ -8,6 +8,11 @@ Description: "La AA debe tener el formato urn:oid:2.16.858.2.[IdInstitución].72
 Expression: "matches('^urn:oid:2[.]16[.]858[.]2[.](0|[1-9][0-9]*)[.]72768[.](0|[1-9][0-9]*)$')"
 Severity: #error
 
+Invariant: hcen-org-oid
+Description: "El value debe ser una URI OID descendiente de las ramas de organizaciones UNAOID 2.16.858.0.0 (Estado), 2.16.858.0.1 (personas públicas no estatales) o 2.16.858.0.2 (empresas y organizaciones privadas). El formato no acredita asignación ni autorización del OID."
+Expression: "matches('^urn:oid:2[.]16[.]858[.]0[.][012]([.](0|[1-9][0-9]*))+$')"
+Severity: #error
+
 Invariant: hcen-document-oid
 Description: "El identificador documental sigue la estructura OID HCEN, con prestador, fecha local de 14 dígitos y arcos adicionales."
 Expression: "matches('^urn:oid:2[.]16[.]858[.]2[.](0|[1-9][0-9]*)[.]67430[.][1-9][0-9]{13}([.](0|[1-9][0-9]*))+$')"
@@ -39,8 +44,8 @@ Expression: "entry.resource.ofType(DocumentReference).all(status = 'current')"
 Severity: #error
 
 Invariant: hcen-publication-fhir-links
-Description: "Cada DocumentReference se vincula por attachment.url a un único Bundle documental del envío, y cada Bundle documental tiene un único DocumentReference: no hay destinos compartidos ni Bundles huérfanos."
-Expression: "entry.resource.ofType(DocumentReference).all(content.attachment.url.count() = 1) and entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).isDistinct() and entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).subsetOf(%context.entry.where(resource is Bundle).fullUrl.select(toString())) and entry.where(resource is Bundle).fullUrl.select(toString()).subsetOf(%context.entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()))"
+Description: "La correspondencia documental es uno a uno: identificadores completos y distintos en ambos lados y la misma cantidad de DocumentReference y Bundles documentales. Las URL originales FHIR son distintas dentro del envío por comparación exacta. Se complementa con hcen-publication-document-identifier."
+Expression: "entry.resource.ofType(DocumentReference).content.attachment.url.select(toString()).isDistinct() and entry.resource.ofType(DocumentReference).all(masterIdentifier.system.exists() and masterIdentifier.value.exists()) and entry.resource.ofType(Bundle).where(type = 'document').all(identifier.system.exists() and identifier.value.exists()) and entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).isDistinct() and entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString())).isDistinct() and entry.resource.ofType(DocumentReference).count() = entry.resource.ofType(Bundle).where(type = 'document').count()"
 Severity: #error
 
 Invariant: hcen-publication-members
@@ -84,8 +89,8 @@ Expression: "identifier.system.select(toString()) = entry.resource.ofType(Compos
 Severity: #error
 
 Invariant: hcen-publication-document-identifier
-Description: "El masterIdentifier de cada DocumentReference coincide en system y value con el identifier del Bundle documental vinculado mediante attachment.url."
-Expression: "entry.resource.ofType(DocumentReference).select((content.attachment.url.toString().length().toString() & ':' & content.attachment.url.toString()) & (masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).subsetOf(%context.entry.where(resource is Bundle).select((fullUrl.toString().length().toString() & ':' & fullUrl.toString()) & (resource.identifier.system.toString().length().toString() & ':' & resource.identifier.system.toString()) & (resource.identifier.value.toString().length().toString() & ':' & resource.identifier.value.toString())))"
+Description: "Los pares system y value de masterIdentifier y Bundle.identifier coinciden en ambos sentidos. Junto con la unicidad y cardinalidad de hcen-publication-fhir-links impide asociaciones ambiguas y documentos huérfanos, independientemente de las URL."
+Expression: "entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())).subsetOf(%context.entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString()))) and entry.resource.ofType(Bundle).where(type = 'document').select((identifier.system.toString().length().toString() & ':' & identifier.system.toString()) & (identifier.value.toString().length().toString() & ':' & identifier.value.toString())).subsetOf(%context.entry.resource.ofType(DocumentReference).select((masterIdentifier.system.toString().length().toString() & ':' & masterIdentifier.system.toString()) & (masterIdentifier.value.toString().length().toString() & ':' & masterIdentifier.value.toString())))"
 Severity: #error
 
 Invariant: hcen-document-reference-entryuuid-d
@@ -97,3 +102,10 @@ Invariant: hcen-publication-submission-entryuuid-member
 Description: "El entryUUID 2.[oid_documento_clinico] del SubmissionSet corresponde al [oid_documento_clinico] de cualquiera de sus DocumentReference miembros efectivos, sin seleccionar primer miembro ni comparar S."
 Expression: "entry.resource.ofType(List).identifier.where(use = 'official' and system = 'urn:ietf:rfc:3986' and value.startsWith('urn:uuid:')).value.select('urn:oid:' & substring(11)).subsetOf(%context.entry.where(resource is DocumentReference and fullUrl.select(toString()).subsetOf(%context.entry.resource.ofType(List).entry.item.reference.select(toString()))).resource.ofType(DocumentReference).masterIdentifier.value.select(toString()))"
 Severity: #error
+
+// PoC HCEN: restricción suspendida temporalmente para permitir referencias urn:uuid:.
+// Conservar para su posible reactivación. Ver docs/hcen-especificacion.md, sección PoC.
+// Invariant: hcen-document-retrieval-url
+// Description: "La ubicación recuperable de la representación documental debe ser una URL HTTP(S) absoluta con autoridad, sin espacios ni credenciales. No es un fullUrl interno del envío."
+// Expression: "matches('^https?://[^/?#@\\\\s]+([/?#][^\\\\s]*)?$')"
+// Severity: #error

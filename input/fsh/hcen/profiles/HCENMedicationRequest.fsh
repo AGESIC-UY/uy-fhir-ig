@@ -113,11 +113,13 @@ Description: "Prescripción de medicación registrada en la Hoja de Consulta No 
 * medication[x] 1..1
 * medication[x] only CodeableConcept
 * medication[x] obeys hcen-coding-required-1
-* medication[x] ^short = "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología)"
-* medication[x] ^definition = "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología)"
+* medication[x] ^short = "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
+* medication[x] ^definition = "Código que identifica el medicamento prescripto (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
 * medication[x].coding ^slicing.discriminator.type = #value
 * medication[x].coding ^slicing.discriminator.path = "system"
 * medication[x].coding ^slicing.rules = #open
+* medication[x].coding ^short = "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)"
+* medication[x].coding ^definition = "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
 * medication[x].coding contains
     snomed 0..1
 

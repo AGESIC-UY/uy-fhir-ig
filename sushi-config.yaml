@@ -3,7 +3,7 @@ canonical: http://fhir.hcen.gub.uy
 name: UruguayFHIRImplementationGuide
 title: Guía de Implementación FHIR de Uruguay
 description: Base nacional Core y especificaciones de interoperabilidad con HCEN.
-# Identificador del paquete para la versión 0.1.0.
+# Identificador del paquete de la guía.
 packageId: fhir.uy
 language: es
 # Idioma de publicacion de la plantilla; language identifica el contenido.
@@ -11,10 +11,10 @@ parameters:
   i18n-default-lang: es
   toggle-changes: false
 status: draft
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: Versión inicial
+releaseLabel: Borrador para pruebas de implementación
 publisher:
   name: AGESIC
   url: https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/salud-digital
@@ -54,7 +54,7 @@ menu:
     Extensiones: hcen-extensiones.html
     Terminología: hcen-terminologia.html
     Conformidad y capacidades: hcen-conformidad.html
-    # Ejemplos de intercambio: hcen-ejemplos.html
+    Ejemplos de intercambio: hcen-ejemplos.html
   Recursos:
     Índice de artefactos: artifacts.html
     Glosario: hcen-glosario.html
@@ -93,13 +93,13 @@ pages:
     hcen-transacciones.md:
       title: Transacciones
       hcen-iti-104.md:
-        title: Registrar o actualizar pacientes
+        title: Registrar o actualizar pacientes — HCEN ITI-104
       hcen-iti-65.md:
-        title: Publicar documentos
+        title: Publicar documentos — HCEN ITI-65
       hcen-iti-67.md:
-        title: Consultar metadatos
+        title: Consultar metadatos — HCEN ITI-67
       hcen-iti-68.md:
-        title: Recuperar documentos
+        title: Recuperar documentos — HCEN ITI-68
     hcen-perfiles.md:
       title: Perfiles HCEN
       hcen-identificadores.md:

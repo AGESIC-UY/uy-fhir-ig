@@ -127,12 +127,19 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 
 // ──────────────────────────────────────────
 // encounter — información contextual del evento CNU
+// Subido a 1..1 (antes solo MS, cardinalidad base 0..1 sin cambios): MS no
+// obliga presencia, y la hora de firma del profesional (HCENEncounter.
+// participant.period.start, mapeada a ClinicalDocument/author/time) no tiene
+// ninguna otra ubicación posible en esta guía — Composition.attester y
+// Composition.event, las otras dos ubicaciones estándar de FHIR para datos
+// de este tipo, están en 0..0 en este mismo perfil. Sin encounter, ese dato
+// obligatorio en CDA se pierde sin posibilidad de registrarlo.
 // ──────────────────────────────────────────
 
-* encounter MS
+* encounter 1..1
 * encounter only Reference(HCENEncounter)
-* encounter ^short = "Información contextual del evento CNU"
-* encounter ^definition = "Información contextual del evento CNU"
+* encounter ^short = "Información contextual del evento CNU — obligatorio porque es la única vía para la hora de firma del profesional"
+* encounter ^definition = "Información contextual del evento CNU. Obligatorio: es la única ubicación disponible en esta guía para la hora de firma del profesional (ver HCENEncounter.participant.period.start)."
 
 // ──────────────────────────────────────────
 // date
@@ -178,7 +185,7 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 // (2 obligatorias: motivos de consulta y diagnósticos; 6 opcionales)
 // ──────────────────────────────────────────
 
-* section 2..8
+* section 2..*
 * section ^short = "Secciones que componen el documento de CNU"
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
@@ -204,10 +211,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[motivosConsulta] ^short = "Sección Motivo de consulta"
 * section[motivosConsulta].author 0..0
 * section[motivosConsulta].focus 0..0
-* section[motivosConsulta].text MS
-* section[motivosConsulta].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[motivosConsulta].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[motivosConsulta].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[motivosConsulta].mode 0..0
 * section[motivosConsulta].orderedBy 0..0
 * section[motivosConsulta].entry 1..*
@@ -226,10 +229,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[diagnosticos] ^short = "Sección Diagnóstico"
 * section[diagnosticos].author 0..0
 * section[diagnosticos].focus 0..0
-* section[diagnosticos].text MS
-* section[diagnosticos].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[diagnosticos].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[diagnosticos].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[diagnosticos].mode 0..0
 * section[diagnosticos].orderedBy 0..0
 * section[diagnosticos].entry 1..*
@@ -248,10 +247,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[procedimientos] ^short = "Sección Procedimientos relevantes realizados"
 * section[procedimientos].author 0..0
 * section[procedimientos].focus 0..0
-* section[procedimientos].text MS
-* section[procedimientos].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[procedimientos].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[procedimientos].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[procedimientos].mode 0..0
 * section[procedimientos].orderedBy 0..0
 * section[procedimientos].entry 1..*
@@ -270,10 +265,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[tratamientoNoFarmacologicoRealizado] ^short = "Sección Tratamiento no farmacológico realizado durante la asistencia"
 * section[tratamientoNoFarmacologicoRealizado].author 0..0
 * section[tratamientoNoFarmacologicoRealizado].focus 0..0
-* section[tratamientoNoFarmacologicoRealizado].text MS
-* section[tratamientoNoFarmacologicoRealizado].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[tratamientoNoFarmacologicoRealizado].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[tratamientoNoFarmacologicoRealizado].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[tratamientoNoFarmacologicoRealizado].mode 0..0
 * section[tratamientoNoFarmacologicoRealizado].orderedBy 0..0
 * section[tratamientoNoFarmacologicoRealizado].entry 1..*
@@ -292,10 +283,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[tratamientoFarmacologicoRealizado] ^short = "Sección Tratamiento farmacológico realizado durante la asistencia"
 * section[tratamientoFarmacologicoRealizado].author 0..0
 * section[tratamientoFarmacologicoRealizado].focus 0..0
-* section[tratamientoFarmacologicoRealizado].text MS
-* section[tratamientoFarmacologicoRealizado].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[tratamientoFarmacologicoRealizado].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[tratamientoFarmacologicoRealizado].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[tratamientoFarmacologicoRealizado].mode 0..0
 * section[tratamientoFarmacologicoRealizado].orderedBy 0..0
 * section[tratamientoFarmacologicoRealizado].entry 1..*
@@ -314,10 +301,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[tratamientoNoFarmacologicoFinal] ^short = "Sección Tratamiento no farmacológico indicado al final de la asistencia"
 * section[tratamientoNoFarmacologicoFinal].author 0..0
 * section[tratamientoNoFarmacologicoFinal].focus 0..0
-* section[tratamientoNoFarmacologicoFinal].text MS
-* section[tratamientoNoFarmacologicoFinal].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[tratamientoNoFarmacologicoFinal].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[tratamientoNoFarmacologicoFinal].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[tratamientoNoFarmacologicoFinal].mode 0..0
 * section[tratamientoNoFarmacologicoFinal].orderedBy 0..0
 * section[tratamientoNoFarmacologicoFinal].entry 1..*
@@ -336,10 +319,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[tratamientoFarmacologicoFinal] ^short = "Sección Tratamiento farmacológico indicado al final de la asistencia"
 * section[tratamientoFarmacologicoFinal].author 0..0
 * section[tratamientoFarmacologicoFinal].focus 0..0
-* section[tratamientoFarmacologicoFinal].text MS
-* section[tratamientoFarmacologicoFinal].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[tratamientoFarmacologicoFinal].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[tratamientoFarmacologicoFinal].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[tratamientoFarmacologicoFinal].mode 0..0
 * section[tratamientoFarmacologicoFinal].orderedBy 0..0
 * section[tratamientoFarmacologicoFinal].entry 1..*
@@ -358,10 +337,6 @@ Description: "Hoja de Consulta No Urgente (CNU) - Documento clínico que represe
 * section[instruccionesSeguimiento] ^short = "Sección Instrucciones de seguimiento"
 * section[instruccionesSeguimiento].author 0..0
 * section[instruccionesSeguimiento].focus 0..0
-* section[instruccionesSeguimiento].text MS
-* section[instruccionesSeguimiento].text ^short = "Contenido narrativo de la sección para interpretación humana"
-* section[instruccionesSeguimiento].text ^definition = "Contenido narrativo de la sección para interpretación humana, sin restricciones específicas respecto a su contenido, idioma o trazabilidad con los elementos de datos estructurados."
-* section[instruccionesSeguimiento].text ^comment = "This profile does not constrain the narrative in regard to content, language, or traceability to data elements."
 * section[instruccionesSeguimiento].mode 0..0
 * section[instruccionesSeguimiento].orderedBy 0..0
 * section[instruccionesSeguimiento].entry 1..*

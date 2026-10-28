@@ -1,94 +1,87 @@
-Esta transacción publica los metadatos que permiten descubrir y recuperar uno o más documentos clínicos de un prestador. Utiliza MHD como interfaz FHIR y preserva determinadas convenciones de identificación y metadatos del ecosistema HCEN/XDS. Toma MHD ITI-65 como referencia de diseño, sin declarar conformidad integral con sus capacidades, y utiliza [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html) como Bundle de publicación.
+Esta transacción publica los metadatos que permiten descubrir y recuperar documentos clínicos. El prestador envía un [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html) y conserva las representaciones FHIR y CDA en su repositorio.
 
-### Actores y secuencia
+Plataforma valida el envío y registra los metadatos según el [modelo de intercambio HCEN](hcen.html). El prestador conserva los documentos para su recuperación posterior.
 
-1. El prestador prepara y conserva las representaciones FHIR y CDA.
-2. Completa DocumentReference y agrupa los documentos en un SubmissionSet.
-3. Incluye el contexto necesario para procesar la publicación y remite el Bundle de publicación a Plataforma.
-4. Plataforma verifica metadatos, identificadores y concordancia entre representaciones.
-5. El prestador procesa la aceptación o el error según el contrato que se cierre para publicación.
+### Actores y precondiciones
 
-<figure style="margin:0 0 1em;">
-  <img src="hcen-cu-publicar-documentos.svg"
-       alt="El prestador conserva el documento en FHIR y CDA en su repositorio y envía el Bundle de publicación a Plataforma, que verifica el envío, registra los metadatos y devuelve la aceptación o un error."
-       style="width:100%;max-width:760px;height:auto;"/>
-  <figcaption>Publicación de documentos: el contenido permanece en el repositorio del prestador.</figcaption>
+El prestador conserva las representaciones del documento y envía sus recursos de publicación. Plataforma recibe el envío, valida los recursos FHIR y registra los metadatos.
+
+El paciente debería (SHOULD) registrarse previamente mediante [HCEN ITI-104](hcen-iti-104.html). Este registro previo no es obligatorio: la publicación permite crear al paciente cuando todavía no existe.
+
+<figure>
+  <img src="hcen-cu-publicar-documentos.svg" alt="El prestador conserva FHIR y CDA y envía los recursos FHIR de publicación. Plataforma valida el envío y registra los metadatos o devuelve un error." style="width:100%;max-width:760px;height:auto;"/>
+  <figcaption>El prestador conserva los documentos. Plataforma valida el envío FHIR y registra sus metadatos.</figcaption>
 </figure>
 
-El paciente debería (SHOULD) registrarse previamente mediante [Registrar o actualizar pacientes](hcen-iti-104.html). El respaldo de registro de pacientes de Plataforma no habilita a omitir el MRN ni sustituye la recomendación de registro previo.
-
-<a id="representaciones"></a>
-### Representaciones y metadatos
-
-**HCEN-PUB-001 / HCEN-DOC-001.** El prestador debe (SHALL) conservar ambas representaciones: un Bundle documental FHIR, cuya primera entrada sea Composition, y un CDA recuperable mediante [HCENCdaBinary](StructureDefinition-hcen-cda-binary.html). El Bundle documental debe (SHALL) incluirse en el envío. Binary CDA no debería (SHOULD NOT) enviarse en HCENProvideDocumentBundle. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío; la referencia al CDA en los metadatos permanece obligatoria según el perfil. Se admiten CDA de nivel 1 o 3; un PDF debe (SHALL) estar embebido en CDA nivel 1.
-
-**HCEN-DOC-002.** `DocumentReference.content.attachment.url` identifica la representación FHIR. La extensión `binary` de ese Attachment referencia el Binary con CDA. `contentType`, `size`, `hash` y `format` describen la representación FHIR; no describen el CDA. La estructura y los [tres ejes de clasificación](hcen-terminologia.html) están definidos en [HCENDocumentReference](StructureDefinition-hcen-document-reference.html).
-
-La guía XDS describe metadatos del documento CDA. En este intercambio, los campos del Attachment describen los bytes de la representación FHIR indicada en `url`. En particular, FHIR R4 define `Attachment.hash` como SHA-1 codificado en base64; el SHA-512 del CDA indicado por la guía XDS no se informa en ese campo. `attachment.creation` representa la creación documental y `date`, la indexación; no son la misma fecha por definición.
-
-**HCEN-PUB-002.** El envío debe (SHALL) aportar los metadatos, el Bundle documental FHIR y las entradas necesarias para resolver los paths explícitos del contrato de metadatos indicados a continuación. Plataforma no debe completar ese contexto consultando recursos individuales externos. Esta regla no se extiende a toda Reference del Bundle de publicación. El documento FHIR debe ser autocontenido respecto de sus referencias clínicas, independientemente del Bundle de publicación que lo transporta.
-
-| Entrada del Bundle de publicación | Cardinalidad | Recurso |
-| --- | --- | --- |
-| submissionSet | 1..1 | HCENSubmissionSet |
-| documentReference | 1..* | HCENDocumentReference |
-| documentBundle | 1..* | Bundle documental FHIR |
-| Binary (entrada abierta, sin slice específico) | 0..* | Binary CDA SHOULD NOT enviarse; si llega, se tolera y puede ignorarse |
-| patient, practitioner, practitionerRole, organization | 0..* por tipo | Perfiles HCEN del contexto |
-| Otros recursos de contexto necesarios | Según las referencias presentes | Recursos FHIR del intercambio |
-
-Cada DocumentReference de publicación enlaza un único Bundle documental FHIR y cada Bundle documental del envío tiene un único DocumentReference: no hay Bundles documentales huérfanos. El identificador [oid_documento_clinico] coincide entre ambos y la Composition raíz. La referencia al CDA permanece según el perfil. Binary CDA no debería (SHOULD NOT) enviarse. Si llega, se tolera y puede ignorarse, sin obligación de correspondencia Binary ↔ metadatos ni cardinalidad 0..0. El SubmissionSet enumera todos y solo los DocumentReference miembros del envío, cada uno una sola vez; el orden no tiene significado. Los recursos de contexto se incluyen según las referencias presentes: no se exige un ejemplar de cada tipo cuando el envío no lo utiliza. Las referencias de metadatos controladas por `hcen-publication-context` deben resolverse a entradas del envío; los recursos contenidos no sustituyen esas entradas. Dentro de cada documento FHIR se admiten referencias a recursos contenidos cuando la estructura FHIR lo permita.
-
-<a id="referencias-locales"></a>
-### Referencias locales del contrato de metadatos
-
-La política de resolución a entradas del Bundle de publicación se aplica a estos paths explícitos:
-
-| Recurso | Paths |
-| --- | --- |
-| DocumentReference | `subject`, `author`, `authenticator`, `custodian`, extensiones `funder` y `byOrderOf`, `context.sourcePatientInfo` |
-| SubmissionSet | `subject`, `source`, `entry.item` (DocumentReference miembros) |
-| PractitionerRole utilizado en autoría, autenticación o source | `practitioner`, `organization` |
-
-Los recursos contenidos no sustituyen esas entradas. La regla no obliga a resolver localmente `Identifier.assigner`, endpoints, `Organization.partOf`, `context.encounter`, `intendedRecipient` ni otras referencias administrativas o clínicas fuera de esta lista. Cada Bundle documental conserva su propia regla de autocontención clínica. Las referencias históricas `relatesTo` tienen el tratamiento específico indicado más abajo.
-
-**HCEN-PUB-005.** `DocumentReference.author` debe (SHALL) incluir al menos un HCENPractitionerRole y `SubmissionSet.source` debe (SHALL) referenciar un HCENPractitionerRole. Cada rol de autoría, su Practitioner y su Organization deben (SHALL) estar incluidos como entradas del envío. Las referencias directas adicionales a Practitioner u Organization en `author` se admiten y se ignoran al determinar la autoría. Los recursos adicionales del Bundle tampoco sustituyen el `source` obligatorio del conjunto.
-
-**HCEN-PUB-006.** DocumentReference y SubmissionSet deben (SHALL) informar su comunidad de origen mediante `homeCommunityId`. El período clínico de DocumentReference debe (SHALL) incluir inicio y fin del servicio en `context.period.start` y `context.period.end`.
-
-**HCEN-PUB-007.** Una referencia histórica `relatesTo.target` debe (SHALL) identificar un DocumentReference existente en HCEN mediante `DocumentReference/{id}` o una URL HTTP(S) absoluta equivalente. El `id` es el identificador lógico del recurso, no el OID documental. No se admite sustituir la referencia por `Reference.identifier`. Plataforma debe (SHALL) verificar la existencia y pertenencia del recurso a HCEN al procesar el envío; comprobar la forma de la URL no demuestra esa existencia. El documento anterior puede quedar fuera del Bundle.
-
-El procesamiento de reemplazos no está soportado actualmente. Una relación `replaces` se ignora y no modifica el documento anterior; no constituye una solicitud operativa de reemplazo. Su referencia debe cumplir igualmente HCEN-PUB-007.
-
-### Identificación y concordancia
-
-**HCEN-ID-002 / HCEN-ID-004.** Los identificadores y sus ubicaciones se especifican en [Identificadores documentales](hcen-identificadores.html). Un SubmissionSet debe (SHALL) incluir uno o más documentos y utiliza perfiles diferentes para su entryUUID técnico y su uniqueId documental.
-
-**HCEN-PUB-003.** Plataforma debe (SHALL) rechazar los errores de los recursos del intercambio distintos del documento clínico. Debe comprobar la concordancia mínima de paciente, identificador documental y versión entre FHIR, CDA y metadatos. No se exige una comparación clínica exhaustiva entre ambas representaciones. La política sobre errores internos del documento clínico permanece pendiente.
-
-**HCEN-PUB-004.** Plataforma no debe (SHALL NOT) registrar dos documentos con el mismo identificador. Un reenvío de un documento registrado debe (SHALL) producir un error; no se define como publicación idempotente. El prestador no debería (SHOULD NOT) eludir esta regla asignando otro identificador al mismo documento.
-
-### Solicitud y respuesta propuestas
+### Solicitud
 
 ```http
-POST [base-publicacion]
+POST [base-publicacion] HTTP/1.1
 Content-Type: application/fhir+json
 Accept: application/fhir+json
 
 { recurso HCENProvideDocumentBundle }
 ```
 
-El perfil conserva `type = transaction` y entradas POST como propuesta basada en [MHD 4.2.3](https://profiles.ihe.net/ITI/MHD/4.2.3/ITI-65.html). Se aparta del slicing cerrado de IHE para incorporar el contexto HCEN y las representaciones simultáneas; deriva de Bundle, no del perfil IHE.
+Se utiliza `Bundle.type = transaction` y las entradas POST del perfil. Las entradas POST representan acciones de publicación, sin crear recursos FHIR persistentes recuperables individualmente en Plataforma.
 
-Una transacción REST FHIR implica atomicidad y una respuesta `transaction-response` correlacionada con todas las entradas. Sin embargo, la decisión HCEN de no almacenar los documentos en Plataforma requiere precisar cómo se procesan los POST de Bundle y Binary y los recursos de contexto. **Esta versión no define una respuesta exitosa operativa ni afirma que esos recursos se creen de forma persistente.** No debe interpretarse el Bundle de publicación como contrato de un servidor FHIR genérico ya cerrado.
+El perfil [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html) define las entradas, las referencias de contexto y la correspondencia entre metadatos y documentos. El envío debe incluir todos los recursos FHIR necesarios para su validación.
 
-El ejemplo de duplicado (material de desarrollo reservado para una versión futura) usa `issue.code = duplicate` para describir el problema. El estado HTTP y la codificación local definitiva quedan pendientes.
+<a id="representaciones"></a>
+#### Representaciones y ubicaciones
+
+El prestador debe (SHALL) conservar ambas representaciones: un Bundle documental FHIR, cuya primera entrada sea Composition, y un CDA XML. El Bundle documental debe incluirse en el envío. La extensión `binary` referencia un [HCENCdaBinary](StructureDefinition-hcen-cda-binary.html). Se admiten CDA de nivel 1 o 3. Un PDF debe estar embebido en CDA nivel 1.
+
+El Binary CDA no debería (SHOULD NOT) enviarse a Plataforma. Si se incluye, su presencia no invalida por sí misma el envío y su contenido puede ignorarse. La referencia al CDA permanece obligatoria.
+
+El envío debe (SHALL) informar las ubicaciones HTTP(S) en el servidor del prestador para el Bundle FHIR y el Binary CDA, según [HCENDocumentReference](StructureDefinition-hcen-document-reference.html#representaciones). Esto es fundamental para que Plataforma sepa luego a dónde ir a buscar los recursos cuando otros prestadores los soliciten. Estas ubicaciones (urls) son distintas del `fullUrl` de las entradas y de la URL de recuperación devuelta por HCEN ITI-67.
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El Gateway guarda el contenido localmente para que pueda recuperarse durante la prueba. Por eso exige incluir el Binary CDA en HCEN ITI-65 y vincularlo desde los metadatos del documento.</p>
+  <p>En la variante PoC se utilizan referencias <code>urn:uuid:</code> a las entradas del envío para enlazar el Bundle documental y su Binary. La invariante que exigía HTTP(S) en esas ubicaciones está comentada temporalmente. Plataforma sigue necesitando las URL originales recuperables del prestador.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+<a id="referencias-locales"></a>
+Las [referencias de contexto](StructureDefinition-hcen-provide-document-bundle.html#referencias-locales) deben resolverse dentro del envío. Los recursos contenidos no sustituyen las entradas exigidas para ese contexto.
+
+### Reglas de procesamiento
+
+#### Identificación del paciente
+
+La coincidencia se determina por dominio MRN y valor MRN. Si el paciente no existe, Plataforma lo crea a partir del Patient incluido. Si existe, lo utiliza sin actualizarlo.
+
+#### Validación y atomicidad
+
+Plataforma valida contra la IG los recursos FHIR enviados, incluido el documento clínico. Un incumplimiento impide aceptar la publicación. No inspecciona el contenido CDA ni comprueba su equivalencia con FHIR. Conservar ambas representaciones del mismo documento y versión es responsabilidad del prestador. Durante la publicación no se consultan recursos adicionales al prestador. La recuperación se realiza en HCEN ITI-68.
+
+`DocumentReference.masterIdentifier` debe ser único respecto de los documentos ya registrados. Volver a enviar el mismo identificador produce un error, incluso si el envío es idéntico. No debe asignarse otro identificador al mismo documento para eludir este control.
+
+El envío se procesa de forma atómica: si falla, se rechaza completo. No deben quedar documentos publicados parcialmente ni un paciente creado por una publicación que falló.
+
+Esta transacción contempla la publicación de documentos nuevos. El procesamiento de reemplazos no forma parte del alcance de esta versión.
+
+### Respuesta
+
+<a id="contrato-respuesta"></a>
+
+La respuesta exitosa es un Bundle `transaction-response`, con una respuesta por entrada del Bundle recibido, en el mismo orden. El Bundle documental anidado cuenta como una entrada, sin desglosar sus recursos clínicos. No se devuelve un `Location` real de recursos FHIR persistentes en Plataforma.
+
+Cada entrada incluye `entry.response.status`, obligatorio en FHIR R4. Los valores concretos por entrada no se especifican en esta versión.
+
+<!-- HCEN-POC: inicio -->
+<div class="hcen-poc" style="border:2px solid #b42318;border-left-width:6px;background:#fff4f2;padding:1em;margin:1em 0;">
+  <p><strong>PoC — Diferencia con Plataforma</strong></p>
+  <p>El Gateway persiste recursos en HAPI y puede devolver ubicaciones reales locales en la respuesta. Esas ubicaciones pertenecen al simulador y no describen la respuesta de Plataforma.</p>
+</div>
+<!-- HCEN-POC: fin -->
+
+### Errores
 
 <a id="pendientes"></a>
-### Verificación y pendientes de cierre
 
-Las pruebas deben comprobar el listado del SubmissionSet, la resolución de los paths explícitos de metadatos y la autocontención de los documentos FHIR, la autoría mediante rol profesional, las referencias históricas, la ausencia de duplicados, la identidad del paciente y la concordancia de identificador y versión. Deben cubrir envíos sin Binary y envíos que lo incluyan, comprobando que se tolera y puede ignorarse, sin exigir correspondencia Binary ↔ metadatos.
+Los incumplimientos de los perfiles y las reglas de publicación, incluidos los identificadores documentales duplicados, provocan el rechazo completo del envío. No se conservan documentos ni pacientes creados por una publicación fallida.
 
-Antes del uso operativo deben cerrarse: persistencia y atomicidad, formato de respuesta, registro de respaldo del paciente, validación clínica y códigos HTTP de error. Si la publicación se implementa como operación específica y no como transacción REST, deberá ajustarse el perfil y definirse el contrato de esa operación; no basta con cambiar la URL.
-
-El ejemplo completo de Bundle de publicación queda reservado como material de desarrollo para una versión futura, pendiente de revisión y validación integral del Publisher.
+Esta versión no especifica el detalle de los códigos HTTP de error ni los valores de estado por entrada de la respuesta exitosa.

@@ -8,13 +8,15 @@
 
 Esta guía de implementación reúne las definiciones comunes para Uruguay y las reglas para intercambiar información con la Historia Clínica Electrónica Nacional (HCEN), sobre FHIR R4 (4.0.1).
 
-Su propósito es ayudar a identificar qué perfil corresponde a cada dato, cómo representarlo y qué requisitos adicionales se aplican cuando ese dato participa en un intercambio con HCEN. Está dirigida a quienes diseñan, desarrollan o evalúan sistemas de salud. No se necesita experiencia previa con FHIR para comenzar el recorrido.
+Su propósito es ayudar a identificar qué perfil corresponde a cada dato, cómo representarlo y qué requisitos adicionales se aplican cuando ese dato participa en un intercambio con HCEN.
+
+Está dirigida a quienes diseñan, desarrollan o evalúan sistemas de salud. No se necesita experiencia previa con FHIR para comenzar el recorrido.
 
 ### Una guía, dos bloques
 
 Al adaptar un recurso FHIR al contexto uruguayo surgen preguntas comunes a cualquier implementación:
 
-¿Cómo represento el segundo apellido de una persona? ¿Qué códigos utilizo para representar la ciudad en una dirección? ¿Cómo modifico un perfil para que acepte distintos identificadores?
+¿Cómo represento el segundo apellido de una persona? ¿Qué valor utilizo para representar la ciudad en una dirección? ¿Cómo modifico un perfil para que acepte distintos identificadores?
 
 El bloque **Core Uruguay** reúne las pautas para responder a cada una de estas preguntas independientemente del intercambio en el que se pretendan utilizar los datos.  Define perfiles, identificadores, tipos de datos, extensiones y terminología que pueden reutilizarse en diferentes implementaciones. Sus definiciones abordan necesidades comunes del contexto uruguayo y no dependen de un caso de uso específico.
 
@@ -38,6 +40,6 @@ El bloque **Guía HCEN** parte de esas definiciones y se concentra en un caso de
 
 ### Estado de la guía
 
-La versión **0.1.0** es un **borrador de desarrollo**. Incluye un Core inicial y una primera versión HCEN con las cuatro transacciones principales documentadas. Algunos contratos operativos de HCEN siguen pendientes de definición.
+La versión **0.2.0** es un **borrador de desarrollo**. Incluye un Core inicial y una primera versión HCEN con las cuatro transacciones principales documentadas. Algunos contratos operativos de HCEN siguen pendientes de definición.
 
 También están disponibles las [descargas](descargas.html) y el [historial de cambios](cambios.html).

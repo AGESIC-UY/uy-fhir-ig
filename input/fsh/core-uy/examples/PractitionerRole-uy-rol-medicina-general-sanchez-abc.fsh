@@ -1,0 +1,26 @@
+Instance: example-uy-rol-medicina-general-sanchez-abc
+InstanceOf: PractitionerRole
+Usage: #example
+* id = "uy-rol-medicina-general-sanchez-abc"
+* meta.profile[0] = "http://fhir.hcen.gub.uy/StructureDefinition/uy-practitioner-role"
+* language = #"es-UY"
+* text.status = #"generated"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"es-UY\" xml:lang=\"es-UY\"><p><b>Rol de Dr. Juan Pedro Sánchez Martínez en ABC</b></p><p>Rol: Médico general</p><p>Especialidad: medicina general</p><p>Fecha de inicio: 2018-03-01.</p><p>Teléfono móvil: +598 99 123 456. Correo electrónico: juan.sanchez@example.org</p></div>"
+* active = true
+* period.start = "2018-03-01"
+* practitioner.reference = "Practitioner/uy-profesional-sanchez"
+* practitioner.display = "Dr. Juan Pedro Sánchez Martínez"
+* organization.reference = "Organization/uy-organizacion-abc"
+* organization.display = "ABC"
+* code[0].coding[0].system = "http://snomed.info/sct"
+* code[0].coding[0].code = #"59058001"
+* code[0].coding[0].display = "médico general"
+* specialty[0].coding[0].system = "http://snomed.info/sct"
+* specialty[0].coding[0].code = #"394802001"
+* specialty[0].coding[0].display = "medicina general"
+* telecom[0].system = #"phone"
+* telecom[0].value = "+598 99 123 456"
+* telecom[0].use = #"work"
+* telecom[1].system = #"email"
+* telecom[1].value = "juan.sanchez@example.org"
+* telecom[1].use = #"work"

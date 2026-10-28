@@ -4,7 +4,7 @@ Los perfiles de tipos de datos del Core definen identificadores, nombres, direcc
 
 | Definición | Propósito |
 | --- | --- |
-| [Cédula de identidad](StructureDefinition-uy-ci-identifier.html) | Cédula de identidad uruguaya de una persona. |
+| [Documento nacional de identidad](StructureDefinition-uy-dni-identifier.html) | Identificación nacional de una persona, asociada al país que la emite. |
 | [Pasaporte](StructureDefinition-uy-ppn-identifier.html) | Número de pasaporte de una persona. |
 | [Identificador institucional de paciente (MRN)](StructureDefinition-uy-mrn-identifier.html) | Número interno de paciente en una institución (*Medical Record Number*). |
 | [Identificador de organización](StructureDefinition-uy-org-identifier.html) | Identificador oficial o local asignado a una organización. |

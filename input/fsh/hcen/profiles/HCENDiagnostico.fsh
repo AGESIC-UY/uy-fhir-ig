@@ -73,11 +73,13 @@ Description: "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), m
 
 * code 1..1
 * code obeys hcen-coding-required-1
-* code ^short = "Código que identifica el diagnóstico (SNOMED CT u otra terminología)"
-* code ^definition = "Código que identifica el diagnóstico (SNOMED CT u otra terminología)"
+* code ^short = "Código que identifica el diagnóstico (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
+* code ^definition = "Código que identifica el diagnóstico (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
+* code.coding ^short = "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)"
+* code.coding ^definition = "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
 * code.coding contains
     snomed 0..1
 
@@ -112,8 +114,6 @@ Description: "Diagnóstico registrado en la Hoja de Consulta No Urgente (CNU), m
 * onsetAge ^definition = "Edad aproximada del paciente cuando comenzó con el problema de salud."
 * onsetPeriod.start ^short = "Fecha de inicio del problema de salud"
 * onsetPeriod.start ^definition = "Indica la fecha de inicio del problema de salud."
-* onsetPeriod.end ^short = "Fecha de fin del problema de salud"
-* onsetPeriod.end ^definition = "Indica la fecha de fin del problema de salud."
 
 // ──────────────────────────────────────────
 // Mapeo CDA — columna "Mapeo CDA" de la hoja HCEN|UYDiagnostico
@@ -127,7 +127,10 @@ Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCE
 * category -> "section/entry/observation/code"
 * category.coding.system -> "section/entry/observation/code/@codeSystem"
 * category.coding.code -> "section/entry/observation/code/@code"
-* category.coding.display -> "section/entry/observation/code/@displayName"
+// category.coding.display no se mapea desde @displayName: ese atributo CDA es
+// de uso libre y no normativo (el Diccionario de plantillas solo sugiere un
+// valor por defecto), mientras que category.coding.display está fijado por
+// este perfil. @code/@codeSystem sí identifican la entrada CDA equivalente.
 * code.coding[snomed] -> "section/entry/observation[code/@code='439401001']/value"
 * code.coding[snomed].system -> "section/entry/observation/value/@codeSystem"
 * code.coding[snomed].code -> "section/entry/observation/value/@code"
@@ -135,4 +138,3 @@ Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCE
 * subject -> "ClinicalDocument/recordTarget/patientRole/id"
 * onset[x] -> "section/entry/observation/effectiveTime"
 * onsetPeriod.start -> "section/entry/observation/effectiveTime/low/@value"
-* onsetPeriod.end -> "section/entry/observation/effectiveTime/high/@value"

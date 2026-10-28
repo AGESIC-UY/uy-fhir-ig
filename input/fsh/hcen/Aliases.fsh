@@ -1,3 +1,4 @@
+Alias: $oidCI              = urn:oid:2.16.858.2.10000675.68909
 Alias: $MHDentryUUIDIdentifier = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.EntryUUID.Identifier
 Alias: $MHDlistTypes = https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes
 Alias: $MHDuniqueIdIdentifier = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UniqueIdIdentifier

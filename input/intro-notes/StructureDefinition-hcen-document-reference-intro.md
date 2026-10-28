@@ -4,7 +4,20 @@
 
 `identifier[uniqueId]` permite repetir el identificador de `masterIdentifier` en la colección de identificadores. Ambas ubicaciones representan el mismo documento: la primera corresponde al identificador documental principal del modelo MHD y la segunda permite expresarlo también en la colección `identifier`. La repetición es opcional; cuando se informa, `system` y `value` deben coincidir.
 
-`attachment.url` refiere al documento FHIR y la extensión `binary` a su CDA. Los campos `contentType`, `size`, `hash` y `format` describen la representación FHIR. En FHIR R4, `Attachment.hash` contiene un hash SHA-1 codificado en base64; no se utiliza para informar el SHA-512 del CDA descrito por la guía XDS. Ver [Identificadores HCEN](hcen-identificadores.html) y [Publicación](hcen-iti-65.html).
+<a id="representaciones"></a>
+### Ubicaciones y representación documental
+
+En HCEN ITI-65, `content.attachment.url` informa la URL HTTP(S) absoluta original del prestador para recuperar el Bundle documental FHIR. La extensión `binary` del Attachment contiene una referencia al recurso [HCENCdaBinary](StructureDefinition-hcen-cda-binary.html) del prestador que contiene el CDA XML del mismo documento.
+
+El valor de `binary` es una referencia al recurso, no su `id` ni los datos CDA. Consultar [ID del Recurso Binario](StructureDefinition-ext-binary-resource-id.html).
+
+Estas ubicaciones no son los `fullUrl` de las entradas del envío. `fullUrl` identifica cada entrada y puede utilizar `urn:uuid:`. Tampoco deben confundirse con la URL de recuperación que Plataforma devuelve en HCEN ITI-67, cuyo resultado se describe de forma general en la [transacción de consulta](hcen-iti-67.html).
+
+Los campos `contentType`, `size`, `hash` y `format` describen la representación FHIR. En FHIR R4, `Attachment.hash` contiene un hash SHA-1 codificado en base64; no se utiliza para informar el SHA-512 del CDA descrito por la guía XDS. Ver [Identificadores HCEN](hcen-identificadores.html) y [Publicación](hcen-iti-65.html).
+
+`context.period` debe incluir inicio y fin del servicio. El documento informa también la comunidad de origen y el repositorio mediante las extensiones `homeCommunityId` y `repositoryId`.
+
+Las extensiones locales simples requieren un valor cuando están presentes. Una extensión booleana con valor `false` no equivale a omitir un dato desconocido; esta distinción se aplica, por ejemplo, a [Documento Escaneado](StructureDefinition-ext-scanned-document.html).
 
 ### Autoría y relaciones
 

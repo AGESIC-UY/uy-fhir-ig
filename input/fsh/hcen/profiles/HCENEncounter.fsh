@@ -119,15 +119,28 @@ Description: "Evento clínico (Encounter) asociado a una Hoja de Consulta No Urg
 * subject ^definition = "Identifica al usuario de salud al que se le asocia el evento clínico de la CNU."
 
 // ──────────────────────────────────────────
-// participant — Estado "sc": se documenta, sin restringir tipo/cardinalidad
-// (participant.individual también queda Reference(Practitioner | ...) base)
+// participant — Estado "sc" en la hoja, pero se aparta de la regla "sc nunca
+// es accionable" para period.start: HCENConsultaNoUrgente.encounter subió a
+// 1..1 justamente para garantizar la hora de firma del profesional
+// (participant.period.start, mapeada a ClinicalDocument/author/time), que en
+// CDA es obligatoria y no tiene ninguna otra ubicación posible en esta guía
+// (Composition.attester y Composition.event están en 0..0). Si participant
+// o period.start quedaran opcionales, Encounter podría existir sin ese dato
+// y la garantía de encounter 1..1 no cerraría el problema. participant.type
+// y participant.individual no cambian (tipo y cardinalidad base).
 // ──────────────────────────────────────────
 
-* participant ^short = "Profesional involucrado en el evento clínico"
-* participant ^definition = "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico."
+* participant 1..*
+* participant ^short = "Profesional involucrado en el evento clínico — al menos uno, con la hora de firma en period.start"
+* participant ^definition = "Identifica al profesional (p.ej. PractitionerRole) involucrado en el evento clínico. Al menos un participant debe estar presente para registrar la hora de firma en period.start."
+* participant.period 1..1
+* participant.period.start 1..1
+* participant.period.start ^short = "Hora de firma del profesional — única ubicación disponible en esta guía para este dato"
+* participant.period.start ^definition = "Hora de firma del profesional (mapea a ClinicalDocument/author/time en CDA, donde es obligatoria). No existe otra ubicación en esta guía para este dato."
 
 // ──────────────────────────────────────────
 // period — Estado "sc": se documenta, sin restringir cardinalidad
+// (distinto de participant.period, ya obligatorio arriba)
 // ──────────────────────────────────────────
 
 * period ^short = "Inicio y finalización del evento clínico"

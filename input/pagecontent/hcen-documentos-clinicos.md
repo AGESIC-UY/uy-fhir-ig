@@ -1,4 +1,4 @@
-Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU); su publicación utiliza el Bundle de publicación y los metadatos definidos por la transacción de [publicación de documentos](hcen-iti-65.html). Esta versión no especifica otros tipos de documento clínico.
+Esta sección describe la representación FHIR de los documentos clínicos que intercambia HCEN. La primera especificación incorporada es la Hoja de Consulta No Urgente (CNU), su publicación utiliza el Bundle de publicación y los metadatos definidos por la transacción de [publicación de documentos](hcen-iti-65.html). Esta versión no especifica otros tipos de documento clínico.
 
 ### Hoja de Consulta No Urgente
 
@@ -14,16 +14,14 @@ Esta sección describe la representación FHIR de los documentos clínicos que i
 | Prescripción farmacológica | [HCENMedicationRequest](StructureDefinition-hcen-medication-request.html) | Tratamiento farmacológico final |
 | Pauta de dosificación | [HCENDosage](StructureDefinition-hcen-dosage.html) | Utilizada por las prescripciones de medicación |
 
-`HCENConsultaNoUrgente.type` está fijado a LOINC `34108-1`. `encounter` referencia [HCENEncounter](StructureDefinition-hcen-encounter.html), que fija el estado del evento a `finished`.
-
-[HCENConsultaNoUrgenteBundle](StructureDefinition-hcen-consulta-no-urgente-bundle.html) garantiza la CNU en la primera entrada mediante tres reglas complementarias: `bdl-11` exige que la primera entrada sea Composition; `hcen-cnu-single-composition` exige una sola Composition; el slice `compositionCNU 1..1` identifica esa única Composition como HCENConsultaNoUrgente.
+El perfil del [Bundle documental CNU](StructureDefinition-hcen-consulta-no-urgente-bundle.html) define cómo reunir la Composition y los recursos clínicos en un documento.
 
 ### Codificaciones pendientes
 
-Los slices identifican SNOMED CT cuando se utiliza ese sistema. Se admiten codificaciones adicionales mediante slicing abierto, pero esta guía no fija la URI del tesauro local mencionado en el material de origen porque todavía está pendiente de confirmación. Los conjuntos marcados como provisionales contienen códigos de ejemplo y no constituyen refsets nacionales aprobados; consultar [Terminología HCEN](hcen-terminologia.html#terminología-clínica-de-cnu).
+Los slices identifican SNOMED CT cuando se utiliza ese sistema. Se admiten codificaciones adicionales mediante slicing abierto, por ejemplo un tesauro clínico — ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico) — pero esta guía no fija la URI de ese sistema porque todavía está pendiente de confirmación. Los conjuntos marcados como provisionales contienen códigos de ejemplo y no constituyen refsets nacionales aprobados; consultar [Terminología HCEN](hcen-terminologia.html#terminología-clínica-de-cnu).
 
 ### Relación con el intercambio documental
 
-La `Composition` y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html), que actúa como Bundle de publicación e incluye además `DocumentReference`, `SubmissionSet` y los recursos de contexto necesarios. Los metadatos referencian el CDA; el Binary CDA no debería (SHOULD NOT) enviarse. Si llega, se tolera, puede ignorarse y no invalida por sí mismo el envío, sin exigir correspondencia con los metadatos.
+La `Composition` y los recursos que referencia forman el contenido clínico del Bundle documental. Ese Bundle es distinto de [HCENProvideDocumentBundle](StructureDefinition-hcen-provide-document-bundle.html), que actúa como Bundle de publicación e incluye además `DocumentReference`, `SubmissionSet` y los recursos de contexto necesarios. Las condiciones del envío y el tratamiento del CDA se describen en [HCEN ITI-65](hcen-iti-65.html).
 
-Los ejemplos de Consulta No Urgente, su CDA de apoyo y los ejemplos de intercambio HCEN se reservan para una versión futura. La publicación 0.1.0 incluye únicamente [ejemplos básicos del Core](ejemplos.html).
+Consultar los [ejemplos CNU](hcen-ejemplos.html): documento y publicación de medicina general, y Composition con recursos individuales y CDA de apoyo de traumatología. Son escenarios distintos y deben mantenerse separados.

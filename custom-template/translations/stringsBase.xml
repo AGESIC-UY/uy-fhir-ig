@@ -7,13 +7,13 @@
 <translation name="ArtifactsIntro" en="This page provides a list of the FHIR artifacts defined as part of this implementation guide." es="Esta página proporciona una lista de los artefactos FHIR definidos como parte de esta guía de implementación."/>
 <translation name="ArtifactsSummary" en="Artifacts Summary" es="Resumen de artefactos"/>
 <translation name="ArtifactsTable" en="Artifacts Table" es="Tabla de artefactos"/>
-<translation name="ArtifactsTableIntro" en="This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide." es="This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide."/>
+<translation name="ArtifactsTableIntro" en="This page provides a tabular view of the FHIR artifacts defined as part of this implementation guide." es="Esta página presenta una tabla de los artefactos FHIR definidos en esta guía."/>
 <translation name="CISearchMsg" en="Note: this search searches the current build of {{site.data.fhir.ig.title}}.  This page only exists for the CI build - published versions will use a different search page." es="Nota: esta búsqueda busca en la compilación actual de {{site.data.fhir.ig.title}}.  Esta página solo existe para la compilación de CI - las versiones publicadas usarán una página de búsqueda diferente."/>
 <translation name="CSV" en="CSV" es="CSV"/>
-<translation name="Category" en="Category" es="Category"/>
+<translation name="Category" en="Category" es="Categoría"/>
 <translation name="ChangeHistory" en="Change History" es="Historial de cambios"/>
 <translation name="ChangesIn" en="Changes in the %ID% %TYPE%." es="Cambios en el %ID% %TYPE%."/>
-<translation name="ClearAll" en="Clear all" es="Clear all"/>
+<translation name="ClearAll" en="Clear all" es="Limpiar filtros"/>
 <translation name="CodeSystemValuesets" en="This Code system is referenced in the definition of the following value sets:" es="Se hace referencia a este sistema de códigos en la definición de los siguientes conjuntos de valores:"/>
 <translation name="ComputableName" en="Computable Name" es="Nombre computable"/>
 <translation name="Contained" en="Contained resources" es="Recursos contenidos"/>
@@ -27,7 +27,7 @@
 <translation name="DataTypeProfile" en="Data Type Profile" es="Perfil del tipo de datos"/>
 <translation name="DefinitionsFor" en="Definitions for the %MODEL%" es="Definiciones del %MODEL%."/>
 <translation name="Derive" en="This structure is derived from %ARTIFACT%" es="Esta estructura se deriva de %ARTIFACT%."/>
-<translation name="Description" en="Description" es="Description"/>
+<translation name="Description" en="Description" es="Descripción"/>
 <translation name="DetailedDescriptions" en="Detailed Descriptions" es="Descripciones detalladas"/>
 <translation name="Diagram" en="Diagram" es="Diagrama"/>
 <translation name="DifferentialTable" en="Differential Table" es="Tabla diferencial"/>
@@ -49,9 +49,9 @@
 <translation name="FormatResource" en="%FMT% Resource" es="Recurso %FMT%"/>
 <translation name="FromNormative" en="from v%NORMVER%" es="de v%NORMVER%"/>
 <translation name="GeneratedDate" en="Generated %DATE%" es="Generado %DATE%"/>
-<translation name="GlobalProfiles" en="Global Profiles" es="Perfiles mundiales"/>
+<translation name="GlobalProfiles" en="Global Profiles" es="Perfiles globales"/>
 <translation name="Globals" en="Globals" es="Globales"/>
-<translation name="Grouping" en="Grouping" es="Grouping"/>
+<translation name="Grouping" en="Grouping" es="Agrupación"/>
 <translation name="HighlightChanges" en="Highlight text changes?" es="¿Resaltar los cambios en el texto?"/>
 <translation name="HighlightChangesHelp" en="Enable this to see changes since the last official release" es="Habilite esto para ver los cambios desde la última versión oficial"/>
 <translation name="History" en="History" es="Historia"/>
@@ -71,9 +71,9 @@
 <translation name="Mappings" en="Mappings" es="Mapeos"/>
 <translation name="MappingsFor" en="Mappings for the %ID% %TYPE%." es="Mapeos para el %ID% %TYPE%."/>
 <translation name="MaturityLevel" en="Maturity Level" es="Nivel de madurez"/>
-<translation name="ModelOf" en="Instance of logical model" es="Instance of logical model"/>
+<translation name="ModelOf" en="Instance of logical model" es="Instancia de modelo lógico"/>
 <translation name="ModifiedContent" en="Modified Content" es="Contenido modificado"/>
-<translation name="NO_TRANS" en="There is no translation page available for the current page, so it has been rendered in the default language" es="There is no translation page available for the current page, so it has been rendered in the default language"/>
+<translation name="NO_TRANS" en="There is no translation page available for the current page, so it has been rendered in the default language" es="No hay una traducción disponible para esta página; se muestra en el idioma predeterminado."/>
 <translation name="NarrativeContent" en="Narrative Content" es="Contenido narrativo"/>
 <translation name="NewContent" en="New Content" es="Contenido nuevo"/>
 <translation name="NextPage" en="next &gt;" es="siguiente &gt;"/>
@@ -89,7 +89,7 @@
 <translation name="OtherReps" en="Other representations of profile:" es="Otras representaciones de perfil:"/>
 <translation name="PageBottom" en="bottom" es="fondo"/>
 <translation name="PageStandardsStatus" en="Page standards status" es="Estado de las normas de la página"/>
-<translation name="PageTop" en="top" es="top"/>
+<translation name="PageTop" en="top" es="Arriba"/>
 <translation name="PrevPage" en="&lt; prev" es="&lt; anterior"/>
 <translation name="Processes" en="Processes" es="Procesos"/>
 <translation name="PseudoJSON" en="Pseudo JSON" es="Pseudo JSON"/>
@@ -103,7 +103,7 @@
 <translation name="Raw" en="Raw %FMT%" es="%FMT% bruto"/>
 <translation name="ReadingStructures" en="Description Differentials, Snapshots, and other representations" es="Descripción de perfiles, diferenciales, instantáneas y sus representaciones"/>
 <translation name="ReadingTerminology" en="Description of the above table(s)" es="Descripción de los cuadros anteriores"/>
-<translation name="Realm" en="Realm" es="Realm"/>
+<translation name="Realm" en="Realm" es="Ámbito"/>
 <translation name="ResourceDate" en="as of %RESDATE%" es="a partir de %RESDATE%."/>
 <translation name="ResourceModel" en="Resource" es="Recurso"/>
 <translation name="ResourceNoExamples" en="No examples are currently available for the %ID% Resource" es="Actualmente no hay ejemplos disponibles para el recurso %ID%"/>
@@ -112,7 +112,7 @@
 <translation name="ResponsesQuestionnaire" en="Responses for this Questionnaire" es="Respuestas a este cuestionario"/>
 <translation name="Responsible" en="Responsible" es="Responsable"/>
 <translation name="Schematron" en="Schematron" es="Schematron"/>
-<translation name="Search" en="Search" es="Search"/>
+<translation name="Search" en="Search" es="Buscar"/>
 <translation name="SearchParameters" en="Search Parameters" es="Parámetros de búsqueda"/>
 <translation name="SnapshotTable" en="Snapshot Table" es="Tabla snapshot"/>
 <translation name="SnapshotView" en="Snapshot View" es="Vista instantánea"/>
@@ -125,16 +125,16 @@
 <translation name="TTL" en="TTL" es="TTL"/>
 <translation name="TTLTemplate" en="TTL Template" es="Plantilla TTL"/>
 <translation name="TableOfContents" en="Table of Contents" es="Índice"/>
-<translation name="TermParameters" en="Terminology Parameters" es="Terminology Parameters"/>
+<translation name="TermParameters" en="Terminology Parameters" es="Parámetros terminológicos"/>
 <translation name="TestPlans" en="Test Plans" es="Planes de pruebas"/>
 <translation name="TestQuestionnaire" en="Test this Questionnaire" es="Pruebe este cuestionario"/>
 <translation name="TestScripts" en="Test Scripts" es="Guiones de prueba"/>
 <translation name="Testing" en="Testing" es="Pruebas"/>
-<translation name="Title" en="Title" es="Title"/>
-<translation name="Type" en="Type" es="Type"/>
+<translation name="Title" en="Title" es="Título"/>
+<translation name="Type" en="Type" es="Tipo"/>
 <translation name="UMLDiagram" en="UML Diagram" es="Diagrama UML"/>
 <translation name="Usage" en="Usage" es="Utilización"/>
-<translation name="UseGrouping" en="Use grouping" es="Use grouping"/>
+<translation name="UseGrouping" en="Use grouping" es="Agrupar"/>
 <translation name="Version" en="Version" es="Versión"/>
 <translation name="VisitFCP" en="Visit the FHIR Community Process Specification Registry" es="Visite el Registro de Especificación de Procesos de la Comunidad FHIR"/>
 <translation name="WorkInProgress" en="The content in this section has not undergone work group review and may be significantly revised prior to the next ballot." es="El contenido de esta sección no ha sido revisado por el grupo de trabajo y puede ser objeto de importantes modificaciones antes de la próxima votación."/>

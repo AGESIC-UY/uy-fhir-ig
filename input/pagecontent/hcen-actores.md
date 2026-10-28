@@ -1,4 +1,4 @@
-Esta página identifica a las partes que participan en HCEN y permite distribuir sus responsabilidades entre productos. Un actor representa una función del intercambio, no necesariamente una aplicación única.
+Esta página identifica a las partes que participan en la interacción con HCEN, y permite distribuir sus responsabilidades. Un actor representa una función del intercambio, no necesariamente una aplicación única.
 
 ### Prestador
 
@@ -7,12 +7,12 @@ El prestador es responsable de la integración completa de su despliegue. Puede 
 | Función | Responsabilidad | Transacción |
 | --- | --- | --- |
 | Fuente de identidad | Registrar y actualizar sus pacientes utilizando el MRN local. | [Registrar o actualizar pacientes](hcen-iti-104.html) |
-| Publicador de documentos | Conservar FHIR y CDA en su repositorio y enviar metadatos y el documento FHIR a Plataforma (el CDA se referencia mediante Binary, pero Binary no debería (SHOULD NOT) enviarse). | [Publicar documentos](hcen-iti-65.html) |
+| Publicador de documentos | Conservar FHIR y CDA en su repositorio y enviar los recursos de publicación a Plataforma. | [Publicar documentos](hcen-iti-65.html) |
 | Consultante | Buscar metadatos y procesar las coincidencias. | [Consultar metadatos](hcen-iti-67.html) |
 | Solicitante de documentos | Solicitar a Plataforma cualquiera de las dos representaciones. | [Recuperar documentos](hcen-iti-68.html) |
 | Proveedor de documentos | Entregar documentos propios cuando Plataforma los solicite. | [Recuperar documentos](hcen-iti-68.html) |
 
-El repositorio pertenece al ámbito del prestador: conserva el contenido documental y permite entregarlo posteriormente. La obligación de mantener ambas representaciones se define en [Publicación](hcen-iti-65.html#representaciones).
+El repositorio pertenece al ámbito del prestador, debe (SHALL) almacenar los documentos clínicos y entregarlos cuando sean requeridos. La obligación de mantener dos representaciones del mismo documento clínico se define en [Publicación](hcen-iti-65.html#representaciones).
 
 ### Plataforma
 
@@ -20,8 +20,8 @@ Plataforma es la contraparte implementada por Salud Digital. El prestador no deb
 
 Plataforma administra los registros de pacientes y la unificación de identidades, registra DocumentReference y SubmissionSet y responde consultas de metadatos. Recibe el documento FHIR para validación sin asumir su almacenamiento como documento. Para recuperar contenido, actúa de intermediaria entre el prestador solicitante y el repositorio del prestador que lo conserva.
 
-La política de validación clínica y la semántica del envío transaccional requieren el cierre indicado en [Publicación](hcen-iti-65.html#pendientes). La descripción del actor no acredita que los servicios estén disponibles.
+Las reglas de validación y rechazo se describen en [Publicar documentos](hcen-iti-65.html).
 
 ### Distribución entre productos
 
-La declaración de un producto debe (SHALL) identificar qué funciones cubre y su versión. La conformidad integral se evalúa sobre el despliegue del prestador, conforme a [Conformidad y capacidades](hcen-conformidad.html); implementar únicamente la consulta no constituye integración integral.
+La declaración de un producto debe (SHALL) identificar qué funciones cubre y su versión. La conformidad integral se evalúa sobre el despliegue del prestador, conforme a [Conformidad y capacidades](hcen-conformidad.html).

@@ -173,10 +173,12 @@ Description: "Solicitud de servicio (procedimiento, interconsulta, estudio, etc.
 // PENDIENTE: la hoja mapea `performerType` a la entrada CDA "Referencia al
 // alta" (observation código 7731000179109) — semánticamente inconsistente
 // (performerType no es un texto de referencia), probable error de la hoja;
-// no se propaga. También le da a `patientInstruction` el mismo path CDA
-// que `note` (entrada "Próxima consulta", código 7581000179102) —
-// duplicado sin distinguir destino propio; tampoco se propaga hasta
-// confirmar el mapeo real.
+// no se propaga.
+// `patientInstruction` comparte el mismo path CDA que `note` (entrada
+// "Próxima consulta", código 7581000179102) según la hoja — confirmado
+// contra el ejemplo CDA (docs/Ejemplo- Consulta no urgente_v4_20220510.xml,
+// sección "Instrucciones de seguimiento"), donde esa entrada trae el texto
+// libre de la indicación (p.ej. "Revisión a los 10 días").
 // ──────────────────────────────────────────
 
 Mapping: HCENServiceRequestToCDA
@@ -187,3 +189,4 @@ Description: "Mapeo a HL7 CDA R2, según la columna \"Mapeo CDA\" de la hoja HCE
 * subject -> "ClinicalDocument/recordTarget/patientRole/id"
 * occurrence[x] -> "section/entry/observation[code/@code='7571000179104']/value"
 * note -> "section/entry/observation[code/@code='7581000179102']/value"
+* patientInstruction -> "section/entry/observation[code/@code='7581000179102']/value"

@@ -10,6 +10,9 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
     $iheSourceId named sourceId 1..1 and
     $iheIntendedRecipient named intendedRecipient 0..* MS
 
+* extension[designationType].valueCodeableConcept from VStypeCode (extensible)
+* extension[sourceId].valueIdentifier only HCENOrgIdentifier
+
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
@@ -41,53 +44,18 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
 * identifier[entryUUID] ^short = "EntryUUID con formato urn:uuid:2.[oid_documento_clinico]."
 * identifier[uniqueId] ^short = "OID global S propio del SubmissionSet."
 * subject ^short = "Paciente al que pertenecen los documentos incluidos."
-* date ^short = "Fecha y hora de agrupación del conjunto."
 * source ^short = "Autor que creó el conjunto de envío."
 * entry.item ^short = "Referencia a un DocumentReference incluido en el conjunto."
 
 // Descripciones del ODS, adaptadas a las rutas FHIR R4 y al contexto HCEN.
-* id ^short = "ID lógico de este artefacto."
-* id ^definition = "ID lógico de este artefacto."
-* meta ^short = "Metadatos sobre el recurso."
-* meta ^definition = "Metadatos sobre el recurso."
-* implicitRules ^short = "Conjunto de reglas bajo las cuales se creó este contenido."
-* implicitRules ^definition = "Conjunto de reglas bajo las cuales se creó este contenido."
-* language ^short = "Idioma del contenido del recurso."
-* language ^definition = "Idioma del contenido del recurso."
-* text ^short = "Resumen del recurso en texto para interpretación humana."
-* text ^definition = "Resumen del recurso en texto para interpretación humana."
-* contained ^short = "Recursos integrados en línea (inline)."
-* contained ^definition = "Recursos integrados en línea (inline)."
-* extension ^short = "Contenido adicional definido por implementaciones."
-* extension ^definition = "Contenido adicional definido por implementaciones."
-* modifierExtension ^short = "Extensiones que no pueden ser ignoradas."
-* modifierExtension ^definition = "Extensiones que no pueden ser ignoradas."
 * identifier ^short = "Identificadores para este conjunto de documentos."
 * identifier ^definition = "Identificadores para este conjunto de documentos."
-* status ^short = "Estado de la lista: current | retired | entered-in-error."
-* status ^definition = "Estado de la lista: current | retired | entered-in-error."
-* mode ^short = "Forma en que se gestiona la lista."
-* mode ^definition = "Forma en que se gestiona la lista."
-* title ^short = "Nombre descriptivo del conjunto."
-* title ^definition = "Nombre descriptivo del conjunto."
 * code ^short = "Fija el tipo de lista."
 * code ^definition = "Fija el tipo de lista."
-* encounter ^short = "Contexto de encuentro clínico."
-* encounter ^definition = "Contexto de encuentro clínico."
-* orderedBy ^short = "Criterio de ordenación."
-* orderedBy ^definition = "Criterio de ordenación."
 * note ^short = "Comentarios sobre el SubmissionSet."
 * note ^definition = "Comentarios sobre el SubmissionSet."
 * entry ^short = "Documentos que componen este conjunto."
 * entry ^definition = "Documentos que componen este conjunto."
-* entry.flag ^short = "Bandera de estado del ítem."
-* entry.flag ^definition = "Bandera de estado del ítem."
-* entry.deleted ^short = "Si el ítem fue eliminado de la lista."
-* entry.deleted ^definition = "Si el ítem fue eliminado de la lista."
-* entry.date ^short = "Cuándo fue agregado el ítem."
-* entry.date ^definition = "Cuándo fue agregado el ítem."
-* emptyReason ^short = "Razón por la cual la lista está vacía."
-* emptyReason ^definition = "Razón por la cual la lista está vacía."
 * . ^short = "Conjunto de envío HCEN"
 * . ^definition = "Lista HCEN que agrupa referencias documentales para su envío. Reutiliza extensiones y tipos de identificador oficiales de IHE MHD sin declarar conformidad integral con el perfil IHE."
 
@@ -95,14 +63,22 @@ Description: "Lista HCEN que agrupa referencias documentales para su envío. Reu
 * entry.deleted 0..0
 * entry.item.reference 1..1
 
-* extension[designationType] ^definition = "Tipo de contenido o designación clínica del conjunto."
-* extension[sourceId] ^definition = "Identificador de la entidad que origina el envío."
+* extension[designationType] ^definition = "Tipo de contenido del conjunto, correspondiente al EJE 2. Mapea a SubmissionSet.contentTypeCode."
+* extension[sourceId] ^definition = "Identificador de la entidad que origina el envío, conforme a HCENOrgIdentifier."
 * extension[intendedRecipient] ^definition = "Personas u organizaciones destinatarias del conjunto."
 * identifier[entryUUID] ^definition = "Identificador técnico obligatorio del conjunto, derivado del OID [oid_documento_clinico] de cualquiera de sus documentos miembros con el formato urn:uuid:2.[oid_documento_clinico]. No existe primer documento obligatorio, documento principal ni orden relevante."
 * identifier[uniqueId] ^definition = "OID global S propio del SubmissionSet, distinto del identificador documental [oid_documento_clinico], representado mediante HCENSubmissionSetUniqueIdIdentifier."
 * subject ^definition = "Paciente al que pertenecen los documentos incluidos."
-* date ^definition = "Fecha y hora de agrupación del conjunto."
 * source ^definition = "Referencia obligatoria a HCENPractitionerRole, que identifica al profesional y su institución como autor del conjunto. Los recursos Practitioner u Organization adicionales del envío no sustituyen esta referencia."
 * extension[homeCommunityId] ^short = "Comunidad de origen del conjunto."
 * extension[homeCommunityId] ^definition = "Identificador de la comunidad desde la cual se accede a los documentos del conjunto."
 * entry.item ^definition = "Referencia a un DocumentReference incluido en el conjunto."
+
+Mapping: HCENSubmissionSetToXDS
+Source: HCENSubmissionSet
+Target: "urn:ihe:iti:xds:2013"
+Title: "XDS"
+Description: "Mapeo del identificador de origen y del tipo de contenido del conjunto a los metadatos XDS."
+* extension[designationType].valueCodeableConcept -> "SubmissionSet.contentTypeCode"
+
+* extension[sourceId].valueIdentifier.value -> "SubmissionSet.sourceId" "El value FHIR contiene la URI urn:oid: completa; XDS sourceId utiliza el OID sin ese prefijo."

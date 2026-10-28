@@ -7,6 +7,7 @@ Description: "Identificador de la comunidad de origen del documento o conjunto d
 * ^context[1].type = #element
 * ^context[1].expression = "List"
 * value[x] only oid
+* valueOid = "urn:oid:2.16.858.2.10000675.73183.1" (exactly)
 * extension 0..0
 * value[x] 1..1
 

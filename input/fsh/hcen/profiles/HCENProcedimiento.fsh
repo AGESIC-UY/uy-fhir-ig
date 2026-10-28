@@ -84,11 +84,13 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 
 * code 1..1
 * code obeys hcen-coding-required-1
-* code ^short = "Código que identifica el procedimiento (SNOMED CT u otra terminología)"
-* code ^definition = "Código que identifica el procedimiento (SNOMED CT u otra terminología)"
+* code ^short = "Código que identifica el procedimiento (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
+* code ^definition = "Código que identifica el procedimiento (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
+* code.coding ^short = "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)"
+* code.coding ^definition = "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
 * code.coding contains
     snomed 0..1
 
@@ -118,11 +120,13 @@ Description: "Procedimiento registrado en la Hoja de Consulta No Urgente (CNU)."
 
 * outcome 0..1
 * outcome obeys hcen-coding-required-1
-* outcome ^short = "Resultado del procedimiento (SNOMED CT u otra terminología)"
-* outcome ^definition = "Resultado del procedimiento (SNOMED CT u otra terminología)"
+* outcome ^short = "Resultado del procedimiento (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
+* outcome ^definition = "Resultado del procedimiento (SNOMED CT u otra terminología, p.ej. un tesauro clínico institucional)"
 * outcome.coding ^slicing.discriminator.type = #value
 * outcome.coding ^slicing.discriminator.path = "system"
 * outcome.coding ^slicing.rules = #open
+* outcome.coding ^short = "Slicing abierto por system: además del slice snomed, admite otra codificación con su propio system — p.ej. un código de un tesauro clínico (ver sección 4.7.4 Tesauro clínico)"
+* outcome.coding ^definition = "El slicing es abierto por system. Además del slice snomed, se puede incluir una codificación adicional de otro vocabulario — p.ej. un código de un tesauro clínico (ver [Tesauro clínico](hcen-terminologia.html#tesauro-clínico), sección 4.7.4). La URI de ese system depende de la institución de origen y su confirmación es externa a esta guía; no se fija ni se valida en este perfil."
 * outcome.coding contains
     snomed 0..1
 
